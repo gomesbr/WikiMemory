@@ -84,10 +84,11 @@ class AgentBootstrapTests(unittest.TestCase):
         self.assertIn("<!-- WIKIMEMORY:START -->", content)
         self.assertIn("<!-- WIKIMEMORY:END -->", content)
         self.assertIn("memory/global/user-rules.md", content)
-        self.assertIn("Always inspect real data first", content)
-        self.assertIn("Do not commit generated memory outputs", content)
+        self.assertIn("# 🧠 Agent Memory Index", content)
+        self.assertIn("Read in order", content)
         self.assertIn("memory/projects/alpha/recent.md", content)
         self.assertNotIn("M README.md", content)
+        self.assertNotIn("Do not commit generated memory outputs", content)
 
     def test_agent_bootstrap_updates_only_managed_block(self) -> None:
         self.write_memory_items()
@@ -109,7 +110,7 @@ class AgentBootstrapTests(unittest.TestCase):
         self.assertIn("Keep this paragraph.", content)
         self.assertIn("Keep this footer.", content)
         self.assertNotIn("old generated text", content)
-        self.assertIn("Always inspect real data first", content)
+        self.assertIn("Agent Memory Index", content)
 
     def test_agent_bootstrap_project_filter_keeps_global_and_selected_project(self) -> None:
         self.write_memory_items()
@@ -125,14 +126,14 @@ class AgentBootstrapTests(unittest.TestCase):
 
         self.assertTrue(result.report.success, result.report.fatal_error_summary)
         content = (self.temp_dir / "filtered.md").read_text(encoding="utf-8")
-        self.assertIn("Always inspect real data first", content)
+        self.assertIn("memory/global/user-rules.md", content)
         self.assertNotIn("Do not commit generated memory outputs", content)
 
     def test_agent_bootstrap_supports_claude_and_generic_renderers(self) -> None:
         self.write_memory_items()
-        for renderer, target_name, expected_title in (
-            ("claude_md", "CLAUDE.md", "# Claude Memory Bootstrap"),
-            ("generic_bootstrap_md", "MEMORY.md", "# AI Agent Memory Bootstrap"),
+        for renderer, target_name in (
+            ("claude_md", "CLAUDE.md"),
+            ("generic_bootstrap_md", "MEMORY.md"),
         ):
             payload = default_product_config(self.temp_dir).to_dict()
             payload["environment"]["repo_root"] = str(self.temp_dir)
@@ -149,7 +150,7 @@ class AgentBootstrapTests(unittest.TestCase):
 
             self.assertTrue(result.report.success, result.report.fatal_error_summary)
             content = (self.temp_dir / target_name).read_text(encoding="utf-8")
-            self.assertIn(expected_title, content)
+            self.assertIn("# 🧠 Agent Memory Index", content)
             self.assertIn("memory/global/user-rules.md", content)
             self.assertIn("Keep this bootstrap tiny", content)
 

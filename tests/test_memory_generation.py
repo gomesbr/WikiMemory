@@ -118,6 +118,10 @@ class MemoryGenerationTests(unittest.TestCase):
         self.assertTrue((self.memory_dir / "global" / "user-rules.md").exists())
         self.assertTrue((self.memory_dir / "projects" / "example-project" / "rules.md").exists())
         self.assertTrue((self.memory_dir / "_meta" / "promotion_review.jsonl").exists())
+        global_content = (self.memory_dir / "global" / "user-rules.md").read_text(encoding="utf-8")
+        self.assertIn("type: global-rules", global_content)
+        self.assertIn("## ALWAYS DO", global_content)
+        self.assertIn("## NEVER DO", global_content)
 
     def test_memory_generation_extracts_project_summary_and_applies_review_decisions(self) -> None:
         self.write_evidence(
@@ -239,6 +243,53 @@ class MemoryGenerationTests(unittest.TestCase):
         statements = [item["statement"] for item in self.read_items()]
         self.assertNotIn("Please fix this now.", statements)
         self.assertIn("Please continue this active task.", statements)
+
+    def test_memory_generation_filters_long_prompt_noise_from_recent_context(self) -> None:
+        noisy = self.evidence_record(
+            "e1",
+            "user",
+            "Use this as your single prompt to Codex. IMPORTANT OPERATING STYLE " + ("do not narrate " * 40),
+        )
+        useful = self.evidence_record("e2", "user", "Please continue implementing the renderer cleanup.")
+        self.write_evidence("logs/sample-source.jsonl", [noisy, useful])
+
+        result = run_memory_generation(
+            product_config_path=self.product_config,
+            state_dir=self.state_dir,
+            evidence_dir=self.evidence_dir,
+            memory_dir=self.memory_dir,
+            audits_dir=self.audits_dir,
+        )
+
+        self.assertTrue(result.report.success, result.report.fatal_error_summary)
+        content = (self.memory_dir / "projects" / "example-project" / "recent.md").read_text(encoding="utf-8")
+        self.assertNotIn("single prompt to Codex", content)
+        self.assertIn("renderer cleanup", content)
+        self.assertLess(len(content), 5000)
+
+    def test_memory_generation_filters_low_signal_recent_chatter(self) -> None:
+        self.write_evidence(
+            "logs/sample-source.jsonl",
+            [
+                self.evidence_record("e1", "user", "Are you testing with real data ?"),
+                self.evidence_record("e2", "user", "push to git please"),
+                self.evidence_record("e3", "user", "Please continue implementing the renderer cleanup."),
+            ],
+        )
+
+        result = run_memory_generation(
+            product_config_path=self.product_config,
+            state_dir=self.state_dir,
+            evidence_dir=self.evidence_dir,
+            memory_dir=self.memory_dir,
+            audits_dir=self.audits_dir,
+        )
+
+        self.assertTrue(result.report.success, result.report.fatal_error_summary)
+        content = (self.memory_dir / "projects" / "example-project" / "recent.md").read_text(encoding="utf-8")
+        self.assertNotIn("Are you testing", content)
+        self.assertNotIn("push to git", content)
+        self.assertIn("renderer cleanup", content)
 
     def test_memory_generation_respects_plain_markdown_renderer_flags(self) -> None:
         payload = json.loads(self.product_config.read_text(encoding="utf-8"))

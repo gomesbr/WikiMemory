@@ -18,6 +18,10 @@ from .product_config import MarkdownOutputConfig, load_product_config
 STATE_SCHEMA_VERSION = 1
 MEMORY_SCHEMA_VERSION = 1
 RECENT_MEMORY_MAX_DAYS = 30
+PROJECT_RECENT_ITEM_CAP = 25
+BRAIN = "\U0001f9e0"
+FIRE = "\U0001f525"
+GEAR = "\u2699\ufe0f"
 USER_RULE_PATTERN = re.compile(r"\b(?:add this to global rules|global rule)\b", re.IGNORECASE)
 GLOBAL_OPERATING_RULE_PATTERN = re.compile(
     r"\b(?:narrate your process|step commentary|short updates|response style|token limits|ask for it|outside the plan|real data|github|git|api key|always add it|do not ask|don't ask)\b",
@@ -40,6 +44,10 @@ SCAFFOLD_PATTERN = re.compile(
 )
 RUNTIME_LOCAL_PATTERN = re.compile(
     r"\b(?:restart (?:the )?(?:app|application|server|service)|hard refresh|localhost|ctrl\+f5|browser refresh)\b",
+    re.IGNORECASE,
+)
+RECENT_NOISE_PATTERN = re.compile(
+    r"(?:single prompt to codex|copy/paste|important operating style|you are helping redesign|context from my ide setup|github\.com/|what is next\??$|^pending\b|^are you\b|^recommendation\b|^push to git\b|^commit\b|api key|env file|\.env|download obsidian|can you see|test it$|sample log file|give status|full run|move storage to d|plan the change|github app|how .*space wise|loop until all is done)",
     re.IGNORECASE,
 )
 AGENT_DURABLE_EXCLUDED_ACTORS = {"assistant", "agent_reasoning", "tool", "unknown", "developer", "system"}
@@ -253,7 +261,7 @@ def classify_evidence(
         elif is_project_summary_text(clause):
             items.append(make_item(record, "stable_project_summary", "project", project, "durable", "candidate", clause))
             durable_found = True
-    if actor_type == "user" and not durable_found:
+    if actor_type == "user" and not durable_found and is_recent_context_candidate(clauses[0]):
         items.append(make_item(record, "recent_project_state", "project", project, "recent", "candidate", clauses[0]))
     return items
 
@@ -339,7 +347,7 @@ def render_memory_files(memory_dir: Path, items: list[dict[str, object]], markdo
 
     rendered: list[Path] = []
     global_target = memory_dir / memory_relative_path("global_user_rules")
-    render_file(global_target, "Global User Rules", grouped["global_user_rules"], markdown_output)
+    render_global_rules(global_target, grouped["global_user_rules"], markdown_output)
     rendered.append(global_target)
 
     projects = sorted({str(item["project"]) for item in items if item.get("project")})
@@ -350,7 +358,7 @@ def render_memory_files(memory_dir: Path, items: list[dict[str, object]], markdo
             if definition.optional and not project_items:
                 continue
             target = memory_dir / memory_relative_path(key, project)
-            render_file(target, title_for_memory_file(key, project), project_items, markdown_output)
+            render_project_file(target, key, project, project_items, markdown_output)
             rendered.append(target)
     return rendered
 
@@ -362,26 +370,225 @@ def clear_generated_memory_tree(memory_dir: Path) -> None:
             shutil.rmtree(target)
 
 
-def render_file(path: Path, title: str, items: list[dict[str, object]], markdown_output: MarkdownOutputConfig) -> None:
+def render_global_rules(path: Path, items: list[dict[str, object]], markdown_output: MarkdownOutputConfig) -> None:
     ensure_directory(path.parent)
-    lines: list[str] = []
-    if markdown_output.enable_frontmatter:
-        lines.extend(["---", f'title: "{title}"'])
-        if markdown_output.enable_tags:
-            lines.extend(["tags:", "  - wikimemory", "  - memory"])
-        lines.extend(["---", ""])
-    lines.append(f"# {title}")
-    lines.append("")
-    if markdown_output.enable_wikilinks and "projects" in path.parts:
-        lines.extend([f"Related: [[{path.parent.name}]]", ""])
-    if not items:
-        lines.append("- No high-signal memory selected yet.")
-    else:
-        for item in items[:80]:
-            marker = str(item["promotion_state"])
-            lines.append(f"- [{marker}] {item['statement']} <!-- {item['item_id']} -->")
-    lines.append("")
+    lines = frontmatter("global-rules", None, ("memory", "rules", "global"), markdown_output)
+    lines.extend([f"# {BRAIN} Global User Rules", ""])
+    append_rule_sections(lines, items, include_scope_notes=False)
+    lines.extend(["## PROVENANCE", "", "- Derived from clear or repeated user instructions.", ""])
     atomic_write_text(path, "\n".join(lines))
+
+
+def render_project_file(
+    path: Path,
+    key: str,
+    project: str,
+    items: list[dict[str, object]],
+    markdown_output: MarkdownOutputConfig,
+) -> None:
+    ensure_directory(path.parent)
+    if key == "project_summary":
+        lines = render_project_summary(project, items, markdown_output)
+    elif key == "project_recent":
+        lines = render_project_recent(project, items, markdown_output)
+    elif key == "project_rules":
+        lines = render_project_rules(project, items, markdown_output)
+    elif key == "project_lessons":
+        lines = render_project_lessons(project, items, markdown_output)
+    else:
+        raise MemoryGenerationError(f"Unsupported memory file key: {key}")
+    atomic_write_text(path, "\n".join(lines))
+
+
+def render_project_summary(project: str, items: list[dict[str, object]], markdown_output: MarkdownOutputConfig) -> list[str]:
+    title = f"{display_project(project)} - Project Memory"
+    lines = frontmatter("project-memory", project, (f"project/{project}", "memory"), markdown_output)
+    lines.extend([f"# {BRAIN} {title}", ""])
+    purpose_items = items[:3]
+    append_section(lines, "PURPOSE", item_statements(purpose_items) or ["Short project purpose not extracted yet."])
+    append_section(lines, "CORE COMPONENTS", select_by_terms(items, ("component", "module", "pipeline", "adapter", "renderer", "config")) or ["No stable component list extracted yet."])
+    append_section(lines, "CURRENT ARCHITECTURE", select_by_terms(items, ("architecture", "input", "process", "storage", "output", "pipeline")) or item_statements(items[3:6]) or ["No stable architecture summary extracted yet."])
+    append_section(lines, "DESIGN PRINCIPLES", select_by_terms(items, ("deterministic", "traceable", "modular", "provenance", "incremental")) or ["No stable design principles extracted yet."])
+    append_section(lines, "KEY CONSTRAINTS", select_by_terms(items, ("constraint", "must", "do not", "never", "only")) or ["No stable constraints extracted yet."])
+    append_section(lines, "OPEN PROBLEMS", select_by_terms(items, ("open", "problem", "blocked", "pending", "todo")) or ["No open project-level problems extracted yet."])
+    append_related(lines, project, markdown_output)
+    return lines
+
+
+def render_project_recent(project: str, items: list[dict[str, object]], markdown_output: MarkdownOutputConfig) -> list[str]:
+    title = f"{display_project(project)} - Recent Context"
+    ranked = sorted(items, key=lambda item: str(item.get("last_seen_at") or ""), reverse=True)[:PROJECT_RECENT_ITEM_CAP]
+    used: set[str] = set()
+    lines = frontmatter("recent-context", project, (f"project/{project}", "recent"), markdown_output)
+    lines.extend([f"# {FIRE} {title}", ""])
+    focus_items = take_unseen([item for item in ranked if "project_delta" in item.get("source_actor_types", [])], used, 3)
+    append_section(lines, "CURRENT FOCUS", item_statements(focus_items, max_chars=180) or ["No current focus extracted yet."])
+    decision_items = take_unseen(filter_by_terms(ranked, ("decided", "decision", "agreed", "architecture")), used, 6)
+    append_section(lines, "ACTIVE DECISIONS", item_statements(decision_items, max_chars=180) or ["No active decisions extracted yet."])
+    progress_items = take_unseen(filter_by_terms(ranked, ("implement", "fix", "continue", "working", "in progress", "go")), used, 8)
+    append_section(lines, "IN PROGRESS", item_statements(progress_items, max_chars=180) or ["No active work items extracted yet."])
+    failed_items = take_unseen(filter_by_terms(ranked, ("failed", "avoid", "did not work", "error", "broken")), used, 6)
+    append_section(lines, "FAILED / AVOID", item_statements(failed_items, max_chars=180) or ["No recent failures extracted yet."])
+    next_items = take_unseen(filter_by_terms(ranked, ("next", "todo", "should", "plan", "remaining")), used, 6)
+    append_numbered_section(lines, "NEXT STEPS", item_statements(next_items, max_chars=180) or ["Review current project memory before starting new work."])
+    backlog_items = take_unseen(ranked, used, 6)
+    append_section(lines, "BACKLOG", item_statements(backlog_items, max_chars=180) or ["No backlog items extracted yet."])
+    note_items = take_unseen(filter_by_terms(ranked, ("prefer", "constraint", "remember", "important")), used, 6)
+    append_section(lines, "NOTES", item_statements(note_items, max_chars=180) or ["Keep this file small; it is a rolling window only."])
+    lines.extend(["IMPORTANT:", "- This file must stay SMALL.", "- No history dumping.", "- Rolling window only.", ""])
+    return lines
+
+
+def render_project_rules(project: str, items: list[dict[str, object]], markdown_output: MarkdownOutputConfig) -> list[str]:
+    title = f"{display_project(project)} - Project Rules"
+    lines = frontmatter("project-rules", project, (f"project/{project}", "rules"), markdown_output)
+    lines.extend([f"# {GEAR} {title}", ""])
+    append_rule_sections(lines, items, include_scope_notes=True)
+    append_related(lines, project, markdown_output, include_global=False)
+    return lines
+
+
+def render_project_lessons(project: str, items: list[dict[str, object]], markdown_output: MarkdownOutputConfig) -> list[str]:
+    title = f"{display_project(project)} - Lessons Learned"
+    lines = frontmatter("lessons", project, (f"project/{project}", "lessons"), markdown_output)
+    lines.extend([f"# {BRAIN} {title}", ""])
+    append_section(lines, "MEMORY DESIGN", select_by_terms(items, ("memory", "lesson", "next time")) or item_statements(items[:6]) or ["No high-signal memory-design lessons extracted yet."])
+    append_section(lines, "SYSTEM DESIGN", select_by_terms(items, ("system", "architecture", "root cause", "postmortem")) or ["No high-signal system-design lessons extracted yet."])
+    lines.extend(["ONLY INCLUDE HIGH-SIGNAL CONTENT", ""])
+    return lines
+
+
+def frontmatter(
+    memory_type: str,
+    project: str | None,
+    tags: tuple[str, ...],
+    markdown_output: MarkdownOutputConfig,
+) -> list[str]:
+    if not markdown_output.enable_frontmatter:
+        return []
+    lines = ["---", f"type: {memory_type}"]
+    if project:
+        lines.append(f"project: {project}")
+    lines.append(f"updated: {utc_now()}")
+    if markdown_output.enable_tags:
+        lines.append("tags: [" + ", ".join(tags) + "]")
+    lines.extend(["---", ""])
+    return lines
+
+
+def append_rule_sections(lines: list[str], items: list[dict[str, object]], include_scope_notes: bool) -> None:
+    always = [item for item in items if rule_bucket(item) == "always"]
+    never = [item for item in items if rule_bucket(item) == "never"]
+    conditional = [item for item in items if rule_bucket(item) == "conditional"]
+    explicit = [item for item in items if str(item.get("promotion_state")) == "explicit"]
+    inferred = [item for item in items if str(item.get("promotion_state")) != "explicit"]
+    append_section(lines, "ALWAYS DO", item_statements(always) or ["No always-do rules selected yet."])
+    append_section(lines, "NEVER DO", item_statements(never) or ["No never-do rules selected yet."])
+    append_section(lines, "CONDITIONAL RULES", item_statements(conditional) or ["No conditional rules selected yet."])
+    header = "PROMOTED RULES (EXPLICIT)" if include_scope_notes else "CONFIRMED RULES (EXPLICIT)"
+    append_section(lines, header, confirmation_summary(explicit))
+    append_section(lines, "INFERRED RULES" if include_scope_notes else "INFERRED RULES (REVIEWABLE)", inferred_rule_lines(inferred))
+    if include_scope_notes:
+        append_section(lines, "SCOPE NOTES", ["Applies only to this project."])
+
+
+def append_section(lines: list[str], title: str, bullets: list[str]) -> None:
+    lines.extend([f"## {title}", ""])
+    for bullet in bullets:
+        lines.append(f"- {bullet}")
+    lines.append("")
+
+
+def append_numbered_section(lines: list[str], title: str, entries: list[str]) -> None:
+    lines.extend([f"## {title}", ""])
+    for index, entry in enumerate(entries, start=1):
+        lines.append(f"{index}. {entry}")
+    lines.append("")
+
+
+def append_related(lines: list[str], project: str, markdown_output: MarkdownOutputConfig, include_global: bool = True) -> None:
+    if markdown_output.enable_wikilinks:
+        related = [f"[[{display_project(project)} Recent]]", f"[[{display_project(project)} Rules]]"]
+        if include_global:
+            related.append("[[Global User Rules]]")
+    else:
+        related = [f"memory/projects/{project}/recent.md", f"memory/projects/{project}/rules.md"]
+        if include_global:
+            related.append("memory/global/user-rules.md")
+    append_section(lines, "RELATED", related)
+
+
+def item_statements(items: list[dict[str, object]], max_chars: int | None = None) -> list[str]:
+    return [format_item_statement(item, max_chars=max_chars) for item in items if str(item.get("statement") or "").strip()]
+
+
+def format_item_statement(item: dict[str, object], max_chars: int | None = None) -> str:
+    statement = str(item.get("statement") or "").strip()
+    if max_chars is not None and len(statement) > max_chars:
+        statement = statement[: max_chars - 3].rstrip() + "..."
+    item_id = str(item.get("item_id") or "")
+    return f"{statement} <!-- {item_id} -->" if item_id else statement
+
+
+def inferred_rule_lines(items: list[dict[str, object]]) -> list[str]:
+    if not items:
+        return ["No inferred rules pending review."]
+    lines = []
+    for item in items:
+        confidence = str(item.get("confidence") or "candidate")
+        source_count = len(item.get("evidence_ids", []))
+        lines.append(f"{item.get('statement')} (confidence: {confidence}; source_count: {source_count}) <!-- {item.get('item_id')} -->")
+    return lines
+
+
+def confirmation_summary(items: list[dict[str, object]]) -> list[str]:
+    if not items:
+        return ["No explicit rules selected yet."]
+    return [f"{len(items)} explicit rule(s) are listed above by behavior bucket."]
+
+
+def rule_bucket(item: dict[str, object]) -> str:
+    text = str(item.get("statement") or "").strip().lower()
+    if text.startswith(("never", "do not", "don't")):
+        return "never"
+    if text.startswith(("always", "must")):
+        return "always"
+    return "conditional"
+
+
+def select_by_terms(items: list[dict[str, object]], terms: tuple[str, ...], max_chars: int | None = None) -> list[str]:
+    selected = []
+    for item in items:
+        statement = str(item.get("statement") or "")
+        lowered = statement.lower()
+        if any(term in lowered for term in terms):
+            selected.append(format_item_statement(item, max_chars=max_chars))
+    return selected
+
+
+def filter_by_terms(items: list[dict[str, object]], terms: tuple[str, ...]) -> list[dict[str, object]]:
+    return [
+        item
+        for item in items
+        if any(term in str(item.get("statement") or "").lower() for term in terms)
+    ]
+
+
+def take_unseen(items: list[dict[str, object]], used: set[str], limit: int) -> list[dict[str, object]]:
+    selected = []
+    for item in items:
+        item_id = str(item.get("item_id") or "")
+        if item_id in used:
+            continue
+        selected.append(item)
+        used.add(item_id)
+        if len(selected) >= limit:
+            break
+    return selected
+
+
+def display_project(project: str) -> str:
+    return " ".join(part.capitalize() for part in project.split("-"))
 
 
 def write_meta(memory_dir: Path, items: list[dict[str, object]]) -> None:
@@ -542,6 +749,16 @@ def is_project_summary_text(text: str) -> bool:
     if len(text) > 360 or SCAFFOLD_PATTERN.search(text) or ONE_OFF_PATTERN.search(text):
         return False
     return bool(PROJECT_SUMMARY_PATTERN.search(text))
+
+
+def is_recent_context_candidate(text: str) -> bool:
+    if len(text) > 320:
+        return False
+    if RECENT_NOISE_PATTERN.search(text):
+        return False
+    if text.lower() in {"what is next ?", "what is next?", "next", "go", "ok, continue", "continue"}:
+        return False
+    return True
 
 
 def promotion_state(text: str) -> str:

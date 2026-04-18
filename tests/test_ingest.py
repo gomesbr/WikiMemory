@@ -256,6 +256,31 @@ class IngestTests(unittest.TestCase):
         record = self.read_jsonl(self.evidence_dir / "logs" / f"{source_id}.jsonl")[0]
         self.assertEqual(record["project_hint"], "wikimemory")
 
+    def test_project_delta_ignores_generated_and_temp_paths(self) -> None:
+        self.init_git_project()
+        payload = default_product_config(self.project_root).to_dict()
+        payload["project_sources"][0]["project_root"] = str(self.project_root)
+        self.product_config.write_text(json.dumps(payload, indent=2), encoding="utf-8")
+        (self.project_root / ".tmp").mkdir()
+        (self.project_root / ".tmp" / "scratch.md").write_text("temp", encoding="utf-8")
+        (self.project_root / "memory").mkdir()
+        (self.project_root / "memory" / "generated.md").write_text("generated", encoding="utf-8")
+        (self.project_root / "src.py").write_text("print('real')\n", encoding="utf-8")
+
+        result = run_ingest(
+            product_config_path=self.product_config,
+            state_dir=self.state_dir,
+            normalized_dir=self.normalized_dir,
+            evidence_dir=self.evidence_dir,
+            audits_dir=self.audits_dir,
+        )
+
+        self.assertTrue(result.report.success, result.report.fatal_error_summary)
+        records = self.read_jsonl(next((self.evidence_dir / "projects").glob("*.jsonl")))
+        texts = [surface["text"] for record in records for surface in record.get("content_surfaces", [])]
+        self.assertTrue(any("src.py" in text for text in texts))
+        self.assertFalse(any(".tmp" in text or "memory/generated.md" in text for text in texts))
+
     def test_llm_project_routing_rewrites_unresolved_source_records(self) -> None:
         self.init_git_project()
         payload = default_product_config(self.project_root).to_dict()

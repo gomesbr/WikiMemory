@@ -286,7 +286,9 @@ def git_worktree_records(project_root: Path, project_slug: str) -> list[dict[str
     )
     for index, line in enumerate(status_lines, start=1):
         status = line[:2].strip() or "?"
-        path = line[3:].strip()
+        path = line[2:].strip()
+        if is_ignored_project_delta_path(path):
+            continue
         records.append(
             {
                 "evidence_id": stable_id("git_status", str(project_root), line),
@@ -303,6 +305,11 @@ def git_worktree_records(project_root: Path, project_slug: str) -> list[dict[str
             }
         )
     return records
+
+
+def is_ignored_project_delta_path(path: str) -> bool:
+    normalized = path.replace("\\", "/").lstrip("/")
+    return normalized.startswith((".tmp/", "memory/", "state/", "audits/", "normalized/", "segmented/", "classified/", "extracted/", "wiki/", "bootstrap/"))
 
 
 def actor_type_for_event(event: dict[str, object]) -> str:
