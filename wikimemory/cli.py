@@ -4,6 +4,7 @@ import argparse
 import json
 from pathlib import Path
 
+from .agent_bootstrap import AgentBootstrapResult, run_agent_bootstrap
 from .audit import AuditResult, run_audit
 from .bootstrap import BootstrapResult, run_bootstrap
 from .classification import ClassificationResult, run_classification
@@ -561,6 +562,52 @@ def build_parser() -> argparse.ArgumentParser:
         action="store_true",
         help="Print the final run report as JSON.",
     )
+
+    agent_bootstrap_parser = subparsers.add_parser(
+        "agent-bootstrap",
+        help="Generate the configured agent bootstrap file from compact memory artifacts.",
+    )
+    agent_bootstrap_parser.add_argument(
+        "--product-config",
+        type=Path,
+        default=Path("config/product_config.json"),
+        help="Path to unified product configuration JSON.",
+    )
+    agent_bootstrap_parser.add_argument(
+        "--state-dir",
+        type=Path,
+        default=Path("state"),
+        help="Directory where agent-bootstrap state and run logs are written.",
+    )
+    agent_bootstrap_parser.add_argument(
+        "--memory-dir",
+        type=Path,
+        default=Path("memory"),
+        help="Directory containing compact memory files.",
+    )
+    agent_bootstrap_parser.add_argument(
+        "--audits-dir",
+        type=Path,
+        default=Path("audits"),
+        help="Directory where agent-bootstrap notices are written.",
+    )
+    agent_bootstrap_parser.add_argument(
+        "--output-path",
+        type=Path,
+        default=None,
+        help="Optional output path override. Defaults to product_config agent_platform.bootstrap_target_path.",
+    )
+    agent_bootstrap_parser.add_argument(
+        "--project",
+        dest="projects",
+        action="append",
+        help="Optional project slug to include. Repeat to target multiple projects.",
+    )
+    agent_bootstrap_parser.add_argument(
+        "--json",
+        action="store_true",
+        help="Print the final run report as JSON.",
+    )
     return parser
 
 
@@ -724,6 +771,15 @@ def format_memory_result(result: MemoryResult) -> str:
     return (
         f"Memory {outcome}: items[{item_counts or 'none'}]; "
         f"rendered={result.report.rendered_file_count}; "
+        f"state={result.state_path}; run_log={result.run_log_path}; notices={result.notice_log_path}"
+    )
+
+
+def format_agent_bootstrap_result(result: AgentBootstrapResult) -> str:
+    outcome = "succeeded" if result.report.success else "failed"
+    return (
+        f"Agent-bootstrap {outcome}: target={result.target_path}; "
+        f"items={result.report.selected_item_count}; chars={result.report.rendered_char_count}; "
         f"state={result.state_path}; run_log={result.run_log_path}; notices={result.notice_log_path}"
     )
 
@@ -918,6 +974,23 @@ def main(argv: list[str] | None = None) -> int:
             print(json.dumps(result.report.to_dict(), indent=2, sort_keys=True))
         else:
             print(format_memory_result(result))
+            if result.report.fatal_error_summary:
+                print(result.report.fatal_error_summary)
+        return 0 if result.report.success else 1
+
+    if args.command == "agent-bootstrap":
+        result = run_agent_bootstrap(
+            product_config_path=args.product_config,
+            state_dir=args.state_dir,
+            memory_dir=args.memory_dir,
+            audits_dir=args.audits_dir,
+            output_path=args.output_path,
+            projects=args.projects,
+        )
+        if args.json:
+            print(json.dumps(result.report.to_dict(), indent=2, sort_keys=True))
+        else:
+            print(format_agent_bootstrap_result(result))
             if result.report.fatal_error_summary:
                 print(result.report.fatal_error_summary)
         return 0 if result.report.success else 1

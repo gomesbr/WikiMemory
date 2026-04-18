@@ -142,6 +142,14 @@ Writes:
 - `state/memory_runs.jsonl`
 - `audits/memory_notices.jsonl`
 
+The configured agent bootstrap file can then be generated from compact memory:
+
+```powershell
+python -m wikimemory agent-bootstrap
+```
+
+For the default Codex configuration this writes `AGENTS.md` as a tiny entry map that points to the derived memory files instead of copying the whole memory layer into the bootstrap.
+
 Segmentation groups normalized events into higher-level units that are more useful than raw line-by-line traces.
 
 Typical segments correspond to:
@@ -486,6 +494,7 @@ python -m wikimemory discover
 python -m wikimemory normalize
 python -m wikimemory ingest
 python -m wikimemory memory
+python -m wikimemory agent-bootstrap
 python -m wikimemory segment
 python -m wikimemory classify
 python -m wikimemory extract
