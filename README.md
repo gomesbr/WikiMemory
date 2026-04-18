@@ -158,6 +158,14 @@ python -m wikimemory memory-lint
 
 This checks rule quality, scope, provenance, stale recent-state items, and whether the agent bootstrap stays an entry map instead of inlining noisy recent context.
 
+The redesigned memory path also has a single end-to-end refresh command:
+
+```powershell
+python -m wikimemory memory-refresh
+```
+
+This runs discovery, normalization, evidence ingest, compact memory generation, agent bootstrap generation, and memory linting without invoking the legacy wiki/bootstrap synthesis path.
+
 Segmentation groups normalized events into higher-level units that are more useful than raw line-by-line traces.
 
 Typical segments correspond to:
@@ -504,6 +512,7 @@ python -m wikimemory ingest
 python -m wikimemory memory
 python -m wikimemory agent-bootstrap
 python -m wikimemory memory-lint
+python -m wikimemory memory-refresh
 python -m wikimemory segment
 python -m wikimemory classify
 python -m wikimemory extract

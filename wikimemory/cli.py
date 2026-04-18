@@ -15,6 +15,7 @@ from .full_load import FullLoadResult, run_full_load
 from .ingest import IngestResult, run_ingest
 from .memory_generation import MemoryResult, run_memory_generation
 from .memory_lint import MemoryLintResult, run_memory_lint
+from .memory_refresh import MemoryRefreshResult, run_memory_refresh
 from .normalization import NormalizationResult, run_normalization
 from .onboarding import OnboardingReport, run_onboarding
 from .refresh import RefreshResult, run_refresh
@@ -649,6 +650,76 @@ def build_parser() -> argparse.ArgumentParser:
         action="store_true",
         help="Print the final run report as JSON.",
     )
+
+    memory_refresh_parser = subparsers.add_parser(
+        "memory-refresh",
+        help="Run the redesigned memory pipeline: discover, normalize, ingest, memory, agent-bootstrap, memory-lint.",
+    )
+    memory_refresh_parser.add_argument(
+        "--source-config",
+        type=Path,
+        default=Path("config/source_roots.json"),
+        help="Path to source root configuration JSON.",
+    )
+    memory_refresh_parser.add_argument(
+        "--product-config",
+        type=Path,
+        default=Path("config/product_config.json"),
+        help="Path to unified product configuration JSON.",
+    )
+    memory_refresh_parser.add_argument(
+        "--schema",
+        type=Path,
+        default=Path("schema/normalization_catalog.json"),
+        help="Path to the normalization schema catalog JSON.",
+    )
+    memory_refresh_parser.add_argument(
+        "--state-dir",
+        type=Path,
+        default=Path("state"),
+        help="Directory where state and run logs are written.",
+    )
+    memory_refresh_parser.add_argument(
+        "--normalized-dir",
+        type=Path,
+        default=Path("normalized"),
+        help="Directory where normalized artifacts are written.",
+    )
+    memory_refresh_parser.add_argument(
+        "--evidence-dir",
+        type=Path,
+        default=Path("evidence"),
+        help="Directory where evidence artifacts are written.",
+    )
+    memory_refresh_parser.add_argument(
+        "--memory-dir",
+        type=Path,
+        default=Path("memory"),
+        help="Directory where compact memory artifacts are written.",
+    )
+    memory_refresh_parser.add_argument(
+        "--audits-dir",
+        type=Path,
+        default=Path("audits"),
+        help="Directory where notices and lint findings are written.",
+    )
+    memory_refresh_parser.add_argument(
+        "--bootstrap-output-path",
+        type=Path,
+        default=None,
+        help="Optional agent bootstrap output path override.",
+    )
+    memory_refresh_parser.add_argument(
+        "--source-id",
+        dest="source_ids",
+        action="append",
+        help="Optional source_id to scope evidence ingest. Repeat to target multiple sources.",
+    )
+    memory_refresh_parser.add_argument(
+        "--json",
+        action="store_true",
+        help="Print the final run report as JSON.",
+    )
     return parser
 
 
@@ -829,6 +900,18 @@ def format_memory_lint_result(result: MemoryLintResult) -> str:
     outcome = "succeeded" if result.report.success else "failed"
     return (
         f"Memory-lint {outcome}: findings={result.report.finding_count}; "
+        f"warnings={result.report.warning_count}; errors={result.report.error_count}; "
+        f"state={result.state_path}; run_log={result.run_log_path}"
+    )
+
+
+def format_memory_refresh_result(result: MemoryRefreshResult) -> str:
+    phases = ",".join(status.phase for status in result.report.phase_statuses)
+    outcome = "succeeded" if result.report.success else "failed"
+    return (
+        f"Memory-refresh {outcome}: phases[{phases or 'none'}]; "
+        f"last_completed={result.report.last_completed_phase or 'none'}; "
+        f"failed_phase={result.report.failed_phase or 'none'}; "
         f"warnings={result.report.warning_count}; errors={result.report.error_count}; "
         f"state={result.state_path}; run_log={result.run_log_path}"
     )
@@ -1060,6 +1143,27 @@ def main(argv: list[str] | None = None) -> int:
             if result.report.fatal_error_summary:
                 print(result.report.fatal_error_summary)
         return 0 if result.report.success and result.report.error_count == 0 else 1
+
+    if args.command == "memory-refresh":
+        result = run_memory_refresh(
+            source_roots_config_path=args.source_config,
+            product_config_path=args.product_config,
+            normalization_schema_path=args.schema,
+            state_dir=args.state_dir,
+            normalized_dir=args.normalized_dir,
+            evidence_dir=args.evidence_dir,
+            memory_dir=args.memory_dir,
+            audits_dir=args.audits_dir,
+            bootstrap_output_path=args.bootstrap_output_path,
+            source_ids=args.source_ids,
+        )
+        if args.json:
+            print(json.dumps(result.report.to_dict(), indent=2, sort_keys=True))
+        else:
+            print(format_memory_refresh_result(result))
+            if result.report.fatal_error_summary:
+                print(result.report.fatal_error_summary)
+        return 0 if result.report.success else 1
 
     result = run_full_load(
         config_path=args.config,

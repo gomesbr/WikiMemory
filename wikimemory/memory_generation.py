@@ -365,20 +365,33 @@ def evidence_text(record: dict[str, object]) -> str:
 
 def candidate_clauses(text: str) -> list[str]:
     if SCAFFOLD_PATTERN.search(text) and not USER_RULE_PATTERN.search(text):
-        return [normalize_statement(extract_request_text(text))]
+        clause = clean_clause(extract_request_text(text))
+        return [clause] if is_meaningful_clause(clause) else []
     text = extract_request_text(text)
     text = re.sub(r"<image>\s*</image>|<image>|</image>", " ", text, flags=re.IGNORECASE)
     text = re.sub(r"^\s*[-*]\s+", "", text, flags=re.MULTILINE)
     raw_parts = re.split(r"(?:\r?\n|;|(?<=[.!?])\s+)", text)
     clauses: list[str] = []
     for part in raw_parts:
-        clause = normalize_statement(part.strip(" -\t\r\n"))
-        if not clause or len(clause) < 8:
+        clause = clean_clause(part)
+        if not is_meaningful_clause(clause):
             continue
         if clause.startswith("#") or clause.lower().startswith(("open tabs", "active file")):
             continue
         clauses.append(clause)
     return clauses[:8]
+
+
+def clean_clause(text: str) -> str:
+    return normalize_statement(text.strip(" -\t\r\n\"'`"))
+
+
+def is_meaningful_clause(clause: str) -> bool:
+    if not clause or len(clause) < 8:
+        return False
+    if clause.lower() in {"yes", "next", "go", "ok", "done", "agreed"}:
+        return False
+    return True
 
 
 def extract_request_text(text: str) -> str:

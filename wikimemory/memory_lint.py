@@ -185,7 +185,7 @@ def lint_bootstrap(run_id: str, target_path: Path, items: list[dict[str, object]
         findings.append(finding(run_id, "warning", "structure", "missing_tiny_bootstrap_rule", str(target_path), "Agent bootstrap is missing the compactness operating rule."))
     for item in items:
         statement = str(item.get("statement") or "")
-        if str(item.get("memory_class")) == "recent_project_state" and statement and statement in content:
+        if str(item.get("memory_class")) == "recent_project_state" and len(statement) >= 12 and statement in content:
             findings.append(finding(run_id, "warning", "structure", "recent_state_inlined", str(item.get("item_id")), "Agent bootstrap should link recent context, not inline it."))
     return findings
 
