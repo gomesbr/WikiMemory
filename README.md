@@ -350,6 +350,8 @@ Top-level folders you will care about:
   - Python implementation for all phases
 - `config/`
   - JSON configuration for source roots, taxonomy, extraction, wiki, bootstrap, audit, refresh, and full-load
+- `examples/`
+  - representative raw source-data example for explaining the input format
 - `schema/`
   - normalization catalog and related schema assets
 - `tests/`
@@ -536,6 +538,21 @@ Those manifests are important because they capture:
 - page metadata
 
 The markdown is human-facing. The manifests are machine-facing.
+
+## Example Raw Input
+
+If you need to show another model what the source data looks like without exposing the full external corpus, use:
+
+- `examples/source-logs/representative-session.jsonl`
+
+That file is a real session log chosen because it is small but still demonstrates:
+
+- the `session_meta` opening record
+- user and assistant messages
+- commentary updates
+- reasoning records
+- tool/function calls and outputs
+- token-count and task lifecycle events
 
 ## Bootstrap Output Model
 
