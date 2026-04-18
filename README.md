@@ -124,6 +124,24 @@ Writes:
 - `state/ingest_runs.jsonl`
 - `audits/ingest_notices.jsonl`
 
+The memory-first path can then generate compact operational memory directly from evidence:
+
+```powershell
+python -m wikimemory memory
+```
+
+Writes:
+
+- `memory/global/user-rules.md`
+- `memory/projects/<project>/project.md`
+- `memory/projects/<project>/recent.md`
+- `memory/projects/<project>/rules.md`
+- `memory/projects/<project>/lessons.md` when high-signal lessons exist
+- `memory/_meta/items.jsonl`
+- `state/memory_state.json`
+- `state/memory_runs.jsonl`
+- `audits/memory_notices.jsonl`
+
 Segmentation groups normalized events into higher-level units that are more useful than raw line-by-line traces.
 
 Typical segments correspond to:
@@ -467,6 +485,7 @@ Main commands:
 python -m wikimemory discover
 python -m wikimemory normalize
 python -m wikimemory ingest
+python -m wikimemory memory
 python -m wikimemory segment
 python -m wikimemory classify
 python -m wikimemory extract

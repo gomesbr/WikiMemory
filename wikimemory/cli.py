@@ -12,6 +12,7 @@ from .env_loader import load_project_env
 from .extraction import ExtractionResult, run_extraction
 from .full_load import FullLoadResult, run_full_load
 from .ingest import IngestResult, run_ingest
+from .memory_generation import MemoryResult, run_memory_generation
 from .normalization import NormalizationResult, run_normalization
 from .onboarding import OnboardingReport, run_onboarding
 from .refresh import RefreshResult, run_refresh
@@ -514,6 +515,52 @@ def build_parser() -> argparse.ArgumentParser:
         action="store_true",
         help="Print the final run report as JSON.",
     )
+
+    memory_parser = subparsers.add_parser(
+        "memory",
+        help="Generate compact operational memory files from canonical evidence records.",
+    )
+    memory_parser.add_argument(
+        "--product-config",
+        type=Path,
+        default=Path("config/product_config.json"),
+        help="Path to unified product configuration JSON.",
+    )
+    memory_parser.add_argument(
+        "--state-dir",
+        type=Path,
+        default=Path("state"),
+        help="Directory where memory generation state and run logs are written.",
+    )
+    memory_parser.add_argument(
+        "--evidence-dir",
+        type=Path,
+        default=Path("evidence"),
+        help="Directory containing canonical evidence artifacts.",
+    )
+    memory_parser.add_argument(
+        "--memory-dir",
+        type=Path,
+        default=Path("memory"),
+        help="Directory where compact memory files are written.",
+    )
+    memory_parser.add_argument(
+        "--audits-dir",
+        type=Path,
+        default=Path("audits"),
+        help="Directory where memory generation notices are written.",
+    )
+    memory_parser.add_argument(
+        "--project",
+        dest="projects",
+        action="append",
+        help="Optional project slug to render. Repeat to target multiple projects.",
+    )
+    memory_parser.add_argument(
+        "--json",
+        action="store_true",
+        help="Print the final run report as JSON.",
+    )
     return parser
 
 
@@ -665,6 +712,18 @@ def format_ingest_result(result: IngestResult) -> str:
     outcome = "succeeded" if result.report.success else "failed"
     return (
         f"Ingest {outcome}: evidence[{evidence_counts or 'none'}]; "
+        f"state={result.state_path}; run_log={result.run_log_path}; notices={result.notice_log_path}"
+    )
+
+
+def format_memory_result(result: MemoryResult) -> str:
+    item_counts = ", ".join(
+        f"{kind}={count}" for kind, count in sorted(result.report.item_counts.items())
+    )
+    outcome = "succeeded" if result.report.success else "failed"
+    return (
+        f"Memory {outcome}: items[{item_counts or 'none'}]; "
+        f"rendered={result.report.rendered_file_count}; "
         f"state={result.state_path}; run_log={result.run_log_path}; notices={result.notice_log_path}"
     )
 
@@ -842,6 +901,23 @@ def main(argv: list[str] | None = None) -> int:
             print(json.dumps(result.report.to_dict(), indent=2, sort_keys=True))
         else:
             print(format_ingest_result(result))
+            if result.report.fatal_error_summary:
+                print(result.report.fatal_error_summary)
+        return 0 if result.report.success else 1
+
+    if args.command == "memory":
+        result = run_memory_generation(
+            product_config_path=args.product_config,
+            state_dir=args.state_dir,
+            evidence_dir=args.evidence_dir,
+            memory_dir=args.memory_dir,
+            audits_dir=args.audits_dir,
+            projects=args.projects,
+        )
+        if args.json:
+            print(json.dumps(result.report.to_dict(), indent=2, sort_keys=True))
+        else:
+            print(format_memory_result(result))
             if result.report.fatal_error_summary:
                 print(result.report.fatal_error_summary)
         return 0 if result.report.success else 1
