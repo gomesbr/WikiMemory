@@ -329,6 +329,12 @@ def validate_product_config(config: ProductConfig) -> None:
         raise ProductConfigError(f"Unsupported scheduler mode: {config.scheduler.mode}")
     if config.scheduler.tick_seconds <= 0:
         raise ProductConfigError("scheduler.tick_seconds must be positive")
+    if config.project_routing.min_confidence not in {"high", "medium", "low"}:
+        raise ProductConfigError(f"Unsupported project routing min_confidence: {config.project_routing.min_confidence}")
+    if config.project_routing.max_sources_per_run <= 0:
+        raise ProductConfigError("project_routing.max_sources_per_run must be positive")
+    if config.project_routing.max_sample_records_per_source <= 0:
+        raise ProductConfigError("project_routing.max_sample_records_per_source must be positive")
 
 
 def parse_project_routing_config(payload: dict[str, Any]) -> ProjectRoutingConfig:

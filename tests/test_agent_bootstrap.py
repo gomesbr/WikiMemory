@@ -102,6 +102,31 @@ class AgentBootstrapTests(unittest.TestCase):
         self.assertIn("Always inspect real data first", content)
         self.assertNotIn("Do not commit generated memory outputs", content)
 
+    def test_agent_bootstrap_supports_claude_and_generic_renderers(self) -> None:
+        self.write_memory_items()
+        for renderer, target_name, expected_title in (
+            ("claude_md", "CLAUDE.md", "# Claude Memory Bootstrap"),
+            ("generic_bootstrap_md", "MEMORY.md", "# AI Agent Memory Bootstrap"),
+        ):
+            payload = default_product_config(self.temp_dir).to_dict()
+            payload["environment"]["repo_root"] = str(self.temp_dir)
+            payload["agent_platform"]["bootstrap_renderer"] = renderer
+            payload["agent_platform"]["bootstrap_target_path"] = target_name
+            self.product_config.write_text(json.dumps(payload, indent=2), encoding="utf-8")
+
+            result = run_agent_bootstrap(
+                product_config_path=self.product_config,
+                state_dir=self.state_dir,
+                memory_dir=self.memory_dir,
+                audits_dir=self.audits_dir,
+            )
+
+            self.assertTrue(result.report.success, result.report.fatal_error_summary)
+            content = (self.temp_dir / target_name).read_text(encoding="utf-8")
+            self.assertIn(expected_title, content)
+            self.assertIn("memory/global/user-rules.md", content)
+            self.assertIn("Keep this bootstrap tiny", content)
+
 
 if __name__ == "__main__":
     unittest.main()

@@ -12,7 +12,7 @@ from typing import Iterable
 from .discovery import DiscoveryError, atomic_write_text, ensure_directory, utc_now
 from .memory_model import MEMORY_FILE_DEFINITIONS
 from .normalization import append_jsonl_text
-from .product_config import load_product_config
+from .product_config import MarkdownOutputConfig, load_product_config
 
 STATE_SCHEMA_VERSION = 1
 MEMORY_SCHEMA_VERSION = 1
@@ -96,7 +96,7 @@ def run_memory_generation(
         config = load_product_config(product_config_path)
         evidence_records = load_evidence_records(evidence_dir)
         memory_items = build_memory_items(evidence_records, project_filter)
-        rendered_files = render_memory_files(memory_dir, memory_items, config.markdown_output.mode)
+        rendered_files = render_memory_files(memory_dir, memory_items, config.markdown_output)
         write_meta(memory_dir, memory_items)
 
         item_counts: defaultdict[str, int] = defaultdict(int)
@@ -264,7 +264,7 @@ def latest_timestamp(left: object, right: object) -> object:
     return max(str(left), str(right))
 
 
-def render_memory_files(memory_dir: Path, items: list[dict[str, object]], markdown_mode: str) -> list[Path]:
+def render_memory_files(memory_dir: Path, items: list[dict[str, object]], markdown_output: MarkdownOutputConfig) -> list[Path]:
     clear_generated_memory_tree(memory_dir)
     grouped: defaultdict[str, list[dict[str, object]]] = defaultdict(list)
     for item in items:
@@ -274,7 +274,7 @@ def render_memory_files(memory_dir: Path, items: list[dict[str, object]], markdo
 
     rendered: list[Path] = []
     global_target = memory_dir / memory_relative_path("global_user_rules")
-    render_file(global_target, "Global User Rules", grouped["global_user_rules"], markdown_mode)
+    render_file(global_target, "Global User Rules", grouped["global_user_rules"], markdown_output)
     rendered.append(global_target)
 
     projects = sorted({str(item["project"]) for item in items if item.get("project")})
@@ -285,7 +285,7 @@ def render_memory_files(memory_dir: Path, items: list[dict[str, object]], markdo
             if definition.optional and not project_items:
                 continue
             target = memory_dir / memory_relative_path(key, project)
-            render_file(target, title_for_memory_file(key, project), project_items, markdown_mode)
+            render_file(target, title_for_memory_file(key, project), project_items, markdown_output)
             rendered.append(target)
     return rendered
 
@@ -297,13 +297,18 @@ def clear_generated_memory_tree(memory_dir: Path) -> None:
             shutil.rmtree(target)
 
 
-def render_file(path: Path, title: str, items: list[dict[str, object]], markdown_mode: str) -> None:
+def render_file(path: Path, title: str, items: list[dict[str, object]], markdown_output: MarkdownOutputConfig) -> None:
     ensure_directory(path.parent)
     lines: list[str] = []
-    if markdown_mode == "obsidian_markdown":
-        lines.extend(["---", f'title: "{title}"', "tags:", "  - wikimemory", "  - memory", "---", ""])
+    if markdown_output.enable_frontmatter:
+        lines.extend(["---", f'title: "{title}"'])
+        if markdown_output.enable_tags:
+            lines.extend(["tags:", "  - wikimemory", "  - memory"])
+        lines.extend(["---", ""])
     lines.append(f"# {title}")
     lines.append("")
+    if markdown_output.enable_wikilinks and "projects" in path.parts:
+        lines.extend([f"Related: [[{path.parent.name}]]", ""])
     if not items:
         lines.append("- No high-signal memory selected yet.")
     else:

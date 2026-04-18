@@ -157,6 +157,13 @@ python -m wikimemory agent-bootstrap
 
 For the default Codex configuration this writes `AGENTS.md` as a tiny entry map that points to the derived memory files instead of copying the whole memory layer into the bootstrap.
 
+Bootstrap rendering is configurable:
+
+- `codex_agents_md` writes Codex-oriented `AGENTS.md`
+- `claude_md` writes Claude-oriented `CLAUDE.md`
+- `generic_bootstrap_md` writes a neutral markdown entry map
+- the bootstrap stays small in all modes and links to derived memory instead of inlining recent context
+
 Compact memory outputs can be linted independently from the legacy wiki pipeline:
 
 ```powershell

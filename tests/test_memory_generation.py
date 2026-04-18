@@ -115,6 +115,37 @@ class MemoryGenerationTests(unittest.TestCase):
         self.assertTrue((self.memory_dir / "global" / "user-rules.md").exists())
         self.assertTrue((self.memory_dir / "projects" / "example-project" / "rules.md").exists())
 
+    def test_memory_generation_respects_plain_markdown_renderer_flags(self) -> None:
+        payload = json.loads(self.product_config.read_text(encoding="utf-8"))
+        payload["markdown_output"]["mode"] = "plain_markdown"
+        payload["markdown_output"]["enable_frontmatter"] = False
+        payload["markdown_output"]["enable_tags"] = False
+        payload["markdown_output"]["enable_wikilinks"] = False
+        self.product_config.write_text(json.dumps(payload, indent=2), encoding="utf-8")
+        self.write_evidence(
+            "logs/sample-source.jsonl",
+            [
+                self.evidence_record(
+                    "e1",
+                    "user",
+                    "Add this to global rules: Always inspect real data before changing extraction.",
+                ),
+            ],
+        )
+
+        result = run_memory_generation(
+            product_config_path=self.product_config,
+            state_dir=self.state_dir,
+            evidence_dir=self.evidence_dir,
+            memory_dir=self.memory_dir,
+            audits_dir=self.audits_dir,
+        )
+
+        self.assertTrue(result.report.success, result.report.fatal_error_summary)
+        content = (self.memory_dir / "global" / "user-rules.md").read_text(encoding="utf-8")
+        self.assertFalse(content.startswith("---"))
+        self.assertNotIn("[[", content)
+
     def test_memory_generation_consumes_real_sample_ingest_path(self) -> None:
         repo_root = Path(__file__).resolve().parents[1]
         sessions_root = self.temp_dir / "sessions"

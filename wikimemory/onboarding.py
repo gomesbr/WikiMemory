@@ -3,6 +3,7 @@ from __future__ import annotations
 import json
 import os
 from dataclasses import dataclass
+from dataclasses import replace
 from pathlib import Path
 
 from .adapters import BOOTSTRAP_RENDERERS, MARKDOWN_RENDERERS
@@ -153,47 +154,66 @@ def build_onboarding_questions(detected: dict[str, object]) -> tuple[OnboardingQ
                 {"key": "C", "label": "Generic", "description": "Keep environment-neutral defaults."},
             ),
         ),
+        OnboardingQuestion(
+            question_id="log_root",
+            prompt="Confirm session log root.",
+            detected_value=str(detected["likely_log_root"]),
+            recommended_option="A",
+            options=(
+                {"key": "A", "label": "Use detected", "description": "Use the detected Codex session-log location."},
+                {"key": "B", "label": "Configure manually", "description": "Set a custom log root in product/source config."},
+                {"key": "C", "label": "Adapter later", "description": "Keep config extensible for another log format."},
+            ),
+        ),
+        OnboardingQuestion(
+            question_id="project_routing",
+            prompt="Confirm unresolved-project routing policy.",
+            detected_value=None,
+            recommended_option="A",
+            options=(
+                {"key": "A", "label": "LLM for unresolved", "description": "Use deterministic aliases first, then LLM only for generic project buckets."},
+                {"key": "B", "label": "Deterministic only", "description": "Never call a provider during project association."},
+                {"key": "C", "label": "Ask before routing", "description": "Keep unresolved records until reviewed."},
+            ),
+        ),
+        OnboardingQuestion(
+            question_id="promotion_policy",
+            prompt="Confirm inferred-rule promotion policy.",
+            detected_value=None,
+            recommended_option="A",
+            options=(
+                {"key": "A", "label": "Confirm inferred", "description": "Explicit user promotions become durable; inferred repeated rules stay reviewable."},
+                {"key": "B", "label": "Auto-promote repeated", "description": "Repeated inferred rules can become durable automatically."},
+                {"key": "C", "label": "Project-only auto", "description": "Auto-promote repeated project rules, but not global rules."},
+            ),
+        ),
     )
 
 
 def replace_markdown_mode(config: ProductConfig, mode: str) -> ProductConfig:
     renderer = MARKDOWN_RENDERERS[mode]
-    return ProductConfig(
-        schema_version=config.schema_version,
-        product_schema_version=config.product_schema_version,
-        environment=config.environment,
-        agent_platform=config.agent_platform,
+    return replace(
+        config,
         markdown_output=type(config.markdown_output)(
             mode=renderer.adapter_id,
             root_dir=config.markdown_output.root_dir,
-            enable_frontmatter=True,
+            enable_frontmatter=config.markdown_output.enable_frontmatter,
             enable_tags=renderer.adapter_id == "obsidian_markdown",
             enable_wikilinks=renderer.adapter_id == "obsidian_markdown",
         ),
-        log_sources=config.log_sources,
-        project_sources=config.project_sources,
-        scheduler=config.scheduler,
-        policies=config.policies,
     )
 
 
 def replace_bootstrap_renderer(config: ProductConfig, renderer_id: str, target_path: str) -> ProductConfig:
     if renderer_id not in BOOTSTRAP_RENDERERS:
         renderer_id = "generic_bootstrap_md"
-    return ProductConfig(
-        schema_version=config.schema_version,
-        product_schema_version=config.product_schema_version,
-        environment=config.environment,
+    return replace(
+        config,
         agent_platform=type(config.agent_platform)(
             platform=config.agent_platform.platform,
             bootstrap_renderer=renderer_id,
             bootstrap_target_path=target_path,
         ),
-        markdown_output=config.markdown_output,
-        log_sources=config.log_sources,
-        project_sources=config.project_sources,
-        scheduler=config.scheduler,
-        policies=config.policies,
     )
 
 

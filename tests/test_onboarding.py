@@ -7,6 +7,8 @@ import unittest
 from pathlib import Path
 
 from wikimemory.onboarding import detect_environment, run_onboarding
+from wikimemory.product_config import default_product_config
+from wikimemory.onboarding import replace_bootstrap_renderer, replace_markdown_mode
 
 
 class OnboardingTests(unittest.TestCase):
@@ -37,3 +39,14 @@ class OnboardingTests(unittest.TestCase):
         self.assertEqual(payload["agent_platform"]["bootstrap_target_path"], "AGENTS.md")
         self.assertEqual(report.questions[0].question_id, "markdown_mode")
         self.assertEqual(report.questions[1].question_id, "bootstrap_target")
+        self.assertTrue(payload["project_aliases"])
+        self.assertIn("project_routing", payload)
+
+    def test_onboarding_replacements_preserve_project_aliases_and_routing(self) -> None:
+        config = default_product_config(self.project_root)
+        markdown_config = replace_markdown_mode(config, "plain_markdown")
+        bootstrap_config = replace_bootstrap_renderer(markdown_config, "claude_md", "CLAUDE.md")
+        self.assertEqual(bootstrap_config.project_aliases, config.project_aliases)
+        self.assertEqual(bootstrap_config.project_routing, config.project_routing)
+        self.assertEqual(bootstrap_config.markdown_output.mode, "plain_markdown")
+        self.assertEqual(bootstrap_config.agent_platform.bootstrap_target_path, "CLAUDE.md")
