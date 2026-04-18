@@ -61,6 +61,26 @@ class ProjectAliasConfig:
 
 
 @dataclass(frozen=True)
+class RoutingProviderConfig:
+    provider_type: str
+    api_key_env: str
+    base_url_env: str
+    model_env: str
+    default_model: str
+    temperature: float
+
+
+@dataclass(frozen=True)
+class ProjectRoutingConfig:
+    enabled: bool
+    unresolved_project: str
+    min_confidence: str
+    max_sources_per_run: int
+    max_sample_records_per_source: int
+    provider: RoutingProviderConfig
+
+
+@dataclass(frozen=True)
 class SchedulerConfig:
     mode: str
     scan_on_startup: bool
@@ -87,6 +107,7 @@ class ProductConfig:
     log_sources: tuple[LogSourceConfig, ...]
     project_sources: tuple[ProjectSourceConfig, ...]
     project_aliases: tuple[ProjectAliasConfig, ...]
+    project_routing: ProjectRoutingConfig
     scheduler: SchedulerConfig
     policies: PolicyConfig
 
@@ -103,6 +124,14 @@ class ProductConfig:
                 {"slug": alias.slug, "aliases": list(alias.aliases)}
                 for alias in self.project_aliases
             ],
+            "project_routing": {
+                "enabled": self.project_routing.enabled,
+                "unresolved_project": self.project_routing.unresolved_project,
+                "min_confidence": self.project_routing.min_confidence,
+                "max_sources_per_run": self.project_routing.max_sources_per_run,
+                "max_sample_records_per_source": self.project_routing.max_sample_records_per_source,
+                "provider": self.project_routing.provider.__dict__,
+            },
             "scheduler": self.scheduler.__dict__,
             "policies": self.policies.__dict__,
         }
@@ -149,6 +178,7 @@ def default_product_config(project_root: Path | str) -> ProductConfig:
         project_aliases=(
             ProjectAliasConfig(slug=slugify(project_root.name), aliases=(project_root.name,)),
         ),
+        project_routing=default_project_routing_config(),
         scheduler=SchedulerConfig(
             mode="manual",
             scan_on_startup=True,
@@ -198,6 +228,7 @@ def parse_product_config(payload: dict[str, Any]) -> ProductConfig:
     markdown_payload = dict(payload.get("markdown_output", {}))
     scheduler_payload = dict(payload.get("scheduler", {}))
     policies_payload = dict(payload.get("policies", {}))
+    project_routing_payload = dict(payload.get("project_routing", {}))
 
     log_sources = tuple(
         LogSourceConfig(
@@ -247,6 +278,7 @@ def parse_product_config(payload: dict[str, Any]) -> ProductConfig:
         log_sources=log_sources,
         project_sources=project_sources,
         project_aliases=project_aliases,
+        project_routing=parse_project_routing_config(project_routing_payload),
         scheduler=SchedulerConfig(
             mode=str(scheduler_payload["mode"]),
             scan_on_startup=bool(scheduler_payload["scan_on_startup"]),
@@ -297,6 +329,48 @@ def validate_product_config(config: ProductConfig) -> None:
         raise ProductConfigError(f"Unsupported scheduler mode: {config.scheduler.mode}")
     if config.scheduler.tick_seconds <= 0:
         raise ProductConfigError("scheduler.tick_seconds must be positive")
+
+
+def parse_project_routing_config(payload: dict[str, Any]) -> ProjectRoutingConfig:
+    if not payload:
+        return default_project_routing_config()
+    provider_payload = dict(payload.get("provider", {}))
+    provider = RoutingProviderConfig(
+        provider_type=str(provider_payload.get("type", "openai")),
+        api_key_env=str(provider_payload.get("api_key_env", "OPENAI_API_KEY")),
+        base_url_env=str(provider_payload.get("base_url_env", "WIKIMEMORY_OPENAI_BASE_URL")),
+        model_env=str(provider_payload.get("model_env", "WIKIMEMORY_OPENAI_MODEL")),
+        default_model=str(provider_payload.get("default_model", "gpt-5.4-mini")),
+        temperature=float(provider_payload.get("temperature", 0)),
+    )
+    if provider.provider_type != "openai":
+        raise ProductConfigError(f"Unsupported project routing provider: {provider.provider_type}")
+    return ProjectRoutingConfig(
+        enabled=bool(payload.get("enabled", False)),
+        unresolved_project=slugify(str(payload.get("unresolved_project", "projects"))),
+        min_confidence=str(payload.get("min_confidence", "high")),
+        max_sources_per_run=int(payload.get("max_sources_per_run", 200)),
+        max_sample_records_per_source=int(payload.get("max_sample_records_per_source", 8)),
+        provider=provider,
+    )
+
+
+def default_project_routing_config() -> ProjectRoutingConfig:
+    return ProjectRoutingConfig(
+        enabled=False,
+        unresolved_project="projects",
+        min_confidence="high",
+        max_sources_per_run=200,
+        max_sample_records_per_source=8,
+        provider=RoutingProviderConfig(
+            provider_type="openai",
+            api_key_env="OPENAI_API_KEY",
+            base_url_env="WIKIMEMORY_OPENAI_BASE_URL",
+            model_env="WIKIMEMORY_OPENAI_MODEL",
+            default_model="gpt-5.4-mini",
+            temperature=0,
+        ),
+    )
 
 
 def slugify(value: str) -> str:

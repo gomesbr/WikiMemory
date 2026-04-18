@@ -6,6 +6,7 @@ import subprocess
 import tempfile
 import unittest
 from pathlib import Path
+from unittest.mock import patch
 
 from wikimemory.discovery import run_discovery
 from wikimemory.ingest import run_ingest
@@ -254,3 +255,114 @@ class IngestTests(unittest.TestCase):
         self.assertTrue(result.report.success)
         record = self.read_jsonl(self.evidence_dir / "logs" / f"{source_id}.jsonl")[0]
         self.assertEqual(record["project_hint"], "wikimemory")
+
+    def test_llm_project_routing_rewrites_unresolved_source_records(self) -> None:
+        self.init_git_project()
+        payload = default_product_config(self.project_root).to_dict()
+        payload["project_sources"][0]["project_root"] = str(self.project_root)
+        payload["project_aliases"] = [
+            {"slug": "open-brain", "aliases": ["OpenBrain"]},
+            {"slug": "ai-trader", "aliases": ["AITrader"]},
+        ]
+        payload["project_routing"]["enabled"] = True
+        self.product_config.write_text(json.dumps(payload, indent=2), encoding="utf-8")
+        source_id = "source-ambiguous"
+        (self.normalized_dir / "sources" / source_id).mkdir(parents=True)
+        (self.normalized_dir / "sources" / source_id / "session.json").write_text(
+            json.dumps({"source_id": source_id, "session_meta_fields": {"cwd": r"C:\Users\Fabio\Projects"}}),
+            encoding="utf-8",
+        )
+        event_payload = {
+            "event_id": f"{source_id}:1",
+            "source_id": source_id,
+            "source_line_no": 1,
+            "source_byte_start": 0,
+            "source_byte_end": 10,
+            "event_digest": source_id,
+            "canonical_kind": "event_msg.user_message",
+            "outer_type": "event_msg",
+            "payload_type": "user_message",
+            "role": "user",
+            "timestamp": "2026-04-18T00:00:00Z",
+            "text_surface_truncated": False,
+            "text_surfaces": [{"path": "payload.message", "text": "Need to improve metadata retrieval loop quality."}],
+        }
+        (self.normalized_dir / "sources" / source_id / "events.jsonl").write_text(
+            json.dumps(event_payload) + "\n",
+            encoding="utf-8",
+        )
+        decision = {
+            "source_id": source_id,
+            "project_hint": "open-brain",
+            "confidence": "high",
+            "supporting_evidence_ids": [],
+        }
+
+        with patch("wikimemory.project_routing.call_project_router", return_value=decision):
+            result = run_ingest(
+                product_config_path=self.product_config,
+                state_dir=self.state_dir,
+                normalized_dir=self.normalized_dir,
+                evidence_dir=self.evidence_dir,
+                audits_dir=self.audits_dir,
+            )
+
+        self.assertTrue(result.report.success)
+        record = self.read_jsonl(self.evidence_dir / "logs" / f"{source_id}.jsonl")[0]
+        self.assertEqual(record["project_hint"], "open-brain")
+        self.assertEqual(record["metadata"]["llm_project_routing"]["confidence"], "high")
+
+    def test_llm_project_routing_keeps_low_confidence_records_unresolved(self) -> None:
+        self.init_git_project()
+        payload = default_product_config(self.project_root).to_dict()
+        payload["project_sources"][0]["project_root"] = str(self.project_root)
+        payload["project_aliases"] = [
+            {"slug": "open-brain", "aliases": ["OpenBrain"]},
+            {"slug": "ai-trader", "aliases": ["AITrader"]},
+        ]
+        payload["project_routing"]["enabled"] = True
+        self.product_config.write_text(json.dumps(payload, indent=2), encoding="utf-8")
+        source_id = "source-low-confidence"
+        (self.normalized_dir / "sources" / source_id).mkdir(parents=True)
+        (self.normalized_dir / "sources" / source_id / "session.json").write_text(
+            json.dumps({"source_id": source_id, "session_meta_fields": {"cwd": r"C:\Users\Fabio\Projects"}}),
+            encoding="utf-8",
+        )
+        event_payload = {
+            "event_id": f"{source_id}:1",
+            "source_id": source_id,
+            "source_line_no": 1,
+            "source_byte_start": 0,
+            "source_byte_end": 10,
+            "event_digest": source_id,
+            "canonical_kind": "event_msg.user_message",
+            "outer_type": "event_msg",
+            "payload_type": "user_message",
+            "role": "user",
+            "timestamp": "2026-04-18T00:00:00Z",
+            "text_surface_truncated": False,
+            "text_surfaces": [{"path": "payload.message", "text": "Review the state and keep going."}],
+        }
+        (self.normalized_dir / "sources" / source_id / "events.jsonl").write_text(
+            json.dumps(event_payload) + "\n",
+            encoding="utf-8",
+        )
+        decision = {
+            "source_id": source_id,
+            "project_hint": "open-brain",
+            "confidence": "low",
+            "supporting_evidence_ids": [],
+        }
+
+        with patch("wikimemory.project_routing.call_project_router", return_value=decision):
+            result = run_ingest(
+                product_config_path=self.product_config,
+                state_dir=self.state_dir,
+                normalized_dir=self.normalized_dir,
+                evidence_dir=self.evidence_dir,
+                audits_dir=self.audits_dir,
+            )
+
+        self.assertTrue(result.report.success)
+        record = self.read_jsonl(self.evidence_dir / "logs" / f"{source_id}.jsonl")[0]
+        self.assertEqual(record["project_hint"], "projects")

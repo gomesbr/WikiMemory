@@ -32,6 +32,7 @@ class ProductConfigTests(unittest.TestCase):
         self.assertTrue(config.policies.require_confirmation_for_inferred_rule_promotion)
         self.assertEqual(config.project_sources[0].adapter, "git_worktree")
         self.assertTrue(config.project_aliases)
+        self.assertFalse(config.project_routing.enabled)
 
     def test_load_product_config_validates_supported_adapters(self) -> None:
         payload = default_product_config(self.temp_dir).to_dict()
@@ -47,6 +48,28 @@ class ProductConfigTests(unittest.TestCase):
         config = parse_product_config(payload)
         self.assertEqual(config.environment.repo_root, ".")
         self.assertEqual(config.project_sources[0].project_root, ".")
+
+    def test_parse_product_config_accepts_project_routing_config(self) -> None:
+        payload = default_product_config(self.temp_dir).to_dict()
+        payload["project_routing"] = {
+            "enabled": True,
+            "unresolved_project": "projects",
+            "min_confidence": "medium",
+            "max_sources_per_run": 25,
+            "max_sample_records_per_source": 4,
+            "provider": {
+                "type": "openai",
+                "api_key_env": "OPENAI_API_KEY",
+                "base_url_env": "WIKIMEMORY_OPENAI_BASE_URL",
+                "model_env": "WIKIMEMORY_OPENAI_MODEL",
+                "default_model": "gpt-5.4-mini",
+                "temperature": 0,
+            },
+        }
+        config = parse_product_config(payload)
+        self.assertTrue(config.project_routing.enabled)
+        self.assertEqual(config.project_routing.min_confidence, "medium")
+        self.assertEqual(config.project_routing.max_sources_per_run, 25)
 
     def test_memory_file_definitions_cover_all_primary_memory_classes(self) -> None:
         for memory_class, file_key in MEMORY_CLASS_TO_FILE_KEY.items():

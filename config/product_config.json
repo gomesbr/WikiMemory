@@ -51,6 +51,21 @@
       "aliases": ["CodexClaw", "codexclaw"]
     }
   ],
+  "project_routing": {
+    "enabled": true,
+    "unresolved_project": "projects",
+    "min_confidence": "high",
+    "max_sources_per_run": 200,
+    "max_sample_records_per_source": 8,
+    "provider": {
+      "type": "openai",
+      "api_key_env": "OPENAI_API_KEY",
+      "base_url_env": "WIKIMEMORY_OPENAI_BASE_URL",
+      "model_env": "WIKIMEMORY_OPENAI_MODEL",
+      "default_model": "gpt-5.4-mini",
+      "temperature": 0
+    }
+  },
   "scheduler": {
     "mode": "manual",
     "scan_on_startup": true,

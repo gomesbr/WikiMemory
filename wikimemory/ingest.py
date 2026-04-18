@@ -10,6 +10,7 @@ from typing import Iterable, Any
 
 from .discovery import DiscoveryError, atomic_write_text, ensure_directory, utc_now
 from .normalization import append_jsonl_text, read_json_file
+from .project_routing import apply_llm_project_routing
 from .product_config import ProductConfig, load_product_config
 
 STATE_SCHEMA_VERSION = 1
@@ -101,6 +102,7 @@ def run_ingest(
             for record in records:
                 evidence_counts[str(record["evidence_type"])] += 1
         source_counts["project_sources"] = len(project_records)
+        notices.extend(apply_llm_project_routing(records_by_path, config, state_dir, audits_dir, run_id))
 
         for path, records in records_by_path.items():
             write_jsonl(path, records)

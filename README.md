@@ -110,6 +110,13 @@ Before segmentation, the redesigned product foundation can also build a canonica
 - project-delta evidence from Git working tree status and HEAD metadata
 - actor/source/provenance fields that future memory-first extraction can consume
 
+Project association is deterministic first:
+
+- configured project roots and aliases are matched against session cwd, paths, open tabs, and event text
+- unresolved generic workspace records fall back to `projects`
+- optional `project_routing` can run a bounded OpenAI second pass only for those unresolved sources
+- routing decisions are cached in `state/project_routing_state.json` so repeated refreshes stay incremental
+
 Command:
 
 ```powershell
