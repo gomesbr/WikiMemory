@@ -19,6 +19,8 @@ classified/
 !classified/.gitkeep
 extracted/
 !extracted/.gitkeep
+evidence/*
+!evidence/.gitkeep
 bootstrap/
 !bootstrap/.gitkeep
 wiki/.staging/

@@ -27,14 +27,14 @@ WikiMemory solves that by building a layered pipeline:
 
 1. discover the raw sessions
 2. normalize them into a stable internal representation
-3. segment them into meaningful spans
-4. classify those spans into domains
-5. extract durable and temporal knowledge
-6. synthesize a human-readable wiki
-7. compress the best subset into startup/bootstrap memory
-8. audit the outputs for contradictions, drift, provenance gaps, and quality issues
-9. orchestrate incremental refreshes
-10. support controlled full-corpus loading with gates and disk-budget limits
+3. ingest normalized logs and project deltas into canonical evidence records
+4. segment them into meaningful spans
+5. classify those spans into domains
+6. extract durable and temporal knowledge
+7. synthesize a human-readable wiki
+8. compress the best subset into startup/bootstrap memory
+9. audit the outputs for contradictions, drift, provenance gaps, and quality issues
+10. orchestrate incremental refreshes and controlled full-corpus loading
 
 ## Design Principles
 
@@ -103,6 +103,26 @@ Writes:
 - `audits/normalization_notices.jsonl`
 
 ### Phase 3: Segmentation
+
+Before segmentation, the redesigned product foundation can also build a canonical `evidence/` layer:
+
+- log evidence from pointer-first normalized Codex events
+- project-delta evidence from Git working tree status and HEAD metadata
+- actor/source/provenance fields that future memory-first extraction can consume
+
+Command:
+
+```powershell
+python -m wikimemory ingest
+```
+
+Writes:
+
+- `evidence/logs/<source_id>.jsonl`
+- `evidence/projects/<project>.jsonl`
+- `state/ingest_state.json`
+- `state/ingest_runs.jsonl`
+- `audits/ingest_notices.jsonl`
 
 Segmentation groups normalized events into higher-level units that are more useful than raw line-by-line traces.
 
@@ -398,6 +418,8 @@ This gives the project:
 
 - `config/source_roots.json`
   - where discovery looks for raw logs
+- `config/product_config.json`
+  - unified product config for memory model, adapters, output mode, bootstrap target, scheduler, and policies
 - `config/classification_taxonomy.json`
   - labels, keywords, aliases, repo/path hints, and scoring behavior for Phase 4
 - `config/extraction_rules.json`
@@ -444,6 +466,7 @@ Main commands:
 ```powershell
 python -m wikimemory discover
 python -m wikimemory normalize
+python -m wikimemory ingest
 python -m wikimemory segment
 python -m wikimemory classify
 python -m wikimemory extract

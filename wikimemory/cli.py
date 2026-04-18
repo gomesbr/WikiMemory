@@ -11,6 +11,7 @@ from .discovery import DiscoveryResult, run_discovery
 from .env_loader import load_project_env
 from .extraction import ExtractionResult, run_extraction
 from .full_load import FullLoadResult, run_full_load
+from .ingest import IngestResult, run_ingest
 from .normalization import NormalizationResult, run_normalization
 from .onboarding import OnboardingReport, run_onboarding
 from .refresh import RefreshResult, run_refresh
@@ -467,6 +468,52 @@ def build_parser() -> argparse.ArgumentParser:
         action="store_true",
         help="Print the onboarding report as JSON.",
     )
+
+    ingest_parser = subparsers.add_parser(
+        "ingest",
+        help="Build canonical evidence records from normalized logs and project deltas.",
+    )
+    ingest_parser.add_argument(
+        "--product-config",
+        type=Path,
+        default=Path("config/product_config.json"),
+        help="Path to unified product configuration JSON.",
+    )
+    ingest_parser.add_argument(
+        "--state-dir",
+        type=Path,
+        default=Path("state"),
+        help="Directory where ingest state and run logs are written.",
+    )
+    ingest_parser.add_argument(
+        "--normalized-dir",
+        type=Path,
+        default=Path("normalized"),
+        help="Directory containing normalized source artifacts.",
+    )
+    ingest_parser.add_argument(
+        "--evidence-dir",
+        type=Path,
+        default=Path("evidence"),
+        help="Directory where canonical evidence artifacts are written.",
+    )
+    ingest_parser.add_argument(
+        "--audits-dir",
+        type=Path,
+        default=Path("audits"),
+        help="Directory where ingest notices are written.",
+    )
+    ingest_parser.add_argument(
+        "--source-id",
+        dest="source_ids",
+        action="append",
+        help="Optional source_id to ingest from normalized logs. Repeat to target multiple sources.",
+    )
+    ingest_parser.add_argument(
+        "--json",
+        action="store_true",
+        help="Print the final run report as JSON.",
+    )
     return parser
 
 
@@ -608,6 +655,17 @@ def format_onboarding_report(report: OnboardingReport) -> str:
         f"markdown={detected.get('likely_markdown_mode', 'unknown')}; "
         f"bootstrap={detected.get('likely_bootstrap_target_path', 'unknown')}; "
         f"questions={len(report.questions)}"
+    )
+
+
+def format_ingest_result(result: IngestResult) -> str:
+    evidence_counts = ", ".join(
+        f"{kind}={count}" for kind, count in sorted(result.report.evidence_counts.items())
+    )
+    outcome = "succeeded" if result.report.success else "failed"
+    return (
+        f"Ingest {outcome}: evidence[{evidence_counts or 'none'}]; "
+        f"state={result.state_path}; run_log={result.run_log_path}; notices={result.notice_log_path}"
     )
 
 
@@ -770,6 +828,23 @@ def main(argv: list[str] | None = None) -> int:
         else:
             print(format_onboarding_report(result))
         return 0
+
+    if args.command == "ingest":
+        result = run_ingest(
+            product_config_path=args.product_config,
+            state_dir=args.state_dir,
+            normalized_dir=args.normalized_dir,
+            evidence_dir=args.evidence_dir,
+            audits_dir=args.audits_dir,
+            source_ids=args.source_ids,
+        )
+        if args.json:
+            print(json.dumps(result.report.to_dict(), indent=2, sort_keys=True))
+        else:
+            print(format_ingest_result(result))
+            if result.report.fatal_error_summary:
+                print(result.report.fatal_error_summary)
+        return 0 if result.report.success else 1
 
     result = run_full_load(
         config_path=args.config,
