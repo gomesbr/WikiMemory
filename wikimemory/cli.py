@@ -12,6 +12,7 @@ from .env_loader import load_project_env
 from .extraction import ExtractionResult, run_extraction
 from .full_load import FullLoadResult, run_full_load
 from .normalization import NormalizationResult, run_normalization
+from .onboarding import OnboardingReport, run_onboarding
 from .refresh import RefreshResult, run_refresh
 from .segmentation import SegmentationResult, run_segmentation
 from .wiki import WikiResult, run_wiki
@@ -444,6 +445,28 @@ def build_parser() -> argparse.ArgumentParser:
         action="store_true",
         help="Print the final run report as JSON.",
     )
+
+    onboard_parser = subparsers.add_parser(
+        "onboard",
+        help="Detect environment defaults and write a draft product config for the redesigned memory platform.",
+    )
+    onboard_parser.add_argument(
+        "--project-root",
+        type=Path,
+        default=Path("."),
+        help="Project root to inspect for environment detection.",
+    )
+    onboard_parser.add_argument(
+        "--config-out",
+        type=Path,
+        default=Path("config/product_config.json"),
+        help="Path where the recommended product config should be written.",
+    )
+    onboard_parser.add_argument(
+        "--json",
+        action="store_true",
+        help="Print the onboarding report as JSON.",
+    )
     return parser
 
 
@@ -573,6 +596,18 @@ def format_full_load_result(result: FullLoadResult) -> str:
         f"failed_phase={result.report.failed_phase or 'none'}; "
         f"stop_reason={result.report.stop_reason or 'none'}; "
         f"state={result.state_path}; run_log={result.run_log_path}"
+    )
+
+
+def format_onboarding_report(report: OnboardingReport) -> str:
+    detected = report.detected
+    return (
+        f"Onboarding draft ready: root={report.project_root}; "
+        f"os={detected.get('operating_system', 'unknown')}; "
+        f"editor={detected.get('likely_editor', 'unknown')}; "
+        f"markdown={detected.get('likely_markdown_mode', 'unknown')}; "
+        f"bootstrap={detected.get('likely_bootstrap_target_path', 'unknown')}; "
+        f"questions={len(report.questions)}"
     )
 
 
@@ -727,6 +762,14 @@ def main(argv: list[str] | None = None) -> int:
             if result.report.fatal_error_summary:
                 print(result.report.fatal_error_summary)
         return 0 if result.report.success else 1
+
+    if args.command == "onboard":
+        result = run_onboarding(project_root=args.project_root, config_path=args.config_out)
+        if args.json:
+            print(json.dumps(result.to_dict(), indent=2, sort_keys=True))
+        else:
+            print(format_onboarding_report(result))
+        return 0
 
     result = run_full_load(
         config_path=args.config,

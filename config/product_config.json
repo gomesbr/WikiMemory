@@ -1,0 +1,49 @@
+{
+  "schema_version": 1,
+  "product_schema_version": 1,
+  "environment": {
+    "operating_system": "windows",
+    "editor": "cursor",
+    "repo_root": "."
+  },
+  "agent_platform": {
+    "platform": "codex",
+    "bootstrap_renderer": "codex_agents_md",
+    "bootstrap_target_path": "AGENTS.md"
+  },
+  "markdown_output": {
+    "mode": "obsidian_markdown",
+    "root_dir": "memory",
+    "enable_frontmatter": true,
+    "enable_tags": true,
+    "enable_wikilinks": true
+  },
+  "log_sources": [
+    {
+      "adapter": "codex_jsonl",
+      "root_alias": "codex_sessions",
+      "absolute_path": "${WIKIMEMORY_CODEX_SESSIONS_ROOT}",
+      "include_glob": "**/*.jsonl"
+    }
+  ],
+  "project_sources": [
+    {
+      "adapter": "git_worktree",
+      "project_root": ".",
+      "include_untracked": true
+    }
+  ],
+  "scheduler": {
+    "mode": "manual",
+    "scan_on_startup": true,
+    "tick_seconds": 900,
+    "project_delta_enabled": true,
+    "log_delta_enabled": true
+  },
+  "policies": {
+    "require_confirmation_for_inferred_rule_promotion": true,
+    "include_failed_attempts_in_recent_only_if_state_changes": true,
+    "ignore_agent_reasoning_for_durable_memory": true,
+    "explicit_promotion_has_priority": true
+  }
+}
