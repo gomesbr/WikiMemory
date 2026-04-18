@@ -68,6 +68,7 @@ def run_memory_lint(
     memory_dir: Path | str,
     audits_dir: Path | str,
     bootstrap_path: Path | str | None = None,
+    autofix: bool = False,
 ) -> MemoryLintResult:
     product_config_path = Path(product_config_path)
     state_dir = Path(state_dir)
@@ -91,6 +92,8 @@ def run_memory_lint(
             config.agent_platform.bootstrap_target_path,
         )
         items = load_memory_items(memory_dir)
+        if autofix:
+            apply_safe_bootstrap_fixes(target_path)
         findings = lint_items(run_id, items)
         findings.extend(lint_bootstrap(run_id, target_path, items))
         findings.sort(key=lambda item: str(item["finding_id"]))
@@ -188,6 +191,19 @@ def lint_bootstrap(run_id: str, target_path: Path, items: list[dict[str, object]
         if str(item.get("memory_class")) == "recent_project_state" and len(statement) >= 12 and statement in content:
             findings.append(finding(run_id, "warning", "structure", "recent_state_inlined", str(item.get("item_id")), "Agent bootstrap should link recent context, not inline it."))
     return findings
+
+
+def apply_safe_bootstrap_fixes(target_path: Path) -> None:
+    if not target_path.exists():
+        return
+    content = target_path.read_text(encoding="utf-8")
+    additions: list[str] = []
+    if "memory/global/user-rules.md" not in content:
+        additions.extend(["", "## Memory Entry Points", "", "- `memory/global/user-rules.md` for durable user-wide rules."])
+    if "Keep this bootstrap tiny" not in content:
+        additions.extend(["", "## Operating Rule", "", "- Keep this bootstrap tiny. Load referenced memory files when the task needs detail."])
+    if additions:
+        atomic_write_text(target_path, content.rstrip() + "\n" + "\n".join(additions) + "\n")
 
 
 def is_stale(value: object) -> bool:

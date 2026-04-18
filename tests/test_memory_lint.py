@@ -109,6 +109,37 @@ class MemoryLintTests(unittest.TestCase):
         self.assertTrue(any(finding["check_type"] == "stale_recent_state" for finding in findings))
         self.assertTrue(any(finding["check_type"] == "recent_state_inlined" for finding in findings))
 
+    def test_memory_lint_safe_fix_repairs_bootstrap_structure(self) -> None:
+        self.write_items(
+            [
+                {
+                    "item_id": "global-1",
+                    "memory_class": "global_user_rules",
+                    "scope": "global",
+                    "project": None,
+                    "statement": "Always inspect real data first.",
+                    "evidence_ids": ["e1"],
+                    "provenance_refs": [{"source_id": "s1"}],
+                }
+            ]
+        )
+        bootstrap_path = self.temp_dir / "AGENTS.md"
+        bootstrap_path.write_text("# Agent Bootstrap\n", encoding="utf-8")
+
+        result = run_memory_lint(
+            product_config_path=self.product_config,
+            state_dir=self.state_dir,
+            memory_dir=self.memory_dir,
+            audits_dir=self.audits_dir,
+            bootstrap_path=bootstrap_path,
+            autofix=True,
+        )
+
+        self.assertTrue(result.report.success, result.report.fatal_error_summary)
+        content = bootstrap_path.read_text(encoding="utf-8")
+        self.assertIn("memory/global/user-rules.md", content)
+        self.assertIn("Keep this bootstrap tiny", content)
+
     def test_memory_lint_flags_empty_statement(self) -> None:
         self.write_items([self.base_item(item_id="empty-1", statement="")])
         (self.temp_dir / "AGENTS.md").write_text(

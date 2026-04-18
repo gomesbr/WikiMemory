@@ -1,0 +1,20 @@
+{
+  "schema_version": 1,
+  "log_adapter_template": {
+    "adapter": "generic_jsonl",
+    "root_alias": "agent_sessions",
+    "absolute_path": "${AGENT_SESSIONS_ROOT}",
+    "include_glob": "**/*.jsonl",
+    "field_mapping": {
+      "session_id": "session.id",
+      "timestamp": "timestamp",
+      "actor_type": "role",
+      "message_text": "message.content"
+    },
+    "notes": [
+      "Add the adapter id to wikimemory/adapters.py before use.",
+      "Map source rows into canonical evidence records before memory generation.",
+      "Keep raw logs external; store provenance pointers and bounded text only."
+    ]
+  }
+}

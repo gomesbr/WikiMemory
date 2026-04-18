@@ -180,6 +180,28 @@ python -m wikimemory memory-refresh
 
 This runs discovery, normalization, evidence ingest, compact memory generation, agent bootstrap generation, and memory linting without invoking the legacy wiki/bootstrap synthesis path.
 
+Review inferred durable-rule candidates:
+
+```powershell
+python -m wikimemory memory-review
+python -m wikimemory memory-review --approve <item_id>
+python -m wikimemory memory-review --reject <item_id>
+```
+
+Apply safe structural lint fixes, such as repairing missing bootstrap entry links:
+
+```powershell
+python -m wikimemory memory-lint --fix
+```
+
+Install a simple Windows scheduled refresh task:
+
+```powershell
+powershell -ExecutionPolicy Bypass -File scripts/install-windows-task.ps1 -IntervalMinutes 60
+```
+
+Adapter extension notes live in `docs/adapters.md`.
+
 Segmentation groups normalized events into higher-level units that are more useful than raw line-by-line traces.
 
 Typical segments correspond to:

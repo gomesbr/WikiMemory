@@ -15,6 +15,7 @@ from .full_load import FullLoadResult, run_full_load
 from .ingest import IngestResult, run_ingest
 from .memory_generation import MemoryResult, run_memory_generation
 from .memory_lint import MemoryLintResult, run_memory_lint
+from .memory_review import MemoryReviewResult, run_memory_review
 from .memory_refresh import MemoryRefreshResult, run_memory_refresh
 from .normalization import NormalizationResult, run_normalization
 from .onboarding import OnboardingReport, run_onboarding
@@ -646,6 +647,51 @@ def build_parser() -> argparse.ArgumentParser:
         help="Optional agent bootstrap path override.",
     )
     memory_lint_parser.add_argument(
+        "--fix",
+        action="store_true",
+        help="Apply safe structural fixes before linting.",
+    )
+    memory_lint_parser.add_argument(
+        "--json",
+        action="store_true",
+        help="Print the final run report as JSON.",
+    )
+
+    memory_review_parser = subparsers.add_parser(
+        "memory-review",
+        help="List or record review decisions for inferred durable memory candidates.",
+    )
+    memory_review_parser.add_argument(
+        "--memory-dir",
+        type=Path,
+        default=Path("memory"),
+        help="Directory containing compact memory files.",
+    )
+    memory_review_parser.add_argument(
+        "--state-dir",
+        type=Path,
+        default=Path("state"),
+        help="Directory where memory-review decisions and run logs are written.",
+    )
+    memory_review_parser.add_argument(
+        "--audits-dir",
+        type=Path,
+        default=Path("audits"),
+        help="Directory where review item snapshots are written.",
+    )
+    memory_review_parser.add_argument(
+        "--approve",
+        action="append",
+        default=None,
+        help="Memory item id to approve. Repeat for multiple items.",
+    )
+    memory_review_parser.add_argument(
+        "--reject",
+        action="append",
+        default=None,
+        help="Memory item id to reject. Repeat for multiple items.",
+    )
+    memory_review_parser.add_argument(
         "--json",
         action="store_true",
         help="Print the final run report as JSON.",
@@ -905,6 +951,15 @@ def format_memory_lint_result(result: MemoryLintResult) -> str:
     )
 
 
+def format_memory_review_result(result: MemoryReviewResult) -> str:
+    outcome = "succeeded" if result.report.success else "failed"
+    return (
+        f"Memory-review {outcome}: pending={result.report.pending_count}; "
+        f"approved={result.report.approved_count}; rejected={result.report.rejected_count}; "
+        f"decisions={result.decisions_path}; review_items={result.review_items_path}"
+    )
+
+
 def format_memory_refresh_result(result: MemoryRefreshResult) -> str:
     phases = ",".join(status.phase for status in result.report.phase_statuses)
     outcome = "succeeded" if result.report.success else "failed"
@@ -1135,6 +1190,7 @@ def main(argv: list[str] | None = None) -> int:
             memory_dir=args.memory_dir,
             audits_dir=args.audits_dir,
             bootstrap_path=args.bootstrap_path,
+            autofix=args.fix,
         )
         if args.json:
             print(json.dumps(result.report.to_dict(), indent=2, sort_keys=True))
@@ -1143,6 +1199,22 @@ def main(argv: list[str] | None = None) -> int:
             if result.report.fatal_error_summary:
                 print(result.report.fatal_error_summary)
         return 0 if result.report.success and result.report.error_count == 0 else 1
+
+    if args.command == "memory-review":
+        result = run_memory_review(
+            memory_dir=args.memory_dir,
+            state_dir=args.state_dir,
+            audits_dir=args.audits_dir,
+            approve=args.approve,
+            reject=args.reject,
+        )
+        if args.json:
+            print(json.dumps(result.report.to_dict(), indent=2, sort_keys=True))
+        else:
+            print(format_memory_review_result(result))
+            if result.report.fatal_error_summary:
+                print(result.report.fatal_error_summary)
+        return 0 if result.report.success else 1
 
     if args.command == "memory-refresh":
         result = run_memory_refresh(

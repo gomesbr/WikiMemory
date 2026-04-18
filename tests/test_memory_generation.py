@@ -102,6 +102,7 @@ class MemoryGenerationTests(unittest.TestCase):
         global_rules = [item for item in items if item["memory_class"] == "global_user_rules"]
         project_rules = [item for item in items if item["memory_class"] == "project_rules"]
         recent_items = [item for item in items if item["memory_class"] == "recent_project_state"]
+        summaries = [item for item in items if item["memory_class"] == "stable_project_summary"]
 
         self.assertEqual(len(global_rules), 1)
         self.assertIn("real data", global_rules[0]["statement"])
@@ -109,11 +110,53 @@ class MemoryGenerationTests(unittest.TestCase):
         self.assertEqual(len(project_rules), 1)
         self.assertIn("do not commit", project_rules[0]["statement"])
         self.assertFalse(any("never fail silently" in item["statement"] for item in project_rules))
+        self.assertTrue(project_rules[0]["review_required"])
         self.assertFalse(any(not item["statement"] for item in items))
         self.assertFalse(any(item["statement"] == "Next" for item in items))
         self.assertTrue(any("Please fix this now" in item["statement"] for item in recent_items))
+        self.assertFalse(summaries)
         self.assertTrue((self.memory_dir / "global" / "user-rules.md").exists())
         self.assertTrue((self.memory_dir / "projects" / "example-project" / "rules.md").exists())
+        self.assertTrue((self.memory_dir / "_meta" / "promotion_review.jsonl").exists())
+
+    def test_memory_generation_extracts_project_summary_and_applies_review_decisions(self) -> None:
+        self.write_evidence(
+            "logs/sample-source.jsonl",
+            [
+                self.evidence_record("e1", "user", "The project is a compact memory layer for coding agents."),
+                self.evidence_record("e2", "user", "For this project, do not commit generated memory outputs."),
+            ],
+        )
+
+        first = run_memory_generation(
+            product_config_path=self.product_config,
+            state_dir=self.state_dir,
+            evidence_dir=self.evidence_dir,
+            memory_dir=self.memory_dir,
+            audits_dir=self.audits_dir,
+        )
+        self.assertTrue(first.report.success, first.report.fatal_error_summary)
+        items = self.read_items()
+        rule = next(item for item in items if item["memory_class"] == "project_rules")
+        self.assertTrue(rule["review_required"])
+        self.assertTrue(any(item["memory_class"] == "stable_project_summary" for item in items))
+        (self.state_dir / "memory_review_decisions.json").write_text(
+            json.dumps({"decisions": {rule["item_id"]: {"decision": "approved"}}}),
+            encoding="utf-8",
+        )
+
+        second = run_memory_generation(
+            product_config_path=self.product_config,
+            state_dir=self.state_dir,
+            evidence_dir=self.evidence_dir,
+            memory_dir=self.memory_dir,
+            audits_dir=self.audits_dir,
+        )
+
+        self.assertTrue(second.report.success, second.report.fatal_error_summary)
+        approved_rule = next(item for item in self.read_items() if item["item_id"] == rule["item_id"])
+        self.assertFalse(approved_rule["review_required"])
+        self.assertEqual(approved_rule["confidence"], "strong")
 
     def test_memory_generation_respects_plain_markdown_renderer_flags(self) -> None:
         payload = json.loads(self.product_config.read_text(encoding="utf-8"))

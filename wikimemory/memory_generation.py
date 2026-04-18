@@ -21,6 +21,10 @@ PROJECT_RULE_PATTERN = re.compile(
     r"^(?:add this to project rules:?|project rule:?|for this project,?|always\b|never\b|do not\b|don't\b|must\b|nothing\b.*\bshould\b|the .{0,80}\balways\b)",
     re.IGNORECASE,
 )
+PROJECT_SUMMARY_PATTERN = re.compile(
+    r"\b(?:project is|repo is|repository is|goal is|architecture|design decision|we decided|scope is|built to|intended to)\b",
+    re.IGNORECASE,
+)
 LESSON_PATTERN = re.compile(r"\b(?:lesson learned|next time|avoid repeating|root cause|postmortem)\b", re.IGNORECASE)
 ONE_OFF_PATTERN = re.compile(r"\b(?:please|can you|do this|fix this|run this|open this|show me|what|why|how)\b", re.IGNORECASE)
 SCAFFOLD_PATTERN = re.compile(
@@ -95,7 +99,12 @@ def run_memory_generation(
     try:
         config = load_product_config(product_config_path)
         evidence_records = load_evidence_records(evidence_dir)
-        memory_items = build_memory_items(evidence_records, project_filter)
+        memory_items = build_memory_items(
+            evidence_records,
+            project_filter,
+            require_inferred_rule_review=config.policies.require_confirmation_for_inferred_rule_promotion,
+        )
+        memory_items = apply_review_decisions(memory_items, state_dir)
         rendered_files = render_memory_files(memory_dir, memory_items, config.markdown_output)
         write_meta(memory_dir, memory_items)
 
@@ -146,7 +155,11 @@ def load_evidence_records(evidence_dir: Path) -> list[dict[str, object]]:
     return records
 
 
-def build_memory_items(records: list[dict[str, object]], project_filter: set[str]) -> list[dict[str, object]]:
+def build_memory_items(
+    records: list[dict[str, object]],
+    project_filter: set[str],
+    require_inferred_rule_review: bool = True,
+) -> list[dict[str, object]]:
     items: dict[str, dict[str, object]] = {}
     for record in records:
         project = slugify(str(record.get("project_hint") or record.get("source_id") or "project"))
@@ -156,7 +169,7 @@ def build_memory_items(records: list[dict[str, object]], project_filter: set[str
         text = evidence_text(record)
         if not text:
             continue
-        candidates = classify_evidence(record, text, actor_type, project)
+        candidates = classify_evidence(record, text, actor_type, project, require_inferred_rule_review)
         for candidate in candidates:
             if not str(candidate.get("statement") or "").strip():
                 continue
@@ -168,7 +181,13 @@ def build_memory_items(records: list[dict[str, object]], project_filter: set[str
     return sorted(items.values(), key=lambda item: (str(item["scope"]), str(item.get("project") or ""), str(item["memory_class"]), str(item["statement"])))
 
 
-def classify_evidence(record: dict[str, object], text: str, actor_type: str, project: str) -> list[dict[str, object]]:
+def classify_evidence(
+    record: dict[str, object],
+    text: str,
+    actor_type: str,
+    project: str,
+    require_inferred_rule_review: bool = True,
+) -> list[dict[str, object]]:
     items: list[dict[str, object]] = []
     evidence_type = str(record.get("evidence_type") or "")
     if evidence_type == "git_head":
@@ -187,13 +206,40 @@ def classify_evidence(record: dict[str, object], text: str, actor_type: str, pro
     durable_found = False
     for clause in clauses:
         if is_global_rule_text(clause):
-            items.append(make_item(record, "global_user_rules", "global", None, "durable", promotion_state(clause), clause))
+            state = promotion_state(clause)
+            items.append(
+                make_item(
+                    record,
+                    "global_user_rules",
+                    "global",
+                    None,
+                    "durable",
+                    state,
+                    clause,
+                    review_required=require_inferred_rule_review and state != "explicit",
+                )
+            )
             durable_found = True
         elif is_project_rule_text(clause):
-            items.append(make_item(record, "project_rules", "project", project, "durable", promotion_state(clause), clause))
+            state = promotion_state(clause)
+            items.append(
+                make_item(
+                    record,
+                    "project_rules",
+                    "project",
+                    project,
+                    "durable",
+                    state,
+                    clause,
+                    review_required=require_inferred_rule_review and state != "explicit",
+                )
+            )
             durable_found = True
         elif LESSON_PATTERN.search(clause):
             items.append(make_item(record, "project_lessons", "project", project, "durable", "candidate", clause))
+            durable_found = True
+        elif is_project_summary_text(clause):
+            items.append(make_item(record, "stable_project_summary", "project", project, "durable", "candidate", clause))
             durable_found = True
     if actor_type == "user" and not durable_found:
         items.append(make_item(record, "recent_project_state", "project", project, "recent", "candidate", clauses[0]))
@@ -208,6 +254,7 @@ def make_item(
     durability: str,
     promotion_state_value: str,
     statement: str,
+    review_required: bool = False,
 ) -> dict[str, object]:
     evidence_id = str(record["evidence_id"])
     timestamp = record.get("timestamp")
@@ -227,6 +274,8 @@ def make_item(
         "first_seen_at": timestamp,
         "last_seen_at": timestamp,
         "confidence": "explicit" if promotion_state_value == "explicit" else "candidate",
+        "review_required": review_required,
+        "review_reason": "inferred_rule_requires_confirmation" if review_required else None,
     }
 
 
@@ -243,9 +292,13 @@ def merge_item(target: dict[str, object], incoming: dict[str, object]) -> None:
     if incoming["promotion_state"] == "explicit":
         target["promotion_state"] = "explicit"
         target["confidence"] = "explicit"
+        target["review_required"] = False
+        target["review_reason"] = None
     elif len(target["evidence_ids"]) > 1 and target["promotion_state"] == "candidate":
         target["promotion_state"] = "repeated"
         target["confidence"] = "strong"
+    if incoming.get("review_required"):
+        target["review_required"] = bool(target.get("review_required", False) or incoming.get("review_required"))
 
 
 def earliest_timestamp(left: object, right: object) -> object:
@@ -324,6 +377,31 @@ def write_meta(memory_dir: Path, items: list[dict[str, object]]) -> None:
     ensure_directory(meta_dir)
     content = "".join(json.dumps(item, sort_keys=True, separators=(",", ":")) + "\n" for item in items)
     atomic_write_text(meta_dir / "items.jsonl", content)
+    review_items = [item for item in items if item.get("review_required")]
+    review_content = "".join(json.dumps(item, sort_keys=True, separators=(",", ":")) + "\n" for item in review_items)
+    atomic_write_text(meta_dir / "promotion_review.jsonl", review_content)
+
+
+def apply_review_decisions(items: list[dict[str, object]], state_dir: Path) -> list[dict[str, object]]:
+    decisions_path = state_dir / "memory_review_decisions.json"
+    if not decisions_path.exists():
+        return items
+    payload = json.loads(decisions_path.read_text(encoding="utf-8-sig"))
+    decisions = dict(payload.get("decisions", {}))
+    filtered: list[dict[str, object]] = []
+    for item in items:
+        item_id = str(item.get("item_id") or "")
+        decision = str(decisions.get(item_id, {}).get("decision") or "")
+        if decision == "rejected":
+            continue
+        if decision == "approved":
+            item = dict(item)
+            item["review_required"] = False
+            item["review_reason"] = None
+            item["promotion_state"] = "durable" if item.get("promotion_state") == "candidate" else item.get("promotion_state")
+            item["confidence"] = "strong" if item.get("confidence") == "candidate" else item.get("confidence")
+        filtered.append(item)
+    return filtered
 
 
 def memory_file_key(item: dict[str, object]) -> str | None:
@@ -418,6 +496,12 @@ def is_project_rule_text(text: str) -> bool:
     if ONE_OFF_PATTERN.search(text) and not re.search(r"\b(?:always|never|do not|don't|must)\b", text, re.IGNORECASE):
         return False
     return bool(PROJECT_RULE_PATTERN.search(text))
+
+
+def is_project_summary_text(text: str) -> bool:
+    if len(text) > 360 or SCAFFOLD_PATTERN.search(text) or ONE_OFF_PATTERN.search(text):
+        return False
+    return bool(PROJECT_SUMMARY_PATTERN.search(text))
 
 
 def promotion_state(text: str) -> str:
