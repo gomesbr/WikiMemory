@@ -6,6 +6,7 @@ import re
 import shutil
 from collections import defaultdict
 from dataclasses import dataclass
+from datetime import datetime, timezone
 from pathlib import Path
 from typing import Iterable
 
@@ -16,7 +17,13 @@ from .product_config import MarkdownOutputConfig, load_product_config
 
 STATE_SCHEMA_VERSION = 1
 MEMORY_SCHEMA_VERSION = 1
+RECENT_MEMORY_MAX_DAYS = 30
 USER_RULE_PATTERN = re.compile(r"\b(?:add this to global rules|global rule)\b", re.IGNORECASE)
+GLOBAL_OPERATING_RULE_PATTERN = re.compile(
+    r"\b(?:narrate your process|step commentary|short updates|response style|token limits|ask for it|outside the plan|real data|github|git|api key|always add it|do not ask|don't ask)\b",
+    re.IGNORECASE,
+)
+DIRECTIVE_PATTERN = re.compile(r"^(?:always\b|never\b|do not\b|don't\b|must\b)", re.IGNORECASE)
 PROJECT_RULE_PATTERN = re.compile(
     r"^(?:add this to project rules:?|project rule:?|for this project,?|always\b|never\b|do not\b|don't\b|must\b|nothing\b.*\bshould\b|the .{0,80}\balways\b)",
     re.IGNORECASE,
@@ -29,6 +36,10 @@ LESSON_PATTERN = re.compile(r"\b(?:lesson learned|next time|avoid repeating|root
 ONE_OFF_PATTERN = re.compile(r"\b(?:please|can you|do this|fix this|run this|open this|show me|what|why|how)\b", re.IGNORECASE)
 SCAFFOLD_PATTERN = re.compile(
     r"(?:please implement this plan|context from my ide setup|open tabs:|<permissions instructions>|</permissions instructions>|<collaboration_mode>|</collaboration_mode>)",
+    re.IGNORECASE,
+)
+RUNTIME_LOCAL_PATTERN = re.compile(
+    r"\b(?:restart (?:the )?(?:app|application|server|service)|hard refresh|localhost|ctrl\+f5|browser refresh)\b",
     re.IGNORECASE,
 )
 AGENT_DURABLE_EXCLUDED_ACTORS = {"assistant", "agent_reasoning", "tool", "unknown", "developer", "system"}
@@ -105,6 +116,7 @@ def run_memory_generation(
             require_inferred_rule_review=config.policies.require_confirmation_for_inferred_rule_promotion,
         )
         memory_items = apply_review_decisions(memory_items, state_dir)
+        memory_items = prune_stale_recent_items(memory_items)
         rendered_files = render_memory_files(memory_dir, memory_items, config.markdown_output)
         write_meta(memory_dir, memory_items)
 
@@ -216,7 +228,7 @@ def classify_evidence(
                     "durable",
                     state,
                     clause,
-                    review_required=require_inferred_rule_review and state != "explicit",
+                    review_required=require_inferred_rule_review and state == "candidate",
                 )
             )
             durable_found = True
@@ -231,7 +243,7 @@ def classify_evidence(
                     "durable",
                     state,
                     clause,
-                    review_required=require_inferred_rule_review and state != "explicit",
+                    review_required=require_inferred_rule_review and state == "candidate",
                 )
             )
             durable_found = True
@@ -404,6 +416,24 @@ def apply_review_decisions(items: list[dict[str, object]], state_dir: Path) -> l
     return filtered
 
 
+def prune_stale_recent_items(items: list[dict[str, object]]) -> list[dict[str, object]]:
+    return [
+        item
+        for item in items
+        if str(item.get("memory_class")) != "recent_project_state" or not is_older_than_days(item.get("last_seen_at"), RECENT_MEMORY_MAX_DAYS)
+    ]
+
+
+def is_older_than_days(value: object, days: int) -> bool:
+    if not value:
+        return False
+    try:
+        parsed = datetime.fromisoformat(str(value).replace("Z", "+00:00"))
+    except ValueError:
+        return False
+    return (datetime.now(timezone.utc) - parsed.astimezone(timezone.utc)).days > days
+
+
 def memory_file_key(item: dict[str, object]) -> str | None:
     memory_class = str(item["memory_class"])
     return {
@@ -466,7 +496,11 @@ def candidate_clauses(text: str) -> list[str]:
 
 
 def clean_clause(text: str) -> str:
-    return normalize_statement(text.strip(" -\t\r\n\"'`"))
+    clause = text.strip(" -\t\r\n\"'`")
+    clause = re.sub(r"\bstrep by step\b", "step-by-step", clause, flags=re.IGNORECASE)
+    clause = re.sub(r"\bouside\b", "outside", clause, flags=re.IGNORECASE)
+    clause = re.sub(r"\s+please\.?$", ".", clause, flags=re.IGNORECASE)
+    return normalize_statement(clause)
 
 
 def is_meaningful_clause(clause: str) -> bool:
@@ -485,13 +519,19 @@ def extract_request_text(text: str) -> str:
 
 
 def is_global_rule_text(text: str) -> bool:
-    return bool(USER_RULE_PATTERN.search(text)) and ("global rule" in text.lower() or "add this to global rules" in text.lower())
+    if bool(USER_RULE_PATTERN.search(text)) and ("global rule" in text.lower() or "add this to global rules" in text.lower()):
+        return True
+    if len(text) > 260 or SCAFFOLD_PATTERN.search(text) or RUNTIME_LOCAL_PATTERN.search(text):
+        return False
+    if not DIRECTIVE_PATTERN.search(text):
+        return False
+    return bool(GLOBAL_OPERATING_RULE_PATTERN.search(text))
 
 
 def is_project_rule_text(text: str) -> bool:
     if len(text) > 260:
         return False
-    if SCAFFOLD_PATTERN.search(text):
+    if SCAFFOLD_PATTERN.search(text) or RUNTIME_LOCAL_PATTERN.search(text):
         return False
     if ONE_OFF_PATTERN.search(text) and not re.search(r"\b(?:always|never|do not|don't|must)\b", text, re.IGNORECASE):
         return False
@@ -507,6 +547,8 @@ def is_project_summary_text(text: str) -> bool:
 def promotion_state(text: str) -> str:
     lowered = text.lower()
     if "add this to global rules" in lowered or "add this to project rules" in lowered:
+        return "explicit"
+    if DIRECTIVE_PATTERN.search(text):
         return "explicit"
     if re.search(r"\b(?:always|never|do not|don't|must)\b", text, re.IGNORECASE):
         return "durable"

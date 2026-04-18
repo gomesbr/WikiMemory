@@ -110,7 +110,7 @@ class MemoryGenerationTests(unittest.TestCase):
         self.assertEqual(len(project_rules), 1)
         self.assertIn("do not commit", project_rules[0]["statement"])
         self.assertFalse(any("never fail silently" in item["statement"] for item in project_rules))
-        self.assertTrue(project_rules[0]["review_required"])
+        self.assertFalse(project_rules[0]["review_required"])
         self.assertFalse(any(not item["statement"] for item in items))
         self.assertFalse(any(item["statement"] == "Next" for item in items))
         self.assertTrue(any("Please fix this now" in item["statement"] for item in recent_items))
@@ -124,7 +124,7 @@ class MemoryGenerationTests(unittest.TestCase):
             "logs/sample-source.jsonl",
             [
                 self.evidence_record("e1", "user", "The project is a compact memory layer for coding agents."),
-                self.evidence_record("e2", "user", "For this project, do not commit generated memory outputs."),
+                self.evidence_record("e2", "user", "For this project, prefer generated memory outputs in temp paths."),
             ],
         )
 
@@ -157,6 +157,88 @@ class MemoryGenerationTests(unittest.TestCase):
         approved_rule = next(item for item in self.read_items() if item["item_id"] == rule["item_id"])
         self.assertFalse(approved_rule["review_required"])
         self.assertEqual(approved_rule["confidence"], "strong")
+
+    def test_operating_directives_route_to_global_without_review(self) -> None:
+        self.write_evidence(
+            "logs/sample-source.jsonl",
+            [
+                self.evidence_record("e1", "user", "Do not narrate your process."),
+                self.evidence_record("e2", "user", "Always add it to github, no need to ask."),
+            ],
+        )
+
+        result = run_memory_generation(
+            product_config_path=self.product_config,
+            state_dir=self.state_dir,
+            evidence_dir=self.evidence_dir,
+            memory_dir=self.memory_dir,
+            audits_dir=self.audits_dir,
+        )
+
+        self.assertTrue(result.report.success, result.report.fatal_error_summary)
+        items = self.read_items()
+        global_rules = [item for item in items if item["memory_class"] == "global_user_rules"]
+        self.assertEqual(len(global_rules), 2)
+        self.assertTrue(all(item["scope"] == "global" for item in global_rules))
+        self.assertTrue(all(not item["review_required"] for item in global_rules))
+
+    def test_runtime_local_directive_does_not_become_project_rule(self) -> None:
+        self.write_evidence(
+            "logs/sample-source.jsonl",
+            [
+                self.evidence_record("e1", "user", "Don't try to restart the application anymore. I can do that"),
+            ],
+        )
+
+        result = run_memory_generation(
+            product_config_path=self.product_config,
+            state_dir=self.state_dir,
+            evidence_dir=self.evidence_dir,
+            memory_dir=self.memory_dir,
+            audits_dir=self.audits_dir,
+        )
+
+        self.assertTrue(result.report.success, result.report.fatal_error_summary)
+        items = self.read_items()
+        self.assertFalse(any(item["memory_class"] == "project_rules" for item in items))
+        self.assertTrue(any(item["memory_class"] == "recent_project_state" for item in items))
+
+    def test_clause_cleanup_normalizes_common_transcription_noise(self) -> None:
+        self.write_evidence(
+            "logs/sample-source.jsonl",
+            [self.evidence_record("e1", "user", "don't do anything ouside the plan!")],
+        )
+
+        result = run_memory_generation(
+            product_config_path=self.product_config,
+            state_dir=self.state_dir,
+            evidence_dir=self.evidence_dir,
+            memory_dir=self.memory_dir,
+            audits_dir=self.audits_dir,
+        )
+
+        self.assertTrue(result.report.success, result.report.fatal_error_summary)
+        statement = self.read_items()[0]["statement"]
+        self.assertEqual(statement, "don't do anything outside the plan!")
+
+    def test_memory_generation_prunes_stale_recent_context(self) -> None:
+        stale = self.evidence_record("e1", "user", "Please fix this now.")
+        stale["timestamp"] = "2026-01-01T00:00:00Z"
+        current = self.evidence_record("e2", "user", "Please continue this active task.")
+        self.write_evidence("logs/sample-source.jsonl", [stale, current])
+
+        result = run_memory_generation(
+            product_config_path=self.product_config,
+            state_dir=self.state_dir,
+            evidence_dir=self.evidence_dir,
+            memory_dir=self.memory_dir,
+            audits_dir=self.audits_dir,
+        )
+
+        self.assertTrue(result.report.success, result.report.fatal_error_summary)
+        statements = [item["statement"] for item in self.read_items()]
+        self.assertNotIn("Please fix this now.", statements)
+        self.assertIn("Please continue this active task.", statements)
 
     def test_memory_generation_respects_plain_markdown_renderer_flags(self) -> None:
         payload = json.loads(self.product_config.read_text(encoding="utf-8"))
