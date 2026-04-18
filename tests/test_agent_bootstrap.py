@@ -67,6 +67,7 @@ class AgentBootstrapTests(unittest.TestCase):
 
     def test_agent_bootstrap_renders_codex_agents_md_from_memory_manifest(self) -> None:
         self.write_memory_items()
+        (self.temp_dir / "AGENTS.md").write_text("# User Rules\n\nDo not delete this.\n", encoding="utf-8")
 
         result = run_agent_bootstrap(
             product_config_path=self.product_config,
@@ -79,11 +80,36 @@ class AgentBootstrapTests(unittest.TestCase):
         target = self.temp_dir / "AGENTS.md"
         self.assertTrue(target.exists())
         content = target.read_text(encoding="utf-8")
+        self.assertIn("Do not delete this.", content)
+        self.assertIn("<!-- WIKIMEMORY:START -->", content)
+        self.assertIn("<!-- WIKIMEMORY:END -->", content)
         self.assertIn("memory/global/user-rules.md", content)
         self.assertIn("Always inspect real data first", content)
         self.assertIn("Do not commit generated memory outputs", content)
         self.assertIn("memory/projects/alpha/recent.md", content)
         self.assertNotIn("M README.md", content)
+
+    def test_agent_bootstrap_updates_only_managed_block(self) -> None:
+        self.write_memory_items()
+        target = self.temp_dir / "AGENTS.md"
+        target.write_text(
+            "# User Rules\n\nKeep this paragraph.\n\n<!-- WIKIMEMORY:START -->\nold generated text\n<!-- WIKIMEMORY:END -->\n\nKeep this footer.\n",
+            encoding="utf-8",
+        )
+
+        result = run_agent_bootstrap(
+            product_config_path=self.product_config,
+            state_dir=self.state_dir,
+            memory_dir=self.memory_dir,
+            audits_dir=self.audits_dir,
+        )
+
+        self.assertTrue(result.report.success, result.report.fatal_error_summary)
+        content = target.read_text(encoding="utf-8")
+        self.assertIn("Keep this paragraph.", content)
+        self.assertIn("Keep this footer.", content)
+        self.assertNotIn("old generated text", content)
+        self.assertIn("Always inspect real data first", content)
 
     def test_agent_bootstrap_project_filter_keeps_global_and_selected_project(self) -> None:
         self.write_memory_items()

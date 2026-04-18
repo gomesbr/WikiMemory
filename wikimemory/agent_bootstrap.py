@@ -13,6 +13,8 @@ from .product_config import load_product_config
 
 STATE_SCHEMA_VERSION = 1
 AGENT_BOOTSTRAP_SCHEMA_VERSION = 1
+BOOTSTRAP_BLOCK_START = "<!-- WIKIMEMORY:START -->"
+BOOTSTRAP_BLOCK_END = "<!-- WIKIMEMORY:END -->"
 
 
 class AgentBootstrapError(DiscoveryError):
@@ -84,7 +86,8 @@ def run_agent_bootstrap(
         items = load_memory_items(memory_dir, project_filter)
         markdown, selected_item_count = render_agent_bootstrap(items, config.agent_platform.bootstrap_renderer)
         ensure_directory(target_path.parent)
-        atomic_write_text(target_path, markdown)
+        final_markdown = append_or_update_managed_block(target_path, markdown)
+        atomic_write_text(target_path, final_markdown)
 
         state_payload = {
             "schema_version": STATE_SCHEMA_VERSION,
@@ -93,7 +96,7 @@ def run_agent_bootstrap(
             "last_rendered_at": utc_now(),
             "target_path": str(target_path),
             "selected_item_count": selected_item_count,
-            "rendered_char_count": len(markdown),
+            "rendered_char_count": len(final_markdown),
         }
         atomic_write_text(state_path, json.dumps(state_payload, indent=2))
         finished_at = utc_now()
@@ -103,7 +106,7 @@ def run_agent_bootstrap(
             finished_at=finished_at,
             target_path=str(target_path),
             selected_item_count=selected_item_count,
-            rendered_char_count=len(markdown),
+            rendered_char_count=len(final_markdown),
             success=True,
             fatal_error_summary=None,
         )
@@ -155,6 +158,19 @@ def render_agent_bootstrap(items: list[dict[str, object]], renderer: str) -> tup
     if renderer == "generic_bootstrap_md":
         return render_bootstrap_markdown(items, "# AI Agent Memory Bootstrap", "agent")
     raise AgentBootstrapError(f"Unsupported agent bootstrap renderer: {renderer}")
+
+
+def append_or_update_managed_block(target_path: Path, generated_markdown: str) -> str:
+    managed_block = f"{BOOTSTRAP_BLOCK_START}\n{generated_markdown.strip()}\n{BOOTSTRAP_BLOCK_END}\n"
+    if not target_path.exists():
+        return managed_block
+    existing = target_path.read_text(encoding="utf-8")
+    start_index = existing.find(BOOTSTRAP_BLOCK_START)
+    end_index = existing.find(BOOTSTRAP_BLOCK_END)
+    if start_index != -1 and end_index != -1 and end_index > start_index:
+        end_index += len(BOOTSTRAP_BLOCK_END)
+        return existing[:start_index].rstrip() + "\n\n" + managed_block + existing[end_index:].lstrip()
+    return existing.rstrip() + "\n\n" + managed_block
 
 
 def render_codex_agents_md(items: list[dict[str, object]]) -> tuple[str, int]:
