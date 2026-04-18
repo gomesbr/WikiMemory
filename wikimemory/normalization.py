@@ -471,6 +471,8 @@ def normalize_source(
         existing_stats = read_json_file(source_output_dir / "stats.json")
         if existing_session is None or existing_stats is None:
             mode = "full"
+        elif not existing_artifacts_match_state(existing_session, existing_stats, prior_state):
+            mode = "full"
         else:
             shutil.copy2(source_output_dir / "events.jsonl", staged_events_path)
             normalized_event_count = int(existing_stats["normalized_event_count"])
@@ -637,6 +639,18 @@ def normalize_source(
         processed_event_count=processed_event_count,
         event_counts_by_outer_type=Counter(event_counts_by_outer_type),
         event_counts_by_payload_type=Counter(event_counts_by_payload_type),
+    )
+
+
+def existing_artifacts_match_state(
+    existing_session: dict[str, object],
+    existing_stats: dict[str, object],
+    prior_state: NormalizationStateRecord,
+) -> bool:
+    return (
+        int(existing_session.get("committed_byte_end", -1)) == prior_state.phase1_committed_byte_end
+        and int(existing_session.get("committed_line_count", -1)) == prior_state.phase1_committed_line_count
+        and int(existing_stats.get("normalized_event_count", -1)) == prior_state.phase1_committed_line_count
     )
 
 

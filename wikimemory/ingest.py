@@ -89,7 +89,7 @@ def run_ingest(
         source_counts: Counter[str] = Counter()
         evidence_counts: Counter[str] = Counter()
 
-        log_records = build_log_evidence_records(normalized_dir, source_filter)
+        log_records = build_log_evidence_records(normalized_dir, source_filter, config)
         for relative_path, records in log_records.items():
             records_by_path[staging_root / relative_path] = records
             evidence_counts["log_event"] += len(records)
@@ -146,7 +146,11 @@ def run_ingest(
         return IngestResult(report, state_path, run_log_path, notice_log_path)
 
 
-def build_log_evidence_records(normalized_dir: Path, source_filter: set[str]) -> dict[Path, list[dict[str, object]]]:
+def build_log_evidence_records(
+    normalized_dir: Path,
+    source_filter: set[str],
+    config: ProductConfig,
+) -> dict[Path, list[dict[str, object]]]:
     sources_dir = normalized_dir / "sources"
     if not sources_dir.exists():
         return {}
@@ -163,17 +167,21 @@ def build_log_evidence_records(normalized_dir: Path, source_filter: set[str]) ->
         session = read_json_file(session_path)
         if session is None:
             continue
-        project_hint = project_hint_from_session(session)
+        project_hint = project_hint_from_session(session, config)
         records = []
         for event in read_jsonl(events_path):
-            record = log_event_to_evidence(event, project_hint)
+            record = log_event_to_evidence(event, project_hint, config)
             if record is not None:
                 records.append(record)
         result[Path("logs") / f"{source_id}.jsonl"] = records
     return result
 
 
-def log_event_to_evidence(event: dict[str, object], project_hint: str | None) -> dict[str, object] | None:
+def log_event_to_evidence(
+    event: dict[str, object],
+    project_hint: str | None,
+    config: ProductConfig,
+) -> dict[str, object] | None:
     text_surfaces = [
         {
             "path": str(surface.get("path", "")),
@@ -187,13 +195,14 @@ def log_event_to_evidence(event: dict[str, object], project_hint: str | None) ->
 
     event_id = str(event["event_id"])
     actor_type = actor_type_for_event(event)
+    event_project_hint = resolve_project_hint_from_text_surfaces(text_surfaces, config) or project_hint
     return {
         "evidence_id": stable_id("log_event", event_id),
         "ingest_schema_version": INGEST_SCHEMA_VERSION,
         "evidence_type": "log_event",
         "source_adapter": "codex_jsonl",
         "source_id": str(event["source_id"]),
-        "project_hint": project_hint,
+        "project_hint": event_project_hint,
         "actor_type": actor_type,
         "timestamp": event.get("timestamp"),
         "content_surfaces": text_surfaces,
@@ -311,14 +320,57 @@ def actor_type_for_event(event: dict[str, object]) -> str:
     return "unknown"
 
 
-def project_hint_from_session(session: dict[str, object]) -> str | None:
+def project_hint_from_session(session: dict[str, object], config: ProductConfig | None = None) -> str | None:
     fields = session.get("session_meta_fields")
     if not isinstance(fields, dict):
         return None
     cwd = str(fields.get("cwd", "")).strip()
     if not cwd:
         return None
+    if config is not None:
+        resolved = resolve_project_hint_from_cwd(cwd, config)
+        if resolved:
+            return resolved
     return slugify(Path(cwd).name)
+
+
+def resolve_project_hint_from_cwd(cwd: str, config: ProductConfig) -> str | None:
+    parts = normalized_path_parts(cwd)
+    joined = "/".join(parts)
+    for alias_config in config.project_aliases:
+        for alias in alias_config.aliases:
+            alias_slug = slugify(alias)
+            alias_parts = normalized_path_parts(alias)
+            if alias_slug in parts or any(part in parts for part in alias_parts):
+                return alias_config.slug
+            if alias_slug and alias_slug in joined:
+                return alias_config.slug
+    return None
+
+
+def resolve_project_hint_from_text_surfaces(
+    text_surfaces: list[dict[str, str]],
+    config: ProductConfig,
+) -> str | None:
+    text = "\n".join(surface.get("text", "") for surface in text_surfaces)
+    return resolve_project_hint_from_text(text, config)
+
+
+def resolve_project_hint_from_text(text: str, config: ProductConfig) -> str | None:
+    normalized = text.replace("\\", "/")
+    parts = normalized_path_parts(normalized)
+    joined = "/".join(parts)
+    for alias_config in config.project_aliases:
+        for alias in alias_config.aliases:
+            alias_slug = slugify(alias)
+            if alias_slug in parts or f"/{alias_slug}/" in f"/{joined}/":
+                return alias_config.slug
+    return None
+
+
+def normalized_path_parts(value: str) -> list[str]:
+    normalized = value.replace("\\", "/")
+    return [slugify(part) for part in normalized.split("/") if slugify(part)]
 
 
 def run_git(project_root: Path, *args: str) -> str:

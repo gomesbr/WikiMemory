@@ -225,6 +225,55 @@ class NormalizationTests(unittest.TestCase):
         self.assertIn("Exit code: 0\nhi", [item["text"] for item in function_output["text_surfaces"]])
         self.assertEqual(len(events), 4)
 
+    def test_incremental_falls_back_to_full_when_artifacts_disagree_with_state(self) -> None:
+        session_id = str(uuid4())
+        source_path, _ = self.source_paths(session_id)
+        make_source_file(
+            source_path,
+            session_id,
+            extra_lines=[
+                {
+                    "timestamp": "2026-04-12T21:00:00.000Z",
+                    "type": "event_msg",
+                    "payload": {"type": "user_message", "message": "First"},
+                }
+            ],
+        )
+        self.write_config()
+        self.run_discovery_and_normalize()
+
+        stats_path = self.normalized_dir / "sources" / session_id / "stats.json"
+        stats_payload = self.read_json(stats_path)
+        stats_payload["normalized_event_count"] = int(stats_payload["normalized_event_count"]) + 1
+        stats_path.write_text(json.dumps(stats_payload, indent=2), encoding="utf-8")
+
+        with source_path.open("a", encoding="utf-8", newline="\n") as handle:
+            handle.write(
+                json.dumps(
+                    {
+                        "timestamp": "2026-04-12T21:00:02.000Z",
+                        "type": "event_msg",
+                        "payload": {"type": "user_message", "message": "Second"},
+                    },
+                    separators=(",", ":"),
+                )
+                + "\n"
+            )
+
+        discovery_result = run_discovery(self.config_path, self.state_dir)
+        normalization_result = run_normalization(
+            config_path=self.config_path,
+            state_dir=self.state_dir,
+            schema_path=self.schema_path,
+            normalized_dir=self.normalized_dir,
+            audits_dir=self.audits_dir,
+        )
+
+        self.assertTrue(discovery_result.report.success)
+        self.assertTrue(normalization_result.report.success)
+        events = self.read_jsonl(self.normalized_dir / "sources" / session_id / "events.jsonl")
+        self.assertEqual(len(events), 3)
+
     def test_schema_version_bump_forces_full_renormalization(self) -> None:
         session_id = str(uuid4())
         source_path, _ = self.source_paths(session_id)

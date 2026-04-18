@@ -55,6 +55,12 @@ class ProjectSourceConfig:
 
 
 @dataclass(frozen=True)
+class ProjectAliasConfig:
+    slug: str
+    aliases: tuple[str, ...]
+
+
+@dataclass(frozen=True)
 class SchedulerConfig:
     mode: str
     scan_on_startup: bool
@@ -80,6 +86,7 @@ class ProductConfig:
     markdown_output: MarkdownOutputConfig
     log_sources: tuple[LogSourceConfig, ...]
     project_sources: tuple[ProjectSourceConfig, ...]
+    project_aliases: tuple[ProjectAliasConfig, ...]
     scheduler: SchedulerConfig
     policies: PolicyConfig
 
@@ -92,6 +99,10 @@ class ProductConfig:
             "markdown_output": self.markdown_output.__dict__,
             "log_sources": [source.__dict__ for source in self.log_sources],
             "project_sources": [source.__dict__ for source in self.project_sources],
+            "project_aliases": [
+                {"slug": alias.slug, "aliases": list(alias.aliases)}
+                for alias in self.project_aliases
+            ],
             "scheduler": self.scheduler.__dict__,
             "policies": self.policies.__dict__,
         }
@@ -134,6 +145,9 @@ def default_product_config(project_root: Path | str) -> ProductConfig:
                 project_root=str(project_root),
                 include_untracked=True,
             ),
+        ),
+        project_aliases=(
+            ProjectAliasConfig(slug=slugify(project_root.name), aliases=(project_root.name,)),
         ),
         scheduler=SchedulerConfig(
             mode="manual",
@@ -202,6 +216,13 @@ def parse_product_config(payload: dict[str, Any]) -> ProductConfig:
         )
         for item in payload.get("project_sources", [])
     )
+    project_aliases = tuple(
+        ProjectAliasConfig(
+            slug=slugify(str(item["slug"])),
+            aliases=tuple(str(alias) for alias in item.get("aliases", [])),
+        )
+        for item in payload.get("project_aliases", [])
+    )
 
     config = ProductConfig(
         schema_version=int(payload.get("schema_version", 1)),
@@ -225,6 +246,7 @@ def parse_product_config(payload: dict[str, Any]) -> ProductConfig:
         ),
         log_sources=log_sources,
         project_sources=project_sources,
+        project_aliases=project_aliases,
         scheduler=SchedulerConfig(
             mode=str(scheduler_payload["mode"]),
             scan_on_startup=bool(scheduler_payload["scan_on_startup"]),
@@ -266,7 +288,19 @@ def validate_product_config(config: ProductConfig) -> None:
     for source in config.project_sources:
         if source.adapter not in PROJECT_DELTA_ADAPTERS:
             raise ProductConfigError(f"Unsupported project delta adapter: {source.adapter}")
+    for alias in config.project_aliases:
+        if not alias.slug:
+            raise ProductConfigError("Project alias slug must be non-empty")
+        if not alias.aliases:
+            raise ProductConfigError(f"Project alias {alias.slug} must define at least one alias")
     if config.scheduler.mode not in {"manual", "interval", "cron_like"}:
         raise ProductConfigError(f"Unsupported scheduler mode: {config.scheduler.mode}")
     if config.scheduler.tick_seconds <= 0:
         raise ProductConfigError("scheduler.tick_seconds must be positive")
+
+
+def slugify(value: str) -> str:
+    slug = "".join(char.lower() if char.isalnum() else "-" for char in value).strip("-")
+    while "--" in slug:
+        slug = slug.replace("--", "-")
+    return slug or "project"

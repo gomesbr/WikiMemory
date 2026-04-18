@@ -33,6 +33,24 @@
       "include_untracked": true
     }
   ],
+  "project_aliases": [
+    {
+      "slug": "wikimemory",
+      "aliases": ["WikiMemory", "wikimemory"]
+    },
+    {
+      "slug": "open-brain",
+      "aliases": ["OpenBrain", "open-brain", "open_brain"]
+    },
+    {
+      "slug": "ai-trader",
+      "aliases": ["AITrader", "ai-trader", "ai_trader"]
+    },
+    {
+      "slug": "codexclaw",
+      "aliases": ["CodexClaw", "codexclaw"]
+    }
+  ],
   "scheduler": {
     "mode": "manual",
     "scan_on_startup": true,

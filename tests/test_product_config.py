@@ -31,6 +31,7 @@ class ProductConfigTests(unittest.TestCase):
         self.assertEqual(config.agent_platform.bootstrap_target_path, "AGENTS.md")
         self.assertTrue(config.policies.require_confirmation_for_inferred_rule_promotion)
         self.assertEqual(config.project_sources[0].adapter, "git_worktree")
+        self.assertTrue(config.project_aliases)
 
     def test_load_product_config_validates_supported_adapters(self) -> None:
         payload = default_product_config(self.temp_dir).to_dict()
