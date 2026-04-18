@@ -843,8 +843,16 @@ def validate_synthesis_output(packet: BootstrapPacket, raw_output: dict[str, obj
     section_map = {str(section["section_id"]): section for section in packet.sections}
     valid_item_ids = set(packet.input_item_keys)
     valid_claim_ids = set(packet.input_claim_ids)
+    claim_support_map = {
+        str(claim["claim_id"]): [str(item) for item in claim.get("supporting_item_ids", []) if str(item) in valid_item_ids]
+        for section in packet.sections
+        for claim in section.get("claims", [])
+        if isinstance(claim, dict)
+    }
     seen_bullets: set[str] = set()
     validated_sections: list[dict[str, object]] = []
+    dropped_invalid_bullet_count = 0
+    kept_bullet_count = 0
 
     for section_payload in sections_payload:
         if not isinstance(section_payload, dict):
@@ -864,20 +872,23 @@ def validate_synthesis_output(packet: BootstrapPacket, raw_output: dict[str, obj
             supporting_claim_ids = [str(item) for item in bullet.get("supporting_claim_ids", []) if str(item)]
             if not text:
                 raise BootstrapError(f"Empty bootstrap bullet text for {packet.domain} section {section_id}")
+            supporting_claim_ids = [claim_id for claim_id in supporting_claim_ids if claim_id in valid_claim_ids]
+            supporting_item_keys = [item_id for item_id in supporting_item_keys if item_id in valid_item_ids]
+            for claim_id in supporting_claim_ids:
+                supporting_item_keys.extend(claim_support_map.get(claim_id, []))
+            supporting_item_keys = dedupe_preserving_order(supporting_item_keys)
             if not supporting_item_keys:
-                raise BootstrapError(f"Bootstrap bullet missing supporting_item_keys for {packet.domain}")
-            if any(item_id not in valid_item_ids for item_id in supporting_item_keys):
-                raise BootstrapError(f"Bootstrap bullet referenced unknown item ids for {packet.domain}")
-            if any(claim_id not in valid_claim_ids for claim_id in supporting_claim_ids):
-                raise BootstrapError(f"Bootstrap bullet referenced unknown claim ids for {packet.domain}")
+                dropped_invalid_bullet_count += 1
+                continue
             normalized_text = normalize_bullet_text(text)
             if normalized_text in seen_bullets:
                 continue
             seen_bullets.add(normalized_text)
+            kept_bullet_count += 1
             validated_bullets.append(
                 {
                     "text": text,
-                    "supporting_item_keys": dedupe_preserving_order(supporting_item_keys),
+                    "supporting_item_keys": supporting_item_keys,
                     "supporting_claim_ids": dedupe_preserving_order(supporting_claim_ids),
                 }
             )
@@ -899,6 +910,8 @@ def validate_synthesis_output(packet: BootstrapPacket, raw_output: dict[str, obj
                     "bullets": [],
                 }
             )
+    if dropped_invalid_bullet_count and kept_bullet_count == 0:
+        raise BootstrapError(f"Bootstrap bullet referenced unknown item ids for {packet.domain}")
     validated_sections.sort(key=lambda section: section_order_index(packet, section["section_id"]))
     return validated_sections
 

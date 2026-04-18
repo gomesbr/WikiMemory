@@ -256,6 +256,37 @@ class BootstrapTests(unittest.TestCase):
 
         return invalid_structured_json
 
+    def make_mixed_invalid_bootstrap_synthesizer(self):
+        def mixed_structured_json(*, config, system_prompt, user_prompt, schema):
+            packet = json.loads(user_prompt)
+            sections = []
+            for section in packet.get("sections", []):
+                items = section.get("items", [])
+                if not items:
+                    sections.append({"section_id": str(section["section_id"]), "bullets": []})
+                    continue
+                valid_item_key = str(items[0]["item_key"])
+                sections.append(
+                    {
+                        "section_id": str(section["section_id"]),
+                        "bullets": [
+                            {
+                                "text": "Keep the valid part of a mixed-reference bullet.",
+                                "supporting_item_keys": [valid_item_key, "missing:item:key"],
+                                "supporting_claim_ids": ["missing:claim:id"],
+                            },
+                            {
+                                "text": "Drop fully unsupported bullet.",
+                                "supporting_item_keys": ["missing:item:key"],
+                                "supporting_claim_ids": [],
+                            },
+                        ],
+                    }
+                )
+            return {"sections": sections}
+
+        return mixed_structured_json
+
     def make_duplicate_bootstrap_synthesizer(self):
         def duplicate_structured_json(*, config, system_prompt, user_prompt, schema):
             packet = json.loads(user_prompt)
@@ -504,6 +535,42 @@ class BootstrapTests(unittest.TestCase):
         self.assertFalse(failed_result.report.success)
         self.assertEqual((self.state_dir / "bootstrap_state.json").read_text(encoding="utf-8"), state_before)
         self.assertEqual((self.bootstrap_dir / "global.md").read_text(encoding="utf-8"), markdown_before)
+
+    def test_mixed_invalid_synthesis_refs_are_filtered(self) -> None:
+        session_id = str(uuid4())
+        make_source_file(
+            self.source_path(session_id, "global"),
+            session_id,
+            cwd="C:\\repos\\shared-rag",
+            extra_lines=[
+                {
+                    "timestamp": "2026-04-12T21:07:00.000Z",
+                    "type": "event_msg",
+                    "payload": {
+                        "type": "user_message",
+                        "message": "Communication preference: prefer concise answers. Workflow rule: validate before moving phases.",
+                    },
+                }
+            ],
+        )
+        self.write_source_config()
+        self.run_until_extracted()
+        self.assertTrue(self.run_wiki_with_fake_llm(config_path=self.write_wiki_config()).report.success)
+
+        with patch("wikimemory.bootstrap.call_openai_structured_json", side_effect=self.make_mixed_invalid_bootstrap_synthesizer()):
+            result = run_bootstrap(
+                config_path=self.write_bootstrap_config(),
+                state_dir=self.state_dir,
+                extracted_dir=self.extracted_dir,
+                wiki_dir=self.wiki_dir,
+                bootstrap_dir=self.bootstrap_dir,
+                audits_dir=self.audits_dir,
+            )
+
+        self.assertTrue(result.report.success, result.report.fatal_error_summary)
+        markdown = (self.bootstrap_dir / "global.md").read_text(encoding="utf-8")
+        self.assertIn("Keep the valid part", markdown)
+        self.assertNotIn("Drop fully unsupported", markdown)
 
     def test_duplicate_bullets_are_deduped(self) -> None:
         session_id = str(uuid4())
