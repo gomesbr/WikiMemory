@@ -150,6 +150,14 @@ python -m wikimemory agent-bootstrap
 
 For the default Codex configuration this writes `AGENTS.md` as a tiny entry map that points to the derived memory files instead of copying the whole memory layer into the bootstrap.
 
+Compact memory outputs can be linted independently from the legacy wiki pipeline:
+
+```powershell
+python -m wikimemory memory-lint
+```
+
+This checks rule quality, scope, provenance, stale recent-state items, and whether the agent bootstrap stays an entry map instead of inlining noisy recent context.
+
 Segmentation groups normalized events into higher-level units that are more useful than raw line-by-line traces.
 
 Typical segments correspond to:
@@ -495,6 +503,7 @@ python -m wikimemory normalize
 python -m wikimemory ingest
 python -m wikimemory memory
 python -m wikimemory agent-bootstrap
+python -m wikimemory memory-lint
 python -m wikimemory segment
 python -m wikimemory classify
 python -m wikimemory extract

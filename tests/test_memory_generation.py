@@ -84,6 +84,7 @@ class MemoryGenerationTests(unittest.TestCase):
                     "user",
                     "PLEASE IMPLEMENT THIS PLAN: The command must write files and never fail silently.",
                 ),
+                self.evidence_record("e6", "user", '""'),
             ],
         )
 
@@ -107,6 +108,7 @@ class MemoryGenerationTests(unittest.TestCase):
         self.assertEqual(len(project_rules), 1)
         self.assertIn("do not commit", project_rules[0]["statement"])
         self.assertFalse(any("never fail silently" in item["statement"] for item in project_rules))
+        self.assertFalse(any(not item["statement"] for item in items))
         self.assertTrue(any("Please fix this now" in item["statement"] for item in recent_items))
         self.assertTrue((self.memory_dir / "global" / "user-rules.md").exists())
         self.assertTrue((self.memory_dir / "projects" / "example-project" / "rules.md").exists())

@@ -14,6 +14,7 @@ from .extraction import ExtractionResult, run_extraction
 from .full_load import FullLoadResult, run_full_load
 from .ingest import IngestResult, run_ingest
 from .memory_generation import MemoryResult, run_memory_generation
+from .memory_lint import MemoryLintResult, run_memory_lint
 from .normalization import NormalizationResult, run_normalization
 from .onboarding import OnboardingReport, run_onboarding
 from .refresh import RefreshResult, run_refresh
@@ -608,6 +609,46 @@ def build_parser() -> argparse.ArgumentParser:
         action="store_true",
         help="Print the final run report as JSON.",
     )
+
+    memory_lint_parser = subparsers.add_parser(
+        "memory-lint",
+        help="Run deterministic lint checks over compact memory and agent bootstrap artifacts.",
+    )
+    memory_lint_parser.add_argument(
+        "--product-config",
+        type=Path,
+        default=Path("config/product_config.json"),
+        help="Path to unified product configuration JSON.",
+    )
+    memory_lint_parser.add_argument(
+        "--state-dir",
+        type=Path,
+        default=Path("state"),
+        help="Directory where memory-lint state and run logs are written.",
+    )
+    memory_lint_parser.add_argument(
+        "--memory-dir",
+        type=Path,
+        default=Path("memory"),
+        help="Directory containing compact memory files.",
+    )
+    memory_lint_parser.add_argument(
+        "--audits-dir",
+        type=Path,
+        default=Path("audits"),
+        help="Directory where memory-lint findings are written.",
+    )
+    memory_lint_parser.add_argument(
+        "--bootstrap-path",
+        type=Path,
+        default=None,
+        help="Optional agent bootstrap path override.",
+    )
+    memory_lint_parser.add_argument(
+        "--json",
+        action="store_true",
+        help="Print the final run report as JSON.",
+    )
     return parser
 
 
@@ -781,6 +822,15 @@ def format_agent_bootstrap_result(result: AgentBootstrapResult) -> str:
         f"Agent-bootstrap {outcome}: target={result.target_path}; "
         f"items={result.report.selected_item_count}; chars={result.report.rendered_char_count}; "
         f"state={result.state_path}; run_log={result.run_log_path}; notices={result.notice_log_path}"
+    )
+
+
+def format_memory_lint_result(result: MemoryLintResult) -> str:
+    outcome = "succeeded" if result.report.success else "failed"
+    return (
+        f"Memory-lint {outcome}: findings={result.report.finding_count}; "
+        f"warnings={result.report.warning_count}; errors={result.report.error_count}; "
+        f"state={result.state_path}; run_log={result.run_log_path}"
     )
 
 
@@ -994,6 +1044,22 @@ def main(argv: list[str] | None = None) -> int:
             if result.report.fatal_error_summary:
                 print(result.report.fatal_error_summary)
         return 0 if result.report.success else 1
+
+    if args.command == "memory-lint":
+        result = run_memory_lint(
+            product_config_path=args.product_config,
+            state_dir=args.state_dir,
+            memory_dir=args.memory_dir,
+            audits_dir=args.audits_dir,
+            bootstrap_path=args.bootstrap_path,
+        )
+        if args.json:
+            print(json.dumps(result.report.to_dict(), indent=2, sort_keys=True))
+        else:
+            print(format_memory_lint_result(result))
+            if result.report.fatal_error_summary:
+                print(result.report.fatal_error_summary)
+        return 0 if result.report.success and result.report.error_count == 0 else 1
 
     result = run_full_load(
         config_path=args.config,

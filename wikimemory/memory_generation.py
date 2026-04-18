@@ -158,6 +158,8 @@ def build_memory_items(records: list[dict[str, object]], project_filter: set[str
             continue
         candidates = classify_evidence(record, text, actor_type, project)
         for candidate in candidates:
+            if not str(candidate.get("statement") or "").strip():
+                continue
             item_id = candidate["item_id"]
             if item_id not in items:
                 items[item_id] = candidate
@@ -208,6 +210,7 @@ def make_item(
     statement: str,
 ) -> dict[str, object]:
     evidence_id = str(record["evidence_id"])
+    timestamp = record.get("timestamp")
     item_id = stable_id(memory_class, scope, project or "", normalize_statement(statement))
     return {
         "item_id": item_id,
@@ -221,6 +224,8 @@ def make_item(
         "source_actor_types": [str(record.get("actor_type") or "")],
         "evidence_ids": [evidence_id],
         "provenance_refs": [record.get("provenance", {})],
+        "first_seen_at": timestamp,
+        "last_seen_at": timestamp,
         "confidence": "explicit" if promotion_state_value == "explicit" else "candidate",
     }
 
@@ -233,12 +238,30 @@ def merge_item(target: dict[str, object], incoming: dict[str, object]) -> None:
         if ref not in existing_refs:
             existing_refs.append(ref)
     target["provenance_refs"] = existing_refs
+    target["first_seen_at"] = earliest_timestamp(target.get("first_seen_at"), incoming.get("first_seen_at"))
+    target["last_seen_at"] = latest_timestamp(target.get("last_seen_at"), incoming.get("last_seen_at"))
     if incoming["promotion_state"] == "explicit":
         target["promotion_state"] = "explicit"
         target["confidence"] = "explicit"
     elif len(target["evidence_ids"]) > 1 and target["promotion_state"] == "candidate":
         target["promotion_state"] = "repeated"
         target["confidence"] = "strong"
+
+
+def earliest_timestamp(left: object, right: object) -> object:
+    if not left:
+        return right
+    if not right:
+        return left
+    return min(str(left), str(right))
+
+
+def latest_timestamp(left: object, right: object) -> object:
+    if not left:
+        return right
+    if not right:
+        return left
+    return max(str(left), str(right))
 
 
 def render_memory_files(memory_dir: Path, items: list[dict[str, object]], markdown_mode: str) -> list[Path]:
