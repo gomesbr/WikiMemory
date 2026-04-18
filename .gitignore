@@ -25,4 +25,5 @@ memory/*
 !memory/.gitkeep
 bootstrap/
 !bootstrap/.gitkeep
-wiki/.staging/
+wiki/*
+!wiki/.gitkeep
