@@ -162,6 +162,55 @@ class MemoryGenerationTests(unittest.TestCase):
         self.assertFalse(approved_rule["review_required"])
         self.assertEqual(approved_rule["confidence"], "strong")
 
+    def test_project_overview_file_populates_project_memory(self) -> None:
+        self.write_evidence(
+            "projects/example-project.jsonl",
+            [
+                {
+                    "evidence_id": "overview-1",
+                    "evidence_type": "project_overview_file",
+                    "source_adapter": "git_worktree",
+                    "source_id": "example-project",
+                    "project_hint": "example-project",
+                    "actor_type": "project_delta",
+                    "timestamp": "2026-04-18T00:00:00Z",
+                    "content_surfaces": [
+                        {
+                            "path": "README.md",
+                            "text": "# Example Project\n\nExample Project turns raw logs into:\n\n- compact memory files\n- adapter pipeline\n- renderer config",
+                        }
+                    ],
+                    "provenance": {"path": "README.md"},
+                    "metadata": {},
+                },
+                {
+                    "evidence_id": "head-1",
+                    "evidence_type": "git_head",
+                    "source_adapter": "git_worktree",
+                    "source_id": "example-project",
+                    "project_hint": "example-project",
+                    "actor_type": "project_delta",
+                    "timestamp": "2026-04-18T00:00:00Z",
+                    "content_surfaces": [{"path": "git.head", "text": "branch=main; head=abc"}],
+                    "provenance": {},
+                    "metadata": {},
+                },
+            ],
+        )
+
+        result = run_memory_generation(
+            product_config_path=self.product_config,
+            state_dir=self.state_dir,
+            evidence_dir=self.evidence_dir,
+            memory_dir=self.memory_dir,
+            audits_dir=self.audits_dir,
+        )
+
+        self.assertTrue(result.report.success, result.report.fatal_error_summary)
+        content = (self.memory_dir / "projects" / "example-project" / "project.md").read_text(encoding="utf-8")
+        self.assertIn("turns raw logs into compact memory files", content)
+        self.assertNotIn("branch=main", content)
+
     def test_operating_directives_route_to_global_without_review(self) -> None:
         self.write_evidence(
             "logs/sample-source.jsonl",
@@ -273,7 +322,14 @@ class MemoryGenerationTests(unittest.TestCase):
             [
                 self.evidence_record("e1", "user", "Are you testing with real data ?"),
                 self.evidence_record("e2", "user", "push to git please"),
-                self.evidence_record("e3", "user", "Please continue implementing the renderer cleanup."),
+                self.evidence_record("e3", "user", "OK, create the plan"),
+                self.evidence_record("e4", "user", "Where are the dos and don'ts located?"),
+                self.evidence_record("e5", "user", "Should have a llm second pass for records under projects"),
+                self.evidence_record("e7", "user", "Ok, plan next phase"),
+                self.evidence_record("e8", "user", "notices: 754 down from 758 - is this supposed to be good progress?"),
+                self.evidence_record("e9", "user", "do the work, don't explain it. Just output final result, go"),
+                self.evidence_record("e10", "user", "whats next?"),
+                self.evidence_record("e6", "user", "Please continue implementing the renderer cleanup."),
             ],
         )
 
@@ -289,7 +345,116 @@ class MemoryGenerationTests(unittest.TestCase):
         content = (self.memory_dir / "projects" / "example-project" / "recent.md").read_text(encoding="utf-8")
         self.assertNotIn("Are you testing", content)
         self.assertNotIn("push to git", content)
+        self.assertNotIn("create the plan", content)
+        self.assertNotIn("dos and don'ts located", content)
+        self.assertNotIn("llm second pass", content)
+        self.assertNotIn("plan next phase", content)
+        self.assertNotIn("754 down", content)
+        self.assertNotIn("don't explain", content)
+        self.assertNotIn("whats next", content)
         self.assertIn("renderer cleanup", content)
+
+    def test_memory_generation_does_not_count_duplicate_log_shapes_as_repetition(self) -> None:
+        repeated_text = "Please continue implementing the renderer cleanup."
+        first = self.evidence_record("e1", "user", repeated_text)
+        second = self.evidence_record("e2", "user", repeated_text)
+        first["timestamp"] = "2026-04-18T00:00:00.001Z"
+        second["timestamp"] = "2026-04-18T00:00:00.002Z"
+        first["provenance"]["source_id"] = "same-source"
+        second["provenance"]["source_id"] = "same-source"
+        self.write_evidence("logs/sample-source.jsonl", [first, second])
+
+        result = run_memory_generation(
+            product_config_path=self.product_config,
+            state_dir=self.state_dir,
+            evidence_dir=self.evidence_dir,
+            memory_dir=self.memory_dir,
+            audits_dir=self.audits_dir,
+        )
+
+        self.assertTrue(result.report.success, result.report.fatal_error_summary)
+        items = [item for item in self.read_items() if item["statement"] == repeated_text]
+        self.assertEqual(len(items), 1)
+        self.assertEqual(len(items[0]["evidence_ids"]), 1)
+        self.assertEqual(items[0]["promotion_state"], "candidate")
+
+    def test_memory_generation_skips_unresolved_project_bucket(self) -> None:
+        self.write_evidence(
+            "logs/unresolved.jsonl",
+            [dict(self.evidence_record("e1", "user", "Please continue implementing the renderer cleanup."), project_hint="projects")],
+        )
+
+        result = run_memory_generation(
+            product_config_path=self.product_config,
+            state_dir=self.state_dir,
+            evidence_dir=self.evidence_dir,
+            memory_dir=self.memory_dir,
+            audits_dir=self.audits_dir,
+        )
+
+        self.assertTrue(result.report.success, result.report.fatal_error_summary)
+        self.assertFalse((self.memory_dir / "projects" / "projects").exists())
+
+    def test_memory_generation_keeps_global_rules_from_unresolved_project_records(self) -> None:
+        self.write_evidence(
+            "logs/unresolved.jsonl",
+            [
+                dict(
+                    self.evidence_record("e1", "user", "Do not narrate your process."),
+                    project_hint="projects",
+                )
+            ],
+        )
+
+        result = run_memory_generation(
+            product_config_path=self.product_config,
+            state_dir=self.state_dir,
+            evidence_dir=self.evidence_dir,
+            memory_dir=self.memory_dir,
+            audits_dir=self.audits_dir,
+        )
+
+        self.assertTrue(result.report.success, result.report.fatal_error_summary)
+        content = (self.memory_dir / "global" / "user-rules.md").read_text(encoding="utf-8")
+        self.assertIn("Do not narrate your process", content)
+
+    def test_stop_explanation_preference_becomes_global_rule(self) -> None:
+        self.write_evidence(
+            "logs/sample-source.jsonl",
+            [self.evidence_record("e1", "user", "stop spitting explanation texts, it is killing my token limits")],
+        )
+
+        result = run_memory_generation(
+            product_config_path=self.product_config,
+            state_dir=self.state_dir,
+            evidence_dir=self.evidence_dir,
+            memory_dir=self.memory_dir,
+            audits_dir=self.audits_dir,
+        )
+
+        self.assertTrue(result.report.success, result.report.fatal_error_summary)
+        content = (self.memory_dir / "global" / "user-rules.md").read_text(encoding="utf-8")
+        self.assertIn("stop spitting explanation texts", content)
+
+    def test_no_fallback_should_exist_becomes_project_rule_not_recent(self) -> None:
+        self.write_evidence(
+            "logs/sample-source.jsonl",
+            [self.evidence_record("e1", "user", "No fallback should exist as answers have to be evidence based.")],
+        )
+
+        result = run_memory_generation(
+            product_config_path=self.product_config,
+            state_dir=self.state_dir,
+            evidence_dir=self.evidence_dir,
+            memory_dir=self.memory_dir,
+            audits_dir=self.audits_dir,
+        )
+
+        self.assertTrue(result.report.success, result.report.fatal_error_summary)
+        rules = (self.memory_dir / "projects" / "example-project" / "rules.md").read_text(encoding="utf-8")
+        recent = (self.memory_dir / "projects" / "example-project" / "recent.md").read_text(encoding="utf-8")
+        self.assertIn("No fallback should exist", rules)
+        self.assertNotIn("No fallback should exist", recent)
 
     def test_memory_generation_respects_plain_markdown_renderer_flags(self) -> None:
         payload = json.loads(self.product_config.read_text(encoding="utf-8"))

@@ -256,11 +256,67 @@ class IngestTests(unittest.TestCase):
         record = self.read_jsonl(self.evidence_dir / "logs" / f"{source_id}.jsonl")[0]
         self.assertEqual(record["project_hint"], "wikimemory")
 
+    def test_project_aliases_use_prefixed_path_mentions_before_session_hint(self) -> None:
+        self.init_git_project()
+        payload = default_product_config(self.project_root).to_dict()
+        payload["project_sources"][0]["project_root"] = str(self.project_root)
+        payload["project_aliases"] = [
+            {"slug": "wikimemory", "aliases": ["WikiMemory"]},
+            {"slug": "ai-trader", "aliases": ["AITrader", "ai-trader"]},
+        ]
+        self.product_config.write_text(json.dumps(payload, indent=2), encoding="utf-8")
+        source_id = "source-mixed"
+        (self.normalized_dir / "sources" / source_id).mkdir(parents=True)
+        (self.normalized_dir / "sources" / source_id / "session.json").write_text(
+            json.dumps({"source_id": source_id, "session_meta_fields": {"cwd": r"C:\Users\Fabio\Projects\AITrader"}}),
+            encoding="utf-8",
+        )
+        event_payload = {
+            "event_id": f"{source_id}:1",
+            "source_id": source_id,
+            "source_line_no": 1,
+            "source_byte_start": 0,
+            "source_byte_end": 10,
+            "event_digest": source_id,
+            "canonical_kind": "response_item.message",
+            "outer_type": "response_item",
+            "payload_type": "message",
+            "role": "user",
+            "timestamp": "2026-04-18T00:00:00Z",
+            "text_surface_truncated": False,
+            "text_surfaces": [
+                {
+                    "path": "payload.content[0].text",
+                    "text": "Open tabs:\n- workflow-rules.json: WikiMemory/wiki/_meta/pages/global/workflow-rules.json\n\nFix the wiki memory output.",
+                }
+            ],
+        }
+        (self.normalized_dir / "sources" / source_id / "events.jsonl").write_text(
+            json.dumps(event_payload) + "\n",
+            encoding="utf-8",
+        )
+
+        result = run_ingest(
+            product_config_path=self.product_config,
+            state_dir=self.state_dir,
+            normalized_dir=self.normalized_dir,
+            evidence_dir=self.evidence_dir,
+            audits_dir=self.audits_dir,
+        )
+
+        self.assertTrue(result.report.success)
+        record = self.read_jsonl(self.evidence_dir / "logs" / f"{source_id}.jsonl")[0]
+        self.assertEqual(record["project_hint"], "wikimemory")
+
     def test_project_delta_ignores_generated_and_temp_paths(self) -> None:
         self.init_git_project()
         payload = default_product_config(self.project_root).to_dict()
         payload["project_sources"][0]["project_root"] = str(self.project_root)
         self.product_config.write_text(json.dumps(payload, indent=2), encoding="utf-8")
+        (self.project_root / "README.md").write_text(
+            "# Example Project\n\nExample Project turns raw logs into compact memory files.\n",
+            encoding="utf-8",
+        )
         (self.project_root / ".tmp").mkdir()
         (self.project_root / ".tmp" / "scratch.md").write_text("temp", encoding="utf-8")
         (self.project_root / "memory").mkdir()
@@ -280,6 +336,7 @@ class IngestTests(unittest.TestCase):
         texts = [surface["text"] for record in records for surface in record.get("content_surfaces", [])]
         self.assertTrue(any("src.py" in text for text in texts))
         self.assertFalse(any(".tmp" in text or "memory/generated.md" in text for text in texts))
+        self.assertTrue(any(record["evidence_type"] == "project_overview_file" for record in records))
 
     def test_llm_project_routing_rewrites_unresolved_source_records(self) -> None:
         self.init_git_project()

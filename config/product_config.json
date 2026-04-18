@@ -36,7 +36,7 @@
   "project_aliases": [
     {
       "slug": "wikimemory",
-      "aliases": ["WikiMemory", "wikimemory"]
+      "aliases": ["WikiMemory", "wikimemory", "memory-system", "memory system"]
     },
     {
       "slug": "open-brain",

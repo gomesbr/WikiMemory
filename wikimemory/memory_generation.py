@@ -24,12 +24,12 @@ FIRE = "\U0001f525"
 GEAR = "\u2699\ufe0f"
 USER_RULE_PATTERN = re.compile(r"\b(?:add this to global rules|global rule)\b", re.IGNORECASE)
 GLOBAL_OPERATING_RULE_PATTERN = re.compile(
-    r"\b(?:narrate your process|step commentary|short updates|response style|token limits|ask for it|outside the plan|real data|github|git|api key|always add it|do not ask|don't ask)\b",
+    r"\b(?:narrate your process|step commentary|short updates|response style|token limits|explanations?|explanation texts|wasting tokens|concise|ask for it|outside the plan|real data|github|git|api key|always add it|do not ask|don't ask)\b",
     re.IGNORECASE,
 )
-DIRECTIVE_PATTERN = re.compile(r"^(?:always\b|never\b|do not\b|don't\b|must\b)", re.IGNORECASE)
+DIRECTIVE_PATTERN = re.compile(r"^(?:always\b|never\b|do not\b|don't\b|must\b|stop\b)", re.IGNORECASE)
 PROJECT_RULE_PATTERN = re.compile(
-    r"^(?:add this to project rules:?|project rule:?|for this project,?|always\b|never\b|do not\b|don't\b|must\b|nothing\b.*\bshould\b|the .{0,80}\balways\b)",
+    r"^(?:add this to project rules:?|project rule:?|for this project,?|always\b|never\b|do not\b|don't\b|must\b|no\b.{0,80}\bshould\b|nothing\b.*\bshould\b|the .{0,80}\balways\b)",
     re.IGNORECASE,
 )
 PROJECT_SUMMARY_PATTERN = re.compile(
@@ -47,7 +47,7 @@ RUNTIME_LOCAL_PATTERN = re.compile(
     re.IGNORECASE,
 )
 RECENT_NOISE_PATTERN = re.compile(
-    r"(?:single prompt to codex|copy/paste|important operating style|you are helping redesign|context from my ide setup|github\.com/|what is next\??$|^pending\b|^are you\b|^recommendation\b|^push to git\b|^commit\b|api key|env file|\.env|download obsidian|can you see|test it$|sample log file|give status|full run|move storage to d|plan the change|github app|how .*space wise|loop until all is done)",
+    r"(?:single prompt to codex|copy/paste|important operating style|you are helping redesign|context from my ide setup|github\.com/|what is next\??|whats next\??|what should you focus|good enough to go to next phase|^pending\b|^are you\b|^recommendation\b|^push to git\b|^commit\b|commit and merge|api key|env file|\.env|download obsidian|can you see|test it$|sample log file|give status|full run|full load|move storage to d|plan the change|github app|github app|inside cursor|how do i run this|how .*space wise|loop until all is done|where .* located\??$|create the plan$|^ok,? create the plan$|\bplan (?:it|phase|next phase)\b|^next$|^go$|^continue$|^correct\.? fix it$|^done,? check$|^in node\.?js$|installed,? variables|send me a text msg|go and do a full .*analysis|read .* and tell me|implements? all remaining steps|should have a llm second pass|readme file with more details|notices?:\s*\d+|stop wasting tokens|do the work,? don'?t explain)",
     re.IGNORECASE,
 )
 AGENT_DURABLE_EXCLUDED_ACTORS = {"assistant", "agent_reasoning", "tool", "unknown", "developer", "system"}
@@ -122,6 +122,7 @@ def run_memory_generation(
             evidence_records,
             project_filter,
             require_inferred_rule_review=config.policies.require_confirmation_for_inferred_rule_promotion,
+            unresolved_project=config.project_routing.unresolved_project,
         )
         memory_items = apply_review_decisions(memory_items, state_dir)
         memory_items = prune_stale_recent_items(memory_items)
@@ -179,6 +180,7 @@ def build_memory_items(
     records: list[dict[str, object]],
     project_filter: set[str],
     require_inferred_rule_review: bool = True,
+    unresolved_project: str = "projects",
 ) -> list[dict[str, object]]:
     items: dict[str, dict[str, object]] = {}
     for record in records:
@@ -191,6 +193,8 @@ def build_memory_items(
             continue
         candidates = classify_evidence(record, text, actor_type, project, require_inferred_rule_review)
         for candidate in candidates:
+            if candidate.get("scope") == "project" and project == slugify(unresolved_project):
+                continue
             if not str(candidate.get("statement") or "").strip():
                 continue
             item_id = candidate["item_id"]
@@ -212,6 +216,10 @@ def classify_evidence(
     evidence_type = str(record.get("evidence_type") or "")
     if evidence_type == "git_head":
         items.append(make_item(record, "stable_project_summary", "project", project, "durable", "repeated", text))
+        return items
+    if evidence_type == "project_overview_file":
+        for clause in project_overview_clauses(text):
+            items.append(make_item(record, "stable_project_summary", "project", project, "durable", "explicit", clause))
         return items
     if evidence_type == "git_status_item":
         items.append(make_item(record, "recent_project_state", "project", project, "recent", "candidate", text))
@@ -300,11 +308,15 @@ def make_item(
 
 
 def merge_item(target: dict[str, object], incoming: dict[str, object]) -> None:
-    target["evidence_ids"] = sorted(set(target["evidence_ids"]) | set(incoming["evidence_ids"]))
+    incoming_fingerprints = evidence_fingerprints(incoming)
+    target_fingerprints = set(evidence_fingerprints(target))
+    duplicate_same_message = bool(incoming_fingerprints & target_fingerprints)
+    if not duplicate_same_message:
+        target["evidence_ids"] = sorted(set(target["evidence_ids"]) | set(incoming["evidence_ids"]))
     target["source_actor_types"] = sorted(set(target["source_actor_types"]) | set(incoming["source_actor_types"]))
     existing_refs = list(target.get("provenance_refs", []))
     for ref in incoming.get("provenance_refs", []):
-        if ref not in existing_refs:
+        if ref not in existing_refs and not duplicate_same_message:
             existing_refs.append(ref)
     target["provenance_refs"] = existing_refs
     target["first_seen_at"] = earliest_timestamp(target.get("first_seen_at"), incoming.get("first_seen_at"))
@@ -335,6 +347,29 @@ def latest_timestamp(left: object, right: object) -> object:
     if not right:
         return left
     return max(str(left), str(right))
+
+
+def evidence_fingerprints(item: dict[str, object]) -> set[str]:
+    statement = normalize_statement(str(item.get("statement") or "")).lower()
+    fingerprints: set[str] = set()
+    for ref in item.get("provenance_refs", []):
+        if not isinstance(ref, dict):
+            continue
+        fingerprints.add(
+            "|".join(
+                [
+                    str(ref.get("source_id") or ""),
+                    evidence_time_bucket(item.get("last_seen_at") or item.get("first_seen_at") or ""),
+                    statement,
+                ]
+            )
+        )
+    return fingerprints
+
+
+def evidence_time_bucket(value: object) -> str:
+    text = str(value or "")
+    return text.split(".", 1)[0]
 
 
 def render_memory_files(memory_dir: Path, items: list[dict[str, object]], markdown_output: MarkdownOutputConfig) -> list[Path]:
@@ -402,15 +437,19 @@ def render_project_file(
 
 def render_project_summary(project: str, items: list[dict[str, object]], markdown_output: MarkdownOutputConfig) -> list[str]:
     title = f"{display_project(project)} - Project Memory"
+    stable_items = sorted(
+        [item for item in items if not is_git_head_statement(str(item.get("statement") or ""))],
+        key=project_summary_rank,
+    )
     lines = frontmatter("project-memory", project, (f"project/{project}", "memory"), markdown_output)
     lines.extend([f"# {BRAIN} {title}", ""])
-    purpose_items = items[:3]
+    purpose_items = stable_items[:3]
     append_section(lines, "PURPOSE", item_statements(purpose_items) or ["Short project purpose not extracted yet."])
-    append_section(lines, "CORE COMPONENTS", select_by_terms(items, ("component", "module", "pipeline", "adapter", "renderer", "config")) or ["No stable component list extracted yet."])
-    append_section(lines, "CURRENT ARCHITECTURE", select_by_terms(items, ("architecture", "input", "process", "storage", "output", "pipeline")) or item_statements(items[3:6]) or ["No stable architecture summary extracted yet."])
-    append_section(lines, "DESIGN PRINCIPLES", select_by_terms(items, ("deterministic", "traceable", "modular", "provenance", "incremental")) or ["No stable design principles extracted yet."])
-    append_section(lines, "KEY CONSTRAINTS", select_by_terms(items, ("constraint", "must", "do not", "never", "only")) or ["No stable constraints extracted yet."])
-    append_section(lines, "OPEN PROBLEMS", select_by_terms(items, ("open", "problem", "blocked", "pending", "todo")) or ["No open project-level problems extracted yet."])
+    append_section(lines, "CORE COMPONENTS", select_by_terms(stable_items, ("component", "module", "pipeline", "adapter", "renderer", "config")) or ["No stable component list extracted yet."])
+    append_section(lines, "CURRENT ARCHITECTURE", select_by_terms(stable_items, ("architecture", "input", "process", "storage", "output", "pipeline")) or item_statements(stable_items[3:6]) or ["No stable architecture summary extracted yet."])
+    append_section(lines, "DESIGN PRINCIPLES", select_by_terms(stable_items, ("deterministic", "traceable", "modular", "provenance", "incremental")) or ["No stable design principles extracted yet."])
+    append_section(lines, "KEY CONSTRAINTS", select_by_terms(stable_items, ("constraint", "must", "do not", "never", "only")) or ["No stable constraints extracted yet."])
+    append_section(lines, "OPEN PROBLEMS", select_by_terms(stable_items, ("open", "problem", "blocked", "pending", "todo")) or ["No open project-level problems extracted yet."])
     append_related(lines, project, markdown_output)
     return lines
 
@@ -702,6 +741,45 @@ def candidate_clauses(text: str) -> list[str]:
     return clauses[:8]
 
 
+def project_overview_clauses(text: str) -> list[str]:
+    clauses: list[str] = []
+    pending_prefix: str | None = None
+    pending_items: list[str] = []
+    for line in text.splitlines():
+        raw = line.strip()
+        is_bullet = raw.startswith("- ")
+        clause = clean_clause(raw.lstrip("#").removeprefix("- ").strip())
+        if not is_meaningful_clause(clause):
+            continue
+        if clause.lower() in {"wikimemory", "why this exists", "end-to-end pipeline"}:
+            continue
+        if pending_prefix and is_bullet:
+            pending_items.append(clause.rstrip("."))
+            continue
+        if pending_prefix:
+            clauses.append(compose_colon_clause(pending_prefix, pending_items))
+            pending_prefix = None
+            pending_items = []
+            if len(clauses) >= 8:
+                break
+        if clause.endswith(":"):
+            pending_prefix = clause.rstrip(":")
+            pending_items = []
+            continue
+        clauses.append(clause)
+        if len(clauses) >= 8:
+            break
+    if pending_prefix and len(clauses) < 8:
+        clauses.append(compose_colon_clause(pending_prefix, pending_items))
+    return clauses
+
+
+def compose_colon_clause(prefix: str, items: list[str]) -> str:
+    if not items:
+        return prefix
+    return normalize_statement(f"{prefix} {', '.join(items[:6])}.")
+
+
 def clean_clause(text: str) -> str:
     clause = text.strip(" -\t\r\n\"'`")
     clause = re.sub(r"\bstrep by step\b", "step-by-step", clause, flags=re.IGNORECASE)
@@ -777,6 +855,23 @@ def normalize_statement(text: str) -> str:
     if len(text) > 500:
         text = text[:497].rstrip() + "..."
     return text
+
+
+def is_git_head_statement(text: str) -> bool:
+    return text.strip().startswith("branch=")
+
+
+def project_summary_rank(item: dict[str, object]) -> tuple[int, str]:
+    text = str(item.get("statement") or "").strip().lower()
+    if re.match(r"^\d+\.", text):
+        return (8, text)
+    if re.search(r"\b(?:is a|is an|its job is|designed to|source of truth|solves that)\b", text):
+        return (0, text)
+    if re.search(r"\b(?:pipeline|architecture|input|output|component|adapter|renderer|config)\b", text):
+        return (1, text)
+    if re.search(r"\b(?:goal is|purpose|built to|intended to)\b", text):
+        return (2, text)
+    return (4, text)
 
 
 def stable_id(*parts: object) -> str:

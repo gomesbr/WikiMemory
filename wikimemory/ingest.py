@@ -284,6 +284,7 @@ def git_worktree_records(project_root: Path, project_slug: str) -> list[dict[str
             "metadata": {"changed_file_count": len(changed_files), "status_count": len(status_lines)},
         }
     )
+    records.extend(project_overview_records(project_root, project_slug, now))
     for index, line in enumerate(status_lines, start=1):
         status = line[:2].strip() or "?"
         path = line[2:].strip()
@@ -305,6 +306,53 @@ def git_worktree_records(project_root: Path, project_slug: str) -> list[dict[str
             }
         )
     return records
+
+
+def project_overview_records(project_root: Path, project_slug: str, timestamp: str) -> list[dict[str, object]]:
+    records: list[dict[str, object]] = []
+    for relative_path in ("README.md", "readme.md"):
+        path = project_root / relative_path
+        if not path.exists():
+            continue
+        text = project_overview_text(path)
+        if not text:
+            continue
+        records.append(
+            {
+                "evidence_id": stable_id("project_overview", str(project_root), relative_path, hashlib.sha256(text.encode("utf-8")).hexdigest()),
+                "ingest_schema_version": INGEST_SCHEMA_VERSION,
+                "evidence_type": "project_overview_file",
+                "source_adapter": "git_worktree",
+                "source_id": project_slug,
+                "project_hint": project_slug,
+                "actor_type": "project_delta",
+                "timestamp": timestamp,
+                "content_surfaces": [{"path": relative_path, "text": text}],
+                "provenance": {"project_root": str(project_root), "path": relative_path},
+                "metadata": {"path": relative_path},
+            }
+        )
+        break
+    return records
+
+
+def project_overview_text(path: Path) -> str:
+    try:
+        lines = path.read_text(encoding="utf-8-sig").splitlines()
+    except UnicodeDecodeError:
+        return ""
+    selected: list[str] = []
+    for line in lines:
+        stripped = line.strip()
+        if not stripped:
+            if selected:
+                selected.append("")
+            continue
+        if stripped.startswith("#") or stripped.startswith("- ") or stripped[0].isdigit() or selected:
+            selected.append(stripped)
+        if len("\n".join(selected)) >= 1200:
+            break
+    return "\n".join(selected).strip()[:1200]
 
 
 def is_ignored_project_delta_path(path: str) -> bool:
@@ -372,7 +420,7 @@ def resolve_project_hint_from_text(text: str, config: ProductConfig) -> str | No
     for alias_config in config.project_aliases:
         for alias in alias_config.aliases:
             alias_slug = slugify(alias)
-            if alias_slug in parts or f"/{alias_slug}/" in f"/{joined}/":
+            if alias_slug in parts or f"/{alias_slug}/" in f"/{joined}/" or alias_slug in joined:
                 return alias_config.slug
     return None
 
