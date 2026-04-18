@@ -1,0 +1,215 @@
+{
+  "bucket": "current-state",
+  "citations": [
+    {
+      "citation_id": "claim-1",
+      "item_keys": [
+        "ai-scientist:current_state:b1957aca678312a2"
+      ],
+      "kind": "synthesized_claim",
+      "label": "claim-1",
+      "provenance_refs": [
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:43654",
+          "end_line_no": 43654,
+          "end_timestamp": "2026-03-11T20:15:25.942Z",
+          "rule_ids": [
+            "current_state.explicit"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:5423",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:43654",
+          "start_line_no": 43654,
+          "start_timestamp": "2026-03-11T20:15:25.942Z",
+          "statement": "Right now the system is doing the correct thing:"
+        }
+      ]
+    },
+    {
+      "citation_id": "claim-2",
+      "item_keys": [
+        "ai-scientist:current_state:b1957aca678312a2"
+      ],
+      "kind": "synthesized_claim",
+      "label": "claim-2",
+      "provenance_refs": [
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:43654",
+          "end_line_no": 43654,
+          "end_timestamp": "2026-03-11T20:15:25.942Z",
+          "rule_ids": [
+            "current_state.explicit"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:5423",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:43654",
+          "start_line_no": 43654,
+          "start_timestamp": "2026-03-11T20:15:25.942Z",
+          "statement": "Right now the system is doing the correct thing:"
+        }
+      ]
+    },
+    {
+      "citation_id": "item-current_state-1",
+      "item_keys": [
+        "ai-scientist:current_state:b1957aca678312a2"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-current_state-1",
+      "provenance_refs": [
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:43654",
+          "end_line_no": 43654,
+          "end_timestamp": "2026-03-11T20:15:25.942Z",
+          "rule_ids": [
+            "current_state.explicit"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:5423",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:43654",
+          "start_line_no": 43654,
+          "start_timestamp": "2026-03-11T20:15:25.942Z",
+          "statement": "Right now the system is doing the correct thing:"
+        }
+      ]
+    }
+  ],
+  "domain": "ai-scientist",
+  "input_item_keys": [
+    "ai-scientist:current_state:b1957aca678312a2"
+  ],
+  "page_id": "projects/ai-scientist/current-state",
+  "page_type": "bucket_page",
+  "rendered_page_metadata": {
+    "claim_count": 2,
+    "conflict_count": 0,
+    "related_domains": [],
+    "related_pages": [
+      {
+        "page_key": "index",
+        "title": "AI Scientist",
+        "wikilink": "[[projects/ai-scientist/index|AI Scientist]]"
+      },
+      {
+        "page_key": "communication-preferences",
+        "title": "AI Scientist - Communication Preferences",
+        "wikilink": "[[projects/ai-scientist/communication-preferences|AI Scientist - Communication Preferences]]"
+      },
+      {
+        "page_key": "workflow-rules",
+        "title": "AI Scientist - Workflow Rules",
+        "wikilink": "[[projects/ai-scientist/workflow-rules|AI Scientist - Workflow Rules]]"
+      },
+      {
+        "page_key": "architecture",
+        "title": "AI Scientist - Architecture",
+        "wikilink": "[[projects/ai-scientist/architecture|AI Scientist - Architecture]]"
+      },
+      {
+        "page_key": "code-map",
+        "title": "AI Scientist - Code Map",
+        "wikilink": "[[projects/ai-scientist/code-map|AI Scientist - Code Map]]"
+      },
+      {
+        "page_key": "tasks",
+        "title": "AI Scientist - Tasks",
+        "wikilink": "[[projects/ai-scientist/tasks|AI Scientist - Tasks]]"
+      },
+      {
+        "page_key": "outcomes",
+        "title": "AI Scientist - Outcomes",
+        "wikilink": "[[projects/ai-scientist/outcomes|AI Scientist - Outcomes]]"
+      },
+      {
+        "page_key": "failures",
+        "title": "AI Scientist - Failures",
+        "wikilink": "[[projects/ai-scientist/failures|AI Scientist - Failures]]"
+      },
+      {
+        "page_key": "decisions",
+        "title": "AI Scientist - Decisions",
+        "wikilink": "[[projects/ai-scientist/decisions|AI Scientist - Decisions]]"
+      },
+      {
+        "page_key": "next-steps",
+        "title": "AI Scientist - Next Steps",
+        "wikilink": "[[projects/ai-scientist/next-steps|AI Scientist - Next Steps]]"
+      },
+      {
+        "page_key": "open-questions",
+        "title": "AI Scientist - Open Questions",
+        "wikilink": "[[projects/ai-scientist/open-questions|AI Scientist - Open Questions]]"
+      }
+    ],
+    "relative_page_path": "projects/ai-scientist/current-state.md",
+    "source_count": 1,
+    "title": "AI Scientist - Current State"
+  },
+  "renderer": "obsidian_markdown",
+  "synthesized_claims": [
+    {
+      "claim_id": "claim-1",
+      "confidence": "strong",
+      "latent_type": "current_state_synthesis",
+      "provenance_refs": [
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:43654",
+          "end_line_no": 43654,
+          "end_timestamp": "2026-03-11T20:15:25.942Z",
+          "rule_ids": [
+            "current_state.explicit"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:5423",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:43654",
+          "start_line_no": 43654,
+          "start_timestamp": "2026-03-11T20:15:25.942Z",
+          "statement": "Right now the system is doing the correct thing:"
+        }
+      ],
+      "section_id": "summary",
+      "supporting_item_ids": [
+        "ai-scientist:current_state:b1957aca678312a2"
+      ],
+      "text": "The system is currently performing correctly."
+    },
+    {
+      "claim_id": "claim-2",
+      "confidence": "strong",
+      "latent_type": "current_state_synthesis",
+      "provenance_refs": [
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:43654",
+          "end_line_no": 43654,
+          "end_timestamp": "2026-03-11T20:15:25.942Z",
+          "rule_ids": [
+            "current_state.explicit"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:5423",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:43654",
+          "start_line_no": 43654,
+          "start_timestamp": "2026-03-11T20:15:25.942Z",
+          "statement": "Right now the system is doing the correct thing:"
+        }
+      ],
+      "section_id": "current_state",
+      "supporting_item_ids": [
+        "ai-scientist:current_state:b1957aca678312a2"
+      ],
+      "text": "The system is currently performing correctly."
+    }
+  ],
+  "versions": {
+    "page_config_version": 2,
+    "renderer_version": 2,
+    "synthesis_prompt_version": 2,
+    "synthesis_schema_version": 1,
+    "wiki_schema_version": 2
+  }
+}

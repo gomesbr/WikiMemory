@@ -1,0 +1,12 @@
+{
+  "schema_version": 1,
+  "roots": [
+    {
+      "root_alias": "codex_sessions",
+      "absolute_path": "${WIKIMEMORY_CODEX_SESSIONS_ROOT:-C:\\Users\\Fabio\\.codex\\sessions}",
+      "enabled": true,
+      "recursive": true,
+      "include_glob": "**/*.jsonl"
+    }
+  ]
+}

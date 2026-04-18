@@ -1,0 +1,10 @@
+[project]
+name = "wikimemory"
+version = "0.1.0"
+description = "Discovery and indexing for external Codex session logs"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = []
+
+[project.scripts]
+wikimemory = "wikimemory.cli:main"

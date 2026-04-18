@@ -1,0 +1,3423 @@
+{
+  "bucket": "open-questions",
+  "citations": [
+    {
+      "citation_id": "claim-1",
+      "item_keys": [
+        "open-brain:open_question:92bc866d058a855d",
+        "open-brain:open_question:130d625e58d39f19",
+        "open-brain:open_question:b514769aa9a3ea08"
+      ],
+      "kind": "synthesized_claim",
+      "label": "claim-1",
+      "provenance_refs": [
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:43711",
+          "end_line_no": 43711,
+          "end_timestamp": "2026-03-11T20:26:48.841Z",
+          "rule_ids": [
+            "open_question.explicit"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:5433",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:43710",
+          "start_line_no": 43710,
+          "start_timestamp": "2026-03-11T20:26:48.840Z",
+          "statement": "- Explain how the change generalizes beyond the immediate example."
+        },
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:44562",
+          "end_line_no": 44562,
+          "end_timestamp": "2026-03-12T00:30:25.279Z",
+          "rule_ids": [
+            "open_question.explicit"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:5625",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:44561",
+          "start_line_no": 44561,
+          "start_timestamp": "2026-03-12T00:30:25.278Z",
+          "statement": "- Explain how the change generalizes beyond the immediate example."
+        },
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:57251",
+          "end_line_no": 57251,
+          "end_timestamp": "2026-03-13T12:08:42.869Z",
+          "rule_ids": [
+            "open_question.explicit"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:8048",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:57250",
+          "start_line_no": 57250,
+          "start_timestamp": "2026-03-13T12:08:42.868Z",
+          "statement": "- Explain how the change generalizes beyond the immediate example."
+        },
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:43711",
+          "end_line_no": 43711,
+          "end_timestamp": "2026-03-11T20:26:48.841Z",
+          "rule_ids": [
+            "open_question.explicit"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:5433",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:43710",
+          "start_line_no": 43710,
+          "start_timestamp": "2026-03-11T20:26:48.840Z",
+          "statement": "- Show how evidence links to actors, timestamps, and context."
+        },
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:44562",
+          "end_line_no": 44562,
+          "end_timestamp": "2026-03-12T00:30:25.279Z",
+          "rule_ids": [
+            "open_question.explicit"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:5625",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:44561",
+          "start_line_no": 44561,
+          "start_timestamp": "2026-03-12T00:30:25.278Z",
+          "statement": "- Show how evidence links to actors, timestamps, and context."
+        },
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:57251",
+          "end_line_no": 57251,
+          "end_timestamp": "2026-03-13T12:08:42.869Z",
+          "rule_ids": [
+            "open_question.explicit"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:8048",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:57250",
+          "start_line_no": 57250,
+          "start_timestamp": "2026-03-13T12:08:42.868Z",
+          "statement": "- Show how evidence links to actors, timestamps, and context."
+        },
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:43711",
+          "end_line_no": 43711,
+          "end_timestamp": "2026-03-11T20:26:48.841Z",
+          "rule_ids": [
+            "open_question.explicit"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:5433",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:43710",
+          "start_line_no": 43710,
+          "start_timestamp": "2026-03-11T20:26:48.840Z",
+          "statement": "- Solve the class of problem, not just the exact example shown."
+        },
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:44562",
+          "end_line_no": 44562,
+          "end_timestamp": "2026-03-12T00:30:25.279Z",
+          "rule_ids": [
+            "open_question.explicit"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:5625",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:44561",
+          "start_line_no": 44561,
+          "start_timestamp": "2026-03-12T00:30:25.278Z",
+          "statement": "- Solve the class of problem, not just the exact example shown."
+        },
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:57251",
+          "end_line_no": 57251,
+          "end_timestamp": "2026-03-13T12:08:42.869Z",
+          "rule_ids": [
+            "open_question.explicit"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:8048",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:57250",
+          "start_line_no": 57250,
+          "start_timestamp": "2026-03-13T12:08:42.868Z",
+          "statement": "- Solve the class of problem, not just the exact example shown."
+        }
+      ]
+    },
+    {
+      "citation_id": "claim-2",
+      "item_keys": [
+        "open-brain:open_question:6053ddf7a9339635",
+        "open-brain:open_question:24e115fe8f24c8a4"
+      ],
+      "kind": "synthesized_claim",
+      "label": "claim-2",
+      "provenance_refs": [
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:980",
+          "end_line_no": 980,
+          "end_timestamp": "2026-04-13T00:58:06.926Z",
+          "rule_ids": [
+            "open_question.explicit"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:220",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:977",
+          "start_line_no": 977,
+          "start_timestamp": "2026-04-13T00:53:17.296Z",
+          "statement": "For contradictory extracted items, should Phase 5:"
+        },
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:980",
+          "end_line_no": 980,
+          "end_timestamp": "2026-04-13T00:58:06.926Z",
+          "rule_ids": [
+            "open_question.explicit"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:220",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:977",
+          "start_line_no": 977,
+          "start_timestamp": "2026-04-13T00:53:17.296Z",
+          "statement": "For Phase 5, the main implication is that extracted items should carry stable domain/item identifiers and future page-target hints cleanly enough that wiki synthesis can map them into Obsidian pages later."
+        }
+      ]
+    },
+    {
+      "citation_id": "claim-3",
+      "item_keys": [
+        "open-brain:open_question:6053ddf7a9339635"
+      ],
+      "kind": "synthesized_claim",
+      "label": "claim-3",
+      "provenance_refs": [
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:980",
+          "end_line_no": 980,
+          "end_timestamp": "2026-04-13T00:58:06.926Z",
+          "rule_ids": [
+            "open_question.explicit"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:220",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:977",
+          "start_line_no": 977,
+          "start_timestamp": "2026-04-13T00:53:17.296Z",
+          "statement": "For contradictory extracted items, should Phase 5:"
+        }
+      ]
+    },
+    {
+      "citation_id": "claim-4",
+      "item_keys": [
+        "open-brain:open_question:92bc866d058a855d"
+      ],
+      "kind": "synthesized_claim",
+      "label": "claim-4",
+      "provenance_refs": [
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:43711",
+          "end_line_no": 43711,
+          "end_timestamp": "2026-03-11T20:26:48.841Z",
+          "rule_ids": [
+            "open_question.explicit"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:5433",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:43710",
+          "start_line_no": 43710,
+          "start_timestamp": "2026-03-11T20:26:48.840Z",
+          "statement": "- Explain how the change generalizes beyond the immediate example."
+        },
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:44562",
+          "end_line_no": 44562,
+          "end_timestamp": "2026-03-12T00:30:25.279Z",
+          "rule_ids": [
+            "open_question.explicit"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:5625",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:44561",
+          "start_line_no": 44561,
+          "start_timestamp": "2026-03-12T00:30:25.278Z",
+          "statement": "- Explain how the change generalizes beyond the immediate example."
+        },
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:57251",
+          "end_line_no": 57251,
+          "end_timestamp": "2026-03-13T12:08:42.869Z",
+          "rule_ids": [
+            "open_question.explicit"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:8048",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:57250",
+          "start_line_no": 57250,
+          "start_timestamp": "2026-03-13T12:08:42.868Z",
+          "statement": "- Explain how the change generalizes beyond the immediate example."
+        }
+      ]
+    },
+    {
+      "citation_id": "claim-5",
+      "item_keys": [
+        "open-brain:open_question:b514769aa9a3ea08"
+      ],
+      "kind": "synthesized_claim",
+      "label": "claim-5",
+      "provenance_refs": [
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:43711",
+          "end_line_no": 43711,
+          "end_timestamp": "2026-03-11T20:26:48.841Z",
+          "rule_ids": [
+            "open_question.explicit"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:5433",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:43710",
+          "start_line_no": 43710,
+          "start_timestamp": "2026-03-11T20:26:48.840Z",
+          "statement": "- Solve the class of problem, not just the exact example shown."
+        },
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:44562",
+          "end_line_no": 44562,
+          "end_timestamp": "2026-03-12T00:30:25.279Z",
+          "rule_ids": [
+            "open_question.explicit"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:5625",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:44561",
+          "start_line_no": 44561,
+          "start_timestamp": "2026-03-12T00:30:25.278Z",
+          "statement": "- Solve the class of problem, not just the exact example shown."
+        },
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:57251",
+          "end_line_no": 57251,
+          "end_timestamp": "2026-03-13T12:08:42.869Z",
+          "rule_ids": [
+            "open_question.explicit"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:8048",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:57250",
+          "start_line_no": 57250,
+          "start_timestamp": "2026-03-13T12:08:42.868Z",
+          "statement": "- Solve the class of problem, not just the exact example shown."
+        }
+      ]
+    },
+    {
+      "citation_id": "item-open_question-1",
+      "item_keys": [
+        "open-brain:open_question:cf8bf799b7e5fe90"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-open_question-1",
+      "provenance_refs": [
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:34344",
+          "end_line_no": 34344,
+          "end_timestamp": "2026-03-09T20:19:17.599Z",
+          "rule_ids": [
+            "open_question.explicit"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:3848",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:34340",
+          "start_line_no": 34340,
+          "start_timestamp": "2026-03-09T20:10:21.036Z",
+          "statement": "should"
+        },
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:36087",
+          "end_line_no": 36087,
+          "end_timestamp": "2026-03-10T03:22:04.704Z",
+          "rule_ids": [
+            "open_question.explicit"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:4082",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:36087",
+          "start_line_no": 36087,
+          "start_timestamp": "2026-03-10T03:22:04.704Z",
+          "statement": "should"
+        },
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:36091",
+          "end_line_no": 36091,
+          "end_timestamp": "2026-03-10T03:40:52.292Z",
+          "rule_ids": [
+            "open_question.explicit"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:4083",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:36088",
+          "start_line_no": 36088,
+          "start_timestamp": "2026-03-10T03:22:04.705Z",
+          "statement": "should"
+        }
+      ]
+    },
+    {
+      "citation_id": "item-open_question-2",
+      "item_keys": [
+        "open-brain:open_question:ff4950c23e2f1c40"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-open_question-2",
+      "provenance_refs": [
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:42868",
+          "end_line_no": 42868,
+          "end_timestamp": "2026-03-11T11:56:40.998Z",
+          "rule_ids": [
+            "open_question.explicit"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:5270",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:42868",
+          "start_line_no": 42868,
+          "start_timestamp": "2026-03-11T11:56:40.998Z",
+          "statement": "Why:"
+        },
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:42873",
+          "end_line_no": 42873,
+          "end_timestamp": "2026-03-11T12:00:34.540Z",
+          "rule_ids": [
+            "open_question.explicit"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:5271",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:42869",
+          "start_line_no": 42869,
+          "start_timestamp": "2026-03-11T11:56:43.521Z",
+          "statement": "Why:"
+        },
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:43326",
+          "end_line_no": 43326,
+          "end_timestamp": "2026-03-11T19:29:20.231Z",
+          "rule_ids": [
+            "open_question.explicit"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:5355",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:43321",
+          "start_line_no": 43321,
+          "start_timestamp": "2026-03-11T18:04:16.947Z",
+          "statement": "Why:"
+        }
+      ]
+    },
+    {
+      "citation_id": "item-open_question-3",
+      "item_keys": [
+        "open-brain:open_question:92bc866d058a855d"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-open_question-3",
+      "provenance_refs": [
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:43711",
+          "end_line_no": 43711,
+          "end_timestamp": "2026-03-11T20:26:48.841Z",
+          "rule_ids": [
+            "open_question.explicit"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:5433",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:43710",
+          "start_line_no": 43710,
+          "start_timestamp": "2026-03-11T20:26:48.840Z",
+          "statement": "- Explain how the change generalizes beyond the immediate example."
+        },
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:44562",
+          "end_line_no": 44562,
+          "end_timestamp": "2026-03-12T00:30:25.279Z",
+          "rule_ids": [
+            "open_question.explicit"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:5625",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:44561",
+          "start_line_no": 44561,
+          "start_timestamp": "2026-03-12T00:30:25.278Z",
+          "statement": "- Explain how the change generalizes beyond the immediate example."
+        },
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:57251",
+          "end_line_no": 57251,
+          "end_timestamp": "2026-03-13T12:08:42.869Z",
+          "rule_ids": [
+            "open_question.explicit"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:8048",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:57250",
+          "start_line_no": 57250,
+          "start_timestamp": "2026-03-13T12:08:42.868Z",
+          "statement": "- Explain how the change generalizes beyond the immediate example."
+        }
+      ]
+    },
+    {
+      "citation_id": "item-open_question-4",
+      "item_keys": [
+        "open-brain:open_question:130d625e58d39f19"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-open_question-4",
+      "provenance_refs": [
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:43711",
+          "end_line_no": 43711,
+          "end_timestamp": "2026-03-11T20:26:48.841Z",
+          "rule_ids": [
+            "open_question.explicit"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:5433",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:43710",
+          "start_line_no": 43710,
+          "start_timestamp": "2026-03-11T20:26:48.840Z",
+          "statement": "- Show how evidence links to actors, timestamps, and context."
+        },
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:44562",
+          "end_line_no": 44562,
+          "end_timestamp": "2026-03-12T00:30:25.279Z",
+          "rule_ids": [
+            "open_question.explicit"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:5625",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:44561",
+          "start_line_no": 44561,
+          "start_timestamp": "2026-03-12T00:30:25.278Z",
+          "statement": "- Show how evidence links to actors, timestamps, and context."
+        },
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:57251",
+          "end_line_no": 57251,
+          "end_timestamp": "2026-03-13T12:08:42.869Z",
+          "rule_ids": [
+            "open_question.explicit"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:8048",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:57250",
+          "start_line_no": 57250,
+          "start_timestamp": "2026-03-13T12:08:42.868Z",
+          "statement": "- Show how evidence links to actors, timestamps, and context."
+        }
+      ]
+    },
+    {
+      "citation_id": "item-open_question-5",
+      "item_keys": [
+        "open-brain:open_question:b514769aa9a3ea08"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-open_question-5",
+      "provenance_refs": [
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:43711",
+          "end_line_no": 43711,
+          "end_timestamp": "2026-03-11T20:26:48.841Z",
+          "rule_ids": [
+            "open_question.explicit"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:5433",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:43710",
+          "start_line_no": 43710,
+          "start_timestamp": "2026-03-11T20:26:48.840Z",
+          "statement": "- Solve the class of problem, not just the exact example shown."
+        },
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:44562",
+          "end_line_no": 44562,
+          "end_timestamp": "2026-03-12T00:30:25.279Z",
+          "rule_ids": [
+            "open_question.explicit"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:5625",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:44561",
+          "start_line_no": 44561,
+          "start_timestamp": "2026-03-12T00:30:25.278Z",
+          "statement": "- Solve the class of problem, not just the exact example shown."
+        },
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:57251",
+          "end_line_no": 57251,
+          "end_timestamp": "2026-03-13T12:08:42.869Z",
+          "rule_ids": [
+            "open_question.explicit"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:8048",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:57250",
+          "start_line_no": 57250,
+          "start_timestamp": "2026-03-13T12:08:42.868Z",
+          "statement": "- Solve the class of problem, not just the exact example shown."
+        }
+      ]
+    },
+    {
+      "citation_id": "item-open_question-6",
+      "item_keys": [
+        "open-brain:open_question:bbb3d6d51857ecc3"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-open_question-6",
+      "provenance_refs": [
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:5311",
+          "end_line_no": 5311,
+          "end_timestamp": "2026-03-03T17:38:51.636Z",
+          "rule_ids": [
+            "open_question.explicit"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:471",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:5307",
+          "start_line_no": 5307,
+          "start_timestamp": "2026-03-03T17:36:10.522Z",
+          "statement": "What changed:"
+        },
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:37232",
+          "end_line_no": 37232,
+          "end_timestamp": "2026-03-10T12:24:04.602Z",
+          "rule_ids": [
+            "open_question.explicit"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:4269",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:37227",
+          "start_line_no": 37227,
+          "start_timestamp": "2026-03-10T12:20:46.059Z",
+          "statement": "What changed:"
+        },
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:39147",
+          "end_line_no": 39147,
+          "end_timestamp": "2026-03-10T19:58:42.093Z",
+          "rule_ids": [
+            "open_question.explicit"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:4607",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:39147",
+          "start_line_no": 39147,
+          "start_timestamp": "2026-03-10T19:58:42.093Z",
+          "statement": "**What changed**"
+        }
+      ]
+    },
+    {
+      "citation_id": "item-open_question-7",
+      "item_keys": [
+        "open-brain:open_question:4bc9254901f4346f"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-open_question-7",
+      "provenance_refs": [
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:2926",
+          "end_line_no": 2926,
+          "end_timestamp": "2026-04-13T03:56:13.518Z",
+          "rule_ids": [
+            "open_question.explicit"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:594",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:2922",
+          "start_line_no": 2922,
+          "start_timestamp": "2026-04-13T03:53:24.289Z",
+          "statement": "- Phase 8 should be `python -m wikimemory audit`"
+        }
+      ]
+    },
+    {
+      "citation_id": "item-open_question-8",
+      "item_keys": [
+        "open-brain:open_question:d516a4306333ace4"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-open_question-8",
+      "provenance_refs": [
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:2607",
+          "end_line_no": 2607,
+          "end_timestamp": "2026-04-13T03:19:00.883Z",
+          "rule_ids": [
+            "open_question.explicit"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:530",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:2599",
+          "start_line_no": 2599,
+          "start_timestamp": "2026-04-13T03:19:00.008Z",
+          "statement": "I\u2019m checking the current repo shape around Phase 6 outputs so the Phase 7 plan fits what\u2019s already implemented."
+        }
+      ]
+    },
+    {
+      "citation_id": "item-open_question-9",
+      "item_keys": [
+        "open-brain:open_question:bba0007c177855d4"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-open_question-9",
+      "provenance_refs": [
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:991",
+          "end_line_no": 991,
+          "end_timestamp": "2026-04-13T01:04:58.753Z",
+          "rule_ids": [
+            "open_question.explicit"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:224",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:988",
+          "start_line_no": 988,
+          "start_timestamp": "2026-04-13T01:00:46.126Z",
+          "statement": "- `cross-project` and `unclassified` are valid extraction domains, but weak/unusable content should usually be skipped rather than turned into noisy items."
+        },
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:994",
+          "end_line_no": 994,
+          "end_timestamp": "2026-04-13T01:04:59.139Z",
+          "rule_ids": [
+            "open_question.explicit"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:226",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:994",
+          "start_line_no": 994,
+          "start_timestamp": "2026-04-13T01:04:59.139Z",
+          "statement": "- `cross-project` and `unclassified` are valid extraction domains, but weak/unusable content should usually be skipped rather than turned into noisy items."
+        },
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:996",
+          "end_line_no": 996,
+          "end_timestamp": "2026-04-13T01:04:59.352Z",
+          "rule_ids": [
+            "open_question.explicit"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:227",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:995",
+          "start_line_no": 995,
+          "start_timestamp": "2026-04-13T01:04:59.140Z",
+          "statement": "- `cross-project` and `unclassified` are valid extraction domains, but weak/unusable content should usually be skipped rather than turned into noisy items."
+        }
+      ]
+    },
+    {
+      "citation_id": "item-open_question-10",
+      "item_keys": [
+        "open-brain:open_question:bc4f5305ee74c0ee"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-open_question-10",
+      "provenance_refs": [
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:991",
+          "end_line_no": 991,
+          "end_timestamp": "2026-04-13T01:04:58.753Z",
+          "rule_ids": [
+            "open_question.explicit"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:224",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:988",
+          "start_line_no": 988,
+          "start_timestamp": "2026-04-13T01:00:46.126Z",
+          "statement": "- Obsidian support starts here only as stable target metadata: extracted items should carry `target_namespace` and `target_page_key` so Phase 6 can map them cleanly into Obsidian-friendly wiki pages."
+        },
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:994",
+          "end_line_no": 994,
+          "end_timestamp": "2026-04-13T01:04:59.139Z",
+          "rule_ids": [
+            "open_question.explicit"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:226",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:994",
+          "start_line_no": 994,
+          "start_timestamp": "2026-04-13T01:04:59.139Z",
+          "statement": "- Obsidian support starts here only as stable target metadata: extracted items should carry `target_namespace` and `target_page_key` so Phase 6 can map them cleanly into Obsidian-friendly wiki pages."
+        },
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:996",
+          "end_line_no": 996,
+          "end_timestamp": "2026-04-13T01:04:59.352Z",
+          "rule_ids": [
+            "open_question.explicit"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:227",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:995",
+          "start_line_no": 995,
+          "start_timestamp": "2026-04-13T01:04:59.140Z",
+          "statement": "- Obsidian support starts here only as stable target metadata: extracted items should carry `target_namespace` and `target_page_key` so Phase 6 can map them cleanly into Obsidian-friendly wiki pages."
+        }
+      ]
+    },
+    {
+      "citation_id": "item-open_question-11",
+      "item_keys": [
+        "open-brain:open_question:6053ddf7a9339635"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-open_question-11",
+      "provenance_refs": [
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:980",
+          "end_line_no": 980,
+          "end_timestamp": "2026-04-13T00:58:06.926Z",
+          "rule_ids": [
+            "open_question.explicit"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:220",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:977",
+          "start_line_no": 977,
+          "start_timestamp": "2026-04-13T00:53:17.296Z",
+          "statement": "For contradictory extracted items, should Phase 5:"
+        }
+      ]
+    },
+    {
+      "citation_id": "item-open_question-12",
+      "item_keys": [
+        "open-brain:open_question:24e115fe8f24c8a4"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-open_question-12",
+      "provenance_refs": [
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:980",
+          "end_line_no": 980,
+          "end_timestamp": "2026-04-13T00:58:06.926Z",
+          "rule_ids": [
+            "open_question.explicit"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:220",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:977",
+          "start_line_no": 977,
+          "start_timestamp": "2026-04-13T00:53:17.296Z",
+          "statement": "For Phase 5, the main implication is that extracted items should carry stable domain/item identifiers and future page-target hints cleanly enough that wiki synthesis can map them into Obsidian pages later."
+        }
+      ]
+    },
+    {
+      "citation_id": "item-open_question-13",
+      "item_keys": [
+        "open-brain:open_question:944dacdfaf30ec04"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-open_question-13",
+      "provenance_refs": [
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:980",
+          "end_line_no": 980,
+          "end_timestamp": "2026-04-13T00:58:06.926Z",
+          "rule_ids": [
+            "open_question.explicit"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:220",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:977",
+          "start_line_no": 977,
+          "start_timestamp": "2026-04-13T00:53:17.296Z",
+          "statement": "Should Phase 5 use this fixed v1 item taxonomy?"
+        }
+      ]
+    },
+    {
+      "citation_id": "item-open_question-14",
+      "item_keys": [
+        "open-brain:open_question:2c6ca5acc6df51c5"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-open_question-14",
+      "provenance_refs": [
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:980",
+          "end_line_no": 980,
+          "end_timestamp": "2026-04-13T00:58:06.926Z",
+          "rule_ids": [
+            "open_question.explicit"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:220",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:977",
+          "start_line_no": 977,
+          "start_timestamp": "2026-04-13T00:53:17.296Z",
+          "statement": "Should temporal items like `current_state`, `next_step`, `outcome`, and `failure` carry a lifecycle marker such as:"
+        }
+      ]
+    },
+    {
+      "citation_id": "item-open_question-15",
+      "item_keys": [
+        "open-brain:open_question:67dd80bb6b97b412"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-open_question-15",
+      "provenance_refs": [
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:980",
+          "end_line_no": 980,
+          "end_timestamp": "2026-04-13T00:58:06.926Z",
+          "rule_ids": [
+            "open_question.explicit"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:220",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:977",
+          "start_line_no": 977,
+          "start_timestamp": "2026-04-13T00:53:17.296Z",
+          "statement": "To support future Obsidian wiki generation, should each extracted item also carry a lightweight future target hint like:"
+        }
+      ]
+    },
+    {
+      "citation_id": "item-open_question-16",
+      "item_keys": [
+        "open-brain:open_question:ea72b1353d807019"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-open_question-16",
+      "provenance_refs": [
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:980",
+          "end_line_no": 980,
+          "end_timestamp": "2026-04-13T00:58:06.926Z",
+          "rule_ids": [
+            "open_question.explicit"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:220",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:977",
+          "start_line_no": 977,
+          "start_timestamp": "2026-04-13T00:53:17.296Z",
+          "statement": "When repeated items are merged, should the merged item keep:"
+        }
+      ]
+    },
+    {
+      "citation_id": "item-open_question-17",
+      "item_keys": [
+        "open-brain:open_question:e2010293c68eed29"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-open_question-17",
+      "provenance_refs": [
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:97",
+          "end_line_no": 97,
+          "end_timestamp": "2026-04-12T21:45:54.036Z",
+          "rule_ids": [
+            "open_question.explicit"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:25",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:95",
+          "start_line_no": 95,
+          "start_timestamp": "2026-04-12T21:45:53.819Z",
+          "statement": "Let me know when I should activate plan mode"
+        }
+      ]
+    },
+    {
+      "citation_id": "item-open_question-18",
+      "item_keys": [
+        "open-brain:open_question:c13665602d453bba"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-open_question-18",
+      "provenance_refs": [
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:97",
+          "end_line_no": 97,
+          "end_timestamp": "2026-04-12T21:45:54.036Z",
+          "rule_ids": [
+            "open_question.explicit"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:25",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:95",
+          "start_line_no": 95,
+          "start_timestamp": "2026-04-12T21:45:53.819Z",
+          "statement": "When they come, I should be able to add them (maybe some config with project name, or keywords, not sure) in some config and the process should do a full run to all files (past and present) under the root to find references of those, and track them after in the scheduler with the other ones."
+        }
+      ]
+    },
+    {
+      "citation_id": "item-open_question-19",
+      "item_keys": [
+        "open-brain:open_question:21f92cecb1f30314"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-open_question-19",
+      "provenance_refs": [
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:89",
+          "end_line_no": 89,
+          "end_timestamp": "2026-04-12T21:34:14.343Z",
+          "rule_ids": [
+            "open_question.explicit"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:23",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:89",
+          "start_line_no": 89,
+          "start_timestamp": "2026-04-12T21:34:14.343Z",
+          "statement": "- Absolute path should live only in local config/runtime state"
+        },
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:94",
+          "end_line_no": 94,
+          "end_timestamp": "2026-04-12T21:45:53.817Z",
+          "rule_ids": [
+            "open_question.explicit"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:24",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:90",
+          "start_line_no": 90,
+          "start_timestamp": "2026-04-12T21:34:14.344Z",
+          "statement": "- Absolute path should live only in local config/runtime state"
+        }
+      ]
+    },
+    {
+      "citation_id": "item-open_question-20",
+      "item_keys": [
+        "open-brain:open_question:216e5123967ffc33"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-open_question-20",
+      "provenance_refs": [
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:89",
+          "end_line_no": 89,
+          "end_timestamp": "2026-04-12T21:34:14.343Z",
+          "rule_ids": [
+            "open_question.explicit"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:23",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:89",
+          "start_line_no": 89,
+          "start_timestamp": "2026-04-12T21:34:14.343Z",
+          "statement": "- But it should define and persist the state model needed for resumable downstream processing"
+        },
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:94",
+          "end_line_no": 94,
+          "end_timestamp": "2026-04-12T21:45:53.817Z",
+          "rule_ids": [
+            "open_question.explicit"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:24",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:90",
+          "start_line_no": 90,
+          "start_timestamp": "2026-04-12T21:34:14.344Z",
+          "statement": "- But it should define and persist the state model needed for resumable downstream processing"
+        }
+      ]
+    },
+    {
+      "citation_id": "item-open_question-21",
+      "item_keys": [
+        "open-brain:open_question:4160c761186f9daf"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-open_question-21",
+      "provenance_refs": [
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:89",
+          "end_line_no": 89,
+          "end_timestamp": "2026-04-12T21:34:14.343Z",
+          "rule_ids": [
+            "open_question.explicit"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:23",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:89",
+          "start_line_no": 89,
+          "start_timestamp": "2026-04-12T21:34:14.343Z",
+          "statement": "- Phase 1 should not implement downstream parsing/resume behavior"
+        },
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:94",
+          "end_line_no": 94,
+          "end_timestamp": "2026-04-12T21:45:53.817Z",
+          "rule_ids": [
+            "open_question.explicit"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:24",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:90",
+          "start_line_no": 90,
+          "start_timestamp": "2026-04-12T21:34:14.344Z",
+          "statement": "- Phase 1 should not implement downstream parsing/resume behavior"
+        }
+      ]
+    },
+    {
+      "citation_id": "item-open_question-22",
+      "item_keys": [
+        "open-brain:open_question:8edb85ab6fcad66e"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-open_question-22",
+      "provenance_refs": [
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:89",
+          "end_line_no": 89,
+          "end_timestamp": "2026-04-12T21:34:14.343Z",
+          "rule_ids": [
+            "open_question.explicit"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:23",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:89",
+          "start_line_no": 89,
+          "start_timestamp": "2026-04-12T21:34:14.343Z",
+          "statement": "- Public/internal reference format should be `source_root_alias + relative_path + session_id`"
+        },
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:94",
+          "end_line_no": 94,
+          "end_timestamp": "2026-04-12T21:45:53.817Z",
+          "rule_ids": [
+            "open_question.explicit"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:24",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:90",
+          "start_line_no": 90,
+          "start_timestamp": "2026-04-12T21:34:14.344Z",
+          "statement": "- Public/internal reference format should be `source_root_alias + relative_path + session_id`"
+        }
+      ]
+    },
+    {
+      "citation_id": "item-open_question-23",
+      "item_keys": [
+        "open-brain:open_question:01f02daf45069e34"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-open_question-23",
+      "provenance_refs": [
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:89",
+          "end_line_no": 89,
+          "end_timestamp": "2026-04-12T21:34:14.343Z",
+          "rule_ids": [
+            "open_question.explicit"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:23",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:89",
+          "start_line_no": 89,
+          "start_timestamp": "2026-04-12T21:34:14.343Z",
+          "statement": "For actively growing files, should the system process only fully completed lines and leave any partial trailing line untouched until the next run?"
+        },
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:94",
+          "end_line_no": 94,
+          "end_timestamp": "2026-04-12T21:45:53.817Z",
+          "rule_ids": [
+            "open_question.explicit"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:24",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:90",
+          "start_line_no": 90,
+          "start_timestamp": "2026-04-12T21:34:14.344Z",
+          "statement": "For actively growing files, should the system process only fully completed lines and leave any partial trailing line untouched until the next run?"
+        }
+      ]
+    },
+    {
+      "citation_id": "item-open_question-24",
+      "item_keys": [
+        "open-brain:open_question:83b352edbe962b6e"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-open_question-24",
+      "provenance_refs": [
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:89",
+          "end_line_no": 89,
+          "end_timestamp": "2026-04-12T21:34:14.343Z",
+          "rule_ids": [
+            "open_question.explicit"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:23",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:89",
+          "start_line_no": 89,
+          "start_timestamp": "2026-04-12T21:34:14.343Z",
+          "statement": "For scheduled automation, what run cadence do you expect roughly: every few minutes, hourly, or daily?"
+        },
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:94",
+          "end_line_no": 94,
+          "end_timestamp": "2026-04-12T21:45:53.817Z",
+          "rule_ids": [
+            "open_question.explicit"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:24",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:90",
+          "start_line_no": 90,
+          "start_timestamp": "2026-04-12T21:34:14.344Z",
+          "statement": "For scheduled automation, what run cadence do you expect roughly: every few minutes, hourly, or daily?"
+        }
+      ]
+    },
+    {
+      "citation_id": "item-open_question-25",
+      "item_keys": [
+        "open-brain:open_question:2ffea93795ecadf5"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-open_question-25",
+      "provenance_refs": [
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:89",
+          "end_line_no": 89,
+          "end_timestamp": "2026-04-12T21:34:14.343Z",
+          "rule_ids": [
+            "open_question.explicit"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:23",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:89",
+          "start_line_no": 89,
+          "start_timestamp": "2026-04-12T21:34:14.343Z",
+          "statement": "I was asking whether provenance/manifests should expose raw absolute paths like `C:\\Users\\Fabio\\...`, or whether they should use an internal stable reference."
+        },
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:94",
+          "end_line_no": 94,
+          "end_timestamp": "2026-04-12T21:45:53.817Z",
+          "rule_ids": [
+            "open_question.explicit"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:24",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:90",
+          "start_line_no": 90,
+          "start_timestamp": "2026-04-12T21:34:14.344Z",
+          "statement": "I was asking whether provenance/manifests should expose raw absolute paths like `C:\\Users\\Fabio\\...`, or whether they should use an internal stable reference."
+        }
+      ]
+    },
+    {
+      "citation_id": "item-open_question-26",
+      "item_keys": [
+        "open-brain:open_question:43e3f87a251c451d"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-open_question-26",
+      "provenance_refs": [
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:89",
+          "end_line_no": 89,
+          "end_timestamp": "2026-04-12T21:34:14.343Z",
+          "rule_ids": [
+            "open_question.explicit"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:23",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:89",
+          "start_line_no": 89,
+          "start_timestamp": "2026-04-12T21:34:14.343Z",
+          "statement": "If the same `session_id` appears in two locations with different content, should the system stop and report immediately?"
+        },
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:94",
+          "end_line_no": 94,
+          "end_timestamp": "2026-04-12T21:45:53.817Z",
+          "rule_ids": [
+            "open_question.explicit"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:24",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:90",
+          "start_line_no": 90,
+          "start_timestamp": "2026-04-12T21:34:14.344Z",
+          "statement": "If the same `session_id` appears in two locations with different content, should the system stop and report immediately?"
+        }
+      ]
+    },
+    {
+      "citation_id": "item-open_question-27",
+      "item_keys": [
+        "open-brain:open_question:ba6ca879d8204c85"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-open_question-27",
+      "provenance_refs": [
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:89",
+          "end_line_no": 89,
+          "end_timestamp": "2026-04-12T21:34:14.343Z",
+          "rule_ids": [
+            "open_question.explicit"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:23",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:89",
+          "start_line_no": 89,
+          "start_timestamp": "2026-04-12T21:34:14.343Z",
+          "statement": "Should Phase 1 include all sessions under the root, including this new `memory-system` project\u2019s own future sessions, or do you want include/exclude rules from day one?"
+        },
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:94",
+          "end_line_no": 94,
+          "end_timestamp": "2026-04-12T21:45:53.817Z",
+          "rule_ids": [
+            "open_question.explicit"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:24",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:90",
+          "start_line_no": 90,
+          "start_timestamp": "2026-04-12T21:34:14.344Z",
+          "statement": "Should Phase 1 include all sessions under the root, including this new `memory-system` project\u2019s own future sessions, or do you want include/exclude rules from day one?"
+        }
+      ]
+    },
+    {
+      "citation_id": "item-open_question-28",
+      "item_keys": [
+        "open-brain:open_question:54946f8def2a2748"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-open_question-28",
+      "provenance_refs": [
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:89",
+          "end_line_no": 89,
+          "end_timestamp": "2026-04-12T21:34:14.343Z",
+          "rule_ids": [
+            "open_question.explicit"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:23",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:89",
+          "start_line_no": 89,
+          "start_timestamp": "2026-04-12T21:34:14.343Z",
+          "statement": "So the Phase 1 endpoint should be:"
+        },
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:94",
+          "end_line_no": 94,
+          "end_timestamp": "2026-04-12T21:45:53.817Z",
+          "rule_ids": [
+            "open_question.explicit"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:24",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:90",
+          "start_line_no": 90,
+          "start_timestamp": "2026-04-12T21:34:14.344Z",
+          "statement": "So the Phase 1 endpoint should be:"
+        }
+      ]
+    },
+    {
+      "citation_id": "item-open_question-29",
+      "item_keys": [
+        "open-brain:open_question:11afd7e08f96c8b8"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-open_question-29",
+      "provenance_refs": [
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:31",
+          "end_line_no": 31,
+          "end_timestamp": "2026-04-12T21:31:36.419Z",
+          "rule_ids": [
+            "open_question.explicit"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:11",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:23",
+          "start_line_no": 23,
+          "start_timestamp": "2026-04-12T21:31:34.846Z",
+          "statement": "I\u2019m grounding Phase 1 in the actual source tree now so we can remove guesswork around discovery, append behavior, and what positional anchors later phases will need."
+        }
+      ]
+    },
+    {
+      "citation_id": "item-open_question-30",
+      "item_keys": [
+        "open-brain:open_question:f36d38d8936949f2"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-open_question-30",
+      "provenance_refs": [
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:21",
+          "end_line_no": 21,
+          "end_timestamp": "2026-04-12T21:31:22.148Z",
+          "rule_ids": [
+            "open_question.explicit"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:9",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:19",
+          "start_line_no": 19,
+          "start_timestamp": "2026-04-12T21:31:21.186Z",
+          "statement": "15-Final product should be automated scheduled runs only"
+        }
+      ]
+    },
+    {
+      "citation_id": "item-open_question-31",
+      "item_keys": [
+        "open-brain:open_question:7521e9e3656c08ca"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-open_question-31",
+      "provenance_refs": [
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:21",
+          "end_line_no": 21,
+          "end_timestamp": "2026-04-12T21:31:22.148Z",
+          "rule_ids": [
+            "open_question.explicit"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:9",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:19",
+          "start_line_no": 19,
+          "start_timestamp": "2026-04-12T21:31:21.186Z",
+          "statement": "17-Whatever makes more sense to help future phases"
+        }
+      ]
+    },
+    {
+      "citation_id": "item-open_question-32",
+      "item_keys": [
+        "open-brain:open_question:eb8c5d9699d14ffc"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-open_question-32",
+      "provenance_refs": [
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:21",
+          "end_line_no": 21,
+          "end_timestamp": "2026-04-12T21:31:22.148Z",
+          "rule_ids": [
+            "open_question.explicit"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:9",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:19",
+          "start_line_no": 19,
+          "start_timestamp": "2026-04-12T21:31:21.186Z",
+          "statement": "7-It should not, but if it does, treat as same data, so no duplicates"
+        }
+      ]
+    },
+    {
+      "citation_id": "item-open_question-33",
+      "item_keys": [
+        "open-brain:open_question:15e5731b34031711"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-open_question-33",
+      "provenance_refs": [
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:21",
+          "end_line_no": 21,
+          "end_timestamp": "2026-04-12T21:31:22.148Z",
+          "rule_ids": [
+            "open_question.explicit"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:9",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:19",
+          "start_line_no": 19,
+          "start_timestamp": "2026-04-12T21:31:21.186Z",
+          "statement": "What can change in the future in where the main folder sits."
+        }
+      ]
+    },
+    {
+      "citation_id": "item-open_question-34",
+      "item_keys": [
+        "open-brain:open_question:def0a2460c177160"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-open_question-34",
+      "provenance_refs": [
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:13",
+          "end_line_no": 13,
+          "end_timestamp": "2026-04-12T21:04:54.204Z",
+          "rule_ids": [
+            "open_question.explicit"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:7",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:13",
+          "start_line_no": 13,
+          "start_timestamp": "2026-04-12T21:04:54.204Z",
+          "statement": "Define how humans review the wiki, how agents consume bootstrap memory, and how approvals/refresh cycles work in practice."
+        },
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:18",
+          "end_line_no": 18,
+          "end_timestamp": "2026-04-12T21:31:21.167Z",
+          "rule_ids": [
+            "open_question.explicit"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:8",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:14",
+          "start_line_no": 14,
+          "start_timestamp": "2026-04-12T21:04:54.205Z",
+          "statement": "Define how humans review the wiki, how agents consume bootstrap memory, and how approvals/refresh cycles work in practice."
+        }
+      ]
+    },
+    {
+      "citation_id": "item-open_question-35",
+      "item_keys": [
+        "open-brain:open_question:fc836087cad781a8"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-open_question-35",
+      "provenance_refs": [
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:13",
+          "end_line_no": 13,
+          "end_timestamp": "2026-04-12T21:04:54.204Z",
+          "rule_ids": [
+            "open_question.explicit"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:7",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:13",
+          "start_line_no": 13,
+          "start_timestamp": "2026-04-12T21:04:54.204Z",
+          "statement": "For very large files, how far should Phase 1 go on checkpointing?"
+        },
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:18",
+          "end_line_no": 18,
+          "end_timestamp": "2026-04-12T21:31:21.167Z",
+          "rule_ids": [
+            "open_question.explicit"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:8",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:14",
+          "start_line_no": 14,
+          "start_timestamp": "2026-04-12T21:04:54.205Z",
+          "statement": "For very large files, how far should Phase 1 go on checkpointing?"
+        }
+      ]
+    },
+    {
+      "citation_id": "item-open_question-36",
+      "item_keys": [
+        "open-brain:open_question:29926b2a00a9324e"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-open_question-36",
+      "provenance_refs": [
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:13",
+          "end_line_no": 13,
+          "end_timestamp": "2026-04-12T21:04:54.204Z",
+          "rule_ids": [
+            "open_question.explicit"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:7",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:13",
+          "start_line_no": 13,
+          "start_timestamp": "2026-04-12T21:04:54.204Z",
+          "statement": "How much validation should Phase 1 perform before later parsing exists?"
+        },
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:18",
+          "end_line_no": 18,
+          "end_timestamp": "2026-04-12T21:31:21.167Z",
+          "rule_ids": [
+            "open_question.explicit"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:8",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:14",
+          "start_line_no": 14,
+          "start_timestamp": "2026-04-12T21:04:54.205Z",
+          "statement": "How much validation should Phase 1 perform before later parsing exists?"
+        }
+      ]
+    },
+    {
+      "citation_id": "item-open_question-37",
+      "item_keys": [
+        "open-brain:open_question:3bc4f45f241a1462"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-open_question-37",
+      "provenance_refs": [
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:13",
+          "end_line_no": 13,
+          "end_timestamp": "2026-04-12T21:04:54.204Z",
+          "rule_ids": [
+            "open_question.explicit"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:7",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:13",
+          "start_line_no": 13,
+          "start_timestamp": "2026-04-12T21:04:54.204Z",
+          "statement": "I need to know whether file-level status is enough, or whether we should already reserve byte/line-level resume anchors for downstream streaming."
+        },
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:18",
+          "end_line_no": 18,
+          "end_timestamp": "2026-04-12T21:31:21.167Z",
+          "rule_ids": [
+            "open_question.explicit"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:8",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:14",
+          "start_line_no": 14,
+          "start_timestamp": "2026-04-12T21:04:54.205Z",
+          "statement": "I need to know whether file-level status is enough, or whether we should already reserve byte/line-level resume anchors for downstream streaming."
+        }
+      ]
+    },
+    {
+      "citation_id": "item-open_question-38",
+      "item_keys": [
+        "open-brain:open_question:23fc5f17d145ca63"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-open_question-38",
+      "provenance_refs": [
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:13",
+          "end_line_no": 13,
+          "end_timestamp": "2026-04-12T21:04:54.204Z",
+          "rule_ids": [
+            "open_question.explicit"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:7",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:13",
+          "start_line_no": 13,
+          "start_timestamp": "2026-04-12T21:04:54.204Z",
+          "statement": "If a file is moved or renamed but content is the same, should it remain the same logical source for provenance purposes, or should path define identity?"
+        },
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:18",
+          "end_line_no": 18,
+          "end_timestamp": "2026-04-12T21:31:21.167Z",
+          "rule_ids": [
+            "open_question.explicit"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:8",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:14",
+          "start_line_no": 14,
+          "start_timestamp": "2026-04-12T21:04:54.205Z",
+          "statement": "If a file is moved or renamed but content is the same, should it remain the same logical source for provenance purposes, or should path define identity?"
+        }
+      ]
+    },
+    {
+      "citation_id": "item-open_question-39",
+      "item_keys": [
+        "open-brain:open_question:a831db2a0a85d5fc"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-open_question-39",
+      "provenance_refs": [
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:13",
+          "end_line_no": 13,
+          "end_timestamp": "2026-04-12T21:04:54.204Z",
+          "rule_ids": [
+            "open_question.explicit"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:7",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:13",
+          "start_line_no": 13,
+          "start_timestamp": "2026-04-12T21:04:54.204Z",
+          "statement": "If a previously known external file disappears, should the system keep a tombstone/history record, mark it unavailable, or treat it as removed from the active source set?"
+        },
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:18",
+          "end_line_no": 18,
+          "end_timestamp": "2026-04-12T21:31:21.167Z",
+          "rule_ids": [
+            "open_question.explicit"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:8",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:14",
+          "start_line_no": 14,
+          "start_timestamp": "2026-04-12T21:04:54.205Z",
+          "statement": "If a previously known external file disappears, should the system keep a tombstone/history record, mark it unavailable, or treat it as removed from the active source set?"
+        }
+      ]
+    },
+    {
+      "citation_id": "item-open_question-40",
+      "item_keys": [
+        "open-brain:open_question:bfcfe43732bca206"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-open_question-40",
+      "provenance_refs": [
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:13",
+          "end_line_no": 13,
+          "end_timestamp": "2026-04-12T21:04:54.204Z",
+          "rule_ids": [
+            "open_question.explicit"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:7",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:13",
+          "start_line_no": 13,
+          "start_timestamp": "2026-04-12T21:04:54.204Z",
+          "statement": "If yes, how do you want \u201csafe to process\u201d defined: explicit closed files only, age-based stability, or append-aware tracking?"
+        },
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:18",
+          "end_line_no": 18,
+          "end_timestamp": "2026-04-12T21:31:21.167Z",
+          "rule_ids": [
+            "open_question.explicit"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:8",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:14",
+          "start_line_no": 14,
+          "start_timestamp": "2026-04-12T21:04:54.205Z",
+          "statement": "If yes, how do you want \u201csafe to process\u201d defined: explicit closed files only, age-based stability, or append-aware tracking?"
+        }
+      ]
+    },
+    {
+      "citation_id": "item-open_question-41",
+      "item_keys": [
+        "open-brain:open_question:b94217520da21312"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-open_question-41",
+      "provenance_refs": [
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:13",
+          "end_line_no": 13,
+          "end_timestamp": "2026-04-12T21:04:54.204Z",
+          "rule_ids": [
+            "open_question.explicit"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:7",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:13",
+          "start_line_no": 13,
+          "start_timestamp": "2026-04-12T21:04:54.204Z",
+          "statement": "What do you want the exact success endpoint of Phase 1 to be: \u201call sources discovered and statused,\u201d or \u201call sources discovered, statused, and ready for resumable streamed downstream processing\u201d?"
+        },
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:18",
+          "end_line_no": 18,
+          "end_timestamp": "2026-04-12T21:31:21.167Z",
+          "rule_ids": [
+            "open_question.explicit"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:8",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:14",
+          "start_line_no": 14,
+          "start_timestamp": "2026-04-12T21:04:54.205Z",
+          "statement": "What do you want the exact success endpoint of Phase 1 to be: \u201call sources discovered and statused,\u201d or \u201call sources discovered, statused, and ready for resumable streamed downstream processing\u201d?"
+        }
+      ]
+    },
+    {
+      "citation_id": "item-open_question-42",
+      "item_keys": [
+        "open-brain:open_question:e23abe50d6986dae"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-open_question-42",
+      "provenance_refs": [
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:13",
+          "end_line_no": 13,
+          "end_timestamp": "2026-04-12T21:04:54.204Z",
+          "rule_ids": [
+            "open_question.explicit"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:7",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:13",
+          "start_line_no": 13,
+          "start_timestamp": "2026-04-12T21:04:54.204Z",
+          "statement": "What exactly should Phase 1 include and exclude?"
+        },
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:18",
+          "end_line_no": 18,
+          "end_timestamp": "2026-04-12T21:31:21.167Z",
+          "rule_ids": [
+            "open_question.explicit"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:8",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:14",
+          "start_line_no": 14,
+          "start_timestamp": "2026-04-12T21:04:54.205Z",
+          "statement": "What exactly should Phase 1 include and exclude?"
+        }
+      ]
+    },
+    {
+      "citation_id": "item-open_question-43",
+      "item_keys": [
+        "open-brain:open_question:c59a710f09583d8d"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-open_question-43",
+      "provenance_refs": [
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:13",
+          "end_line_no": 13,
+          "end_timestamp": "2026-04-12T21:04:54.204Z",
+          "rule_ids": [
+            "open_question.explicit"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:7",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:13",
+          "start_line_no": 13,
+          "start_timestamp": "2026-04-12T21:04:54.204Z",
+          "statement": "What file shapes count as source logs initially?"
+        },
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:18",
+          "end_line_no": 18,
+          "end_timestamp": "2026-04-12T21:31:21.167Z",
+          "rule_ids": [
+            "open_question.explicit"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:8",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:14",
+          "start_line_no": 14,
+          "start_timestamp": "2026-04-12T21:04:54.205Z",
+          "statement": "What file shapes count as source logs initially?"
+        }
+      ]
+    },
+    {
+      "citation_id": "item-open_question-44",
+      "item_keys": [
+        "open-brain:open_question:bf4d9aeecd16ba73"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-open_question-44",
+      "provenance_refs": [
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:13",
+          "end_line_no": 13,
+          "end_timestamp": "2026-04-12T21:04:54.204Z",
+          "rule_ids": [
+            "open_question.explicit"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:7",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:13",
+          "start_line_no": 13,
+          "start_timestamp": "2026-04-12T21:04:54.204Z",
+          "statement": "What is the minimum provenance anchor that Phase 1 must establish for later phases: file identity only, or file identity plus reserved positional anchors for downstream event ranges?"
+        },
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:18",
+          "end_line_no": 18,
+          "end_timestamp": "2026-04-12T21:31:21.167Z",
+          "rule_ids": [
+            "open_question.explicit"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:8",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:14",
+          "start_line_no": 14,
+          "start_timestamp": "2026-04-12T21:04:54.205Z",
+          "statement": "What is the minimum provenance anchor that Phase 1 must establish for later phases: file identity only, or file identity plus reserved positional anchors for downstream event ranges?"
+        }
+      ]
+    },
+    {
+      "citation_id": "item-open_question-45",
+      "item_keys": [
+        "open-brain:open_question:c4f37a57a787cfad"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-open_question-45",
+      "provenance_refs": [
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:13",
+          "end_line_no": 13,
+          "end_timestamp": "2026-04-12T21:04:54.204Z",
+          "rule_ids": [
+            "open_question.explicit"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:7",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:13",
+          "start_line_no": 13,
+          "start_timestamp": "2026-04-12T21:04:54.204Z",
+          "statement": "What matters more for initial source fingerprinting: speed, certainty, or portability?"
+        },
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:18",
+          "end_line_no": 18,
+          "end_timestamp": "2026-04-12T21:31:21.167Z",
+          "rule_ids": [
+            "open_question.explicit"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:8",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:14",
+          "start_line_no": 14,
+          "start_timestamp": "2026-04-12T21:04:54.205Z",
+          "statement": "What matters more for initial source fingerprinting: speed, certainty, or portability?"
+        }
+      ]
+    },
+    {
+      "citation_id": "item-open_question-46",
+      "item_keys": [
+        "open-brain:open_question:1bbb774b18145235"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-open_question-46",
+      "provenance_refs": [
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:13",
+          "end_line_no": 13,
+          "end_timestamp": "2026-04-12T21:04:54.204Z",
+          "rule_ids": [
+            "open_question.explicit"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:7",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:13",
+          "start_line_no": 13,
+          "start_timestamp": "2026-04-12T21:04:54.204Z",
+          "statement": "What source locations must be supported at launch?"
+        },
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:18",
+          "end_line_no": 18,
+          "end_timestamp": "2026-04-12T21:31:21.167Z",
+          "rule_ids": [
+            "open_question.explicit"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:8",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:14",
+          "start_line_no": 14,
+          "start_timestamp": "2026-04-12T21:04:54.205Z",
+          "statement": "What source locations must be supported at launch?"
+        }
+      ]
+    },
+    {
+      "citation_id": "item-open_question-47",
+      "item_keys": [
+        "open-brain:open_question:8ab3a415b848c3ec"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-open_question-47",
+      "provenance_refs": [
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:13",
+          "end_line_no": 13,
+          "end_timestamp": "2026-04-12T21:04:54.204Z",
+          "rule_ids": [
+            "open_question.explicit"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:7",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:13",
+          "start_line_no": 13,
+          "start_timestamp": "2026-04-12T21:04:54.204Z",
+          "statement": "When Phase 1 hits unreadable, partial, or corrupted files, should the run continue with flags, stop immediately, or quarantine those sources for manual review?"
+        },
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:18",
+          "end_line_no": 18,
+          "end_timestamp": "2026-04-12T21:31:21.167Z",
+          "rule_ids": [
+            "open_question.explicit"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:8",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:14",
+          "start_line_no": 14,
+          "start_timestamp": "2026-04-12T21:04:54.205Z",
+          "statement": "When Phase 1 hits unreadable, partial, or corrupted files, should the run continue with flags, stop immediately, or quarantine those sources for manual review?"
+        }
+      ]
+    },
+    {
+      "citation_id": "item-open_question-48",
+      "item_keys": [
+        "open-brain:open_question:97a821eb308c1c8a"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-open_question-48",
+      "provenance_refs": [
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:88085",
+          "end_line_no": 88085,
+          "end_timestamp": "2026-03-28T13:13:00.114Z",
+          "rule_ids": [
+            "open_question.explicit"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:13276",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:88082",
+          "start_line_no": 88082,
+          "start_timestamp": "2026-03-28T13:12:59.864Z",
+          "statement": "- `how: 40` (`21.1%`)"
+        }
+      ]
+    },
+    {
+      "citation_id": "item-open_question-49",
+      "item_keys": [
+        "open-brain:open_question:a46182d51fbc6204"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-open_question-49",
+      "provenance_refs": [
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:88085",
+          "end_line_no": 88085,
+          "end_timestamp": "2026-03-28T13:13:00.114Z",
+          "rule_ids": [
+            "open_question.explicit"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:13276",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:88082",
+          "start_line_no": 88082,
+          "start_timestamp": "2026-03-28T13:12:59.864Z",
+          "statement": "- `what: 27` (`14.2%`)"
+        }
+      ]
+    },
+    {
+      "citation_id": "item-open_question-50",
+      "item_keys": [
+        "open-brain:open_question:b21a06f61a510777"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-open_question-50",
+      "provenance_refs": [
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:88085",
+          "end_line_no": 88085,
+          "end_timestamp": "2026-03-28T13:13:00.114Z",
+          "rule_ids": [
+            "open_question.explicit"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:13276",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:88082",
+          "start_line_no": 88082,
+          "start_timestamp": "2026-03-28T13:12:59.864Z",
+          "statement": "- `what` can no longer stay inflated just because the minimizer is using stale thresholds"
+        }
+      ]
+    },
+    {
+      "citation_id": "item-open_question-51",
+      "item_keys": [
+        "open-brain:open_question:024c14ad6092d53e"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-open_question-51",
+      "provenance_refs": [
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:88085",
+          "end_line_no": 88085,
+          "end_timestamp": "2026-03-28T13:13:00.114Z",
+          "rule_ids": [
+            "open_question.explicit"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:13276",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:88082",
+          "start_line_no": 88082,
+          "start_timestamp": "2026-03-28T13:12:59.864Z",
+          "statement": "- `why: 31` (`16.3%`)"
+        }
+      ]
+    },
+    {
+      "citation_id": "item-open_question-52",
+      "item_keys": [
+        "open-brain:open_question:104f769052edf8e9"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-open_question-52",
+      "provenance_refs": [
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:88080",
+          "end_line_no": 88080,
+          "end_timestamp": "2026-03-28T13:12:32.700Z",
+          "rule_ids": [
+            "open_question.explicit"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:13274",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:88072",
+          "start_line_no": 88072,
+          "start_timestamp": "2026-03-28T13:10:56.037Z",
+          "statement": "I\u2019m rebuilding the service so the new pruning rule is what the running app uses going forward, not just the one-off repair I ran directly."
+        }
+      ]
+    },
+    {
+      "citation_id": "item-open_question-53",
+      "item_keys": [
+        "open-brain:open_question:197431dc3f3aa573"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-open_question-53",
+      "provenance_refs": [
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:88080",
+          "end_line_no": 88080,
+          "end_timestamp": "2026-03-28T13:12:32.700Z",
+          "rule_ids": [
+            "open_question.explicit"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:13274",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:88072",
+          "start_line_no": 88072,
+          "start_timestamp": "2026-03-28T13:10:56.037Z",
+          "statement": "We\u2019re at the target state now: 190 active cases, every phase gap closed, and every stem at or above 10% with `what` down to 14.2%."
+        }
+      ]
+    },
+    {
+      "citation_id": "item-open_question-54",
+      "item_keys": [
+        "open-brain:open_question:ef42b64d3b563692"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-open_question-54",
+      "provenance_refs": [
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:88052",
+          "end_line_no": 88052,
+          "end_timestamp": "2026-03-28T13:08:09.739Z",
+          "rule_ids": [
+            "open_question.explicit"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:13269",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:88046",
+          "start_line_no": 88046,
+          "start_timestamp": "2026-03-28T13:07:32.086Z",
+          "statement": "The minimizer patch is in, but I caught one more detail: in this exact state, removing extra `what` questions is part of the solution too, so I\u2019m widening the plateau-removal rule to allow that safely instead of only trimming secondary stems."
+        }
+      ]
+    },
+    {
+      "citation_id": "item-open_question-55",
+      "item_keys": [
+        "open-brain:open_question:f416d0cb0996f451"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-open_question-55",
+      "provenance_refs": [
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:88044",
+          "end_line_no": 88044,
+          "end_timestamp": "2026-03-28T13:07:13.699Z",
+          "rule_ids": [
+            "open_question.explicit"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:13267",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:88038",
+          "start_line_no": 88038,
+          "start_timestamp": "2026-03-28T13:06:25.838Z",
+          "statement": "I\u2019m fixing that at the pruning layer first, because that should get us to a smaller, balanced pool without generating more review work."
+        }
+      ]
+    },
+    {
+      "citation_id": "item-open_question-56",
+      "item_keys": [
+        "open-brain:open_question:b18ab6de4002aece"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-open_question-56",
+      "provenance_refs": [
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:88028",
+          "end_line_no": 88028,
+          "end_timestamp": "2026-03-28T13:04:54.605Z",
+          "rule_ids": [
+            "open_question.explicit"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:13264",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:88021",
+          "start_line_no": 88021,
+          "start_timestamp": "2026-03-28T13:04:22.024Z",
+          "statement": "whatquestionsharemax"
+        }
+      ]
+    },
+    {
+      "citation_id": "item-open_question-57",
+      "item_keys": [
+        "open-brain:open_question:7d61c22a017eb32e"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-open_question-57",
+      "provenance_refs": [
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:87961",
+          "end_line_no": 87961,
+          "end_timestamp": "2026-03-28T12:53:09.043Z",
+          "rule_ids": [
+            "open_question.explicit"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:13253",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:87955",
+          "start_line_no": 87955,
+          "start_timestamp": "2026-03-28T12:41:20.841Z",
+          "statement": "I\u2019m doing one last targeted augmentation against those stems, then I\u2019ll prune back any excess `what` so the pool stays minimal instead of growing for no reason."
+        }
+      ]
+    },
+    {
+      "citation_id": "item-open_question-58",
+      "item_keys": [
+        "open-brain:open_question:349d3c84a7909248"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-open_question-58",
+      "provenance_refs": [
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:87961",
+          "end_line_no": 87961,
+          "end_timestamp": "2026-03-28T12:53:09.043Z",
+          "rule_ids": [
+            "open_question.explicit"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:13253",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:87955",
+          "start_line_no": 87955,
+          "start_timestamp": "2026-03-28T12:41:20.841Z",
+          "statement": "The new share-based gaps are showing exactly what we need: we\u2019re close, but still short on `who / when / where / why`."
+        }
+      ]
+    },
+    {
+      "citation_id": "item-open_question-59",
+      "item_keys": [
+        "open-brain:open_question:c286ea928b6551bb"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-open_question-59",
+      "provenance_refs": [
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:87915",
+          "end_line_no": 87915,
+          "end_timestamp": "2026-03-28T12:34:09.141Z",
+          "rule_ids": [
+            "open_question.explicit"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:13244",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:87909",
+          "start_line_no": 87909,
+          "start_timestamp": "2026-03-28T12:33:34.692Z",
+          "statement": "I\u2019m relaxing the prune rule so it can keep removing safe excess `what` cases even when the penalty only drops after several removals."
+        }
+      ]
+    },
+    {
+      "citation_id": "item-open_question-60",
+      "item_keys": [
+        "open-brain:open_question:ca217e5b2b59e521"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-open_question-60",
+      "provenance_refs": [
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:87915",
+          "end_line_no": 87915,
+          "end_timestamp": "2026-03-28T12:34:09.141Z",
+          "rule_ids": [
+            "open_question.explicit"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:13244",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:87909",
+          "start_line_no": 87909,
+          "start_timestamp": "2026-03-28T12:33:34.692Z",
+          "statement": "The last blocker is mathematical: with a share cap, removing one `what` case often doesn\u2019t lower the penalty immediately because both the numerator and denominator move together."
+        }
+      ]
+    },
+    {
+      "citation_id": "item-open_question-61",
+      "item_keys": [
+        "open-brain:open_question:6e6030019be73405"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-open_question-61",
+      "provenance_refs": [
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:87895",
+          "end_line_no": 87895,
+          "end_timestamp": "2026-03-28T12:30:55.970Z",
+          "rule_ids": [
+            "open_question.explicit"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:13240",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:87889",
+          "start_line_no": 87889,
+          "start_timestamp": "2026-03-28T12:30:04.266Z",
+          "statement": "I\u2019m loosening that to allow gradual improvement, which is exactly what we need for a large `what` overage."
+        }
+      ]
+    },
+    {
+      "citation_id": "item-open_question-62",
+      "item_keys": [
+        "open-brain:open_question:698a53594a38b972"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-open_question-62",
+      "provenance_refs": [
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:87881",
+          "end_line_no": 87881,
+          "end_timestamp": "2026-03-28T12:28:15.753Z",
+          "rule_ids": [
+            "open_question.explicit"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:13237",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:87875",
+          "start_line_no": 87875,
+          "start_timestamp": "2026-03-28T12:27:45.669Z",
+          "statement": "The only thing left is excess `what`."
+        }
+      ]
+    },
+    {
+      "citation_id": "item-open_question-63",
+      "item_keys": [
+        "open-brain:open_question:2f61e944c93eaff1"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-open_question-63",
+      "provenance_refs": [
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:87835",
+          "end_line_no": 87835,
+          "end_timestamp": "2026-03-28T11:48:27.604Z",
+          "rule_ids": [
+            "open_question.explicit"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:13228",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:87829",
+          "start_line_no": 87829,
+          "start_timestamp": "2026-03-28T11:47:53.023Z",
+          "statement": "That should make the next augmentation batch produce actor-focused questions more often instead of defaulting back to descriptive `what` forms."
+        }
+      ]
+    },
+    {
+      "citation_id": "item-open_question-64",
+      "item_keys": [
+        "open-brain:open_question:647e586c9f335c4e"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-open_question-64",
+      "provenance_refs": [
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:87819",
+          "end_line_no": 87819,
+          "end_timestamp": "2026-03-28T11:46:38.408Z",
+          "rule_ids": [
+            "open_question.explicit"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:13225",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:87813",
+          "start_line_no": 87813,
+          "start_timestamp": "2026-03-28T11:36:12.962Z",
+          "statement": "The first controlled batch helped `when/why`, but `who` is still the main gap and `where` is still short."
+        }
+      ]
+    },
+    {
+      "citation_id": "item-open_question-65",
+      "item_keys": [
+        "open-brain:open_question:301ab7147b19f5af"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-open_question-65",
+      "provenance_refs": [
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:87805",
+          "end_line_no": 87805,
+          "end_timestamp": "2026-03-28T11:34:52.573Z",
+          "rule_ids": [
+            "open_question.explicit"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:13222",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:87799",
+          "start_line_no": 87799,
+          "start_timestamp": "2026-03-28T11:25:39.099Z",
+          "statement": "That should let us raise the missing `who/when/where/why` counts in smaller controlled steps."
+        }
+      ]
+    },
+    {
+      "citation_id": "item-open_question-66",
+      "item_keys": [
+        "open-brain:open_question:261e64d4693665fe"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-open_question-66",
+      "provenance_refs": [
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:87787",
+          "end_line_no": 87787,
+          "end_timestamp": "2026-03-28T11:24:11.806Z",
+          "rule_ids": [
+            "open_question.explicit"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:13218",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:87781",
+          "start_line_no": 87781,
+          "start_timestamp": "2026-03-28T11:03:02.402Z",
+          "statement": "I\u2019m running a targeted positive refill next so we add only the missing stem types, then I\u2019ll prune back the excess `what` inventory."
+        }
+      ]
+    },
+    {
+      "citation_id": "item-open_question-67",
+      "item_keys": [
+        "open-brain:open_question:92675538b21e3608"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-open_question-67",
+      "provenance_refs": [
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:87787",
+          "end_line_no": 87787,
+          "end_timestamp": "2026-03-28T11:24:11.806Z",
+          "rule_ids": [
+            "open_question.explicit"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:13218",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:87781",
+          "start_line_no": 87781,
+          "start_timestamp": "2026-03-28T11:03:02.402Z",
+          "statement": "The stricter targets are active now, and the pool is correctly showing the real imbalance: it\u2019s short on `who/when/where/why` and heavily over on `what`."
+        }
+      ]
+    },
+    {
+      "citation_id": "item-open_question-68",
+      "item_keys": [
+        "open-brain:open_question:4bcc49346a73602d"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-open_question-68",
+      "provenance_refs": [
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:87746",
+          "end_line_no": 87746,
+          "end_timestamp": "2026-03-28T10:57:42.624Z",
+          "rule_ids": [
+            "open_question.explicit"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:13210",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:87745",
+          "start_line_no": 87745,
+          "start_timestamp": "2026-03-28T10:57:42.624Z",
+          "statement": "The idea is simple: once the pool is gap-free, we greedily stale the most removable cases\u2014starting with excess `what`\u2014but only if the projected pool remains fully compliant after each removal."
+        }
+      ]
+    },
+    {
+      "citation_id": "item-open_question-69",
+      "item_keys": [
+        "open-brain:open_question:dc36a7c89bedb6d5"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-open_question-69",
+      "provenance_refs": [
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:87645",
+          "end_line_no": 87645,
+          "end_timestamp": "2026-03-28T10:41:39.279Z",
+          "rule_ids": [
+            "open_question.explicit"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:13195",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:87640",
+          "start_line_no": 87640,
+          "start_timestamp": "2026-03-28T10:41:06.446Z",
+          "statement": "question_stem_what"
+        }
+      ]
+    },
+    {
+      "citation_id": "item-open_question-70",
+      "item_keys": [
+        "open-brain:open_question:8515d83cb3e2136f"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-open_question-70",
+      "provenance_refs": [
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:87645",
+          "end_line_no": 87645,
+          "end_timestamp": "2026-03-28T10:41:39.279Z",
+          "rule_ids": [
+            "open_question.explicit"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:13195",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:87640",
+          "start_line_no": 87640,
+          "start_timestamp": "2026-03-28T10:41:06.446Z",
+          "statement": "whatquestiongap"
+        }
+      ]
+    },
+    {
+      "citation_id": "item-open_question-71",
+      "item_keys": [
+        "open-brain:open_question:8cac3ab8be4d7703"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-open_question-71",
+      "provenance_refs": [
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:87611",
+          "end_line_no": 87611,
+          "end_timestamp": "2026-03-28T10:37:56.726Z",
+          "rule_ids": [
+            "open_question.explicit"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:13189",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:87603",
+          "start_line_no": 87603,
+          "start_timestamp": "2026-03-28T10:37:27.873Z",
+          "statement": "Then I\u2019ll add a minimal-pool pruning pass that removes excess `what` cases only when the projected pool still stays fully gap-free."
+        }
+      ]
+    },
+    {
+      "citation_id": "item-open_question-72",
+      "item_keys": [
+        "open-brain:open_question:142993cbbcea7931"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-open_question-72",
+      "provenance_refs": [
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:87601",
+          "end_line_no": 87601,
+          "end_timestamp": "2026-03-28T10:37:06.618Z",
+          "rule_ids": [
+            "open_question.explicit"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:13187",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:87593",
+          "start_line_no": 87593,
+          "start_timestamp": "2026-03-28T10:36:35.774Z",
+          "statement": "I\u2019m checking the current stem-target plumbing first, then I\u2019ll finish the rebalance logic and prune excess `what` cases without reopening any phase gaps."
+        }
+      ]
+    },
+    {
+      "citation_id": "item-open_question-73",
+      "item_keys": [
+        "open-brain:open_question:389b489c424f05b3"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-open_question-73",
+      "provenance_refs": [
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:87591",
+          "end_line_no": 87591,
+          "end_timestamp": "2026-03-28T10:36:15.658Z",
+          "rule_ids": [
+            "open_question.explicit"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:13185",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:87581",
+          "start_line_no": 87581,
+          "start_timestamp": "2026-03-28T10:33:18.677Z",
+          "statement": "I\u2019m moving the stem target from \u201clight diversity pressure\u201d to a hard floor now: 10% of the certification slice for each `what/who/how/when/where/why`, plus a lower `what` dominance cap so we can actually call the pool balanced."
+        }
+      ]
+    },
+    {
+      "citation_id": "item-open_question-74",
+      "item_keys": [
+        "open-brain:open_question:98a77927d6d1c505"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-open_question-74",
+      "provenance_refs": [
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:87569",
+          "end_line_no": 87569,
+          "end_timestamp": "2026-03-28T10:30:54.264Z",
+          "rule_ids": [
+            "open_question.explicit"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:13180",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:87563",
+          "start_line_no": 87563,
+          "start_timestamp": "2026-03-28T10:30:20.485Z",
+          "statement": "I\u2019ve confirmed the current pool is still too `what`-heavy for your use case, and the existing rule is too soft."
+        }
+      ]
+    },
+    {
+      "citation_id": "item-open_question-75",
+      "item_keys": [
+        "open-brain:open_question:0e6110bacfe6bb30"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-open_question-75",
+      "provenance_refs": [
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:87561",
+          "end_line_no": 87561,
+          "end_timestamp": "2026-03-28T10:29:50.963Z",
+          "rule_ids": [
+            "open_question.explicit"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:13178",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:87552",
+          "start_line_no": 87552,
+          "start_timestamp": "2026-03-28T10:29:02.183Z",
+          "statement": "I\u2019m tightening the stem rule to a real 10% floor for `what/who/how/when/where/why`, then I\u2019ll shrink the active pool down to the smallest gap-free set instead of letting review inventory keep growing."
+        }
+      ]
+    },
+    {
+      "citation_id": "item-open_question-76",
+      "item_keys": [
+        "open-brain:open_question:f804271c8071c8ed"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-open_question-76",
+      "provenance_refs": [
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:87550",
+          "end_line_no": 87550,
+          "end_timestamp": "2026-03-28T10:28:34.475Z",
+          "rule_ids": [
+            "open_question.explicit"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:13176",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:87547",
+          "start_line_no": 87547,
+          "start_timestamp": "2026-03-28T10:28:11.502Z",
+          "statement": "But 61% of what is still not considered balanced to me."
+        }
+      ]
+    },
+    {
+      "citation_id": "item-open_question-77",
+      "item_keys": [
+        "open-brain:open_question:4ae03dfccb970f9f"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-open_question-77",
+      "provenance_refs": [
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:87550",
+          "end_line_no": 87550,
+          "end_timestamp": "2026-03-28T10:28:34.475Z",
+          "rule_ids": [
+            "open_question.explicit"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:13176",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:87547",
+          "start_line_no": 87547,
+          "start_timestamp": "2026-03-28T10:28:11.502Z",
+          "statement": "Remove cases if necessary (preferably the 'what' cases since there is inbalance there')."
+        }
+      ]
+    },
+    {
+      "citation_id": "item-open_question-78",
+      "item_keys": [
+        "open-brain:open_question:dc8e98f8e71eb0e5"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-open_question-78",
+      "provenance_refs": [
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:87550",
+          "end_line_no": 87550,
+          "end_timestamp": "2026-03-28T10:28:34.475Z",
+          "rule_ids": [
+            "open_question.explicit"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:13176",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:87547",
+          "start_line_no": 87547,
+          "start_timestamp": "2026-03-28T10:28:11.502Z",
+          "statement": "Set a minimum of 10% per stem type for what, who, how, when, where and why."
+        }
+      ]
+    },
+    {
+      "citation_id": "item-open_question-79",
+      "item_keys": [
+        "open-brain:open_question:066584328c0ebaec"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-open_question-79",
+      "provenance_refs": [
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:87543",
+          "end_line_no": 87543,
+          "end_timestamp": "2026-03-28T10:28:11.139Z",
+          "rule_ids": [
+            "open_question.explicit"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:13174",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:87539",
+          "start_line_no": 87539,
+          "start_timestamp": "2026-03-28T04:54:53.380Z",
+          "statement": "- `how: 35` (`13.0%`)"
+        }
+      ]
+    },
+    {
+      "citation_id": "item-open_question-80",
+      "item_keys": [
+        "open-brain:open_question:7dbfe85460c6f46f"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-open_question-80",
+      "provenance_refs": [
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:87543",
+          "end_line_no": 87543,
+          "end_timestamp": "2026-03-28T10:28:11.139Z",
+          "rule_ids": [
+            "open_question.explicit"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:13174",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:87539",
+          "start_line_no": 87539,
+          "start_timestamp": "2026-03-28T04:54:53.380Z",
+          "statement": "- `what: 165` (`61.1%`)"
+        }
+      ]
+    }
+  ],
+  "domain": "open-brain",
+  "input_item_keys": [
+    "open-brain:open_question:cf8bf799b7e5fe90",
+    "open-brain:open_question:ff4950c23e2f1c40",
+    "open-brain:open_question:92bc866d058a855d",
+    "open-brain:open_question:130d625e58d39f19",
+    "open-brain:open_question:b514769aa9a3ea08",
+    "open-brain:open_question:bbb3d6d51857ecc3",
+    "open-brain:open_question:4bc9254901f4346f",
+    "open-brain:open_question:d516a4306333ace4",
+    "open-brain:open_question:bba0007c177855d4",
+    "open-brain:open_question:bc4f5305ee74c0ee",
+    "open-brain:open_question:6053ddf7a9339635",
+    "open-brain:open_question:24e115fe8f24c8a4",
+    "open-brain:open_question:944dacdfaf30ec04",
+    "open-brain:open_question:2c6ca5acc6df51c5",
+    "open-brain:open_question:67dd80bb6b97b412",
+    "open-brain:open_question:ea72b1353d807019",
+    "open-brain:open_question:e2010293c68eed29",
+    "open-brain:open_question:c13665602d453bba",
+    "open-brain:open_question:21f92cecb1f30314",
+    "open-brain:open_question:216e5123967ffc33",
+    "open-brain:open_question:4160c761186f9daf",
+    "open-brain:open_question:8edb85ab6fcad66e",
+    "open-brain:open_question:01f02daf45069e34",
+    "open-brain:open_question:83b352edbe962b6e",
+    "open-brain:open_question:2ffea93795ecadf5",
+    "open-brain:open_question:43e3f87a251c451d",
+    "open-brain:open_question:ba6ca879d8204c85",
+    "open-brain:open_question:54946f8def2a2748",
+    "open-brain:open_question:11afd7e08f96c8b8",
+    "open-brain:open_question:f36d38d8936949f2",
+    "open-brain:open_question:7521e9e3656c08ca",
+    "open-brain:open_question:eb8c5d9699d14ffc",
+    "open-brain:open_question:15e5731b34031711",
+    "open-brain:open_question:def0a2460c177160",
+    "open-brain:open_question:fc836087cad781a8",
+    "open-brain:open_question:29926b2a00a9324e",
+    "open-brain:open_question:3bc4f45f241a1462",
+    "open-brain:open_question:23fc5f17d145ca63",
+    "open-brain:open_question:a831db2a0a85d5fc",
+    "open-brain:open_question:bfcfe43732bca206",
+    "open-brain:open_question:b94217520da21312",
+    "open-brain:open_question:e23abe50d6986dae",
+    "open-brain:open_question:c59a710f09583d8d",
+    "open-brain:open_question:bf4d9aeecd16ba73",
+    "open-brain:open_question:c4f37a57a787cfad",
+    "open-brain:open_question:1bbb774b18145235",
+    "open-brain:open_question:8ab3a415b848c3ec",
+    "open-brain:open_question:97a821eb308c1c8a",
+    "open-brain:open_question:a46182d51fbc6204",
+    "open-brain:open_question:b21a06f61a510777",
+    "open-brain:open_question:024c14ad6092d53e",
+    "open-brain:open_question:104f769052edf8e9",
+    "open-brain:open_question:197431dc3f3aa573",
+    "open-brain:open_question:ef42b64d3b563692",
+    "open-brain:open_question:f416d0cb0996f451",
+    "open-brain:open_question:b18ab6de4002aece",
+    "open-brain:open_question:7d61c22a017eb32e",
+    "open-brain:open_question:349d3c84a7909248",
+    "open-brain:open_question:c286ea928b6551bb",
+    "open-brain:open_question:ca217e5b2b59e521",
+    "open-brain:open_question:6e6030019be73405",
+    "open-brain:open_question:698a53594a38b972",
+    "open-brain:open_question:2f61e944c93eaff1",
+    "open-brain:open_question:647e586c9f335c4e",
+    "open-brain:open_question:301ab7147b19f5af",
+    "open-brain:open_question:261e64d4693665fe",
+    "open-brain:open_question:92675538b21e3608",
+    "open-brain:open_question:4bcc49346a73602d",
+    "open-brain:open_question:dc36a7c89bedb6d5",
+    "open-brain:open_question:8515d83cb3e2136f",
+    "open-brain:open_question:8cac3ab8be4d7703",
+    "open-brain:open_question:142993cbbcea7931",
+    "open-brain:open_question:389b489c424f05b3",
+    "open-brain:open_question:98a77927d6d1c505",
+    "open-brain:open_question:0e6110bacfe6bb30",
+    "open-brain:open_question:f804271c8071c8ed",
+    "open-brain:open_question:4ae03dfccb970f9f",
+    "open-brain:open_question:dc8e98f8e71eb0e5",
+    "open-brain:open_question:066584328c0ebaec",
+    "open-brain:open_question:7dbfe85460c6f46f"
+  ],
+  "page_id": "projects/open-brain/open-questions",
+  "page_type": "bucket_page",
+  "rendered_page_metadata": {
+    "claim_count": 5,
+    "conflict_count": 47,
+    "related_domains": [
+      "global"
+    ],
+    "related_pages": [
+      {
+        "page_key": "index",
+        "title": "Open Brain",
+        "wikilink": "[[projects/open-brain/index|Open Brain]]"
+      },
+      {
+        "page_key": "communication-preferences",
+        "title": "Open Brain - Communication Preferences",
+        "wikilink": "[[projects/open-brain/communication-preferences|Open Brain - Communication Preferences]]"
+      },
+      {
+        "page_key": "workflow-rules",
+        "title": "Open Brain - Workflow Rules",
+        "wikilink": "[[projects/open-brain/workflow-rules|Open Brain - Workflow Rules]]"
+      },
+      {
+        "page_key": "architecture",
+        "title": "Open Brain - Architecture",
+        "wikilink": "[[projects/open-brain/architecture|Open Brain - Architecture]]"
+      },
+      {
+        "page_key": "code-map",
+        "title": "Open Brain - Code Map",
+        "wikilink": "[[projects/open-brain/code-map|Open Brain - Code Map]]"
+      },
+      {
+        "page_key": "current-state",
+        "title": "Open Brain - Current State",
+        "wikilink": "[[projects/open-brain/current-state|Open Brain - Current State]]"
+      },
+      {
+        "page_key": "tasks",
+        "title": "Open Brain - Tasks",
+        "wikilink": "[[projects/open-brain/tasks|Open Brain - Tasks]]"
+      },
+      {
+        "page_key": "outcomes",
+        "title": "Open Brain - Outcomes",
+        "wikilink": "[[projects/open-brain/outcomes|Open Brain - Outcomes]]"
+      },
+      {
+        "page_key": "failures",
+        "title": "Open Brain - Failures",
+        "wikilink": "[[projects/open-brain/failures|Open Brain - Failures]]"
+      },
+      {
+        "page_key": "decisions",
+        "title": "Open Brain - Decisions",
+        "wikilink": "[[projects/open-brain/decisions|Open Brain - Decisions]]"
+      },
+      {
+        "page_key": "next-steps",
+        "title": "Open Brain - Next Steps",
+        "wikilink": "[[projects/open-brain/next-steps|Open Brain - Next Steps]]"
+      }
+    ],
+    "relative_page_path": "projects/open-brain/open-questions.md",
+    "source_count": 3,
+    "title": "Open Brain - Open Questions"
+  },
+  "renderer": "obsidian_markdown",
+  "synthesized_claims": [
+    {
+      "claim_id": "claim-1",
+      "confidence": "strong",
+      "latent_type": "partially_explicit_open_questions",
+      "provenance_refs": [
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:43711",
+          "end_line_no": 43711,
+          "end_timestamp": "2026-03-11T20:26:48.841Z",
+          "rule_ids": [
+            "open_question.explicit"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:5433",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:43710",
+          "start_line_no": 43710,
+          "start_timestamp": "2026-03-11T20:26:48.840Z",
+          "statement": "- Explain how the change generalizes beyond the immediate example."
+        },
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:44562",
+          "end_line_no": 44562,
+          "end_timestamp": "2026-03-12T00:30:25.279Z",
+          "rule_ids": [
+            "open_question.explicit"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:5625",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:44561",
+          "start_line_no": 44561,
+          "start_timestamp": "2026-03-12T00:30:25.278Z",
+          "statement": "- Explain how the change generalizes beyond the immediate example."
+        },
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:57251",
+          "end_line_no": 57251,
+          "end_timestamp": "2026-03-13T12:08:42.869Z",
+          "rule_ids": [
+            "open_question.explicit"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:8048",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:57250",
+          "start_line_no": 57250,
+          "start_timestamp": "2026-03-13T12:08:42.868Z",
+          "statement": "- Explain how the change generalizes beyond the immediate example."
+        },
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:43711",
+          "end_line_no": 43711,
+          "end_timestamp": "2026-03-11T20:26:48.841Z",
+          "rule_ids": [
+            "open_question.explicit"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:5433",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:43710",
+          "start_line_no": 43710,
+          "start_timestamp": "2026-03-11T20:26:48.840Z",
+          "statement": "- Show how evidence links to actors, timestamps, and context."
+        },
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:44562",
+          "end_line_no": 44562,
+          "end_timestamp": "2026-03-12T00:30:25.279Z",
+          "rule_ids": [
+            "open_question.explicit"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:5625",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:44561",
+          "start_line_no": 44561,
+          "start_timestamp": "2026-03-12T00:30:25.278Z",
+          "statement": "- Show how evidence links to actors, timestamps, and context."
+        },
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:57251",
+          "end_line_no": 57251,
+          "end_timestamp": "2026-03-13T12:08:42.869Z",
+          "rule_ids": [
+            "open_question.explicit"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:8048",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:57250",
+          "start_line_no": 57250,
+          "start_timestamp": "2026-03-13T12:08:42.868Z",
+          "statement": "- Show how evidence links to actors, timestamps, and context."
+        },
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:43711",
+          "end_line_no": 43711,
+          "end_timestamp": "2026-03-11T20:26:48.841Z",
+          "rule_ids": [
+            "open_question.explicit"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:5433",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:43710",
+          "start_line_no": 43710,
+          "start_timestamp": "2026-03-11T20:26:48.840Z",
+          "statement": "- Solve the class of problem, not just the exact example shown."
+        },
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:44562",
+          "end_line_no": 44562,
+          "end_timestamp": "2026-03-12T00:30:25.279Z",
+          "rule_ids": [
+            "open_question.explicit"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:5625",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:44561",
+          "start_line_no": 44561,
+          "start_timestamp": "2026-03-12T00:30:25.278Z",
+          "statement": "- Solve the class of problem, not just the exact example shown."
+        },
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:57251",
+          "end_line_no": 57251,
+          "end_timestamp": "2026-03-13T12:08:42.869Z",
+          "rule_ids": [
+            "open_question.explicit"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:8048",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:57250",
+          "start_line_no": 57250,
+          "start_timestamp": "2026-03-13T12:08:42.868Z",
+          "statement": "- Solve the class of problem, not just the exact example shown."
+        }
+      ],
+      "section_id": "summary",
+      "supporting_item_ids": [
+        "open-brain:open_question:92bc866d058a855d",
+        "open-brain:open_question:130d625e58d39f19",
+        "open-brain:open_question:b514769aa9a3ea08"
+      ],
+      "text": "The focus of these questions includes generalization of changes and linking evidence to context."
+    },
+    {
+      "claim_id": "claim-2",
+      "confidence": "strong",
+      "latent_type": "partially_explicit_open_questions",
+      "provenance_refs": [
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:980",
+          "end_line_no": 980,
+          "end_timestamp": "2026-04-13T00:58:06.926Z",
+          "rule_ids": [
+            "open_question.explicit"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:220",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:977",
+          "start_line_no": 977,
+          "start_timestamp": "2026-04-13T00:53:17.296Z",
+          "statement": "For contradictory extracted items, should Phase 5:"
+        },
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:980",
+          "end_line_no": 980,
+          "end_timestamp": "2026-04-13T00:58:06.926Z",
+          "rule_ids": [
+            "open_question.explicit"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:220",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:977",
+          "start_line_no": 977,
+          "start_timestamp": "2026-04-13T00:53:17.296Z",
+          "statement": "For Phase 5, the main implication is that extracted items should carry stable domain/item identifiers and future page-target hints cleanly enough that wiki synthesis can map them into Obsidian pages later."
+        }
+      ],
+      "section_id": "summary",
+      "supporting_item_ids": [
+        "open-brain:open_question:6053ddf7a9339635",
+        "open-brain:open_question:24e115fe8f24c8a4"
+      ],
+      "text": "Questions also address the implications of extracted items for future phases of the project."
+    },
+    {
+      "claim_id": "claim-3",
+      "confidence": "strong",
+      "latent_type": "partially_explicit_open_questions",
+      "provenance_refs": [
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:980",
+          "end_line_no": 980,
+          "end_timestamp": "2026-04-13T00:58:06.926Z",
+          "rule_ids": [
+            "open_question.explicit"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:220",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:977",
+          "start_line_no": 977,
+          "start_timestamp": "2026-04-13T00:53:17.296Z",
+          "statement": "For contradictory extracted items, should Phase 5:"
+        }
+      ],
+      "section_id": "summary",
+      "supporting_item_ids": [
+        "open-brain:open_question:6053ddf7a9339635"
+      ],
+      "text": "There is a need to clarify the handling of contradictory extracted items."
+    },
+    {
+      "claim_id": "claim-4",
+      "confidence": "strong",
+      "latent_type": "partially_explicit_open_questions",
+      "provenance_refs": [
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:43711",
+          "end_line_no": 43711,
+          "end_timestamp": "2026-03-11T20:26:48.841Z",
+          "rule_ids": [
+            "open_question.explicit"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:5433",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:43710",
+          "start_line_no": 43710,
+          "start_timestamp": "2026-03-11T20:26:48.840Z",
+          "statement": "- Explain how the change generalizes beyond the immediate example."
+        },
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:44562",
+          "end_line_no": 44562,
+          "end_timestamp": "2026-03-12T00:30:25.279Z",
+          "rule_ids": [
+            "open_question.explicit"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:5625",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:44561",
+          "start_line_no": 44561,
+          "start_timestamp": "2026-03-12T00:30:25.278Z",
+          "statement": "- Explain how the change generalizes beyond the immediate example."
+        },
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:57251",
+          "end_line_no": 57251,
+          "end_timestamp": "2026-03-13T12:08:42.869Z",
+          "rule_ids": [
+            "open_question.explicit"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:8048",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:57250",
+          "start_line_no": 57250,
+          "start_timestamp": "2026-03-13T12:08:42.868Z",
+          "statement": "- Explain how the change generalizes beyond the immediate example."
+        }
+      ],
+      "section_id": "open_question",
+      "supporting_item_ids": [
+        "open-brain:open_question:92bc866d058a855d"
+      ],
+      "text": "Active open questions include how changes generalize beyond immediate examples."
+    },
+    {
+      "claim_id": "claim-5",
+      "confidence": "strong",
+      "latent_type": "partially_explicit_open_questions",
+      "provenance_refs": [
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:43711",
+          "end_line_no": 43711,
+          "end_timestamp": "2026-03-11T20:26:48.841Z",
+          "rule_ids": [
+            "open_question.explicit"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:5433",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:43710",
+          "start_line_no": 43710,
+          "start_timestamp": "2026-03-11T20:26:48.840Z",
+          "statement": "- Solve the class of problem, not just the exact example shown."
+        },
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:44562",
+          "end_line_no": 44562,
+          "end_timestamp": "2026-03-12T00:30:25.279Z",
+          "rule_ids": [
+            "open_question.explicit"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:5625",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:44561",
+          "start_line_no": 44561,
+          "start_timestamp": "2026-03-12T00:30:25.278Z",
+          "statement": "- Solve the class of problem, not just the exact example shown."
+        },
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:57251",
+          "end_line_no": 57251,
+          "end_timestamp": "2026-03-13T12:08:42.869Z",
+          "rule_ids": [
+            "open_question.explicit"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:8048",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:57250",
+          "start_line_no": 57250,
+          "start_timestamp": "2026-03-13T12:08:42.868Z",
+          "statement": "- Solve the class of problem, not just the exact example shown."
+        }
+      ],
+      "section_id": "open_question",
+      "supporting_item_ids": [
+        "open-brain:open_question:b514769aa9a3ea08"
+      ],
+      "text": "The project should focus on solving the class of problems rather than just specific examples."
+    }
+  ],
+  "versions": {
+    "page_config_version": 2,
+    "renderer_version": 2,
+    "synthesis_prompt_version": 2,
+    "synthesis_schema_version": 1,
+    "wiki_schema_version": 2
+  }
+}

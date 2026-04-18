@@ -1,0 +1,1733 @@
+{
+  "bucket": "architecture",
+  "citations": [
+    {
+      "citation_id": "claim-1",
+      "item_keys": [
+        "cross-project:architecture_note:d122884e061c87d0"
+      ],
+      "kind": "synthesized_claim",
+      "label": "claim-1",
+      "provenance_refs": [
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:5629",
+          "end_line_no": 5629,
+          "end_timestamp": "2026-03-03T19:35:53.889Z",
+          "rule_ids": [
+            "architecture_note.explicit"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:501",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:5628",
+          "start_line_no": 5628,
+          "start_timestamp": "2026-03-03T19:35:53.887Z",
+          "statement": "architecture"
+        },
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:20567",
+          "end_line_no": 20567,
+          "end_timestamp": "2026-03-06T19:51:16.879Z",
+          "rule_ids": [
+            "architecture_note.explicit"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:1936",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:20565",
+          "start_line_no": 20565,
+          "start_timestamp": "2026-03-06T19:51:03.245Z",
+          "statement": "architecture"
+        }
+      ]
+    },
+    {
+      "citation_id": "claim-2",
+      "item_keys": [
+        "cross-project:architecture_note:2dd956131d50b401"
+      ],
+      "kind": "synthesized_claim",
+      "label": "claim-2",
+      "provenance_refs": [
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:4348",
+          "end_line_no": 4348,
+          "end_timestamp": "2026-04-13T14:45:39.927Z",
+          "rule_ids": [
+            "architecture_note.explicit"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:857",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:4337",
+          "start_line_no": 4337,
+          "start_timestamp": "2026-04-13T14:45:38.920Z",
+          "statement": "I\u2019m wiring the new full-load orchestration into the existing phase pipeline, state model, and tests first so it stays aligned with the current refresh/audit architecture."
+        }
+      ]
+    },
+    {
+      "citation_id": "claim-3",
+      "item_keys": [
+        "cross-project:architecture_note:7f9d06d89c04c553"
+      ],
+      "kind": "synthesized_claim",
+      "label": "claim-3",
+      "provenance_refs": [
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:4278",
+          "end_line_no": 4278,
+          "end_timestamp": "2026-04-13T14:40:02.118Z",
+          "rule_ids": [
+            "architecture_note.explicit"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:844",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:4264",
+          "start_line_no": 4264,
+          "start_timestamp": "2026-04-13T14:39:47.719Z",
+          "statement": "I\u2019ve confirmed the current pipeline hooks."
+        }
+      ]
+    },
+    {
+      "citation_id": "claim-4",
+      "item_keys": [
+        "cross-project:architecture_note:0430d86fceb4f4d5"
+      ],
+      "kind": "synthesized_claim",
+      "label": "claim-4",
+      "provenance_refs": [
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:4262",
+          "end_line_no": 4262,
+          "end_timestamp": "2026-04-13T14:39:30.747Z",
+          "rule_ids": [
+            "architecture_note.explicit"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:842",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:4251",
+          "start_line_no": 4251,
+          "start_timestamp": "2026-04-13T14:39:29.401Z",
+          "statement": "I\u2019m grounding in the current pipeline and rollout hooks first so the full-run loop plan matches what the repo can already do and where it needs orchestration logic."
+        }
+      ]
+    },
+    {
+      "citation_id": "claim-5",
+      "item_keys": [
+        "cross-project:architecture_note:a85e3329ed6314cd"
+      ],
+      "kind": "synthesized_claim",
+      "label": "claim-5",
+      "provenance_refs": [
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:4244",
+          "end_line_no": 4244,
+          "end_timestamp": "2026-04-13T14:39:17.928Z",
+          "rule_ids": [
+            "architecture_note.explicit"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:838",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:4240",
+          "start_line_no": 4240,
+          "start_timestamp": "2026-04-13T14:36:58.251Z",
+          "statement": "- Yes, the pipeline is ready for a full run."
+        }
+      ]
+    },
+    {
+      "citation_id": "claim-6",
+      "item_keys": [
+        "cross-project:architecture_note:48fe2e88ecfb53e7"
+      ],
+      "kind": "synthesized_claim",
+      "label": "claim-6",
+      "provenance_refs": [
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:3996",
+          "end_line_no": 3996,
+          "end_timestamp": "2026-04-13T13:17:48.421Z",
+          "rule_ids": [
+            "architecture_note.explicit"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:799",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:3981",
+          "start_line_no": 3981,
+          "start_timestamp": "2026-04-13T13:04:37.669Z",
+          "statement": "The live suite hit a real-data extraction failure, so I\u2019m reproducing just that pipeline stage now and printing the fatal summary."
+        }
+      ]
+    },
+    {
+      "citation_id": "claim-7",
+      "item_keys": [
+        "cross-project:architecture_note:ab434fd5f11ecdf0"
+      ],
+      "kind": "synthesized_claim",
+      "label": "claim-7",
+      "provenance_refs": [
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:3759",
+          "end_line_no": 3759,
+          "end_timestamp": "2026-04-13T12:54:11.255Z",
+          "rule_ids": [
+            "architecture_note.explicit"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:761",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:3758",
+          "start_line_no": 3758,
+          "start_timestamp": "2026-04-13T12:54:11.254Z",
+          "statement": "next step is wiring the resolver and the new pointer-first artifact shape, then I\u2019ll validate the live sample set through the pipeline."
+        }
+      ]
+    },
+    {
+      "citation_id": "item-architecture_note-1",
+      "item_keys": [
+        "cross-project:architecture_note:d122884e061c87d0"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-architecture_note-1",
+      "provenance_refs": [
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:5629",
+          "end_line_no": 5629,
+          "end_timestamp": "2026-03-03T19:35:53.889Z",
+          "rule_ids": [
+            "architecture_note.explicit"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:501",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:5628",
+          "start_line_no": 5628,
+          "start_timestamp": "2026-03-03T19:35:53.887Z",
+          "statement": "architecture"
+        },
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:20567",
+          "end_line_no": 20567,
+          "end_timestamp": "2026-03-06T19:51:16.879Z",
+          "rule_ids": [
+            "architecture_note.explicit"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:1936",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:20565",
+          "start_line_no": 20565,
+          "start_timestamp": "2026-03-06T19:51:03.245Z",
+          "statement": "architecture"
+        }
+      ]
+    },
+    {
+      "citation_id": "item-architecture_note-2",
+      "item_keys": [
+        "cross-project:architecture_note:2dd956131d50b401"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-architecture_note-2",
+      "provenance_refs": [
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:4348",
+          "end_line_no": 4348,
+          "end_timestamp": "2026-04-13T14:45:39.927Z",
+          "rule_ids": [
+            "architecture_note.explicit"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:857",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:4337",
+          "start_line_no": 4337,
+          "start_timestamp": "2026-04-13T14:45:38.920Z",
+          "statement": "I\u2019m wiring the new full-load orchestration into the existing phase pipeline, state model, and tests first so it stays aligned with the current refresh/audit architecture."
+        }
+      ]
+    },
+    {
+      "citation_id": "item-architecture_note-3",
+      "item_keys": [
+        "cross-project:architecture_note:7f9d06d89c04c553"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-architecture_note-3",
+      "provenance_refs": [
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:4278",
+          "end_line_no": 4278,
+          "end_timestamp": "2026-04-13T14:40:02.118Z",
+          "rule_ids": [
+            "architecture_note.explicit"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:844",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:4264",
+          "start_line_no": 4264,
+          "start_timestamp": "2026-04-13T14:39:47.719Z",
+          "statement": "I\u2019ve confirmed the current pipeline hooks."
+        }
+      ]
+    },
+    {
+      "citation_id": "item-architecture_note-4",
+      "item_keys": [
+        "cross-project:architecture_note:0430d86fceb4f4d5"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-architecture_note-4",
+      "provenance_refs": [
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:4262",
+          "end_line_no": 4262,
+          "end_timestamp": "2026-04-13T14:39:30.747Z",
+          "rule_ids": [
+            "architecture_note.explicit"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:842",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:4251",
+          "start_line_no": 4251,
+          "start_timestamp": "2026-04-13T14:39:29.401Z",
+          "statement": "I\u2019m grounding in the current pipeline and rollout hooks first so the full-run loop plan matches what the repo can already do and where it needs orchestration logic."
+        }
+      ]
+    },
+    {
+      "citation_id": "item-architecture_note-5",
+      "item_keys": [
+        "cross-project:architecture_note:a85e3329ed6314cd"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-architecture_note-5",
+      "provenance_refs": [
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:4244",
+          "end_line_no": 4244,
+          "end_timestamp": "2026-04-13T14:39:17.928Z",
+          "rule_ids": [
+            "architecture_note.explicit"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:838",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:4240",
+          "start_line_no": 4240,
+          "start_timestamp": "2026-04-13T14:36:58.251Z",
+          "statement": "- Yes, the pipeline is ready for a full run."
+        }
+      ]
+    },
+    {
+      "citation_id": "item-architecture_note-6",
+      "item_keys": [
+        "cross-project:architecture_note:fd117d7fc95274af"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-architecture_note-6",
+      "provenance_refs": [
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:3996",
+          "end_line_no": 3996,
+          "end_timestamp": "2026-04-13T13:17:48.421Z",
+          "rule_ids": [
+            "architecture_note.explicit"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:799",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:3981",
+          "start_line_no": 3981,
+          "start_timestamp": "2026-04-13T13:04:37.669Z",
+          "statement": "test_live_sample_pipeline_is_pointer_first_and_stable"
+        },
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:4042",
+          "end_line_no": 4042,
+          "end_timestamp": "2026-04-13T13:34:34.102Z",
+          "rule_ids": [
+            "architecture_note.explicit"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:804",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:4038",
+          "start_line_no": 4038,
+          "start_timestamp": "2026-04-13T13:26:24.391Z",
+          "statement": "test_live_sample_pipeline_is_pointer_first_and_stable"
+        },
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:4079",
+          "end_line_no": 4079,
+          "end_timestamp": "2026-04-13T13:51:41.764Z",
+          "rule_ids": [
+            "architecture_note.explicit"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:811",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:4071",
+          "start_line_no": 4071,
+          "start_timestamp": "2026-04-13T13:43:33.269Z",
+          "statement": "test_live_sample_pipeline_is_pointer_first_and_stable"
+        }
+      ]
+    },
+    {
+      "citation_id": "item-architecture_note-7",
+      "item_keys": [
+        "cross-project:architecture_note:48fe2e88ecfb53e7"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-architecture_note-7",
+      "provenance_refs": [
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:3996",
+          "end_line_no": 3996,
+          "end_timestamp": "2026-04-13T13:17:48.421Z",
+          "rule_ids": [
+            "architecture_note.explicit"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:799",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:3981",
+          "start_line_no": 3981,
+          "start_timestamp": "2026-04-13T13:04:37.669Z",
+          "statement": "The live suite hit a real-data extraction failure, so I\u2019m reproducing just that pipeline stage now and printing the fatal summary."
+        }
+      ]
+    },
+    {
+      "citation_id": "item-architecture_note-8",
+      "item_keys": [
+        "cross-project:architecture_note:ab434fd5f11ecdf0"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-architecture_note-8",
+      "provenance_refs": [
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:3759",
+          "end_line_no": 3759,
+          "end_timestamp": "2026-04-13T12:54:11.255Z",
+          "rule_ids": [
+            "architecture_note.explicit"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:761",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:3758",
+          "start_line_no": 3758,
+          "start_timestamp": "2026-04-13T12:54:11.254Z",
+          "statement": "next step is wiring the resolver and the new pointer-first artifact shape, then I\u2019ll validate the live sample set through the pipeline."
+        }
+      ]
+    },
+    {
+      "citation_id": "item-architecture_note-9",
+      "item_keys": [
+        "cross-project:architecture_note:fd54d59ca9618f56"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-architecture_note-9",
+      "provenance_refs": [
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:3720",
+          "end_line_no": 3720,
+          "end_timestamp": "2026-04-13T12:51:30.705Z",
+          "rule_ids": [
+            "architecture_note.explicit"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:755",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:3712",
+          "start_line_no": 3712,
+          "start_timestamp": "2026-04-13T12:51:30.179Z",
+          "statement": "I\u2019m checking all call sites now so I can thread the new optional source-root config through without breaking the existing pipeline."
+        }
+      ]
+    },
+    {
+      "citation_id": "item-architecture_note-10",
+      "item_keys": [
+        "cross-project:architecture_note:5e730a24b68fb5a8"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-architecture_note-10",
+      "provenance_refs": [
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:2847",
+          "end_line_no": 2847,
+          "end_timestamp": "2026-04-13T03:49:29.874Z",
+          "rule_ids": [
+            "architecture_note.explicit"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:582",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:2831",
+          "start_line_no": 2831,
+          "start_timestamp": "2026-04-13T03:49:24.363Z",
+          "statement": "I\u2019m patching the staging bug and adding a focused bootstrap test suite against the existing sample pipeline."
+        }
+      ]
+    },
+    {
+      "citation_id": "item-architecture_note-11",
+      "item_keys": [
+        "cross-project:architecture_note:3a15ca186860c5be"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-architecture_note-11",
+      "provenance_refs": [
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:2777",
+          "end_line_no": 2777,
+          "end_timestamp": "2026-04-13T03:48:39.638Z",
+          "rule_ids": [
+            "architecture_note.explicit"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:571",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:2763",
+          "start_line_no": 2763,
+          "start_timestamp": "2026-04-13T03:48:39.050Z",
+          "statement": "I\u2019m wiring tests and the last repo updates, then I\u2019ll validate the bootstrap pipeline end-to-end locally."
+        }
+      ]
+    },
+    {
+      "citation_id": "item-architecture_note-12",
+      "item_keys": [
+        "cross-project:architecture_note:eae5c31ff4da6365"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-architecture_note-12",
+      "provenance_refs": [
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:2703",
+          "end_line_no": 2703,
+          "end_timestamp": "2026-04-13T03:37:02.113Z",
+          "rule_ids": [
+            "architecture_note.explicit"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:553",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:2702",
+          "start_line_no": 2702,
+          "start_timestamp": "2026-04-13T03:37:02.113Z",
+          "statement": "I\u2019m adding the new module and config now, then I\u2019ll hook the CLI/tests after the core pipeline is in place."
+        }
+      ]
+    },
+    {
+      "citation_id": "item-architecture_note-13",
+      "item_keys": [
+        "cross-project:architecture_note:0fcb93aac91a29b7"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-architecture_note-13",
+      "provenance_refs": [
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:2381",
+          "end_line_no": 2381,
+          "end_timestamp": "2026-04-13T03:05:36.157Z",
+          "rule_ids": [
+            "architecture_note.explicit"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:493",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:2376",
+          "start_line_no": 2376,
+          "start_timestamp": "2026-04-13T03:04:12.443Z",
+          "statement": "- Real-sample wiki pipeline now succeeds with the same real sample using a stubbed synthesizer:"
+        }
+      ]
+    },
+    {
+      "citation_id": "item-architecture_note-14",
+      "item_keys": [
+        "cross-project:architecture_note:91f14c73fd0f8e1b"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-architecture_note-14",
+      "provenance_refs": [
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:1576",
+          "end_line_no": 1576,
+          "end_timestamp": "2026-04-13T02:33:31.162Z",
+          "rule_ids": [
+            "architecture_note.explicit"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:356",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:1564",
+          "start_line_no": 1564,
+          "start_timestamp": "2026-04-13T02:33:02.889Z",
+          "statement": "I\u2019m running them first in isolation so we can tighten the wiki contracts without muddying the rest of the pipeline."
+        }
+      ]
+    },
+    {
+      "citation_id": "item-architecture_note-15",
+      "item_keys": [
+        "cross-project:architecture_note:e40975f6eaa40d0e"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-architecture_note-15",
+      "provenance_refs": [
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:1513",
+          "end_line_no": 1513,
+          "end_timestamp": "2026-04-13T02:28:50.823Z",
+          "rule_ids": [
+            "architecture_note.explicit"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:344",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:1502",
+          "start_line_no": 1502,
+          "start_timestamp": "2026-04-13T02:28:49.936Z",
+          "statement": "I\u2019ve got the core wiki pipeline in place."
+        }
+      ]
+    },
+    {
+      "citation_id": "item-architecture_note-16",
+      "item_keys": [
+        "cross-project:architecture_note:c87abf68bd4346b4"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-architecture_note-16",
+      "provenance_refs": [
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:1500",
+          "end_line_no": 1500,
+          "end_timestamp": "2026-04-13T02:28:40.917Z",
+          "rule_ids": [
+            "architecture_note.explicit"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:342",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:1489",
+          "start_line_no": 1489,
+          "start_timestamp": "2026-04-13T02:28:39.839Z",
+          "statement": "Phase 6 is partially scaffolded, and I\u2019m tightening it by adding the wiki test coverage and then validating the full pipeline end to end."
+        }
+      ]
+    },
+    {
+      "citation_id": "item-architecture_note-17",
+      "item_keys": [
+        "cross-project:architecture_note:e21cf25d076de7a0"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-architecture_note-17",
+      "provenance_refs": [
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:1398",
+          "end_line_no": 1398,
+          "end_timestamp": "2026-04-13T02:15:06.645Z",
+          "rule_ids": [
+            "architecture_note.explicit"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:318",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:1387",
+          "start_line_no": 1387,
+          "start_timestamp": "2026-04-13T02:15:05.376Z",
+          "statement": "Next I\u2019m checking the exact extracted artifact shapes and the existing test patterns so the wiki stage plugs in cleanly and stays incremental like the rest of the pipeline."
+        }
+      ]
+    },
+    {
+      "citation_id": "item-architecture_note-18",
+      "item_keys": [
+        "cross-project:architecture_note:74450be2762a1c3f"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-architecture_note-18",
+      "provenance_refs": [
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:1334",
+          "end_line_no": 1334,
+          "end_timestamp": "2026-04-13T01:58:10.251Z",
+          "rule_ids": [
+            "architecture_note.explicit"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:302",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:1334",
+          "start_line_no": 1334,
+          "start_timestamp": "2026-04-13T01:58:10.251Z",
+          "statement": "Architecture synthesis"
+        },
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:1339",
+          "end_line_no": 1339,
+          "end_timestamp": "2026-04-13T02:05:56.026Z",
+          "rule_ids": [
+            "architecture_note.explicit"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:303",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:1335",
+          "start_line_no": 1335,
+          "start_timestamp": "2026-04-13T01:58:10.252Z",
+          "statement": "Architecture synthesis"
+        }
+      ]
+    },
+    {
+      "citation_id": "item-architecture_note-19",
+      "item_keys": [
+        "cross-project:architecture_note:6651b610b018966f"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-architecture_note-19",
+      "provenance_refs": [
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:1334",
+          "end_line_no": 1334,
+          "end_timestamp": "2026-04-13T01:58:10.251Z",
+          "rule_ids": [
+            "architecture_note.explicit"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:302",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:1334",
+          "start_line_no": 1334,
+          "start_timestamp": "2026-04-13T01:58:10.251Z",
+          "statement": "Examples: the real conceptual pipeline, which layers are canonical, which artifacts are intermediate, where human-facing vs agent-facing outputs diverge."
+        },
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:1339",
+          "end_line_no": 1339,
+          "end_timestamp": "2026-04-13T02:05:56.026Z",
+          "rule_ids": [
+            "architecture_note.explicit"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:303",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:1335",
+          "start_line_no": 1335,
+          "start_timestamp": "2026-04-13T01:58:10.252Z",
+          "statement": "Examples: the real conceptual pipeline, which layers are canonical, which artifacts are intermediate, where human-facing vs agent-facing outputs diverge."
+        }
+      ]
+    },
+    {
+      "citation_id": "item-architecture_note-20",
+      "item_keys": [
+        "cross-project:architecture_note:f3aec2409ca1008e"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-architecture_note-20",
+      "provenance_refs": [
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:1022",
+          "end_line_no": 1022,
+          "end_timestamp": "2026-04-13T01:05:17.600Z",
+          "rule_ids": [
+            "architecture_note.explicit"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:231",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:1011",
+          "start_line_no": 1011,
+          "start_timestamp": "2026-04-13T01:05:16.977Z",
+          "statement": "I\u2019ve confirmed the current pipeline shape."
+        }
+      ]
+    },
+    {
+      "citation_id": "item-architecture_note-21",
+      "item_keys": [
+        "cross-project:architecture_note:a1f3ea1f03961255"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-architecture_note-21",
+      "provenance_refs": [
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:881",
+          "end_line_no": 881,
+          "end_timestamp": "2026-04-13T00:36:10.989Z",
+          "rule_ids": [
+            "architecture_note.explicit"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:200",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:873",
+          "start_line_no": 873,
+          "start_timestamp": "2026-04-13T00:36:10.189Z",
+          "statement": "I\u2019m doing a quick syntax and structure pass now before I wire the CLI and tests, so any contract drift shows up early instead of after the full pipeline is connected."
+        }
+      ]
+    },
+    {
+      "citation_id": "item-architecture_note-22",
+      "item_keys": [
+        "cross-project:architecture_note:9ac10df0d8277557"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-architecture_note-22",
+      "provenance_refs": [
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:836",
+          "end_line_no": 836,
+          "end_timestamp": "2026-04-13T00:30:32.885Z",
+          "rule_ids": [
+            "architecture_note.explicit"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:189",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:835",
+          "start_line_no": 835,
+          "start_timestamp": "2026-04-13T00:30:32.884Z",
+          "statement": "I\u2019m adding the taxonomy config, classifier module, CLI wiring, and tests together so the scoring logic and the audit/state behavior land as one coherent feature rather than a half-wired pipeline."
+        }
+      ]
+    },
+    {
+      "citation_id": "item-architecture_note-23",
+      "item_keys": [
+        "cross-project:architecture_note:650dc78fb46c22c5"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-architecture_note-23",
+      "provenance_refs": [
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:820",
+          "end_line_no": 820,
+          "end_timestamp": "2026-04-13T00:27:57.540Z",
+          "rule_ids": [
+            "architecture_note.explicit"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:185",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:809",
+          "start_line_no": 809,
+          "start_timestamp": "2026-04-13T00:27:56.748Z",
+          "statement": "I\u2019m implementing Phase 4 on top of the current segmentation pipeline, and I\u2019m checking the existing state/output patterns first so classification fits the same atomic, incremental flow instead of inventing a separate path."
+        }
+      ]
+    },
+    {
+      "citation_id": "item-architecture_note-24",
+      "item_keys": [
+        "cross-project:architecture_note:fff3fdb417f87998"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-architecture_note-24",
+      "provenance_refs": [
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:6",
+          "end_line_no": 6,
+          "end_timestamp": "2026-04-12T21:03:16.250Z",
+          "rule_ids": [
+            "architecture_note.explicit"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:3",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:6",
+          "start_line_no": 6,
+          "start_timestamp": "2026-04-12T21:03:16.250Z",
+          "statement": "## High-level architecture"
+        },
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:8",
+          "end_line_no": 8,
+          "end_timestamp": "2026-04-12T21:03:16.450Z",
+          "rule_ids": [
+            "architecture_note.explicit"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:4",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:7",
+          "start_line_no": 7,
+          "start_timestamp": "2026-04-12T21:03:16.251Z",
+          "statement": "## High-level architecture"
+        }
+      ]
+    },
+    {
+      "citation_id": "item-architecture_note-25",
+      "item_keys": [
+        "cross-project:architecture_note:3dca9f5aa42ac210"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-architecture_note-25",
+      "provenance_refs": [
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:6",
+          "end_line_no": 6,
+          "end_timestamp": "2026-04-12T21:03:16.250Z",
+          "rule_ids": [
+            "architecture_note.explicit"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:3",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:6",
+          "start_line_no": 6,
+          "start_timestamp": "2026-04-12T21:03:16.250Z",
+          "statement": "## TARGET ARCHITECTURE (CONCEPTUAL)"
+        },
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:8",
+          "end_line_no": 8,
+          "end_timestamp": "2026-04-12T21:03:16.450Z",
+          "rule_ids": [
+            "architecture_note.explicit"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:4",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:7",
+          "start_line_no": 7,
+          "start_timestamp": "2026-04-12T21:03:16.251Z",
+          "statement": "## TARGET ARCHITECTURE (CONCEPTUAL)"
+        }
+      ]
+    },
+    {
+      "citation_id": "item-architecture_note-26",
+      "item_keys": [
+        "cross-project:architecture_note:bea5d09f71834b91"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-architecture_note-26",
+      "provenance_refs": [
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:6",
+          "end_line_no": 6,
+          "end_timestamp": "2026-04-12T21:03:16.250Z",
+          "rule_ids": [
+            "architecture_note.explicit"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:3",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:6",
+          "start_line_no": 6,
+          "start_timestamp": "2026-04-12T21:03:16.250Z",
+          "statement": "* architecture note"
+        },
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:8",
+          "end_line_no": 8,
+          "end_timestamp": "2026-04-12T21:03:16.450Z",
+          "rule_ids": [
+            "architecture_note.explicit"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:4",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:7",
+          "start_line_no": 7,
+          "start_timestamp": "2026-04-12T21:03:16.251Z",
+          "statement": "* architecture note"
+        }
+      ]
+    },
+    {
+      "citation_id": "item-architecture_note-27",
+      "item_keys": [
+        "cross-project:architecture_note:61ec610cd195a575"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-architecture_note-27",
+      "provenance_refs": [
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:6",
+          "end_line_no": 6,
+          "end_timestamp": "2026-04-12T21:03:16.250Z",
+          "rule_ids": [
+            "architecture_note.explicit"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:3",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:6",
+          "start_line_no": 6,
+          "start_timestamp": "2026-04-12T21:03:16.250Z",
+          "statement": "* architecture terms"
+        },
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:8",
+          "end_line_no": 8,
+          "end_timestamp": "2026-04-12T21:03:16.450Z",
+          "rule_ids": [
+            "architecture_note.explicit"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:4",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:7",
+          "start_line_no": 7,
+          "start_timestamp": "2026-04-12T21:03:16.251Z",
+          "statement": "* architecture terms"
+        }
+      ]
+    },
+    {
+      "citation_id": "item-architecture_note-28",
+      "item_keys": [
+        "cross-project:architecture_note:b3479a4c5884286e"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-architecture_note-28",
+      "provenance_refs": [
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:6",
+          "end_line_no": 6,
+          "end_timestamp": "2026-04-12T21:03:16.250Z",
+          "rule_ids": [
+            "architecture_note.explicit"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:3",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:6",
+          "start_line_no": 6,
+          "start_timestamp": "2026-04-12T21:03:16.250Z",
+          "statement": "* architecture/code map"
+        },
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:8",
+          "end_line_no": 8,
+          "end_timestamp": "2026-04-12T21:03:16.450Z",
+          "rule_ids": [
+            "architecture_note.explicit"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:4",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:7",
+          "start_line_no": 7,
+          "start_timestamp": "2026-04-12T21:03:16.251Z",
+          "statement": "* architecture/code map"
+        }
+      ]
+    },
+    {
+      "citation_id": "item-architecture_note-29",
+      "item_keys": [
+        "cross-project:architecture_note:9b521097fc0e29ba"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-architecture_note-29",
+      "provenance_refs": [
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:6",
+          "end_line_no": 6,
+          "end_timestamp": "2026-04-12T21:03:16.250Z",
+          "rule_ids": [
+            "architecture_note.explicit"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:3",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:6",
+          "start_line_no": 6,
+          "start_timestamp": "2026-04-12T21:03:16.250Z",
+          "statement": "Focus on architecture, phases, data flow, and implementation strategy."
+        },
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:8",
+          "end_line_no": 8,
+          "end_timestamp": "2026-04-12T21:03:16.450Z",
+          "rule_ids": [
+            "architecture_note.explicit"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:4",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:7",
+          "start_line_no": 7,
+          "start_timestamp": "2026-04-12T21:03:16.251Z",
+          "statement": "Focus on architecture, phases, data flow, and implementation strategy."
+        }
+      ]
+    },
+    {
+      "citation_id": "item-architecture_note-30",
+      "item_keys": [
+        "cross-project:architecture_note:b62cbeca6b5af990"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-architecture_note-30",
+      "provenance_refs": [
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:6",
+          "end_line_no": 6,
+          "end_timestamp": "2026-04-12T21:03:16.250Z",
+          "rule_ids": [
+            "architecture_note.explicit"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:3",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:6",
+          "start_line_no": 6,
+          "start_timestamp": "2026-04-12T21:03:16.250Z",
+          "statement": "Pipeline:"
+        },
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:8",
+          "end_line_no": 8,
+          "end_timestamp": "2026-04-12T21:03:16.450Z",
+          "rule_ids": [
+            "architecture_note.explicit"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:4",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:7",
+          "start_line_no": 7,
+          "start_timestamp": "2026-04-12T21:03:16.251Z",
+          "statement": "Pipeline:"
+        }
+      ]
+    },
+    {
+      "citation_id": "item-architecture_note-31",
+      "item_keys": [
+        "cross-project:architecture_note:bfd74c4b71ad7333"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-architecture_note-31",
+      "provenance_refs": [
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:71745",
+          "end_line_no": 71745,
+          "end_timestamp": "2026-03-15T22:01:53.045Z",
+          "rule_ids": [
+            "architecture_note.explicit"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:10572",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:71727",
+          "start_line_no": 71727,
+          "start_timestamp": "2026-03-15T22:01:39.653Z",
+          "statement": "Implementing the `Network` screen and its data pipeline now."
+        }
+      ]
+    },
+    {
+      "citation_id": "item-architecture_note-32",
+      "item_keys": [
+        "cross-project:architecture_note:71e348f45ae49d96"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-architecture_note-32",
+      "provenance_refs": [
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:67906",
+          "end_line_no": 67906,
+          "end_timestamp": "2026-03-15T03:24:47.929Z",
+          "rule_ids": [
+            "architecture_note.explicit"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:10045",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:67889",
+          "start_line_no": 67889,
+          "start_timestamp": "2026-03-15T03:24:38.703Z",
+          "statement": "Next I\u2019ll focus only on the requested UI readout/pipeline fixes and the loop kick-off."
+        }
+      ]
+    },
+    {
+      "citation_id": "item-architecture_note-33",
+      "item_keys": [
+        "cross-project:architecture_note:a09655d08653507f"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-architecture_note-33",
+      "provenance_refs": [
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:57279",
+          "end_line_no": 57279,
+          "end_timestamp": "2026-03-13T12:09:48.368Z",
+          "rule_ids": [
+            "architecture_note.explicit"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:8054",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:57265",
+          "start_line_no": 57265,
+          "start_timestamp": "2026-03-13T12:09:35.922Z",
+          "statement": "I\u2019ll compare the current runtime behavior against the experiment/readiness stack so the re-scope lands cleanly without inventing a second parallel architecture."
+        }
+      ]
+    },
+    {
+      "citation_id": "item-architecture_note-34",
+      "item_keys": [
+        "cross-project:architecture_note:bbf7644abafe0f48"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-architecture_note-34",
+      "provenance_refs": [
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:50854",
+          "end_line_no": 50854,
+          "end_timestamp": "2026-03-12T20:26:21.404Z",
+          "rule_ids": [
+            "architecture_note.explicit"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:6806",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:50840",
+          "start_line_no": 50840,
+          "start_timestamp": "2026-03-12T20:24:56.995Z",
+          "statement": "I\u2019ve added pronoun support to the summary pipeline."
+        }
+      ]
+    },
+    {
+      "citation_id": "item-architecture_note-35",
+      "item_keys": [
+        "cross-project:architecture_note:85993302cd46e0f6"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-architecture_note-35",
+      "provenance_refs": [
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:43631",
+          "end_line_no": 43631,
+          "end_timestamp": "2026-03-11T20:11:09.481Z",
+          "rule_ids": [
+            "architecture_note.explicit"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:5413",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:43631",
+          "start_line_no": 43631,
+          "start_timestamp": "2026-03-11T20:11:09.481Z",
+          "statement": "- Question: `What areas in robotics did the assistant suggest would be a good fit for someone with experience in data integration and pipelines?`"
+        },
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:43636",
+          "end_line_no": 43636,
+          "end_timestamp": "2026-03-11T20:14:31.341Z",
+          "rule_ids": [
+            "architecture_note.explicit"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:5414",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:43632",
+          "start_line_no": 43632,
+          "start_timestamp": "2026-03-11T20:11:15.091Z",
+          "statement": "- Question: `What areas in robotics did the assistant suggest would be a good fit for someone with experience in data integration and pipelines?`"
+        }
+      ]
+    },
+    {
+      "citation_id": "item-architecture_note-36",
+      "item_keys": [
+        "cross-project:architecture_note:c7be8725e416b004"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-architecture_note-36",
+      "provenance_refs": [
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:43631",
+          "end_line_no": 43631,
+          "end_timestamp": "2026-03-11T20:11:09.481Z",
+          "rule_ids": [
+            "architecture_note.explicit"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:5413",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:43631",
+          "start_line_no": 43631,
+          "start_timestamp": "2026-03-11T20:11:09.481Z",
+          "statement": "or fix the pipeline so they also become reviewable on screen"
+        },
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:43636",
+          "end_line_no": 43636,
+          "end_timestamp": "2026-03-11T20:14:31.341Z",
+          "rule_ids": [
+            "architecture_note.explicit"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:5414",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:43632",
+          "start_line_no": 43632,
+          "start_timestamp": "2026-03-11T20:11:15.091Z",
+          "statement": "or fix the pipeline so they also become reviewable on screen"
+        }
+      ]
+    },
+    {
+      "citation_id": "item-architecture_note-37",
+      "item_keys": [
+        "cross-project:architecture_note:c0b538b25d55d4ce"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-architecture_note-37",
+      "provenance_refs": [
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:43621",
+          "end_line_no": 43621,
+          "end_timestamp": "2026-03-11T20:10:19.999Z",
+          "rule_ids": [
+            "architecture_note.explicit"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:5409",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:43615",
+          "start_line_no": 43615,
+          "start_timestamp": "2026-03-11T20:10:05.642Z",
+          "statement": "I\u2019m checking which one it is before I hand this back, so the pipeline is actually complete rather than \u201calmost complete.\u201d"
+        }
+      ]
+    },
+    {
+      "citation_id": "item-architecture_note-38",
+      "item_keys": [
+        "cross-project:architecture_note:a8c4366f7f3c1689"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-architecture_note-38",
+      "provenance_refs": [
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:40892",
+          "end_line_no": 40892,
+          "end_timestamp": "2026-03-11T01:04:36.998Z",
+          "rule_ids": [
+            "architecture_note.explicit"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:4904",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:40881",
+          "start_line_no": 40881,
+          "start_timestamp": "2026-03-11T00:48:29.296Z",
+          "statement": "I\u2019m looking specifically for underused metadata/facets and for places where the authoring pipeline is discarding otherwise-valid domain/lens coverage."
+        }
+      ]
+    },
+    {
+      "citation_id": "item-architecture_note-39",
+      "item_keys": [
+        "cross-project:architecture_note:8d7a0e5cffbfd7c4"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-architecture_note-39",
+      "provenance_refs": [
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:34457",
+          "end_line_no": 34457,
+          "end_timestamp": "2026-03-09T21:12:32.118Z",
+          "rule_ids": [
+            "architecture_note.explicit"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:3864",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:34450",
+          "start_line_no": 34450,
+          "start_timestamp": "2026-03-09T21:05:47.388Z",
+          "statement": "## Information Architecture (Evolution Module)"
+        }
+      ]
+    },
+    {
+      "citation_id": "item-architecture_note-40",
+      "item_keys": [
+        "cross-project:architecture_note:9c322ef9990fce5c"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-architecture_note-40",
+      "provenance_refs": [
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:34457",
+          "end_line_no": 34457,
+          "end_timestamp": "2026-03-09T21:12:32.118Z",
+          "rule_ids": [
+            "architecture_note.explicit"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:3864",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:34450",
+          "start_line_no": 34450,
+          "start_timestamp": "2026-03-09T21:05:47.388Z",
+          "statement": "- `/v2/experiments/:id/components/leaderboard`"
+        }
+      ]
+    }
+  ],
+  "domain": "cross-project",
+  "input_item_keys": [
+    "cross-project:architecture_note:d122884e061c87d0",
+    "cross-project:architecture_note:2dd956131d50b401",
+    "cross-project:architecture_note:7f9d06d89c04c553",
+    "cross-project:architecture_note:0430d86fceb4f4d5",
+    "cross-project:architecture_note:a85e3329ed6314cd",
+    "cross-project:architecture_note:fd117d7fc95274af",
+    "cross-project:architecture_note:48fe2e88ecfb53e7",
+    "cross-project:architecture_note:ab434fd5f11ecdf0",
+    "cross-project:architecture_note:fd54d59ca9618f56",
+    "cross-project:architecture_note:5e730a24b68fb5a8",
+    "cross-project:architecture_note:3a15ca186860c5be",
+    "cross-project:architecture_note:eae5c31ff4da6365",
+    "cross-project:architecture_note:0fcb93aac91a29b7",
+    "cross-project:architecture_note:91f14c73fd0f8e1b",
+    "cross-project:architecture_note:e40975f6eaa40d0e",
+    "cross-project:architecture_note:c87abf68bd4346b4",
+    "cross-project:architecture_note:e21cf25d076de7a0",
+    "cross-project:architecture_note:74450be2762a1c3f",
+    "cross-project:architecture_note:6651b610b018966f",
+    "cross-project:architecture_note:f3aec2409ca1008e",
+    "cross-project:architecture_note:a1f3ea1f03961255",
+    "cross-project:architecture_note:9ac10df0d8277557",
+    "cross-project:architecture_note:650dc78fb46c22c5",
+    "cross-project:architecture_note:fff3fdb417f87998",
+    "cross-project:architecture_note:3dca9f5aa42ac210",
+    "cross-project:architecture_note:bea5d09f71834b91",
+    "cross-project:architecture_note:61ec610cd195a575",
+    "cross-project:architecture_note:b3479a4c5884286e",
+    "cross-project:architecture_note:9b521097fc0e29ba",
+    "cross-project:architecture_note:b62cbeca6b5af990",
+    "cross-project:architecture_note:bfd74c4b71ad7333",
+    "cross-project:architecture_note:71e348f45ae49d96",
+    "cross-project:architecture_note:a09655d08653507f",
+    "cross-project:architecture_note:bbf7644abafe0f48",
+    "cross-project:architecture_note:85993302cd46e0f6",
+    "cross-project:architecture_note:c7be8725e416b004",
+    "cross-project:architecture_note:c0b538b25d55d4ce",
+    "cross-project:architecture_note:a8c4366f7f3c1689",
+    "cross-project:architecture_note:8d7a0e5cffbfd7c4",
+    "cross-project:architecture_note:9c322ef9990fce5c"
+  ],
+  "page_id": "projects/cross-project/architecture",
+  "page_type": "bucket_page",
+  "rendered_page_metadata": {
+    "claim_count": 7,
+    "conflict_count": 0,
+    "related_domains": [
+      "ai-scientist",
+      "ai-trader",
+      "open-brain"
+    ],
+    "related_pages": [
+      {
+        "page_key": "index",
+        "title": "Cross-Project",
+        "wikilink": "[[projects/cross-project/index|Cross-Project]]"
+      },
+      {
+        "page_key": "communication-preferences",
+        "title": "Cross-Project - Communication Preferences",
+        "wikilink": "[[projects/cross-project/communication-preferences|Cross-Project - Communication Preferences]]"
+      },
+      {
+        "page_key": "workflow-rules",
+        "title": "Cross-Project - Workflow Rules",
+        "wikilink": "[[projects/cross-project/workflow-rules|Cross-Project - Workflow Rules]]"
+      },
+      {
+        "page_key": "code-map",
+        "title": "Cross-Project - Code Map",
+        "wikilink": "[[projects/cross-project/code-map|Cross-Project - Code Map]]"
+      },
+      {
+        "page_key": "current-state",
+        "title": "Cross-Project - Current State",
+        "wikilink": "[[projects/cross-project/current-state|Cross-Project - Current State]]"
+      },
+      {
+        "page_key": "tasks",
+        "title": "Cross-Project - Tasks",
+        "wikilink": "[[projects/cross-project/tasks|Cross-Project - Tasks]]"
+      },
+      {
+        "page_key": "outcomes",
+        "title": "Cross-Project - Outcomes",
+        "wikilink": "[[projects/cross-project/outcomes|Cross-Project - Outcomes]]"
+      },
+      {
+        "page_key": "failures",
+        "title": "Cross-Project - Failures",
+        "wikilink": "[[projects/cross-project/failures|Cross-Project - Failures]]"
+      },
+      {
+        "page_key": "decisions",
+        "title": "Cross-Project - Decisions",
+        "wikilink": "[[projects/cross-project/decisions|Cross-Project - Decisions]]"
+      },
+      {
+        "page_key": "next-steps",
+        "title": "Cross-Project - Next Steps",
+        "wikilink": "[[projects/cross-project/next-steps|Cross-Project - Next Steps]]"
+      },
+      {
+        "page_key": "open-questions",
+        "title": "Cross-Project - Open Questions",
+        "wikilink": "[[projects/cross-project/open-questions|Cross-Project - Open Questions]]"
+      }
+    ],
+    "relative_page_path": "projects/cross-project/architecture.md",
+    "source_count": 2,
+    "title": "Cross-Project - Architecture"
+  },
+  "renderer": "obsidian_markdown",
+  "synthesized_claims": [
+    {
+      "claim_id": "claim-1",
+      "confidence": "strong",
+      "latent_type": "architecture_synthesis",
+      "provenance_refs": [
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:5629",
+          "end_line_no": 5629,
+          "end_timestamp": "2026-03-03T19:35:53.889Z",
+          "rule_ids": [
+            "architecture_note.explicit"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:501",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:5628",
+          "start_line_no": 5628,
+          "start_timestamp": "2026-03-03T19:35:53.887Z",
+          "statement": "architecture"
+        },
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:20567",
+          "end_line_no": 20567,
+          "end_timestamp": "2026-03-06T19:51:16.879Z",
+          "rule_ids": [
+            "architecture_note.explicit"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:1936",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:20565",
+          "start_line_no": 20565,
+          "start_timestamp": "2026-03-06T19:51:03.245Z",
+          "statement": "architecture"
+        }
+      ],
+      "section_id": "summary",
+      "supporting_item_ids": [
+        "cross-project:architecture_note:d122884e061c87d0"
+      ],
+      "text": "The architecture is being developed to ensure alignment with existing systems."
+    },
+    {
+      "claim_id": "claim-2",
+      "confidence": "strong",
+      "latent_type": "architecture_synthesis",
+      "provenance_refs": [
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:4348",
+          "end_line_no": 4348,
+          "end_timestamp": "2026-04-13T14:45:39.927Z",
+          "rule_ids": [
+            "architecture_note.explicit"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:857",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:4337",
+          "start_line_no": 4337,
+          "start_timestamp": "2026-04-13T14:45:38.920Z",
+          "statement": "I\u2019m wiring the new full-load orchestration into the existing phase pipeline, state model, and tests first so it stays aligned with the current refresh/audit architecture."
+        }
+      ],
+      "section_id": "summary",
+      "supporting_item_ids": [
+        "cross-project:architecture_note:2dd956131d50b401"
+      ],
+      "text": "The new full-load orchestration is being integrated into the existing phase pipeline and state model."
+    },
+    {
+      "claim_id": "claim-3",
+      "confidence": "strong",
+      "latent_type": "architecture_synthesis",
+      "provenance_refs": [
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:4278",
+          "end_line_no": 4278,
+          "end_timestamp": "2026-04-13T14:40:02.118Z",
+          "rule_ids": [
+            "architecture_note.explicit"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:844",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:4264",
+          "start_line_no": 4264,
+          "start_timestamp": "2026-04-13T14:39:47.719Z",
+          "statement": "I\u2019ve confirmed the current pipeline hooks."
+        }
+      ],
+      "section_id": "summary",
+      "supporting_item_ids": [
+        "cross-project:architecture_note:7f9d06d89c04c553"
+      ],
+      "text": "Current pipeline hooks have been confirmed as part of the architecture validation process."
+    },
+    {
+      "claim_id": "claim-4",
+      "confidence": "strong",
+      "latent_type": "architecture_synthesis",
+      "provenance_refs": [
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:4262",
+          "end_line_no": 4262,
+          "end_timestamp": "2026-04-13T14:39:30.747Z",
+          "rule_ids": [
+            "architecture_note.explicit"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:842",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:4251",
+          "start_line_no": 4251,
+          "start_timestamp": "2026-04-13T14:39:29.401Z",
+          "statement": "I\u2019m grounding in the current pipeline and rollout hooks first so the full-run loop plan matches what the repo can already do and where it needs orchestration logic."
+        }
+      ],
+      "section_id": "summary",
+      "supporting_item_ids": [
+        "cross-project:architecture_note:0430d86fceb4f4d5"
+      ],
+      "text": "The architecture will include grounding in the current pipeline and rollout hooks to match existing capabilities."
+    },
+    {
+      "claim_id": "claim-5",
+      "confidence": "strong",
+      "latent_type": "architecture_synthesis",
+      "provenance_refs": [
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:4244",
+          "end_line_no": 4244,
+          "end_timestamp": "2026-04-13T14:39:17.928Z",
+          "rule_ids": [
+            "architecture_note.explicit"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:838",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:4240",
+          "start_line_no": 4240,
+          "start_timestamp": "2026-04-13T14:36:58.251Z",
+          "statement": "- Yes, the pipeline is ready for a full run."
+        }
+      ],
+      "section_id": "architecture_note",
+      "supporting_item_ids": [
+        "cross-project:architecture_note:a85e3329ed6314cd"
+      ],
+      "text": "The pipeline is confirmed to be ready for a full run, indicating successful architecture integration."
+    },
+    {
+      "claim_id": "claim-6",
+      "confidence": "strong",
+      "latent_type": "recurring_failure_patterns",
+      "provenance_refs": [
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:3996",
+          "end_line_no": 3996,
+          "end_timestamp": "2026-04-13T13:17:48.421Z",
+          "rule_ids": [
+            "architecture_note.explicit"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:799",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:3981",
+          "start_line_no": 3981,
+          "start_timestamp": "2026-04-13T13:04:37.669Z",
+          "statement": "The live suite hit a real-data extraction failure, so I\u2019m reproducing just that pipeline stage now and printing the fatal summary."
+        }
+      ],
+      "section_id": "architecture_note",
+      "supporting_item_ids": [
+        "cross-project:architecture_note:48fe2e88ecfb53e7"
+      ],
+      "text": "A real-data extraction failure was encountered, prompting a reproduction of the pipeline stage to address the issue."
+    },
+    {
+      "claim_id": "claim-7",
+      "confidence": "strong",
+      "latent_type": "implicit_next_steps",
+      "provenance_refs": [
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:3759",
+          "end_line_no": 3759,
+          "end_timestamp": "2026-04-13T12:54:11.255Z",
+          "rule_ids": [
+            "architecture_note.explicit"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:761",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:3758",
+          "start_line_no": 3758,
+          "start_timestamp": "2026-04-13T12:54:11.254Z",
+          "statement": "next step is wiring the resolver and the new pointer-first artifact shape, then I\u2019ll validate the live sample set through the pipeline."
+        }
+      ],
+      "section_id": "architecture_note",
+      "supporting_item_ids": [
+        "cross-project:architecture_note:ab434fd5f11ecdf0"
+      ],
+      "text": "Next steps include wiring the resolver and validating the live sample set through the pipeline."
+    }
+  ],
+  "versions": {
+    "page_config_version": 2,
+    "renderer_version": 2,
+    "synthesis_prompt_version": 2,
+    "synthesis_schema_version": 1,
+    "wiki_schema_version": 2
+  }
+}

@@ -1,0 +1,1784 @@
+{
+  "bucket": "outcomes",
+  "citations": [
+    {
+      "citation_id": "claim-1",
+      "item_keys": [
+        "open-brain:outcome:9aaf19c68e8ff0e0"
+      ],
+      "kind": "synthesized_claim",
+      "label": "claim-1",
+      "provenance_refs": [
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:89",
+          "end_line_no": 89,
+          "end_timestamp": "2026-04-12T21:34:14.343Z",
+          "rule_ids": [
+            "outcome.explicit"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:23",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:89",
+          "start_line_no": 89,
+          "start_timestamp": "2026-04-12T21:34:14.343Z",
+          "statement": "For actively growing files, should the system process only fully completed lines and leave any partial trailing line untouched until the next run?"
+        },
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:94",
+          "end_line_no": 94,
+          "end_timestamp": "2026-04-12T21:45:53.817Z",
+          "rule_ids": [
+            "outcome.explicit"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:24",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:90",
+          "start_line_no": 90,
+          "start_timestamp": "2026-04-12T21:34:14.344Z",
+          "statement": "For actively growing files, should the system process only fully completed lines and leave any partial trailing line untouched until the next run?"
+        }
+      ]
+    },
+    {
+      "citation_id": "claim-2",
+      "item_keys": [
+        "open-brain:outcome:130287ceb94ba209"
+      ],
+      "kind": "synthesized_claim",
+      "label": "claim-2",
+      "provenance_refs": [
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:86834",
+          "end_line_no": 86834,
+          "end_timestamp": "2026-03-27T22:33:16.561Z",
+          "rule_ids": [
+            "outcome.explicit"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:13046",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:86826",
+          "start_line_no": 86826,
+          "start_timestamp": "2026-03-27T22:02:44.770Z",
+          "statement": "it left the pool half-pruned before refill completed."
+        }
+      ]
+    },
+    {
+      "citation_id": "claim-3",
+      "item_keys": [
+        "open-brain:outcome:af5085a1fd208d7b"
+      ],
+      "kind": "synthesized_claim",
+      "label": "claim-3",
+      "provenance_refs": [
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:86509",
+          "end_line_no": 86509,
+          "end_timestamp": "2026-03-27T18:33:42.087Z",
+          "rule_ids": [
+            "outcome.explicit"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:12987",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:86503",
+          "start_line_no": 86503,
+          "start_timestamp": "2026-03-27T18:32:59.591Z",
+          "statement": "I\u2019m aligning that request shape now so the refill can use the intended model successfully."
+        }
+      ]
+    },
+    {
+      "citation_id": "claim-4",
+      "item_keys": [
+        "open-brain:outcome:943a832b19fc4ad5"
+      ],
+      "kind": "synthesized_claim",
+      "label": "claim-4",
+      "provenance_refs": [
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:85457",
+          "end_line_no": 85457,
+          "end_timestamp": "2026-03-27T12:42:23.246Z",
+          "rule_ids": [
+            "outcome.explicit"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:12800",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:85454",
+          "start_line_no": 85454,
+          "start_timestamp": "2026-03-27T12:41:58.460Z",
+          "statement": "Now that this change is done, can you run the retroactive cleanup to check if the pending review cases are up to standard"
+        }
+      ]
+    },
+    {
+      "citation_id": "claim-5",
+      "item_keys": [
+        "open-brain:outcome:4447effaf93b8005"
+      ],
+      "kind": "synthesized_claim",
+      "label": "claim-5",
+      "provenance_refs": [
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:85298",
+          "end_line_no": 85298,
+          "end_timestamp": "2026-03-27T04:41:00.088Z",
+          "rule_ids": [
+            "outcome.explicit"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:12765",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:85290",
+          "start_line_no": 85290,
+          "start_timestamp": "2026-03-27T04:40:22.227Z",
+          "statement": "I\u2019m on the validation sweep now to catch any mismatches between the new authoring state types, the cleanup/refill path, and the existing experiment payloads before we call this done."
+        }
+      ]
+    },
+    {
+      "citation_id": "claim-6",
+      "item_keys": [
+        "open-brain:outcome:c76d46f91e03b7a6"
+      ],
+      "kind": "synthesized_claim",
+      "label": "claim-6",
+      "provenance_refs": [
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:85107",
+          "end_line_no": 85107,
+          "end_timestamp": "2026-03-27T04:15:43.463Z",
+          "rule_ids": [
+            "outcome.explicit"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:12733",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:85101",
+          "start_line_no": 85101,
+          "start_timestamp": "2026-03-27T04:15:12.728Z",
+          "statement": "If we\u2019re going to repair existing inventory properly, I want that pass to update the real persisted lens/metadata fields instead of only rewriting one summary string and calling it done."
+        }
+      ]
+    },
+    {
+      "citation_id": "item-outcome-1",
+      "item_keys": [
+        "open-brain:outcome:9aaf19c68e8ff0e0"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-outcome-1",
+      "provenance_refs": [
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:89",
+          "end_line_no": 89,
+          "end_timestamp": "2026-04-12T21:34:14.343Z",
+          "rule_ids": [
+            "outcome.explicit"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:23",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:89",
+          "start_line_no": 89,
+          "start_timestamp": "2026-04-12T21:34:14.343Z",
+          "statement": "For actively growing files, should the system process only fully completed lines and leave any partial trailing line untouched until the next run?"
+        },
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:94",
+          "end_line_no": 94,
+          "end_timestamp": "2026-04-12T21:45:53.817Z",
+          "rule_ids": [
+            "outcome.explicit"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:24",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:90",
+          "start_line_no": 90,
+          "start_timestamp": "2026-04-12T21:34:14.344Z",
+          "statement": "For actively growing files, should the system process only fully completed lines and leave any partial trailing line untouched until the next run?"
+        }
+      ]
+    },
+    {
+      "citation_id": "item-outcome-2",
+      "item_keys": [
+        "open-brain:outcome:76f8b9259a0e5266"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-outcome-2",
+      "provenance_refs": [
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:87230",
+          "end_line_no": 87230,
+          "end_timestamp": "2026-03-28T03:15:55.838Z",
+          "rule_ids": [
+            "outcome.explicit"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:13114",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:87223",
+          "start_line_no": 87223,
+          "start_timestamp": "2026-03-28T03:15:08.556Z",
+          "statement": "I\u2019ve finished the gap math."
+        }
+      ]
+    },
+    {
+      "citation_id": "item-outcome-3",
+      "item_keys": [
+        "open-brain:outcome:130287ceb94ba209"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-outcome-3",
+      "provenance_refs": [
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:86834",
+          "end_line_no": 86834,
+          "end_timestamp": "2026-03-27T22:33:16.561Z",
+          "rule_ids": [
+            "outcome.explicit"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:13046",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:86826",
+          "start_line_no": 86826,
+          "start_timestamp": "2026-03-27T22:02:44.770Z",
+          "statement": "it left the pool half-pruned before refill completed."
+        }
+      ]
+    },
+    {
+      "citation_id": "item-outcome-4",
+      "item_keys": [
+        "open-brain:outcome:af5085a1fd208d7b"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-outcome-4",
+      "provenance_refs": [
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:86509",
+          "end_line_no": 86509,
+          "end_timestamp": "2026-03-27T18:33:42.087Z",
+          "rule_ids": [
+            "outcome.explicit"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:12987",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:86503",
+          "start_line_no": 86503,
+          "start_timestamp": "2026-03-27T18:32:59.591Z",
+          "statement": "I\u2019m aligning that request shape now so the refill can use the intended model successfully."
+        }
+      ]
+    },
+    {
+      "citation_id": "item-outcome-5",
+      "item_keys": [
+        "open-brain:outcome:943a832b19fc4ad5"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-outcome-5",
+      "provenance_refs": [
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:85457",
+          "end_line_no": 85457,
+          "end_timestamp": "2026-03-27T12:42:23.246Z",
+          "rule_ids": [
+            "outcome.explicit"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:12800",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:85454",
+          "start_line_no": 85454,
+          "start_timestamp": "2026-03-27T12:41:58.460Z",
+          "statement": "Now that this change is done, can you run the retroactive cleanup to check if the pending review cases are up to standard"
+        }
+      ]
+    },
+    {
+      "citation_id": "item-outcome-6",
+      "item_keys": [
+        "open-brain:outcome:4447effaf93b8005"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-outcome-6",
+      "provenance_refs": [
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:85298",
+          "end_line_no": 85298,
+          "end_timestamp": "2026-03-27T04:41:00.088Z",
+          "rule_ids": [
+            "outcome.explicit"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:12765",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:85290",
+          "start_line_no": 85290,
+          "start_timestamp": "2026-03-27T04:40:22.227Z",
+          "statement": "I\u2019m on the validation sweep now to catch any mismatches between the new authoring state types, the cleanup/refill path, and the existing experiment payloads before we call this done."
+        }
+      ]
+    },
+    {
+      "citation_id": "item-outcome-7",
+      "item_keys": [
+        "open-brain:outcome:c76d46f91e03b7a6"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-outcome-7",
+      "provenance_refs": [
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:85107",
+          "end_line_no": 85107,
+          "end_timestamp": "2026-03-27T04:15:43.463Z",
+          "rule_ids": [
+            "outcome.explicit"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:12733",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:85101",
+          "start_line_no": 85101,
+          "start_timestamp": "2026-03-27T04:15:12.728Z",
+          "statement": "If we\u2019re going to repair existing inventory properly, I want that pass to update the real persisted lens/metadata fields instead of only rewriting one summary string and calling it done."
+        }
+      ]
+    },
+    {
+      "citation_id": "item-outcome-8",
+      "item_keys": [
+        "open-brain:outcome:b0e8aa5fdad5fc4c"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-outcome-8",
+      "provenance_refs": [
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:85053",
+          "end_line_no": 85053,
+          "end_timestamp": "2026-03-27T04:10:50.453Z",
+          "rule_ids": [
+            "outcome.explicit"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:12723",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:85043",
+          "start_line_no": 85043,
+          "start_timestamp": "2026-03-27T04:10:19.650Z",
+          "statement": "I\u2019ve finished the writer/evaluator path"
+        }
+      ]
+    },
+    {
+      "citation_id": "item-outcome-9",
+      "item_keys": [
+        "open-brain:outcome:5e5665e629a53f68"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-outcome-9",
+      "provenance_refs": [
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:84498",
+          "end_line_no": 84498,
+          "end_timestamp": "2026-03-27T02:52:28.100Z",
+          "rule_ids": [
+            "outcome.explicit"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:12637",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:84488",
+          "start_line_no": 84488,
+          "start_timestamp": "2026-03-27T02:49:37.944Z",
+          "statement": "I\u2019ve finished the read-through and I\u2019m editing the shared primitives first so the loop changes can hang off stable types and DB state: config, schema, and public types."
+        }
+      ]
+    },
+    {
+      "citation_id": "item-outcome-10",
+      "item_keys": [
+        "open-brain:outcome:3a479a8570560dbf"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-outcome-10",
+      "provenance_refs": [
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:84274",
+          "end_line_no": 84274,
+          "end_timestamp": "2026-03-27T02:21:51.852Z",
+          "rule_ids": [
+            "outcome.explicit"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:12601",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:84264",
+          "start_line_no": 84264,
+          "start_timestamp": "2026-03-27T02:21:20.588Z",
+          "statement": "I\u2019ve finished mapping the existing hooks."
+        }
+      ]
+    },
+    {
+      "citation_id": "item-outcome-11",
+      "item_keys": [
+        "open-brain:outcome:3ad67a286f4e3677"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-outcome-11",
+      "provenance_refs": [
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:84140",
+          "end_line_no": 84140,
+          "end_timestamp": "2026-03-27T02:09:38.662Z",
+          "rule_ids": [
+            "outcome.explicit"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:12581",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:84128",
+          "start_line_no": 84128,
+          "start_timestamp": "2026-03-27T02:06:55.173Z",
+          "statement": "The last piece after the new writer/judge path is teaching the loop from your `No` and `Unresolved` labels in bulk instead of waiting for screenshot-by-screenshot fixes."
+        }
+      ]
+    },
+    {
+      "citation_id": "item-outcome-12",
+      "item_keys": [
+        "open-brain:outcome:c555868bde97b3e4"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-outcome-12",
+      "provenance_refs": [
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:84004",
+          "end_line_no": 84004,
+          "end_timestamp": "2026-03-27T01:54:05.054Z",
+          "rule_ids": [
+            "outcome.explicit"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:12557",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:84001",
+          "start_line_no": 84001,
+          "start_timestamp": "2026-03-27T01:39:41.335Z",
+          "statement": "- `case usefulness`: accepted, downgraded, suppressed, unresolved"
+        },
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:84007",
+          "end_line_no": 84007,
+          "end_timestamp": "2026-03-27T01:54:05.918Z",
+          "rule_ids": [
+            "outcome.explicit"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:12559",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:84007",
+          "start_line_no": 84007,
+          "start_timestamp": "2026-03-27T01:54:05.918Z",
+          "statement": "- `case usefulness`: accepted, downgraded, suppressed, unresolved"
+        },
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:84010",
+          "end_line_no": 84010,
+          "end_timestamp": "2026-03-27T01:54:28.881Z",
+          "rule_ids": [
+            "outcome.explicit"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:12560",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:84008",
+          "start_line_no": 84008,
+          "start_timestamp": "2026-03-27T01:54:05.918Z",
+          "statement": "- `case usefulness`: accepted, downgraded, suppressed, unresolved"
+        }
+      ]
+    },
+    {
+      "citation_id": "item-outcome-13",
+      "item_keys": [
+        "open-brain:outcome:ea0be1863c4f29ed"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-outcome-13",
+      "provenance_refs": [
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:84004",
+          "end_line_no": 84004,
+          "end_timestamp": "2026-03-27T01:54:05.054Z",
+          "rule_ids": [
+            "outcome.explicit"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:12557",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:84001",
+          "start_line_no": 84001,
+          "start_timestamp": "2026-03-27T01:39:41.335Z",
+          "statement": "- Convert owner `No` and `Unresolved` outcomes into explicit generator failure buckets."
+        },
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:84007",
+          "end_line_no": 84007,
+          "end_timestamp": "2026-03-27T01:54:05.918Z",
+          "rule_ids": [
+            "outcome.explicit"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:12559",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:84007",
+          "start_line_no": 84007,
+          "start_timestamp": "2026-03-27T01:54:05.918Z",
+          "statement": "- Convert owner `No` and `Unresolved` outcomes into explicit generator failure buckets."
+        },
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:84010",
+          "end_line_no": 84010,
+          "end_timestamp": "2026-03-27T01:54:28.881Z",
+          "rule_ids": [
+            "outcome.explicit"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:12560",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:84008",
+          "start_line_no": 84008,
+          "start_timestamp": "2026-03-27T01:54:05.918Z",
+          "statement": "- Convert owner `No` and `Unresolved` outcomes into explicit generator failure buckets."
+        }
+      ]
+    },
+    {
+      "citation_id": "item-outcome-14",
+      "item_keys": [
+        "open-brain:outcome:71e68dda1d378479"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-outcome-14",
+      "provenance_refs": [
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:83960",
+          "end_line_no": 83960,
+          "end_timestamp": "2026-03-27T01:19:15.317Z",
+          "rule_ids": [
+            "outcome.explicit"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:12546",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:83960",
+          "start_line_no": 83960,
+          "start_timestamp": "2026-03-27T01:19:15.317Z",
+          "statement": "**Definition of done for this implementation**"
+        },
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:83964",
+          "end_line_no": 83964,
+          "end_timestamp": "2026-03-27T01:28:52.902Z",
+          "rule_ids": [
+            "outcome.explicit"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:12547",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:83961",
+          "start_line_no": 83961,
+          "start_timestamp": "2026-03-27T01:19:15.318Z",
+          "statement": "**Definition of done for this implementation**"
+        }
+      ]
+    },
+    {
+      "citation_id": "item-outcome-15",
+      "item_keys": [
+        "open-brain:outcome:92397856885a3d3e"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-outcome-15",
+      "provenance_refs": [
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:83960",
+          "end_line_no": 83960,
+          "end_timestamp": "2026-03-27T01:19:15.317Z",
+          "rule_ids": [
+            "outcome.explicit"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:12546",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:83960",
+          "start_line_no": 83960,
+          "start_timestamp": "2026-03-27T01:19:15.317Z",
+          "statement": "- Feed your `No` / `Unresolved` labels back into the evaluator and queue scorer continuously"
+        },
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:83964",
+          "end_line_no": 83964,
+          "end_timestamp": "2026-03-27T01:28:52.902Z",
+          "rule_ids": [
+            "outcome.explicit"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:12547",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:83961",
+          "start_line_no": 83961,
+          "start_timestamp": "2026-03-27T01:19:15.318Z",
+          "statement": "- Feed your `No` / `Unresolved` labels back into the evaluator and queue scorer continuously"
+        }
+      ]
+    },
+    {
+      "citation_id": "item-outcome-16",
+      "item_keys": [
+        "open-brain:outcome:0a955b924396e4c2"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-outcome-16",
+      "provenance_refs": [
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:83815",
+          "end_line_no": 83815,
+          "end_timestamp": "2026-03-26T21:55:28.173Z",
+          "rule_ids": [
+            "outcome.explicit"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:12520",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:83807",
+          "start_line_no": 83807,
+          "start_timestamp": "2026-03-26T21:54:45.079Z",
+          "statement": "Checking whether the rebuild completed despite the timeout."
+        }
+      ]
+    },
+    {
+      "citation_id": "item-outcome-17",
+      "item_keys": [
+        "open-brain:outcome:678d7f79f3eaf7f9"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-outcome-17",
+      "provenance_refs": [
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:82715",
+          "end_line_no": 82715,
+          "end_timestamp": "2026-03-26T13:51:09.881Z",
+          "rule_ids": [
+            "outcome.explicit"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:12336",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:82715",
+          "start_line_no": 82715,
+          "start_timestamp": "2026-03-26T13:51:09.881Z",
+          "statement": "- `Definition of done per loop batch`"
+        },
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:82720",
+          "end_line_no": 82720,
+          "end_timestamp": "2026-03-26T15:21:56.132Z",
+          "rule_ids": [
+            "outcome.explicit"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:12337",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:82716",
+          "start_line_no": 82716,
+          "start_timestamp": "2026-03-26T13:51:09.882Z",
+          "statement": "- `Definition of done per loop batch`"
+        }
+      ]
+    },
+    {
+      "citation_id": "item-outcome-18",
+      "item_keys": [
+        "open-brain:outcome:ff57a4663c139100"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-outcome-18",
+      "provenance_refs": [
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:82715",
+          "end_line_no": 82715,
+          "end_timestamp": "2026-03-26T13:51:09.881Z",
+          "rule_ids": [
+            "outcome.explicit"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:12336",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:82715",
+          "start_line_no": 82715,
+          "start_timestamp": "2026-03-26T13:51:09.881Z",
+          "statement": "- `Evaluator calibration from your NO / unresolved labels`"
+        },
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:82720",
+          "end_line_no": 82720,
+          "end_timestamp": "2026-03-26T15:21:56.132Z",
+          "rule_ids": [
+            "outcome.explicit"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:12337",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:82716",
+          "start_line_no": 82716,
+          "start_timestamp": "2026-03-26T13:51:09.882Z",
+          "statement": "- `Evaluator calibration from your NO / unresolved labels`"
+        }
+      ]
+    },
+    {
+      "citation_id": "item-outcome-19",
+      "item_keys": [
+        "open-brain:outcome:42eaf7e285aa01fa"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-outcome-19",
+      "provenance_refs": [
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:82715",
+          "end_line_no": 82715,
+          "end_timestamp": "2026-03-26T13:51:09.881Z",
+          "rule_ids": [
+            "outcome.explicit"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:12336",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:82715",
+          "start_line_no": 82715,
+          "start_timestamp": "2026-03-26T13:51:09.881Z",
+          "statement": "- unresolved blockers"
+        },
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:82720",
+          "end_line_no": 82720,
+          "end_timestamp": "2026-03-26T15:21:56.132Z",
+          "rule_ids": [
+            "outcome.explicit"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:12337",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:82716",
+          "start_line_no": 82716,
+          "start_timestamp": "2026-03-26T13:51:09.882Z",
+          "statement": "- unresolved blockers"
+        }
+      ]
+    },
+    {
+      "citation_id": "item-outcome-20",
+      "item_keys": [
+        "open-brain:outcome:4c3a5b721eac3a1e"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-outcome-20",
+      "provenance_refs": [
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:81754",
+          "end_line_no": 81754,
+          "end_timestamp": "2026-03-24T02:02:25.140Z",
+          "rule_ids": [
+            "outcome.explicit"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:12175",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:81748",
+          "start_line_no": 81748,
+          "start_timestamp": "2026-03-24T01:55:29.294Z",
+          "statement": "The stale clarify cleanup is done: there\u2019s no hidden stale clarify left, and the active pool is now clean at 12 valid clarify cases."
+        }
+      ]
+    },
+    {
+      "citation_id": "item-outcome-21",
+      "item_keys": [
+        "open-brain:outcome:bc2fc00b6af18640"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-outcome-21",
+      "provenance_refs": [
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:37798",
+          "end_line_no": 37798,
+          "end_timestamp": "2026-03-10T16:06:26.713Z",
+          "rule_ids": [
+            "outcome.explicit"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:4376",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:37791",
+          "start_line_no": 37791,
+          "start_timestamp": "2026-03-10T16:05:47.575Z",
+          "statement": "resolvedquestionafterclarification"
+        },
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:47656",
+          "end_line_no": 47656,
+          "end_timestamp": "2026-03-12T12:14:24.480Z",
+          "rule_ids": [
+            "outcome.explicit"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:6206",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:47650",
+          "start_line_no": 47650,
+          "start_timestamp": "2026-03-12T12:14:01.238Z",
+          "statement": "resolvedquestionafterclarification"
+        },
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:75901",
+          "end_line_no": 75901,
+          "end_timestamp": "2026-03-16T11:40:39.173Z",
+          "rule_ids": [
+            "outcome.explicit"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:11243",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:75896",
+          "start_line_no": 75896,
+          "start_timestamp": "2026-03-16T11:40:26.638Z",
+          "statement": "resolvedquestionafterclarification"
+        }
+      ]
+    },
+    {
+      "citation_id": "item-outcome-22",
+      "item_keys": [
+        "open-brain:outcome:5a510d46799ef189"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-outcome-22",
+      "provenance_refs": [
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:79666",
+          "end_line_no": 79666,
+          "end_timestamp": "2026-03-23T14:51:05.126Z",
+          "rule_ids": [
+            "outcome.explicit"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:11830",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:79651",
+          "start_line_no": 79651,
+          "start_timestamp": "2026-03-23T14:49:10.986Z",
+          "statement": "I\u2019m changing that so WhatsApp mentions become resolved person references in the summary instead of being removed."
+        }
+      ]
+    },
+    {
+      "citation_id": "item-outcome-23",
+      "item_keys": [
+        "open-brain:outcome:1a1335468455e4d1"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-outcome-23",
+      "provenance_refs": [
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:79637",
+          "end_line_no": 79637,
+          "end_timestamp": "2026-03-23T14:47:49.464Z",
+          "rule_ids": [
+            "outcome.explicit"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:11826",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:79634",
+          "start_line_no": 79634,
+          "start_timestamp": "2026-03-23T14:47:26.122Z",
+          "statement": "What you should have done is to understand that the reference is referring to a person in that chat."
+        }
+      ]
+    },
+    {
+      "citation_id": "item-outcome-24",
+      "item_keys": [
+        "open-brain:outcome:569fd1d7129d227b"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-outcome-24",
+      "provenance_refs": [
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:78712",
+          "end_line_no": 78712,
+          "end_timestamp": "2026-03-21T16:04:07.008Z",
+          "rule_ids": [
+            "outcome.explicit"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:11694",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:78708",
+          "start_line_no": 78708,
+          "start_timestamp": "2026-03-20T21:01:26.916Z",
+          "statement": "`Loop running, 20% completed`"
+        }
+      ]
+    },
+    {
+      "citation_id": "item-outcome-25",
+      "item_keys": [
+        "open-brain:outcome:c2c7fa65572f2960"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-outcome-25",
+      "provenance_refs": [
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:78706",
+          "end_line_no": 78706,
+          "end_timestamp": "2026-03-20T21:01:10.391Z",
+          "rule_ids": [
+            "outcome.explicit"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:11692",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:78703",
+          "start_line_no": 78703,
+          "start_timestamp": "2026-03-20T21:00:47.380Z",
+          "statement": "Text: \"Loop running, 20% completed\""
+        }
+      ]
+    },
+    {
+      "citation_id": "item-outcome-26",
+      "item_keys": [
+        "open-brain:outcome:9124b510884af4ed"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-outcome-26",
+      "provenance_refs": [
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:78636",
+          "end_line_no": 78636,
+          "end_timestamp": "2026-03-20T20:31:12.755Z",
+          "rule_ids": [
+            "outcome.explicit"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:11679",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:78632",
+          "start_line_no": 78632,
+          "start_timestamp": "2026-03-17T20:22:03.747Z",
+          "statement": "- the main problem is that too many reviewed items are ending up as `No`/`Unresolved`, so approved coverage is growing too slowly"
+        }
+      ]
+    },
+    {
+      "citation_id": "item-outcome-27",
+      "item_keys": [
+        "open-brain:outcome:4286639d5546dbde"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-outcome-27",
+      "provenance_refs": [
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:78612",
+          "end_line_no": 78612,
+          "end_timestamp": "2026-03-17T20:19:48.863Z",
+          "rule_ids": [
+            "outcome.explicit"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:11674",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:78607",
+          "start_line_no": 78607,
+          "start_timestamp": "2026-03-17T19:57:42.550Z",
+          "statement": "That should reduce how often you need to mark `No` or `Unresolved` just because low-quality items were sitting at the front of the queue."
+        }
+      ]
+    },
+    {
+      "citation_id": "item-outcome-28",
+      "item_keys": [
+        "open-brain:outcome:96f3f47e0b67d510"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-outcome-28",
+      "provenance_refs": [
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:78389",
+          "end_line_no": 78389,
+          "end_timestamp": "2026-03-17T19:32:20.226Z",
+          "rule_ids": [
+            "outcome.explicit"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:11643",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:78386",
+          "start_line_no": 78386,
+          "start_timestamp": "2026-03-17T19:32:02.417Z",
+          "statement": "I'm marking a good amount as unresolved or No."
+        }
+      ]
+    },
+    {
+      "citation_id": "item-outcome-29",
+      "item_keys": [
+        "open-brain:outcome:6c6e7e1553892599"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-outcome-29",
+      "provenance_refs": [
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:77334",
+          "end_line_no": 77334,
+          "end_timestamp": "2026-03-17T02:48:40.521Z",
+          "rule_ids": [
+            "outcome.explicit"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:11478",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:77331",
+          "start_line_no": 77331,
+          "start_timestamp": "2026-03-17T02:43:34.435Z",
+          "statement": "- time operator or resolved time anchor"
+        },
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:77337",
+          "end_line_no": 77337,
+          "end_timestamp": "2026-03-17T02:48:40.960Z",
+          "rule_ids": [
+            "outcome.explicit"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:11480",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:77337",
+          "start_line_no": 77337,
+          "start_timestamp": "2026-03-17T02:48:40.960Z",
+          "statement": "- time operator or resolved time anchor"
+        },
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:77340",
+          "end_line_no": 77340,
+          "end_timestamp": "2026-03-17T02:49:00.543Z",
+          "rule_ids": [
+            "outcome.explicit"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:11481",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:77338",
+          "start_line_no": 77338,
+          "start_timestamp": "2026-03-17T02:48:40.960Z",
+          "statement": "- time operator or resolved time anchor"
+        }
+      ]
+    },
+    {
+      "citation_id": "item-outcome-30",
+      "item_keys": [
+        "open-brain:outcome:ef0b2d1d7c3dc125"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-outcome-30",
+      "provenance_refs": [
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:76635",
+          "end_line_no": 76635,
+          "end_timestamp": "2026-03-16T18:15:36.858Z",
+          "rule_ids": [
+            "outcome.explicit"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:11354",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:76630",
+          "start_line_no": 76630,
+          "start_timestamp": "2026-03-16T18:05:11.693Z",
+          "statement": "- the generation loop finished its current job"
+        }
+      ]
+    },
+    {
+      "citation_id": "item-outcome-31",
+      "item_keys": [
+        "open-brain:outcome:14b18d07e3640af0"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-outcome-31",
+      "provenance_refs": [
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:76610",
+          "end_line_no": 76610,
+          "end_timestamp": "2026-03-16T18:03:51.383Z",
+          "rule_ids": [
+            "outcome.explicit"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:11349",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:76605",
+          "start_line_no": 76605,
+          "start_timestamp": "2026-03-16T17:56:39.036Z",
+          "statement": "- `generation loop`: finished"
+        }
+      ]
+    },
+    {
+      "citation_id": "item-outcome-32",
+      "item_keys": [
+        "open-brain:outcome:a52ccc61258dcbfc"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-outcome-32",
+      "provenance_refs": [
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:76610",
+          "end_line_no": 76610,
+          "end_timestamp": "2026-03-16T18:03:51.383Z",
+          "rule_ids": [
+            "outcome.explicit"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:11349",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:76605",
+          "start_line_no": 76605,
+          "start_timestamp": "2026-03-16T17:56:39.036Z",
+          "statement": "Yes, the loop is over in the sense that generation finished its current job."
+        }
+      ]
+    },
+    {
+      "citation_id": "item-outcome-33",
+      "item_keys": [
+        "open-brain:outcome:d16f79024c0567a8"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-outcome-33",
+      "provenance_refs": [
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:75564",
+          "end_line_no": 75564,
+          "end_timestamp": "2026-03-16T10:07:41.916Z",
+          "rule_ids": [
+            "outcome.explicit"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:11188",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:75564",
+          "start_line_no": 75564,
+          "start_timestamp": "2026-03-16T10:07:41.916Z",
+          "statement": "- these are not unresolved people anymore"
+        },
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:75568",
+          "end_line_no": 75568,
+          "end_timestamp": "2026-03-16T11:17:02.651Z",
+          "rule_ids": [
+            "outcome.explicit"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:11189",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:75565",
+          "start_line_no": 75565,
+          "start_timestamp": "2026-03-16T10:07:41.916Z",
+          "statement": "- these are not unresolved people anymore"
+        }
+      ]
+    },
+    {
+      "citation_id": "item-outcome-34",
+      "item_keys": [
+        "open-brain:outcome:ed051f9171e09e02"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-outcome-34",
+      "provenance_refs": [
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:75564",
+          "end_line_no": 75564,
+          "end_timestamp": "2026-03-16T10:07:41.916Z",
+          "rule_ids": [
+            "outcome.explicit"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:11188",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:75564",
+          "start_line_no": 75564,
+          "start_timestamp": "2026-03-16T10:07:41.916Z",
+          "statement": "- Validation completed:"
+        },
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:75568",
+          "end_line_no": 75568,
+          "end_timestamp": "2026-03-16T11:17:02.651Z",
+          "rule_ids": [
+            "outcome.explicit"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:11189",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:75565",
+          "start_line_no": 75565,
+          "start_timestamp": "2026-03-16T10:07:41.916Z",
+          "statement": "- Validation completed:"
+        }
+      ]
+    },
+    {
+      "citation_id": "item-outcome-35",
+      "item_keys": [
+        "open-brain:outcome:b20679bb854d216f"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-outcome-35",
+      "provenance_refs": [
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:72397",
+          "end_line_no": 72397,
+          "end_timestamp": "2026-03-16T00:38:40.936Z",
+          "rule_ids": [
+            "outcome.explicit"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:10683",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:72397",
+          "start_line_no": 72397,
+          "start_timestamp": "2026-03-16T00:38:40.936Z",
+          "statement": "- more graph-like, less polished unless done carefully"
+        },
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:72402",
+          "end_line_no": 72402,
+          "end_timestamp": "2026-03-16T01:00:24.542Z",
+          "rule_ids": [
+            "outcome.explicit"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:10684",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:72398",
+          "start_line_no": 72398,
+          "start_timestamp": "2026-03-16T00:38:40.936Z",
+          "statement": "- more graph-like, less polished unless done carefully"
+        }
+      ]
+    },
+    {
+      "citation_id": "item-outcome-36",
+      "item_keys": [
+        "open-brain:outcome:35e38aa0224b7f5f"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-outcome-36",
+      "provenance_refs": [
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:72086",
+          "end_line_no": 72086,
+          "end_timestamp": "2026-03-15T22:30:30.731Z",
+          "rule_ids": [
+            "outcome.explicit"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:10629",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:72082",
+          "start_line_no": 72082,
+          "start_timestamp": "2026-03-15T22:30:15.670Z",
+          "statement": "- Ran the network backfill successfully for `personal.main`:"
+        },
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:72091",
+          "end_line_no": 72091,
+          "end_timestamp": "2026-03-15T23:58:43.362Z",
+          "rule_ids": [
+            "outcome.explicit"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:10630",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:72087",
+          "start_line_no": 72087,
+          "start_timestamp": "2026-03-15T22:30:30.732Z",
+          "statement": "- Ran the network backfill successfully for `personal.main`:"
+        }
+      ]
+    },
+    {
+      "citation_id": "item-outcome-37",
+      "item_keys": [
+        "open-brain:outcome:39f5f75ba56dbba1"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-outcome-37",
+      "provenance_refs": [
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:72032",
+          "end_line_no": 72032,
+          "end_timestamp": "2026-03-15T22:28:58.748Z",
+          "rule_ids": [
+            "outcome.explicit"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:10624",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:72018",
+          "start_line_no": 72018,
+          "start_timestamp": "2026-03-15T22:26:25.835Z",
+          "statement": "The backfill completed cleanly with real data, so I\u2019m rebuilding the running app now to make the new Network screen live instead of leaving it only in source and dist."
+        }
+      ]
+    },
+    {
+      "citation_id": "item-outcome-38",
+      "item_keys": [
+        "open-brain:outcome:9ece3808024912e0"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-outcome-38",
+      "provenance_refs": [
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:71701",
+          "end_line_no": 71701,
+          "end_timestamp": "2026-03-15T22:00:08.391Z",
+          "rule_ids": [
+            "outcome.explicit"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:10565",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:71698",
+          "start_line_no": 71698,
+          "start_timestamp": "2026-03-15T21:44:54.581Z",
+          "statement": "- a migration/backfill pipeline that populates all new or revised graph data structures immediately after implementation is finished"
+        },
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:71704",
+          "end_line_no": 71704,
+          "end_timestamp": "2026-03-15T22:00:08.395Z",
+          "rule_ids": [
+            "outcome.explicit"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:10567",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:71704",
+          "start_line_no": 71704,
+          "start_timestamp": "2026-03-15T22:00:08.395Z",
+          "statement": "- a migration/backfill pipeline that populates all new or revised graph data structures immediately after implementation is finished"
+        },
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:71706",
+          "end_line_no": 71706,
+          "end_timestamp": "2026-03-15T22:00:09.390Z",
+          "rule_ids": [
+            "outcome.explicit"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:10568",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:71705",
+          "start_line_no": 71705,
+          "start_timestamp": "2026-03-15T22:00:08.396Z",
+          "statement": "- a migration/backfill pipeline that populates all new or revised graph data structures immediately after implementation is finished"
+        }
+      ]
+    },
+    {
+      "citation_id": "item-outcome-39",
+      "item_keys": [
+        "open-brain:outcome:28b5ad0f5d7239cb"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-outcome-39",
+      "provenance_refs": [
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:71639",
+          "end_line_no": 71639,
+          "end_timestamp": "2026-03-15T20:19:37.696Z",
+          "rule_ids": [
+            "outcome.explicit"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:10547",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:71638",
+          "start_line_no": 71638,
+          "start_timestamp": "2026-03-15T20:19:37.696Z",
+          "statement": "Please check it and tell me what can be done/adapted/enhanced to my data."
+        }
+      ]
+    },
+    {
+      "citation_id": "item-outcome-40",
+      "item_keys": [
+        "open-brain:outcome:a26586a383a81bfa"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-outcome-40",
+      "provenance_refs": [
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:70891",
+          "end_line_no": 70891,
+          "end_timestamp": "2026-03-15T12:50:48.692Z",
+          "rule_ids": [
+            "outcome.explicit"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:10421",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:70882",
+          "start_line_no": 70882,
+          "start_timestamp": "2026-03-15T12:50:31.548Z",
+          "statement": "- The login loop symptom is consistent with the previous invalid-body parse path causing client-side failure before token handling completed."
+        },
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:70896",
+          "end_line_no": 70896,
+          "end_timestamp": "2026-03-15T15:29:06.398Z",
+          "rule_ids": [
+            "outcome.explicit"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:10422",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:70892",
+          "start_line_no": 70892,
+          "start_timestamp": "2026-03-15T12:50:48.692Z",
+          "statement": "- The login loop symptom is consistent with the previous invalid-body parse path causing client-side failure before token handling completed."
+        }
+      ]
+    }
+  ],
+  "domain": "open-brain",
+  "input_item_keys": [
+    "open-brain:outcome:9aaf19c68e8ff0e0",
+    "open-brain:outcome:76f8b9259a0e5266",
+    "open-brain:outcome:130287ceb94ba209",
+    "open-brain:outcome:af5085a1fd208d7b",
+    "open-brain:outcome:943a832b19fc4ad5",
+    "open-brain:outcome:4447effaf93b8005",
+    "open-brain:outcome:c76d46f91e03b7a6",
+    "open-brain:outcome:b0e8aa5fdad5fc4c",
+    "open-brain:outcome:5e5665e629a53f68",
+    "open-brain:outcome:3a479a8570560dbf",
+    "open-brain:outcome:3ad67a286f4e3677",
+    "open-brain:outcome:c555868bde97b3e4",
+    "open-brain:outcome:ea0be1863c4f29ed",
+    "open-brain:outcome:71e68dda1d378479",
+    "open-brain:outcome:92397856885a3d3e",
+    "open-brain:outcome:0a955b924396e4c2",
+    "open-brain:outcome:678d7f79f3eaf7f9",
+    "open-brain:outcome:ff57a4663c139100",
+    "open-brain:outcome:42eaf7e285aa01fa",
+    "open-brain:outcome:4c3a5b721eac3a1e",
+    "open-brain:outcome:bc2fc00b6af18640",
+    "open-brain:outcome:5a510d46799ef189",
+    "open-brain:outcome:1a1335468455e4d1",
+    "open-brain:outcome:569fd1d7129d227b",
+    "open-brain:outcome:c2c7fa65572f2960",
+    "open-brain:outcome:9124b510884af4ed",
+    "open-brain:outcome:4286639d5546dbde",
+    "open-brain:outcome:96f3f47e0b67d510",
+    "open-brain:outcome:6c6e7e1553892599",
+    "open-brain:outcome:ef0b2d1d7c3dc125",
+    "open-brain:outcome:14b18d07e3640af0",
+    "open-brain:outcome:a52ccc61258dcbfc",
+    "open-brain:outcome:d16f79024c0567a8",
+    "open-brain:outcome:ed051f9171e09e02",
+    "open-brain:outcome:b20679bb854d216f",
+    "open-brain:outcome:35e38aa0224b7f5f",
+    "open-brain:outcome:39f5f75ba56dbba1",
+    "open-brain:outcome:9ece3808024912e0",
+    "open-brain:outcome:28b5ad0f5d7239cb",
+    "open-brain:outcome:a26586a383a81bfa"
+  ],
+  "page_id": "projects/open-brain/outcomes",
+  "page_type": "bucket_page",
+  "rendered_page_metadata": {
+    "claim_count": 6,
+    "conflict_count": 18,
+    "related_domains": [
+      "global"
+    ],
+    "related_pages": [
+      {
+        "page_key": "index",
+        "title": "Open Brain",
+        "wikilink": "[[projects/open-brain/index|Open Brain]]"
+      },
+      {
+        "page_key": "communication-preferences",
+        "title": "Open Brain - Communication Preferences",
+        "wikilink": "[[projects/open-brain/communication-preferences|Open Brain - Communication Preferences]]"
+      },
+      {
+        "page_key": "workflow-rules",
+        "title": "Open Brain - Workflow Rules",
+        "wikilink": "[[projects/open-brain/workflow-rules|Open Brain - Workflow Rules]]"
+      },
+      {
+        "page_key": "architecture",
+        "title": "Open Brain - Architecture",
+        "wikilink": "[[projects/open-brain/architecture|Open Brain - Architecture]]"
+      },
+      {
+        "page_key": "code-map",
+        "title": "Open Brain - Code Map",
+        "wikilink": "[[projects/open-brain/code-map|Open Brain - Code Map]]"
+      },
+      {
+        "page_key": "current-state",
+        "title": "Open Brain - Current State",
+        "wikilink": "[[projects/open-brain/current-state|Open Brain - Current State]]"
+      },
+      {
+        "page_key": "tasks",
+        "title": "Open Brain - Tasks",
+        "wikilink": "[[projects/open-brain/tasks|Open Brain - Tasks]]"
+      },
+      {
+        "page_key": "failures",
+        "title": "Open Brain - Failures",
+        "wikilink": "[[projects/open-brain/failures|Open Brain - Failures]]"
+      },
+      {
+        "page_key": "decisions",
+        "title": "Open Brain - Decisions",
+        "wikilink": "[[projects/open-brain/decisions|Open Brain - Decisions]]"
+      },
+      {
+        "page_key": "next-steps",
+        "title": "Open Brain - Next Steps",
+        "wikilink": "[[projects/open-brain/next-steps|Open Brain - Next Steps]]"
+      },
+      {
+        "page_key": "open-questions",
+        "title": "Open Brain - Open Questions",
+        "wikilink": "[[projects/open-brain/open-questions|Open Brain - Open Questions]]"
+      }
+    ],
+    "relative_page_path": "projects/open-brain/outcomes.md",
+    "source_count": 2,
+    "title": "Open Brain - Outcomes"
+  },
+  "renderer": "obsidian_markdown",
+  "synthesized_claims": [
+    {
+      "claim_id": "claim-1",
+      "confidence": "strong",
+      "latent_type": "implicit_dos_and_donts",
+      "provenance_refs": [
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:89",
+          "end_line_no": 89,
+          "end_timestamp": "2026-04-12T21:34:14.343Z",
+          "rule_ids": [
+            "outcome.explicit"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:23",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:89",
+          "start_line_no": 89,
+          "start_timestamp": "2026-04-12T21:34:14.343Z",
+          "statement": "For actively growing files, should the system process only fully completed lines and leave any partial trailing line untouched until the next run?"
+        },
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:94",
+          "end_line_no": 94,
+          "end_timestamp": "2026-04-12T21:45:53.817Z",
+          "rule_ids": [
+            "outcome.explicit"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:24",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:90",
+          "start_line_no": 90,
+          "start_timestamp": "2026-04-12T21:34:14.344Z",
+          "statement": "For actively growing files, should the system process only fully completed lines and leave any partial trailing line untouched until the next run?"
+        }
+      ],
+      "section_id": "summary",
+      "supporting_item_ids": [
+        "open-brain:outcome:9aaf19c68e8ff0e0"
+      ],
+      "text": "The system should process only fully completed lines for actively growing files, leaving any partial trailing line untouched until the next run."
+    },
+    {
+      "claim_id": "claim-2",
+      "confidence": "strong",
+      "latent_type": "recurring_failure_patterns",
+      "provenance_refs": [
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:86834",
+          "end_line_no": 86834,
+          "end_timestamp": "2026-03-27T22:33:16.561Z",
+          "rule_ids": [
+            "outcome.explicit"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:13046",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:86826",
+          "start_line_no": 86826,
+          "start_timestamp": "2026-03-27T22:02:44.770Z",
+          "statement": "it left the pool half-pruned before refill completed."
+        }
+      ],
+      "section_id": "summary",
+      "supporting_item_ids": [
+        "open-brain:outcome:130287ceb94ba209"
+      ],
+      "text": "The pool was left half-pruned before the refill was completed."
+    },
+    {
+      "claim_id": "claim-3",
+      "confidence": "strong",
+      "latent_type": "implicit_next_steps",
+      "provenance_refs": [
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:86509",
+          "end_line_no": 86509,
+          "end_timestamp": "2026-03-27T18:33:42.087Z",
+          "rule_ids": [
+            "outcome.explicit"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:12987",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:86503",
+          "start_line_no": 86503,
+          "start_timestamp": "2026-03-27T18:32:59.591Z",
+          "statement": "I\u2019m aligning that request shape now so the refill can use the intended model successfully."
+        }
+      ],
+      "section_id": "summary",
+      "supporting_item_ids": [
+        "open-brain:outcome:af5085a1fd208d7b"
+      ],
+      "text": "The request shape is being aligned to ensure the refill can use the intended model successfully."
+    },
+    {
+      "claim_id": "claim-4",
+      "confidence": "strong",
+      "latent_type": "implicit_next_steps",
+      "provenance_refs": [
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:85457",
+          "end_line_no": 85457,
+          "end_timestamp": "2026-03-27T12:42:23.246Z",
+          "rule_ids": [
+            "outcome.explicit"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:12800",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:85454",
+          "start_line_no": 85454,
+          "start_timestamp": "2026-03-27T12:41:58.460Z",
+          "statement": "Now that this change is done, can you run the retroactive cleanup to check if the pending review cases are up to standard"
+        }
+      ],
+      "section_id": "outcome",
+      "supporting_item_ids": [
+        "open-brain:outcome:943a832b19fc4ad5"
+      ],
+      "text": "A retroactive cleanup should be run to check if the pending review cases are up to standard after the change is done."
+    },
+    {
+      "claim_id": "claim-5",
+      "confidence": "strong",
+      "latent_type": "current_state_synthesis",
+      "provenance_refs": [
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:85298",
+          "end_line_no": 85298,
+          "end_timestamp": "2026-03-27T04:41:00.088Z",
+          "rule_ids": [
+            "outcome.explicit"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:12765",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:85290",
+          "start_line_no": 85290,
+          "start_timestamp": "2026-03-27T04:40:22.227Z",
+          "statement": "I\u2019m on the validation sweep now to catch any mismatches between the new authoring state types, the cleanup/refill path, and the existing experiment payloads before we call this done."
+        }
+      ],
+      "section_id": "outcome",
+      "supporting_item_ids": [
+        "open-brain:outcome:4447effaf93b8005"
+      ],
+      "text": "A validation sweep is being conducted to catch any mismatches between the new authoring state types and the existing experiment payloads."
+    },
+    {
+      "claim_id": "claim-6",
+      "confidence": "strong",
+      "latent_type": "implicit_dos_and_donts",
+      "provenance_refs": [
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:85107",
+          "end_line_no": 85107,
+          "end_timestamp": "2026-03-27T04:15:43.463Z",
+          "rule_ids": [
+            "outcome.explicit"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:12733",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:85101",
+          "start_line_no": 85101,
+          "start_timestamp": "2026-03-27T04:15:12.728Z",
+          "statement": "If we\u2019re going to repair existing inventory properly, I want that pass to update the real persisted lens/metadata fields instead of only rewriting one summary string and calling it done."
+        }
+      ],
+      "section_id": "outcome",
+      "supporting_item_ids": [
+        "open-brain:outcome:c76d46f91e03b7a6"
+      ],
+      "text": "The repair of existing inventory should update the real persisted lens/metadata fields instead of only rewriting one summary string."
+    }
+  ],
+  "versions": {
+    "page_config_version": 2,
+    "renderer_version": 2,
+    "synthesis_prompt_version": 2,
+    "synthesis_schema_version": 1,
+    "wiki_schema_version": 2
+  }
+}

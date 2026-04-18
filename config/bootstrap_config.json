@@ -1,0 +1,203 @@
+{
+  "schema_version": 1,
+  "bootstrap_schema_version": 1,
+  "renderer": "compact_markdown",
+  "renderer_version": 1,
+  "selection_version": 1,
+  "synthesis_prompt_version": 1,
+  "synthesis_schema_version": 1,
+  "provider": {
+    "type": "openai",
+    "api_key_env": "OPENAI_API_KEY",
+    "base_url_env": "WIKIMEMORY_OPENAI_BASE_URL",
+    "model_env": "WIKIMEMORY_OPENAI_MODEL",
+    "default_model": "gpt-4o-mini",
+    "temperature": 0.2
+  },
+  "defaults": {
+    "exclude_unclassified": true,
+    "include_cross_project": true,
+    "include_conflicts_only_if_selected": true
+  },
+  "domains": [
+    {
+      "domain": "global",
+      "title": "Global",
+      "path": "global.md",
+      "kind": "global",
+      "max_chars": 1800
+    },
+    {
+      "domain": "ai-trader",
+      "title": "AI Trader",
+      "path": "projects/ai-trader.md",
+      "kind": "project",
+      "max_chars": 2600
+    },
+    {
+      "domain": "open-brain",
+      "title": "Open Brain",
+      "path": "projects/open-brain.md",
+      "kind": "project",
+      "max_chars": 2600
+    },
+    {
+      "domain": "ai-scientist",
+      "title": "AI Scientist",
+      "path": "projects/ai-scientist.md",
+      "kind": "project",
+      "max_chars": 2600
+    },
+    {
+      "domain": "cross-project",
+      "title": "Cross-Project",
+      "path": "projects/cross-project.md",
+      "kind": "cross-project",
+      "max_chars": 1800
+    }
+  ],
+  "sections": {
+    "global": [
+      {
+        "section_id": "interaction_style",
+        "title": "Interaction Style",
+        "max_items": 6,
+        "max_claims": 2,
+        "item_types": ["communication_preference"],
+        "claim_buckets": ["communication-preferences", "index"]
+      },
+      {
+        "section_id": "do_rules",
+        "title": "Do Rules",
+        "max_items": 6,
+        "max_claims": 1,
+        "item_types": ["do_rule"],
+        "claim_buckets": ["workflow-rules"]
+      },
+      {
+        "section_id": "dont_rules",
+        "title": "Don't Rules",
+        "max_items": 6,
+        "max_claims": 1,
+        "item_types": ["dont_rule"],
+        "claim_buckets": ["workflow-rules"]
+      },
+      {
+        "section_id": "workflow",
+        "title": "Workflow",
+        "max_items": 6,
+        "max_claims": 2,
+        "item_types": ["workflow_rule"],
+        "claim_buckets": ["workflow-rules", "index"]
+      },
+      {
+        "section_id": "active_risks",
+        "title": "Active Risks",
+        "max_items": 3,
+        "max_claims": 1,
+        "item_types": ["failure"],
+        "claim_buckets": ["failures", "index"]
+      }
+    ],
+    "project": [
+      {
+        "section_id": "identity",
+        "title": "Identity",
+        "max_items": 0,
+        "max_claims": 4,
+        "item_types": [],
+        "claim_buckets": ["index"]
+      },
+      {
+        "section_id": "current_state",
+        "title": "Current State",
+        "max_items": 6,
+        "max_claims": 2,
+        "item_types": ["current_state"],
+        "claim_buckets": ["current-state", "index"]
+      },
+      {
+        "section_id": "architecture",
+        "title": "Architecture",
+        "max_items": 5,
+        "max_claims": 2,
+        "item_types": ["architecture_note"],
+        "claim_buckets": ["architecture", "code-map"]
+      },
+      {
+        "section_id": "project_rules",
+        "title": "Project Rules",
+        "max_items": 4,
+        "max_claims": 1,
+        "item_types": ["workflow_rule", "do_rule", "dont_rule"],
+        "claim_buckets": ["workflow-rules"]
+      },
+      {
+        "section_id": "tasks",
+        "title": "Tasks",
+        "max_items": 5,
+        "max_claims": 2,
+        "item_types": ["task_request"],
+        "claim_buckets": ["tasks"]
+      },
+      {
+        "section_id": "next_steps",
+        "title": "Next Steps",
+        "max_items": 5,
+        "max_claims": 2,
+        "item_types": ["next_step"],
+        "claim_buckets": ["next-steps"]
+      },
+      {
+        "section_id": "open_questions",
+        "title": "Open Questions",
+        "max_items": 4,
+        "max_claims": 2,
+        "item_types": ["open_question"],
+        "claim_buckets": ["open-questions"]
+      },
+      {
+        "section_id": "failures_risks",
+        "title": "Failures And Risks",
+        "max_items": 4,
+        "max_claims": 1,
+        "item_types": ["failure"],
+        "claim_buckets": ["failures"]
+      }
+    ],
+    "cross-project": [
+      {
+        "section_id": "shared_context",
+        "title": "Shared Context",
+        "max_items": 5,
+        "max_claims": 2,
+        "item_types": ["current_state", "decision", "architecture_note"],
+        "claim_buckets": ["index", "architecture", "current-state", "decisions"]
+      },
+      {
+        "section_id": "coordination",
+        "title": "Coordination",
+        "max_items": 5,
+        "max_claims": 1,
+        "item_types": ["task_request", "workflow_rule", "do_rule", "dont_rule"],
+        "claim_buckets": ["tasks", "workflow-rules"]
+      },
+      {
+        "section_id": "next_steps",
+        "title": "Next Steps",
+        "max_items": 4,
+        "max_claims": 1,
+        "item_types": ["next_step"],
+        "claim_buckets": ["next-steps"]
+      },
+      {
+        "section_id": "open_questions",
+        "title": "Open Questions",
+        "max_items": 4,
+        "max_claims": 1,
+        "item_types": ["open_question"],
+        "claim_buckets": ["open-questions"]
+      }
+    ]
+  }
+}

@@ -1,0 +1,1928 @@
+{
+  "bucket": "outcomes",
+  "citations": [
+    {
+      "citation_id": "claim-1",
+      "item_keys": [
+        "cross-project:outcome:6e1237c4ae332dd4"
+      ],
+      "kind": "synthesized_claim",
+      "label": "claim-1",
+      "provenance_refs": [
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:3843",
+          "end_line_no": 3843,
+          "end_timestamp": "2026-04-13T12:57:19.659Z",
+          "rule_ids": [
+            "outcome.explicit"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:773",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:3833",
+          "start_line_no": 3833,
+          "start_timestamp": "2026-04-13T12:57:07.083Z",
+          "statement": "I\u2019ve finished the migration hooks for classification and extraction."
+        }
+      ]
+    },
+    {
+      "citation_id": "claim-2",
+      "item_keys": [
+        "cross-project:outcome:464176c8685a4af9"
+      ],
+      "kind": "synthesized_claim",
+      "label": "claim-2",
+      "provenance_refs": [
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:3189",
+          "end_line_no": 3189,
+          "end_timestamp": "2026-04-13T04:28:23.507Z",
+          "rule_ids": [
+            "outcome.explicit"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:656",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:3186",
+          "start_line_no": 3186,
+          "start_timestamp": "2026-04-13T04:26:02.212Z",
+          "statement": "- last completed phase"
+        },
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:3192",
+          "end_line_no": 3192,
+          "end_timestamp": "2026-04-13T04:28:23.512Z",
+          "rule_ids": [
+            "outcome.explicit"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:658",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:3192",
+          "start_line_no": 3192,
+          "start_timestamp": "2026-04-13T04:28:23.512Z",
+          "statement": "- last completed phase"
+        },
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:3194",
+          "end_line_no": 3194,
+          "end_timestamp": "2026-04-13T04:28:26.106Z",
+          "rule_ids": [
+            "outcome.explicit"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:659",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:3193",
+          "start_line_no": 3193,
+          "start_timestamp": "2026-04-13T04:28:23.513Z",
+          "statement": "- last completed phase"
+        }
+      ]
+    },
+    {
+      "citation_id": "claim-3",
+      "item_keys": [
+        "cross-project:outcome:452ed78b59f5100e"
+      ],
+      "kind": "synthesized_claim",
+      "label": "claim-3",
+      "provenance_refs": [
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:3189",
+          "end_line_no": 3189,
+          "end_timestamp": "2026-04-13T04:28:23.507Z",
+          "rule_ids": [
+            "outcome.explicit"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:656",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:3186",
+          "start_line_no": 3186,
+          "start_timestamp": "2026-04-13T04:26:02.212Z",
+          "statement": "- started/finished timestamps"
+        },
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:3192",
+          "end_line_no": 3192,
+          "end_timestamp": "2026-04-13T04:28:23.512Z",
+          "rule_ids": [
+            "outcome.explicit"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:658",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:3192",
+          "start_line_no": 3192,
+          "start_timestamp": "2026-04-13T04:28:23.512Z",
+          "statement": "- started/finished timestamps"
+        },
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:3194",
+          "end_line_no": 3194,
+          "end_timestamp": "2026-04-13T04:28:26.106Z",
+          "rule_ids": [
+            "outcome.explicit"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:659",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:3193",
+          "start_line_no": 3193,
+          "start_timestamp": "2026-04-13T04:28:23.513Z",
+          "statement": "- started/finished timestamps"
+        }
+      ]
+    },
+    {
+      "citation_id": "claim-4",
+      "item_keys": [
+        "cross-project:outcome:599da5bc9d94c6ba"
+      ],
+      "kind": "synthesized_claim",
+      "label": "claim-4",
+      "provenance_refs": [
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:3189",
+          "end_line_no": 3189,
+          "end_timestamp": "2026-04-13T04:28:23.507Z",
+          "rule_ids": [
+            "outcome.explicit"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:656",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:3186",
+          "start_line_no": 3186,
+          "start_timestamp": "2026-04-13T04:26:02.212Z",
+          "statement": "- the top-level refresh report records the last completed phase and the failure point"
+        },
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:3192",
+          "end_line_no": 3192,
+          "end_timestamp": "2026-04-13T04:28:23.512Z",
+          "rule_ids": [
+            "outcome.explicit"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:658",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:3192",
+          "start_line_no": 3192,
+          "start_timestamp": "2026-04-13T04:28:23.512Z",
+          "statement": "- the top-level refresh report records the last completed phase and the failure point"
+        },
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:3194",
+          "end_line_no": 3194,
+          "end_timestamp": "2026-04-13T04:28:26.106Z",
+          "rule_ids": [
+            "outcome.explicit"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:659",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:3193",
+          "start_line_no": 3193,
+          "start_timestamp": "2026-04-13T04:28:23.513Z",
+          "statement": "- the top-level refresh report records the last completed phase and the failure point"
+        }
+      ]
+    },
+    {
+      "citation_id": "claim-5",
+      "item_keys": [
+        "cross-project:outcome:ab876d5ce1159c4e"
+      ],
+      "kind": "synthesized_claim",
+      "label": "claim-5",
+      "provenance_refs": [
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:940",
+          "end_line_no": 940,
+          "end_timestamp": "2026-04-13T00:39:27.116Z",
+          "rule_ids": [
+            "outcome.explicit"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:209",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:930",
+          "start_line_no": 930,
+          "start_timestamp": "2026-04-13T00:39:13.026Z",
+          "statement": "- Validation passed for the relevant scope: `python -m unittest tests.test_normalization tests.test_segmentation tests.test_classification -v` completed successfully."
+        },
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:945",
+          "end_line_no": 945,
+          "end_timestamp": "2026-04-13T00:42:55.037Z",
+          "rule_ids": [
+            "outcome.explicit"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:210",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:941",
+          "start_line_no": 941,
+          "start_timestamp": "2026-04-13T00:39:27.117Z",
+          "statement": "- Validation passed for the relevant scope: `python -m unittest tests.test_normalization tests.test_segmentation tests.test_classification -v` completed successfully."
+        }
+      ]
+    },
+    {
+      "citation_id": "claim-6",
+      "item_keys": [
+        "cross-project:outcome:d01db8972d3c60d0"
+      ],
+      "kind": "synthesized_claim",
+      "label": "claim-6",
+      "provenance_refs": [
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:72060",
+          "end_line_no": 72060,
+          "end_timestamp": "2026-03-15T22:29:35.093Z",
+          "rule_ids": [
+            "outcome.explicit"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:10625",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:72033",
+          "start_line_no": 72033,
+          "start_timestamp": "2026-03-15T22:29:03.957Z",
+          "statement": "The build is live but the first smoke request is getting an empty reply, so I\u2019m checking for a runtime regression in the served app before I call this done."
+        }
+      ]
+    },
+    {
+      "citation_id": "claim-7",
+      "item_keys": [
+        "cross-project:outcome:46de865a67cc34d9"
+      ],
+      "kind": "synthesized_claim",
+      "label": "claim-7",
+      "provenance_refs": [
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:70130",
+          "end_line_no": 70130,
+          "end_timestamp": "2026-03-15T12:27:52.778Z",
+          "rule_ids": [
+            "outcome.explicit"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:10331",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:70113",
+          "start_line_no": 70113,
+          "start_timestamp": "2026-03-15T12:27:35.183Z",
+          "statement": "The restart completed, but the API port still wasn\u2019t answering immediately."
+        }
+      ]
+    },
+    {
+      "citation_id": "item-outcome-1",
+      "item_keys": [
+        "cross-project:outcome:6e1237c4ae332dd4"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-outcome-1",
+      "provenance_refs": [
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:3843",
+          "end_line_no": 3843,
+          "end_timestamp": "2026-04-13T12:57:19.659Z",
+          "rule_ids": [
+            "outcome.explicit"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:773",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:3833",
+          "start_line_no": 3833,
+          "start_timestamp": "2026-04-13T12:57:07.083Z",
+          "statement": "I\u2019ve finished the migration hooks for classification and extraction."
+        }
+      ]
+    },
+    {
+      "citation_id": "item-outcome-2",
+      "item_keys": [
+        "cross-project:outcome:464176c8685a4af9"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-outcome-2",
+      "provenance_refs": [
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:3189",
+          "end_line_no": 3189,
+          "end_timestamp": "2026-04-13T04:28:23.507Z",
+          "rule_ids": [
+            "outcome.explicit"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:656",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:3186",
+          "start_line_no": 3186,
+          "start_timestamp": "2026-04-13T04:26:02.212Z",
+          "statement": "- last completed phase"
+        },
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:3192",
+          "end_line_no": 3192,
+          "end_timestamp": "2026-04-13T04:28:23.512Z",
+          "rule_ids": [
+            "outcome.explicit"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:658",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:3192",
+          "start_line_no": 3192,
+          "start_timestamp": "2026-04-13T04:28:23.512Z",
+          "statement": "- last completed phase"
+        },
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:3194",
+          "end_line_no": 3194,
+          "end_timestamp": "2026-04-13T04:28:26.106Z",
+          "rule_ids": [
+            "outcome.explicit"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:659",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:3193",
+          "start_line_no": 3193,
+          "start_timestamp": "2026-04-13T04:28:23.513Z",
+          "statement": "- last completed phase"
+        }
+      ]
+    },
+    {
+      "citation_id": "item-outcome-3",
+      "item_keys": [
+        "cross-project:outcome:452ed78b59f5100e"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-outcome-3",
+      "provenance_refs": [
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:3189",
+          "end_line_no": 3189,
+          "end_timestamp": "2026-04-13T04:28:23.507Z",
+          "rule_ids": [
+            "outcome.explicit"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:656",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:3186",
+          "start_line_no": 3186,
+          "start_timestamp": "2026-04-13T04:26:02.212Z",
+          "statement": "- started/finished timestamps"
+        },
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:3192",
+          "end_line_no": 3192,
+          "end_timestamp": "2026-04-13T04:28:23.512Z",
+          "rule_ids": [
+            "outcome.explicit"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:658",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:3192",
+          "start_line_no": 3192,
+          "start_timestamp": "2026-04-13T04:28:23.512Z",
+          "statement": "- started/finished timestamps"
+        },
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:3194",
+          "end_line_no": 3194,
+          "end_timestamp": "2026-04-13T04:28:26.106Z",
+          "rule_ids": [
+            "outcome.explicit"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:659",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:3193",
+          "start_line_no": 3193,
+          "start_timestamp": "2026-04-13T04:28:23.513Z",
+          "statement": "- started/finished timestamps"
+        }
+      ]
+    },
+    {
+      "citation_id": "item-outcome-4",
+      "item_keys": [
+        "cross-project:outcome:599da5bc9d94c6ba"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-outcome-4",
+      "provenance_refs": [
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:3189",
+          "end_line_no": 3189,
+          "end_timestamp": "2026-04-13T04:28:23.507Z",
+          "rule_ids": [
+            "outcome.explicit"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:656",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:3186",
+          "start_line_no": 3186,
+          "start_timestamp": "2026-04-13T04:26:02.212Z",
+          "statement": "- the top-level refresh report records the last completed phase and the failure point"
+        },
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:3192",
+          "end_line_no": 3192,
+          "end_timestamp": "2026-04-13T04:28:23.512Z",
+          "rule_ids": [
+            "outcome.explicit"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:658",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:3192",
+          "start_line_no": 3192,
+          "start_timestamp": "2026-04-13T04:28:23.512Z",
+          "statement": "- the top-level refresh report records the last completed phase and the failure point"
+        },
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:3194",
+          "end_line_no": 3194,
+          "end_timestamp": "2026-04-13T04:28:26.106Z",
+          "rule_ids": [
+            "outcome.explicit"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:659",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:3193",
+          "start_line_no": 3193,
+          "start_timestamp": "2026-04-13T04:28:23.513Z",
+          "statement": "- the top-level refresh report records the last completed phase and the failure point"
+        }
+      ]
+    },
+    {
+      "citation_id": "item-outcome-5",
+      "item_keys": [
+        "cross-project:outcome:f2db531b8e2fc680"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-outcome-5",
+      "provenance_refs": [
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:1334",
+          "end_line_no": 1334,
+          "end_timestamp": "2026-04-13T01:58:10.251Z",
+          "rule_ids": [
+            "outcome.explicit"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:302",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:1334",
+          "start_line_no": 1334,
+          "start_timestamp": "2026-04-13T01:58:10.251Z",
+          "statement": "Examples: tensions or unresolved choices visible across multiple sessions even when no single message says \u201copen question\u201d."
+        },
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:1339",
+          "end_line_no": 1339,
+          "end_timestamp": "2026-04-13T02:05:56.026Z",
+          "rule_ids": [
+            "outcome.explicit"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:303",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:1335",
+          "start_line_no": 1335,
+          "start_timestamp": "2026-04-13T01:58:10.252Z",
+          "statement": "Examples: tensions or unresolved choices visible across multiple sessions even when no single message says \u201copen question\u201d."
+        }
+      ]
+    },
+    {
+      "citation_id": "item-outcome-6",
+      "item_keys": [
+        "cross-project:outcome:49200c98116eb859"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-outcome-6",
+      "provenance_refs": [
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:1157",
+          "end_line_no": 1157,
+          "end_timestamp": "2026-04-13T01:23:56.026Z",
+          "rule_ids": [
+            "outcome.explicit"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:261",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:1156",
+          "start_line_no": 1156,
+          "start_timestamp": "2026-04-13T01:23:56.025Z",
+          "statement": "I\u2019m wiring the command surface and repo metadata now, then I\u2019ll add tests to shake out the edge cases before we consider the phase done."
+        }
+      ]
+    },
+    {
+      "citation_id": "item-outcome-7",
+      "item_keys": [
+        "cross-project:outcome:ab876d5ce1159c4e"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-outcome-7",
+      "provenance_refs": [
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:940",
+          "end_line_no": 940,
+          "end_timestamp": "2026-04-13T00:39:27.116Z",
+          "rule_ids": [
+            "outcome.explicit"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:209",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:930",
+          "start_line_no": 930,
+          "start_timestamp": "2026-04-13T00:39:13.026Z",
+          "statement": "- Validation passed for the relevant scope: `python -m unittest tests.test_normalization tests.test_segmentation tests.test_classification -v` completed successfully."
+        },
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:945",
+          "end_line_no": 945,
+          "end_timestamp": "2026-04-13T00:42:55.037Z",
+          "rule_ids": [
+            "outcome.explicit"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:210",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:941",
+          "start_line_no": 941,
+          "start_timestamp": "2026-04-13T00:39:27.117Z",
+          "statement": "- Validation passed for the relevant scope: `python -m unittest tests.test_normalization tests.test_segmentation tests.test_classification -v` completed successfully."
+        }
+      ]
+    },
+    {
+      "citation_id": "item-outcome-8",
+      "item_keys": [
+        "cross-project:outcome:d7ac26430264aac9"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-outcome-8",
+      "provenance_refs": [
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:85357",
+          "end_line_no": 85357,
+          "end_timestamp": "2026-03-27T04:48:43.270Z",
+          "rule_ids": [
+            "outcome.explicit"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:12775",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:85349",
+          "start_line_no": 85349,
+          "start_timestamp": "2026-03-27T04:48:12.910Z",
+          "statement": "The rebuild timed out waiting on Docker, so I\u2019m doing a quick status check instead of assuming it finished."
+        }
+      ]
+    },
+    {
+      "citation_id": "item-outcome-9",
+      "item_keys": [
+        "cross-project:outcome:d01db8972d3c60d0"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-outcome-9",
+      "provenance_refs": [
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:72060",
+          "end_line_no": 72060,
+          "end_timestamp": "2026-03-15T22:29:35.093Z",
+          "rule_ids": [
+            "outcome.explicit"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:10625",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:72033",
+          "start_line_no": 72033,
+          "start_timestamp": "2026-03-15T22:29:03.957Z",
+          "statement": "The build is live but the first smoke request is getting an empty reply, so I\u2019m checking for a runtime regression in the served app before I call this done."
+        }
+      ]
+    },
+    {
+      "citation_id": "item-outcome-10",
+      "item_keys": [
+        "cross-project:outcome:46de865a67cc34d9"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-outcome-10",
+      "provenance_refs": [
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:70130",
+          "end_line_no": 70130,
+          "end_timestamp": "2026-03-15T12:27:52.778Z",
+          "rule_ids": [
+            "outcome.explicit"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:10331",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:70113",
+          "start_line_no": 70113,
+          "start_timestamp": "2026-03-15T12:27:35.183Z",
+          "statement": "The restart completed, but the API port still wasn\u2019t answering immediately."
+        }
+      ]
+    },
+    {
+      "citation_id": "item-outcome-11",
+      "item_keys": [
+        "cross-project:outcome:2c2794502538c6b7"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-outcome-11",
+      "provenance_refs": [
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:63648",
+          "end_line_no": 63648,
+          "end_timestamp": "2026-03-14T00:12:13.914Z",
+          "rule_ids": [
+            "outcome.explicit"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:9252",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:63636",
+          "start_line_no": 63636,
+          "start_timestamp": "2026-03-14T00:10:41.109Z",
+          "statement": "It generalizes across all whole-corpus authored cases because it binds the question actor to the resolved statement owner for the actual local context window, instead of a raw participant-frequency guess."
+        }
+      ]
+    },
+    {
+      "citation_id": "item-outcome-12",
+      "item_keys": [
+        "cross-project:outcome:77c651b6e6be2ed0"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-outcome-12",
+      "provenance_refs": [
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:49375",
+          "end_line_no": 49375,
+          "end_timestamp": "2026-03-12T16:42:54.071Z",
+          "rule_ids": [
+            "outcome.explicit"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:6534",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:49361",
+          "start_line_no": 49361,
+          "start_timestamp": "2026-03-12T16:41:29.821Z",
+          "statement": "I\u2019m implementing those in the backend so the process can mine the whole corpus more intelligently, then I\u2019ll rerun validation and update the backlog to remove what is actually done."
+        }
+      ]
+    },
+    {
+      "citation_id": "item-outcome-13",
+      "item_keys": [
+        "cross-project:outcome:ec2f29f9192e8168"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-outcome-13",
+      "provenance_refs": [
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:49264",
+          "end_line_no": 49264,
+          "end_timestamp": "2026-03-12T16:16:30.669Z",
+          "rule_ids": [
+            "outcome.explicit"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:6510",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:49264",
+          "start_line_no": 49264,
+          "start_timestamp": "2026-03-12T16:16:30.669Z",
+          "statement": "Here are representative evidence rows where benchmark cases are currently failing to get authored successfully, with why the current intelligence is likely missing them."
+        }
+      ]
+    },
+    {
+      "citation_id": "item-outcome-14",
+      "item_keys": [
+        "cross-project:outcome:076cadc7d6a940c7"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-outcome-14",
+      "provenance_refs": [
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:49264",
+          "end_line_no": 49264,
+          "end_timestamp": "2026-03-12T16:16:30.669Z",
+          "rule_ids": [
+            "outcome.explicit"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:6510",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:49264",
+          "start_line_no": 49264,
+          "start_timestamp": "2026-03-12T16:16:30.669Z",
+          "statement": "please rollback if something already done and let\u2019s try to understand what needs to be done on next deployment.`"
+        }
+      ]
+    },
+    {
+      "citation_id": "item-outcome-15",
+      "item_keys": [
+        "cross-project:outcome:9b07d4e68bfa6746"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-outcome-15",
+      "provenance_refs": [
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:43709",
+          "end_line_no": 43709,
+          "end_timestamp": "2026-03-11T20:26:48.840Z",
+          "rule_ids": [
+            "outcome.explicit"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:5432",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:43702",
+          "start_line_no": 43702,
+          "start_timestamp": "2026-03-11T20:24:46.437Z",
+          "statement": "Also completed since your last request"
+        }
+      ]
+    },
+    {
+      "citation_id": "item-outcome-16",
+      "item_keys": [
+        "cross-project:outcome:d457b8ce727d20f8"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-outcome-16",
+      "provenance_refs": [
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:43631",
+          "end_line_no": 43631,
+          "end_timestamp": "2026-03-11T20:11:09.481Z",
+          "rule_ids": [
+            "outcome.explicit"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:5413",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:43631",
+          "start_line_no": 43631,
+          "start_timestamp": "2026-03-11T20:11:09.481Z",
+          "statement": "- Reason: assistant marked it too weak / unresolved for the current lens"
+        },
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:43636",
+          "end_line_no": 43636,
+          "end_timestamp": "2026-03-11T20:14:31.341Z",
+          "rule_ids": [
+            "outcome.explicit"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:5414",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:43632",
+          "start_line_no": 43632,
+          "start_timestamp": "2026-03-11T20:11:15.091Z",
+          "statement": "- Reason: assistant marked it too weak / unresolved for the current lens"
+        }
+      ]
+    },
+    {
+      "citation_id": "item-outcome-17",
+      "item_keys": [
+        "cross-project:outcome:94d3e0e18b5a6ca5"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-outcome-17",
+      "provenance_refs": [
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:43631",
+          "end_line_no": 43631,
+          "end_timestamp": "2026-03-11T20:11:09.481Z",
+          "rule_ids": [
+            "outcome.explicit"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:5413",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:43631",
+          "start_line_no": 43631,
+          "start_timestamp": "2026-03-11T20:11:09.481Z",
+          "statement": "- Reason: assistant marked it unresolved / weak for the current lens"
+        },
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:43636",
+          "end_line_no": 43636,
+          "end_timestamp": "2026-03-11T20:14:31.341Z",
+          "rule_ids": [
+            "outcome.explicit"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:5414",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:43632",
+          "start_line_no": 43632,
+          "start_timestamp": "2026-03-11T20:11:15.091Z",
+          "statement": "- Reason: assistant marked it unresolved / weak for the current lens"
+        }
+      ]
+    },
+    {
+      "citation_id": "item-outcome-18",
+      "item_keys": [
+        "cross-project:outcome:de0faa446caac2c0"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-outcome-18",
+      "provenance_refs": [
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:10152",
+          "end_line_no": 10152,
+          "end_timestamp": "2026-03-04T19:25:03.267Z",
+          "rule_ids": [
+            "outcome.explicit"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:875",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:10126",
+          "start_line_no": 10126,
+          "start_timestamp": "2026-03-04T19:23:28.795Z",
+          "statement": "Done."
+        },
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:10225",
+          "end_line_no": 10225,
+          "end_timestamp": "2026-03-04T19:29:38.964Z",
+          "rule_ids": [
+            "outcome.explicit"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:878",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:10208",
+          "start_line_no": 10208,
+          "start_timestamp": "2026-03-04T19:27:57.525Z",
+          "statement": "Done."
+        },
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:16919",
+          "end_line_no": 16919,
+          "end_timestamp": "2026-03-06T01:37:33.027Z",
+          "rule_ids": [
+            "outcome.explicit"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:1461",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:16904",
+          "start_line_no": 16904,
+          "start_timestamp": "2026-03-06T01:36:37.357Z",
+          "statement": "Done."
+        }
+      ]
+    },
+    {
+      "citation_id": "item-outcome-19",
+      "item_keys": [
+        "cross-project:outcome:43ae92b482a54d8d"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-outcome-19",
+      "provenance_refs": [
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:43613",
+          "end_line_no": 43613,
+          "end_timestamp": "2026-03-11T20:09:57.601Z",
+          "rule_ids": [
+            "outcome.explicit"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:5407",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:43603",
+          "start_line_no": 43603,
+          "start_timestamp": "2026-03-11T20:09:51.222Z",
+          "statement": "The two passes completed."
+        }
+      ]
+    },
+    {
+      "citation_id": "item-outcome-20",
+      "item_keys": [
+        "cross-project:outcome:739c7530a4b0a60b"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-outcome-20",
+      "provenance_refs": [
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:42415",
+          "end_line_no": 42415,
+          "end_timestamp": "2026-03-11T04:46:51.426Z",
+          "rule_ids": [
+            "outcome.explicit"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:5184",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:42403",
+          "start_line_no": 42403,
+          "start_timestamp": "2026-03-11T04:29:08.975Z",
+          "statement": "The long reseed completed cleanly on the second run."
+        }
+      ]
+    },
+    {
+      "citation_id": "item-outcome-21",
+      "item_keys": [
+        "cross-project:outcome:84282bd1dd1902bf"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-outcome-21",
+      "provenance_refs": [
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:34457",
+          "end_line_no": 34457,
+          "end_timestamp": "2026-03-09T21:12:32.118Z",
+          "rule_ids": [
+            "outcome.explicit"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:3864",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:34450",
+          "start_line_no": 34450,
+          "start_timestamp": "2026-03-09T21:05:47.388Z",
+          "statement": "- `unresolved_debt`: `<= 0.01`"
+        }
+      ]
+    },
+    {
+      "citation_id": "item-outcome-22",
+      "item_keys": [
+        "cross-project:outcome:a922c2f219e90c88"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-outcome-22",
+      "provenance_refs": [
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:34457",
+          "end_line_no": 34457,
+          "end_timestamp": "2026-03-09T21:12:32.118Z",
+          "rule_ids": [
+            "outcome.explicit"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:3864",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:34450",
+          "start_line_no": 34450,
+          "start_timestamp": "2026-03-09T21:05:47.388Z",
+          "statement": "- ambiguity class selector: clear / clarify_required / unresolved"
+        }
+      ]
+    },
+    {
+      "citation_id": "item-outcome-23",
+      "item_keys": [
+        "cross-project:outcome:87b2aa11c28f6ba9"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-outcome-23",
+      "provenance_refs": [
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:34457",
+          "end_line_no": 34457,
+          "end_timestamp": "2026-03-09T21:12:32.118Z",
+          "rule_ids": [
+            "outcome.explicit"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:3864",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:34450",
+          "start_line_no": 34450,
+          "start_timestamp": "2026-03-09T21:05:47.388Z",
+          "statement": "- clear pass rate / clarify pass rate / unresolved debt"
+        }
+      ]
+    },
+    {
+      "citation_id": "item-outcome-24",
+      "item_keys": [
+        "cross-project:outcome:3d6a12c2decf117b"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-outcome-24",
+      "provenance_refs": [
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:34457",
+          "end_line_no": 34457,
+          "end_timestamp": "2026-03-09T21:12:32.118Z",
+          "rule_ids": [
+            "outcome.explicit"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:3864",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:34450",
+          "start_line_no": 34450,
+          "start_timestamp": "2026-03-09T21:05:47.388Z",
+          "statement": "- debt gate pass if `unresolvedAmbiguousRatio <= 0.01`"
+        }
+      ]
+    },
+    {
+      "citation_id": "item-outcome-25",
+      "item_keys": [
+        "cross-project:outcome:8abf36adecd8f17f"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-outcome-25",
+      "provenance_refs": [
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:34457",
+          "end_line_no": 34457,
+          "end_timestamp": "2026-03-09T21:12:32.118Z",
+          "rule_ids": [
+            "outcome.explicit"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:3864",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:34450",
+          "start_line_no": 34450,
+          "start_timestamp": "2026-03-09T21:05:47.388Z",
+          "statement": "- filters: all, clear, clarify_required, unresolved, pending"
+        }
+      ]
+    },
+    {
+      "citation_id": "item-outcome-26",
+      "item_keys": [
+        "cross-project:outcome:93bec177eb192891"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-outcome-26",
+      "provenance_refs": [
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:34457",
+          "end_line_no": 34457,
+          "end_timestamp": "2026-03-09T21:12:32.118Z",
+          "rule_ids": [
+            "outcome.explicit"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:3864",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:34450",
+          "start_line_no": 34450,
+          "start_timestamp": "2026-03-09T21:05:47.388Z",
+          "statement": "- no unresolved required labels for lock slice"
+        }
+      ]
+    },
+    {
+      "citation_id": "item-outcome-27",
+      "item_keys": [
+        "cross-project:outcome:f88b77e3cd3602e7"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-outcome-27",
+      "provenance_refs": [
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:34457",
+          "end_line_no": 34457,
+          "end_timestamp": "2026-03-09T21:12:32.118Z",
+          "rule_ids": [
+            "outcome.explicit"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:3864",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:34450",
+          "start_line_no": 34450,
+          "start_timestamp": "2026-03-09T21:05:47.388Z",
+          "statement": "- queued/running/completed counts"
+        }
+      ]
+    },
+    {
+      "citation_id": "item-outcome-28",
+      "item_keys": [
+        "cross-project:outcome:cf5f18220e11c979"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-outcome-28",
+      "provenance_refs": [
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:34457",
+          "end_line_no": 34457,
+          "end_timestamp": "2026-03-09T21:12:32.118Z",
+          "rule_ids": [
+            "outcome.explicit"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:3864",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:34450",
+          "start_line_no": 34450,
+          "start_timestamp": "2026-03-09T21:05:47.388Z",
+          "statement": "- unresolved debt <= 1%"
+        }
+      ]
+    },
+    {
+      "citation_id": "item-outcome-29",
+      "item_keys": [
+        "cross-project:outcome:87e3a0787462d92a"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-outcome-29",
+      "provenance_refs": [
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:34457",
+          "end_line_no": 34457,
+          "end_timestamp": "2026-03-09T21:12:32.118Z",
+          "rule_ids": [
+            "outcome.explicit"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:3864",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:34450",
+          "start_line_no": 34450,
+          "start_timestamp": "2026-03-09T21:05:47.388Z",
+          "statement": "Entire pre-loop calibration + lock flow can be completed in UI without terminal."
+        }
+      ]
+    },
+    {
+      "citation_id": "item-outcome-30",
+      "item_keys": [
+        "cross-project:outcome:6b0591a3cdac9441"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-outcome-30",
+      "provenance_refs": [
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:34457",
+          "end_line_no": 34457,
+          "end_timestamp": "2026-03-09T21:12:32.118Z",
+          "rule_ids": [
+            "outcome.explicit"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:3864",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:34450",
+          "start_line_no": 34450,
+          "start_timestamp": "2026-03-09T21:05:47.388Z",
+          "statement": "Lock disabled when unresolved debt > 1%."
+        }
+      ]
+    },
+    {
+      "citation_id": "item-outcome-31",
+      "item_keys": [
+        "cross-project:outcome:17a87a43eb4757a4"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-outcome-31",
+      "provenance_refs": [
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:29928",
+          "end_line_no": 29928,
+          "end_timestamp": "2026-03-08T15:53:35.467Z",
+          "rule_ids": [
+            "outcome.explicit"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:3204",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:29927",
+          "start_line_no": 29927,
+          "start_timestamp": "2026-03-08T15:53:35.466Z",
+          "statement": "First I\u2019ll validate the new reviewer code compiles cleanly, then I\u2019ll restart the active strategy loop so each completed strategy gets an automatic intelligent review + retry-or-advance decision."
+        }
+      ]
+    },
+    {
+      "citation_id": "item-outcome-32",
+      "item_keys": [
+        "cross-project:outcome:a924a2daf8ed266f"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-outcome-32",
+      "provenance_refs": [
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:24074",
+          "end_line_no": 24074,
+          "end_timestamp": "2026-03-07T04:03:30.447Z",
+          "rule_ids": [
+            "outcome.explicit"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:2418",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:24063",
+          "start_line_no": 24063,
+          "start_timestamp": "2026-03-07T04:03:13.864Z",
+          "statement": "I\u2019ll start by checking the exact unresolved signals used by your schema, then run the counts."
+        }
+      ]
+    },
+    {
+      "citation_id": "item-outcome-33",
+      "item_keys": [
+        "cross-project:outcome:32702138ed3180f3"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-outcome-33",
+      "provenance_refs": [
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:24074",
+          "end_line_no": 24074,
+          "end_timestamp": "2026-03-07T04:03:30.447Z",
+          "rule_ids": [
+            "outcome.explicit"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:2418",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:24063",
+          "start_line_no": 24063,
+          "start_timestamp": "2026-03-07T04:03:13.864Z",
+          "statement": "unresolved"
+        }
+      ]
+    },
+    {
+      "citation_id": "item-outcome-34",
+      "item_keys": [
+        "cross-project:outcome:92bdc8e88ae128cf"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-outcome-34",
+      "provenance_refs": [
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:24062",
+          "end_line_no": 24062,
+          "end_timestamp": "2026-03-07T04:02:59.376Z",
+          "rule_ids": [
+            "outcome.explicit"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:2417",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:24046",
+          "start_line_no": 24046,
+          "start_timestamp": "2026-03-07T04:01:52.896Z",
+          "statement": "I\u2019ll quantify unresolved rows directly from DB now, then split them into \u201crecoverable from source files\u201d vs \u201clikely unrecoverable without better source metadata\u201d so you get a concrete answer."
+        }
+      ]
+    },
+    {
+      "citation_id": "item-outcome-35",
+      "item_keys": [
+        "cross-project:outcome:d4d4ed0dea5d607a"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-outcome-35",
+      "provenance_refs": [
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:20924",
+          "end_line_no": 20924,
+          "end_timestamp": "2026-03-06T21:28:49.509Z",
+          "rule_ids": [
+            "outcome.explicit"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:1993",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:20924",
+          "start_line_no": 20924,
+          "start_timestamp": "2026-03-06T21:28:49.509Z",
+          "statement": "Fields: `trace_id, namespace, question, intent, status, started_at, finished_at`."
+        },
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:20928",
+          "end_line_no": 20928,
+          "end_timestamp": "2026-03-06T21:29:02.259Z",
+          "rule_ids": [
+            "outcome.explicit"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:1994",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:20925",
+          "start_line_no": 20925,
+          "start_timestamp": "2026-03-06T21:28:49.511Z",
+          "statement": "Fields: `trace_id, namespace, question, intent, status, started_at, finished_at`."
+        }
+      ]
+    },
+    {
+      "citation_id": "item-outcome-36",
+      "item_keys": [
+        "cross-project:outcome:5c5e18298c3f10b6"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-outcome-36",
+      "provenance_refs": [
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:16405",
+          "end_line_no": 16405,
+          "end_timestamp": "2026-03-06T00:50:11.590Z",
+          "rule_ids": [
+            "outcome.explicit"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:1425",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:16395",
+          "start_line_no": 16395,
+          "start_timestamp": "2026-03-06T00:46:53.540Z",
+          "statement": "source pending processed failed %_completed"
+        },
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:16420",
+          "end_line_no": 16420,
+          "end_timestamp": "2026-03-06T00:51:10.696Z",
+          "rule_ids": [
+            "outcome.explicit"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:1426",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:16406",
+          "start_line_no": 16406,
+          "start_timestamp": "2026-03-06T00:50:11.591Z",
+          "statement": "source pending processed failed %_completed"
+        },
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:16919",
+          "end_line_no": 16919,
+          "end_timestamp": "2026-03-06T01:37:33.027Z",
+          "rule_ids": [
+            "outcome.explicit"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:1461",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:16904",
+          "start_line_no": 16904,
+          "start_timestamp": "2026-03-06T01:36:37.357Z",
+          "statement": "source pending processed failed %_completed"
+        }
+      ]
+    },
+    {
+      "citation_id": "item-outcome-37",
+      "item_keys": [
+        "cross-project:outcome:3d1959d36f5e8c98"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-outcome-37",
+      "provenance_refs": [
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:20909",
+          "end_line_no": 20909,
+          "end_timestamp": "2026-03-06T21:21:49.354Z",
+          "rule_ids": [
+            "outcome.explicit"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:1988",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:20902",
+          "start_line_no": 20902,
+          "start_timestamp": "2026-03-06T21:11:32.292Z",
+          "statement": "- direct assertion > reported speech with resolved subject > question/joke."
+        }
+      ]
+    },
+    {
+      "citation_id": "item-outcome-38",
+      "item_keys": [
+        "cross-project:outcome:a8a673043f777fb9"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-outcome-38",
+      "provenance_refs": [
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:20909",
+          "end_line_no": 20909,
+          "end_timestamp": "2026-03-06T21:21:49.354Z",
+          "rule_ids": [
+            "outcome.explicit"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:1988",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:20902",
+          "start_line_no": 20902,
+          "start_timestamp": "2026-03-06T21:11:32.292Z",
+          "statement": "Add mandatory actor fields to canonical contract (with explicit unresolved state)."
+        }
+      ]
+    },
+    {
+      "citation_id": "item-outcome-39",
+      "item_keys": [
+        "cross-project:outcome:78079bea531955b9"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-outcome-39",
+      "provenance_refs": [
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:20567",
+          "end_line_no": 20567,
+          "end_timestamp": "2026-03-06T19:51:16.879Z",
+          "rule_ids": [
+            "outcome.explicit"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:1936",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:20565",
+          "start_line_no": 20565,
+          "start_timestamp": "2026-03-06T19:51:03.245Z",
+          "statement": "- final evidence shows both lines + resolved subject (or says unresolved)."
+        }
+      ]
+    },
+    {
+      "citation_id": "item-outcome-40",
+      "item_keys": [
+        "cross-project:outcome:850ed17bd1ab3afc"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-outcome-40",
+      "provenance_refs": [
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:20567",
+          "end_line_no": 20567,
+          "end_timestamp": "2026-03-06T19:51:16.879Z",
+          "rule_ids": [
+            "outcome.explicit"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:1936",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:20565",
+          "start_line_no": 20565,
+          "start_timestamp": "2026-03-06T19:51:03.245Z",
+          "statement": "- Only use `assertion/report with resolved subject` as primary proof."
+        }
+      ]
+    }
+  ],
+  "domain": "cross-project",
+  "input_item_keys": [
+    "cross-project:outcome:6e1237c4ae332dd4",
+    "cross-project:outcome:464176c8685a4af9",
+    "cross-project:outcome:452ed78b59f5100e",
+    "cross-project:outcome:599da5bc9d94c6ba",
+    "cross-project:outcome:f2db531b8e2fc680",
+    "cross-project:outcome:49200c98116eb859",
+    "cross-project:outcome:ab876d5ce1159c4e",
+    "cross-project:outcome:d7ac26430264aac9",
+    "cross-project:outcome:d01db8972d3c60d0",
+    "cross-project:outcome:46de865a67cc34d9",
+    "cross-project:outcome:2c2794502538c6b7",
+    "cross-project:outcome:77c651b6e6be2ed0",
+    "cross-project:outcome:ec2f29f9192e8168",
+    "cross-project:outcome:076cadc7d6a940c7",
+    "cross-project:outcome:9b07d4e68bfa6746",
+    "cross-project:outcome:d457b8ce727d20f8",
+    "cross-project:outcome:94d3e0e18b5a6ca5",
+    "cross-project:outcome:de0faa446caac2c0",
+    "cross-project:outcome:43ae92b482a54d8d",
+    "cross-project:outcome:739c7530a4b0a60b",
+    "cross-project:outcome:84282bd1dd1902bf",
+    "cross-project:outcome:a922c2f219e90c88",
+    "cross-project:outcome:87b2aa11c28f6ba9",
+    "cross-project:outcome:3d6a12c2decf117b",
+    "cross-project:outcome:8abf36adecd8f17f",
+    "cross-project:outcome:93bec177eb192891",
+    "cross-project:outcome:f88b77e3cd3602e7",
+    "cross-project:outcome:cf5f18220e11c979",
+    "cross-project:outcome:87e3a0787462d92a",
+    "cross-project:outcome:6b0591a3cdac9441",
+    "cross-project:outcome:17a87a43eb4757a4",
+    "cross-project:outcome:a924a2daf8ed266f",
+    "cross-project:outcome:32702138ed3180f3",
+    "cross-project:outcome:92bdc8e88ae128cf",
+    "cross-project:outcome:d4d4ed0dea5d607a",
+    "cross-project:outcome:5c5e18298c3f10b6",
+    "cross-project:outcome:3d1959d36f5e8c98",
+    "cross-project:outcome:a8a673043f777fb9",
+    "cross-project:outcome:78079bea531955b9",
+    "cross-project:outcome:850ed17bd1ab3afc"
+  ],
+  "page_id": "projects/cross-project/outcomes",
+  "page_type": "bucket_page",
+  "rendered_page_metadata": {
+    "claim_count": 7,
+    "conflict_count": 2,
+    "related_domains": [
+      "ai-scientist",
+      "ai-trader",
+      "open-brain"
+    ],
+    "related_pages": [
+      {
+        "page_key": "index",
+        "title": "Cross-Project",
+        "wikilink": "[[projects/cross-project/index|Cross-Project]]"
+      },
+      {
+        "page_key": "communication-preferences",
+        "title": "Cross-Project - Communication Preferences",
+        "wikilink": "[[projects/cross-project/communication-preferences|Cross-Project - Communication Preferences]]"
+      },
+      {
+        "page_key": "workflow-rules",
+        "title": "Cross-Project - Workflow Rules",
+        "wikilink": "[[projects/cross-project/workflow-rules|Cross-Project - Workflow Rules]]"
+      },
+      {
+        "page_key": "architecture",
+        "title": "Cross-Project - Architecture",
+        "wikilink": "[[projects/cross-project/architecture|Cross-Project - Architecture]]"
+      },
+      {
+        "page_key": "code-map",
+        "title": "Cross-Project - Code Map",
+        "wikilink": "[[projects/cross-project/code-map|Cross-Project - Code Map]]"
+      },
+      {
+        "page_key": "current-state",
+        "title": "Cross-Project - Current State",
+        "wikilink": "[[projects/cross-project/current-state|Cross-Project - Current State]]"
+      },
+      {
+        "page_key": "tasks",
+        "title": "Cross-Project - Tasks",
+        "wikilink": "[[projects/cross-project/tasks|Cross-Project - Tasks]]"
+      },
+      {
+        "page_key": "failures",
+        "title": "Cross-Project - Failures",
+        "wikilink": "[[projects/cross-project/failures|Cross-Project - Failures]]"
+      },
+      {
+        "page_key": "decisions",
+        "title": "Cross-Project - Decisions",
+        "wikilink": "[[projects/cross-project/decisions|Cross-Project - Decisions]]"
+      },
+      {
+        "page_key": "next-steps",
+        "title": "Cross-Project - Next Steps",
+        "wikilink": "[[projects/cross-project/next-steps|Cross-Project - Next Steps]]"
+      },
+      {
+        "page_key": "open-questions",
+        "title": "Cross-Project - Open Questions",
+        "wikilink": "[[projects/cross-project/open-questions|Cross-Project - Open Questions]]"
+      }
+    ],
+    "relative_page_path": "projects/cross-project/outcomes.md",
+    "source_count": 2,
+    "title": "Cross-Project - Outcomes"
+  },
+  "renderer": "obsidian_markdown",
+  "synthesized_claims": [
+    {
+      "claim_id": "claim-1",
+      "confidence": "strong",
+      "latent_type": "current_state_synthesis",
+      "provenance_refs": [
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:3843",
+          "end_line_no": 3843,
+          "end_timestamp": "2026-04-13T12:57:19.659Z",
+          "rule_ids": [
+            "outcome.explicit"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:773",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:3833",
+          "start_line_no": 3833,
+          "start_timestamp": "2026-04-13T12:57:07.083Z",
+          "statement": "I\u2019ve finished the migration hooks for classification and extraction."
+        }
+      ],
+      "section_id": "summary",
+      "supporting_item_ids": [
+        "cross-project:outcome:6e1237c4ae332dd4"
+      ],
+      "text": "The migration hooks for classification and extraction have been completed."
+    },
+    {
+      "claim_id": "claim-2",
+      "confidence": "strong",
+      "latent_type": "current_state_synthesis",
+      "provenance_refs": [
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:3189",
+          "end_line_no": 3189,
+          "end_timestamp": "2026-04-13T04:28:23.507Z",
+          "rule_ids": [
+            "outcome.explicit"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:656",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:3186",
+          "start_line_no": 3186,
+          "start_timestamp": "2026-04-13T04:26:02.212Z",
+          "statement": "- last completed phase"
+        },
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:3192",
+          "end_line_no": 3192,
+          "end_timestamp": "2026-04-13T04:28:23.512Z",
+          "rule_ids": [
+            "outcome.explicit"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:658",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:3192",
+          "start_line_no": 3192,
+          "start_timestamp": "2026-04-13T04:28:23.512Z",
+          "statement": "- last completed phase"
+        },
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:3194",
+          "end_line_no": 3194,
+          "end_timestamp": "2026-04-13T04:28:26.106Z",
+          "rule_ids": [
+            "outcome.explicit"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:659",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:3193",
+          "start_line_no": 3193,
+          "start_timestamp": "2026-04-13T04:28:23.513Z",
+          "statement": "- last completed phase"
+        }
+      ],
+      "section_id": "summary",
+      "supporting_item_ids": [
+        "cross-project:outcome:464176c8685a4af9"
+      ],
+      "text": "The last completed phase has been recorded."
+    },
+    {
+      "claim_id": "claim-3",
+      "confidence": "strong",
+      "latent_type": "current_state_synthesis",
+      "provenance_refs": [
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:3189",
+          "end_line_no": 3189,
+          "end_timestamp": "2026-04-13T04:28:23.507Z",
+          "rule_ids": [
+            "outcome.explicit"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:656",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:3186",
+          "start_line_no": 3186,
+          "start_timestamp": "2026-04-13T04:26:02.212Z",
+          "statement": "- started/finished timestamps"
+        },
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:3192",
+          "end_line_no": 3192,
+          "end_timestamp": "2026-04-13T04:28:23.512Z",
+          "rule_ids": [
+            "outcome.explicit"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:658",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:3192",
+          "start_line_no": 3192,
+          "start_timestamp": "2026-04-13T04:28:23.512Z",
+          "statement": "- started/finished timestamps"
+        },
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:3194",
+          "end_line_no": 3194,
+          "end_timestamp": "2026-04-13T04:28:26.106Z",
+          "rule_ids": [
+            "outcome.explicit"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:659",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:3193",
+          "start_line_no": 3193,
+          "start_timestamp": "2026-04-13T04:28:23.513Z",
+          "statement": "- started/finished timestamps"
+        }
+      ],
+      "section_id": "summary",
+      "supporting_item_ids": [
+        "cross-project:outcome:452ed78b59f5100e"
+      ],
+      "text": "Started and finished timestamps have been documented."
+    },
+    {
+      "claim_id": "claim-4",
+      "confidence": "strong",
+      "latent_type": "current_state_synthesis",
+      "provenance_refs": [
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:3189",
+          "end_line_no": 3189,
+          "end_timestamp": "2026-04-13T04:28:23.507Z",
+          "rule_ids": [
+            "outcome.explicit"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:656",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:3186",
+          "start_line_no": 3186,
+          "start_timestamp": "2026-04-13T04:26:02.212Z",
+          "statement": "- the top-level refresh report records the last completed phase and the failure point"
+        },
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:3192",
+          "end_line_no": 3192,
+          "end_timestamp": "2026-04-13T04:28:23.512Z",
+          "rule_ids": [
+            "outcome.explicit"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:658",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:3192",
+          "start_line_no": 3192,
+          "start_timestamp": "2026-04-13T04:28:23.512Z",
+          "statement": "- the top-level refresh report records the last completed phase and the failure point"
+        },
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:3194",
+          "end_line_no": 3194,
+          "end_timestamp": "2026-04-13T04:28:26.106Z",
+          "rule_ids": [
+            "outcome.explicit"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:659",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:3193",
+          "start_line_no": 3193,
+          "start_timestamp": "2026-04-13T04:28:23.513Z",
+          "statement": "- the top-level refresh report records the last completed phase and the failure point"
+        }
+      ],
+      "section_id": "summary",
+      "supporting_item_ids": [
+        "cross-project:outcome:599da5bc9d94c6ba"
+      ],
+      "text": "The top-level refresh report includes the last completed phase and the failure point."
+    },
+    {
+      "claim_id": "claim-5",
+      "confidence": "strong",
+      "latent_type": "current_state_synthesis",
+      "provenance_refs": [
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:940",
+          "end_line_no": 940,
+          "end_timestamp": "2026-04-13T00:39:27.116Z",
+          "rule_ids": [
+            "outcome.explicit"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:209",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:930",
+          "start_line_no": 930,
+          "start_timestamp": "2026-04-13T00:39:13.026Z",
+          "statement": "- Validation passed for the relevant scope: `python -m unittest tests.test_normalization tests.test_segmentation tests.test_classification -v` completed successfully."
+        },
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:945",
+          "end_line_no": 945,
+          "end_timestamp": "2026-04-13T00:42:55.037Z",
+          "rule_ids": [
+            "outcome.explicit"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:210",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:941",
+          "start_line_no": 941,
+          "start_timestamp": "2026-04-13T00:39:27.117Z",
+          "statement": "- Validation passed for the relevant scope: `python -m unittest tests.test_normalization tests.test_segmentation tests.test_classification -v` completed successfully."
+        }
+      ],
+      "section_id": "outcome",
+      "supporting_item_ids": [
+        "cross-project:outcome:ab876d5ce1159c4e"
+      ],
+      "text": "Validation passed for the relevant scope with successful completion of tests."
+    },
+    {
+      "claim_id": "claim-6",
+      "confidence": "strong",
+      "latent_type": "current_state_synthesis",
+      "provenance_refs": [
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:72060",
+          "end_line_no": 72060,
+          "end_timestamp": "2026-03-15T22:29:35.093Z",
+          "rule_ids": [
+            "outcome.explicit"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:10625",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:72033",
+          "start_line_no": 72033,
+          "start_timestamp": "2026-03-15T22:29:03.957Z",
+          "statement": "The build is live but the first smoke request is getting an empty reply, so I\u2019m checking for a runtime regression in the served app before I call this done."
+        }
+      ],
+      "section_id": "outcome",
+      "supporting_item_ids": [
+        "cross-project:outcome:d01db8972d3c60d0"
+      ],
+      "text": "The build is live but is experiencing issues with the first smoke request."
+    },
+    {
+      "claim_id": "claim-7",
+      "confidence": "strong",
+      "latent_type": "current_state_synthesis",
+      "provenance_refs": [
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:70130",
+          "end_line_no": 70130,
+          "end_timestamp": "2026-03-15T12:27:52.778Z",
+          "rule_ids": [
+            "outcome.explicit"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:10331",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:70113",
+          "start_line_no": 70113,
+          "start_timestamp": "2026-03-15T12:27:35.183Z",
+          "statement": "The restart completed, but the API port still wasn\u2019t answering immediately."
+        }
+      ],
+      "section_id": "outcome",
+      "supporting_item_ids": [
+        "cross-project:outcome:46de865a67cc34d9"
+      ],
+      "text": "The restart completed, but the API port was not immediately responsive."
+    }
+  ],
+  "versions": {
+    "page_config_version": 2,
+    "renderer_version": 2,
+    "synthesis_prompt_version": 2,
+    "synthesis_schema_version": 1,
+    "wiki_schema_version": 2
+  }
+}

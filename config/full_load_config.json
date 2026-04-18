@@ -1,0 +1,64 @@
+{
+  "schema_version": 1,
+  "full_load_schema_version": 1,
+  "rules_version": 1,
+  "paths": {
+    "source_roots_config": "source_roots.json",
+    "normalization_schema": "../schema/normalization_catalog.json",
+    "classification_taxonomy": "classification_taxonomy.json",
+    "extraction_rules": "extraction_rules.json",
+    "wiki_config": "wiki_config.json",
+    "bootstrap_config": "bootstrap_config.json",
+    "audit_config": "audit_config.json",
+    "live_control_sample_manifest": "../tests/fixtures/live_corpus_manifest.json"
+  },
+  "disk_budget": {
+    "max_derived_bytes": 10737418240,
+    "tracked_dirs": [
+      "normalized",
+      "segmented",
+      "classified",
+      "extracted",
+      "wiki",
+      "bootstrap",
+      "state",
+      "audits"
+    ]
+  },
+  "retry_policy": {
+    "max_phase_repair_loops": 5,
+    "repeated_non_improving_limit": 2
+  },
+  "phase_gates": {
+    "discover": {
+      "require_success": true
+    },
+    "normalize": {
+      "require_success": true
+    },
+    "segment": {
+      "require_success": true
+    },
+    "classify": {
+      "require_success": true,
+      "require_zero_unclassified": true,
+      "blocking_notice_types": [
+        "taxonomy_gap"
+      ]
+    },
+    "extract": {
+      "require_success": true,
+      "require_zero_unclassified": true
+    },
+    "wiki": {
+      "require_success": true
+    },
+    "bootstrap": {
+      "require_success": true
+    },
+    "audit": {
+      "require_success": true,
+      "require_zero_errors": true
+    }
+  }
+}

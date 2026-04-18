@@ -1,0 +1,113 @@
+{
+  "schema_version": 1,
+  "normalization_schema_version": 2,
+  "known_outer_types": {
+    "compacted": {
+      "canonical_kind": "compacted",
+      "common_fields": []
+    },
+    "event_msg": {
+      "canonical_kind": "event_msg.generic",
+      "common_fields": [
+        "type",
+        "turn_id",
+        "call_id",
+        "thread_id"
+      ],
+      "payload_subtypes": {
+        "agent_message": {
+          "canonical_kind": "event_msg.agent_message"
+        },
+        "agent_reasoning": {
+          "canonical_kind": "event_msg.agent_reasoning"
+        },
+        "context_compacted": {
+          "canonical_kind": "event_msg.context_compacted"
+        },
+        "exec_command_end": {
+          "canonical_kind": "event_msg.exec_command_end"
+        },
+        "item_completed": {
+          "canonical_kind": "event_msg.item_completed"
+        },
+        "patch_apply_end": {
+          "canonical_kind": "event_msg.patch_apply_end"
+        },
+        "task_complete": {
+          "canonical_kind": "event_msg.task_complete"
+        },
+        "task_started": {
+          "canonical_kind": "event_msg.task_started"
+        },
+        "token_count": {
+          "canonical_kind": "event_msg.token_count"
+        },
+        "turn_aborted": {
+          "canonical_kind": "event_msg.turn_aborted"
+        },
+        "user_message": {
+          "canonical_kind": "event_msg.user_message"
+        }
+      },
+      "requires_payload_type": true
+    },
+    "response_item": {
+      "canonical_kind": "response_item.generic",
+      "common_fields": [
+        "type",
+        "role",
+        "call_id",
+        "name",
+        "status"
+      ],
+      "payload_subtypes": {
+        "custom_tool_call": {
+          "canonical_kind": "response_item.custom_tool_call"
+        },
+        "custom_tool_call_output": {
+          "canonical_kind": "response_item.custom_tool_call_output"
+        },
+        "function_call": {
+          "canonical_kind": "response_item.function_call"
+        },
+        "function_call_output": {
+          "canonical_kind": "response_item.function_call_output"
+        },
+        "message": {
+          "canonical_kind": "response_item.message"
+        },
+        "reasoning": {
+          "canonical_kind": "response_item.reasoning"
+        },
+        "web_search_call": {
+          "canonical_kind": "response_item.web_search_call"
+        }
+      },
+      "requires_payload_type": true
+    },
+    "session_meta": {
+      "canonical_kind": "session_meta",
+      "common_fields": [
+        "id",
+        "timestamp",
+        "cwd",
+        "originator",
+        "cli_version",
+        "source",
+        "model_provider"
+      ]
+    },
+    "turn_context": {
+      "canonical_kind": "turn_context",
+      "common_fields": [
+        "turn_id",
+        "cwd",
+        "approval_policy",
+        "model",
+        "personality",
+        "effort",
+        "summary"
+      ]
+    }
+  }
+}

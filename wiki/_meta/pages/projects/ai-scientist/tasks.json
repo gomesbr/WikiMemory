@@ -1,0 +1,711 @@
+{
+  "bucket": "tasks",
+  "citations": [
+    {
+      "citation_id": "claim-1",
+      "item_keys": [
+        "ai-scientist:task_request:965bab3206a0dc32"
+      ],
+      "kind": "synthesized_claim",
+      "label": "claim-1",
+      "provenance_refs": [
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:976",
+          "end_line_no": 976,
+          "end_timestamp": "2026-04-13T00:53:17.295Z",
+          "rule_ids": [
+            "task_request.action"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:219",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:973",
+          "start_line_no": 973,
+          "start_timestamp": "2026-04-13T00:52:51.805Z",
+          "statement": "Should Phase 5 use this fixed v1 item taxonomy?"
+        }
+      ]
+    },
+    {
+      "citation_id": "claim-2",
+      "item_keys": [
+        "ai-scientist:task_request:8f74563b1ab9708e"
+      ],
+      "kind": "synthesized_claim",
+      "label": "claim-2",
+      "provenance_refs": [
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:48262",
+          "end_line_no": 48262,
+          "end_timestamp": "2026-03-12T13:46:31.333Z",
+          "rule_ids": [
+            "task_request.action"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:6320",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:48261",
+          "start_line_no": 48261,
+          "start_timestamp": "2026-03-12T13:46:27.007Z",
+          "statement": "adding"
+        }
+      ]
+    },
+    {
+      "citation_id": "claim-3",
+      "item_keys": [
+        "ai-scientist:task_request:8486b027ce7b7537"
+      ],
+      "kind": "synthesized_claim",
+      "label": "claim-3",
+      "provenance_refs": [
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:48262",
+          "end_line_no": 48262,
+          "end_timestamp": "2026-03-12T13:46:31.333Z",
+          "rule_ids": [
+            "task_request.action"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:6320",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:48261",
+          "start_line_no": 48261,
+          "start_timestamp": "2026-03-12T13:46:27.007Z",
+          "statement": "It will enforce evidence-family caps in `critical/certification`, promote diverse donor cases into those sets, and then I\u2019ll run it on the live experiment so your review queue stops clustering around one thread."
+        }
+      ]
+    },
+    {
+      "citation_id": "claim-4",
+      "item_keys": [
+        "ai-scientist:task_request:171942b1e8cc8773"
+      ],
+      "kind": "synthesized_claim",
+      "label": "claim-4",
+      "provenance_refs": [
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:48262",
+          "end_line_no": 48262,
+          "end_timestamp": "2026-03-12T13:46:31.333Z",
+          "rule_ids": [
+            "task_request.action"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:6320",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:48261",
+          "start_line_no": 48261,
+          "start_timestamp": "2026-03-12T13:46:27.007Z",
+          "statement": "I\u2019m adding a representative-slice rebalance pass now."
+        }
+      ]
+    },
+    {
+      "citation_id": "claim-5",
+      "item_keys": [
+        "ai-scientist:task_request:d9f209be5c1679d3"
+      ],
+      "kind": "synthesized_claim",
+      "label": "claim-5",
+      "provenance_refs": [
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:44666",
+          "end_line_no": 44666,
+          "end_timestamp": "2026-03-12T00:50:11.029Z",
+          "rule_ids": [
+            "task_request.action"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:5648",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:44660",
+          "start_line_no": 44660,
+          "start_timestamp": "2026-03-12T00:49:14.079Z",
+          "statement": "One high-impact gap remains before I lock the plan: the current reviewed benchmark has essentially no real `clarify_required` slice."
+        }
+      ]
+    },
+    {
+      "citation_id": "claim-6",
+      "item_keys": [
+        "ai-scientist:task_request:0974320ed507ef0a"
+      ],
+      "kind": "synthesized_claim",
+      "label": "claim-6",
+      "provenance_refs": [
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:43654",
+          "end_line_no": 43654,
+          "end_timestamp": "2026-03-11T20:15:25.942Z",
+          "rule_ids": [
+            "task_request.action"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:5423",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:43654",
+          "start_line_no": 43654,
+          "start_timestamp": "2026-03-11T20:15:25.942Z",
+          "statement": "- continue reviewing the 150+ materialized items with AI suggestions"
+        }
+      ]
+    },
+    {
+      "citation_id": "claim-7",
+      "item_keys": [
+        "ai-scientist:task_request:0617618186bad9f3"
+      ],
+      "kind": "synthesized_claim",
+      "label": "claim-7",
+      "provenance_refs": [
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:43654",
+          "end_line_no": 43654,
+          "end_timestamp": "2026-03-11T20:15:25.942Z",
+          "rule_ids": [
+            "task_request.action"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:5423",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:43654",
+          "start_line_no": 43654,
+          "start_timestamp": "2026-03-11T20:15:25.942Z",
+          "statement": "If you want, next I can turn these 21 into a concrete generator-fix backlog by failure family, so we can systematically eliminate this excluded slice."
+        }
+      ]
+    },
+    {
+      "citation_id": "item-task_request-1",
+      "item_keys": [
+        "ai-scientist:task_request:965bab3206a0dc32"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-task_request-1",
+      "provenance_refs": [
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:976",
+          "end_line_no": 976,
+          "end_timestamp": "2026-04-13T00:53:17.295Z",
+          "rule_ids": [
+            "task_request.action"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:219",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:973",
+          "start_line_no": 973,
+          "start_timestamp": "2026-04-13T00:52:51.805Z",
+          "statement": "Should Phase 5 use this fixed v1 item taxonomy?"
+        }
+      ]
+    },
+    {
+      "citation_id": "item-task_request-2",
+      "item_keys": [
+        "ai-scientist:task_request:8f74563b1ab9708e"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-task_request-2",
+      "provenance_refs": [
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:48262",
+          "end_line_no": 48262,
+          "end_timestamp": "2026-03-12T13:46:31.333Z",
+          "rule_ids": [
+            "task_request.action"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:6320",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:48261",
+          "start_line_no": 48261,
+          "start_timestamp": "2026-03-12T13:46:27.007Z",
+          "statement": "adding"
+        }
+      ]
+    },
+    {
+      "citation_id": "item-task_request-3",
+      "item_keys": [
+        "ai-scientist:task_request:8486b027ce7b7537"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-task_request-3",
+      "provenance_refs": [
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:48262",
+          "end_line_no": 48262,
+          "end_timestamp": "2026-03-12T13:46:31.333Z",
+          "rule_ids": [
+            "task_request.action"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:6320",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:48261",
+          "start_line_no": 48261,
+          "start_timestamp": "2026-03-12T13:46:27.007Z",
+          "statement": "It will enforce evidence-family caps in `critical/certification`, promote diverse donor cases into those sets, and then I\u2019ll run it on the live experiment so your review queue stops clustering around one thread."
+        }
+      ]
+    },
+    {
+      "citation_id": "item-task_request-4",
+      "item_keys": [
+        "ai-scientist:task_request:171942b1e8cc8773"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-task_request-4",
+      "provenance_refs": [
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:48262",
+          "end_line_no": 48262,
+          "end_timestamp": "2026-03-12T13:46:31.333Z",
+          "rule_ids": [
+            "task_request.action"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:6320",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:48261",
+          "start_line_no": 48261,
+          "start_timestamp": "2026-03-12T13:46:27.007Z",
+          "statement": "I\u2019m adding a representative-slice rebalance pass now."
+        }
+      ]
+    },
+    {
+      "citation_id": "item-task_request-5",
+      "item_keys": [
+        "ai-scientist:task_request:d9f209be5c1679d3"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-task_request-5",
+      "provenance_refs": [
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:44666",
+          "end_line_no": 44666,
+          "end_timestamp": "2026-03-12T00:50:11.029Z",
+          "rule_ids": [
+            "task_request.action"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:5648",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:44660",
+          "start_line_no": 44660,
+          "start_timestamp": "2026-03-12T00:49:14.079Z",
+          "statement": "One high-impact gap remains before I lock the plan: the current reviewed benchmark has essentially no real `clarify_required` slice."
+        }
+      ]
+    },
+    {
+      "citation_id": "item-task_request-6",
+      "item_keys": [
+        "ai-scientist:task_request:0974320ed507ef0a"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-task_request-6",
+      "provenance_refs": [
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:43654",
+          "end_line_no": 43654,
+          "end_timestamp": "2026-03-11T20:15:25.942Z",
+          "rule_ids": [
+            "task_request.action"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:5423",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:43654",
+          "start_line_no": 43654,
+          "start_timestamp": "2026-03-11T20:15:25.942Z",
+          "statement": "- continue reviewing the 150+ materialized items with AI suggestions"
+        }
+      ]
+    },
+    {
+      "citation_id": "item-task_request-7",
+      "item_keys": [
+        "ai-scientist:task_request:0617618186bad9f3"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-task_request-7",
+      "provenance_refs": [
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:43654",
+          "end_line_no": 43654,
+          "end_timestamp": "2026-03-11T20:15:25.942Z",
+          "rule_ids": [
+            "task_request.action"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:5423",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:43654",
+          "start_line_no": 43654,
+          "start_timestamp": "2026-03-11T20:15:25.942Z",
+          "statement": "If you want, next I can turn these 21 into a concrete generator-fix backlog by failure family, so we can systematically eliminate this excluded slice."
+        }
+      ]
+    },
+    {
+      "citation_id": "item-task_request-8",
+      "item_keys": [
+        "ai-scientist:task_request:f47c91d823407f9b"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-task_request-8",
+      "provenance_refs": [
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:43654",
+          "end_line_no": 43654,
+          "end_timestamp": "2026-03-11T20:15:25.942Z",
+          "rule_ids": [
+            "task_request.action"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:5423",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:43654",
+          "start_line_no": 43654,
+          "start_timestamp": "2026-03-11T20:15:25.942Z",
+          "statement": "Later engineering fix:"
+        }
+      ]
+    },
+    {
+      "citation_id": "item-task_request-9",
+      "item_keys": [
+        "ai-scientist:task_request:3f662cc19b7fb4ec"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-task_request-9",
+      "provenance_refs": [
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:43654",
+          "end_line_no": 43654,
+          "end_timestamp": "2026-03-11T20:15:25.942Z",
+          "rule_ids": [
+            "task_request.action"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:5423",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:43654",
+          "start_line_no": 43654,
+          "start_timestamp": "2026-03-11T20:15:25.942Z",
+          "statement": "These `21` fail the quality gate, so they are kept out of the human-review queue."
+        }
+      ]
+    },
+    {
+      "citation_id": "item-task_request-10",
+      "item_keys": [
+        "ai-scientist:task_request:bee0cd7a53ba8ac3"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-task_request-10",
+      "provenance_refs": [
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:43347",
+          "end_line_no": 43347,
+          "end_timestamp": "2026-03-11T19:37:55.573Z",
+          "rule_ids": [
+            "task_request.action"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:5361",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:43343",
+          "start_line_no": 43343,
+          "start_timestamp": "2026-03-11T19:30:44.252Z",
+          "statement": "If you want, next I can give you the exact list of those questionable approved IDs in a copy-paste checklist so you can flip them quickly in `reviewed only` mode."
+        }
+      ]
+    }
+  ],
+  "domain": "ai-scientist",
+  "input_item_keys": [
+    "ai-scientist:task_request:965bab3206a0dc32",
+    "ai-scientist:task_request:8f74563b1ab9708e",
+    "ai-scientist:task_request:8486b027ce7b7537",
+    "ai-scientist:task_request:171942b1e8cc8773",
+    "ai-scientist:task_request:d9f209be5c1679d3",
+    "ai-scientist:task_request:0974320ed507ef0a",
+    "ai-scientist:task_request:0617618186bad9f3",
+    "ai-scientist:task_request:f47c91d823407f9b",
+    "ai-scientist:task_request:3f662cc19b7fb4ec",
+    "ai-scientist:task_request:bee0cd7a53ba8ac3"
+  ],
+  "page_id": "projects/ai-scientist/tasks",
+  "page_type": "bucket_page",
+  "rendered_page_metadata": {
+    "claim_count": 7,
+    "conflict_count": 0,
+    "related_domains": [
+      "global"
+    ],
+    "related_pages": [
+      {
+        "page_key": "index",
+        "title": "AI Scientist",
+        "wikilink": "[[projects/ai-scientist/index|AI Scientist]]"
+      },
+      {
+        "page_key": "communication-preferences",
+        "title": "AI Scientist - Communication Preferences",
+        "wikilink": "[[projects/ai-scientist/communication-preferences|AI Scientist - Communication Preferences]]"
+      },
+      {
+        "page_key": "workflow-rules",
+        "title": "AI Scientist - Workflow Rules",
+        "wikilink": "[[projects/ai-scientist/workflow-rules|AI Scientist - Workflow Rules]]"
+      },
+      {
+        "page_key": "architecture",
+        "title": "AI Scientist - Architecture",
+        "wikilink": "[[projects/ai-scientist/architecture|AI Scientist - Architecture]]"
+      },
+      {
+        "page_key": "code-map",
+        "title": "AI Scientist - Code Map",
+        "wikilink": "[[projects/ai-scientist/code-map|AI Scientist - Code Map]]"
+      },
+      {
+        "page_key": "current-state",
+        "title": "AI Scientist - Current State",
+        "wikilink": "[[projects/ai-scientist/current-state|AI Scientist - Current State]]"
+      },
+      {
+        "page_key": "outcomes",
+        "title": "AI Scientist - Outcomes",
+        "wikilink": "[[projects/ai-scientist/outcomes|AI Scientist - Outcomes]]"
+      },
+      {
+        "page_key": "failures",
+        "title": "AI Scientist - Failures",
+        "wikilink": "[[projects/ai-scientist/failures|AI Scientist - Failures]]"
+      },
+      {
+        "page_key": "decisions",
+        "title": "AI Scientist - Decisions",
+        "wikilink": "[[projects/ai-scientist/decisions|AI Scientist - Decisions]]"
+      },
+      {
+        "page_key": "next-steps",
+        "title": "AI Scientist - Next Steps",
+        "wikilink": "[[projects/ai-scientist/next-steps|AI Scientist - Next Steps]]"
+      },
+      {
+        "page_key": "open-questions",
+        "title": "AI Scientist - Open Questions",
+        "wikilink": "[[projects/ai-scientist/open-questions|AI Scientist - Open Questions]]"
+      }
+    ],
+    "relative_page_path": "projects/ai-scientist/tasks.md",
+    "source_count": 2,
+    "title": "AI Scientist - Tasks"
+  },
+  "renderer": "obsidian_markdown",
+  "synthesized_claims": [
+    {
+      "claim_id": "claim-1",
+      "confidence": "inferred",
+      "latent_type": "project_identity_and_scope",
+      "provenance_refs": [
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:976",
+          "end_line_no": 976,
+          "end_timestamp": "2026-04-13T00:53:17.295Z",
+          "rule_ids": [
+            "task_request.action"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:219",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:973",
+          "start_line_no": 973,
+          "start_timestamp": "2026-04-13T00:52:51.805Z",
+          "statement": "Should Phase 5 use this fixed v1 item taxonomy?"
+        }
+      ],
+      "section_id": "summary",
+      "supporting_item_ids": [
+        "ai-scientist:task_request:965bab3206a0dc32"
+      ],
+      "text": "Phase 5 may utilize a fixed v1 item taxonomy."
+    },
+    {
+      "claim_id": "claim-2",
+      "confidence": "inferred",
+      "latent_type": "implicit_next_steps",
+      "provenance_refs": [
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:48262",
+          "end_line_no": 48262,
+          "end_timestamp": "2026-03-12T13:46:31.333Z",
+          "rule_ids": [
+            "task_request.action"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:6320",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:48261",
+          "start_line_no": 48261,
+          "start_timestamp": "2026-03-12T13:46:27.007Z",
+          "statement": "adding"
+        }
+      ],
+      "section_id": "summary",
+      "supporting_item_ids": [
+        "ai-scientist:task_request:8f74563b1ab9708e"
+      ],
+      "text": "There is an ongoing process of adding new elements to the project."
+    },
+    {
+      "claim_id": "claim-3",
+      "confidence": "inferred",
+      "latent_type": "architecture_synthesis",
+      "provenance_refs": [
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:48262",
+          "end_line_no": 48262,
+          "end_timestamp": "2026-03-12T13:46:31.333Z",
+          "rule_ids": [
+            "task_request.action"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:6320",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:48261",
+          "start_line_no": 48261,
+          "start_timestamp": "2026-03-12T13:46:27.007Z",
+          "statement": "It will enforce evidence-family caps in `critical/certification`, promote diverse donor cases into those sets, and then I\u2019ll run it on the live experiment so your review queue stops clustering around one thread."
+        }
+      ],
+      "section_id": "summary",
+      "supporting_item_ids": [
+        "ai-scientist:task_request:8486b027ce7b7537"
+      ],
+      "text": "The implementation will enforce evidence-family caps in critical/certification areas and promote diverse donor cases."
+    },
+    {
+      "claim_id": "claim-4",
+      "confidence": "inferred",
+      "latent_type": "current_state_synthesis",
+      "provenance_refs": [
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:48262",
+          "end_line_no": 48262,
+          "end_timestamp": "2026-03-12T13:46:31.333Z",
+          "rule_ids": [
+            "task_request.action"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:6320",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:48261",
+          "start_line_no": 48261,
+          "start_timestamp": "2026-03-12T13:46:27.007Z",
+          "statement": "I\u2019m adding a representative-slice rebalance pass now."
+        }
+      ],
+      "section_id": "summary",
+      "supporting_item_ids": [
+        "ai-scientist:task_request:171942b1e8cc8773"
+      ],
+      "text": "A representative-slice rebalance pass is currently being added to the project."
+    },
+    {
+      "claim_id": "claim-5",
+      "confidence": "inferred",
+      "latent_type": "partially_explicit_open_questions",
+      "provenance_refs": [
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:44666",
+          "end_line_no": 44666,
+          "end_timestamp": "2026-03-12T00:50:11.029Z",
+          "rule_ids": [
+            "task_request.action"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:5648",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:44660",
+          "start_line_no": 44660,
+          "start_timestamp": "2026-03-12T00:49:14.079Z",
+          "statement": "One high-impact gap remains before I lock the plan: the current reviewed benchmark has essentially no real `clarify_required` slice."
+        }
+      ],
+      "section_id": "task_request",
+      "supporting_item_ids": [
+        "ai-scientist:task_request:d9f209be5c1679d3"
+      ],
+      "text": "A significant gap exists in the reviewed benchmark regarding the clarify_required slice."
+    },
+    {
+      "claim_id": "claim-6",
+      "confidence": "inferred",
+      "latent_type": "workflow_norms",
+      "provenance_refs": [
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:43654",
+          "end_line_no": 43654,
+          "end_timestamp": "2026-03-11T20:15:25.942Z",
+          "rule_ids": [
+            "task_request.action"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:5423",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:43654",
+          "start_line_no": 43654,
+          "start_timestamp": "2026-03-11T20:15:25.942Z",
+          "statement": "- continue reviewing the 150+ materialized items with AI suggestions"
+        }
+      ],
+      "section_id": "task_request",
+      "supporting_item_ids": [
+        "ai-scientist:task_request:0974320ed507ef0a"
+      ],
+      "text": "The team is continuing to review over 150 materialized items with AI suggestions."
+    },
+    {
+      "claim_id": "claim-7",
+      "confidence": "inferred",
+      "latent_type": "implicit_next_steps",
+      "provenance_refs": [
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:43654",
+          "end_line_no": 43654,
+          "end_timestamp": "2026-03-11T20:15:25.942Z",
+          "rule_ids": [
+            "task_request.action"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:5423",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:43654",
+          "start_line_no": 43654,
+          "start_timestamp": "2026-03-11T20:15:25.942Z",
+          "statement": "If you want, next I can turn these 21 into a concrete generator-fix backlog by failure family, so we can systematically eliminate this excluded slice."
+        }
+      ],
+      "section_id": "task_request",
+      "supporting_item_ids": [
+        "ai-scientist:task_request:0617618186bad9f3"
+      ],
+      "text": "There is a plan to convert 21 questionable items into a concrete backlog for systematic elimination."
+    }
+  ],
+  "versions": {
+    "page_config_version": 2,
+    "renderer_version": 2,
+    "synthesis_prompt_version": 2,
+    "synthesis_schema_version": 1,
+    "wiki_schema_version": 2
+  }
+}

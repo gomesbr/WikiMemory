@@ -1,0 +1,2144 @@
+{
+  "bucket": "architecture",
+  "citations": [
+    {
+      "citation_id": "claim-1",
+      "item_keys": [
+        "ai-trader:architecture_note:e47dd819dd28e612"
+      ],
+      "kind": "synthesized_claim",
+      "label": "claim-1",
+      "provenance_refs": [
+        {
+          "end_event_id": "019c9cff-0337-77e0-9ba6-a4f6dc75a92e:4",
+          "end_line_no": 4,
+          "end_timestamp": "2026-02-27T02:48:04.257Z",
+          "rule_ids": [
+            "architecture_note.explicit"
+          ],
+          "segment_id": "019c9cff-0337-77e0-9ba6-a4f6dc75a92e:2",
+          "session_id": "019c9cff-0337-77e0-9ba6-a4f6dc75a92e",
+          "source_id": "019c9cff-0337-77e0-9ba6-a4f6dc75a92e",
+          "start_event_id": "019c9cff-0337-77e0-9ba6-a4f6dc75a92e:3",
+          "start_line_no": 3,
+          "start_timestamp": "2026-02-27T02:48:04.257Z",
+          "statement": "## Multi-Agent Architecture"
+        },
+        {
+          "end_event_id": "019c9d00-0d81-7b52-a1a9-84f7d4b05066:4",
+          "end_line_no": 4,
+          "end_timestamp": "2026-02-27T02:49:12.399Z",
+          "rule_ids": [
+            "architecture_note.explicit"
+          ],
+          "segment_id": "019c9d00-0d81-7b52-a1a9-84f7d4b05066:2",
+          "session_id": "019c9d00-0d81-7b52-a1a9-84f7d4b05066",
+          "source_id": "019c9d00-0d81-7b52-a1a9-84f7d4b05066",
+          "start_event_id": "019c9d00-0d81-7b52-a1a9-84f7d4b05066:3",
+          "start_line_no": 3,
+          "start_timestamp": "2026-02-27T02:49:12.398Z",
+          "statement": "## Multi-Agent Architecture"
+        },
+        {
+          "end_event_id": "019c9d4c-657e-7d71-a062-4d77a75d3786:4",
+          "end_line_no": 4,
+          "end_timestamp": "2026-02-27T04:12:35.657Z",
+          "rule_ids": [
+            "architecture_note.explicit"
+          ],
+          "segment_id": "019c9d4c-657e-7d71-a062-4d77a75d3786:2",
+          "session_id": "019c9d4c-657e-7d71-a062-4d77a75d3786",
+          "source_id": "019c9d4c-657e-7d71-a062-4d77a75d3786",
+          "start_event_id": "019c9d4c-657e-7d71-a062-4d77a75d3786:3",
+          "start_line_no": 3,
+          "start_timestamp": "2026-02-27T04:12:35.657Z",
+          "statement": "## Multi-Agent Architecture"
+        }
+      ]
+    },
+    {
+      "citation_id": "claim-2",
+      "item_keys": [
+        "ai-trader:architecture_note:ee70e96a7701b57e"
+      ],
+      "kind": "synthesized_claim",
+      "label": "claim-2",
+      "provenance_refs": [
+        {
+          "end_event_id": "019c9cff-0337-77e0-9ba6-a4f6dc75a92e:4",
+          "end_line_no": 4,
+          "end_timestamp": "2026-02-27T02:48:04.257Z",
+          "rule_ids": [
+            "architecture_note.explicit"
+          ],
+          "segment_id": "019c9cff-0337-77e0-9ba6-a4f6dc75a92e:2",
+          "session_id": "019c9cff-0337-77e0-9ba6-a4f6dc75a92e",
+          "source_id": "019c9cff-0337-77e0-9ba6-a4f6dc75a92e",
+          "start_event_id": "019c9cff-0337-77e0-9ba6-a4f6dc75a92e:3",
+          "start_line_no": 3,
+          "start_timestamp": "2026-02-27T02:48:04.257Z",
+          "statement": "## Runtime Components"
+        },
+        {
+          "end_event_id": "019c9d00-0d81-7b52-a1a9-84f7d4b05066:4",
+          "end_line_no": 4,
+          "end_timestamp": "2026-02-27T02:49:12.399Z",
+          "rule_ids": [
+            "architecture_note.explicit"
+          ],
+          "segment_id": "019c9d00-0d81-7b52-a1a9-84f7d4b05066:2",
+          "session_id": "019c9d00-0d81-7b52-a1a9-84f7d4b05066",
+          "source_id": "019c9d00-0d81-7b52-a1a9-84f7d4b05066",
+          "start_event_id": "019c9d00-0d81-7b52-a1a9-84f7d4b05066:3",
+          "start_line_no": 3,
+          "start_timestamp": "2026-02-27T02:49:12.398Z",
+          "statement": "## Runtime Components"
+        },
+        {
+          "end_event_id": "019c9d4c-657e-7d71-a062-4d77a75d3786:4",
+          "end_line_no": 4,
+          "end_timestamp": "2026-02-27T04:12:35.657Z",
+          "rule_ids": [
+            "architecture_note.explicit"
+          ],
+          "segment_id": "019c9d4c-657e-7d71-a062-4d77a75d3786:2",
+          "session_id": "019c9d4c-657e-7d71-a062-4d77a75d3786",
+          "source_id": "019c9d4c-657e-7d71-a062-4d77a75d3786",
+          "start_event_id": "019c9d4c-657e-7d71-a062-4d77a75d3786:3",
+          "start_line_no": 3,
+          "start_timestamp": "2026-02-27T04:12:35.657Z",
+          "statement": "## Runtime Components"
+        }
+      ]
+    },
+    {
+      "citation_id": "claim-3",
+      "item_keys": [
+        "ai-trader:architecture_note:292489bfa18f9c2c"
+      ],
+      "kind": "synthesized_claim",
+      "label": "claim-3",
+      "provenance_refs": [
+        {
+          "end_event_id": "019ca705-c215-7221-8e6a-d28b922add82:5",
+          "end_line_no": 5,
+          "end_timestamp": "2026-03-01T01:31:38.636Z",
+          "rule_ids": [
+            "architecture_note.explicit"
+          ],
+          "segment_id": "019ca705-c215-7221-8e6a-d28b922add82:2",
+          "session_id": "019ca705-c215-7221-8e6a-d28b922add82",
+          "source_id": "019ca705-c215-7221-8e6a-d28b922add82",
+          "start_event_id": "019ca705-c215-7221-8e6a-d28b922add82:5",
+          "start_line_no": 5,
+          "start_timestamp": "2026-03-01T01:31:38.636Z",
+          "statement": "- Constraint Architecture must include Must / Must Not / Prefer / Escalate."
+        },
+        {
+          "end_event_id": "019ca705-c215-7221-8e6a-d28b922add82:9",
+          "end_line_no": 9,
+          "end_timestamp": "2026-03-01T01:31:39.552Z",
+          "rule_ids": [
+            "architecture_note.explicit"
+          ],
+          "segment_id": "019ca705-c215-7221-8e6a-d28b922add82:3",
+          "session_id": "019ca705-c215-7221-8e6a-d28b922add82",
+          "source_id": "019ca705-c215-7221-8e6a-d28b922add82",
+          "start_event_id": "019ca705-c215-7221-8e6a-d28b922add82:6",
+          "start_line_no": 6,
+          "start_timestamp": "2026-03-01T01:31:38.636Z",
+          "statement": "- Constraint Architecture must include Must / Must Not / Prefer / Escalate."
+        },
+        {
+          "end_event_id": "019ca705-c215-7221-8e6a-d28b922add82:54",
+          "end_line_no": 54,
+          "end_timestamp": "2026-03-01T02:36:55.290Z",
+          "rule_ids": [
+            "architecture_note.explicit"
+          ],
+          "segment_id": "019ca705-c215-7221-8e6a-d28b922add82:9",
+          "session_id": "019ca705-c215-7221-8e6a-d28b922add82",
+          "source_id": "019ca705-c215-7221-8e6a-d28b922add82",
+          "start_event_id": "019ca705-c215-7221-8e6a-d28b922add82:54",
+          "start_line_no": 54,
+          "start_timestamp": "2026-03-01T02:36:55.290Z",
+          "statement": "- Constraint Architecture must include Must / Must Not / Prefer / Escalate."
+        }
+      ]
+    },
+    {
+      "citation_id": "claim-4",
+      "item_keys": [
+        "ai-trader:architecture_note:e47dd819dd28e612"
+      ],
+      "kind": "synthesized_claim",
+      "label": "claim-4",
+      "provenance_refs": [
+        {
+          "end_event_id": "019c9cff-0337-77e0-9ba6-a4f6dc75a92e:4",
+          "end_line_no": 4,
+          "end_timestamp": "2026-02-27T02:48:04.257Z",
+          "rule_ids": [
+            "architecture_note.explicit"
+          ],
+          "segment_id": "019c9cff-0337-77e0-9ba6-a4f6dc75a92e:2",
+          "session_id": "019c9cff-0337-77e0-9ba6-a4f6dc75a92e",
+          "source_id": "019c9cff-0337-77e0-9ba6-a4f6dc75a92e",
+          "start_event_id": "019c9cff-0337-77e0-9ba6-a4f6dc75a92e:3",
+          "start_line_no": 3,
+          "start_timestamp": "2026-02-27T02:48:04.257Z",
+          "statement": "## Multi-Agent Architecture"
+        },
+        {
+          "end_event_id": "019c9d00-0d81-7b52-a1a9-84f7d4b05066:4",
+          "end_line_no": 4,
+          "end_timestamp": "2026-02-27T02:49:12.399Z",
+          "rule_ids": [
+            "architecture_note.explicit"
+          ],
+          "segment_id": "019c9d00-0d81-7b52-a1a9-84f7d4b05066:2",
+          "session_id": "019c9d00-0d81-7b52-a1a9-84f7d4b05066",
+          "source_id": "019c9d00-0d81-7b52-a1a9-84f7d4b05066",
+          "start_event_id": "019c9d00-0d81-7b52-a1a9-84f7d4b05066:3",
+          "start_line_no": 3,
+          "start_timestamp": "2026-02-27T02:49:12.398Z",
+          "statement": "## Multi-Agent Architecture"
+        },
+        {
+          "end_event_id": "019c9d4c-657e-7d71-a062-4d77a75d3786:4",
+          "end_line_no": 4,
+          "end_timestamp": "2026-02-27T04:12:35.657Z",
+          "rule_ids": [
+            "architecture_note.explicit"
+          ],
+          "segment_id": "019c9d4c-657e-7d71-a062-4d77a75d3786:2",
+          "session_id": "019c9d4c-657e-7d71-a062-4d77a75d3786",
+          "source_id": "019c9d4c-657e-7d71-a062-4d77a75d3786",
+          "start_event_id": "019c9d4c-657e-7d71-a062-4d77a75d3786:3",
+          "start_line_no": 3,
+          "start_timestamp": "2026-02-27T04:12:35.657Z",
+          "statement": "## Multi-Agent Architecture"
+        }
+      ]
+    },
+    {
+      "citation_id": "claim-5",
+      "item_keys": [
+        "ai-trader:architecture_note:ee70e96a7701b57e"
+      ],
+      "kind": "synthesized_claim",
+      "label": "claim-5",
+      "provenance_refs": [
+        {
+          "end_event_id": "019c9cff-0337-77e0-9ba6-a4f6dc75a92e:4",
+          "end_line_no": 4,
+          "end_timestamp": "2026-02-27T02:48:04.257Z",
+          "rule_ids": [
+            "architecture_note.explicit"
+          ],
+          "segment_id": "019c9cff-0337-77e0-9ba6-a4f6dc75a92e:2",
+          "session_id": "019c9cff-0337-77e0-9ba6-a4f6dc75a92e",
+          "source_id": "019c9cff-0337-77e0-9ba6-a4f6dc75a92e",
+          "start_event_id": "019c9cff-0337-77e0-9ba6-a4f6dc75a92e:3",
+          "start_line_no": 3,
+          "start_timestamp": "2026-02-27T02:48:04.257Z",
+          "statement": "## Runtime Components"
+        },
+        {
+          "end_event_id": "019c9d00-0d81-7b52-a1a9-84f7d4b05066:4",
+          "end_line_no": 4,
+          "end_timestamp": "2026-02-27T02:49:12.399Z",
+          "rule_ids": [
+            "architecture_note.explicit"
+          ],
+          "segment_id": "019c9d00-0d81-7b52-a1a9-84f7d4b05066:2",
+          "session_id": "019c9d00-0d81-7b52-a1a9-84f7d4b05066",
+          "source_id": "019c9d00-0d81-7b52-a1a9-84f7d4b05066",
+          "start_event_id": "019c9d00-0d81-7b52-a1a9-84f7d4b05066:3",
+          "start_line_no": 3,
+          "start_timestamp": "2026-02-27T02:49:12.398Z",
+          "statement": "## Runtime Components"
+        },
+        {
+          "end_event_id": "019c9d4c-657e-7d71-a062-4d77a75d3786:4",
+          "end_line_no": 4,
+          "end_timestamp": "2026-02-27T04:12:35.657Z",
+          "rule_ids": [
+            "architecture_note.explicit"
+          ],
+          "segment_id": "019c9d4c-657e-7d71-a062-4d77a75d3786:2",
+          "session_id": "019c9d4c-657e-7d71-a062-4d77a75d3786",
+          "source_id": "019c9d4c-657e-7d71-a062-4d77a75d3786",
+          "start_event_id": "019c9d4c-657e-7d71-a062-4d77a75d3786:3",
+          "start_line_no": 3,
+          "start_timestamp": "2026-02-27T04:12:35.657Z",
+          "statement": "## Runtime Components"
+        }
+      ]
+    },
+    {
+      "citation_id": "claim-6",
+      "item_keys": [
+        "ai-trader:architecture_note:292489bfa18f9c2c"
+      ],
+      "kind": "synthesized_claim",
+      "label": "claim-6",
+      "provenance_refs": [
+        {
+          "end_event_id": "019ca705-c215-7221-8e6a-d28b922add82:5",
+          "end_line_no": 5,
+          "end_timestamp": "2026-03-01T01:31:38.636Z",
+          "rule_ids": [
+            "architecture_note.explicit"
+          ],
+          "segment_id": "019ca705-c215-7221-8e6a-d28b922add82:2",
+          "session_id": "019ca705-c215-7221-8e6a-d28b922add82",
+          "source_id": "019ca705-c215-7221-8e6a-d28b922add82",
+          "start_event_id": "019ca705-c215-7221-8e6a-d28b922add82:5",
+          "start_line_no": 5,
+          "start_timestamp": "2026-03-01T01:31:38.636Z",
+          "statement": "- Constraint Architecture must include Must / Must Not / Prefer / Escalate."
+        },
+        {
+          "end_event_id": "019ca705-c215-7221-8e6a-d28b922add82:9",
+          "end_line_no": 9,
+          "end_timestamp": "2026-03-01T01:31:39.552Z",
+          "rule_ids": [
+            "architecture_note.explicit"
+          ],
+          "segment_id": "019ca705-c215-7221-8e6a-d28b922add82:3",
+          "session_id": "019ca705-c215-7221-8e6a-d28b922add82",
+          "source_id": "019ca705-c215-7221-8e6a-d28b922add82",
+          "start_event_id": "019ca705-c215-7221-8e6a-d28b922add82:6",
+          "start_line_no": 6,
+          "start_timestamp": "2026-03-01T01:31:38.636Z",
+          "statement": "- Constraint Architecture must include Must / Must Not / Prefer / Escalate."
+        },
+        {
+          "end_event_id": "019ca705-c215-7221-8e6a-d28b922add82:54",
+          "end_line_no": 54,
+          "end_timestamp": "2026-03-01T02:36:55.290Z",
+          "rule_ids": [
+            "architecture_note.explicit"
+          ],
+          "segment_id": "019ca705-c215-7221-8e6a-d28b922add82:9",
+          "session_id": "019ca705-c215-7221-8e6a-d28b922add82",
+          "source_id": "019ca705-c215-7221-8e6a-d28b922add82",
+          "start_event_id": "019ca705-c215-7221-8e6a-d28b922add82:54",
+          "start_line_no": 54,
+          "start_timestamp": "2026-03-01T02:36:55.290Z",
+          "statement": "- Constraint Architecture must include Must / Must Not / Prefer / Escalate."
+        }
+      ]
+    },
+    {
+      "citation_id": "item-architecture_note-1",
+      "item_keys": [
+        "ai-trader:architecture_note:e47dd819dd28e612"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-architecture_note-1",
+      "provenance_refs": [
+        {
+          "end_event_id": "019c9cff-0337-77e0-9ba6-a4f6dc75a92e:4",
+          "end_line_no": 4,
+          "end_timestamp": "2026-02-27T02:48:04.257Z",
+          "rule_ids": [
+            "architecture_note.explicit"
+          ],
+          "segment_id": "019c9cff-0337-77e0-9ba6-a4f6dc75a92e:2",
+          "session_id": "019c9cff-0337-77e0-9ba6-a4f6dc75a92e",
+          "source_id": "019c9cff-0337-77e0-9ba6-a4f6dc75a92e",
+          "start_event_id": "019c9cff-0337-77e0-9ba6-a4f6dc75a92e:3",
+          "start_line_no": 3,
+          "start_timestamp": "2026-02-27T02:48:04.257Z",
+          "statement": "## Multi-Agent Architecture"
+        },
+        {
+          "end_event_id": "019c9d00-0d81-7b52-a1a9-84f7d4b05066:4",
+          "end_line_no": 4,
+          "end_timestamp": "2026-02-27T02:49:12.399Z",
+          "rule_ids": [
+            "architecture_note.explicit"
+          ],
+          "segment_id": "019c9d00-0d81-7b52-a1a9-84f7d4b05066:2",
+          "session_id": "019c9d00-0d81-7b52-a1a9-84f7d4b05066",
+          "source_id": "019c9d00-0d81-7b52-a1a9-84f7d4b05066",
+          "start_event_id": "019c9d00-0d81-7b52-a1a9-84f7d4b05066:3",
+          "start_line_no": 3,
+          "start_timestamp": "2026-02-27T02:49:12.398Z",
+          "statement": "## Multi-Agent Architecture"
+        },
+        {
+          "end_event_id": "019c9d4c-657e-7d71-a062-4d77a75d3786:4",
+          "end_line_no": 4,
+          "end_timestamp": "2026-02-27T04:12:35.657Z",
+          "rule_ids": [
+            "architecture_note.explicit"
+          ],
+          "segment_id": "019c9d4c-657e-7d71-a062-4d77a75d3786:2",
+          "session_id": "019c9d4c-657e-7d71-a062-4d77a75d3786",
+          "source_id": "019c9d4c-657e-7d71-a062-4d77a75d3786",
+          "start_event_id": "019c9d4c-657e-7d71-a062-4d77a75d3786:3",
+          "start_line_no": 3,
+          "start_timestamp": "2026-02-27T04:12:35.657Z",
+          "statement": "## Multi-Agent Architecture"
+        }
+      ]
+    },
+    {
+      "citation_id": "item-architecture_note-2",
+      "item_keys": [
+        "ai-trader:architecture_note:ee70e96a7701b57e"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-architecture_note-2",
+      "provenance_refs": [
+        {
+          "end_event_id": "019c9cff-0337-77e0-9ba6-a4f6dc75a92e:4",
+          "end_line_no": 4,
+          "end_timestamp": "2026-02-27T02:48:04.257Z",
+          "rule_ids": [
+            "architecture_note.explicit"
+          ],
+          "segment_id": "019c9cff-0337-77e0-9ba6-a4f6dc75a92e:2",
+          "session_id": "019c9cff-0337-77e0-9ba6-a4f6dc75a92e",
+          "source_id": "019c9cff-0337-77e0-9ba6-a4f6dc75a92e",
+          "start_event_id": "019c9cff-0337-77e0-9ba6-a4f6dc75a92e:3",
+          "start_line_no": 3,
+          "start_timestamp": "2026-02-27T02:48:04.257Z",
+          "statement": "## Runtime Components"
+        },
+        {
+          "end_event_id": "019c9d00-0d81-7b52-a1a9-84f7d4b05066:4",
+          "end_line_no": 4,
+          "end_timestamp": "2026-02-27T02:49:12.399Z",
+          "rule_ids": [
+            "architecture_note.explicit"
+          ],
+          "segment_id": "019c9d00-0d81-7b52-a1a9-84f7d4b05066:2",
+          "session_id": "019c9d00-0d81-7b52-a1a9-84f7d4b05066",
+          "source_id": "019c9d00-0d81-7b52-a1a9-84f7d4b05066",
+          "start_event_id": "019c9d00-0d81-7b52-a1a9-84f7d4b05066:3",
+          "start_line_no": 3,
+          "start_timestamp": "2026-02-27T02:49:12.398Z",
+          "statement": "## Runtime Components"
+        },
+        {
+          "end_event_id": "019c9d4c-657e-7d71-a062-4d77a75d3786:4",
+          "end_line_no": 4,
+          "end_timestamp": "2026-02-27T04:12:35.657Z",
+          "rule_ids": [
+            "architecture_note.explicit"
+          ],
+          "segment_id": "019c9d4c-657e-7d71-a062-4d77a75d3786:2",
+          "session_id": "019c9d4c-657e-7d71-a062-4d77a75d3786",
+          "source_id": "019c9d4c-657e-7d71-a062-4d77a75d3786",
+          "start_event_id": "019c9d4c-657e-7d71-a062-4d77a75d3786:3",
+          "start_line_no": 3,
+          "start_timestamp": "2026-02-27T04:12:35.657Z",
+          "statement": "## Runtime Components"
+        }
+      ]
+    },
+    {
+      "citation_id": "item-architecture_note-3",
+      "item_keys": [
+        "ai-trader:architecture_note:292489bfa18f9c2c"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-architecture_note-3",
+      "provenance_refs": [
+        {
+          "end_event_id": "019ca705-c215-7221-8e6a-d28b922add82:5",
+          "end_line_no": 5,
+          "end_timestamp": "2026-03-01T01:31:38.636Z",
+          "rule_ids": [
+            "architecture_note.explicit"
+          ],
+          "segment_id": "019ca705-c215-7221-8e6a-d28b922add82:2",
+          "session_id": "019ca705-c215-7221-8e6a-d28b922add82",
+          "source_id": "019ca705-c215-7221-8e6a-d28b922add82",
+          "start_event_id": "019ca705-c215-7221-8e6a-d28b922add82:5",
+          "start_line_no": 5,
+          "start_timestamp": "2026-03-01T01:31:38.636Z",
+          "statement": "- Constraint Architecture must include Must / Must Not / Prefer / Escalate."
+        },
+        {
+          "end_event_id": "019ca705-c215-7221-8e6a-d28b922add82:9",
+          "end_line_no": 9,
+          "end_timestamp": "2026-03-01T01:31:39.552Z",
+          "rule_ids": [
+            "architecture_note.explicit"
+          ],
+          "segment_id": "019ca705-c215-7221-8e6a-d28b922add82:3",
+          "session_id": "019ca705-c215-7221-8e6a-d28b922add82",
+          "source_id": "019ca705-c215-7221-8e6a-d28b922add82",
+          "start_event_id": "019ca705-c215-7221-8e6a-d28b922add82:6",
+          "start_line_no": 6,
+          "start_timestamp": "2026-03-01T01:31:38.636Z",
+          "statement": "- Constraint Architecture must include Must / Must Not / Prefer / Escalate."
+        },
+        {
+          "end_event_id": "019ca705-c215-7221-8e6a-d28b922add82:54",
+          "end_line_no": 54,
+          "end_timestamp": "2026-03-01T02:36:55.290Z",
+          "rule_ids": [
+            "architecture_note.explicit"
+          ],
+          "segment_id": "019ca705-c215-7221-8e6a-d28b922add82:9",
+          "session_id": "019ca705-c215-7221-8e6a-d28b922add82",
+          "source_id": "019ca705-c215-7221-8e6a-d28b922add82",
+          "start_event_id": "019ca705-c215-7221-8e6a-d28b922add82:54",
+          "start_line_no": 54,
+          "start_timestamp": "2026-03-01T02:36:55.290Z",
+          "statement": "- Constraint Architecture must include Must / Must Not / Prefer / Escalate."
+        }
+      ]
+    },
+    {
+      "citation_id": "item-architecture_note-4",
+      "item_keys": [
+        "ai-trader:architecture_note:d0908719f9f4f947"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-architecture_note-4",
+      "provenance_refs": [
+        {
+          "end_event_id": "019ca705-c215-7221-8e6a-d28b922add82:5",
+          "end_line_no": 5,
+          "end_timestamp": "2026-03-01T01:31:38.636Z",
+          "rule_ids": [
+            "architecture_note.explicit"
+          ],
+          "segment_id": "019ca705-c215-7221-8e6a-d28b922add82:2",
+          "session_id": "019ca705-c215-7221-8e6a-d28b922add82",
+          "source_id": "019ca705-c215-7221-8e6a-d28b922add82",
+          "start_event_id": "019ca705-c215-7221-8e6a-d28b922add82:5",
+          "start_line_no": 5,
+          "start_timestamp": "2026-03-01T01:31:38.636Z",
+          "statement": "- For other repos/apps, mirror this same token set and component style (colors, grid backdrop, panel/chip styling, typography) so all apps keep one consistent look and feel."
+        },
+        {
+          "end_event_id": "019ca705-c215-7221-8e6a-d28b922add82:9",
+          "end_line_no": 9,
+          "end_timestamp": "2026-03-01T01:31:39.552Z",
+          "rule_ids": [
+            "architecture_note.explicit"
+          ],
+          "segment_id": "019ca705-c215-7221-8e6a-d28b922add82:3",
+          "session_id": "019ca705-c215-7221-8e6a-d28b922add82",
+          "source_id": "019ca705-c215-7221-8e6a-d28b922add82",
+          "start_event_id": "019ca705-c215-7221-8e6a-d28b922add82:6",
+          "start_line_no": 6,
+          "start_timestamp": "2026-03-01T01:31:38.636Z",
+          "statement": "- For other repos/apps, mirror this same token set and component style (colors, grid backdrop, panel/chip styling, typography) so all apps keep one consistent look and feel."
+        },
+        {
+          "end_event_id": "019ca705-c215-7221-8e6a-d28b922add82:54",
+          "end_line_no": 54,
+          "end_timestamp": "2026-03-01T02:36:55.290Z",
+          "rule_ids": [
+            "architecture_note.explicit"
+          ],
+          "segment_id": "019ca705-c215-7221-8e6a-d28b922add82:9",
+          "session_id": "019ca705-c215-7221-8e6a-d28b922add82",
+          "source_id": "019ca705-c215-7221-8e6a-d28b922add82",
+          "start_event_id": "019ca705-c215-7221-8e6a-d28b922add82:54",
+          "start_line_no": 54,
+          "start_timestamp": "2026-03-01T02:36:55.290Z",
+          "statement": "- For other repos/apps, mirror this same token set and component style (colors, grid backdrop, panel/chip styling, typography) so all apps keep one consistent look and feel."
+        }
+      ]
+    },
+    {
+      "citation_id": "item-architecture_note-5",
+      "item_keys": [
+        "ai-trader:architecture_note:4709e352d9a4e845"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-architecture_note-5",
+      "provenance_refs": [
+        {
+          "end_event_id": "019ca705-c215-7221-8e6a-d28b922add82:5",
+          "end_line_no": 5,
+          "end_timestamp": "2026-03-01T01:31:38.636Z",
+          "rule_ids": [
+            "architecture_note.explicit"
+          ],
+          "segment_id": "019ca705-c215-7221-8e6a-d28b922add82:2",
+          "session_id": "019ca705-c215-7221-8e6a-d28b922add82",
+          "source_id": "019ca705-c215-7221-8e6a-d28b922add82",
+          "start_event_id": "019ca705-c215-7221-8e6a-d28b922add82:5",
+          "start_line_no": 5,
+          "start_timestamp": "2026-03-01T01:31:38.636Z",
+          "statement": "## constraint-architecture (C:\\Users\\Fabio\\Cursor AI projects\\Projects\\CodexClaw\\skills\\constraint-architecture\\SKILL.md)"
+        },
+        {
+          "end_event_id": "019ca705-c215-7221-8e6a-d28b922add82:9",
+          "end_line_no": 9,
+          "end_timestamp": "2026-03-01T01:31:39.552Z",
+          "rule_ids": [
+            "architecture_note.explicit"
+          ],
+          "segment_id": "019ca705-c215-7221-8e6a-d28b922add82:3",
+          "session_id": "019ca705-c215-7221-8e6a-d28b922add82",
+          "source_id": "019ca705-c215-7221-8e6a-d28b922add82",
+          "start_event_id": "019ca705-c215-7221-8e6a-d28b922add82:6",
+          "start_line_no": 6,
+          "start_timestamp": "2026-03-01T01:31:38.636Z",
+          "statement": "## constraint-architecture (C:\\Users\\Fabio\\Cursor AI projects\\Projects\\CodexClaw\\skills\\constraint-architecture\\SKILL.md)"
+        },
+        {
+          "end_event_id": "019ca705-c215-7221-8e6a-d28b922add82:54",
+          "end_line_no": 54,
+          "end_timestamp": "2026-03-01T02:36:55.290Z",
+          "rule_ids": [
+            "architecture_note.explicit"
+          ],
+          "segment_id": "019ca705-c215-7221-8e6a-d28b922add82:9",
+          "session_id": "019ca705-c215-7221-8e6a-d28b922add82",
+          "source_id": "019ca705-c215-7221-8e6a-d28b922add82",
+          "start_event_id": "019ca705-c215-7221-8e6a-d28b922add82:54",
+          "start_line_no": 54,
+          "start_timestamp": "2026-03-01T02:36:55.290Z",
+          "statement": "## constraint-architecture (C:\\Users\\Fabio\\Cursor AI projects\\Projects\\CodexClaw\\skills\\constraint-architecture\\SKILL.md)"
+        }
+      ]
+    },
+    {
+      "citation_id": "item-architecture_note-6",
+      "item_keys": [
+        "ai-trader:architecture_note:8f9d0c4fdc82ae01"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-architecture_note-6",
+      "provenance_refs": [
+        {
+          "end_event_id": "019ca705-c215-7221-8e6a-d28b922add82:5",
+          "end_line_no": 5,
+          "end_timestamp": "2026-03-01T01:31:38.636Z",
+          "rule_ids": [
+            "architecture_note.explicit"
+          ],
+          "segment_id": "019ca705-c215-7221-8e6a-d28b922add82:2",
+          "session_id": "019ca705-c215-7221-8e6a-d28b922add82",
+          "source_id": "019ca705-c215-7221-8e6a-d28b922add82",
+          "start_event_id": "019ca705-c215-7221-8e6a-d28b922add82:5",
+          "start_line_no": 5,
+          "start_timestamp": "2026-03-01T01:31:38.636Z",
+          "statement": "- Build passes for touched components."
+        },
+        {
+          "end_event_id": "019ca705-c215-7221-8e6a-d28b922add82:9",
+          "end_line_no": 9,
+          "end_timestamp": "2026-03-01T01:31:39.552Z",
+          "rule_ids": [
+            "architecture_note.explicit"
+          ],
+          "segment_id": "019ca705-c215-7221-8e6a-d28b922add82:3",
+          "session_id": "019ca705-c215-7221-8e6a-d28b922add82",
+          "source_id": "019ca705-c215-7221-8e6a-d28b922add82",
+          "start_event_id": "019ca705-c215-7221-8e6a-d28b922add82:6",
+          "start_line_no": 6,
+          "start_timestamp": "2026-03-01T01:31:38.636Z",
+          "statement": "- Build passes for touched components."
+        },
+        {
+          "end_event_id": "019ca766-5bc5-78d1-aa87-19b2cfd3b1a5:19",
+          "end_line_no": 19,
+          "end_timestamp": "2026-03-01T03:26:30.376Z",
+          "rule_ids": [
+            "architecture_note.explicit"
+          ],
+          "segment_id": "019ca766-5bc5-78d1-aa87-19b2cfd3b1a5:6",
+          "session_id": "019ca766-5bc5-78d1-aa87-19b2cfd3b1a5",
+          "source_id": "019ca766-5bc5-78d1-aa87-19b2cfd3b1a5",
+          "start_event_id": "019ca766-5bc5-78d1-aa87-19b2cfd3b1a5:19",
+          "start_line_no": 19,
+          "start_timestamp": "2026-03-01T03:26:30.376Z",
+          "statement": "- Build passes for touched components."
+        }
+      ]
+    },
+    {
+      "citation_id": "item-architecture_note-7",
+      "item_keys": [
+        "ai-trader:architecture_note:d122884e061c87d0"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-architecture_note-7",
+      "provenance_refs": [
+        {
+          "end_event_id": "019c9ca4-ac1c-76e2-b883-017d68d982a1:5322",
+          "end_line_no": 5322,
+          "end_timestamp": "2026-02-28T03:45:59.464Z",
+          "rule_ids": [
+            "architecture_note.explicit"
+          ],
+          "segment_id": "019c9ca4-ac1c-76e2-b883-017d68d982a1:662",
+          "session_id": "019c9ca4-ac1c-76e2-b883-017d68d982a1",
+          "source_id": "019c9ca4-ac1c-76e2-b883-017d68d982a1",
+          "start_event_id": "019c9ca4-ac1c-76e2-b883-017d68d982a1:5315",
+          "start_line_no": 5315,
+          "start_timestamp": "2026-02-28T03:45:52.027Z",
+          "statement": "architecture"
+        },
+        {
+          "end_event_id": "019c9ca4-ac1c-76e2-b883-017d68d982a1:10407",
+          "end_line_no": 10407,
+          "end_timestamp": "2026-02-28T22:36:49.173Z",
+          "rule_ids": [
+            "architecture_note.explicit"
+          ],
+          "segment_id": "019c9ca4-ac1c-76e2-b883-017d68d982a1:1351",
+          "session_id": "019c9ca4-ac1c-76e2-b883-017d68d982a1",
+          "source_id": "019c9ca4-ac1c-76e2-b883-017d68d982a1",
+          "start_event_id": "019c9ca4-ac1c-76e2-b883-017d68d982a1:10406",
+          "start_line_no": 10406,
+          "start_timestamp": "2026-02-28T22:36:49.173Z",
+          "statement": "architecture"
+        },
+        {
+          "end_event_id": "019c9ca4-ac1c-76e2-b883-017d68d982a1:17239",
+          "end_line_no": 17239,
+          "end_timestamp": "2026-03-02T04:41:03.733Z",
+          "rule_ids": [
+            "architecture_note.explicit"
+          ],
+          "segment_id": "019c9ca4-ac1c-76e2-b883-017d68d982a1:2259",
+          "session_id": "019c9ca4-ac1c-76e2-b883-017d68d982a1",
+          "source_id": "019c9ca4-ac1c-76e2-b883-017d68d982a1",
+          "start_event_id": "019c9ca4-ac1c-76e2-b883-017d68d982a1:17238",
+          "start_line_no": 17238,
+          "start_timestamp": "2026-03-02T04:41:03.732Z",
+          "statement": "architecture"
+        }
+      ]
+    },
+    {
+      "citation_id": "item-architecture_note-8",
+      "item_keys": [
+        "ai-trader:architecture_note:d9e0e9c48fc83773"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-architecture_note-8",
+      "provenance_refs": [
+        {
+          "end_event_id": "019ca766-5bc5-78d1-aa87-19b2cfd3b1a5:5",
+          "end_line_no": 5,
+          "end_timestamp": "2026-03-01T03:17:09.445Z",
+          "rule_ids": [
+            "architecture_note.explicit"
+          ],
+          "segment_id": "019ca766-5bc5-78d1-aa87-19b2cfd3b1a5:2",
+          "session_id": "019ca766-5bc5-78d1-aa87-19b2cfd3b1a5",
+          "source_id": "019ca766-5bc5-78d1-aa87-19b2cfd3b1a5",
+          "start_event_id": "019ca766-5bc5-78d1-aa87-19b2cfd3b1a5:5",
+          "start_line_no": 5,
+          "start_timestamp": "2026-03-01T03:17:09.445Z",
+          "statement": "- Root cause: commands like \u201cgit \u2026\u201d and PowerShell pipelines (\u201c\u2026 | Select-Object \u2026\u201d) are rejected before execution."
+        },
+        {
+          "end_event_id": "019ca766-5bc5-78d1-aa87-19b2cfd3b1a5:9",
+          "end_line_no": 9,
+          "end_timestamp": "2026-03-01T03:17:10.240Z",
+          "rule_ids": [
+            "architecture_note.explicit"
+          ],
+          "segment_id": "019ca766-5bc5-78d1-aa87-19b2cfd3b1a5:3",
+          "session_id": "019ca766-5bc5-78d1-aa87-19b2cfd3b1a5",
+          "source_id": "019ca766-5bc5-78d1-aa87-19b2cfd3b1a5",
+          "start_event_id": "019ca766-5bc5-78d1-aa87-19b2cfd3b1a5:6",
+          "start_line_no": 6,
+          "start_timestamp": "2026-03-01T03:17:09.445Z",
+          "statement": "- Root cause: commands like \u201cgit \u2026\u201d and PowerShell pipelines (\u201c\u2026 | Select-Object \u2026\u201d) are rejected before execution."
+        },
+        {
+          "end_event_id": "019ca766-5bc5-78d1-aa87-19b2cfd3b1a5:19",
+          "end_line_no": 19,
+          "end_timestamp": "2026-03-01T03:26:30.376Z",
+          "rule_ids": [
+            "architecture_note.explicit"
+          ],
+          "segment_id": "019ca766-5bc5-78d1-aa87-19b2cfd3b1a5:6",
+          "session_id": "019ca766-5bc5-78d1-aa87-19b2cfd3b1a5",
+          "source_id": "019ca766-5bc5-78d1-aa87-19b2cfd3b1a5",
+          "start_event_id": "019ca766-5bc5-78d1-aa87-19b2cfd3b1a5:19",
+          "start_line_no": 19,
+          "start_timestamp": "2026-03-01T03:26:30.376Z",
+          "statement": "- Root cause: commands like \u201cgit \u2026\u201d and PowerShell pipelines (\u201c\u2026 | Select-Object \u2026\u201d) are rejected before execution."
+        }
+      ]
+    },
+    {
+      "citation_id": "item-architecture_note-9",
+      "item_keys": [
+        "ai-trader:architecture_note:5dbfe4e2ed284d1d"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-architecture_note-9",
+      "provenance_refs": [
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:4540",
+          "end_line_no": 4540,
+          "end_timestamp": "2026-04-13T16:41:08.265Z",
+          "rule_ids": [
+            "architecture_note.explicit"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:896",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:4524",
+          "start_line_no": 4524,
+          "start_timestamp": "2026-04-13T16:40:59.810Z",
+          "statement": "I\u2019m proceeding through the full deterministic pipeline first and will only stop if that or the disk cap actually blocks the run."
+        }
+      ]
+    },
+    {
+      "citation_id": "item-architecture_note-10",
+      "item_keys": [
+        "ai-trader:architecture_note:b5946a5379e5bcf6"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-architecture_note-10",
+      "provenance_refs": [
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:4460",
+          "end_line_no": 4460,
+          "end_timestamp": "2026-04-13T14:58:21.348Z",
+          "rule_ids": [
+            "architecture_note.explicit"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:881",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:4450",
+          "start_line_no": 4450,
+          "start_timestamp": "2026-04-13T14:57:39.621Z",
+          "statement": "I\u2019m running the full local suite now to make sure the new full-load layer didn\u2019t regress the existing pipeline."
+        }
+      ]
+    },
+    {
+      "citation_id": "item-architecture_note-11",
+      "item_keys": [
+        "ai-trader:architecture_note:b29cbfa9233f2632"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-architecture_note-11",
+      "provenance_refs": [
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:4201",
+          "end_line_no": 4201,
+          "end_timestamp": "2026-04-13T14:29:07.435Z",
+          "rule_ids": [
+            "architecture_note.explicit"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:829",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:4189",
+          "start_line_no": 4189,
+          "start_timestamp": "2026-04-13T14:20:16.255Z",
+          "statement": "I\u2019m doing one final full test sweep so the pointer-first migration is clean across the rest of the pipeline too."
+        }
+      ]
+    },
+    {
+      "citation_id": "item-architecture_note-12",
+      "item_keys": [
+        "ai-trader:architecture_note:f00ab7ab911ba168"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-architecture_note-12",
+      "provenance_refs": [
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:3457",
+          "end_line_no": 3457,
+          "end_timestamp": "2026-04-13T12:18:41.709Z",
+          "rule_ids": [
+            "architecture_note.explicit"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:705",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:3452",
+          "start_line_no": 3452,
+          "start_timestamp": "2026-04-13T04:46:26.034Z",
+          "statement": "- Phases `1-9` built the product pipeline"
+        }
+      ]
+    },
+    {
+      "citation_id": "item-architecture_note-13",
+      "item_keys": [
+        "ai-trader:architecture_note:334cff6921e1a748"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-architecture_note-13",
+      "provenance_refs": [
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:2187",
+          "end_line_no": 2187,
+          "end_timestamp": "2026-04-13T02:57:46.057Z",
+          "rule_ids": [
+            "architecture_note.explicit"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:458",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:2179",
+          "start_line_no": 2179,
+          "start_timestamp": "2026-04-13T02:57:45.465Z",
+          "statement": "The stubborn part is now even narrower: five reasoning/search segments that the override resolver can classify in isolation but still aren\u2019t being rewritten in the pipeline output, so I\u2019m reproducing that exact function path against the real persisted list next."
+        }
+      ]
+    },
+    {
+      "citation_id": "item-architecture_note-14",
+      "item_keys": [
+        "ai-trader:architecture_note:2ab7354b7697d49a"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-architecture_note-14",
+      "provenance_refs": [
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:1824",
+          "end_line_no": 1824,
+          "end_timestamp": "2026-04-13T02:41:56.934Z",
+          "rule_ids": [
+            "architecture_note.explicit"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:395",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:1824",
+          "start_line_no": 1824,
+          "start_timestamp": "2026-04-13T02:41:56.934Z",
+          "statement": "- So the pipeline now survives real data better, but the next real capability gap is quality hardening for classification/extraction before trusting wiki output."
+        },
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:1828",
+          "end_line_no": 1828,
+          "end_timestamp": "2026-04-13T02:45:08.085Z",
+          "rule_ids": [
+            "architecture_note.explicit"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:396",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:1825",
+          "start_line_no": 1825,
+          "start_timestamp": "2026-04-13T02:41:56.934Z",
+          "statement": "- So the pipeline now survives real data better, but the next real capability gap is quality hardening for classification/extraction before trusting wiki output."
+        }
+      ]
+    },
+    {
+      "citation_id": "item-architecture_note-15",
+      "item_keys": [
+        "ai-trader:architecture_note:ddf72dcd63f44097"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-architecture_note-15",
+      "provenance_refs": [
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:1785",
+          "end_line_no": 1785,
+          "end_timestamp": "2026-04-13T02:40:18.177Z",
+          "rule_ids": [
+            "architecture_note.explicit"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:386",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:1777",
+          "start_line_no": 1777,
+          "start_timestamp": "2026-04-13T02:40:17.639Z",
+          "statement": "The real-data run surfaced one concrete engineering issue worth fixing immediately: config JSON with a Windows BOM can break the pipeline even though the content is valid."
+        }
+      ]
+    },
+    {
+      "citation_id": "item-architecture_note-16",
+      "item_keys": [
+        "ai-trader:architecture_note:2aeaa6668f4bc2bf"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-architecture_note-16",
+      "provenance_refs": [
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:1744",
+          "end_line_no": 1744,
+          "end_timestamp": "2026-04-13T02:39:37.657Z",
+          "rule_ids": [
+            "architecture_note.explicit"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:381",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:1729",
+          "start_line_no": 1729,
+          "start_timestamp": "2026-04-13T02:38:54.876Z",
+          "statement": "I\u2019m doing one last end-to-end check on the wiki command itself against that same real sample so we can separate \u201creal-data pipeline works\u201d from \u201clive synthesis is blocked by environment.\u201d"
+        }
+      ]
+    },
+    {
+      "citation_id": "item-architecture_note-17",
+      "item_keys": [
+        "ai-trader:architecture_note:efc82a1773aafc4e"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-architecture_note-17",
+      "provenance_refs": [
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:1744",
+          "end_line_no": 1744,
+          "end_timestamp": "2026-04-13T02:39:37.657Z",
+          "rule_ids": [
+            "architecture_note.explicit"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:381",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:1729",
+          "start_line_no": 1729,
+          "start_timestamp": "2026-04-13T02:38:54.876Z",
+          "statement": "The real pipeline is producing actual classified segments and extracted items now."
+        }
+      ]
+    },
+    {
+      "citation_id": "item-architecture_note-18",
+      "item_keys": [
+        "ai-trader:architecture_note:e29c037dfc116b54"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-architecture_note-18",
+      "provenance_refs": [
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:1696",
+          "end_line_no": 1696,
+          "end_timestamp": "2026-04-13T02:38:25.587Z",
+          "rule_ids": [
+            "architecture_note.explicit"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:378",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:1685",
+          "start_line_no": 1685,
+          "start_timestamp": "2026-04-13T02:38:20.693Z",
+          "statement": "The first run hiccup was just PowerShell syntax, not the pipeline itself."
+        }
+      ]
+    },
+    {
+      "citation_id": "item-architecture_note-19",
+      "item_keys": [
+        "ai-trader:architecture_note:9e9e88e45d3d9c6f"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-architecture_note-19",
+      "provenance_refs": [
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:1678",
+          "end_line_no": 1678,
+          "end_timestamp": "2026-04-13T02:38:06.447Z",
+          "rule_ids": [
+            "architecture_note.explicit"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:375",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:1668",
+          "start_line_no": 1668,
+          "start_timestamp": "2026-04-13T02:38:00.695Z",
+          "statement": "I\u2019m running the real pipeline stages against that file now and then I\u2019ll inspect the extracted outputs, not just whether the commands returned zero."
+        },
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:1683",
+          "end_line_no": 1683,
+          "end_timestamp": "2026-04-13T02:38:12.500Z",
+          "rule_ids": [
+            "architecture_note.explicit"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:376",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:1679",
+          "start_line_no": 1679,
+          "start_timestamp": "2026-04-13T02:38:06.447Z",
+          "statement": "I\u2019m running the real pipeline stages against that file now and then I\u2019ll inspect the extracted outputs, not just whether the commands returned zero."
+        }
+      ]
+    },
+    {
+      "citation_id": "item-architecture_note-20",
+      "item_keys": [
+        "ai-trader:architecture_note:67208a3151d69cdd"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-architecture_note-20",
+      "provenance_refs": [
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:1624",
+          "end_line_no": 1624,
+          "end_timestamp": "2026-04-13T02:36:17.753Z",
+          "rule_ids": [
+            "architecture_note.explicit"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:364",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:1610",
+          "start_line_no": 1610,
+          "start_timestamp": "2026-04-13T02:35:56.234Z",
+          "statement": "I\u2019m running the actual pipeline against your real Codex sessions on a small sample now, and I\u2019ll report exactly what passed and where any real-data issue shows up."
+        }
+      ]
+    },
+    {
+      "citation_id": "item-architecture_note-21",
+      "item_keys": [
+        "ai-trader:architecture_note:9e0991cf011c1930"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-architecture_note-21",
+      "provenance_refs": [
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:1624",
+          "end_line_no": 1624,
+          "end_timestamp": "2026-04-13T02:36:17.753Z",
+          "rule_ids": [
+            "architecture_note.explicit"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:364",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:1610",
+          "start_line_no": 1610,
+          "start_timestamp": "2026-04-13T02:35:56.234Z",
+          "statement": "I\u2019m still doing the important part right now: a real-data end-to-end smoke test through extraction on a copied sample of your actual session logs, so we validate the pipeline against real traces instead of fabricated inputs."
+        }
+      ]
+    },
+    {
+      "citation_id": "item-architecture_note-22",
+      "item_keys": [
+        "ai-trader:architecture_note:9774501cea6a0dea"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-architecture_note-22",
+      "provenance_refs": [
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:1290",
+          "end_line_no": 1290,
+          "end_timestamp": "2026-04-13T01:34:37.159Z",
+          "rule_ids": [
+            "architecture_note.explicit"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:283",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:1290",
+          "start_line_no": 1290,
+          "start_timestamp": "2026-04-13T01:34:37.159Z",
+          "statement": "- durable pages like `workflow-rules`, `communication-preferences`, `architecture`, `decisions` grouped by recurrence/support, not just recency"
+        },
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:1295",
+          "end_line_no": 1295,
+          "end_timestamp": "2026-04-13T01:44:54.892Z",
+          "rule_ids": [
+            "architecture_note.explicit"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:284",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:1291",
+          "start_line_no": 1291,
+          "start_timestamp": "2026-04-13T01:34:37.160Z",
+          "statement": "- durable pages like `workflow-rules`, `communication-preferences`, `architecture`, `decisions` grouped by recurrence/support, not just recency"
+        }
+      ]
+    },
+    {
+      "citation_id": "item-architecture_note-23",
+      "item_keys": [
+        "ai-trader:architecture_note:214da3feff2365c3"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-architecture_note-23",
+      "provenance_refs": [
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:963",
+          "end_line_no": 963,
+          "end_timestamp": "2026-04-13T00:43:55.600Z",
+          "rule_ids": [
+            "architecture_note.explicit"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:215",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:963",
+          "start_line_no": 963,
+          "start_timestamp": "2026-04-13T00:43:55.600Z",
+          "statement": "`durable items` like preferences, rules, decisions, architecture notes"
+        },
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:968",
+          "end_line_no": 968,
+          "end_timestamp": "2026-04-13T00:52:39.757Z",
+          "rule_ids": [
+            "architecture_note.explicit"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:216",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:964",
+          "start_line_no": 964,
+          "start_timestamp": "2026-04-13T00:43:55.600Z",
+          "statement": "`durable items` like preferences, rules, decisions, architecture notes"
+        }
+      ]
+    },
+    {
+      "citation_id": "item-architecture_note-24",
+      "item_keys": [
+        "ai-trader:architecture_note:ce46b1066f057322"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-architecture_note-24",
+      "provenance_refs": [
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:103",
+          "end_line_no": 103,
+          "end_timestamp": "2026-04-12T21:50:14.557Z",
+          "rule_ids": [
+            "architecture_note.explicit"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:27",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:99",
+          "start_line_no": 99,
+          "start_timestamp": "2026-04-12T21:47:11.225Z",
+          "statement": "Reason: true \u201ccomplete/fully processed\u201d belongs to downstream pipeline state, not discovery/indexing."
+        }
+      ]
+    },
+    {
+      "citation_id": "item-architecture_note-25",
+      "item_keys": [
+        "ai-trader:architecture_note:13a527d404be9db1"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-architecture_note-25",
+      "provenance_refs": [
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:57239",
+          "end_line_no": 57239,
+          "end_timestamp": "2026-03-13T12:01:03.933Z",
+          "rule_ids": [
+            "architecture_note.explicit"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:8045",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:57229",
+          "start_line_no": 57229,
+          "start_timestamp": "2026-03-13T12:00:53.115Z",
+          "statement": "Then I\u2019ll turn that into a decision-complete refactor plan instead of a generic architecture essay."
+        }
+      ]
+    },
+    {
+      "citation_id": "item-architecture_note-26",
+      "item_keys": [
+        "ai-trader:architecture_note:785a4adcd494fc66"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-architecture_note-26",
+      "provenance_refs": [
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:43595",
+          "end_line_no": 43595,
+          "end_timestamp": "2026-03-11T20:05:10.521Z",
+          "rule_ids": [
+            "architecture_note.explicit"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:5402",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:43588",
+          "start_line_no": 43588,
+          "start_timestamp": "2026-03-11T20:03:57.754Z",
+          "statement": "The new auto-review pipeline is live."
+        }
+      ]
+    },
+    {
+      "citation_id": "item-architecture_note-27",
+      "item_keys": [
+        "ai-trader:architecture_note:d1d07ac1224c3616"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-architecture_note-27",
+      "provenance_refs": [
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:31394",
+          "end_line_no": 31394,
+          "end_timestamp": "2026-03-09T00:25:17.206Z",
+          "rule_ids": [
+            "architecture_note.explicit"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:3416",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:31394",
+          "start_line_no": 31394,
+          "start_timestamp": "2026-03-09T00:25:17.206Z",
+          "statement": "- 20% component exploit/recombination runs"
+        }
+      ]
+    },
+    {
+      "citation_id": "item-architecture_note-28",
+      "item_keys": [
+        "ai-trader:architecture_note:d3d8a3bf70f8c44e"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-architecture_note-28",
+      "provenance_refs": [
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:31394",
+          "end_line_no": 31394,
+          "end_timestamp": "2026-03-09T00:25:17.206Z",
+          "rule_ids": [
+            "architecture_note.explicit"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:3416",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:31394",
+          "start_line_no": 31394,
+          "start_timestamp": "2026-03-09T00:25:17.206Z",
+          "statement": "- feed confirmed hypotheses into component recombination scoring"
+        }
+      ]
+    },
+    {
+      "citation_id": "item-architecture_note-29",
+      "item_keys": [
+        "ai-trader:architecture_note:00c6379ef16d53a0"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-architecture_note-29",
+      "provenance_refs": [
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:31394",
+          "end_line_no": 31394,
+          "end_timestamp": "2026-03-09T00:25:17.206Z",
+          "rule_ids": [
+            "architecture_note.explicit"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:3416",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:31394",
+          "start_line_no": 31394,
+          "start_timestamp": "2026-03-09T00:25:17.206Z",
+          "statement": "component"
+        }
+      ]
+    },
+    {
+      "citation_id": "item-architecture_note-30",
+      "item_keys": [
+        "ai-trader:architecture_note:b48d9198b0b482d7"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-architecture_note-30",
+      "provenance_refs": [
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:31394",
+          "end_line_no": 31394,
+          "end_timestamp": "2026-03-09T00:25:17.206Z",
+          "rule_ids": [
+            "architecture_note.explicit"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:3416",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:31394",
+          "start_line_no": 31394,
+          "start_timestamp": "2026-03-09T00:25:17.206Z",
+          "statement": "If you want, I\u2019ll now publish the final consolidated plan with this hypothesis layer merged into the previous componentized plan as the official v1.3 blueprint."
+        }
+      ]
+    },
+    {
+      "citation_id": "item-architecture_note-31",
+      "item_keys": [
+        "ai-trader:architecture_note:9b4e3c6d9f849510"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-architecture_note-31",
+      "provenance_refs": [
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:31394",
+          "end_line_no": 31394,
+          "end_timestamp": "2026-03-09T00:25:17.206Z",
+          "rule_ids": [
+            "architecture_note.explicit"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:3416",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:31394",
+          "start_line_no": 31394,
+          "start_timestamp": "2026-03-09T00:25:17.206Z",
+          "statement": "It complements component recombination directly, it does not compete with it."
+        }
+      ]
+    },
+    {
+      "citation_id": "item-architecture_note-32",
+      "item_keys": [
+        "ai-trader:architecture_note:53d1c52847a950d7"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-architecture_note-32",
+      "provenance_refs": [
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:31394",
+          "end_line_no": 31394,
+          "end_timestamp": "2026-03-09T00:25:17.206Z",
+          "rule_ids": [
+            "architecture_note.explicit"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:3416",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:31394",
+          "start_line_no": 31394,
+          "start_timestamp": "2026-03-09T00:25:17.206Z",
+          "statement": "Next candidate generation using confirmed hypotheses + component performance"
+        }
+      ]
+    },
+    {
+      "citation_id": "item-architecture_note-33",
+      "item_keys": [
+        "ai-trader:architecture_note:f9012fbf11027b70"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-architecture_note-33",
+      "provenance_refs": [
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:20622",
+          "end_line_no": 20622,
+          "end_timestamp": "2026-03-06T20:22:28.161Z",
+          "rule_ids": [
+            "architecture_note.explicit"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:1944",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:20613",
+          "start_line_no": 20613,
+          "start_timestamp": "2026-03-06T20:22:10.414Z",
+          "statement": "I\u2019ll add a concrete first-principles checklist (theme-first, class-of-problem, minimal architecture, no one-off complexity) to both `AGENTS.md` files you actively use: workspace root and `CodexClaw/AGENTS.md`."
+        }
+      ]
+    },
+    {
+      "citation_id": "item-architecture_note-34",
+      "item_keys": [
+        "ai-trader:architecture_note:c77498365b0676c4"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-architecture_note-34",
+      "provenance_refs": [
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:17277",
+          "end_line_no": 17277,
+          "end_timestamp": "2026-03-06T03:55:48.920Z",
+          "rule_ids": [
+            "architecture_note.explicit"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:1495",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:17273",
+          "start_line_no": 17273,
+          "start_timestamp": "2026-03-06T03:47:54.428Z",
+          "statement": "- keep `gpt-5.3-codex` for merges, architecture changes, and bugfixing across files."
+        }
+      ]
+    },
+    {
+      "citation_id": "item-architecture_note-35",
+      "item_keys": [
+        "ai-trader:architecture_note:f0aaa872088f26f9"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-architecture_note-35",
+      "provenance_refs": [
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:16016",
+          "end_line_no": 16016,
+          "end_timestamp": "2026-03-05T23:59:19.555Z",
+          "rule_ids": [
+            "architecture_note.explicit"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:1394",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:15967",
+          "start_line_no": 15967,
+          "start_timestamp": "2026-03-05T23:54:41.210Z",
+          "statement": "I\u2019ll research concrete speed-up patterns from primary sources (OpenAI + pgvector/Postgres docs) and map them to your pipeline with a no-quality-loss design."
+        }
+      ]
+    },
+    {
+      "citation_id": "item-architecture_note-36",
+      "item_keys": [
+        "ai-trader:architecture_note:79b897643d427e69"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-architecture_note-36",
+      "provenance_refs": [
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:16016",
+          "end_line_no": 16016,
+          "end_timestamp": "2026-03-05T23:59:19.555Z",
+          "rule_ids": [
+            "architecture_note.explicit"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:1394",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:15967",
+          "start_line_no": 15967,
+          "start_timestamp": "2026-03-05T23:54:41.210Z",
+          "statement": "I\u2019m now pulling pgvector/Postgres best-practice sources so we can speed the full pipeline end-to-end, not just API calls."
+        }
+      ]
+    },
+    {
+      "citation_id": "item-architecture_note-37",
+      "item_keys": [
+        "ai-trader:architecture_note:c69bfb48495b2723"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-architecture_note-37",
+      "provenance_refs": [
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:13540",
+          "end_line_no": 13540,
+          "end_timestamp": "2026-03-05T17:49:10.203Z",
+          "rule_ids": [
+            "architecture_note.explicit"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:1166",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:13534",
+          "start_line_no": 13534,
+          "start_timestamp": "2026-03-05T17:48:38.315Z",
+          "statement": "**Holistic Quality Architecture**"
+        },
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:13544",
+          "end_line_no": 13544,
+          "end_timestamp": "2026-03-05T17:54:57.167Z",
+          "rule_ids": [
+            "architecture_note.explicit"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:1167",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:13541",
+          "start_line_no": 13541,
+          "start_timestamp": "2026-03-05T17:49:10.204Z",
+          "statement": "**Holistic Quality Architecture**"
+        }
+      ]
+    },
+    {
+      "citation_id": "item-architecture_note-38",
+      "item_keys": [
+        "ai-trader:architecture_note:45dbeb8e41b8e1cc"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-architecture_note-38",
+      "provenance_refs": [
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:13540",
+          "end_line_no": 13540,
+          "end_timestamp": "2026-03-05T17:49:10.203Z",
+          "rule_ids": [
+            "architecture_note.explicit"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:1166",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:13534",
+          "start_line_no": 13534,
+          "start_timestamp": "2026-03-05T17:48:38.315Z",
+          "statement": "Add agent-only promotion pipeline:"
+        },
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:13544",
+          "end_line_no": 13544,
+          "end_timestamp": "2026-03-05T17:54:57.167Z",
+          "rule_ids": [
+            "architecture_note.explicit"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:1167",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:13541",
+          "start_line_no": 13541,
+          "start_timestamp": "2026-03-05T17:49:10.204Z",
+          "statement": "Add agent-only promotion pipeline:"
+        }
+      ]
+    },
+    {
+      "citation_id": "item-architecture_note-39",
+      "item_keys": [
+        "ai-trader:architecture_note:f936b80aa46e7f18"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-architecture_note-39",
+      "provenance_refs": [
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:13438",
+          "end_line_no": 13438,
+          "end_timestamp": "2026-03-05T16:24:08.174Z",
+          "rule_ids": [
+            "architecture_note.explicit"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:1147",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:13432",
+          "start_line_no": 13432,
+          "start_timestamp": "2026-03-05T16:20:27.588Z",
+          "statement": "- \u201cComponents detected: 401k, Roth, Robinhood"
+        }
+      ]
+    },
+    {
+      "citation_id": "item-architecture_note-40",
+      "item_keys": [
+        "ai-trader:architecture_note:cc35bf86ae2e0b81"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-architecture_note-40",
+      "provenance_refs": [
+        {
+          "end_event_id": "019cbacf-74e5-7411-a1ab-6595d49c26a2:3115",
+          "end_line_no": 3115,
+          "end_timestamp": "2026-03-05T04:15:56.383Z",
+          "rule_ids": [
+            "architecture_note.explicit"
+          ],
+          "segment_id": "019cbacf-74e5-7411-a1ab-6595d49c26a2:264",
+          "session_id": "019cbacf-74e5-7411-a1ab-6595d49c26a2",
+          "source_id": "019cbacf-74e5-7411-a1ab-6595d49c26a2",
+          "start_event_id": "019cbacf-74e5-7411-a1ab-6595d49c26a2:3115",
+          "start_line_no": 3115,
+          "start_timestamp": "2026-03-05T04:15:56.383Z",
+          "statement": "- [architecture.md](/c:/Users/Fabio/Cursor AI projects/Projects/AITrader/docs/architecture.md)"
+        },
+        {
+          "end_event_id": "019cbacf-74e5-7411-a1ab-6595d49c26a2:3119",
+          "end_line_no": 3119,
+          "end_timestamp": "2026-03-05T04:29:35.986Z",
+          "rule_ids": [
+            "architecture_note.explicit"
+          ],
+          "segment_id": "019cbacf-74e5-7411-a1ab-6595d49c26a2:265",
+          "session_id": "019cbacf-74e5-7411-a1ab-6595d49c26a2",
+          "source_id": "019cbacf-74e5-7411-a1ab-6595d49c26a2",
+          "start_event_id": "019cbacf-74e5-7411-a1ab-6595d49c26a2:3116",
+          "start_line_no": 3116,
+          "start_timestamp": "2026-03-05T04:15:56.384Z",
+          "statement": "- [architecture.md](/c:/Users/Fabio/Cursor AI projects/Projects/AITrader/docs/architecture.md)"
+        }
+      ]
+    }
+  ],
+  "domain": "ai-trader",
+  "input_item_keys": [
+    "ai-trader:architecture_note:e47dd819dd28e612",
+    "ai-trader:architecture_note:ee70e96a7701b57e",
+    "ai-trader:architecture_note:292489bfa18f9c2c",
+    "ai-trader:architecture_note:d0908719f9f4f947",
+    "ai-trader:architecture_note:4709e352d9a4e845",
+    "ai-trader:architecture_note:8f9d0c4fdc82ae01",
+    "ai-trader:architecture_note:d122884e061c87d0",
+    "ai-trader:architecture_note:d9e0e9c48fc83773",
+    "ai-trader:architecture_note:5dbfe4e2ed284d1d",
+    "ai-trader:architecture_note:b5946a5379e5bcf6",
+    "ai-trader:architecture_note:b29cbfa9233f2632",
+    "ai-trader:architecture_note:f00ab7ab911ba168",
+    "ai-trader:architecture_note:334cff6921e1a748",
+    "ai-trader:architecture_note:2ab7354b7697d49a",
+    "ai-trader:architecture_note:ddf72dcd63f44097",
+    "ai-trader:architecture_note:2aeaa6668f4bc2bf",
+    "ai-trader:architecture_note:efc82a1773aafc4e",
+    "ai-trader:architecture_note:e29c037dfc116b54",
+    "ai-trader:architecture_note:9e9e88e45d3d9c6f",
+    "ai-trader:architecture_note:67208a3151d69cdd",
+    "ai-trader:architecture_note:9e0991cf011c1930",
+    "ai-trader:architecture_note:9774501cea6a0dea",
+    "ai-trader:architecture_note:214da3feff2365c3",
+    "ai-trader:architecture_note:ce46b1066f057322",
+    "ai-trader:architecture_note:13a527d404be9db1",
+    "ai-trader:architecture_note:785a4adcd494fc66",
+    "ai-trader:architecture_note:d1d07ac1224c3616",
+    "ai-trader:architecture_note:d3d8a3bf70f8c44e",
+    "ai-trader:architecture_note:00c6379ef16d53a0",
+    "ai-trader:architecture_note:b48d9198b0b482d7",
+    "ai-trader:architecture_note:9b4e3c6d9f849510",
+    "ai-trader:architecture_note:53d1c52847a950d7",
+    "ai-trader:architecture_note:f9012fbf11027b70",
+    "ai-trader:architecture_note:c77498365b0676c4",
+    "ai-trader:architecture_note:f0aaa872088f26f9",
+    "ai-trader:architecture_note:79b897643d427e69",
+    "ai-trader:architecture_note:c69bfb48495b2723",
+    "ai-trader:architecture_note:45dbeb8e41b8e1cc",
+    "ai-trader:architecture_note:f936b80aa46e7f18",
+    "ai-trader:architecture_note:cc35bf86ae2e0b81"
+  ],
+  "page_id": "projects/ai-trader/architecture",
+  "page_type": "bucket_page",
+  "rendered_page_metadata": {
+    "claim_count": 6,
+    "conflict_count": 10,
+    "related_domains": [
+      "global"
+    ],
+    "related_pages": [
+      {
+        "page_key": "index",
+        "title": "AI Trader",
+        "wikilink": "[[projects/ai-trader/index|AI Trader]]"
+      },
+      {
+        "page_key": "communication-preferences",
+        "title": "AI Trader - Communication Preferences",
+        "wikilink": "[[projects/ai-trader/communication-preferences|AI Trader - Communication Preferences]]"
+      },
+      {
+        "page_key": "workflow-rules",
+        "title": "AI Trader - Workflow Rules",
+        "wikilink": "[[projects/ai-trader/workflow-rules|AI Trader - Workflow Rules]]"
+      },
+      {
+        "page_key": "code-map",
+        "title": "AI Trader - Code Map",
+        "wikilink": "[[projects/ai-trader/code-map|AI Trader - Code Map]]"
+      },
+      {
+        "page_key": "current-state",
+        "title": "AI Trader - Current State",
+        "wikilink": "[[projects/ai-trader/current-state|AI Trader - Current State]]"
+      },
+      {
+        "page_key": "tasks",
+        "title": "AI Trader - Tasks",
+        "wikilink": "[[projects/ai-trader/tasks|AI Trader - Tasks]]"
+      },
+      {
+        "page_key": "outcomes",
+        "title": "AI Trader - Outcomes",
+        "wikilink": "[[projects/ai-trader/outcomes|AI Trader - Outcomes]]"
+      },
+      {
+        "page_key": "failures",
+        "title": "AI Trader - Failures",
+        "wikilink": "[[projects/ai-trader/failures|AI Trader - Failures]]"
+      },
+      {
+        "page_key": "decisions",
+        "title": "AI Trader - Decisions",
+        "wikilink": "[[projects/ai-trader/decisions|AI Trader - Decisions]]"
+      },
+      {
+        "page_key": "next-steps",
+        "title": "AI Trader - Next Steps",
+        "wikilink": "[[projects/ai-trader/next-steps|AI Trader - Next Steps]]"
+      },
+      {
+        "page_key": "open-questions",
+        "title": "AI Trader - Open Questions",
+        "wikilink": "[[projects/ai-trader/open-questions|AI Trader - Open Questions]]"
+      }
+    ],
+    "relative_page_path": "projects/ai-trader/architecture.md",
+    "source_count": 60,
+    "title": "AI Trader - Architecture"
+  },
+  "renderer": "obsidian_markdown",
+  "synthesized_claims": [
+    {
+      "claim_id": "claim-1",
+      "confidence": "strong",
+      "latent_type": "project_identity_and_scope",
+      "provenance_refs": [
+        {
+          "end_event_id": "019c9cff-0337-77e0-9ba6-a4f6dc75a92e:4",
+          "end_line_no": 4,
+          "end_timestamp": "2026-02-27T02:48:04.257Z",
+          "rule_ids": [
+            "architecture_note.explicit"
+          ],
+          "segment_id": "019c9cff-0337-77e0-9ba6-a4f6dc75a92e:2",
+          "session_id": "019c9cff-0337-77e0-9ba6-a4f6dc75a92e",
+          "source_id": "019c9cff-0337-77e0-9ba6-a4f6dc75a92e",
+          "start_event_id": "019c9cff-0337-77e0-9ba6-a4f6dc75a92e:3",
+          "start_line_no": 3,
+          "start_timestamp": "2026-02-27T02:48:04.257Z",
+          "statement": "## Multi-Agent Architecture"
+        },
+        {
+          "end_event_id": "019c9d00-0d81-7b52-a1a9-84f7d4b05066:4",
+          "end_line_no": 4,
+          "end_timestamp": "2026-02-27T02:49:12.399Z",
+          "rule_ids": [
+            "architecture_note.explicit"
+          ],
+          "segment_id": "019c9d00-0d81-7b52-a1a9-84f7d4b05066:2",
+          "session_id": "019c9d00-0d81-7b52-a1a9-84f7d4b05066",
+          "source_id": "019c9d00-0d81-7b52-a1a9-84f7d4b05066",
+          "start_event_id": "019c9d00-0d81-7b52-a1a9-84f7d4b05066:3",
+          "start_line_no": 3,
+          "start_timestamp": "2026-02-27T02:49:12.398Z",
+          "statement": "## Multi-Agent Architecture"
+        },
+        {
+          "end_event_id": "019c9d4c-657e-7d71-a062-4d77a75d3786:4",
+          "end_line_no": 4,
+          "end_timestamp": "2026-02-27T04:12:35.657Z",
+          "rule_ids": [
+            "architecture_note.explicit"
+          ],
+          "segment_id": "019c9d4c-657e-7d71-a062-4d77a75d3786:2",
+          "session_id": "019c9d4c-657e-7d71-a062-4d77a75d3786",
+          "source_id": "019c9d4c-657e-7d71-a062-4d77a75d3786",
+          "start_event_id": "019c9d4c-657e-7d71-a062-4d77a75d3786:3",
+          "start_line_no": 3,
+          "start_timestamp": "2026-02-27T04:12:35.657Z",
+          "statement": "## Multi-Agent Architecture"
+        }
+      ],
+      "section_id": "summary",
+      "supporting_item_ids": [
+        "ai-trader:architecture_note:e47dd819dd28e612"
+      ],
+      "text": "The architecture of the AI Trader project is based on a multi-agent architecture."
+    },
+    {
+      "claim_id": "claim-2",
+      "confidence": "strong",
+      "latent_type": "architecture_synthesis",
+      "provenance_refs": [
+        {
+          "end_event_id": "019c9cff-0337-77e0-9ba6-a4f6dc75a92e:4",
+          "end_line_no": 4,
+          "end_timestamp": "2026-02-27T02:48:04.257Z",
+          "rule_ids": [
+            "architecture_note.explicit"
+          ],
+          "segment_id": "019c9cff-0337-77e0-9ba6-a4f6dc75a92e:2",
+          "session_id": "019c9cff-0337-77e0-9ba6-a4f6dc75a92e",
+          "source_id": "019c9cff-0337-77e0-9ba6-a4f6dc75a92e",
+          "start_event_id": "019c9cff-0337-77e0-9ba6-a4f6dc75a92e:3",
+          "start_line_no": 3,
+          "start_timestamp": "2026-02-27T02:48:04.257Z",
+          "statement": "## Runtime Components"
+        },
+        {
+          "end_event_id": "019c9d00-0d81-7b52-a1a9-84f7d4b05066:4",
+          "end_line_no": 4,
+          "end_timestamp": "2026-02-27T02:49:12.399Z",
+          "rule_ids": [
+            "architecture_note.explicit"
+          ],
+          "segment_id": "019c9d00-0d81-7b52-a1a9-84f7d4b05066:2",
+          "session_id": "019c9d00-0d81-7b52-a1a9-84f7d4b05066",
+          "source_id": "019c9d00-0d81-7b52-a1a9-84f7d4b05066",
+          "start_event_id": "019c9d00-0d81-7b52-a1a9-84f7d4b05066:3",
+          "start_line_no": 3,
+          "start_timestamp": "2026-02-27T02:49:12.398Z",
+          "statement": "## Runtime Components"
+        },
+        {
+          "end_event_id": "019c9d4c-657e-7d71-a062-4d77a75d3786:4",
+          "end_line_no": 4,
+          "end_timestamp": "2026-02-27T04:12:35.657Z",
+          "rule_ids": [
+            "architecture_note.explicit"
+          ],
+          "segment_id": "019c9d4c-657e-7d71-a062-4d77a75d3786:2",
+          "session_id": "019c9d4c-657e-7d71-a062-4d77a75d3786",
+          "source_id": "019c9d4c-657e-7d71-a062-4d77a75d3786",
+          "start_event_id": "019c9d4c-657e-7d71-a062-4d77a75d3786:3",
+          "start_line_no": 3,
+          "start_timestamp": "2026-02-27T04:12:35.657Z",
+          "statement": "## Runtime Components"
+        }
+      ],
+      "section_id": "summary",
+      "supporting_item_ids": [
+        "ai-trader:architecture_note:ee70e96a7701b57e"
+      ],
+      "text": "The runtime components are critical to the functionality of the AI Trader system."
+    },
+    {
+      "claim_id": "claim-3",
+      "confidence": "strong",
+      "latent_type": "architecture_synthesis",
+      "provenance_refs": [
+        {
+          "end_event_id": "019ca705-c215-7221-8e6a-d28b922add82:5",
+          "end_line_no": 5,
+          "end_timestamp": "2026-03-01T01:31:38.636Z",
+          "rule_ids": [
+            "architecture_note.explicit"
+          ],
+          "segment_id": "019ca705-c215-7221-8e6a-d28b922add82:2",
+          "session_id": "019ca705-c215-7221-8e6a-d28b922add82",
+          "source_id": "019ca705-c215-7221-8e6a-d28b922add82",
+          "start_event_id": "019ca705-c215-7221-8e6a-d28b922add82:5",
+          "start_line_no": 5,
+          "start_timestamp": "2026-03-01T01:31:38.636Z",
+          "statement": "- Constraint Architecture must include Must / Must Not / Prefer / Escalate."
+        },
+        {
+          "end_event_id": "019ca705-c215-7221-8e6a-d28b922add82:9",
+          "end_line_no": 9,
+          "end_timestamp": "2026-03-01T01:31:39.552Z",
+          "rule_ids": [
+            "architecture_note.explicit"
+          ],
+          "segment_id": "019ca705-c215-7221-8e6a-d28b922add82:3",
+          "session_id": "019ca705-c215-7221-8e6a-d28b922add82",
+          "source_id": "019ca705-c215-7221-8e6a-d28b922add82",
+          "start_event_id": "019ca705-c215-7221-8e6a-d28b922add82:6",
+          "start_line_no": 6,
+          "start_timestamp": "2026-03-01T01:31:38.636Z",
+          "statement": "- Constraint Architecture must include Must / Must Not / Prefer / Escalate."
+        },
+        {
+          "end_event_id": "019ca705-c215-7221-8e6a-d28b922add82:54",
+          "end_line_no": 54,
+          "end_timestamp": "2026-03-01T02:36:55.290Z",
+          "rule_ids": [
+            "architecture_note.explicit"
+          ],
+          "segment_id": "019ca705-c215-7221-8e6a-d28b922add82:9",
+          "session_id": "019ca705-c215-7221-8e6a-d28b922add82",
+          "source_id": "019ca705-c215-7221-8e6a-d28b922add82",
+          "start_event_id": "019ca705-c215-7221-8e6a-d28b922add82:54",
+          "start_line_no": 54,
+          "start_timestamp": "2026-03-01T02:36:55.290Z",
+          "statement": "- Constraint Architecture must include Must / Must Not / Prefer / Escalate."
+        }
+      ],
+      "section_id": "summary",
+      "supporting_item_ids": [
+        "ai-trader:architecture_note:292489bfa18f9c2c"
+      ],
+      "text": "Constraint architecture must include Must / Must Not / Prefer / Escalate guidelines."
+    },
+    {
+      "claim_id": "claim-4",
+      "confidence": "strong",
+      "latent_type": "project_identity_and_scope",
+      "provenance_refs": [
+        {
+          "end_event_id": "019c9cff-0337-77e0-9ba6-a4f6dc75a92e:4",
+          "end_line_no": 4,
+          "end_timestamp": "2026-02-27T02:48:04.257Z",
+          "rule_ids": [
+            "architecture_note.explicit"
+          ],
+          "segment_id": "019c9cff-0337-77e0-9ba6-a4f6dc75a92e:2",
+          "session_id": "019c9cff-0337-77e0-9ba6-a4f6dc75a92e",
+          "source_id": "019c9cff-0337-77e0-9ba6-a4f6dc75a92e",
+          "start_event_id": "019c9cff-0337-77e0-9ba6-a4f6dc75a92e:3",
+          "start_line_no": 3,
+          "start_timestamp": "2026-02-27T02:48:04.257Z",
+          "statement": "## Multi-Agent Architecture"
+        },
+        {
+          "end_event_id": "019c9d00-0d81-7b52-a1a9-84f7d4b05066:4",
+          "end_line_no": 4,
+          "end_timestamp": "2026-02-27T02:49:12.399Z",
+          "rule_ids": [
+            "architecture_note.explicit"
+          ],
+          "segment_id": "019c9d00-0d81-7b52-a1a9-84f7d4b05066:2",
+          "session_id": "019c9d00-0d81-7b52-a1a9-84f7d4b05066",
+          "source_id": "019c9d00-0d81-7b52-a1a9-84f7d4b05066",
+          "start_event_id": "019c9d00-0d81-7b52-a1a9-84f7d4b05066:3",
+          "start_line_no": 3,
+          "start_timestamp": "2026-02-27T02:49:12.398Z",
+          "statement": "## Multi-Agent Architecture"
+        },
+        {
+          "end_event_id": "019c9d4c-657e-7d71-a062-4d77a75d3786:4",
+          "end_line_no": 4,
+          "end_timestamp": "2026-02-27T04:12:35.657Z",
+          "rule_ids": [
+            "architecture_note.explicit"
+          ],
+          "segment_id": "019c9d4c-657e-7d71-a062-4d77a75d3786:2",
+          "session_id": "019c9d4c-657e-7d71-a062-4d77a75d3786",
+          "source_id": "019c9d4c-657e-7d71-a062-4d77a75d3786",
+          "start_event_id": "019c9d4c-657e-7d71-a062-4d77a75d3786:3",
+          "start_line_no": 3,
+          "start_timestamp": "2026-02-27T04:12:35.657Z",
+          "statement": "## Multi-Agent Architecture"
+        }
+      ],
+      "section_id": "architecture_note",
+      "supporting_item_ids": [
+        "ai-trader:architecture_note:e47dd819dd28e612"
+      ],
+      "text": "The architecture note emphasizes the importance of a multi-agent architecture."
+    },
+    {
+      "claim_id": "claim-5",
+      "confidence": "strong",
+      "latent_type": "architecture_synthesis",
+      "provenance_refs": [
+        {
+          "end_event_id": "019c9cff-0337-77e0-9ba6-a4f6dc75a92e:4",
+          "end_line_no": 4,
+          "end_timestamp": "2026-02-27T02:48:04.257Z",
+          "rule_ids": [
+            "architecture_note.explicit"
+          ],
+          "segment_id": "019c9cff-0337-77e0-9ba6-a4f6dc75a92e:2",
+          "session_id": "019c9cff-0337-77e0-9ba6-a4f6dc75a92e",
+          "source_id": "019c9cff-0337-77e0-9ba6-a4f6dc75a92e",
+          "start_event_id": "019c9cff-0337-77e0-9ba6-a4f6dc75a92e:3",
+          "start_line_no": 3,
+          "start_timestamp": "2026-02-27T02:48:04.257Z",
+          "statement": "## Runtime Components"
+        },
+        {
+          "end_event_id": "019c9d00-0d81-7b52-a1a9-84f7d4b05066:4",
+          "end_line_no": 4,
+          "end_timestamp": "2026-02-27T02:49:12.399Z",
+          "rule_ids": [
+            "architecture_note.explicit"
+          ],
+          "segment_id": "019c9d00-0d81-7b52-a1a9-84f7d4b05066:2",
+          "session_id": "019c9d00-0d81-7b52-a1a9-84f7d4b05066",
+          "source_id": "019c9d00-0d81-7b52-a1a9-84f7d4b05066",
+          "start_event_id": "019c9d00-0d81-7b52-a1a9-84f7d4b05066:3",
+          "start_line_no": 3,
+          "start_timestamp": "2026-02-27T02:49:12.398Z",
+          "statement": "## Runtime Components"
+        },
+        {
+          "end_event_id": "019c9d4c-657e-7d71-a062-4d77a75d3786:4",
+          "end_line_no": 4,
+          "end_timestamp": "2026-02-27T04:12:35.657Z",
+          "rule_ids": [
+            "architecture_note.explicit"
+          ],
+          "segment_id": "019c9d4c-657e-7d71-a062-4d77a75d3786:2",
+          "session_id": "019c9d4c-657e-7d71-a062-4d77a75d3786",
+          "source_id": "019c9d4c-657e-7d71-a062-4d77a75d3786",
+          "start_event_id": "019c9d4c-657e-7d71-a062-4d77a75d3786:3",
+          "start_line_no": 3,
+          "start_timestamp": "2026-02-27T04:12:35.657Z",
+          "statement": "## Runtime Components"
+        }
+      ],
+      "section_id": "architecture_note",
+      "supporting_item_ids": [
+        "ai-trader:architecture_note:ee70e96a7701b57e"
+      ],
+      "text": "Runtime components are a fundamental aspect of the architecture."
+    },
+    {
+      "claim_id": "claim-6",
+      "confidence": "strong",
+      "latent_type": "architecture_synthesis",
+      "provenance_refs": [
+        {
+          "end_event_id": "019ca705-c215-7221-8e6a-d28b922add82:5",
+          "end_line_no": 5,
+          "end_timestamp": "2026-03-01T01:31:38.636Z",
+          "rule_ids": [
+            "architecture_note.explicit"
+          ],
+          "segment_id": "019ca705-c215-7221-8e6a-d28b922add82:2",
+          "session_id": "019ca705-c215-7221-8e6a-d28b922add82",
+          "source_id": "019ca705-c215-7221-8e6a-d28b922add82",
+          "start_event_id": "019ca705-c215-7221-8e6a-d28b922add82:5",
+          "start_line_no": 5,
+          "start_timestamp": "2026-03-01T01:31:38.636Z",
+          "statement": "- Constraint Architecture must include Must / Must Not / Prefer / Escalate."
+        },
+        {
+          "end_event_id": "019ca705-c215-7221-8e6a-d28b922add82:9",
+          "end_line_no": 9,
+          "end_timestamp": "2026-03-01T01:31:39.552Z",
+          "rule_ids": [
+            "architecture_note.explicit"
+          ],
+          "segment_id": "019ca705-c215-7221-8e6a-d28b922add82:3",
+          "session_id": "019ca705-c215-7221-8e6a-d28b922add82",
+          "source_id": "019ca705-c215-7221-8e6a-d28b922add82",
+          "start_event_id": "019ca705-c215-7221-8e6a-d28b922add82:6",
+          "start_line_no": 6,
+          "start_timestamp": "2026-03-01T01:31:38.636Z",
+          "statement": "- Constraint Architecture must include Must / Must Not / Prefer / Escalate."
+        },
+        {
+          "end_event_id": "019ca705-c215-7221-8e6a-d28b922add82:54",
+          "end_line_no": 54,
+          "end_timestamp": "2026-03-01T02:36:55.290Z",
+          "rule_ids": [
+            "architecture_note.explicit"
+          ],
+          "segment_id": "019ca705-c215-7221-8e6a-d28b922add82:9",
+          "session_id": "019ca705-c215-7221-8e6a-d28b922add82",
+          "source_id": "019ca705-c215-7221-8e6a-d28b922add82",
+          "start_event_id": "019ca705-c215-7221-8e6a-d28b922add82:54",
+          "start_line_no": 54,
+          "start_timestamp": "2026-03-01T02:36:55.290Z",
+          "statement": "- Constraint Architecture must include Must / Must Not / Prefer / Escalate."
+        }
+      ],
+      "section_id": "architecture_note",
+      "supporting_item_ids": [
+        "ai-trader:architecture_note:292489bfa18f9c2c"
+      ],
+      "text": "The architecture must adhere to specific constraints including Must / Must Not / Prefer / Escalate."
+    }
+  ],
+  "versions": {
+    "page_config_version": 2,
+    "renderer_version": 2,
+    "synthesis_prompt_version": 2,
+    "synthesis_schema_version": 1,
+    "wiki_schema_version": 2
+  }
+}

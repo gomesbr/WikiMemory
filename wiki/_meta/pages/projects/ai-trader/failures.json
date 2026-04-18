@@ -1,0 +1,3496 @@
+{
+  "bucket": "failures",
+  "citations": [
+    {
+      "citation_id": "claim-1",
+      "item_keys": [
+        "ai-trader:failure:76e5e17677e712b8"
+      ],
+      "kind": "synthesized_claim",
+      "label": "claim-1",
+      "provenance_refs": [
+        {
+          "end_event_id": "019c9cff-0337-77e0-9ba6-a4f6dc75a92e:4",
+          "end_line_no": 4,
+          "end_timestamp": "2026-02-27T02:48:04.257Z",
+          "rule_ids": [
+            "failure.explicit"
+          ],
+          "segment_id": "019c9cff-0337-77e0-9ba6-a4f6dc75a92e:2",
+          "session_id": "019c9cff-0337-77e0-9ba6-a4f6dc75a92e",
+          "source_id": "019c9cff-0337-77e0-9ba6-a4f6dc75a92e",
+          "start_event_id": "019c9cff-0337-77e0-9ba6-a4f6dc75a92e:3",
+          "start_line_no": 3,
+          "start_timestamp": "2026-02-27T02:48:04.257Z",
+          "statement": "- Safety and fallback: If a skill can't be applied cleanly (missing files, unclear instructions), state the issue, pick the next-best approach, and continue."
+        },
+        {
+          "end_event_id": "019c9d00-0d81-7b52-a1a9-84f7d4b05066:4",
+          "end_line_no": 4,
+          "end_timestamp": "2026-02-27T02:49:12.399Z",
+          "rule_ids": [
+            "failure.explicit"
+          ],
+          "segment_id": "019c9d00-0d81-7b52-a1a9-84f7d4b05066:2",
+          "session_id": "019c9d00-0d81-7b52-a1a9-84f7d4b05066",
+          "source_id": "019c9d00-0d81-7b52-a1a9-84f7d4b05066",
+          "start_event_id": "019c9d00-0d81-7b52-a1a9-84f7d4b05066:3",
+          "start_line_no": 3,
+          "start_timestamp": "2026-02-27T02:49:12.398Z",
+          "statement": "- Safety and fallback: If a skill can't be applied cleanly (missing files, unclear instructions), state the issue, pick the next-best approach, and continue."
+        },
+        {
+          "end_event_id": "019c9d4c-657e-7d71-a062-4d77a75d3786:4",
+          "end_line_no": 4,
+          "end_timestamp": "2026-02-27T04:12:35.657Z",
+          "rule_ids": [
+            "failure.explicit"
+          ],
+          "segment_id": "019c9d4c-657e-7d71-a062-4d77a75d3786:2",
+          "session_id": "019c9d4c-657e-7d71-a062-4d77a75d3786",
+          "source_id": "019c9d4c-657e-7d71-a062-4d77a75d3786",
+          "start_event_id": "019c9d4c-657e-7d71-a062-4d77a75d3786:3",
+          "start_line_no": 3,
+          "start_timestamp": "2026-02-27T04:12:35.657Z",
+          "statement": "- Safety and fallback: If a skill can't be applied cleanly (missing files, unclear instructions), state the issue, pick the next-best approach, and continue."
+        }
+      ]
+    },
+    {
+      "citation_id": "claim-2",
+      "item_keys": [
+        "ai-trader:failure:a76937d9d8b94f87"
+      ],
+      "kind": "synthesized_claim",
+      "label": "claim-2",
+      "provenance_refs": [
+        {
+          "end_event_id": "019ca705-c215-7221-8e6a-d28b922add82:5",
+          "end_line_no": 5,
+          "end_timestamp": "2026-03-01T01:31:38.636Z",
+          "rule_ids": [
+            "failure.explicit"
+          ],
+          "segment_id": "019ca705-c215-7221-8e6a-d28b922add82:2",
+          "session_id": "019ca705-c215-7221-8e6a-d28b922add82",
+          "source_id": "019ca705-c215-7221-8e6a-d28b922add82",
+          "start_event_id": "019ca705-c215-7221-8e6a-d28b922add82:5",
+          "start_line_no": 5,
+          "start_timestamp": "2026-03-01T01:31:38.636Z",
+          "statement": "- If something fails, report root cause, fix rationale, and evidence that the failure cannot recur via the same path."
+        },
+        {
+          "end_event_id": "019ca705-c215-7221-8e6a-d28b922add82:9",
+          "end_line_no": 9,
+          "end_timestamp": "2026-03-01T01:31:39.552Z",
+          "rule_ids": [
+            "failure.explicit"
+          ],
+          "segment_id": "019ca705-c215-7221-8e6a-d28b922add82:3",
+          "session_id": "019ca705-c215-7221-8e6a-d28b922add82",
+          "source_id": "019ca705-c215-7221-8e6a-d28b922add82",
+          "start_event_id": "019ca705-c215-7221-8e6a-d28b922add82:6",
+          "start_line_no": 6,
+          "start_timestamp": "2026-03-01T01:31:38.636Z",
+          "statement": "- If something fails, report root cause, fix rationale, and evidence that the failure cannot recur via the same path."
+        },
+        {
+          "end_event_id": "019ca705-c215-7221-8e6a-d28b922add82:54",
+          "end_line_no": 54,
+          "end_timestamp": "2026-03-01T02:36:55.290Z",
+          "rule_ids": [
+            "failure.explicit"
+          ],
+          "segment_id": "019ca705-c215-7221-8e6a-d28b922add82:9",
+          "session_id": "019ca705-c215-7221-8e6a-d28b922add82",
+          "source_id": "019ca705-c215-7221-8e6a-d28b922add82",
+          "start_event_id": "019ca705-c215-7221-8e6a-d28b922add82:54",
+          "start_line_no": 54,
+          "start_timestamp": "2026-03-01T02:36:55.290Z",
+          "statement": "- If something fails, report root cause, fix rationale, and evidence that the failure cannot recur via the same path."
+        }
+      ]
+    },
+    {
+      "citation_id": "claim-3",
+      "item_keys": [
+        "ai-trader:failure:ededa0e1faee62c8"
+      ],
+      "kind": "synthesized_claim",
+      "label": "claim-3",
+      "provenance_refs": [
+        {
+          "end_event_id": "019ca705-c215-7221-8e6a-d28b922add82:5",
+          "end_line_no": 5,
+          "end_timestamp": "2026-03-01T01:31:38.636Z",
+          "rule_ids": [
+            "failure.explicit"
+          ],
+          "segment_id": "019ca705-c215-7221-8e6a-d28b922add82:2",
+          "session_id": "019ca705-c215-7221-8e6a-d28b922add82",
+          "source_id": "019ca705-c215-7221-8e6a-d28b922add82",
+          "start_event_id": "019ca705-c215-7221-8e6a-d28b922add82:5",
+          "start_line_no": 5,
+          "start_timestamp": "2026-03-01T01:31:38.636Z",
+          "statement": "- Use first-principles debugging: identify root cause and implement durable fixes with regression coverage instead of quick local patches."
+        },
+        {
+          "end_event_id": "019ca705-c215-7221-8e6a-d28b922add82:9",
+          "end_line_no": 9,
+          "end_timestamp": "2026-03-01T01:31:39.552Z",
+          "rule_ids": [
+            "failure.explicit"
+          ],
+          "segment_id": "019ca705-c215-7221-8e6a-d28b922add82:3",
+          "session_id": "019ca705-c215-7221-8e6a-d28b922add82",
+          "source_id": "019ca705-c215-7221-8e6a-d28b922add82",
+          "start_event_id": "019ca705-c215-7221-8e6a-d28b922add82:6",
+          "start_line_no": 6,
+          "start_timestamp": "2026-03-01T01:31:38.636Z",
+          "statement": "- Use first-principles debugging: identify root cause and implement durable fixes with regression coverage instead of quick local patches."
+        },
+        {
+          "end_event_id": "019ca705-c215-7221-8e6a-d28b922add82:54",
+          "end_line_no": 54,
+          "end_timestamp": "2026-03-01T02:36:55.290Z",
+          "rule_ids": [
+            "failure.explicit"
+          ],
+          "segment_id": "019ca705-c215-7221-8e6a-d28b922add82:9",
+          "session_id": "019ca705-c215-7221-8e6a-d28b922add82",
+          "source_id": "019ca705-c215-7221-8e6a-d28b922add82",
+          "start_event_id": "019ca705-c215-7221-8e6a-d28b922add82:54",
+          "start_line_no": 54,
+          "start_timestamp": "2026-03-01T02:36:55.290Z",
+          "statement": "- Use first-principles debugging: identify root cause and implement durable fixes with regression coverage instead of quick local patches."
+        }
+      ]
+    },
+    {
+      "citation_id": "claim-4",
+      "item_keys": [
+        "ai-trader:failure:5bb61cdc048083ce"
+      ],
+      "kind": "synthesized_claim",
+      "label": "claim-4",
+      "provenance_refs": [
+        {
+          "end_event_id": "019ca705-c215-7221-8e6a-d28b922add82:5",
+          "end_line_no": 5,
+          "end_timestamp": "2026-03-01T01:31:38.636Z",
+          "rule_ids": [
+            "failure.explicit"
+          ],
+          "segment_id": "019ca705-c215-7221-8e6a-d28b922add82:2",
+          "session_id": "019ca705-c215-7221-8e6a-d28b922add82",
+          "source_id": "019ca705-c215-7221-8e6a-d28b922add82",
+          "start_event_id": "019ca705-c215-7221-8e6a-d28b922add82:5",
+          "start_line_no": 5,
+          "start_timestamp": "2026-03-01T01:31:38.636Z",
+          "statement": "Define the failure precisely:"
+        },
+        {
+          "end_event_id": "019ca705-c215-7221-8e6a-d28b922add82:9",
+          "end_line_no": 9,
+          "end_timestamp": "2026-03-01T01:31:39.552Z",
+          "rule_ids": [
+            "failure.explicit"
+          ],
+          "segment_id": "019ca705-c215-7221-8e6a-d28b922add82:3",
+          "session_id": "019ca705-c215-7221-8e6a-d28b922add82",
+          "source_id": "019ca705-c215-7221-8e6a-d28b922add82",
+          "start_event_id": "019ca705-c215-7221-8e6a-d28b922add82:6",
+          "start_line_no": 6,
+          "start_timestamp": "2026-03-01T01:31:38.636Z",
+          "statement": "Define the failure precisely:"
+        },
+        {
+          "end_event_id": "019ca705-c215-7221-8e6a-d28b922add82:54",
+          "end_line_no": 54,
+          "end_timestamp": "2026-03-01T02:36:55.290Z",
+          "rule_ids": [
+            "failure.explicit"
+          ],
+          "segment_id": "019ca705-c215-7221-8e6a-d28b922add82:9",
+          "session_id": "019ca705-c215-7221-8e6a-d28b922add82",
+          "source_id": "019ca705-c215-7221-8e6a-d28b922add82",
+          "start_event_id": "019ca705-c215-7221-8e6a-d28b922add82:54",
+          "start_line_no": 54,
+          "start_timestamp": "2026-03-01T02:36:55.290Z",
+          "statement": "Define the failure precisely:"
+        }
+      ]
+    },
+    {
+      "citation_id": "claim-5",
+      "item_keys": [
+        "ai-trader:failure:8db9a768aa0881c4"
+      ],
+      "kind": "synthesized_claim",
+      "label": "claim-5",
+      "provenance_refs": [
+        {
+          "end_event_id": "019ca705-c215-7221-8e6a-d28b922add82:5",
+          "end_line_no": 5,
+          "end_timestamp": "2026-03-01T01:31:38.636Z",
+          "rule_ids": [
+            "failure.explicit"
+          ],
+          "segment_id": "019ca705-c215-7221-8e6a-d28b922add82:2",
+          "session_id": "019ca705-c215-7221-8e6a-d28b922add82",
+          "source_id": "019ca705-c215-7221-8e6a-d28b922add82",
+          "start_event_id": "019ca705-c215-7221-8e6a-d28b922add82:5",
+          "start_line_no": 5,
+          "start_timestamp": "2026-03-01T01:31:38.636Z",
+          "statement": "Use this doctrine whenever addressing failures, instability, or repeated operational friction."
+        },
+        {
+          "end_event_id": "019ca705-c215-7221-8e6a-d28b922add82:9",
+          "end_line_no": 9,
+          "end_timestamp": "2026-03-01T01:31:39.552Z",
+          "rule_ids": [
+            "failure.explicit"
+          ],
+          "segment_id": "019ca705-c215-7221-8e6a-d28b922add82:3",
+          "session_id": "019ca705-c215-7221-8e6a-d28b922add82",
+          "source_id": "019ca705-c215-7221-8e6a-d28b922add82",
+          "start_event_id": "019ca705-c215-7221-8e6a-d28b922add82:6",
+          "start_line_no": 6,
+          "start_timestamp": "2026-03-01T01:31:38.636Z",
+          "statement": "Use this doctrine whenever addressing failures, instability, or repeated operational friction."
+        },
+        {
+          "end_event_id": "019ca705-c215-7221-8e6a-d28b922add82:54",
+          "end_line_no": 54,
+          "end_timestamp": "2026-03-01T02:36:55.290Z",
+          "rule_ids": [
+            "failure.explicit"
+          ],
+          "segment_id": "019ca705-c215-7221-8e6a-d28b922add82:9",
+          "session_id": "019ca705-c215-7221-8e6a-d28b922add82",
+          "source_id": "019ca705-c215-7221-8e6a-d28b922add82",
+          "start_event_id": "019ca705-c215-7221-8e6a-d28b922add82:54",
+          "start_line_no": 54,
+          "start_timestamp": "2026-03-01T02:36:55.290Z",
+          "statement": "Use this doctrine whenever addressing failures, instability, or repeated operational friction."
+        }
+      ]
+    },
+    {
+      "citation_id": "claim-6",
+      "item_keys": [
+        "ai-trader:failure:e3d2716ff513d19e"
+      ],
+      "kind": "synthesized_claim",
+      "label": "claim-6",
+      "provenance_refs": [
+        {
+          "end_event_id": "019caf95-fa0a-7900-9097-6dbda1513ef0:5",
+          "end_line_no": 5,
+          "end_timestamp": "2026-03-02T17:26:07.837Z",
+          "rule_ids": [
+            "failure.explicit"
+          ],
+          "segment_id": "019caf95-fa0a-7900-9097-6dbda1513ef0:3",
+          "session_id": "019caf95-fa0a-7900-9097-6dbda1513ef0",
+          "source_id": "019caf95-fa0a-7900-9097-6dbda1513ef0",
+          "start_event_id": "019caf95-fa0a-7900-9097-6dbda1513ef0:5",
+          "start_line_no": 5,
+          "start_timestamp": "2026-03-02T17:26:07.837Z",
+          "statement": "do not ask user to \"grant access\" for those paths unless a command has already failed with a concrete filesystem/permission error."
+        },
+        {
+          "end_event_id": "019caf95-fa0a-7900-9097-6dbda1513ef0:8",
+          "end_line_no": 8,
+          "end_timestamp": "2026-03-02T17:26:08.430Z",
+          "rule_ids": [
+            "failure.explicit"
+          ],
+          "segment_id": "019caf95-fa0a-7900-9097-6dbda1513ef0:4",
+          "session_id": "019caf95-fa0a-7900-9097-6dbda1513ef0",
+          "source_id": "019caf95-fa0a-7900-9097-6dbda1513ef0",
+          "start_event_id": "019caf95-fa0a-7900-9097-6dbda1513ef0:6",
+          "start_line_no": 6,
+          "start_timestamp": "2026-03-02T17:26:07.837Z",
+          "statement": "do not ask user to \"grant access\" for those paths unless a command has already failed with a concrete filesystem/permission error."
+        },
+        {
+          "end_event_id": "019caf95-fa0a-7900-9097-6dbda1513ef0:16",
+          "end_line_no": 16,
+          "end_timestamp": "2026-03-02T17:26:45.310Z",
+          "rule_ids": [
+            "failure.explicit"
+          ],
+          "segment_id": "019caf95-fa0a-7900-9097-6dbda1513ef0:6",
+          "session_id": "019caf95-fa0a-7900-9097-6dbda1513ef0",
+          "source_id": "019caf95-fa0a-7900-9097-6dbda1513ef0",
+          "start_event_id": "019caf95-fa0a-7900-9097-6dbda1513ef0:16",
+          "start_line_no": 16,
+          "start_timestamp": "2026-03-02T17:26:45.310Z",
+          "statement": "do not ask user to \"grant access\" for those paths unless a command has already failed with a concrete filesystem/permission error."
+        }
+      ]
+    },
+    {
+      "citation_id": "claim-7",
+      "item_keys": [
+        "ai-trader:failure:8df64abb07b96d09"
+      ],
+      "kind": "synthesized_claim",
+      "label": "claim-7",
+      "provenance_refs": [
+        {
+          "end_event_id": "019cb0ef-a044-7090-9627-7f2d616c46f2:206",
+          "end_line_no": 206,
+          "end_timestamp": "2026-03-03T00:20:10.232Z",
+          "rule_ids": [
+            "failure.explicit"
+          ],
+          "segment_id": "019cb0ef-a044-7090-9627-7f2d616c46f2:20",
+          "session_id": "019cb0ef-a044-7090-9627-7f2d616c46f2",
+          "source_id": "019cb0ef-a044-7090-9627-7f2d616c46f2",
+          "start_event_id": "019cb0ef-a044-7090-9627-7f2d616c46f2:206",
+          "start_line_no": 206,
+          "start_timestamp": "2026-03-03T00:20:10.232Z",
+          "statement": "- Do not claim filesystem/policy/approval blockers unless you include exact command + error evidence from this run."
+        },
+        {
+          "end_event_id": "019cb0ef-a044-7090-9627-7f2d616c46f2:209",
+          "end_line_no": 209,
+          "end_timestamp": "2026-03-03T00:20:11.135Z",
+          "rule_ids": [
+            "failure.explicit"
+          ],
+          "segment_id": "019cb0ef-a044-7090-9627-7f2d616c46f2:21",
+          "session_id": "019cb0ef-a044-7090-9627-7f2d616c46f2",
+          "source_id": "019cb0ef-a044-7090-9627-7f2d616c46f2",
+          "start_event_id": "019cb0ef-a044-7090-9627-7f2d616c46f2:207",
+          "start_line_no": 207,
+          "start_timestamp": "2026-03-03T00:20:10.233Z",
+          "statement": "- Do not claim filesystem/policy/approval blockers unless you include exact command + error evidence from this run."
+        },
+        {
+          "end_event_id": "019cb0ef-a044-7090-9627-7f2d616c46f2:288",
+          "end_line_no": 288,
+          "end_timestamp": "2026-03-03T00:22:17.244Z",
+          "rule_ids": [
+            "failure.explicit"
+          ],
+          "segment_id": "019cb0ef-a044-7090-9627-7f2d616c46f2:33",
+          "session_id": "019cb0ef-a044-7090-9627-7f2d616c46f2",
+          "source_id": "019cb0ef-a044-7090-9627-7f2d616c46f2",
+          "start_event_id": "019cb0ef-a044-7090-9627-7f2d616c46f2:288",
+          "start_line_no": 288,
+          "start_timestamp": "2026-03-03T00:22:17.244Z",
+          "statement": "- Do not claim filesystem/policy/approval blockers unless you include exact command + error evidence from this run."
+        }
+      ]
+    },
+    {
+      "citation_id": "item-failure-1",
+      "item_keys": [
+        "ai-trader:failure:76e5e17677e712b8"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-failure-1",
+      "provenance_refs": [
+        {
+          "end_event_id": "019c9cff-0337-77e0-9ba6-a4f6dc75a92e:4",
+          "end_line_no": 4,
+          "end_timestamp": "2026-02-27T02:48:04.257Z",
+          "rule_ids": [
+            "failure.explicit"
+          ],
+          "segment_id": "019c9cff-0337-77e0-9ba6-a4f6dc75a92e:2",
+          "session_id": "019c9cff-0337-77e0-9ba6-a4f6dc75a92e",
+          "source_id": "019c9cff-0337-77e0-9ba6-a4f6dc75a92e",
+          "start_event_id": "019c9cff-0337-77e0-9ba6-a4f6dc75a92e:3",
+          "start_line_no": 3,
+          "start_timestamp": "2026-02-27T02:48:04.257Z",
+          "statement": "- Safety and fallback: If a skill can't be applied cleanly (missing files, unclear instructions), state the issue, pick the next-best approach, and continue."
+        },
+        {
+          "end_event_id": "019c9d00-0d81-7b52-a1a9-84f7d4b05066:4",
+          "end_line_no": 4,
+          "end_timestamp": "2026-02-27T02:49:12.399Z",
+          "rule_ids": [
+            "failure.explicit"
+          ],
+          "segment_id": "019c9d00-0d81-7b52-a1a9-84f7d4b05066:2",
+          "session_id": "019c9d00-0d81-7b52-a1a9-84f7d4b05066",
+          "source_id": "019c9d00-0d81-7b52-a1a9-84f7d4b05066",
+          "start_event_id": "019c9d00-0d81-7b52-a1a9-84f7d4b05066:3",
+          "start_line_no": 3,
+          "start_timestamp": "2026-02-27T02:49:12.398Z",
+          "statement": "- Safety and fallback: If a skill can't be applied cleanly (missing files, unclear instructions), state the issue, pick the next-best approach, and continue."
+        },
+        {
+          "end_event_id": "019c9d4c-657e-7d71-a062-4d77a75d3786:4",
+          "end_line_no": 4,
+          "end_timestamp": "2026-02-27T04:12:35.657Z",
+          "rule_ids": [
+            "failure.explicit"
+          ],
+          "segment_id": "019c9d4c-657e-7d71-a062-4d77a75d3786:2",
+          "session_id": "019c9d4c-657e-7d71-a062-4d77a75d3786",
+          "source_id": "019c9d4c-657e-7d71-a062-4d77a75d3786",
+          "start_event_id": "019c9d4c-657e-7d71-a062-4d77a75d3786:3",
+          "start_line_no": 3,
+          "start_timestamp": "2026-02-27T04:12:35.657Z",
+          "statement": "- Safety and fallback: If a skill can't be applied cleanly (missing files, unclear instructions), state the issue, pick the next-best approach, and continue."
+        }
+      ]
+    },
+    {
+      "citation_id": "item-failure-2",
+      "item_keys": [
+        "ai-trader:failure:a76937d9d8b94f87"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-failure-2",
+      "provenance_refs": [
+        {
+          "end_event_id": "019ca705-c215-7221-8e6a-d28b922add82:5",
+          "end_line_no": 5,
+          "end_timestamp": "2026-03-01T01:31:38.636Z",
+          "rule_ids": [
+            "failure.explicit"
+          ],
+          "segment_id": "019ca705-c215-7221-8e6a-d28b922add82:2",
+          "session_id": "019ca705-c215-7221-8e6a-d28b922add82",
+          "source_id": "019ca705-c215-7221-8e6a-d28b922add82",
+          "start_event_id": "019ca705-c215-7221-8e6a-d28b922add82:5",
+          "start_line_no": 5,
+          "start_timestamp": "2026-03-01T01:31:38.636Z",
+          "statement": "- If something fails, report root cause, fix rationale, and evidence that the failure cannot recur via the same path."
+        },
+        {
+          "end_event_id": "019ca705-c215-7221-8e6a-d28b922add82:9",
+          "end_line_no": 9,
+          "end_timestamp": "2026-03-01T01:31:39.552Z",
+          "rule_ids": [
+            "failure.explicit"
+          ],
+          "segment_id": "019ca705-c215-7221-8e6a-d28b922add82:3",
+          "session_id": "019ca705-c215-7221-8e6a-d28b922add82",
+          "source_id": "019ca705-c215-7221-8e6a-d28b922add82",
+          "start_event_id": "019ca705-c215-7221-8e6a-d28b922add82:6",
+          "start_line_no": 6,
+          "start_timestamp": "2026-03-01T01:31:38.636Z",
+          "statement": "- If something fails, report root cause, fix rationale, and evidence that the failure cannot recur via the same path."
+        },
+        {
+          "end_event_id": "019ca705-c215-7221-8e6a-d28b922add82:54",
+          "end_line_no": 54,
+          "end_timestamp": "2026-03-01T02:36:55.290Z",
+          "rule_ids": [
+            "failure.explicit"
+          ],
+          "segment_id": "019ca705-c215-7221-8e6a-d28b922add82:9",
+          "session_id": "019ca705-c215-7221-8e6a-d28b922add82",
+          "source_id": "019ca705-c215-7221-8e6a-d28b922add82",
+          "start_event_id": "019ca705-c215-7221-8e6a-d28b922add82:54",
+          "start_line_no": 54,
+          "start_timestamp": "2026-03-01T02:36:55.290Z",
+          "statement": "- If something fails, report root cause, fix rationale, and evidence that the failure cannot recur via the same path."
+        }
+      ]
+    },
+    {
+      "citation_id": "item-failure-3",
+      "item_keys": [
+        "ai-trader:failure:ededa0e1faee62c8"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-failure-3",
+      "provenance_refs": [
+        {
+          "end_event_id": "019ca705-c215-7221-8e6a-d28b922add82:5",
+          "end_line_no": 5,
+          "end_timestamp": "2026-03-01T01:31:38.636Z",
+          "rule_ids": [
+            "failure.explicit"
+          ],
+          "segment_id": "019ca705-c215-7221-8e6a-d28b922add82:2",
+          "session_id": "019ca705-c215-7221-8e6a-d28b922add82",
+          "source_id": "019ca705-c215-7221-8e6a-d28b922add82",
+          "start_event_id": "019ca705-c215-7221-8e6a-d28b922add82:5",
+          "start_line_no": 5,
+          "start_timestamp": "2026-03-01T01:31:38.636Z",
+          "statement": "- Use first-principles debugging: identify root cause and implement durable fixes with regression coverage instead of quick local patches."
+        },
+        {
+          "end_event_id": "019ca705-c215-7221-8e6a-d28b922add82:9",
+          "end_line_no": 9,
+          "end_timestamp": "2026-03-01T01:31:39.552Z",
+          "rule_ids": [
+            "failure.explicit"
+          ],
+          "segment_id": "019ca705-c215-7221-8e6a-d28b922add82:3",
+          "session_id": "019ca705-c215-7221-8e6a-d28b922add82",
+          "source_id": "019ca705-c215-7221-8e6a-d28b922add82",
+          "start_event_id": "019ca705-c215-7221-8e6a-d28b922add82:6",
+          "start_line_no": 6,
+          "start_timestamp": "2026-03-01T01:31:38.636Z",
+          "statement": "- Use first-principles debugging: identify root cause and implement durable fixes with regression coverage instead of quick local patches."
+        },
+        {
+          "end_event_id": "019ca705-c215-7221-8e6a-d28b922add82:54",
+          "end_line_no": 54,
+          "end_timestamp": "2026-03-01T02:36:55.290Z",
+          "rule_ids": [
+            "failure.explicit"
+          ],
+          "segment_id": "019ca705-c215-7221-8e6a-d28b922add82:9",
+          "session_id": "019ca705-c215-7221-8e6a-d28b922add82",
+          "source_id": "019ca705-c215-7221-8e6a-d28b922add82",
+          "start_event_id": "019ca705-c215-7221-8e6a-d28b922add82:54",
+          "start_line_no": 54,
+          "start_timestamp": "2026-03-01T02:36:55.290Z",
+          "statement": "- Use first-principles debugging: identify root cause and implement durable fixes with regression coverage instead of quick local patches."
+        }
+      ]
+    },
+    {
+      "citation_id": "item-failure-4",
+      "item_keys": [
+        "ai-trader:failure:5bb61cdc048083ce"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-failure-4",
+      "provenance_refs": [
+        {
+          "end_event_id": "019ca705-c215-7221-8e6a-d28b922add82:5",
+          "end_line_no": 5,
+          "end_timestamp": "2026-03-01T01:31:38.636Z",
+          "rule_ids": [
+            "failure.explicit"
+          ],
+          "segment_id": "019ca705-c215-7221-8e6a-d28b922add82:2",
+          "session_id": "019ca705-c215-7221-8e6a-d28b922add82",
+          "source_id": "019ca705-c215-7221-8e6a-d28b922add82",
+          "start_event_id": "019ca705-c215-7221-8e6a-d28b922add82:5",
+          "start_line_no": 5,
+          "start_timestamp": "2026-03-01T01:31:38.636Z",
+          "statement": "Define the failure precisely:"
+        },
+        {
+          "end_event_id": "019ca705-c215-7221-8e6a-d28b922add82:9",
+          "end_line_no": 9,
+          "end_timestamp": "2026-03-01T01:31:39.552Z",
+          "rule_ids": [
+            "failure.explicit"
+          ],
+          "segment_id": "019ca705-c215-7221-8e6a-d28b922add82:3",
+          "session_id": "019ca705-c215-7221-8e6a-d28b922add82",
+          "source_id": "019ca705-c215-7221-8e6a-d28b922add82",
+          "start_event_id": "019ca705-c215-7221-8e6a-d28b922add82:6",
+          "start_line_no": 6,
+          "start_timestamp": "2026-03-01T01:31:38.636Z",
+          "statement": "Define the failure precisely:"
+        },
+        {
+          "end_event_id": "019ca705-c215-7221-8e6a-d28b922add82:54",
+          "end_line_no": 54,
+          "end_timestamp": "2026-03-01T02:36:55.290Z",
+          "rule_ids": [
+            "failure.explicit"
+          ],
+          "segment_id": "019ca705-c215-7221-8e6a-d28b922add82:9",
+          "session_id": "019ca705-c215-7221-8e6a-d28b922add82",
+          "source_id": "019ca705-c215-7221-8e6a-d28b922add82",
+          "start_event_id": "019ca705-c215-7221-8e6a-d28b922add82:54",
+          "start_line_no": 54,
+          "start_timestamp": "2026-03-01T02:36:55.290Z",
+          "statement": "Define the failure precisely:"
+        }
+      ]
+    },
+    {
+      "citation_id": "item-failure-5",
+      "item_keys": [
+        "ai-trader:failure:3d2140abbf5fd24d"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-failure-5",
+      "provenance_refs": [
+        {
+          "end_event_id": "019ca705-c215-7221-8e6a-d28b922add82:5",
+          "end_line_no": 5,
+          "end_timestamp": "2026-03-01T01:31:38.636Z",
+          "rule_ids": [
+            "failure.explicit"
+          ],
+          "segment_id": "019ca705-c215-7221-8e6a-d28b922add82:2",
+          "session_id": "019ca705-c215-7221-8e6a-d28b922add82",
+          "source_id": "019ca705-c215-7221-8e6a-d28b922add82",
+          "start_event_id": "019ca705-c215-7221-8e6a-d28b922add82:5",
+          "start_line_no": 5,
+          "start_timestamp": "2026-03-01T01:31:38.636Z",
+          "statement": "Failure Playbook"
+        },
+        {
+          "end_event_id": "019ca705-c215-7221-8e6a-d28b922add82:9",
+          "end_line_no": 9,
+          "end_timestamp": "2026-03-01T01:31:39.552Z",
+          "rule_ids": [
+            "failure.explicit"
+          ],
+          "segment_id": "019ca705-c215-7221-8e6a-d28b922add82:3",
+          "session_id": "019ca705-c215-7221-8e6a-d28b922add82",
+          "source_id": "019ca705-c215-7221-8e6a-d28b922add82",
+          "start_event_id": "019ca705-c215-7221-8e6a-d28b922add82:6",
+          "start_line_no": 6,
+          "start_timestamp": "2026-03-01T01:31:38.636Z",
+          "statement": "Failure Playbook"
+        },
+        {
+          "end_event_id": "019ca705-c215-7221-8e6a-d28b922add82:54",
+          "end_line_no": 54,
+          "end_timestamp": "2026-03-01T02:36:55.290Z",
+          "rule_ids": [
+            "failure.explicit"
+          ],
+          "segment_id": "019ca705-c215-7221-8e6a-d28b922add82:9",
+          "session_id": "019ca705-c215-7221-8e6a-d28b922add82",
+          "source_id": "019ca705-c215-7221-8e6a-d28b922add82",
+          "start_event_id": "019ca705-c215-7221-8e6a-d28b922add82:54",
+          "start_line_no": 54,
+          "start_timestamp": "2026-03-01T02:36:55.290Z",
+          "statement": "Failure Playbook"
+        }
+      ]
+    },
+    {
+      "citation_id": "item-failure-6",
+      "item_keys": [
+        "ai-trader:failure:8db9a768aa0881c4"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-failure-6",
+      "provenance_refs": [
+        {
+          "end_event_id": "019ca705-c215-7221-8e6a-d28b922add82:5",
+          "end_line_no": 5,
+          "end_timestamp": "2026-03-01T01:31:38.636Z",
+          "rule_ids": [
+            "failure.explicit"
+          ],
+          "segment_id": "019ca705-c215-7221-8e6a-d28b922add82:2",
+          "session_id": "019ca705-c215-7221-8e6a-d28b922add82",
+          "source_id": "019ca705-c215-7221-8e6a-d28b922add82",
+          "start_event_id": "019ca705-c215-7221-8e6a-d28b922add82:5",
+          "start_line_no": 5,
+          "start_timestamp": "2026-03-01T01:31:38.636Z",
+          "statement": "Use this doctrine whenever addressing failures, instability, or repeated operational friction."
+        },
+        {
+          "end_event_id": "019ca705-c215-7221-8e6a-d28b922add82:9",
+          "end_line_no": 9,
+          "end_timestamp": "2026-03-01T01:31:39.552Z",
+          "rule_ids": [
+            "failure.explicit"
+          ],
+          "segment_id": "019ca705-c215-7221-8e6a-d28b922add82:3",
+          "session_id": "019ca705-c215-7221-8e6a-d28b922add82",
+          "source_id": "019ca705-c215-7221-8e6a-d28b922add82",
+          "start_event_id": "019ca705-c215-7221-8e6a-d28b922add82:6",
+          "start_line_no": 6,
+          "start_timestamp": "2026-03-01T01:31:38.636Z",
+          "statement": "Use this doctrine whenever addressing failures, instability, or repeated operational friction."
+        },
+        {
+          "end_event_id": "019ca705-c215-7221-8e6a-d28b922add82:54",
+          "end_line_no": 54,
+          "end_timestamp": "2026-03-01T02:36:55.290Z",
+          "rule_ids": [
+            "failure.explicit"
+          ],
+          "segment_id": "019ca705-c215-7221-8e6a-d28b922add82:9",
+          "session_id": "019ca705-c215-7221-8e6a-d28b922add82",
+          "source_id": "019ca705-c215-7221-8e6a-d28b922add82",
+          "start_event_id": "019ca705-c215-7221-8e6a-d28b922add82:54",
+          "start_line_no": 54,
+          "start_timestamp": "2026-03-01T02:36:55.290Z",
+          "statement": "Use this doctrine whenever addressing failures, instability, or repeated operational friction."
+        }
+      ]
+    },
+    {
+      "citation_id": "item-failure-7",
+      "item_keys": [
+        "ai-trader:failure:8d8a7022f189c5ed"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-failure-7",
+      "provenance_refs": [
+        {
+          "end_event_id": "019ca705-c215-7221-8e6a-d28b922add82:5",
+          "end_line_no": 5,
+          "end_timestamp": "2026-03-01T01:31:38.636Z",
+          "rule_ids": [
+            "failure.explicit"
+          ],
+          "segment_id": "019ca705-c215-7221-8e6a-d28b922add82:2",
+          "session_id": "019ca705-c215-7221-8e6a-d28b922add82",
+          "source_id": "019ca705-c215-7221-8e6a-d28b922add82",
+          "start_event_id": "019ca705-c215-7221-8e6a-d28b922add82:5",
+          "start_line_no": 5,
+          "start_timestamp": "2026-03-01T01:31:38.636Z",
+          "statement": "- Test/build failures not caused by this change."
+        },
+        {
+          "end_event_id": "019ca705-c215-7221-8e6a-d28b922add82:9",
+          "end_line_no": 9,
+          "end_timestamp": "2026-03-01T01:31:39.552Z",
+          "rule_ids": [
+            "failure.explicit"
+          ],
+          "segment_id": "019ca705-c215-7221-8e6a-d28b922add82:3",
+          "session_id": "019ca705-c215-7221-8e6a-d28b922add82",
+          "source_id": "019ca705-c215-7221-8e6a-d28b922add82",
+          "start_event_id": "019ca705-c215-7221-8e6a-d28b922add82:6",
+          "start_line_no": 6,
+          "start_timestamp": "2026-03-01T01:31:38.636Z",
+          "statement": "- Test/build failures not caused by this change."
+        },
+        {
+          "end_event_id": "019ca766-5bc5-78d1-aa87-19b2cfd3b1a5:19",
+          "end_line_no": 19,
+          "end_timestamp": "2026-03-01T03:26:30.376Z",
+          "rule_ids": [
+            "failure.explicit"
+          ],
+          "segment_id": "019ca766-5bc5-78d1-aa87-19b2cfd3b1a5:6",
+          "session_id": "019ca766-5bc5-78d1-aa87-19b2cfd3b1a5",
+          "source_id": "019ca766-5bc5-78d1-aa87-19b2cfd3b1a5",
+          "start_event_id": "019ca766-5bc5-78d1-aa87-19b2cfd3b1a5:19",
+          "start_line_no": 19,
+          "start_timestamp": "2026-03-01T03:26:30.376Z",
+          "statement": "- Test/build failures not caused by this change."
+        }
+      ]
+    },
+    {
+      "citation_id": "item-failure-8",
+      "item_keys": [
+        "ai-trader:failure:e3d2716ff513d19e"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-failure-8",
+      "provenance_refs": [
+        {
+          "end_event_id": "019caf95-fa0a-7900-9097-6dbda1513ef0:5",
+          "end_line_no": 5,
+          "end_timestamp": "2026-03-02T17:26:07.837Z",
+          "rule_ids": [
+            "failure.explicit"
+          ],
+          "segment_id": "019caf95-fa0a-7900-9097-6dbda1513ef0:3",
+          "session_id": "019caf95-fa0a-7900-9097-6dbda1513ef0",
+          "source_id": "019caf95-fa0a-7900-9097-6dbda1513ef0",
+          "start_event_id": "019caf95-fa0a-7900-9097-6dbda1513ef0:5",
+          "start_line_no": 5,
+          "start_timestamp": "2026-03-02T17:26:07.837Z",
+          "statement": "do not ask user to \"grant access\" for those paths unless a command has already failed with a concrete filesystem/permission error."
+        },
+        {
+          "end_event_id": "019caf95-fa0a-7900-9097-6dbda1513ef0:8",
+          "end_line_no": 8,
+          "end_timestamp": "2026-03-02T17:26:08.430Z",
+          "rule_ids": [
+            "failure.explicit"
+          ],
+          "segment_id": "019caf95-fa0a-7900-9097-6dbda1513ef0:4",
+          "session_id": "019caf95-fa0a-7900-9097-6dbda1513ef0",
+          "source_id": "019caf95-fa0a-7900-9097-6dbda1513ef0",
+          "start_event_id": "019caf95-fa0a-7900-9097-6dbda1513ef0:6",
+          "start_line_no": 6,
+          "start_timestamp": "2026-03-02T17:26:07.837Z",
+          "statement": "do not ask user to \"grant access\" for those paths unless a command has already failed with a concrete filesystem/permission error."
+        },
+        {
+          "end_event_id": "019caf95-fa0a-7900-9097-6dbda1513ef0:16",
+          "end_line_no": 16,
+          "end_timestamp": "2026-03-02T17:26:45.310Z",
+          "rule_ids": [
+            "failure.explicit"
+          ],
+          "segment_id": "019caf95-fa0a-7900-9097-6dbda1513ef0:6",
+          "session_id": "019caf95-fa0a-7900-9097-6dbda1513ef0",
+          "source_id": "019caf95-fa0a-7900-9097-6dbda1513ef0",
+          "start_event_id": "019caf95-fa0a-7900-9097-6dbda1513ef0:16",
+          "start_line_no": 16,
+          "start_timestamp": "2026-03-02T17:26:45.310Z",
+          "statement": "do not ask user to \"grant access\" for those paths unless a command has already failed with a concrete filesystem/permission error."
+        }
+      ]
+    },
+    {
+      "citation_id": "item-failure-9",
+      "item_keys": [
+        "ai-trader:failure:2698ffb8e53f01a1"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-failure-9",
+      "provenance_refs": [
+        {
+          "end_event_id": "019c687b-3d0d-71c0-8929-9128cbf24060:6296",
+          "end_line_no": 6296,
+          "end_timestamp": "2026-02-17T20:25:39.430Z",
+          "rule_ids": [
+            "failure.explicit"
+          ],
+          "segment_id": "019c687b-3d0d-71c0-8929-9128cbf24060:474",
+          "session_id": "019c687b-3d0d-71c0-8929-9128cbf24060",
+          "source_id": "019c687b-3d0d-71c0-8929-9128cbf24060",
+          "start_event_id": "019c687b-3d0d-71c0-8929-9128cbf24060:6288",
+          "start_line_no": 6288,
+          "start_timestamp": "2026-02-17T20:25:24.846Z",
+          "statement": "error"
+        },
+        {
+          "end_event_id": "019c687b-3d0d-71c0-8929-9128cbf24060:9526",
+          "end_line_no": 9526,
+          "end_timestamp": "2026-02-21T17:00:11.586Z",
+          "rule_ids": [
+            "failure.explicit"
+          ],
+          "segment_id": "019c687b-3d0d-71c0-8929-9128cbf24060:753",
+          "session_id": "019c687b-3d0d-71c0-8929-9128cbf24060",
+          "source_id": "019c687b-3d0d-71c0-8929-9128cbf24060",
+          "start_event_id": "019c687b-3d0d-71c0-8929-9128cbf24060:9520",
+          "start_line_no": 9520,
+          "start_timestamp": "2026-02-21T16:59:54.328Z",
+          "statement": "error"
+        },
+        {
+          "end_event_id": "019c687b-3d0d-71c0-8929-9128cbf24060:11312",
+          "end_line_no": 11312,
+          "end_timestamp": "2026-02-22T23:31:57.416Z",
+          "rule_ids": [
+            "failure.explicit"
+          ],
+          "segment_id": "019c687b-3d0d-71c0-8929-9128cbf24060:906",
+          "session_id": "019c687b-3d0d-71c0-8929-9128cbf24060",
+          "source_id": "019c687b-3d0d-71c0-8929-9128cbf24060",
+          "start_event_id": "019c687b-3d0d-71c0-8929-9128cbf24060:11300",
+          "start_line_no": 11300,
+          "start_timestamp": "2026-02-22T23:31:16.742Z",
+          "statement": "error"
+        }
+      ]
+    },
+    {
+      "citation_id": "item-failure-10",
+      "item_keys": [
+        "ai-trader:failure:8df64abb07b96d09"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-failure-10",
+      "provenance_refs": [
+        {
+          "end_event_id": "019cb0ef-a044-7090-9627-7f2d616c46f2:206",
+          "end_line_no": 206,
+          "end_timestamp": "2026-03-03T00:20:10.232Z",
+          "rule_ids": [
+            "failure.explicit"
+          ],
+          "segment_id": "019cb0ef-a044-7090-9627-7f2d616c46f2:20",
+          "session_id": "019cb0ef-a044-7090-9627-7f2d616c46f2",
+          "source_id": "019cb0ef-a044-7090-9627-7f2d616c46f2",
+          "start_event_id": "019cb0ef-a044-7090-9627-7f2d616c46f2:206",
+          "start_line_no": 206,
+          "start_timestamp": "2026-03-03T00:20:10.232Z",
+          "statement": "- Do not claim filesystem/policy/approval blockers unless you include exact command + error evidence from this run."
+        },
+        {
+          "end_event_id": "019cb0ef-a044-7090-9627-7f2d616c46f2:209",
+          "end_line_no": 209,
+          "end_timestamp": "2026-03-03T00:20:11.135Z",
+          "rule_ids": [
+            "failure.explicit"
+          ],
+          "segment_id": "019cb0ef-a044-7090-9627-7f2d616c46f2:21",
+          "session_id": "019cb0ef-a044-7090-9627-7f2d616c46f2",
+          "source_id": "019cb0ef-a044-7090-9627-7f2d616c46f2",
+          "start_event_id": "019cb0ef-a044-7090-9627-7f2d616c46f2:207",
+          "start_line_no": 207,
+          "start_timestamp": "2026-03-03T00:20:10.233Z",
+          "statement": "- Do not claim filesystem/policy/approval blockers unless you include exact command + error evidence from this run."
+        },
+        {
+          "end_event_id": "019cb0ef-a044-7090-9627-7f2d616c46f2:288",
+          "end_line_no": 288,
+          "end_timestamp": "2026-03-03T00:22:17.244Z",
+          "rule_ids": [
+            "failure.explicit"
+          ],
+          "segment_id": "019cb0ef-a044-7090-9627-7f2d616c46f2:33",
+          "session_id": "019cb0ef-a044-7090-9627-7f2d616c46f2",
+          "source_id": "019cb0ef-a044-7090-9627-7f2d616c46f2",
+          "start_event_id": "019cb0ef-a044-7090-9627-7f2d616c46f2:288",
+          "start_line_no": 288,
+          "start_timestamp": "2026-03-03T00:22:17.244Z",
+          "statement": "- Do not claim filesystem/policy/approval blockers unless you include exact command + error evidence from this run."
+        }
+      ]
+    },
+    {
+      "citation_id": "item-failure-11",
+      "item_keys": [
+        "ai-trader:failure:08a087ed03ca9814"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-failure-11",
+      "provenance_refs": [
+        {
+          "end_event_id": "019caaf1-3a40-7082-ac18-8fe3f3eb0dd0:5",
+          "end_line_no": 5,
+          "end_timestamp": "2026-03-01T19:47:42.034Z",
+          "rule_ids": [
+            "failure.explicit"
+          ],
+          "segment_id": "019caaf1-3a40-7082-ac18-8fe3f3eb0dd0:2",
+          "session_id": "019caaf1-3a40-7082-ac18-8fe3f3eb0dd0",
+          "source_id": "019caaf1-3a40-7082-ac18-8fe3f3eb0dd0",
+          "start_event_id": "019caaf1-3a40-7082-ac18-8fe3f3eb0dd0:5",
+          "start_line_no": 5,
+          "start_timestamp": "2026-03-01T19:47:42.034Z",
+          "statement": "- Escalate: missing access/tool/runtime blockers with exact error and minimum fix."
+        },
+        {
+          "end_event_id": "019caaf1-3a40-7082-ac18-8fe3f3eb0dd0:9",
+          "end_line_no": 9,
+          "end_timestamp": "2026-03-01T19:47:42.706Z",
+          "rule_ids": [
+            "failure.explicit"
+          ],
+          "segment_id": "019caaf1-3a40-7082-ac18-8fe3f3eb0dd0:3",
+          "session_id": "019caaf1-3a40-7082-ac18-8fe3f3eb0dd0",
+          "source_id": "019caaf1-3a40-7082-ac18-8fe3f3eb0dd0",
+          "start_event_id": "019caaf1-3a40-7082-ac18-8fe3f3eb0dd0:6",
+          "start_line_no": 6,
+          "start_timestamp": "2026-03-01T19:47:42.034Z",
+          "statement": "- Escalate: missing access/tool/runtime blockers with exact error and minimum fix."
+        },
+        {
+          "end_event_id": "019caaf1-3a40-7082-ac18-8fe3f3eb0dd0:1058",
+          "end_line_no": 1058,
+          "end_timestamp": "2026-03-01T20:01:13.296Z",
+          "rule_ids": [
+            "failure.explicit"
+          ],
+          "segment_id": "019caaf1-3a40-7082-ac18-8fe3f3eb0dd0:93",
+          "session_id": "019caaf1-3a40-7082-ac18-8fe3f3eb0dd0",
+          "source_id": "019caaf1-3a40-7082-ac18-8fe3f3eb0dd0",
+          "start_event_id": "019caaf1-3a40-7082-ac18-8fe3f3eb0dd0:1058",
+          "start_line_no": 1058,
+          "start_timestamp": "2026-03-01T20:01:13.296Z",
+          "statement": "- Escalate: missing access/tool/runtime blockers with exact error and minimum fix."
+        }
+      ]
+    },
+    {
+      "citation_id": "item-failure-12",
+      "item_keys": [
+        "ai-trader:failure:83d10efbd9f0cf34"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-failure-12",
+      "provenance_refs": [
+        {
+          "end_event_id": "019c9ca4-ac1c-76e2-b883-017d68d982a1:9875",
+          "end_line_no": 9875,
+          "end_timestamp": "2026-02-28T21:53:02.798Z",
+          "rule_ids": [
+            "failure.explicit"
+          ],
+          "segment_id": "019c9ca4-ac1c-76e2-b883-017d68d982a1:1279",
+          "session_id": "019c9ca4-ac1c-76e2-b883-017d68d982a1",
+          "source_id": "019c9ca4-ac1c-76e2-b883-017d68d982a1",
+          "start_event_id": "019c9ca4-ac1c-76e2-b883-017d68d982a1:9866",
+          "start_line_no": 9866,
+          "start_timestamp": "2026-02-28T21:52:46.703Z",
+          "statement": "failed"
+        },
+        {
+          "end_event_id": "019c9ca4-ac1c-76e2-b883-017d68d982a1:13548",
+          "end_line_no": 13548,
+          "end_timestamp": "2026-03-01T06:43:16.866Z",
+          "rule_ids": [
+            "failure.explicit"
+          ],
+          "segment_id": "019c9ca4-ac1c-76e2-b883-017d68d982a1:1770",
+          "session_id": "019c9ca4-ac1c-76e2-b883-017d68d982a1",
+          "source_id": "019c9ca4-ac1c-76e2-b883-017d68d982a1",
+          "start_event_id": "019c9ca4-ac1c-76e2-b883-017d68d982a1:13541",
+          "start_line_no": 13541,
+          "start_timestamp": "2026-03-01T06:42:45.138Z",
+          "statement": "failed"
+        },
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:11700",
+          "end_line_no": 11700,
+          "end_timestamp": "2026-03-05T12:48:54.773Z",
+          "rule_ids": [
+            "failure.explicit"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:999",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:11686",
+          "start_line_no": 11686,
+          "start_timestamp": "2026-03-05T12:48:27.927Z",
+          "statement": "failed"
+        }
+      ]
+    },
+    {
+      "citation_id": "item-failure-13",
+      "item_keys": [
+        "ai-trader:failure:c225cad7d205bf19"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-failure-13",
+      "provenance_refs": [
+        {
+          "end_event_id": "019caf95-fa0a-7900-9097-6dbda1513ef0:5",
+          "end_line_no": 5,
+          "end_timestamp": "2026-03-02T17:26:07.837Z",
+          "rule_ids": [
+            "failure.explicit"
+          ],
+          "segment_id": "019caf95-fa0a-7900-9097-6dbda1513ef0:3",
+          "session_id": "019caf95-fa0a-7900-9097-6dbda1513ef0",
+          "source_id": "019caf95-fa0a-7900-9097-6dbda1513ef0",
+          "start_event_id": "019caf95-fa0a-7900-9097-6dbda1513ef0:5",
+          "start_line_no": 5,
+          "start_timestamp": "2026-03-02T17:26:07.837Z",
+          "statement": "{\"pass\":true|false,\"confidence\":\"high|medium|low\",\"issues\":[\"...\"],\"requiredFixes\":[\"...\"],\"approvedSummary\":\"...\"}"
+        },
+        {
+          "end_event_id": "019caf95-fa0a-7900-9097-6dbda1513ef0:8",
+          "end_line_no": 8,
+          "end_timestamp": "2026-03-02T17:26:08.430Z",
+          "rule_ids": [
+            "failure.explicit"
+          ],
+          "segment_id": "019caf95-fa0a-7900-9097-6dbda1513ef0:4",
+          "session_id": "019caf95-fa0a-7900-9097-6dbda1513ef0",
+          "source_id": "019caf95-fa0a-7900-9097-6dbda1513ef0",
+          "start_event_id": "019caf95-fa0a-7900-9097-6dbda1513ef0:6",
+          "start_line_no": 6,
+          "start_timestamp": "2026-03-02T17:26:07.837Z",
+          "statement": "{\"pass\":true|false,\"confidence\":\"high|medium|low\",\"issues\":[\"...\"],\"requiredFixes\":[\"...\"],\"approvedSummary\":\"...\"}"
+        },
+        {
+          "end_event_id": "019caf95-fa0a-7900-9097-6dbda1513ef0:16",
+          "end_line_no": 16,
+          "end_timestamp": "2026-03-02T17:26:45.310Z",
+          "rule_ids": [
+            "failure.explicit"
+          ],
+          "segment_id": "019caf95-fa0a-7900-9097-6dbda1513ef0:6",
+          "session_id": "019caf95-fa0a-7900-9097-6dbda1513ef0",
+          "source_id": "019caf95-fa0a-7900-9097-6dbda1513ef0",
+          "start_event_id": "019caf95-fa0a-7900-9097-6dbda1513ef0:16",
+          "start_line_no": 16,
+          "start_timestamp": "2026-03-02T17:26:45.310Z",
+          "statement": "{\"pass\":true|false,\"confidence\":\"high|medium|low\",\"issues\":[\"...\"],\"requiredFixes\":[\"...\"],\"approvedSummary\":\"...\"}"
+        }
+      ]
+    },
+    {
+      "citation_id": "item-failure-14",
+      "item_keys": [
+        "ai-trader:failure:2f7e99e3871e9b6c"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-failure-14",
+      "provenance_refs": [
+        {
+          "end_event_id": "019c9ca4-ac1c-76e2-b883-017d68d982a1:13710",
+          "end_line_no": 13710,
+          "end_timestamp": "2026-03-01T07:00:38.281Z",
+          "rule_ids": [
+            "failure.explicit"
+          ],
+          "segment_id": "019c9ca4-ac1c-76e2-b883-017d68d982a1:1793",
+          "session_id": "019c9ca4-ac1c-76e2-b883-017d68d982a1",
+          "source_id": "019c9ca4-ac1c-76e2-b883-017d68d982a1",
+          "start_event_id": "019c9ca4-ac1c-76e2-b883-017d68d982a1:13703",
+          "start_line_no": 13703,
+          "start_timestamp": "2026-03-01T07:00:05.903Z",
+          "statement": "error_text"
+        },
+        {
+          "end_event_id": "019c9ca4-ac1c-76e2-b883-017d68d982a1:13932",
+          "end_line_no": 13932,
+          "end_timestamp": "2026-03-01T07:23:48.755Z",
+          "rule_ids": [
+            "failure.explicit"
+          ],
+          "segment_id": "019c9ca4-ac1c-76e2-b883-017d68d982a1:1822",
+          "session_id": "019c9ca4-ac1c-76e2-b883-017d68d982a1",
+          "source_id": "019c9ca4-ac1c-76e2-b883-017d68d982a1",
+          "start_event_id": "019c9ca4-ac1c-76e2-b883-017d68d982a1:13925",
+          "start_line_no": 13925,
+          "start_timestamp": "2026-03-01T07:23:14.154Z",
+          "statement": "error_text"
+        },
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:10348",
+          "end_line_no": 10348,
+          "end_timestamp": "2026-03-04T19:33:39.527Z",
+          "rule_ids": [
+            "failure.explicit"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:886",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:10348",
+          "start_line_no": 10348,
+          "start_timestamp": "2026-03-04T19:33:39.527Z",
+          "statement": "error_text"
+        }
+      ]
+    },
+    {
+      "citation_id": "item-failure-15",
+      "item_keys": [
+        "ai-trader:failure:0f8c02a4fa62fd45"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-failure-15",
+      "provenance_refs": [
+        {
+          "end_event_id": "019caf9f-c9e4-7d33-9635-28feaa5b3b4a:213",
+          "end_line_no": 213,
+          "end_timestamp": "2026-03-02T17:40:24.326Z",
+          "rule_ids": [
+            "failure.explicit"
+          ],
+          "segment_id": "019caf9f-c9e4-7d33-9635-28feaa5b3b4a:22",
+          "session_id": "019caf9f-c9e4-7d33-9635-28feaa5b3b4a",
+          "source_id": "019caf9f-c9e4-7d33-9635-28feaa5b3b4a",
+          "start_event_id": "019caf9f-c9e4-7d33-9635-28feaa5b3b4a:213",
+          "start_line_no": 213,
+          "start_timestamp": "2026-03-02T17:40:24.326Z",
+          "statement": "apply_patch failed with 'writing outside of the project"
+        },
+        {
+          "end_event_id": "019caf9f-c9e4-7d33-9635-28feaa5b3b4a:217",
+          "end_line_no": 217,
+          "end_timestamp": "2026-03-02T23:40:12.959Z",
+          "rule_ids": [
+            "failure.explicit"
+          ],
+          "segment_id": "019caf9f-c9e4-7d33-9635-28feaa5b3b4a:23",
+          "session_id": "019caf9f-c9e4-7d33-9635-28feaa5b3b4a",
+          "source_id": "019caf9f-c9e4-7d33-9635-28feaa5b3b4a",
+          "start_event_id": "019caf9f-c9e4-7d33-9635-28feaa5b3b4a:214",
+          "start_line_no": 214,
+          "start_timestamp": "2026-03-02T17:40:24.328Z",
+          "statement": "apply_patch failed with 'writing outside of the project"
+        },
+        {
+          "end_event_id": "019cb0ef-a044-7090-9627-7f2d616c46f2:206",
+          "end_line_no": 206,
+          "end_timestamp": "2026-03-03T00:20:10.232Z",
+          "rule_ids": [
+            "failure.explicit"
+          ],
+          "segment_id": "019cb0ef-a044-7090-9627-7f2d616c46f2:20",
+          "session_id": "019cb0ef-a044-7090-9627-7f2d616c46f2",
+          "source_id": "019cb0ef-a044-7090-9627-7f2d616c46f2",
+          "start_event_id": "019cb0ef-a044-7090-9627-7f2d616c46f2:206",
+          "start_line_no": 206,
+          "start_timestamp": "2026-03-03T00:20:10.232Z",
+          "statement": "apply_patch failed with 'writing outside of the project"
+        }
+      ]
+    },
+    {
+      "citation_id": "item-failure-16",
+      "item_keys": [
+        "ai-trader:failure:54bd1bbbc68814f0"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-failure-16",
+      "provenance_refs": [
+        {
+          "end_event_id": "019c9ca4-ac1c-76e2-b883-017d68d982a1:4890",
+          "end_line_no": 4890,
+          "end_timestamp": "2026-02-28T03:26:08.688Z",
+          "rule_ids": [
+            "failure.explicit"
+          ],
+          "segment_id": "019c9ca4-ac1c-76e2-b883-017d68d982a1:606",
+          "session_id": "019c9ca4-ac1c-76e2-b883-017d68d982a1",
+          "source_id": "019c9ca4-ac1c-76e2-b883-017d68d982a1",
+          "start_event_id": "019c9ca4-ac1c-76e2-b883-017d68d982a1:4884",
+          "start_line_no": 4884,
+          "start_timestamp": "2026-02-28T03:23:15.436Z",
+          "statement": "debug"
+        },
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:247",
+          "end_line_no": 247,
+          "end_timestamp": "2026-03-02T23:59:32.317Z",
+          "rule_ids": [
+            "failure.explicit"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:22",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:235",
+          "start_line_no": 235,
+          "start_timestamp": "2026-03-02T23:59:28.872Z",
+          "statement": "debug"
+        }
+      ]
+    },
+    {
+      "citation_id": "item-failure-17",
+      "item_keys": [
+        "ai-trader:failure:9aa48595c0e77ab4"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-failure-17",
+      "provenance_refs": [
+        {
+          "end_event_id": "019ca705-c215-7221-8e6a-d28b922add82:88",
+          "end_line_no": 88,
+          "end_timestamp": "2026-03-01T02:53:53.037Z",
+          "rule_ids": [
+            "failure.explicit"
+          ],
+          "segment_id": "019ca705-c215-7221-8e6a-d28b922add82:14",
+          "session_id": "019ca705-c215-7221-8e6a-d28b922add82",
+          "source_id": "019ca705-c215-7221-8e6a-d28b922add82",
+          "start_event_id": "019ca705-c215-7221-8e6a-d28b922add82:88",
+          "start_line_no": 88,
+          "start_timestamp": "2026-03-01T02:53:53.037Z",
+          "statement": "- [2026-02-28T23:19:23.834Z] (user) Ah, the issue is because the folder \u2018cursor ai projects\u2019 have spaces in the name."
+        },
+        {
+          "end_event_id": "019ca705-c215-7221-8e6a-d28b922add82:92",
+          "end_line_no": 92,
+          "end_timestamp": "2026-03-01T02:53:54.160Z",
+          "rule_ids": [
+            "failure.explicit"
+          ],
+          "segment_id": "019ca705-c215-7221-8e6a-d28b922add82:15",
+          "session_id": "019ca705-c215-7221-8e6a-d28b922add82",
+          "source_id": "019ca705-c215-7221-8e6a-d28b922add82",
+          "start_event_id": "019ca705-c215-7221-8e6a-d28b922add82:89",
+          "start_line_no": 89,
+          "start_timestamp": "2026-03-01T02:53:53.040Z",
+          "statement": "- [2026-02-28T23:19:23.834Z] (user) Ah, the issue is because the folder \u2018cursor ai projects\u2019 have spaces in the name."
+        },
+        {
+          "end_event_id": "019caaf1-3a40-7082-ac18-8fe3f3eb0dd0:5",
+          "end_line_no": 5,
+          "end_timestamp": "2026-03-01T19:47:42.034Z",
+          "rule_ids": [
+            "failure.explicit"
+          ],
+          "segment_id": "019caaf1-3a40-7082-ac18-8fe3f3eb0dd0:2",
+          "session_id": "019caaf1-3a40-7082-ac18-8fe3f3eb0dd0",
+          "source_id": "019caaf1-3a40-7082-ac18-8fe3f3eb0dd0",
+          "start_event_id": "019caaf1-3a40-7082-ac18-8fe3f3eb0dd0:5",
+          "start_line_no": 5,
+          "start_timestamp": "2026-03-01T19:47:42.034Z",
+          "statement": "- [2026-02-28T23:19:23.834Z] (user) Ah, the issue is because the folder \u2018cursor ai projects\u2019 have spaces in the name."
+        }
+      ]
+    },
+    {
+      "citation_id": "item-failure-18",
+      "item_keys": [
+        "ai-trader:failure:fee8dcd0be9077ea"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-failure-18",
+      "provenance_refs": [
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:4540",
+          "end_line_no": 4540,
+          "end_timestamp": "2026-04-13T16:41:08.265Z",
+          "rule_ids": [
+            "failure.explicit"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:896",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:4524",
+          "start_line_no": 4524,
+          "start_timestamp": "2026-04-13T16:40:59.810Z",
+          "statement": "I\u2019m starting the real full-corpus load now and I\u2019ll handle it phase by phase, fixing only root-cause issues if they show up and stopping only on completion or the 10GB derived-data cap."
+        }
+      ]
+    },
+    {
+      "citation_id": "item-failure-19",
+      "item_keys": [
+        "ai-trader:failure:64384a00234ee335"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-failure-19",
+      "provenance_refs": [
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:4519",
+          "end_line_no": 4519,
+          "end_timestamp": "2026-04-13T16:40:43.825Z",
+          "rule_ids": [
+            "failure.explicit"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:893",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:4511",
+          "start_line_no": 4511,
+          "start_timestamp": "2026-04-13T16:39:16.991Z",
+          "statement": "- fix real issues when they appeared"
+        }
+      ]
+    },
+    {
+      "citation_id": "item-failure-20",
+      "item_keys": [
+        "ai-trader:failure:44dd415094027db3"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-failure-20",
+      "provenance_refs": [
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:4505",
+          "end_line_no": 4505,
+          "end_timestamp": "2026-04-13T16:36:52.470Z",
+          "rule_ids": [
+            "failure.explicit"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:891",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:4505",
+          "start_line_no": 4505,
+          "start_timestamp": "2026-04-13T16:36:52.470Z",
+          "statement": "- I fixed that by making the failure metric **corpus-based and stable across reruns**"
+        },
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:4510",
+          "end_line_no": 4510,
+          "end_timestamp": "2026-04-13T16:39:16.989Z",
+          "rule_ids": [
+            "failure.explicit"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:892",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:4506",
+          "start_line_no": 4506,
+          "start_timestamp": "2026-04-13T16:36:52.471Z",
+          "statement": "- I fixed that by making the failure metric **corpus-based and stable across reruns**"
+        }
+      ]
+    },
+    {
+      "citation_id": "item-failure-21",
+      "item_keys": [
+        "ai-trader:failure:629504bf30404b53"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-failure-21",
+      "provenance_refs": [
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:4505",
+          "end_line_no": 4505,
+          "end_timestamp": "2026-04-13T16:36:52.470Z",
+          "rule_ids": [
+            "failure.explicit"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:891",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:4505",
+          "start_line_no": 4505,
+          "start_timestamp": "2026-04-13T16:36:52.470Z",
+          "statement": "- Issues I hit while implementing:"
+        },
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:4510",
+          "end_line_no": 4510,
+          "end_timestamp": "2026-04-13T16:39:16.989Z",
+          "rule_ids": [
+            "failure.explicit"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:892",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:4506",
+          "start_line_no": 4506,
+          "start_timestamp": "2026-04-13T16:36:52.471Z",
+          "statement": "- Issues I hit while implementing:"
+        }
+      ]
+    },
+    {
+      "citation_id": "item-failure-22",
+      "item_keys": [
+        "ai-trader:failure:03e7dabc337ad927"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-failure-22",
+      "provenance_refs": [
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:4505",
+          "end_line_no": 4505,
+          "end_timestamp": "2026-04-13T16:36:52.470Z",
+          "rule_ids": [
+            "failure.explicit"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:891",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:4505",
+          "start_line_no": 4505,
+          "start_timestamp": "2026-04-13T16:36:52.470Z",
+          "statement": "- the repeated-failure stop test initially failed because the full-load gate trusted the latest incremental report too much"
+        },
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:4510",
+          "end_line_no": 4510,
+          "end_timestamp": "2026-04-13T16:39:16.989Z",
+          "rule_ids": [
+            "failure.explicit"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:892",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:4506",
+          "start_line_no": 4506,
+          "start_timestamp": "2026-04-13T16:36:52.471Z",
+          "statement": "- the repeated-failure stop test initially failed because the full-load gate trusted the latest incremental report too much"
+        }
+      ]
+    },
+    {
+      "citation_id": "item-failure-23",
+      "item_keys": [
+        "ai-trader:failure:9bd6274afa3d845a"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-failure-23",
+      "provenance_refs": [
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:4467",
+          "end_line_no": 4467,
+          "end_timestamp": "2026-04-13T16:35:38.450Z",
+          "rule_ids": [
+            "failure.explicit"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:883",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:4462",
+          "start_line_no": 4462,
+          "start_timestamp": "2026-04-13T14:58:31.048Z",
+          "statement": "- The new runner executes phases `discover -> normalize -> segment -> classify -> extract -> wiki -> bootstrap -> audit`, measures derived-disk growth after every phase, enforces the `10 GB` cap, writes machine-readable issue bundles, and stops on repair-needed, repeated non-improving failures, retry exhaustion, or disk-budget breach."
+        }
+      ]
+    },
+    {
+      "citation_id": "item-failure-24",
+      "item_keys": [
+        "ai-trader:failure:b5f6fab699c3819c"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-failure-24",
+      "provenance_refs": [
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:4449",
+          "end_line_no": 4449,
+          "end_timestamp": "2026-04-13T14:57:31.947Z",
+          "rule_ids": [
+            "failure.explicit"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:880",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:4435",
+          "start_line_no": 4435,
+          "start_timestamp": "2026-04-13T14:57:14.776Z",
+          "statement": "I found the second gap in the retry logic: the first-run metric was inflated by mixing live run notices with persisted stats, so the second identical failure looked like an \u201cimprovement.\u201d I\u2019m making the metric fully corpus-based."
+        }
+      ]
+    },
+    {
+      "citation_id": "item-failure-25",
+      "item_keys": [
+        "ai-trader:failure:e74fbaa80b43cdcc"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-failure-25",
+      "provenance_refs": [
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:4405",
+          "end_line_no": 4405,
+          "end_timestamp": "2026-04-13T14:55:21.025Z",
+          "rule_ids": [
+            "failure.explicit"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:873",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:4404",
+          "start_line_no": 4404,
+          "start_timestamp": "2026-04-13T14:55:21.025Z",
+          "statement": "They\u2019ll cover the happy path, a real gate failure, the derived-space stop, and the repeated non-improving stop without needing the real corpus."
+        }
+      ]
+    },
+    {
+      "citation_id": "item-failure-26",
+      "item_keys": [
+        "ai-trader:failure:f8e4533610b71dd1"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-failure-26",
+      "provenance_refs": [
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:4201",
+          "end_line_no": 4201,
+          "end_timestamp": "2026-04-13T14:29:07.435Z",
+          "rule_ids": [
+            "failure.explicit"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:829",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:4189",
+          "start_line_no": 4189,
+          "start_timestamp": "2026-04-13T14:20:16.255Z",
+          "statement": "I\u2019m running the fixed real-data sample suite now to verify the pointer-first migration and the last audit errors on live traces."
+        }
+      ]
+    },
+    {
+      "citation_id": "item-failure-27",
+      "item_keys": [
+        "ai-trader:failure:d2b4aeab44721da6"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-failure-27",
+      "provenance_refs": [
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:3347",
+          "end_line_no": 3347,
+          "end_timestamp": "2026-04-13T04:39:45.301Z",
+          "rule_ids": [
+            "failure.explicit"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:688",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:3337",
+          "start_line_no": 3337,
+          "start_timestamp": "2026-04-13T04:39:31.650Z",
+          "statement": "I\u2019ve isolated the failures to orchestration logic, not the lower phases."
+        }
+      ]
+    },
+    {
+      "citation_id": "item-failure-28",
+      "item_keys": [
+        "ai-trader:failure:83073df78724c767"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-failure-28",
+      "provenance_refs": [
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:3137",
+          "end_line_no": 3137,
+          "end_timestamp": "2026-04-13T04:19:33.171Z",
+          "rule_ids": [
+            "failure.explicit"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:644",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:3132",
+          "start_line_no": 3132,
+          "start_timestamp": "2026-04-13T04:17:29.285Z",
+          "statement": "- It supports scoped reruns by `--source-id`, atomic snapshot replacement, and nonzero exit only when `error` findings exist"
+        }
+      ]
+    },
+    {
+      "citation_id": "item-failure-29",
+      "item_keys": [
+        "ai-trader:failure:30368c218e162ce6"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-failure-29",
+      "provenance_refs": [
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:3094",
+          "end_line_no": 3094,
+          "end_timestamp": "2026-04-13T04:14:17.460Z",
+          "rule_ids": [
+            "failure.explicit"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:635",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:3083",
+          "start_line_no": 3083,
+          "start_timestamp": "2026-04-13T04:14:06.181Z",
+          "statement": "I found one state-snapshot issue while reviewing the new module: full audit runs should replace prior target state, not carry stale keys forward."
+        }
+      ]
+    },
+    {
+      "citation_id": "item-failure-30",
+      "item_keys": [
+        "ai-trader:failure:7d1e8ba9ff5a8184"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-failure-30",
+      "provenance_refs": [
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:2956",
+          "end_line_no": 2956,
+          "end_timestamp": "2026-04-13T04:03:12.867Z",
+          "rule_ids": [
+            "failure.explicit"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:601",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:2953",
+          "start_line_no": 2953,
+          "start_timestamp": "2026-04-13T03:59:30.621Z",
+          "statement": "- `error` if two or more `active` items with `confidence in {explicit,strong}` conflict in the same domain/subject"
+        },
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:2960",
+          "end_line_no": 2960,
+          "end_timestamp": "2026-04-13T04:03:12.903Z",
+          "rule_ids": [
+            "failure.explicit"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:603",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:2960",
+          "start_line_no": 2960,
+          "start_timestamp": "2026-04-13T04:03:12.903Z",
+          "statement": "- `error` if two or more `active` items with `confidence in {explicit,strong}` conflict in the same domain/subject"
+        },
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:2962",
+          "end_line_no": 2962,
+          "end_timestamp": "2026-04-13T04:03:13.202Z",
+          "rule_ids": [
+            "failure.explicit"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:604",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:2961",
+          "start_line_no": 2961,
+          "start_timestamp": "2026-04-13T04:03:12.903Z",
+          "statement": "- `error` if two or more `active` items with `confidence in {explicit,strong}` conflict in the same domain/subject"
+        }
+      ]
+    },
+    {
+      "citation_id": "item-failure-31",
+      "item_keys": [
+        "ai-trader:failure:08e2893b75840ac3"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-failure-31",
+      "provenance_refs": [
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:2956",
+          "end_line_no": 2956,
+          "end_timestamp": "2026-04-13T04:03:12.867Z",
+          "rule_ids": [
+            "failure.explicit"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:601",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:2953",
+          "start_line_no": 2953,
+          "start_timestamp": "2026-04-13T03:59:30.621Z",
+          "statement": "- `info` severity exists in the schema but v1 mainly emits `warning` and `error`."
+        },
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:2960",
+          "end_line_no": 2960,
+          "end_timestamp": "2026-04-13T04:03:12.903Z",
+          "rule_ids": [
+            "failure.explicit"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:603",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:2960",
+          "start_line_no": 2960,
+          "start_timestamp": "2026-04-13T04:03:12.903Z",
+          "statement": "- `info` severity exists in the schema but v1 mainly emits `warning` and `error`."
+        },
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:2962",
+          "end_line_no": 2962,
+          "end_timestamp": "2026-04-13T04:03:13.202Z",
+          "rule_ids": [
+            "failure.explicit"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:604",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:2961",
+          "start_line_no": 2961,
+          "start_timestamp": "2026-04-13T04:03:12.903Z",
+          "statement": "- `info` severity exists in the schema but v1 mainly emits `warning` and `error`."
+        }
+      ]
+    },
+    {
+      "citation_id": "item-failure-32",
+      "item_keys": [
+        "ai-trader:failure:b8dc9f364f3cfebe"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-failure-32",
+      "provenance_refs": [
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:2956",
+          "end_line_no": 2956,
+          "end_timestamp": "2026-04-13T04:03:12.867Z",
+          "rule_ids": [
+            "failure.explicit"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:601",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:2953",
+          "start_line_no": 2953,
+          "start_timestamp": "2026-04-13T03:59:30.621Z",
+          "statement": "- `severity = info | warning | error`"
+        },
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:2960",
+          "end_line_no": 2960,
+          "end_timestamp": "2026-04-13T04:03:12.903Z",
+          "rule_ids": [
+            "failure.explicit"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:603",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:2960",
+          "start_line_no": 2960,
+          "start_timestamp": "2026-04-13T04:03:12.903Z",
+          "statement": "- `severity = info | warning | error`"
+        },
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:2962",
+          "end_line_no": 2962,
+          "end_timestamp": "2026-04-13T04:03:13.202Z",
+          "rule_ids": [
+            "failure.explicit"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:604",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:2961",
+          "start_line_no": 2961,
+          "start_timestamp": "2026-04-13T04:03:12.903Z",
+          "statement": "- `severity = info | warning | error`"
+        }
+      ]
+    },
+    {
+      "citation_id": "item-failure-33",
+      "item_keys": [
+        "ai-trader:failure:02afd522b99ef887"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-failure-33",
+      "provenance_refs": [
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:2956",
+          "end_line_no": 2956,
+          "end_timestamp": "2026-04-13T04:03:12.867Z",
+          "rule_ids": [
+            "failure.explicit"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:601",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:2953",
+          "start_line_no": 2953,
+          "start_timestamp": "2026-04-13T03:59:30.621Z",
+          "statement": "- any error finding -> nonzero exit"
+        },
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:2960",
+          "end_line_no": 2960,
+          "end_timestamp": "2026-04-13T04:03:12.903Z",
+          "rule_ids": [
+            "failure.explicit"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:603",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:2960",
+          "start_line_no": 2960,
+          "start_timestamp": "2026-04-13T04:03:12.903Z",
+          "statement": "- any error finding -> nonzero exit"
+        },
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:2962",
+          "end_line_no": 2962,
+          "end_timestamp": "2026-04-13T04:03:13.202Z",
+          "rule_ids": [
+            "failure.explicit"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:604",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:2961",
+          "start_line_no": 2961,
+          "start_timestamp": "2026-04-13T04:03:12.903Z",
+          "statement": "- any error finding -> nonzero exit"
+        }
+      ]
+    },
+    {
+      "citation_id": "item-failure-34",
+      "item_keys": [
+        "ai-trader:failure:ed6716a8db92d66f"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-failure-34",
+      "provenance_refs": [
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:2956",
+          "end_line_no": 2956,
+          "end_timestamp": "2026-04-13T04:03:12.867Z",
+          "rule_ids": [
+            "failure.explicit"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:601",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:2953",
+          "start_line_no": 2953,
+          "start_timestamp": "2026-04-13T03:59:30.621Z",
+          "statement": "- bootstrap bullet missing `supporting_item_keys`, unresolved `supporting_claim_ids`, or references to unknown current inputs -> `error`"
+        },
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:2960",
+          "end_line_no": 2960,
+          "end_timestamp": "2026-04-13T04:03:12.903Z",
+          "rule_ids": [
+            "failure.explicit"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:603",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:2960",
+          "start_line_no": 2960,
+          "start_timestamp": "2026-04-13T04:03:12.903Z",
+          "statement": "- bootstrap bullet missing `supporting_item_keys`, unresolved `supporting_claim_ids`, or references to unknown current inputs -> `error`"
+        },
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:2962",
+          "end_line_no": 2962,
+          "end_timestamp": "2026-04-13T04:03:13.202Z",
+          "rule_ids": [
+            "failure.explicit"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:604",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:2961",
+          "start_line_no": 2961,
+          "start_timestamp": "2026-04-13T04:03:12.903Z",
+          "statement": "- bootstrap bullet missing `supporting_item_keys`, unresolved `supporting_claim_ids`, or references to unknown current inputs -> `error`"
+        }
+      ]
+    },
+    {
+      "citation_id": "item-failure-35",
+      "item_keys": [
+        "ai-trader:failure:bf457ff2f23f1e97"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-failure-35",
+      "provenance_refs": [
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:2956",
+          "end_line_no": 2956,
+          "end_timestamp": "2026-04-13T04:03:12.867Z",
+          "rule_ids": [
+            "failure.explicit"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:601",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:2953",
+          "start_line_no": 2953,
+          "start_timestamp": "2026-04-13T03:59:30.621Z",
+          "statement": "- bootstrap bullet references removed wiki claim id -> `error`"
+        },
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:2960",
+          "end_line_no": 2960,
+          "end_timestamp": "2026-04-13T04:03:12.903Z",
+          "rule_ids": [
+            "failure.explicit"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:603",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:2960",
+          "start_line_no": 2960,
+          "start_timestamp": "2026-04-13T04:03:12.903Z",
+          "statement": "- bootstrap bullet references removed wiki claim id -> `error`"
+        },
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:2962",
+          "end_line_no": 2962,
+          "end_timestamp": "2026-04-13T04:03:13.202Z",
+          "rule_ids": [
+            "failure.explicit"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:604",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:2961",
+          "start_line_no": 2961,
+          "start_timestamp": "2026-04-13T04:03:12.903Z",
+          "statement": "- bootstrap bullet references removed wiki claim id -> `error`"
+        }
+      ]
+    },
+    {
+      "citation_id": "item-failure-36",
+      "item_keys": [
+        "ai-trader:failure:f1175f7023623b53"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-failure-36",
+      "provenance_refs": [
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:2956",
+          "end_line_no": 2956,
+          "end_timestamp": "2026-04-13T04:03:12.867Z",
+          "rule_ids": [
+            "failure.explicit"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:601",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:2953",
+          "start_line_no": 2953,
+          "start_timestamp": "2026-04-13T03:59:30.621Z",
+          "statement": "- bootstrap bullet with unknown supporting claim id -> error"
+        },
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:2960",
+          "end_line_no": 2960,
+          "end_timestamp": "2026-04-13T04:03:12.903Z",
+          "rule_ids": [
+            "failure.explicit"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:603",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:2960",
+          "start_line_no": 2960,
+          "start_timestamp": "2026-04-13T04:03:12.903Z",
+          "statement": "- bootstrap bullet with unknown supporting claim id -> error"
+        },
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:2962",
+          "end_line_no": 2962,
+          "end_timestamp": "2026-04-13T04:03:13.202Z",
+          "rule_ids": [
+            "failure.explicit"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:604",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:2961",
+          "start_line_no": 2961,
+          "start_timestamp": "2026-04-13T04:03:12.903Z",
+          "statement": "- bootstrap bullet with unknown supporting claim id -> error"
+        }
+      ]
+    },
+    {
+      "citation_id": "item-failure-37",
+      "item_keys": [
+        "ai-trader:failure:a82b05e46b68fbbb"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-failure-37",
+      "provenance_refs": [
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:2956",
+          "end_line_no": 2956,
+          "end_timestamp": "2026-04-13T04:03:12.867Z",
+          "rule_ids": [
+            "failure.explicit"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:601",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:2953",
+          "start_line_no": 2953,
+          "start_timestamp": "2026-04-13T03:59:30.621Z",
+          "statement": "- bootstrap includes claim whose supporting items no longer exist -> error"
+        },
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:2960",
+          "end_line_no": 2960,
+          "end_timestamp": "2026-04-13T04:03:12.903Z",
+          "rule_ids": [
+            "failure.explicit"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:603",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:2960",
+          "start_line_no": 2960,
+          "start_timestamp": "2026-04-13T04:03:12.903Z",
+          "statement": "- bootstrap includes claim whose supporting items no longer exist -> error"
+        },
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:2962",
+          "end_line_no": 2962,
+          "end_timestamp": "2026-04-13T04:03:13.202Z",
+          "rule_ids": [
+            "failure.explicit"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:604",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:2961",
+          "start_line_no": 2961,
+          "start_timestamp": "2026-04-13T04:03:12.903Z",
+          "statement": "- bootstrap includes claim whose supporting items no longer exist -> error"
+        }
+      ]
+    },
+    {
+      "citation_id": "item-failure-38",
+      "item_keys": [
+        "ai-trader:failure:a2b95d0567464a9c"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-failure-38",
+      "provenance_refs": [
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:2956",
+          "end_line_no": 2956,
+          "end_timestamp": "2026-04-13T04:03:12.867Z",
+          "rule_ids": [
+            "failure.explicit"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:601",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:2953",
+          "start_line_no": 2953,
+          "start_timestamp": "2026-04-13T03:59:30.621Z",
+          "statement": "- bootstrap includes wiki claim whose supporting extracted items no longer all exist -> `error`"
+        },
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:2960",
+          "end_line_no": 2960,
+          "end_timestamp": "2026-04-13T04:03:12.903Z",
+          "rule_ids": [
+            "failure.explicit"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:603",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:2960",
+          "start_line_no": 2960,
+          "start_timestamp": "2026-04-13T04:03:12.903Z",
+          "statement": "- bootstrap includes wiki claim whose supporting extracted items no longer all exist -> `error`"
+        },
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:2962",
+          "end_line_no": 2962,
+          "end_timestamp": "2026-04-13T04:03:13.202Z",
+          "rule_ids": [
+            "failure.explicit"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:604",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:2961",
+          "start_line_no": 2961,
+          "start_timestamp": "2026-04-13T04:03:12.903Z",
+          "statement": "- bootstrap includes wiki claim whose supporting extracted items no longer all exist -> `error`"
+        }
+      ]
+    },
+    {
+      "citation_id": "item-failure-39",
+      "item_keys": [
+        "ai-trader:failure:107751b4d61ea681"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-failure-39",
+      "provenance_refs": [
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:2956",
+          "end_line_no": 2956,
+          "end_timestamp": "2026-04-13T04:03:12.867Z",
+          "rule_ids": [
+            "failure.explicit"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:601",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:2953",
+          "start_line_no": 2953,
+          "start_timestamp": "2026-04-13T03:59:30.621Z",
+          "statement": "- every `error` finding must correspond to a concrete broken reference, missing provenance, or hard contradiction"
+        },
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:2960",
+          "end_line_no": 2960,
+          "end_timestamp": "2026-04-13T04:03:12.903Z",
+          "rule_ids": [
+            "failure.explicit"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:603",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:2960",
+          "start_line_no": 2960,
+          "start_timestamp": "2026-04-13T04:03:12.903Z",
+          "statement": "- every `error` finding must correspond to a concrete broken reference, missing provenance, or hard contradiction"
+        },
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:2962",
+          "end_line_no": 2962,
+          "end_timestamp": "2026-04-13T04:03:13.202Z",
+          "rule_ids": [
+            "failure.explicit"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:604",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:2961",
+          "start_line_no": 2961,
+          "start_timestamp": "2026-04-13T04:03:12.903Z",
+          "statement": "- every `error` finding must correspond to a concrete broken reference, missing provenance, or hard contradiction"
+        }
+      ]
+    },
+    {
+      "citation_id": "item-failure-40",
+      "item_keys": [
+        "ai-trader:failure:cba9d78aa521a3ad"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-failure-40",
+      "provenance_refs": [
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:2956",
+          "end_line_no": 2956,
+          "end_timestamp": "2026-04-13T04:03:12.867Z",
+          "rule_ids": [
+            "failure.explicit"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:601",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:2953",
+          "start_line_no": 2953,
+          "start_timestamp": "2026-04-13T03:59:30.621Z",
+          "statement": "- Exit behavior is gateable: warnings still succeed, but any `error` finding makes the command return nonzero."
+        },
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:2960",
+          "end_line_no": 2960,
+          "end_timestamp": "2026-04-13T04:03:12.903Z",
+          "rule_ids": [
+            "failure.explicit"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:603",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:2960",
+          "start_line_no": 2960,
+          "start_timestamp": "2026-04-13T04:03:12.903Z",
+          "statement": "- Exit behavior is gateable: warnings still succeed, but any `error` finding makes the command return nonzero."
+        },
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:2962",
+          "end_line_no": 2962,
+          "end_timestamp": "2026-04-13T04:03:13.202Z",
+          "rule_ids": [
+            "failure.explicit"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:604",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:2961",
+          "start_line_no": 2961,
+          "start_timestamp": "2026-04-13T04:03:12.903Z",
+          "statement": "- Exit behavior is gateable: warnings still succeed, but any `error` finding makes the command return nonzero."
+        }
+      ]
+    },
+    {
+      "citation_id": "item-failure-41",
+      "item_keys": [
+        "ai-trader:failure:f7530100e18c3c7b"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-failure-41",
+      "provenance_refs": [
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:2956",
+          "end_line_no": 2956,
+          "end_timestamp": "2026-04-13T04:03:12.867Z",
+          "rule_ids": [
+            "failure.explicit"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:601",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:2953",
+          "start_line_no": 2953,
+          "start_timestamp": "2026-04-13T03:59:30.621Z",
+          "statement": "- extracted item missing `provenance_refs` -> `error`"
+        },
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:2960",
+          "end_line_no": 2960,
+          "end_timestamp": "2026-04-13T04:03:12.903Z",
+          "rule_ids": [
+            "failure.explicit"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:603",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:2960",
+          "start_line_no": 2960,
+          "start_timestamp": "2026-04-13T04:03:12.903Z",
+          "statement": "- extracted item missing `provenance_refs` -> `error`"
+        },
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:2962",
+          "end_line_no": 2962,
+          "end_timestamp": "2026-04-13T04:03:13.202Z",
+          "rule_ids": [
+            "failure.explicit"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:604",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:2961",
+          "start_line_no": 2961,
+          "start_timestamp": "2026-04-13T04:03:12.903Z",
+          "statement": "- extracted item missing `provenance_refs` -> `error`"
+        }
+      ]
+    },
+    {
+      "citation_id": "item-failure-42",
+      "item_keys": [
+        "ai-trader:failure:0fccc3a0cf69f29a"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-failure-42",
+      "provenance_refs": [
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:2956",
+          "end_line_no": 2956,
+          "end_timestamp": "2026-04-13T04:03:12.867Z",
+          "rule_ids": [
+            "failure.explicit"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:601",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:2953",
+          "start_line_no": 2953,
+          "start_timestamp": "2026-04-13T03:59:30.621Z",
+          "statement": "- extracted item with empty provenance -> error"
+        },
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:2960",
+          "end_line_no": 2960,
+          "end_timestamp": "2026-04-13T04:03:12.903Z",
+          "rule_ids": [
+            "failure.explicit"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:603",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:2960",
+          "start_line_no": 2960,
+          "start_timestamp": "2026-04-13T04:03:12.903Z",
+          "statement": "- extracted item with empty provenance -> error"
+        },
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:2962",
+          "end_line_no": 2962,
+          "end_timestamp": "2026-04-13T04:03:13.202Z",
+          "rule_ids": [
+            "failure.explicit"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:604",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:2961",
+          "start_line_no": 2961,
+          "start_timestamp": "2026-04-13T04:03:12.903Z",
+          "statement": "- extracted item with empty provenance -> error"
+        }
+      ]
+    },
+    {
+      "citation_id": "item-failure-43",
+      "item_keys": [
+        "ai-trader:failure:15336d2218baf11d"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-failure-43",
+      "provenance_refs": [
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:2956",
+          "end_line_no": 2956,
+          "end_timestamp": "2026-04-13T04:03:12.867Z",
+          "rule_ids": [
+            "failure.explicit"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:601",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:2953",
+          "start_line_no": 2953,
+          "start_timestamp": "2026-04-13T03:59:30.621Z",
+          "statement": "- failed run preserves last committed audit snapshot"
+        },
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:2960",
+          "end_line_no": 2960,
+          "end_timestamp": "2026-04-13T04:03:12.903Z",
+          "rule_ids": [
+            "failure.explicit"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:603",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:2960",
+          "start_line_no": 2960,
+          "start_timestamp": "2026-04-13T04:03:12.903Z",
+          "statement": "- failed run preserves last committed audit snapshot"
+        },
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:2962",
+          "end_line_no": 2962,
+          "end_timestamp": "2026-04-13T04:03:13.202Z",
+          "rule_ids": [
+            "failure.explicit"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:604",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:2961",
+          "start_line_no": 2961,
+          "start_timestamp": "2026-04-13T04:03:12.903Z",
+          "statement": "- failed run preserves last committed audit snapshot"
+        }
+      ]
+    },
+    {
+      "citation_id": "item-failure-44",
+      "item_keys": [
+        "ai-trader:failure:10a15a974f98f1f9"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-failure-44",
+      "provenance_refs": [
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:2956",
+          "end_line_no": 2956,
+          "end_timestamp": "2026-04-13T04:03:12.867Z",
+          "rule_ids": [
+            "failure.explicit"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:601",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:2953",
+          "start_line_no": 2953,
+          "start_timestamp": "2026-04-13T03:59:30.621Z",
+          "statement": "- superseded older temporal item should not produce a contradiction error"
+        },
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:2960",
+          "end_line_no": 2960,
+          "end_timestamp": "2026-04-13T04:03:12.903Z",
+          "rule_ids": [
+            "failure.explicit"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:603",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:2960",
+          "start_line_no": 2960,
+          "start_timestamp": "2026-04-13T04:03:12.903Z",
+          "statement": "- superseded older temporal item should not produce a contradiction error"
+        },
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:2962",
+          "end_line_no": 2962,
+          "end_timestamp": "2026-04-13T04:03:13.202Z",
+          "rule_ids": [
+            "failure.explicit"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:604",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:2961",
+          "start_line_no": 2961,
+          "start_timestamp": "2026-04-13T04:03:12.903Z",
+          "statement": "- superseded older temporal item should not produce a contradiction error"
+        }
+      ]
+    },
+    {
+      "citation_id": "item-failure-45",
+      "item_keys": [
+        "ai-trader:failure:3211974d42f9257f"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-failure-45",
+      "provenance_refs": [
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:2956",
+          "end_line_no": 2956,
+          "end_timestamp": "2026-04-13T04:03:12.867Z",
+          "rule_ids": [
+            "failure.explicit"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:601",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:2953",
+          "start_line_no": 2953,
+          "start_timestamp": "2026-04-13T03:59:30.621Z",
+          "statement": "- wiki claim missing `supporting_item_ids` or unresolved provenance in manifest -> `error`"
+        },
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:2960",
+          "end_line_no": 2960,
+          "end_timestamp": "2026-04-13T04:03:12.903Z",
+          "rule_ids": [
+            "failure.explicit"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:603",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:2960",
+          "start_line_no": 2960,
+          "start_timestamp": "2026-04-13T04:03:12.903Z",
+          "statement": "- wiki claim missing `supporting_item_ids` or unresolved provenance in manifest -> `error`"
+        },
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:2962",
+          "end_line_no": 2962,
+          "end_timestamp": "2026-04-13T04:03:13.202Z",
+          "rule_ids": [
+            "failure.explicit"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:604",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:2961",
+          "start_line_no": 2961,
+          "start_timestamp": "2026-04-13T04:03:12.903Z",
+          "statement": "- wiki claim missing `supporting_item_ids` or unresolved provenance in manifest -> `error`"
+        }
+      ]
+    },
+    {
+      "citation_id": "item-failure-46",
+      "item_keys": [
+        "ai-trader:failure:271aab058f8bffd3"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-failure-46",
+      "provenance_refs": [
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:2956",
+          "end_line_no": 2956,
+          "end_timestamp": "2026-04-13T04:03:12.867Z",
+          "rule_ids": [
+            "failure.explicit"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:601",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:2953",
+          "start_line_no": 2953,
+          "start_timestamp": "2026-04-13T03:59:30.621Z",
+          "statement": "- wiki claim with unknown supporting item id -> error"
+        },
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:2960",
+          "end_line_no": 2960,
+          "end_timestamp": "2026-04-13T04:03:12.903Z",
+          "rule_ids": [
+            "failure.explicit"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:603",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:2960",
+          "start_line_no": 2960,
+          "start_timestamp": "2026-04-13T04:03:12.903Z",
+          "statement": "- wiki claim with unknown supporting item id -> error"
+        },
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:2962",
+          "end_line_no": 2962,
+          "end_timestamp": "2026-04-13T04:03:13.202Z",
+          "rule_ids": [
+            "failure.explicit"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:604",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:2961",
+          "start_line_no": 2961,
+          "start_timestamp": "2026-04-13T04:03:12.903Z",
+          "statement": "- wiki claim with unknown supporting item id -> error"
+        }
+      ]
+    },
+    {
+      "citation_id": "item-failure-47",
+      "item_keys": [
+        "ai-trader:failure:2e22dfbafd911eea"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-failure-47",
+      "provenance_refs": [
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:2926",
+          "end_line_no": 2926,
+          "end_timestamp": "2026-04-13T03:56:13.518Z",
+          "rule_ids": [
+            "failure.explicit"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:594",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:2922",
+          "start_line_no": 2922,
+          "start_timestamp": "2026-04-13T03:53:24.289Z",
+          "statement": "- no `error` audits on sample"
+        }
+      ]
+    },
+    {
+      "citation_id": "item-failure-48",
+      "item_keys": [
+        "ai-trader:failure:81533a3ca9f9eadf"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-failure-48",
+      "provenance_refs": [
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:2926",
+          "end_line_no": 2926,
+          "end_timestamp": "2026-04-13T03:56:13.518Z",
+          "rule_ids": [
+            "failure.explicit"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:594",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:2922",
+          "start_line_no": 2922,
+          "start_timestamp": "2026-04-13T03:53:24.289Z",
+          "statement": "- severity buckets: `info | warning | error`"
+        }
+      ]
+    },
+    {
+      "citation_id": "item-failure-49",
+      "item_keys": [
+        "ai-trader:failure:8d00a5e2dced2b99"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-failure-49",
+      "provenance_refs": [
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:2502",
+          "end_line_no": 2502,
+          "end_timestamp": "2026-04-13T03:13:26.434Z",
+          "rule_ids": [
+            "failure.explicit"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:511",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:2494",
+          "start_line_no": 2494,
+          "start_timestamp": "2026-04-13T03:12:44.449Z",
+          "statement": "The real issue is `skipped_weak_inference` volume from instruction-heavy text, not classification anymore."
+        }
+      ]
+    },
+    {
+      "citation_id": "item-failure-50",
+      "item_keys": [
+        "ai-trader:failure:89c2d327ce8cb35a"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-failure-50",
+      "provenance_refs": [
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:2128",
+          "end_line_no": 2128,
+          "end_timestamp": "2026-04-13T02:56:01.048Z",
+          "rule_ids": [
+            "failure.explicit"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:447",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:2120",
+          "start_line_no": 2120,
+          "start_timestamp": "2026-04-13T02:56:00.425Z",
+          "statement": "I\u2019ve isolated the likely failure mode to the last-mile context inheritance on the persisted sample."
+        }
+      ]
+    },
+    {
+      "citation_id": "item-failure-51",
+      "item_keys": [
+        "ai-trader:failure:c8c211ae5f5cc938"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-failure-51",
+      "provenance_refs": [
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:2070",
+          "end_line_no": 2070,
+          "end_timestamp": "2026-04-13T02:53:50.216Z",
+          "rule_ids": [
+            "failure.explicit"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:437",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:2065",
+          "start_line_no": 2065,
+          "start_timestamp": "2026-04-13T02:53:45.400Z",
+          "statement": "I\u2019m debugging that override path directly instead of guessing, because those last seven should be mechanically explainable."
+        }
+      ]
+    },
+    {
+      "citation_id": "item-failure-52",
+      "item_keys": [
+        "ai-trader:failure:0cb0015f596bf013"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-failure-52",
+      "provenance_refs": [
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:2034",
+          "end_line_no": 2034,
+          "end_timestamp": "2026-04-13T02:52:44.926Z",
+          "rule_ids": [
+            "failure.explicit"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:432",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:2024",
+          "start_line_no": 2024,
+          "start_timestamp": "2026-04-13T02:52:32.192Z",
+          "statement": "I\u2019ve pinpointed the extractor\u2019s broader failure mode: it\u2019s mining raw tool outputs and reasoning traces as if they were stable knowledge."
+        }
+      ]
+    },
+    {
+      "citation_id": "item-failure-53",
+      "item_keys": [
+        "ai-trader:failure:560f13dbed23db18"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-failure-53",
+      "provenance_refs": [
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:1913",
+          "end_line_no": 1913,
+          "end_timestamp": "2026-04-13T02:47:32.944Z",
+          "rule_ids": [
+            "failure.explicit"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:411",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:1904",
+          "start_line_no": 1904,
+          "start_timestamp": "2026-04-13T02:47:19.821Z",
+          "statement": "The classification change is structural rather than just a keyword tweak: it will preserve project intent through low-signal reasoning/tool segments, which is the broader failure mode the live sample exposed."
+        }
+      ]
+    },
+    {
+      "citation_id": "item-failure-54",
+      "item_keys": [
+        "ai-trader:failure:e502a5af7882b23c"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-failure-54",
+      "provenance_refs": [
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:1902",
+          "end_line_no": 1902,
+          "end_timestamp": "2026-04-13T02:47:13.170Z",
+          "rule_ids": [
+            "failure.explicit"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:409",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:1894",
+          "start_line_no": 1894,
+          "start_timestamp": "2026-04-13T02:47:12.588Z",
+          "statement": "I\u2019m locking in regression coverage for the exact failure mode I\u2019m fixing: `AITrader`/finance-plan traces that fragment across neighboring segments, plus code-location false positives from prose like `e.g.`."
+        }
+      ]
+    },
+    {
+      "citation_id": "item-failure-55",
+      "item_keys": [
+        "ai-trader:failure:b4a20c4086072ef2"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-failure-55",
+      "provenance_refs": [
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:1863",
+          "end_line_no": 1863,
+          "end_timestamp": "2026-04-13T02:45:52.345Z",
+          "rule_ids": [
+            "failure.explicit"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:403",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:1858",
+          "start_line_no": 1858,
+          "start_timestamp": "2026-04-13T02:45:48.215Z",
+          "statement": "The deeper issue isn\u2019t just missing keywords."
+        }
+      ]
+    },
+    {
+      "citation_id": "item-failure-56",
+      "item_keys": [
+        "ai-trader:failure:9d0713419a47ed4e"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-failure-56",
+      "provenance_refs": [
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:1824",
+          "end_line_no": 1824,
+          "end_timestamp": "2026-04-13T02:41:56.934Z",
+          "rule_ids": [
+            "failure.explicit"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:395",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:1824",
+          "start_line_no": 1824,
+          "start_timestamp": "2026-04-13T02:41:56.934Z",
+          "statement": "- The BOM fix generalizes a real Windows failure mode instead of leaving it as a temp-script workaround."
+        },
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:1828",
+          "end_line_no": 1828,
+          "end_timestamp": "2026-04-13T02:45:08.085Z",
+          "rule_ids": [
+            "failure.explicit"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:396",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:1825",
+          "start_line_no": 1825,
+          "start_timestamp": "2026-04-13T02:41:56.934Z",
+          "statement": "- The BOM fix generalizes a real Windows failure mode instead of leaving it as a temp-script workaround."
+        }
+      ]
+    },
+    {
+      "citation_id": "item-failure-57",
+      "item_keys": [
+        "ai-trader:failure:5e20aeb842ff6d60"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-failure-57",
+      "provenance_refs": [
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:1823",
+          "end_line_no": 1823,
+          "end_timestamp": "2026-04-13T02:41:46.167Z",
+          "rule_ids": [
+            "failure.explicit"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:394",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:1817",
+          "start_line_no": 1817,
+          "start_timestamp": "2026-04-13T02:41:28.595Z",
+          "statement": "I\u2019m doing one last direct smoke check with a BOM-encoded config file so we know the exact real Windows failure I hit is actually resolved, not just theoretically patched."
+        }
+      ]
+    },
+    {
+      "citation_id": "item-failure-58",
+      "item_keys": [
+        "ai-trader:failure:2fb7d11804f24a0b"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-failure-58",
+      "provenance_refs": [
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:1815",
+          "end_line_no": 1815,
+          "end_timestamp": "2026-04-13T02:41:21.153Z",
+          "rule_ids": [
+            "failure.explicit"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:392",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:1810",
+          "start_line_no": 1810,
+          "start_timestamp": "2026-04-13T02:41:05.863Z",
+          "statement": "I\u2019m rerunning the full suite once so we keep the repo stable, then I\u2019ll summarize the real-data findings separately from the code fix, because the live sample exposed some quality issues we shouldn\u2019t blur together."
+        }
+      ]
+    },
+    {
+      "citation_id": "item-failure-59",
+      "item_keys": [
+        "ai-trader:failure:3cdbd93d3b8ccb21"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-failure-59",
+      "provenance_refs": [
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:1808",
+          "end_line_no": 1808,
+          "end_timestamp": "2026-04-13T02:40:55.445Z",
+          "rule_ids": [
+            "failure.explicit"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:390",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:1803",
+          "start_line_no": 1803,
+          "start_timestamp": "2026-04-13T02:40:44.086Z",
+          "statement": "That way the real issue we hit is fixed at the right layer for all config/state JSON readers, not papered over in one temporary script."
+        }
+      ]
+    },
+    {
+      "citation_id": "item-failure-60",
+      "item_keys": [
+        "ai-trader:failure:2e52837849dd8f17"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-failure-60",
+      "provenance_refs": [
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:1785",
+          "end_line_no": 1785,
+          "end_timestamp": "2026-04-13T02:40:18.177Z",
+          "rule_ids": [
+            "failure.explicit"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:386",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:1777",
+          "start_line_no": 1777,
+          "start_timestamp": "2026-04-13T02:40:17.639Z",
+          "statement": "The real-data run surfaced one concrete engineering issue worth fixing immediately: config JSON with a Windows BOM can break the pipeline even though the content is valid."
+        }
+      ]
+    }
+  ],
+  "domain": "ai-trader",
+  "input_item_keys": [
+    "ai-trader:failure:76e5e17677e712b8",
+    "ai-trader:failure:a76937d9d8b94f87",
+    "ai-trader:failure:ededa0e1faee62c8",
+    "ai-trader:failure:5bb61cdc048083ce",
+    "ai-trader:failure:3d2140abbf5fd24d",
+    "ai-trader:failure:8db9a768aa0881c4",
+    "ai-trader:failure:8d8a7022f189c5ed",
+    "ai-trader:failure:e3d2716ff513d19e",
+    "ai-trader:failure:2698ffb8e53f01a1",
+    "ai-trader:failure:8df64abb07b96d09",
+    "ai-trader:failure:08a087ed03ca9814",
+    "ai-trader:failure:83d10efbd9f0cf34",
+    "ai-trader:failure:c225cad7d205bf19",
+    "ai-trader:failure:2f7e99e3871e9b6c",
+    "ai-trader:failure:0f8c02a4fa62fd45",
+    "ai-trader:failure:54bd1bbbc68814f0",
+    "ai-trader:failure:9aa48595c0e77ab4",
+    "ai-trader:failure:fee8dcd0be9077ea",
+    "ai-trader:failure:64384a00234ee335",
+    "ai-trader:failure:44dd415094027db3",
+    "ai-trader:failure:629504bf30404b53",
+    "ai-trader:failure:03e7dabc337ad927",
+    "ai-trader:failure:9bd6274afa3d845a",
+    "ai-trader:failure:b5f6fab699c3819c",
+    "ai-trader:failure:e74fbaa80b43cdcc",
+    "ai-trader:failure:f8e4533610b71dd1",
+    "ai-trader:failure:d2b4aeab44721da6",
+    "ai-trader:failure:83073df78724c767",
+    "ai-trader:failure:30368c218e162ce6",
+    "ai-trader:failure:7d1e8ba9ff5a8184",
+    "ai-trader:failure:08e2893b75840ac3",
+    "ai-trader:failure:b8dc9f364f3cfebe",
+    "ai-trader:failure:02afd522b99ef887",
+    "ai-trader:failure:ed6716a8db92d66f",
+    "ai-trader:failure:bf457ff2f23f1e97",
+    "ai-trader:failure:f1175f7023623b53",
+    "ai-trader:failure:a82b05e46b68fbbb",
+    "ai-trader:failure:a2b95d0567464a9c",
+    "ai-trader:failure:107751b4d61ea681",
+    "ai-trader:failure:cba9d78aa521a3ad",
+    "ai-trader:failure:f7530100e18c3c7b",
+    "ai-trader:failure:0fccc3a0cf69f29a",
+    "ai-trader:failure:15336d2218baf11d",
+    "ai-trader:failure:10a15a974f98f1f9",
+    "ai-trader:failure:3211974d42f9257f",
+    "ai-trader:failure:271aab058f8bffd3",
+    "ai-trader:failure:2e22dfbafd911eea",
+    "ai-trader:failure:81533a3ca9f9eadf",
+    "ai-trader:failure:8d00a5e2dced2b99",
+    "ai-trader:failure:89c2d327ce8cb35a",
+    "ai-trader:failure:c8c211ae5f5cc938",
+    "ai-trader:failure:0cb0015f596bf013",
+    "ai-trader:failure:560f13dbed23db18",
+    "ai-trader:failure:e502a5af7882b23c",
+    "ai-trader:failure:b4a20c4086072ef2",
+    "ai-trader:failure:9d0713419a47ed4e",
+    "ai-trader:failure:5e20aeb842ff6d60",
+    "ai-trader:failure:2fb7d11804f24a0b",
+    "ai-trader:failure:3cdbd93d3b8ccb21",
+    "ai-trader:failure:2e52837849dd8f17"
+  ],
+  "page_id": "projects/ai-trader/failures",
+  "page_type": "bucket_page",
+  "rendered_page_metadata": {
+    "claim_count": 7,
+    "conflict_count": 74,
+    "related_domains": [
+      "global"
+    ],
+    "related_pages": [
+      {
+        "page_key": "index",
+        "title": "AI Trader",
+        "wikilink": "[[projects/ai-trader/index|AI Trader]]"
+      },
+      {
+        "page_key": "communication-preferences",
+        "title": "AI Trader - Communication Preferences",
+        "wikilink": "[[projects/ai-trader/communication-preferences|AI Trader - Communication Preferences]]"
+      },
+      {
+        "page_key": "workflow-rules",
+        "title": "AI Trader - Workflow Rules",
+        "wikilink": "[[projects/ai-trader/workflow-rules|AI Trader - Workflow Rules]]"
+      },
+      {
+        "page_key": "architecture",
+        "title": "AI Trader - Architecture",
+        "wikilink": "[[projects/ai-trader/architecture|AI Trader - Architecture]]"
+      },
+      {
+        "page_key": "code-map",
+        "title": "AI Trader - Code Map",
+        "wikilink": "[[projects/ai-trader/code-map|AI Trader - Code Map]]"
+      },
+      {
+        "page_key": "current-state",
+        "title": "AI Trader - Current State",
+        "wikilink": "[[projects/ai-trader/current-state|AI Trader - Current State]]"
+      },
+      {
+        "page_key": "tasks",
+        "title": "AI Trader - Tasks",
+        "wikilink": "[[projects/ai-trader/tasks|AI Trader - Tasks]]"
+      },
+      {
+        "page_key": "outcomes",
+        "title": "AI Trader - Outcomes",
+        "wikilink": "[[projects/ai-trader/outcomes|AI Trader - Outcomes]]"
+      },
+      {
+        "page_key": "decisions",
+        "title": "AI Trader - Decisions",
+        "wikilink": "[[projects/ai-trader/decisions|AI Trader - Decisions]]"
+      },
+      {
+        "page_key": "next-steps",
+        "title": "AI Trader - Next Steps",
+        "wikilink": "[[projects/ai-trader/next-steps|AI Trader - Next Steps]]"
+      },
+      {
+        "page_key": "open-questions",
+        "title": "AI Trader - Open Questions",
+        "wikilink": "[[projects/ai-trader/open-questions|AI Trader - Open Questions]]"
+      }
+    ],
+    "relative_page_path": "projects/ai-trader/failures.md",
+    "source_count": 74,
+    "title": "AI Trader - Failures"
+  },
+  "renderer": "obsidian_markdown",
+  "synthesized_claims": [
+    {
+      "claim_id": "claim-1",
+      "confidence": "strong",
+      "latent_type": "implicit_dos_and_donts",
+      "provenance_refs": [
+        {
+          "end_event_id": "019c9cff-0337-77e0-9ba6-a4f6dc75a92e:4",
+          "end_line_no": 4,
+          "end_timestamp": "2026-02-27T02:48:04.257Z",
+          "rule_ids": [
+            "failure.explicit"
+          ],
+          "segment_id": "019c9cff-0337-77e0-9ba6-a4f6dc75a92e:2",
+          "session_id": "019c9cff-0337-77e0-9ba6-a4f6dc75a92e",
+          "source_id": "019c9cff-0337-77e0-9ba6-a4f6dc75a92e",
+          "start_event_id": "019c9cff-0337-77e0-9ba6-a4f6dc75a92e:3",
+          "start_line_no": 3,
+          "start_timestamp": "2026-02-27T02:48:04.257Z",
+          "statement": "- Safety and fallback: If a skill can't be applied cleanly (missing files, unclear instructions), state the issue, pick the next-best approach, and continue."
+        },
+        {
+          "end_event_id": "019c9d00-0d81-7b52-a1a9-84f7d4b05066:4",
+          "end_line_no": 4,
+          "end_timestamp": "2026-02-27T02:49:12.399Z",
+          "rule_ids": [
+            "failure.explicit"
+          ],
+          "segment_id": "019c9d00-0d81-7b52-a1a9-84f7d4b05066:2",
+          "session_id": "019c9d00-0d81-7b52-a1a9-84f7d4b05066",
+          "source_id": "019c9d00-0d81-7b52-a1a9-84f7d4b05066",
+          "start_event_id": "019c9d00-0d81-7b52-a1a9-84f7d4b05066:3",
+          "start_line_no": 3,
+          "start_timestamp": "2026-02-27T02:49:12.398Z",
+          "statement": "- Safety and fallback: If a skill can't be applied cleanly (missing files, unclear instructions), state the issue, pick the next-best approach, and continue."
+        },
+        {
+          "end_event_id": "019c9d4c-657e-7d71-a062-4d77a75d3786:4",
+          "end_line_no": 4,
+          "end_timestamp": "2026-02-27T04:12:35.657Z",
+          "rule_ids": [
+            "failure.explicit"
+          ],
+          "segment_id": "019c9d4c-657e-7d71-a062-4d77a75d3786:2",
+          "session_id": "019c9d4c-657e-7d71-a062-4d77a75d3786",
+          "source_id": "019c9d4c-657e-7d71-a062-4d77a75d3786",
+          "start_event_id": "019c9d4c-657e-7d71-a062-4d77a75d3786:3",
+          "start_line_no": 3,
+          "start_timestamp": "2026-02-27T04:12:35.657Z",
+          "statement": "- Safety and fallback: If a skill can't be applied cleanly (missing files, unclear instructions), state the issue, pick the next-best approach, and continue."
+        }
+      ],
+      "section_id": "summary",
+      "supporting_item_ids": [
+        "ai-trader:failure:76e5e17677e712b8"
+      ],
+      "text": "If a skill can't be applied cleanly, state the issue, pick the next-best approach, and continue."
+    },
+    {
+      "claim_id": "claim-2",
+      "confidence": "strong",
+      "latent_type": "implicit_dos_and_donts",
+      "provenance_refs": [
+        {
+          "end_event_id": "019ca705-c215-7221-8e6a-d28b922add82:5",
+          "end_line_no": 5,
+          "end_timestamp": "2026-03-01T01:31:38.636Z",
+          "rule_ids": [
+            "failure.explicit"
+          ],
+          "segment_id": "019ca705-c215-7221-8e6a-d28b922add82:2",
+          "session_id": "019ca705-c215-7221-8e6a-d28b922add82",
+          "source_id": "019ca705-c215-7221-8e6a-d28b922add82",
+          "start_event_id": "019ca705-c215-7221-8e6a-d28b922add82:5",
+          "start_line_no": 5,
+          "start_timestamp": "2026-03-01T01:31:38.636Z",
+          "statement": "- If something fails, report root cause, fix rationale, and evidence that the failure cannot recur via the same path."
+        },
+        {
+          "end_event_id": "019ca705-c215-7221-8e6a-d28b922add82:9",
+          "end_line_no": 9,
+          "end_timestamp": "2026-03-01T01:31:39.552Z",
+          "rule_ids": [
+            "failure.explicit"
+          ],
+          "segment_id": "019ca705-c215-7221-8e6a-d28b922add82:3",
+          "session_id": "019ca705-c215-7221-8e6a-d28b922add82",
+          "source_id": "019ca705-c215-7221-8e6a-d28b922add82",
+          "start_event_id": "019ca705-c215-7221-8e6a-d28b922add82:6",
+          "start_line_no": 6,
+          "start_timestamp": "2026-03-01T01:31:38.636Z",
+          "statement": "- If something fails, report root cause, fix rationale, and evidence that the failure cannot recur via the same path."
+        },
+        {
+          "end_event_id": "019ca705-c215-7221-8e6a-d28b922add82:54",
+          "end_line_no": 54,
+          "end_timestamp": "2026-03-01T02:36:55.290Z",
+          "rule_ids": [
+            "failure.explicit"
+          ],
+          "segment_id": "019ca705-c215-7221-8e6a-d28b922add82:9",
+          "session_id": "019ca705-c215-7221-8e6a-d28b922add82",
+          "source_id": "019ca705-c215-7221-8e6a-d28b922add82",
+          "start_event_id": "019ca705-c215-7221-8e6a-d28b922add82:54",
+          "start_line_no": 54,
+          "start_timestamp": "2026-03-01T02:36:55.290Z",
+          "statement": "- If something fails, report root cause, fix rationale, and evidence that the failure cannot recur via the same path."
+        }
+      ],
+      "section_id": "summary",
+      "supporting_item_ids": [
+        "ai-trader:failure:a76937d9d8b94f87"
+      ],
+      "text": "If something fails, report root cause, fix rationale, and evidence that the failure cannot recur via the same path."
+    },
+    {
+      "claim_id": "claim-3",
+      "confidence": "strong",
+      "latent_type": "implicit_dos_and_donts",
+      "provenance_refs": [
+        {
+          "end_event_id": "019ca705-c215-7221-8e6a-d28b922add82:5",
+          "end_line_no": 5,
+          "end_timestamp": "2026-03-01T01:31:38.636Z",
+          "rule_ids": [
+            "failure.explicit"
+          ],
+          "segment_id": "019ca705-c215-7221-8e6a-d28b922add82:2",
+          "session_id": "019ca705-c215-7221-8e6a-d28b922add82",
+          "source_id": "019ca705-c215-7221-8e6a-d28b922add82",
+          "start_event_id": "019ca705-c215-7221-8e6a-d28b922add82:5",
+          "start_line_no": 5,
+          "start_timestamp": "2026-03-01T01:31:38.636Z",
+          "statement": "- Use first-principles debugging: identify root cause and implement durable fixes with regression coverage instead of quick local patches."
+        },
+        {
+          "end_event_id": "019ca705-c215-7221-8e6a-d28b922add82:9",
+          "end_line_no": 9,
+          "end_timestamp": "2026-03-01T01:31:39.552Z",
+          "rule_ids": [
+            "failure.explicit"
+          ],
+          "segment_id": "019ca705-c215-7221-8e6a-d28b922add82:3",
+          "session_id": "019ca705-c215-7221-8e6a-d28b922add82",
+          "source_id": "019ca705-c215-7221-8e6a-d28b922add82",
+          "start_event_id": "019ca705-c215-7221-8e6a-d28b922add82:6",
+          "start_line_no": 6,
+          "start_timestamp": "2026-03-01T01:31:38.636Z",
+          "statement": "- Use first-principles debugging: identify root cause and implement durable fixes with regression coverage instead of quick local patches."
+        },
+        {
+          "end_event_id": "019ca705-c215-7221-8e6a-d28b922add82:54",
+          "end_line_no": 54,
+          "end_timestamp": "2026-03-01T02:36:55.290Z",
+          "rule_ids": [
+            "failure.explicit"
+          ],
+          "segment_id": "019ca705-c215-7221-8e6a-d28b922add82:9",
+          "session_id": "019ca705-c215-7221-8e6a-d28b922add82",
+          "source_id": "019ca705-c215-7221-8e6a-d28b922add82",
+          "start_event_id": "019ca705-c215-7221-8e6a-d28b922add82:54",
+          "start_line_no": 54,
+          "start_timestamp": "2026-03-01T02:36:55.290Z",
+          "statement": "- Use first-principles debugging: identify root cause and implement durable fixes with regression coverage instead of quick local patches."
+        }
+      ],
+      "section_id": "summary",
+      "supporting_item_ids": [
+        "ai-trader:failure:ededa0e1faee62c8"
+      ],
+      "text": "Use first-principles debugging: identify root cause and implement durable fixes with regression coverage instead of quick local patches."
+    },
+    {
+      "claim_id": "claim-4",
+      "confidence": "strong",
+      "latent_type": "implicit_dos_and_donts",
+      "provenance_refs": [
+        {
+          "end_event_id": "019ca705-c215-7221-8e6a-d28b922add82:5",
+          "end_line_no": 5,
+          "end_timestamp": "2026-03-01T01:31:38.636Z",
+          "rule_ids": [
+            "failure.explicit"
+          ],
+          "segment_id": "019ca705-c215-7221-8e6a-d28b922add82:2",
+          "session_id": "019ca705-c215-7221-8e6a-d28b922add82",
+          "source_id": "019ca705-c215-7221-8e6a-d28b922add82",
+          "start_event_id": "019ca705-c215-7221-8e6a-d28b922add82:5",
+          "start_line_no": 5,
+          "start_timestamp": "2026-03-01T01:31:38.636Z",
+          "statement": "Define the failure precisely:"
+        },
+        {
+          "end_event_id": "019ca705-c215-7221-8e6a-d28b922add82:9",
+          "end_line_no": 9,
+          "end_timestamp": "2026-03-01T01:31:39.552Z",
+          "rule_ids": [
+            "failure.explicit"
+          ],
+          "segment_id": "019ca705-c215-7221-8e6a-d28b922add82:3",
+          "session_id": "019ca705-c215-7221-8e6a-d28b922add82",
+          "source_id": "019ca705-c215-7221-8e6a-d28b922add82",
+          "start_event_id": "019ca705-c215-7221-8e6a-d28b922add82:6",
+          "start_line_no": 6,
+          "start_timestamp": "2026-03-01T01:31:38.636Z",
+          "statement": "Define the failure precisely:"
+        },
+        {
+          "end_event_id": "019ca705-c215-7221-8e6a-d28b922add82:54",
+          "end_line_no": 54,
+          "end_timestamp": "2026-03-01T02:36:55.290Z",
+          "rule_ids": [
+            "failure.explicit"
+          ],
+          "segment_id": "019ca705-c215-7221-8e6a-d28b922add82:9",
+          "session_id": "019ca705-c215-7221-8e6a-d28b922add82",
+          "source_id": "019ca705-c215-7221-8e6a-d28b922add82",
+          "start_event_id": "019ca705-c215-7221-8e6a-d28b922add82:54",
+          "start_line_no": 54,
+          "start_timestamp": "2026-03-01T02:36:55.290Z",
+          "statement": "Define the failure precisely:"
+        }
+      ],
+      "section_id": "summary",
+      "supporting_item_ids": [
+        "ai-trader:failure:5bb61cdc048083ce"
+      ],
+      "text": "Define the failure precisely."
+    },
+    {
+      "claim_id": "claim-5",
+      "confidence": "strong",
+      "latent_type": "implicit_dos_and_donts",
+      "provenance_refs": [
+        {
+          "end_event_id": "019ca705-c215-7221-8e6a-d28b922add82:5",
+          "end_line_no": 5,
+          "end_timestamp": "2026-03-01T01:31:38.636Z",
+          "rule_ids": [
+            "failure.explicit"
+          ],
+          "segment_id": "019ca705-c215-7221-8e6a-d28b922add82:2",
+          "session_id": "019ca705-c215-7221-8e6a-d28b922add82",
+          "source_id": "019ca705-c215-7221-8e6a-d28b922add82",
+          "start_event_id": "019ca705-c215-7221-8e6a-d28b922add82:5",
+          "start_line_no": 5,
+          "start_timestamp": "2026-03-01T01:31:38.636Z",
+          "statement": "Use this doctrine whenever addressing failures, instability, or repeated operational friction."
+        },
+        {
+          "end_event_id": "019ca705-c215-7221-8e6a-d28b922add82:9",
+          "end_line_no": 9,
+          "end_timestamp": "2026-03-01T01:31:39.552Z",
+          "rule_ids": [
+            "failure.explicit"
+          ],
+          "segment_id": "019ca705-c215-7221-8e6a-d28b922add82:3",
+          "session_id": "019ca705-c215-7221-8e6a-d28b922add82",
+          "source_id": "019ca705-c215-7221-8e6a-d28b922add82",
+          "start_event_id": "019ca705-c215-7221-8e6a-d28b922add82:6",
+          "start_line_no": 6,
+          "start_timestamp": "2026-03-01T01:31:38.636Z",
+          "statement": "Use this doctrine whenever addressing failures, instability, or repeated operational friction."
+        },
+        {
+          "end_event_id": "019ca705-c215-7221-8e6a-d28b922add82:54",
+          "end_line_no": 54,
+          "end_timestamp": "2026-03-01T02:36:55.290Z",
+          "rule_ids": [
+            "failure.explicit"
+          ],
+          "segment_id": "019ca705-c215-7221-8e6a-d28b922add82:9",
+          "session_id": "019ca705-c215-7221-8e6a-d28b922add82",
+          "source_id": "019ca705-c215-7221-8e6a-d28b922add82",
+          "start_event_id": "019ca705-c215-7221-8e6a-d28b922add82:54",
+          "start_line_no": 54,
+          "start_timestamp": "2026-03-01T02:36:55.290Z",
+          "statement": "Use this doctrine whenever addressing failures, instability, or repeated operational friction."
+        }
+      ],
+      "section_id": "failure",
+      "supporting_item_ids": [
+        "ai-trader:failure:8db9a768aa0881c4"
+      ],
+      "text": "Use this doctrine whenever addressing failures, instability, or repeated operational friction."
+    },
+    {
+      "claim_id": "claim-6",
+      "confidence": "strong",
+      "latent_type": "implicit_dos_and_donts",
+      "provenance_refs": [
+        {
+          "end_event_id": "019caf95-fa0a-7900-9097-6dbda1513ef0:5",
+          "end_line_no": 5,
+          "end_timestamp": "2026-03-02T17:26:07.837Z",
+          "rule_ids": [
+            "failure.explicit"
+          ],
+          "segment_id": "019caf95-fa0a-7900-9097-6dbda1513ef0:3",
+          "session_id": "019caf95-fa0a-7900-9097-6dbda1513ef0",
+          "source_id": "019caf95-fa0a-7900-9097-6dbda1513ef0",
+          "start_event_id": "019caf95-fa0a-7900-9097-6dbda1513ef0:5",
+          "start_line_no": 5,
+          "start_timestamp": "2026-03-02T17:26:07.837Z",
+          "statement": "do not ask user to \"grant access\" for those paths unless a command has already failed with a concrete filesystem/permission error."
+        },
+        {
+          "end_event_id": "019caf95-fa0a-7900-9097-6dbda1513ef0:8",
+          "end_line_no": 8,
+          "end_timestamp": "2026-03-02T17:26:08.430Z",
+          "rule_ids": [
+            "failure.explicit"
+          ],
+          "segment_id": "019caf95-fa0a-7900-9097-6dbda1513ef0:4",
+          "session_id": "019caf95-fa0a-7900-9097-6dbda1513ef0",
+          "source_id": "019caf95-fa0a-7900-9097-6dbda1513ef0",
+          "start_event_id": "019caf95-fa0a-7900-9097-6dbda1513ef0:6",
+          "start_line_no": 6,
+          "start_timestamp": "2026-03-02T17:26:07.837Z",
+          "statement": "do not ask user to \"grant access\" for those paths unless a command has already failed with a concrete filesystem/permission error."
+        },
+        {
+          "end_event_id": "019caf95-fa0a-7900-9097-6dbda1513ef0:16",
+          "end_line_no": 16,
+          "end_timestamp": "2026-03-02T17:26:45.310Z",
+          "rule_ids": [
+            "failure.explicit"
+          ],
+          "segment_id": "019caf95-fa0a-7900-9097-6dbda1513ef0:6",
+          "session_id": "019caf95-fa0a-7900-9097-6dbda1513ef0",
+          "source_id": "019caf95-fa0a-7900-9097-6dbda1513ef0",
+          "start_event_id": "019caf95-fa0a-7900-9097-6dbda1513ef0:16",
+          "start_line_no": 16,
+          "start_timestamp": "2026-03-02T17:26:45.310Z",
+          "statement": "do not ask user to \"grant access\" for those paths unless a command has already failed with a concrete filesystem/permission error."
+        }
+      ],
+      "section_id": "failure",
+      "supporting_item_ids": [
+        "ai-trader:failure:e3d2716ff513d19e"
+      ],
+      "text": "Do not ask user to \"grant access\" for those paths unless a command has already failed with a concrete filesystem/permission error."
+    },
+    {
+      "claim_id": "claim-7",
+      "confidence": "strong",
+      "latent_type": "implicit_dos_and_donts",
+      "provenance_refs": [
+        {
+          "end_event_id": "019cb0ef-a044-7090-9627-7f2d616c46f2:206",
+          "end_line_no": 206,
+          "end_timestamp": "2026-03-03T00:20:10.232Z",
+          "rule_ids": [
+            "failure.explicit"
+          ],
+          "segment_id": "019cb0ef-a044-7090-9627-7f2d616c46f2:20",
+          "session_id": "019cb0ef-a044-7090-9627-7f2d616c46f2",
+          "source_id": "019cb0ef-a044-7090-9627-7f2d616c46f2",
+          "start_event_id": "019cb0ef-a044-7090-9627-7f2d616c46f2:206",
+          "start_line_no": 206,
+          "start_timestamp": "2026-03-03T00:20:10.232Z",
+          "statement": "- Do not claim filesystem/policy/approval blockers unless you include exact command + error evidence from this run."
+        },
+        {
+          "end_event_id": "019cb0ef-a044-7090-9627-7f2d616c46f2:209",
+          "end_line_no": 209,
+          "end_timestamp": "2026-03-03T00:20:11.135Z",
+          "rule_ids": [
+            "failure.explicit"
+          ],
+          "segment_id": "019cb0ef-a044-7090-9627-7f2d616c46f2:21",
+          "session_id": "019cb0ef-a044-7090-9627-7f2d616c46f2",
+          "source_id": "019cb0ef-a044-7090-9627-7f2d616c46f2",
+          "start_event_id": "019cb0ef-a044-7090-9627-7f2d616c46f2:207",
+          "start_line_no": 207,
+          "start_timestamp": "2026-03-03T00:20:10.233Z",
+          "statement": "- Do not claim filesystem/policy/approval blockers unless you include exact command + error evidence from this run."
+        },
+        {
+          "end_event_id": "019cb0ef-a044-7090-9627-7f2d616c46f2:288",
+          "end_line_no": 288,
+          "end_timestamp": "2026-03-03T00:22:17.244Z",
+          "rule_ids": [
+            "failure.explicit"
+          ],
+          "segment_id": "019cb0ef-a044-7090-9627-7f2d616c46f2:33",
+          "session_id": "019cb0ef-a044-7090-9627-7f2d616c46f2",
+          "source_id": "019cb0ef-a044-7090-9627-7f2d616c46f2",
+          "start_event_id": "019cb0ef-a044-7090-9627-7f2d616c46f2:288",
+          "start_line_no": 288,
+          "start_timestamp": "2026-03-03T00:22:17.244Z",
+          "statement": "- Do not claim filesystem/policy/approval blockers unless you include exact command + error evidence from this run."
+        }
+      ],
+      "section_id": "failure",
+      "supporting_item_ids": [
+        "ai-trader:failure:8df64abb07b96d09"
+      ],
+      "text": "Do not claim filesystem/policy/approval blockers unless you include exact command + error evidence from this run."
+    }
+  ],
+  "versions": {
+    "page_config_version": 2,
+    "renderer_version": 2,
+    "synthesis_prompt_version": 2,
+    "synthesis_schema_version": 1,
+    "wiki_schema_version": 2
+  }
+}

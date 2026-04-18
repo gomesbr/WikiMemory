@@ -1,0 +1,29 @@
+{
+  "samples": [
+    {
+      "label": "tiny-operational",
+      "source_id": "019ca6fe-4e31-7b23-8705-b0e23f293d62",
+      "relative_path": "2026/02/28/rollout-2026-02-28T20-23-30-019ca6fe-4e31-7b23-8705-b0e23f293d62.jsonl"
+    },
+    {
+      "label": "medium-tool-heavy-cross-project",
+      "source_id": "019c9ca4-ac1c-76e2-b883-017d68d982a1",
+      "relative_path": "2026/02/26/rollout-2026-02-26T20-09-23-019c9ca4-ac1c-76e2-b883-017d68d982a1.jsonl"
+    },
+    {
+      "label": "golden-large-long-running",
+      "source_id": "019cbacf-74e5-7411-a1ab-6595d49c26a2",
+      "relative_path": "2026/03/04/rollout-2026-03-04T16-44-44-019cbacf-74e5-7411-a1ab-6595d49c26a2.jsonl"
+    },
+    {
+      "label": "ai-trader",
+      "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+      "relative_path": "2026/04/12/rollout-2026-04-12T16-59-14-019d837d-d249-71c3-9637-b8d6992ce805.jsonl"
+    },
+    {
+      "label": "open-brain-mixed",
+      "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+      "relative_path": "2026/03/02/rollout-2026-03-02T18-54-06-019cb0f9-2d39-7850-a9e1-11263a5a8783.jsonl"
+    }
+  ]
+}

@@ -1,0 +1,38 @@
+{
+  "schema_version": 1,
+  "audit_schema_version": 2,
+  "rules_version": 2,
+  "bootstrap_config_path": "bootstrap_config.json",
+  "stale_windows_days": {
+    "task_request": 14,
+    "next_step": 14,
+    "current_state": 30,
+    "open_question": 30
+  },
+  "strong_confidences": [
+    "explicit",
+    "strong"
+  ],
+  "transient_rule_item_types": [
+    "communication_preference",
+    "workflow_rule",
+    "do_rule",
+    "dont_rule"
+  ],
+  "generic_claim_patterns": [
+    "is important",
+    "are important",
+    "there are ongoing tasks",
+    "clear communication is necessary",
+    "clear communication is important",
+    "workflow rules are essential"
+  ],
+  "page_size_caps": {
+    "index": 25600,
+    "communication-preferences": 76800,
+    "workflow-rules": 76800,
+    "default_bucket": 204800
+  },
+  "near_stale_enabled": false,
+  "near_stale_ratio": 0.9
+}

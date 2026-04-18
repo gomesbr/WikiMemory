@@ -1,0 +1,1305 @@
+{
+  "bucket": "current-state",
+  "citations": [
+    {
+      "citation_id": "claim-1",
+      "item_keys": [
+        "cross-project:current_state:1ede86080333232e"
+      ],
+      "kind": "synthesized_claim",
+      "label": "claim-1",
+      "provenance_refs": [
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:1334",
+          "end_line_no": 1334,
+          "end_timestamp": "2026-04-13T01:58:10.251Z",
+          "rule_ids": [
+            "current_state.explicit"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:302",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:1334",
+          "start_line_no": 1334,
+          "start_timestamp": "2026-04-13T01:58:10.251Z",
+          "statement": "Current state synthesis"
+        },
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:1339",
+          "end_line_no": 1339,
+          "end_timestamp": "2026-04-13T02:05:56.026Z",
+          "rule_ids": [
+            "current_state.explicit"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:303",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:1335",
+          "start_line_no": 1335,
+          "start_timestamp": "2026-04-13T01:58:10.252Z",
+          "statement": "Current state synthesis"
+        }
+      ]
+    },
+    {
+      "citation_id": "claim-2",
+      "item_keys": [
+        "cross-project:current_state:d9db2873945289d7"
+      ],
+      "kind": "synthesized_claim",
+      "label": "claim-2",
+      "provenance_refs": [
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:762",
+          "end_line_no": 762,
+          "end_timestamp": "2026-04-13T00:11:26.728Z",
+          "rule_ids": [
+            "current_state.explicit"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:171",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:762",
+          "start_line_no": 762,
+          "start_timestamp": "2026-04-13T00:11:26.728Z",
+          "statement": "Current repo state: the Phase 3 code is in place, but there are no persisted `normalized/` or `segmented/` artifacts checked into this repo right now, so I\u2019m assuming we should keep the same sample-first workflow for Phase 4."
+        },
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:766",
+          "end_line_no": 766,
+          "end_timestamp": "2026-04-13T00:22:52.289Z",
+          "rule_ids": [
+            "current_state.explicit"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:172",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:763",
+          "start_line_no": 763,
+          "start_timestamp": "2026-04-13T00:11:26.729Z",
+          "statement": "Current repo state: the Phase 3 code is in place, but there are no persisted `normalized/` or `segmented/` artifacts checked into this repo right now, so I\u2019m assuming we should keep the same sample-first workflow for Phase 4."
+        }
+      ]
+    },
+    {
+      "citation_id": "claim-3",
+      "item_keys": [
+        "cross-project:current_state:1fb76e4aa1bf689a"
+      ],
+      "kind": "synthesized_claim",
+      "label": "claim-3",
+      "provenance_refs": [
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:494",
+          "end_line_no": 494,
+          "end_timestamp": "2026-04-12T23:31:20.906Z",
+          "rule_ids": [
+            "current_state.explicit"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:116",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:489",
+          "start_line_no": 489,
+          "start_timestamp": "2026-04-12T23:29:24.670Z",
+          "statement": "The external Codex session source root is also currently on `C:`:"
+        }
+      ]
+    },
+    {
+      "citation_id": "claim-4",
+      "item_keys": [
+        "cross-project:current_state:fe35f2d9d3ee4d81"
+      ],
+      "kind": "synthesized_claim",
+      "label": "claim-4",
+      "provenance_refs": [
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:49264",
+          "end_line_no": 49264,
+          "end_timestamp": "2026-03-12T16:16:30.669Z",
+          "rule_ids": [
+            "current_state.explicit"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:6510",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:49264",
+          "start_line_no": 49264,
+          "start_timestamp": "2026-03-12T16:16:30.669Z",
+          "statement": "Here are representative evidence rows where benchmark cases are currently failing to get authored successfully, with why the current intelligence is likely missing them."
+        }
+      ]
+    },
+    {
+      "citation_id": "claim-5",
+      "item_keys": [
+        "cross-project:current_state:c69edf391935a647"
+      ],
+      "kind": "synthesized_claim",
+      "label": "claim-5",
+      "provenance_refs": [
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:1049",
+          "end_line_no": 1049,
+          "end_timestamp": "2026-04-13T01:09:51.844Z",
+          "rule_ids": [
+            "current_state.explicit"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:235",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:1038",
+          "start_line_no": 1038,
+          "start_timestamp": "2026-04-13T01:09:51.132Z",
+          "statement": "I\u2019m checking the current state/CLI patterns first so the extractor follows the same atomic and incremental workflow as the earlier phases."
+        }
+      ]
+    },
+    {
+      "citation_id": "claim-6",
+      "item_keys": [
+        "cross-project:current_state:5bb4a0a1286190a9"
+      ],
+      "kind": "synthesized_claim",
+      "label": "claim-6",
+      "provenance_refs": [
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:52931",
+          "end_line_no": 52931,
+          "end_timestamp": "2026-03-13T00:10:17.910Z",
+          "rule_ids": [
+            "current_state.explicit"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:7225",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:52926",
+          "start_line_no": 52926,
+          "start_timestamp": "2026-03-13T00:04:15.315Z",
+          "statement": "- \u201csupported by taxonomy scan\u201d is not the same as \u201cgood benchmark anchor right now\u201d"
+        }
+      ]
+    },
+    {
+      "citation_id": "claim-7",
+      "item_keys": [
+        "cross-project:current_state:7f27b54a7fca3460"
+      ],
+      "kind": "synthesized_claim",
+      "label": "claim-7",
+      "provenance_refs": [
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:62581",
+          "end_line_no": 62581,
+          "end_timestamp": "2026-03-13T22:39:18.690Z",
+          "rule_ids": [
+            "current_state.explicit"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:9048",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:62575",
+          "start_line_no": 62575,
+          "start_timestamp": "2026-03-13T22:39:04.516Z",
+          "statement": "I\u2019m resuming the whole-corpus bottleneck loop from the current state."
+        }
+      ]
+    },
+    {
+      "citation_id": "item-current_state-1",
+      "item_keys": [
+        "cross-project:current_state:019eff189191b65f"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-current_state-1",
+      "provenance_refs": [
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:10461",
+          "end_line_no": 10461,
+          "end_timestamp": "2026-03-04T19:40:19.898Z",
+          "rule_ids": [
+            "current_state.explicit"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:892",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:10436",
+          "start_line_no": 10436,
+          "start_timestamp": "2026-03-04T19:38:59.482Z",
+          "statement": "Current state:"
+        },
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:6",
+          "end_line_no": 6,
+          "end_timestamp": "2026-04-12T21:03:16.250Z",
+          "rule_ids": [
+            "current_state.explicit"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:3",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:6",
+          "start_line_no": 6,
+          "start_timestamp": "2026-04-12T21:03:16.250Z",
+          "statement": "* current state"
+        },
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:8",
+          "end_line_no": 8,
+          "end_timestamp": "2026-04-12T21:03:16.450Z",
+          "rule_ids": [
+            "current_state.explicit"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:4",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:7",
+          "start_line_no": 7,
+          "start_timestamp": "2026-04-12T21:03:16.251Z",
+          "statement": "* current state"
+        }
+      ]
+    },
+    {
+      "citation_id": "item-current_state-2",
+      "item_keys": [
+        "cross-project:current_state:1ede86080333232e"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-current_state-2",
+      "provenance_refs": [
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:1334",
+          "end_line_no": 1334,
+          "end_timestamp": "2026-04-13T01:58:10.251Z",
+          "rule_ids": [
+            "current_state.explicit"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:302",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:1334",
+          "start_line_no": 1334,
+          "start_timestamp": "2026-04-13T01:58:10.251Z",
+          "statement": "Current state synthesis"
+        },
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:1339",
+          "end_line_no": 1339,
+          "end_timestamp": "2026-04-13T02:05:56.026Z",
+          "rule_ids": [
+            "current_state.explicit"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:303",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:1335",
+          "start_line_no": 1335,
+          "start_timestamp": "2026-04-13T01:58:10.252Z",
+          "statement": "Current state synthesis"
+        }
+      ]
+    },
+    {
+      "citation_id": "item-current_state-3",
+      "item_keys": [
+        "cross-project:current_state:35df5b7ba876e272"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-current_state-3",
+      "provenance_refs": [
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:1334",
+          "end_line_no": 1334,
+          "end_timestamp": "2026-04-13T01:58:10.251Z",
+          "rule_ids": [
+            "current_state.explicit"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:302",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:1334",
+          "start_line_no": 1334,
+          "start_timestamp": "2026-04-13T01:58:10.251Z",
+          "statement": "Examples: what is currently built, what is sample-only, what is still pending, what design direction is currently winning."
+        },
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:1339",
+          "end_line_no": 1339,
+          "end_timestamp": "2026-04-13T02:05:56.026Z",
+          "rule_ids": [
+            "current_state.explicit"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:303",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:1335",
+          "start_line_no": 1335,
+          "start_timestamp": "2026-04-13T01:58:10.252Z",
+          "statement": "Examples: what is currently built, what is sample-only, what is still pending, what design direction is currently winning."
+        }
+      ]
+    },
+    {
+      "citation_id": "item-current_state-4",
+      "item_keys": [
+        "cross-project:current_state:c69edf391935a647"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-current_state-4",
+      "provenance_refs": [
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:1049",
+          "end_line_no": 1049,
+          "end_timestamp": "2026-04-13T01:09:51.844Z",
+          "rule_ids": [
+            "current_state.explicit"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:235",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:1038",
+          "start_line_no": 1038,
+          "start_timestamp": "2026-04-13T01:09:51.132Z",
+          "statement": "I\u2019m checking the current state/CLI patterns first so the extractor follows the same atomic and incremental workflow as the earlier phases."
+        }
+      ]
+    },
+    {
+      "citation_id": "item-current_state-5",
+      "item_keys": [
+        "cross-project:current_state:d9db2873945289d7"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-current_state-5",
+      "provenance_refs": [
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:762",
+          "end_line_no": 762,
+          "end_timestamp": "2026-04-13T00:11:26.728Z",
+          "rule_ids": [
+            "current_state.explicit"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:171",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:762",
+          "start_line_no": 762,
+          "start_timestamp": "2026-04-13T00:11:26.728Z",
+          "statement": "Current repo state: the Phase 3 code is in place, but there are no persisted `normalized/` or `segmented/` artifacts checked into this repo right now, so I\u2019m assuming we should keep the same sample-first workflow for Phase 4."
+        },
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:766",
+          "end_line_no": 766,
+          "end_timestamp": "2026-04-13T00:22:52.289Z",
+          "rule_ids": [
+            "current_state.explicit"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:172",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:763",
+          "start_line_no": 763,
+          "start_timestamp": "2026-04-13T00:11:26.729Z",
+          "statement": "Current repo state: the Phase 3 code is in place, but there are no persisted `normalized/` or `segmented/` artifacts checked into this repo right now, so I\u2019m assuming we should keep the same sample-first workflow for Phase 4."
+        }
+      ]
+    },
+    {
+      "citation_id": "item-current_state-6",
+      "item_keys": [
+        "cross-project:current_state:d46549ef3e321b99"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-current_state-6",
+      "provenance_refs": [
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:494",
+          "end_line_no": 494,
+          "end_timestamp": "2026-04-12T23:31:20.906Z",
+          "rule_ids": [
+            "current_state.explicit"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:116",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:489",
+          "start_line_no": 489,
+          "start_timestamp": "2026-04-12T23:29:24.670Z",
+          "statement": "So right now both:"
+        }
+      ]
+    },
+    {
+      "citation_id": "item-current_state-7",
+      "item_keys": [
+        "cross-project:current_state:1fb76e4aa1bf689a"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-current_state-7",
+      "provenance_refs": [
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:494",
+          "end_line_no": 494,
+          "end_timestamp": "2026-04-12T23:31:20.906Z",
+          "rule_ids": [
+            "current_state.explicit"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:116",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:489",
+          "start_line_no": 489,
+          "start_timestamp": "2026-04-12T23:29:24.670Z",
+          "statement": "The external Codex session source root is also currently on `C:`:"
+        }
+      ]
+    },
+    {
+      "citation_id": "item-current_state-8",
+      "item_keys": [
+        "cross-project:current_state:7f27b54a7fca3460"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-current_state-8",
+      "provenance_refs": [
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:62581",
+          "end_line_no": 62581,
+          "end_timestamp": "2026-03-13T22:39:18.690Z",
+          "rule_ids": [
+            "current_state.explicit"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:9048",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:62575",
+          "start_line_no": 62575,
+          "start_timestamp": "2026-03-13T22:39:04.516Z",
+          "statement": "I\u2019m resuming the whole-corpus bottleneck loop from the current state."
+        }
+      ]
+    },
+    {
+      "citation_id": "item-current_state-9",
+      "item_keys": [
+        "cross-project:current_state:6646e29814c5f8ca"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-current_state-9",
+      "provenance_refs": [
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:54888",
+          "end_line_no": 54888,
+          "end_timestamp": "2026-03-13T03:40:51.692Z",
+          "rule_ids": [
+            "current_state.explicit"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:7588",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:54884",
+          "start_line_no": 54884,
+          "start_timestamp": "2026-03-13T03:38:18.775Z",
+          "statement": "That is the correct state right now."
+        }
+      ]
+    },
+    {
+      "citation_id": "item-current_state-10",
+      "item_keys": [
+        "cross-project:current_state:5bb4a0a1286190a9"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-current_state-10",
+      "provenance_refs": [
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:52931",
+          "end_line_no": 52931,
+          "end_timestamp": "2026-03-13T00:10:17.910Z",
+          "rule_ids": [
+            "current_state.explicit"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:7225",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:52926",
+          "start_line_no": 52926,
+          "start_timestamp": "2026-03-13T00:04:15.315Z",
+          "statement": "- \u201csupported by taxonomy scan\u201d is not the same as \u201cgood benchmark anchor right now\u201d"
+        }
+      ]
+    },
+    {
+      "citation_id": "item-current_state-11",
+      "item_keys": [
+        "cross-project:current_state:fe35f2d9d3ee4d81"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-current_state-11",
+      "provenance_refs": [
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:49264",
+          "end_line_no": 49264,
+          "end_timestamp": "2026-03-12T16:16:30.669Z",
+          "rule_ids": [
+            "current_state.explicit"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:6510",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:49264",
+          "start_line_no": 49264,
+          "start_timestamp": "2026-03-12T16:16:30.669Z",
+          "statement": "Here are representative evidence rows where benchmark cases are currently failing to get authored successfully, with why the current intelligence is likely missing them."
+        }
+      ]
+    },
+    {
+      "citation_id": "item-current_state-12",
+      "item_keys": [
+        "cross-project:current_state:67dc0129a3246fb2"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-current_state-12",
+      "provenance_refs": [
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:44560",
+          "end_line_no": 44560,
+          "end_timestamp": "2026-03-12T00:30:25.278Z",
+          "rule_ids": [
+            "current_state.explicit"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:5624",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:44553",
+          "start_line_no": 44553,
+          "start_timestamp": "2026-03-12T00:20:20.896Z",
+          "statement": "**What I think for your current state**"
+        }
+      ]
+    },
+    {
+      "citation_id": "item-current_state-13",
+      "item_keys": [
+        "cross-project:current_state:b1957aca678312a2"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-current_state-13",
+      "provenance_refs": [
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:43659",
+          "end_line_no": 43659,
+          "end_timestamp": "2026-03-11T20:21:40.673Z",
+          "rule_ids": [
+            "current_state.explicit"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:5424",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:43655",
+          "start_line_no": 43655,
+          "start_timestamp": "2026-03-11T20:15:28.376Z",
+          "statement": "Right now the system is doing the correct thing:"
+        }
+      ]
+    },
+    {
+      "citation_id": "item-current_state-14",
+      "item_keys": [
+        "cross-project:current_state:d4ca8bf6a6868500"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-current_state-14",
+      "provenance_refs": [
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:42894",
+          "end_line_no": 42894,
+          "end_timestamp": "2026-03-11T12:08:54.584Z",
+          "rule_ids": [
+            "current_state.explicit"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:5276",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:42889",
+          "start_line_no": 42889,
+          "start_timestamp": "2026-03-11T12:01:23.049Z",
+          "statement": "That means ambiguity governance exists in the system, but this benchmark version currently has no clarify-first cases."
+        }
+      ]
+    },
+    {
+      "citation_id": "item-current_state-15",
+      "item_keys": [
+        "cross-project:current_state:2ea472c35749684a"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-current_state-15",
+      "provenance_refs": [
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:31377",
+          "end_line_no": 31377,
+          "end_timestamp": "2026-03-09T00:12:25.298Z",
+          "rule_ids": [
+            "current_state.explicit"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:3412",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:31377",
+          "start_line_no": 31377,
+          "start_timestamp": "2026-03-09T00:12:25.298Z",
+          "statement": "Right now your loop mostly behaves like this:"
+        },
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:31381",
+          "end_line_no": 31381,
+          "end_timestamp": "2026-03-09T00:12:28.704Z",
+          "rule_ids": [
+            "current_state.explicit"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:3413",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:31378",
+          "start_line_no": 31378,
+          "start_timestamp": "2026-03-09T00:12:25.300Z",
+          "statement": "Right now your loop mostly behaves like this:"
+        }
+      ]
+    },
+    {
+      "citation_id": "item-current_state-16",
+      "item_keys": [
+        "cross-project:current_state:b08718786215fa43"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-current_state-16",
+      "provenance_refs": [
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:17727",
+          "end_line_no": 17727,
+          "end_timestamp": "2026-03-06T14:44:26.693Z",
+          "rule_ids": [
+            "current_state.explicit"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:1560",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:17716",
+          "start_line_no": 17716,
+          "start_timestamp": "2026-03-06T14:43:44.915Z",
+          "statement": "I\u2019ll run a DB scan across all sources for table-like content patterns and compare that against rows currently labeled `content_kind='table'`."
+        }
+      ]
+    },
+    {
+      "citation_id": "item-current_state-17",
+      "item_keys": [
+        "cross-project:current_state:a59a4c812e0664a1"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-current_state-17",
+      "provenance_refs": [
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:17130",
+          "end_line_no": 17130,
+          "end_timestamp": "2026-03-06T02:01:59.561Z",
+          "rule_ids": [
+            "current_state.explicit"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:1477",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:17126",
+          "start_line_no": 17126,
+          "start_timestamp": "2026-03-06T01:58:37.766Z",
+          "statement": "Yes, `chatgpt` is definitely running right now."
+        }
+      ]
+    },
+    {
+      "citation_id": "item-current_state-18",
+      "item_keys": [
+        "cross-project:current_state:f8dcdd4cf47301d8"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-current_state-18",
+      "provenance_refs": [
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:16732",
+          "end_line_no": 16732,
+          "end_timestamp": "2026-03-06T01:17:38.395Z",
+          "rule_ids": [
+            "current_state.explicit"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:1446",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:16718",
+          "start_line_no": 16718,
+          "start_timestamp": "2026-03-06T01:16:49.533Z",
+          "statement": "CPU is quiet right now."
+        }
+      ]
+    },
+    {
+      "citation_id": "item-current_state-19",
+      "item_keys": [
+        "cross-project:current_state:750a91221b1c4a4c"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-current_state-19",
+      "provenance_refs": [
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:16627",
+          "end_line_no": 16627,
+          "end_timestamp": "2026-03-06T01:07:15.401Z",
+          "rule_ids": [
+            "current_state.explicit"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:1439",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:16615",
+          "start_line_no": 16615,
+          "start_timestamp": "2026-03-06T01:07:00.943Z",
+          "statement": "running one source at a time is better for your machine right now."
+        }
+      ]
+    },
+    {
+      "citation_id": "item-current_state-20",
+      "item_keys": [
+        "cross-project:current_state:c8626a403847a437"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-current_state-20",
+      "provenance_refs": [
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:15887",
+          "end_line_no": 15887,
+          "end_timestamp": "2026-03-05T23:45:06.970Z",
+          "rule_ids": [
+            "current_state.explicit"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:1388",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:15865",
+          "start_line_no": 15865,
+          "start_timestamp": "2026-03-05T23:44:11.814Z",
+          "statement": "The chatgpt canary command is still running in the background right now"
+        }
+      ]
+    },
+    {
+      "citation_id": "item-current_state-21",
+      "item_keys": [
+        "cross-project:current_state:4f6415bcdeec2098"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-current_state-21",
+      "provenance_refs": [
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:11491",
+          "end_line_no": 11491,
+          "end_timestamp": "2026-03-05T12:33:33.074Z",
+          "rule_ids": [
+            "current_state.explicit"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:978",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:11472",
+          "start_line_no": 11472,
+          "start_timestamp": "2026-03-05T12:32:54.857Z",
+          "statement": "I\u2019ll verify live right now from process list and latest re-embed log line so you have a definitive status."
+        }
+      ]
+    },
+    {
+      "citation_id": "item-current_state-22",
+      "item_keys": [
+        "cross-project:current_state:1aac56cd85693e2c"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-current_state-22",
+      "provenance_refs": [
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:11491",
+          "end_line_no": 11491,
+          "end_timestamp": "2026-03-05T12:33:33.074Z",
+          "rule_ids": [
+            "current_state.explicit"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:978",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:11472",
+          "start_line_no": 11472,
+          "start_timestamp": "2026-03-05T12:32:54.857Z",
+          "statement": "Yes, that statement is still correct right now."
+        }
+      ]
+    },
+    {
+      "citation_id": "item-current_state-23",
+      "item_keys": [
+        "cross-project:current_state:03752feed15013e4"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-current_state-23",
+      "provenance_refs": [
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:11471",
+          "end_line_no": 11471,
+          "end_timestamp": "2026-03-05T12:32:54.855Z",
+          "rule_ids": [
+            "current_state.explicit"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:977",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:11454",
+          "start_line_no": 11454,
+          "start_timestamp": "2026-03-05T12:31:05.132Z",
+          "statement": "`memory_items` currently has **194,544 rows**."
+        }
+      ]
+    },
+    {
+      "citation_id": "item-current_state-24",
+      "item_keys": [
+        "cross-project:current_state:2c5ad1a5040ed158"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-current_state-24",
+      "provenance_refs": [
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:11471",
+          "end_line_no": 11471,
+          "end_timestamp": "2026-03-05T12:32:54.855Z",
+          "rule_ids": [
+            "current_state.explicit"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:977",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:11454",
+          "start_line_no": 11454,
+          "start_timestamp": "2026-03-05T12:31:05.132Z",
+          "statement": "I\u2019ll check the live DB count right now and give you the exact row total."
+        }
+      ]
+    },
+    {
+      "citation_id": "item-current_state-25",
+      "item_keys": [
+        "cross-project:current_state:66fb79dd3d510ea2"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-current_state-25",
+      "provenance_refs": [
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:11345",
+          "end_line_no": 11345,
+          "end_timestamp": "2026-03-05T05:43:51.908Z",
+          "rule_ids": [
+            "current_state.explicit"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:963",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:11345",
+          "start_line_no": 11345,
+          "start_timestamp": "2026-03-05T05:43:51.908Z",
+          "statement": "verify current state before retrying."
+        }
+      ]
+    },
+    {
+      "citation_id": "item-current_state-26",
+      "item_keys": [
+        "cross-project:current_state:a4dd6a66d257ff17"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-current_state-26",
+      "provenance_refs": [
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:10225",
+          "end_line_no": 10225,
+          "end_timestamp": "2026-03-04T19:29:38.964Z",
+          "rule_ids": [
+            "current_state.explicit"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:878",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:10208",
+          "start_line_no": 10208,
+          "start_timestamp": "2026-03-04T19:27:57.525Z",
+          "statement": "Confirmed all repos are clean right now:"
+        }
+      ]
+    },
+    {
+      "citation_id": "item-current_state-27",
+      "item_keys": [
+        "cross-project:current_state:47c217a935f5e3a5"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-current_state-27",
+      "provenance_refs": [
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:6793",
+          "end_line_no": 6793,
+          "end_timestamp": "2026-03-04T04:09:39.212Z",
+          "rule_ids": [
+            "current_state.explicit"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:607",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:6785",
+          "start_line_no": 6785,
+          "start_timestamp": "2026-03-04T04:05:03.869Z",
+          "statement": "What is less useful right now:"
+        }
+      ]
+    }
+  ],
+  "domain": "cross-project",
+  "input_item_keys": [
+    "cross-project:current_state:019eff189191b65f",
+    "cross-project:current_state:1ede86080333232e",
+    "cross-project:current_state:35df5b7ba876e272",
+    "cross-project:current_state:c69edf391935a647",
+    "cross-project:current_state:d9db2873945289d7",
+    "cross-project:current_state:d46549ef3e321b99",
+    "cross-project:current_state:1fb76e4aa1bf689a",
+    "cross-project:current_state:7f27b54a7fca3460",
+    "cross-project:current_state:6646e29814c5f8ca",
+    "cross-project:current_state:5bb4a0a1286190a9",
+    "cross-project:current_state:fe35f2d9d3ee4d81",
+    "cross-project:current_state:67dc0129a3246fb2",
+    "cross-project:current_state:b1957aca678312a2",
+    "cross-project:current_state:d4ca8bf6a6868500",
+    "cross-project:current_state:2ea472c35749684a",
+    "cross-project:current_state:b08718786215fa43",
+    "cross-project:current_state:a59a4c812e0664a1",
+    "cross-project:current_state:f8dcdd4cf47301d8",
+    "cross-project:current_state:750a91221b1c4a4c",
+    "cross-project:current_state:c8626a403847a437",
+    "cross-project:current_state:4f6415bcdeec2098",
+    "cross-project:current_state:1aac56cd85693e2c",
+    "cross-project:current_state:03752feed15013e4",
+    "cross-project:current_state:2c5ad1a5040ed158",
+    "cross-project:current_state:66fb79dd3d510ea2",
+    "cross-project:current_state:a4dd6a66d257ff17",
+    "cross-project:current_state:47c217a935f5e3a5"
+  ],
+  "page_id": "projects/cross-project/current-state",
+  "page_type": "bucket_page",
+  "rendered_page_metadata": {
+    "claim_count": 7,
+    "conflict_count": 0,
+    "related_domains": [
+      "ai-scientist",
+      "ai-trader",
+      "open-brain"
+    ],
+    "related_pages": [
+      {
+        "page_key": "index",
+        "title": "Cross-Project",
+        "wikilink": "[[projects/cross-project/index|Cross-Project]]"
+      },
+      {
+        "page_key": "communication-preferences",
+        "title": "Cross-Project - Communication Preferences",
+        "wikilink": "[[projects/cross-project/communication-preferences|Cross-Project - Communication Preferences]]"
+      },
+      {
+        "page_key": "workflow-rules",
+        "title": "Cross-Project - Workflow Rules",
+        "wikilink": "[[projects/cross-project/workflow-rules|Cross-Project - Workflow Rules]]"
+      },
+      {
+        "page_key": "architecture",
+        "title": "Cross-Project - Architecture",
+        "wikilink": "[[projects/cross-project/architecture|Cross-Project - Architecture]]"
+      },
+      {
+        "page_key": "code-map",
+        "title": "Cross-Project - Code Map",
+        "wikilink": "[[projects/cross-project/code-map|Cross-Project - Code Map]]"
+      },
+      {
+        "page_key": "tasks",
+        "title": "Cross-Project - Tasks",
+        "wikilink": "[[projects/cross-project/tasks|Cross-Project - Tasks]]"
+      },
+      {
+        "page_key": "outcomes",
+        "title": "Cross-Project - Outcomes",
+        "wikilink": "[[projects/cross-project/outcomes|Cross-Project - Outcomes]]"
+      },
+      {
+        "page_key": "failures",
+        "title": "Cross-Project - Failures",
+        "wikilink": "[[projects/cross-project/failures|Cross-Project - Failures]]"
+      },
+      {
+        "page_key": "decisions",
+        "title": "Cross-Project - Decisions",
+        "wikilink": "[[projects/cross-project/decisions|Cross-Project - Decisions]]"
+      },
+      {
+        "page_key": "next-steps",
+        "title": "Cross-Project - Next Steps",
+        "wikilink": "[[projects/cross-project/next-steps|Cross-Project - Next Steps]]"
+      },
+      {
+        "page_key": "open-questions",
+        "title": "Cross-Project - Open Questions",
+        "wikilink": "[[projects/cross-project/open-questions|Cross-Project - Open Questions]]"
+      }
+    ],
+    "relative_page_path": "projects/cross-project/current-state.md",
+    "source_count": 2,
+    "title": "Cross-Project - Current State"
+  },
+  "renderer": "obsidian_markdown",
+  "synthesized_claims": [
+    {
+      "claim_id": "claim-1",
+      "confidence": "strong",
+      "latent_type": "current_state_synthesis",
+      "provenance_refs": [
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:1334",
+          "end_line_no": 1334,
+          "end_timestamp": "2026-04-13T01:58:10.251Z",
+          "rule_ids": [
+            "current_state.explicit"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:302",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:1334",
+          "start_line_no": 1334,
+          "start_timestamp": "2026-04-13T01:58:10.251Z",
+          "statement": "Current state synthesis"
+        },
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:1339",
+          "end_line_no": 1339,
+          "end_timestamp": "2026-04-13T02:05:56.026Z",
+          "rule_ids": [
+            "current_state.explicit"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:303",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:1335",
+          "start_line_no": 1335,
+          "start_timestamp": "2026-04-13T01:58:10.252Z",
+          "statement": "Current state synthesis"
+        }
+      ],
+      "section_id": "summary",
+      "supporting_item_ids": [
+        "cross-project:current_state:1ede86080333232e"
+      ],
+      "text": "The current state of the project includes various aspects such as what is built, what is sample-only, and what is pending."
+    },
+    {
+      "claim_id": "claim-2",
+      "confidence": "strong",
+      "latent_type": "current_state_synthesis",
+      "provenance_refs": [
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:762",
+          "end_line_no": 762,
+          "end_timestamp": "2026-04-13T00:11:26.728Z",
+          "rule_ids": [
+            "current_state.explicit"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:171",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:762",
+          "start_line_no": 762,
+          "start_timestamp": "2026-04-13T00:11:26.728Z",
+          "statement": "Current repo state: the Phase 3 code is in place, but there are no persisted `normalized/` or `segmented/` artifacts checked into this repo right now, so I\u2019m assuming we should keep the same sample-first workflow for Phase 4."
+        },
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:766",
+          "end_line_no": 766,
+          "end_timestamp": "2026-04-13T00:22:52.289Z",
+          "rule_ids": [
+            "current_state.explicit"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:172",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:763",
+          "start_line_no": 763,
+          "start_timestamp": "2026-04-13T00:11:26.729Z",
+          "statement": "Current repo state: the Phase 3 code is in place, but there are no persisted `normalized/` or `segmented/` artifacts checked into this repo right now, so I\u2019m assuming we should keep the same sample-first workflow for Phase 4."
+        }
+      ],
+      "section_id": "summary",
+      "supporting_item_ids": [
+        "cross-project:current_state:d9db2873945289d7"
+      ],
+      "text": "The Phase 3 code is in place, but there are no persisted artifacts checked into the repo right now, indicating a sample-first workflow for Phase 4."
+    },
+    {
+      "claim_id": "claim-3",
+      "confidence": "strong",
+      "latent_type": "current_state_synthesis",
+      "provenance_refs": [
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:494",
+          "end_line_no": 494,
+          "end_timestamp": "2026-04-12T23:31:20.906Z",
+          "rule_ids": [
+            "current_state.explicit"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:116",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:489",
+          "start_line_no": 489,
+          "start_timestamp": "2026-04-12T23:29:24.670Z",
+          "statement": "The external Codex session source root is also currently on `C:`:"
+        }
+      ],
+      "section_id": "summary",
+      "supporting_item_ids": [
+        "cross-project:current_state:1fb76e4aa1bf689a"
+      ],
+      "text": "The external Codex session source root is currently on `C:`."
+    },
+    {
+      "claim_id": "claim-4",
+      "confidence": "strong",
+      "latent_type": "current_state_synthesis",
+      "provenance_refs": [
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:49264",
+          "end_line_no": 49264,
+          "end_timestamp": "2026-03-12T16:16:30.669Z",
+          "rule_ids": [
+            "current_state.explicit"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:6510",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:49264",
+          "start_line_no": 49264,
+          "start_timestamp": "2026-03-12T16:16:30.669Z",
+          "statement": "Here are representative evidence rows where benchmark cases are currently failing to get authored successfully, with why the current intelligence is likely missing them."
+        }
+      ],
+      "section_id": "summary",
+      "supporting_item_ids": [
+        "cross-project:current_state:fe35f2d9d3ee4d81"
+      ],
+      "text": "There are representative evidence rows where benchmark cases are currently failing to get authored successfully, indicating missing intelligence."
+    },
+    {
+      "claim_id": "claim-5",
+      "confidence": "strong",
+      "latent_type": "current_state_synthesis",
+      "provenance_refs": [
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:1049",
+          "end_line_no": 1049,
+          "end_timestamp": "2026-04-13T01:09:51.844Z",
+          "rule_ids": [
+            "current_state.explicit"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:235",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:1038",
+          "start_line_no": 1038,
+          "start_timestamp": "2026-04-13T01:09:51.132Z",
+          "statement": "I\u2019m checking the current state/CLI patterns first so the extractor follows the same atomic and incremental workflow as the earlier phases."
+        }
+      ],
+      "section_id": "current_state",
+      "supporting_item_ids": [
+        "cross-project:current_state:c69edf391935a647"
+      ],
+      "text": "Current state includes checking CLI patterns to ensure an atomic and incremental workflow as in earlier phases."
+    },
+    {
+      "claim_id": "claim-6",
+      "confidence": "strong",
+      "latent_type": "current_state_synthesis",
+      "provenance_refs": [
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:52931",
+          "end_line_no": 52931,
+          "end_timestamp": "2026-03-13T00:10:17.910Z",
+          "rule_ids": [
+            "current_state.explicit"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:7225",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:52926",
+          "start_line_no": 52926,
+          "start_timestamp": "2026-03-13T00:04:15.315Z",
+          "statement": "- \u201csupported by taxonomy scan\u201d is not the same as \u201cgood benchmark anchor right now\u201d"
+        }
+      ],
+      "section_id": "current_state",
+      "supporting_item_ids": [
+        "cross-project:current_state:5bb4a0a1286190a9"
+      ],
+      "text": "The current state indicates that both supported by taxonomy scan and good benchmark anchor are not the same."
+    },
+    {
+      "claim_id": "claim-7",
+      "confidence": "strong",
+      "latent_type": "current_state_synthesis",
+      "provenance_refs": [
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:62581",
+          "end_line_no": 62581,
+          "end_timestamp": "2026-03-13T22:39:18.690Z",
+          "rule_ids": [
+            "current_state.explicit"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:9048",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:62575",
+          "start_line_no": 62575,
+          "start_timestamp": "2026-03-13T22:39:04.516Z",
+          "statement": "I\u2019m resuming the whole-corpus bottleneck loop from the current state."
+        }
+      ],
+      "section_id": "current_state",
+      "supporting_item_ids": [
+        "cross-project:current_state:7f27b54a7fca3460"
+      ],
+      "text": "The current state is being resumed from the whole-corpus bottleneck loop."
+    }
+  ],
+  "versions": {
+    "page_config_version": 2,
+    "renderer_version": 2,
+    "synthesis_prompt_version": 2,
+    "synthesis_schema_version": 1,
+    "wiki_schema_version": 2
+  }
+}

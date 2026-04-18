@@ -1,0 +1,331 @@
+{
+  "schema_version": 1,
+  "extraction_rules_version": 4,
+  "item_taxonomy": {
+    "durable": [
+      "communication_preference",
+      "do_rule",
+      "dont_rule",
+      "workflow_rule",
+      "decision",
+      "architecture_note",
+      "code_location"
+    ],
+    "temporal": [
+      "current_state",
+      "task_request",
+      "outcome",
+      "failure",
+      "next_step",
+      "open_question"
+    ]
+  },
+  "domain_resolution_defaults": {
+    "global_default_item_types": [
+      "communication_preference",
+      "do_rule",
+      "dont_rule",
+      "workflow_rule"
+    ],
+    "project_default_item_types": [
+      "decision",
+      "architecture_note",
+      "code_location",
+      "current_state",
+      "task_request",
+      "outcome",
+      "failure",
+      "next_step",
+      "open_question"
+    ]
+  },
+  "target_page_keys": {
+    "communication_preference": "communication-preferences",
+    "do_rule": "workflow-rules",
+    "dont_rule": "workflow-rules",
+    "workflow_rule": "workflow-rules",
+    "decision": "decisions",
+    "architecture_note": "architecture",
+    "code_location": "code-map",
+    "current_state": "current-state",
+    "task_request": "tasks",
+    "outcome": "outcomes",
+    "failure": "failures",
+    "next_step": "next-steps",
+    "open_question": "open-questions"
+  },
+  "imperative_verbs": [
+    "update",
+    "implement",
+    "add",
+    "fix",
+    "investigate",
+    "review",
+    "optimize",
+    "create",
+    "connect",
+    "refactor",
+    "document",
+    "build"
+  ],
+  "replacement_cues": [
+    "now",
+    "instead",
+    "replace",
+    "replaced",
+    "resolved",
+    "completed",
+    "done",
+    "closed"
+  ],
+  "code_location_indicators": [
+    "file",
+    "path",
+    "module",
+    "class",
+    "function",
+    "located"
+  ],
+  "durability": {
+    "minimum_supporting_sessions": 2,
+    "minimum_supporting_days": 2,
+    "stable_policy_terms": [
+      "always",
+      "never",
+      "do not",
+      "don't",
+      "must",
+      "should always",
+      "should never",
+      "make sure",
+      "real data always wins",
+      "prefer",
+      "be concise"
+    ],
+    "explicit_preference_terms": [
+      "prefer",
+      "preference",
+      "communication preference",
+      "communication preferences",
+      "response style",
+      "interaction style",
+      "be concise",
+      "concise answers"
+    ],
+    "global_scope_terms": [
+      "across projects",
+      "global",
+      "in this workspace",
+      "for all projects"
+    ],
+    "one_off_imperative_terms": [
+      "please",
+      "please do that",
+      "please fix",
+      "implement this plan",
+      "restart",
+      "hard refresh",
+      "can you",
+      "give me"
+    ],
+    "progress_status_terms": [
+      "i m doing",
+      "i am doing",
+      "i m fixing",
+      "i am fixing",
+      "i ll",
+      "i will",
+      "next i ll",
+      "next i will"
+    ],
+    "runtime_local_terms": [
+      "localhost",
+      "127.0.0.1",
+      "approval_ui",
+      "ctrl f5",
+      "ctrl+f5",
+      "browser refresh",
+      "service restart",
+      "power shell"
+    ],
+    "schema_scaffold_terms": [
+        "please implement this plan",
+        "response style",
+        "interaction style",
+        "communication preferences",
+        "workflow rules",
+        "agent interaction style",
+      "schema version",
+      "prompt version",
+      "rendered page",
+      "page id",
+      "source ids",
+      "state file",
+        "config path",
+        "test suite",
+        "local suite",
+        "typecheck",
+        "explicit for direct phrases"
+      ],
+    "schema_label_terms": [
+        "response style",
+        "interaction style",
+        "communication preference",
+        "communication preferences",
+      "agent interaction style",
+      "workflow rule",
+      "workflow rules"
+    ]
+  },
+  "rules": [
+    {
+      "id": "communication_preference.explicit",
+      "item_type": "communication_preference",
+      "terms": [
+        "communication preference",
+        "communication preferences",
+        "interaction style",
+        "response style",
+        "prefer concise",
+        "be concise"
+      ],
+      "confidence": "explicit"
+    },
+    {
+      "id": "workflow_rule.explicit",
+      "item_type": "workflow_rule",
+      "terms": [
+        "workflow rule",
+        "workflow rules"
+      ],
+      "confidence": "explicit"
+    },
+    {
+      "id": "do_rule.explicit",
+      "item_type": "do_rule",
+      "terms": [
+        "always ",
+        "make sure"
+      ],
+      "confidence": "strong"
+    },
+    {
+      "id": "dont_rule.explicit",
+      "item_type": "dont_rule",
+      "terms": [
+        "do not ",
+        "don't ",
+        "never "
+      ],
+      "confidence": "strong"
+    },
+    {
+      "id": "decision.explicit",
+      "item_type": "decision",
+      "terms": [
+        "we decided",
+        "decided to",
+        "decision:"
+      ],
+      "confidence": "explicit"
+    },
+    {
+      "id": "architecture_note.explicit",
+      "item_type": "architecture_note",
+      "terms": [
+        "architecture",
+        "pipeline",
+        "component",
+        "system design",
+        "module layout"
+      ],
+      "confidence": "strong"
+    },
+    {
+      "id": "code_location.explicit",
+      "item_type": "code_location",
+      "terms": [
+        ".py",
+        "module",
+        "path",
+        "file"
+      ],
+      "confidence": "explicit"
+    },
+    {
+      "id": "current_state.explicit",
+      "item_type": "current_state",
+      "terms": [
+        "current state",
+        "currently",
+        "right now"
+      ],
+      "confidence": "strong"
+    },
+    {
+      "id": "task_request.action",
+      "item_type": "task_request",
+      "terms": [
+        "update",
+        "implement",
+        "add",
+        "fix",
+        "investigate",
+        "review",
+        "optimize",
+        "create",
+        "connect"
+      ],
+      "confidence": "inferred"
+    },
+    {
+      "id": "outcome.explicit",
+      "item_type": "outcome",
+      "terms": [
+        "completed",
+        "done",
+        "finished",
+        "resolved",
+        "successfully"
+      ],
+      "confidence": "strong"
+    },
+    {
+      "id": "failure.explicit",
+      "item_type": "failure",
+      "terms": [
+        "failed",
+        "failure",
+        "error",
+        "bug",
+        "issue",
+        "broken"
+      ],
+      "confidence": "strong"
+    },
+    {
+      "id": "next_step.explicit",
+      "item_type": "next_step",
+      "terms": [
+        "next step",
+        "next steps",
+        "follow up",
+        "follow-up",
+        "then "
+      ],
+      "confidence": "strong"
+    },
+    {
+      "id": "open_question.explicit",
+      "item_type": "open_question",
+      "terms": [
+        "?",
+        "should ",
+        "how ",
+        "what ",
+        "why "
+      ],
+      "confidence": "strong"
+    }
+  ]
+}

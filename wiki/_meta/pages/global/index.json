@@ -1,0 +1,1447 @@
+{
+  "bucket": "index",
+  "citations": [
+    {
+      "citation_id": "claim-1",
+      "item_keys": [
+        "global:communication_preference:d2c4a620d03e8957"
+      ],
+      "kind": "synthesized_claim",
+      "label": "claim-1",
+      "provenance_refs": [
+        {
+          "end_event_id": "019ca705-c215-7221-8e6a-d28b922add82:5",
+          "end_line_no": 5,
+          "end_timestamp": "2026-03-01T01:31:38.636Z",
+          "rule_ids": [
+            "communication_preference.explicit"
+          ],
+          "segment_id": "019ca705-c215-7221-8e6a-d28b922add82:2",
+          "session_id": "019ca705-c215-7221-8e6a-d28b922add82",
+          "source_id": "019ca705-c215-7221-8e6a-d28b922add82",
+          "start_event_id": "019ca705-c215-7221-8e6a-d28b922add82:5",
+          "start_line_no": 5,
+          "start_timestamp": "2026-03-01T01:31:38.636Z",
+          "statement": "Prefer concise highlights with links to full reports."
+        },
+        {
+          "end_event_id": "019ca705-c215-7221-8e6a-d28b922add82:9",
+          "end_line_no": 9,
+          "end_timestamp": "2026-03-01T01:31:39.552Z",
+          "rule_ids": [
+            "communication_preference.explicit"
+          ],
+          "segment_id": "019ca705-c215-7221-8e6a-d28b922add82:3",
+          "session_id": "019ca705-c215-7221-8e6a-d28b922add82",
+          "source_id": "019ca705-c215-7221-8e6a-d28b922add82",
+          "start_event_id": "019ca705-c215-7221-8e6a-d28b922add82:6",
+          "start_line_no": 6,
+          "start_timestamp": "2026-03-01T01:31:38.636Z",
+          "statement": "Prefer concise highlights with links to full reports."
+        },
+        {
+          "end_event_id": "019ca705-c215-7221-8e6a-d28b922add82:54",
+          "end_line_no": 54,
+          "end_timestamp": "2026-03-01T02:36:55.290Z",
+          "rule_ids": [
+            "communication_preference.explicit"
+          ],
+          "segment_id": "019ca705-c215-7221-8e6a-d28b922add82:9",
+          "session_id": "019ca705-c215-7221-8e6a-d28b922add82",
+          "source_id": "019ca705-c215-7221-8e6a-d28b922add82",
+          "start_event_id": "019ca705-c215-7221-8e6a-d28b922add82:54",
+          "start_line_no": 54,
+          "start_timestamp": "2026-03-01T02:36:55.290Z",
+          "statement": "Prefer concise highlights with links to full reports."
+        }
+      ]
+    },
+    {
+      "citation_id": "claim-2",
+      "item_keys": [
+        "global:communication_preference:e895b771a9bdcc83"
+      ],
+      "kind": "synthesized_claim",
+      "label": "claim-2",
+      "provenance_refs": [
+        {
+          "end_event_id": "019ca705-c215-7221-8e6a-d28b922add82:5",
+          "end_line_no": 5,
+          "end_timestamp": "2026-03-01T01:31:38.636Z",
+          "rule_ids": [
+            "communication_preference.explicit"
+          ],
+          "segment_id": "019ca705-c215-7221-8e6a-d28b922add82:2",
+          "session_id": "019ca705-c215-7221-8e6a-d28b922add82",
+          "source_id": "019ca705-c215-7221-8e6a-d28b922add82",
+          "start_event_id": "019ca705-c215-7221-8e6a-d28b922add82:5",
+          "start_line_no": 5,
+          "start_timestamp": "2026-03-01T01:31:38.636Z",
+          "statement": "Prefer concise outputs with links/paths to full artifacts."
+        },
+        {
+          "end_event_id": "019ca705-c215-7221-8e6a-d28b922add82:9",
+          "end_line_no": 9,
+          "end_timestamp": "2026-03-01T01:31:39.552Z",
+          "rule_ids": [
+            "communication_preference.explicit"
+          ],
+          "segment_id": "019ca705-c215-7221-8e6a-d28b922add82:3",
+          "session_id": "019ca705-c215-7221-8e6a-d28b922add82",
+          "source_id": "019ca705-c215-7221-8e6a-d28b922add82",
+          "start_event_id": "019ca705-c215-7221-8e6a-d28b922add82:6",
+          "start_line_no": 6,
+          "start_timestamp": "2026-03-01T01:31:38.636Z",
+          "statement": "Prefer concise outputs with links/paths to full artifacts."
+        },
+        {
+          "end_event_id": "019ca705-c215-7221-8e6a-d28b922add82:54",
+          "end_line_no": 54,
+          "end_timestamp": "2026-03-01T02:36:55.290Z",
+          "rule_ids": [
+            "communication_preference.explicit"
+          ],
+          "segment_id": "019ca705-c215-7221-8e6a-d28b922add82:9",
+          "session_id": "019ca705-c215-7221-8e6a-d28b922add82",
+          "source_id": "019ca705-c215-7221-8e6a-d28b922add82",
+          "start_event_id": "019ca705-c215-7221-8e6a-d28b922add82:54",
+          "start_line_no": 54,
+          "start_timestamp": "2026-03-01T02:36:55.290Z",
+          "statement": "Prefer concise outputs with links/paths to full artifacts."
+        }
+      ]
+    },
+    {
+      "citation_id": "claim-3",
+      "item_keys": [
+        "global:communication_preference:1438a4b816402b8e"
+      ],
+      "kind": "synthesized_claim",
+      "label": "claim-3",
+      "provenance_refs": [
+        {
+          "end_event_id": "019ca705-c215-7221-8e6a-d28b922add82:5",
+          "end_line_no": 5,
+          "end_timestamp": "2026-03-01T01:31:38.636Z",
+          "rule_ids": [
+            "communication_preference.explicit"
+          ],
+          "segment_id": "019ca705-c215-7221-8e6a-d28b922add82:2",
+          "session_id": "019ca705-c215-7221-8e6a-d28b922add82",
+          "source_id": "019ca705-c215-7221-8e6a-d28b922add82",
+          "start_event_id": "019ca705-c215-7221-8e6a-d28b922add82:5",
+          "start_line_no": 5,
+          "start_timestamp": "2026-03-01T01:31:38.636Z",
+          "statement": "Output should be concise, explicit, and directly usable inside a spec pack."
+        },
+        {
+          "end_event_id": "019ca705-c215-7221-8e6a-d28b922add82:9",
+          "end_line_no": 9,
+          "end_timestamp": "2026-03-01T01:31:39.552Z",
+          "rule_ids": [
+            "communication_preference.explicit"
+          ],
+          "segment_id": "019ca705-c215-7221-8e6a-d28b922add82:3",
+          "session_id": "019ca705-c215-7221-8e6a-d28b922add82",
+          "source_id": "019ca705-c215-7221-8e6a-d28b922add82",
+          "start_event_id": "019ca705-c215-7221-8e6a-d28b922add82:6",
+          "start_line_no": 6,
+          "start_timestamp": "2026-03-01T01:31:38.636Z",
+          "statement": "Output should be concise, explicit, and directly usable inside a spec pack."
+        },
+        {
+          "end_event_id": "019ca705-c215-7221-8e6a-d28b922add82:54",
+          "end_line_no": 54,
+          "end_timestamp": "2026-03-01T02:36:55.290Z",
+          "rule_ids": [
+            "communication_preference.explicit"
+          ],
+          "segment_id": "019ca705-c215-7221-8e6a-d28b922add82:9",
+          "session_id": "019ca705-c215-7221-8e6a-d28b922add82",
+          "source_id": "019ca705-c215-7221-8e6a-d28b922add82",
+          "start_event_id": "019ca705-c215-7221-8e6a-d28b922add82:54",
+          "start_line_no": 54,
+          "start_timestamp": "2026-03-01T02:36:55.290Z",
+          "statement": "Output should be concise, explicit, and directly usable inside a spec pack."
+        }
+      ]
+    },
+    {
+      "citation_id": "claim-4",
+      "item_keys": [
+        "global:dont_rule:ab8645828d646d41"
+      ],
+      "kind": "synthesized_claim",
+      "label": "claim-4",
+      "provenance_refs": [
+        {
+          "end_event_id": "019c687b-3d0d-71c0-8929-9128cbf24060:6",
+          "end_line_no": 6,
+          "end_timestamp": "2026-02-16T22:05:56.927Z",
+          "rule_ids": [
+            "dont_rule.explicit"
+          ],
+          "segment_id": "019c687b-3d0d-71c0-8929-9128cbf24060:2",
+          "session_id": "019c687b-3d0d-71c0-8929-9128cbf24060",
+          "source_id": "019c687b-3d0d-71c0-8929-9128cbf24060",
+          "start_event_id": "019c687b-3d0d-71c0-8929-9128cbf24060:3",
+          "start_line_no": 3,
+          "start_timestamp": "2026-02-16T22:05:56.927Z",
+          "statement": "Do not carry skills across turns unless re-mentioned."
+        },
+        {
+          "end_event_id": "019c9ca4-ac1c-76e2-b883-017d68d982a1:4",
+          "end_line_no": 4,
+          "end_timestamp": "2026-02-27T01:09:31.568Z",
+          "rule_ids": [
+            "dont_rule.explicit"
+          ],
+          "segment_id": "019c9ca4-ac1c-76e2-b883-017d68d982a1:1",
+          "session_id": "019c9ca4-ac1c-76e2-b883-017d68d982a1",
+          "source_id": "019c9ca4-ac1c-76e2-b883-017d68d982a1",
+          "start_event_id": "019c9ca4-ac1c-76e2-b883-017d68d982a1:2",
+          "start_line_no": 2,
+          "start_timestamp": "2026-02-27T01:09:31.567Z",
+          "statement": "Do not carry skills across turns unless re-mentioned."
+        },
+        {
+          "end_event_id": "019c9ca4-ac1c-76e2-b883-017d68d982a1:18178",
+          "end_line_no": 18178,
+          "end_timestamp": "2026-03-02T16:42:41.247Z",
+          "rule_ids": [
+            "dont_rule.explicit"
+          ],
+          "segment_id": "019c9ca4-ac1c-76e2-b883-017d68d982a1:2357",
+          "session_id": "019c9ca4-ac1c-76e2-b883-017d68d982a1",
+          "source_id": "019c9ca4-ac1c-76e2-b883-017d68d982a1",
+          "start_event_id": "019c9ca4-ac1c-76e2-b883-017d68d982a1:18171",
+          "start_line_no": 18171,
+          "start_timestamp": "2026-03-02T16:41:51.791Z",
+          "statement": "Do not carry skills across turns unless re-mentioned."
+        }
+      ]
+    },
+    {
+      "citation_id": "claim-5",
+      "item_keys": [
+        "global:communication_preference:d2c4a620d03e8957"
+      ],
+      "kind": "synthesized_claim",
+      "label": "claim-5",
+      "provenance_refs": [
+        {
+          "end_event_id": "019ca705-c215-7221-8e6a-d28b922add82:5",
+          "end_line_no": 5,
+          "end_timestamp": "2026-03-01T01:31:38.636Z",
+          "rule_ids": [
+            "communication_preference.explicit"
+          ],
+          "segment_id": "019ca705-c215-7221-8e6a-d28b922add82:2",
+          "session_id": "019ca705-c215-7221-8e6a-d28b922add82",
+          "source_id": "019ca705-c215-7221-8e6a-d28b922add82",
+          "start_event_id": "019ca705-c215-7221-8e6a-d28b922add82:5",
+          "start_line_no": 5,
+          "start_timestamp": "2026-03-01T01:31:38.636Z",
+          "statement": "Prefer concise highlights with links to full reports."
+        },
+        {
+          "end_event_id": "019ca705-c215-7221-8e6a-d28b922add82:9",
+          "end_line_no": 9,
+          "end_timestamp": "2026-03-01T01:31:39.552Z",
+          "rule_ids": [
+            "communication_preference.explicit"
+          ],
+          "segment_id": "019ca705-c215-7221-8e6a-d28b922add82:3",
+          "session_id": "019ca705-c215-7221-8e6a-d28b922add82",
+          "source_id": "019ca705-c215-7221-8e6a-d28b922add82",
+          "start_event_id": "019ca705-c215-7221-8e6a-d28b922add82:6",
+          "start_line_no": 6,
+          "start_timestamp": "2026-03-01T01:31:38.636Z",
+          "statement": "Prefer concise highlights with links to full reports."
+        },
+        {
+          "end_event_id": "019ca705-c215-7221-8e6a-d28b922add82:54",
+          "end_line_no": 54,
+          "end_timestamp": "2026-03-01T02:36:55.290Z",
+          "rule_ids": [
+            "communication_preference.explicit"
+          ],
+          "segment_id": "019ca705-c215-7221-8e6a-d28b922add82:9",
+          "session_id": "019ca705-c215-7221-8e6a-d28b922add82",
+          "source_id": "019ca705-c215-7221-8e6a-d28b922add82",
+          "start_event_id": "019ca705-c215-7221-8e6a-d28b922add82:54",
+          "start_line_no": 54,
+          "start_timestamp": "2026-03-01T02:36:55.290Z",
+          "statement": "Prefer concise highlights with links to full reports."
+        }
+      ]
+    },
+    {
+      "citation_id": "claim-6",
+      "item_keys": [
+        "global:communication_preference:e895b771a9bdcc83"
+      ],
+      "kind": "synthesized_claim",
+      "label": "claim-6",
+      "provenance_refs": [
+        {
+          "end_event_id": "019ca705-c215-7221-8e6a-d28b922add82:5",
+          "end_line_no": 5,
+          "end_timestamp": "2026-03-01T01:31:38.636Z",
+          "rule_ids": [
+            "communication_preference.explicit"
+          ],
+          "segment_id": "019ca705-c215-7221-8e6a-d28b922add82:2",
+          "session_id": "019ca705-c215-7221-8e6a-d28b922add82",
+          "source_id": "019ca705-c215-7221-8e6a-d28b922add82",
+          "start_event_id": "019ca705-c215-7221-8e6a-d28b922add82:5",
+          "start_line_no": 5,
+          "start_timestamp": "2026-03-01T01:31:38.636Z",
+          "statement": "Prefer concise outputs with links/paths to full artifacts."
+        },
+        {
+          "end_event_id": "019ca705-c215-7221-8e6a-d28b922add82:9",
+          "end_line_no": 9,
+          "end_timestamp": "2026-03-01T01:31:39.552Z",
+          "rule_ids": [
+            "communication_preference.explicit"
+          ],
+          "segment_id": "019ca705-c215-7221-8e6a-d28b922add82:3",
+          "session_id": "019ca705-c215-7221-8e6a-d28b922add82",
+          "source_id": "019ca705-c215-7221-8e6a-d28b922add82",
+          "start_event_id": "019ca705-c215-7221-8e6a-d28b922add82:6",
+          "start_line_no": 6,
+          "start_timestamp": "2026-03-01T01:31:38.636Z",
+          "statement": "Prefer concise outputs with links/paths to full artifacts."
+        },
+        {
+          "end_event_id": "019ca705-c215-7221-8e6a-d28b922add82:54",
+          "end_line_no": 54,
+          "end_timestamp": "2026-03-01T02:36:55.290Z",
+          "rule_ids": [
+            "communication_preference.explicit"
+          ],
+          "segment_id": "019ca705-c215-7221-8e6a-d28b922add82:9",
+          "session_id": "019ca705-c215-7221-8e6a-d28b922add82",
+          "source_id": "019ca705-c215-7221-8e6a-d28b922add82",
+          "start_event_id": "019ca705-c215-7221-8e6a-d28b922add82:54",
+          "start_line_no": 54,
+          "start_timestamp": "2026-03-01T02:36:55.290Z",
+          "statement": "Prefer concise outputs with links/paths to full artifacts."
+        }
+      ]
+    },
+    {
+      "citation_id": "claim-7",
+      "item_keys": [
+        "global:communication_preference:1438a4b816402b8e"
+      ],
+      "kind": "synthesized_claim",
+      "label": "claim-7",
+      "provenance_refs": [
+        {
+          "end_event_id": "019ca705-c215-7221-8e6a-d28b922add82:5",
+          "end_line_no": 5,
+          "end_timestamp": "2026-03-01T01:31:38.636Z",
+          "rule_ids": [
+            "communication_preference.explicit"
+          ],
+          "segment_id": "019ca705-c215-7221-8e6a-d28b922add82:2",
+          "session_id": "019ca705-c215-7221-8e6a-d28b922add82",
+          "source_id": "019ca705-c215-7221-8e6a-d28b922add82",
+          "start_event_id": "019ca705-c215-7221-8e6a-d28b922add82:5",
+          "start_line_no": 5,
+          "start_timestamp": "2026-03-01T01:31:38.636Z",
+          "statement": "Output should be concise, explicit, and directly usable inside a spec pack."
+        },
+        {
+          "end_event_id": "019ca705-c215-7221-8e6a-d28b922add82:9",
+          "end_line_no": 9,
+          "end_timestamp": "2026-03-01T01:31:39.552Z",
+          "rule_ids": [
+            "communication_preference.explicit"
+          ],
+          "segment_id": "019ca705-c215-7221-8e6a-d28b922add82:3",
+          "session_id": "019ca705-c215-7221-8e6a-d28b922add82",
+          "source_id": "019ca705-c215-7221-8e6a-d28b922add82",
+          "start_event_id": "019ca705-c215-7221-8e6a-d28b922add82:6",
+          "start_line_no": 6,
+          "start_timestamp": "2026-03-01T01:31:38.636Z",
+          "statement": "Output should be concise, explicit, and directly usable inside a spec pack."
+        },
+        {
+          "end_event_id": "019ca705-c215-7221-8e6a-d28b922add82:54",
+          "end_line_no": 54,
+          "end_timestamp": "2026-03-01T02:36:55.290Z",
+          "rule_ids": [
+            "communication_preference.explicit"
+          ],
+          "segment_id": "019ca705-c215-7221-8e6a-d28b922add82:9",
+          "session_id": "019ca705-c215-7221-8e6a-d28b922add82",
+          "source_id": "019ca705-c215-7221-8e6a-d28b922add82",
+          "start_event_id": "019ca705-c215-7221-8e6a-d28b922add82:54",
+          "start_line_no": 54,
+          "start_timestamp": "2026-03-01T02:36:55.290Z",
+          "statement": "Output should be concise, explicit, and directly usable inside a spec pack."
+        }
+      ]
+    },
+    {
+      "citation_id": "claim-8",
+      "item_keys": [
+        "global:dont_rule:ab8645828d646d41"
+      ],
+      "kind": "synthesized_claim",
+      "label": "claim-8",
+      "provenance_refs": [
+        {
+          "end_event_id": "019c687b-3d0d-71c0-8929-9128cbf24060:6",
+          "end_line_no": 6,
+          "end_timestamp": "2026-02-16T22:05:56.927Z",
+          "rule_ids": [
+            "dont_rule.explicit"
+          ],
+          "segment_id": "019c687b-3d0d-71c0-8929-9128cbf24060:2",
+          "session_id": "019c687b-3d0d-71c0-8929-9128cbf24060",
+          "source_id": "019c687b-3d0d-71c0-8929-9128cbf24060",
+          "start_event_id": "019c687b-3d0d-71c0-8929-9128cbf24060:3",
+          "start_line_no": 3,
+          "start_timestamp": "2026-02-16T22:05:56.927Z",
+          "statement": "Do not carry skills across turns unless re-mentioned."
+        },
+        {
+          "end_event_id": "019c9ca4-ac1c-76e2-b883-017d68d982a1:4",
+          "end_line_no": 4,
+          "end_timestamp": "2026-02-27T01:09:31.568Z",
+          "rule_ids": [
+            "dont_rule.explicit"
+          ],
+          "segment_id": "019c9ca4-ac1c-76e2-b883-017d68d982a1:1",
+          "session_id": "019c9ca4-ac1c-76e2-b883-017d68d982a1",
+          "source_id": "019c9ca4-ac1c-76e2-b883-017d68d982a1",
+          "start_event_id": "019c9ca4-ac1c-76e2-b883-017d68d982a1:2",
+          "start_line_no": 2,
+          "start_timestamp": "2026-02-27T01:09:31.567Z",
+          "statement": "Do not carry skills across turns unless re-mentioned."
+        },
+        {
+          "end_event_id": "019c9ca4-ac1c-76e2-b883-017d68d982a1:18178",
+          "end_line_no": 18178,
+          "end_timestamp": "2026-03-02T16:42:41.247Z",
+          "rule_ids": [
+            "dont_rule.explicit"
+          ],
+          "segment_id": "019c9ca4-ac1c-76e2-b883-017d68d982a1:2357",
+          "session_id": "019c9ca4-ac1c-76e2-b883-017d68d982a1",
+          "source_id": "019c9ca4-ac1c-76e2-b883-017d68d982a1",
+          "start_event_id": "019c9ca4-ac1c-76e2-b883-017d68d982a1:18171",
+          "start_line_no": 18171,
+          "start_timestamp": "2026-03-02T16:41:51.791Z",
+          "statement": "Do not carry skills across turns unless re-mentioned."
+        }
+      ]
+    },
+    {
+      "citation_id": "claim-9",
+      "item_keys": [
+        "global:dont_rule:80f0f574c6788cee"
+      ],
+      "kind": "synthesized_claim",
+      "label": "claim-9",
+      "provenance_refs": [
+        {
+          "end_event_id": "019c687b-3d0d-71c0-8929-9128cbf24060:6",
+          "end_line_no": 6,
+          "end_timestamp": "2026-02-16T22:05:56.927Z",
+          "rule_ids": [
+            "dont_rule.explicit"
+          ],
+          "segment_id": "019c687b-3d0d-71c0-8929-9128cbf24060:2",
+          "session_id": "019c687b-3d0d-71c0-8929-9128cbf24060",
+          "source_id": "019c687b-3d0d-71c0-8929-9128cbf24060",
+          "start_event_id": "019c687b-3d0d-71c0-8929-9128cbf24060:3",
+          "start_line_no": 3,
+          "start_timestamp": "2026-02-16T22:05:56.927Z",
+          "statement": "don't bulk-load everything."
+        },
+        {
+          "end_event_id": "019c9ca4-ac1c-76e2-b883-017d68d982a1:4",
+          "end_line_no": 4,
+          "end_timestamp": "2026-02-27T01:09:31.568Z",
+          "rule_ids": [
+            "dont_rule.explicit"
+          ],
+          "segment_id": "019c9ca4-ac1c-76e2-b883-017d68d982a1:1",
+          "session_id": "019c9ca4-ac1c-76e2-b883-017d68d982a1",
+          "source_id": "019c9ca4-ac1c-76e2-b883-017d68d982a1",
+          "start_event_id": "019c9ca4-ac1c-76e2-b883-017d68d982a1:2",
+          "start_line_no": 2,
+          "start_timestamp": "2026-02-27T01:09:31.567Z",
+          "statement": "don't bulk-load everything."
+        },
+        {
+          "end_event_id": "019c9ca4-ac1c-76e2-b883-017d68d982a1:18178",
+          "end_line_no": 18178,
+          "end_timestamp": "2026-03-02T16:42:41.247Z",
+          "rule_ids": [
+            "dont_rule.explicit"
+          ],
+          "segment_id": "019c9ca4-ac1c-76e2-b883-017d68d982a1:2357",
+          "session_id": "019c9ca4-ac1c-76e2-b883-017d68d982a1",
+          "source_id": "019c9ca4-ac1c-76e2-b883-017d68d982a1",
+          "start_event_id": "019c9ca4-ac1c-76e2-b883-017d68d982a1:18171",
+          "start_line_no": 18171,
+          "start_timestamp": "2026-03-02T16:41:51.791Z",
+          "statement": "don't bulk-load everything."
+        }
+      ]
+    },
+    {
+      "citation_id": "claim-10",
+      "item_keys": [
+        "global:dont_rule:bc4326da08974b3f"
+      ],
+      "kind": "synthesized_claim",
+      "label": "claim-10",
+      "provenance_refs": [
+        {
+          "end_event_id": "019c9cff-0337-77e0-9ba6-a4f6dc75a92e:4",
+          "end_line_no": 4,
+          "end_timestamp": "2026-02-27T02:48:04.257Z",
+          "rule_ids": [
+            "dont_rule.explicit"
+          ],
+          "segment_id": "019c9cff-0337-77e0-9ba6-a4f6dc75a92e:2",
+          "session_id": "019c9cff-0337-77e0-9ba6-a4f6dc75a92e",
+          "source_id": "019c9cff-0337-77e0-9ba6-a4f6dc75a92e",
+          "start_event_id": "019c9cff-0337-77e0-9ba6-a4f6dc75a92e:3",
+          "start_line_no": 3,
+          "start_timestamp": "2026-02-27T02:48:04.257Z",
+          "statement": "The system never executes trades directly."
+        },
+        {
+          "end_event_id": "019c9d00-0d81-7b52-a1a9-84f7d4b05066:4",
+          "end_line_no": 4,
+          "end_timestamp": "2026-02-27T02:49:12.399Z",
+          "rule_ids": [
+            "dont_rule.explicit"
+          ],
+          "segment_id": "019c9d00-0d81-7b52-a1a9-84f7d4b05066:2",
+          "session_id": "019c9d00-0d81-7b52-a1a9-84f7d4b05066",
+          "source_id": "019c9d00-0d81-7b52-a1a9-84f7d4b05066",
+          "start_event_id": "019c9d00-0d81-7b52-a1a9-84f7d4b05066:3",
+          "start_line_no": 3,
+          "start_timestamp": "2026-02-27T02:49:12.398Z",
+          "statement": "The system never executes trades directly."
+        },
+        {
+          "end_event_id": "019c9d4c-657e-7d71-a062-4d77a75d3786:4",
+          "end_line_no": 4,
+          "end_timestamp": "2026-02-27T04:12:35.657Z",
+          "rule_ids": [
+            "dont_rule.explicit"
+          ],
+          "segment_id": "019c9d4c-657e-7d71-a062-4d77a75d3786:2",
+          "session_id": "019c9d4c-657e-7d71-a062-4d77a75d3786",
+          "source_id": "019c9d4c-657e-7d71-a062-4d77a75d3786",
+          "start_event_id": "019c9d4c-657e-7d71-a062-4d77a75d3786:3",
+          "start_line_no": 3,
+          "start_timestamp": "2026-02-27T04:12:35.657Z",
+          "statement": "The system never executes trades directly."
+        }
+      ]
+    },
+    {
+      "citation_id": "claim-11",
+      "item_keys": [
+        "global:code_location:83d54b094551d701"
+      ],
+      "kind": "synthesized_claim",
+      "label": "claim-11",
+      "provenance_refs": [
+        {
+          "end_event_id": "019c687b-3d0d-71c0-8929-9128cbf24060:6",
+          "end_line_no": 6,
+          "end_timestamp": "2026-02-16T22:05:56.927Z",
+          "rule_ids": [
+            "code_location.explicit"
+          ],
+          "segment_id": "019c687b-3d0d-71c0-8929-9128cbf24060:2",
+          "session_id": "019c687b-3d0d-71c0-8929-9128cbf24060",
+          "source_id": "019c687b-3d0d-71c0-8929-9128cbf24060",
+          "start_event_id": "019c687b-3d0d-71c0-8929-9128cbf24060:3",
+          "start_line_no": 3,
+          "start_timestamp": "2026-02-16T22:05:56.927Z",
+          "statement": "A skill is a set of local instructions to follow that is stored in a `SKILL.md` file."
+        },
+        {
+          "end_event_id": "019c687b-3d0d-71c0-8929-9128cbf24060:6",
+          "end_line_no": 6,
+          "end_timestamp": "2026-02-16T22:05:56.927Z",
+          "rule_ids": [
+            "code_location.explicit"
+          ],
+          "segment_id": "019c687b-3d0d-71c0-8929-9128cbf24060:2",
+          "session_id": "019c687b-3d0d-71c0-8929-9128cbf24060",
+          "source_id": "019c687b-3d0d-71c0-8929-9128cbf24060",
+          "start_event_id": "019c687b-3d0d-71c0-8929-9128cbf24060:3",
+          "start_line_no": 3,
+          "start_timestamp": "2026-02-16T22:05:56.927Z",
+          "statement": "3) If `SKILL.md` points to extra folders such as `references/`, load only the specific files needed for the request"
+        },
+        {
+          "end_event_id": "019c687b-3d0d-71c0-8929-9128cbf24060:6",
+          "end_line_no": 6,
+          "end_timestamp": "2026-02-16T22:05:56.927Z",
+          "rule_ids": [
+            "code_location.explicit"
+          ],
+          "segment_id": "019c687b-3d0d-71c0-8929-9128cbf24060:2",
+          "session_id": "019c687b-3d0d-71c0-8929-9128cbf24060",
+          "source_id": "019c687b-3d0d-71c0-8929-9128cbf24060",
+          "start_event_id": "019c687b-3d0d-71c0-8929-9128cbf24060:3",
+          "start_line_no": 3,
+          "start_timestamp": "2026-02-16T22:05:56.927Z",
+          "statement": "- Avoid deep reference-chasing: prefer opening only files directly linked from `SKILL.md` unless you're blocked."
+        }
+      ]
+    },
+    {
+      "citation_id": "claim-12",
+      "item_keys": [
+        "global:code_location:cc1a8819596b5bd9"
+      ],
+      "kind": "synthesized_claim",
+      "label": "claim-12",
+      "provenance_refs": [
+        {
+          "end_event_id": "019c687b-3d0d-71c0-8929-9128cbf24060:6",
+          "end_line_no": 6,
+          "end_timestamp": "2026-02-16T22:05:56.927Z",
+          "rule_ids": [
+            "code_location.detected"
+          ],
+          "segment_id": "019c687b-3d0d-71c0-8929-9128cbf24060:2",
+          "session_id": "019c687b-3d0d-71c0-8929-9128cbf24060",
+          "source_id": "019c687b-3d0d-71c0-8929-9128cbf24060",
+          "start_event_id": "019c687b-3d0d-71c0-8929-9128cbf24060:3",
+          "start_line_no": 3,
+          "start_timestamp": "2026-02-16T22:05:56.927Z",
+          "statement": "# AGENTS.md instructions for c:\\Users\\Fabio\\Cursor AI projects\\Projects"
+        },
+        {
+          "end_event_id": "019c687b-3d0d-71c0-8929-9128cbf24060:6",
+          "end_line_no": 6,
+          "end_timestamp": "2026-02-16T22:05:56.927Z",
+          "rule_ids": [
+            "code_location.detected"
+          ],
+          "segment_id": "019c687b-3d0d-71c0-8929-9128cbf24060:2",
+          "session_id": "019c687b-3d0d-71c0-8929-9128cbf24060",
+          "source_id": "019c687b-3d0d-71c0-8929-9128cbf24060",
+          "start_event_id": "019c687b-3d0d-71c0-8929-9128cbf24060:3",
+          "start_line_no": 3,
+          "start_timestamp": "2026-02-16T22:05:56.927Z",
+          "statement": "<cwd>c:\\Users\\Fabio\\Cursor AI projects\\Projects</cwd>"
+        },
+        {
+          "end_event_id": "019c9ca4-ac1c-76e2-b883-017d68d982a1:4",
+          "end_line_no": 4,
+          "end_timestamp": "2026-02-27T01:09:31.568Z",
+          "rule_ids": [
+            "code_location.detected"
+          ],
+          "segment_id": "019c9ca4-ac1c-76e2-b883-017d68d982a1:1",
+          "session_id": "019c9ca4-ac1c-76e2-b883-017d68d982a1",
+          "source_id": "019c9ca4-ac1c-76e2-b883-017d68d982a1",
+          "start_event_id": "019c9ca4-ac1c-76e2-b883-017d68d982a1:2",
+          "start_line_no": 2,
+          "start_timestamp": "2026-02-27T01:09:31.567Z",
+          "statement": "# AGENTS.md instructions for c:\\Users\\Fabio\\Cursor AI projects\\Projects"
+        }
+      ]
+    }
+  ],
+  "domain": "global",
+  "input_item_keys": [
+    "global:communication_preference:d2c4a620d03e8957",
+    "global:communication_preference:e895b771a9bdcc83",
+    "global:communication_preference:1438a4b816402b8e",
+    "global:dont_rule:ab8645828d646d41",
+    "global:dont_rule:80f0f574c6788cee",
+    "global:dont_rule:bc4326da08974b3f",
+    "global:dont_rule:6c6fd539515788ce",
+    "global:do_rule:cd4d6b68939a947e",
+    "global:code_location:cc1a8819596b5bd9",
+    "global:code_location:a6ed6e22c239d7eb",
+    "global:code_location:d8c39ff74733f2be",
+    "global:code_location:83d54b094551d701",
+    "global:code_location:489eae885e08005e"
+  ],
+  "page_id": "global/index",
+  "page_type": "domain_index",
+  "rendered_page_metadata": {
+    "claim_count": 12,
+    "conflict_count": 8,
+    "related_domains": [],
+    "related_pages": [
+      {
+        "page_key": "index",
+        "title": "Global",
+        "wikilink": "[[global/index|Global]]"
+      },
+      {
+        "page_key": "communication-preferences",
+        "title": "Global - Communication Preferences",
+        "wikilink": "[[global/communication-preferences|Global - Communication Preferences]]"
+      },
+      {
+        "page_key": "workflow-rules",
+        "title": "Global - Workflow Rules",
+        "wikilink": "[[global/workflow-rules|Global - Workflow Rules]]"
+      },
+      {
+        "page_key": "architecture",
+        "title": "Global - Architecture",
+        "wikilink": "[[global/architecture|Global - Architecture]]"
+      },
+      {
+        "page_key": "code-map",
+        "title": "Global - Code Map",
+        "wikilink": "[[global/code-map|Global - Code Map]]"
+      },
+      {
+        "page_key": "current-state",
+        "title": "Global - Current State",
+        "wikilink": "[[global/current-state|Global - Current State]]"
+      },
+      {
+        "page_key": "tasks",
+        "title": "Global - Tasks",
+        "wikilink": "[[global/tasks|Global - Tasks]]"
+      },
+      {
+        "page_key": "outcomes",
+        "title": "Global - Outcomes",
+        "wikilink": "[[global/outcomes|Global - Outcomes]]"
+      },
+      {
+        "page_key": "failures",
+        "title": "Global - Failures",
+        "wikilink": "[[global/failures|Global - Failures]]"
+      },
+      {
+        "page_key": "decisions",
+        "title": "Global - Decisions",
+        "wikilink": "[[global/decisions|Global - Decisions]]"
+      },
+      {
+        "page_key": "next-steps",
+        "title": "Global - Next Steps",
+        "wikilink": "[[global/next-steps|Global - Next Steps]]"
+      },
+      {
+        "page_key": "open-questions",
+        "title": "Global - Open Questions",
+        "wikilink": "[[global/open-questions|Global - Open Questions]]"
+      }
+    ],
+    "relative_page_path": "global/index.md",
+    "source_count": 86,
+    "title": "Global"
+  },
+  "renderer": "obsidian_markdown",
+  "synthesized_claims": [
+    {
+      "claim_id": "claim-1",
+      "confidence": "strong",
+      "latent_type": "communication_preferences",
+      "provenance_refs": [
+        {
+          "end_event_id": "019ca705-c215-7221-8e6a-d28b922add82:5",
+          "end_line_no": 5,
+          "end_timestamp": "2026-03-01T01:31:38.636Z",
+          "rule_ids": [
+            "communication_preference.explicit"
+          ],
+          "segment_id": "019ca705-c215-7221-8e6a-d28b922add82:2",
+          "session_id": "019ca705-c215-7221-8e6a-d28b922add82",
+          "source_id": "019ca705-c215-7221-8e6a-d28b922add82",
+          "start_event_id": "019ca705-c215-7221-8e6a-d28b922add82:5",
+          "start_line_no": 5,
+          "start_timestamp": "2026-03-01T01:31:38.636Z",
+          "statement": "Prefer concise highlights with links to full reports."
+        },
+        {
+          "end_event_id": "019ca705-c215-7221-8e6a-d28b922add82:9",
+          "end_line_no": 9,
+          "end_timestamp": "2026-03-01T01:31:39.552Z",
+          "rule_ids": [
+            "communication_preference.explicit"
+          ],
+          "segment_id": "019ca705-c215-7221-8e6a-d28b922add82:3",
+          "session_id": "019ca705-c215-7221-8e6a-d28b922add82",
+          "source_id": "019ca705-c215-7221-8e6a-d28b922add82",
+          "start_event_id": "019ca705-c215-7221-8e6a-d28b922add82:6",
+          "start_line_no": 6,
+          "start_timestamp": "2026-03-01T01:31:38.636Z",
+          "statement": "Prefer concise highlights with links to full reports."
+        },
+        {
+          "end_event_id": "019ca705-c215-7221-8e6a-d28b922add82:54",
+          "end_line_no": 54,
+          "end_timestamp": "2026-03-01T02:36:55.290Z",
+          "rule_ids": [
+            "communication_preference.explicit"
+          ],
+          "segment_id": "019ca705-c215-7221-8e6a-d28b922add82:9",
+          "session_id": "019ca705-c215-7221-8e6a-d28b922add82",
+          "source_id": "019ca705-c215-7221-8e6a-d28b922add82",
+          "start_event_id": "019ca705-c215-7221-8e6a-d28b922add82:54",
+          "start_line_no": 54,
+          "start_timestamp": "2026-03-01T02:36:55.290Z",
+          "statement": "Prefer concise highlights with links to full reports."
+        }
+      ],
+      "section_id": "summary",
+      "supporting_item_ids": [
+        "global:communication_preference:d2c4a620d03e8957"
+      ],
+      "text": "Concise highlights with links to full reports are preferred."
+    },
+    {
+      "claim_id": "claim-2",
+      "confidence": "strong",
+      "latent_type": "communication_preferences",
+      "provenance_refs": [
+        {
+          "end_event_id": "019ca705-c215-7221-8e6a-d28b922add82:5",
+          "end_line_no": 5,
+          "end_timestamp": "2026-03-01T01:31:38.636Z",
+          "rule_ids": [
+            "communication_preference.explicit"
+          ],
+          "segment_id": "019ca705-c215-7221-8e6a-d28b922add82:2",
+          "session_id": "019ca705-c215-7221-8e6a-d28b922add82",
+          "source_id": "019ca705-c215-7221-8e6a-d28b922add82",
+          "start_event_id": "019ca705-c215-7221-8e6a-d28b922add82:5",
+          "start_line_no": 5,
+          "start_timestamp": "2026-03-01T01:31:38.636Z",
+          "statement": "Prefer concise outputs with links/paths to full artifacts."
+        },
+        {
+          "end_event_id": "019ca705-c215-7221-8e6a-d28b922add82:9",
+          "end_line_no": 9,
+          "end_timestamp": "2026-03-01T01:31:39.552Z",
+          "rule_ids": [
+            "communication_preference.explicit"
+          ],
+          "segment_id": "019ca705-c215-7221-8e6a-d28b922add82:3",
+          "session_id": "019ca705-c215-7221-8e6a-d28b922add82",
+          "source_id": "019ca705-c215-7221-8e6a-d28b922add82",
+          "start_event_id": "019ca705-c215-7221-8e6a-d28b922add82:6",
+          "start_line_no": 6,
+          "start_timestamp": "2026-03-01T01:31:38.636Z",
+          "statement": "Prefer concise outputs with links/paths to full artifacts."
+        },
+        {
+          "end_event_id": "019ca705-c215-7221-8e6a-d28b922add82:54",
+          "end_line_no": 54,
+          "end_timestamp": "2026-03-01T02:36:55.290Z",
+          "rule_ids": [
+            "communication_preference.explicit"
+          ],
+          "segment_id": "019ca705-c215-7221-8e6a-d28b922add82:9",
+          "session_id": "019ca705-c215-7221-8e6a-d28b922add82",
+          "source_id": "019ca705-c215-7221-8e6a-d28b922add82",
+          "start_event_id": "019ca705-c215-7221-8e6a-d28b922add82:54",
+          "start_line_no": 54,
+          "start_timestamp": "2026-03-01T02:36:55.290Z",
+          "statement": "Prefer concise outputs with links/paths to full artifacts."
+        }
+      ],
+      "section_id": "summary",
+      "supporting_item_ids": [
+        "global:communication_preference:e895b771a9bdcc83"
+      ],
+      "text": "Concise outputs with links or paths to full artifacts are preferred."
+    },
+    {
+      "claim_id": "claim-3",
+      "confidence": "strong",
+      "latent_type": "communication_preferences",
+      "provenance_refs": [
+        {
+          "end_event_id": "019ca705-c215-7221-8e6a-d28b922add82:5",
+          "end_line_no": 5,
+          "end_timestamp": "2026-03-01T01:31:38.636Z",
+          "rule_ids": [
+            "communication_preference.explicit"
+          ],
+          "segment_id": "019ca705-c215-7221-8e6a-d28b922add82:2",
+          "session_id": "019ca705-c215-7221-8e6a-d28b922add82",
+          "source_id": "019ca705-c215-7221-8e6a-d28b922add82",
+          "start_event_id": "019ca705-c215-7221-8e6a-d28b922add82:5",
+          "start_line_no": 5,
+          "start_timestamp": "2026-03-01T01:31:38.636Z",
+          "statement": "Output should be concise, explicit, and directly usable inside a spec pack."
+        },
+        {
+          "end_event_id": "019ca705-c215-7221-8e6a-d28b922add82:9",
+          "end_line_no": 9,
+          "end_timestamp": "2026-03-01T01:31:39.552Z",
+          "rule_ids": [
+            "communication_preference.explicit"
+          ],
+          "segment_id": "019ca705-c215-7221-8e6a-d28b922add82:3",
+          "session_id": "019ca705-c215-7221-8e6a-d28b922add82",
+          "source_id": "019ca705-c215-7221-8e6a-d28b922add82",
+          "start_event_id": "019ca705-c215-7221-8e6a-d28b922add82:6",
+          "start_line_no": 6,
+          "start_timestamp": "2026-03-01T01:31:38.636Z",
+          "statement": "Output should be concise, explicit, and directly usable inside a spec pack."
+        },
+        {
+          "end_event_id": "019ca705-c215-7221-8e6a-d28b922add82:54",
+          "end_line_no": 54,
+          "end_timestamp": "2026-03-01T02:36:55.290Z",
+          "rule_ids": [
+            "communication_preference.explicit"
+          ],
+          "segment_id": "019ca705-c215-7221-8e6a-d28b922add82:9",
+          "session_id": "019ca705-c215-7221-8e6a-d28b922add82",
+          "source_id": "019ca705-c215-7221-8e6a-d28b922add82",
+          "start_event_id": "019ca705-c215-7221-8e6a-d28b922add82:54",
+          "start_line_no": 54,
+          "start_timestamp": "2026-03-01T02:36:55.290Z",
+          "statement": "Output should be concise, explicit, and directly usable inside a spec pack."
+        }
+      ],
+      "section_id": "summary",
+      "supporting_item_ids": [
+        "global:communication_preference:1438a4b816402b8e"
+      ],
+      "text": "Outputs should be concise, explicit, and directly usable inside a spec pack."
+    },
+    {
+      "claim_id": "claim-4",
+      "confidence": "strong",
+      "latent_type": "workflow_norms",
+      "provenance_refs": [
+        {
+          "end_event_id": "019c687b-3d0d-71c0-8929-9128cbf24060:6",
+          "end_line_no": 6,
+          "end_timestamp": "2026-02-16T22:05:56.927Z",
+          "rule_ids": [
+            "dont_rule.explicit"
+          ],
+          "segment_id": "019c687b-3d0d-71c0-8929-9128cbf24060:2",
+          "session_id": "019c687b-3d0d-71c0-8929-9128cbf24060",
+          "source_id": "019c687b-3d0d-71c0-8929-9128cbf24060",
+          "start_event_id": "019c687b-3d0d-71c0-8929-9128cbf24060:3",
+          "start_line_no": 3,
+          "start_timestamp": "2026-02-16T22:05:56.927Z",
+          "statement": "Do not carry skills across turns unless re-mentioned."
+        },
+        {
+          "end_event_id": "019c9ca4-ac1c-76e2-b883-017d68d982a1:4",
+          "end_line_no": 4,
+          "end_timestamp": "2026-02-27T01:09:31.568Z",
+          "rule_ids": [
+            "dont_rule.explicit"
+          ],
+          "segment_id": "019c9ca4-ac1c-76e2-b883-017d68d982a1:1",
+          "session_id": "019c9ca4-ac1c-76e2-b883-017d68d982a1",
+          "source_id": "019c9ca4-ac1c-76e2-b883-017d68d982a1",
+          "start_event_id": "019c9ca4-ac1c-76e2-b883-017d68d982a1:2",
+          "start_line_no": 2,
+          "start_timestamp": "2026-02-27T01:09:31.567Z",
+          "statement": "Do not carry skills across turns unless re-mentioned."
+        },
+        {
+          "end_event_id": "019c9ca4-ac1c-76e2-b883-017d68d982a1:18178",
+          "end_line_no": 18178,
+          "end_timestamp": "2026-03-02T16:42:41.247Z",
+          "rule_ids": [
+            "dont_rule.explicit"
+          ],
+          "segment_id": "019c9ca4-ac1c-76e2-b883-017d68d982a1:2357",
+          "session_id": "019c9ca4-ac1c-76e2-b883-017d68d982a1",
+          "source_id": "019c9ca4-ac1c-76e2-b883-017d68d982a1",
+          "start_event_id": "019c9ca4-ac1c-76e2-b883-017d68d982a1:18171",
+          "start_line_no": 18171,
+          "start_timestamp": "2026-03-02T16:41:51.791Z",
+          "statement": "Do not carry skills across turns unless re-mentioned."
+        }
+      ],
+      "section_id": "summary",
+      "supporting_item_ids": [
+        "global:dont_rule:ab8645828d646d41"
+      ],
+      "text": "Do not carry skills across turns unless re-mentioned."
+    },
+    {
+      "claim_id": "claim-5",
+      "confidence": "strong",
+      "latent_type": "communication_preferences",
+      "provenance_refs": [
+        {
+          "end_event_id": "019ca705-c215-7221-8e6a-d28b922add82:5",
+          "end_line_no": 5,
+          "end_timestamp": "2026-03-01T01:31:38.636Z",
+          "rule_ids": [
+            "communication_preference.explicit"
+          ],
+          "segment_id": "019ca705-c215-7221-8e6a-d28b922add82:2",
+          "session_id": "019ca705-c215-7221-8e6a-d28b922add82",
+          "source_id": "019ca705-c215-7221-8e6a-d28b922add82",
+          "start_event_id": "019ca705-c215-7221-8e6a-d28b922add82:5",
+          "start_line_no": 5,
+          "start_timestamp": "2026-03-01T01:31:38.636Z",
+          "statement": "Prefer concise highlights with links to full reports."
+        },
+        {
+          "end_event_id": "019ca705-c215-7221-8e6a-d28b922add82:9",
+          "end_line_no": 9,
+          "end_timestamp": "2026-03-01T01:31:39.552Z",
+          "rule_ids": [
+            "communication_preference.explicit"
+          ],
+          "segment_id": "019ca705-c215-7221-8e6a-d28b922add82:3",
+          "session_id": "019ca705-c215-7221-8e6a-d28b922add82",
+          "source_id": "019ca705-c215-7221-8e6a-d28b922add82",
+          "start_event_id": "019ca705-c215-7221-8e6a-d28b922add82:6",
+          "start_line_no": 6,
+          "start_timestamp": "2026-03-01T01:31:38.636Z",
+          "statement": "Prefer concise highlights with links to full reports."
+        },
+        {
+          "end_event_id": "019ca705-c215-7221-8e6a-d28b922add82:54",
+          "end_line_no": 54,
+          "end_timestamp": "2026-03-01T02:36:55.290Z",
+          "rule_ids": [
+            "communication_preference.explicit"
+          ],
+          "segment_id": "019ca705-c215-7221-8e6a-d28b922add82:9",
+          "session_id": "019ca705-c215-7221-8e6a-d28b922add82",
+          "source_id": "019ca705-c215-7221-8e6a-d28b922add82",
+          "start_event_id": "019ca705-c215-7221-8e6a-d28b922add82:54",
+          "start_line_no": 54,
+          "start_timestamp": "2026-03-01T02:36:55.290Z",
+          "statement": "Prefer concise highlights with links to full reports."
+        }
+      ],
+      "section_id": "communication-preferences",
+      "supporting_item_ids": [
+        "global:communication_preference:d2c4a620d03e8957"
+      ],
+      "text": "Concise highlights with links to full reports are preferred."
+    },
+    {
+      "claim_id": "claim-6",
+      "confidence": "strong",
+      "latent_type": "communication_preferences",
+      "provenance_refs": [
+        {
+          "end_event_id": "019ca705-c215-7221-8e6a-d28b922add82:5",
+          "end_line_no": 5,
+          "end_timestamp": "2026-03-01T01:31:38.636Z",
+          "rule_ids": [
+            "communication_preference.explicit"
+          ],
+          "segment_id": "019ca705-c215-7221-8e6a-d28b922add82:2",
+          "session_id": "019ca705-c215-7221-8e6a-d28b922add82",
+          "source_id": "019ca705-c215-7221-8e6a-d28b922add82",
+          "start_event_id": "019ca705-c215-7221-8e6a-d28b922add82:5",
+          "start_line_no": 5,
+          "start_timestamp": "2026-03-01T01:31:38.636Z",
+          "statement": "Prefer concise outputs with links/paths to full artifacts."
+        },
+        {
+          "end_event_id": "019ca705-c215-7221-8e6a-d28b922add82:9",
+          "end_line_no": 9,
+          "end_timestamp": "2026-03-01T01:31:39.552Z",
+          "rule_ids": [
+            "communication_preference.explicit"
+          ],
+          "segment_id": "019ca705-c215-7221-8e6a-d28b922add82:3",
+          "session_id": "019ca705-c215-7221-8e6a-d28b922add82",
+          "source_id": "019ca705-c215-7221-8e6a-d28b922add82",
+          "start_event_id": "019ca705-c215-7221-8e6a-d28b922add82:6",
+          "start_line_no": 6,
+          "start_timestamp": "2026-03-01T01:31:38.636Z",
+          "statement": "Prefer concise outputs with links/paths to full artifacts."
+        },
+        {
+          "end_event_id": "019ca705-c215-7221-8e6a-d28b922add82:54",
+          "end_line_no": 54,
+          "end_timestamp": "2026-03-01T02:36:55.290Z",
+          "rule_ids": [
+            "communication_preference.explicit"
+          ],
+          "segment_id": "019ca705-c215-7221-8e6a-d28b922add82:9",
+          "session_id": "019ca705-c215-7221-8e6a-d28b922add82",
+          "source_id": "019ca705-c215-7221-8e6a-d28b922add82",
+          "start_event_id": "019ca705-c215-7221-8e6a-d28b922add82:54",
+          "start_line_no": 54,
+          "start_timestamp": "2026-03-01T02:36:55.290Z",
+          "statement": "Prefer concise outputs with links/paths to full artifacts."
+        }
+      ],
+      "section_id": "communication-preferences",
+      "supporting_item_ids": [
+        "global:communication_preference:e895b771a9bdcc83"
+      ],
+      "text": "Concise outputs with links or paths to full artifacts are preferred."
+    },
+    {
+      "claim_id": "claim-7",
+      "confidence": "strong",
+      "latent_type": "communication_preferences",
+      "provenance_refs": [
+        {
+          "end_event_id": "019ca705-c215-7221-8e6a-d28b922add82:5",
+          "end_line_no": 5,
+          "end_timestamp": "2026-03-01T01:31:38.636Z",
+          "rule_ids": [
+            "communication_preference.explicit"
+          ],
+          "segment_id": "019ca705-c215-7221-8e6a-d28b922add82:2",
+          "session_id": "019ca705-c215-7221-8e6a-d28b922add82",
+          "source_id": "019ca705-c215-7221-8e6a-d28b922add82",
+          "start_event_id": "019ca705-c215-7221-8e6a-d28b922add82:5",
+          "start_line_no": 5,
+          "start_timestamp": "2026-03-01T01:31:38.636Z",
+          "statement": "Output should be concise, explicit, and directly usable inside a spec pack."
+        },
+        {
+          "end_event_id": "019ca705-c215-7221-8e6a-d28b922add82:9",
+          "end_line_no": 9,
+          "end_timestamp": "2026-03-01T01:31:39.552Z",
+          "rule_ids": [
+            "communication_preference.explicit"
+          ],
+          "segment_id": "019ca705-c215-7221-8e6a-d28b922add82:3",
+          "session_id": "019ca705-c215-7221-8e6a-d28b922add82",
+          "source_id": "019ca705-c215-7221-8e6a-d28b922add82",
+          "start_event_id": "019ca705-c215-7221-8e6a-d28b922add82:6",
+          "start_line_no": 6,
+          "start_timestamp": "2026-03-01T01:31:38.636Z",
+          "statement": "Output should be concise, explicit, and directly usable inside a spec pack."
+        },
+        {
+          "end_event_id": "019ca705-c215-7221-8e6a-d28b922add82:54",
+          "end_line_no": 54,
+          "end_timestamp": "2026-03-01T02:36:55.290Z",
+          "rule_ids": [
+            "communication_preference.explicit"
+          ],
+          "segment_id": "019ca705-c215-7221-8e6a-d28b922add82:9",
+          "session_id": "019ca705-c215-7221-8e6a-d28b922add82",
+          "source_id": "019ca705-c215-7221-8e6a-d28b922add82",
+          "start_event_id": "019ca705-c215-7221-8e6a-d28b922add82:54",
+          "start_line_no": 54,
+          "start_timestamp": "2026-03-01T02:36:55.290Z",
+          "statement": "Output should be concise, explicit, and directly usable inside a spec pack."
+        }
+      ],
+      "section_id": "communication-preferences",
+      "supporting_item_ids": [
+        "global:communication_preference:1438a4b816402b8e"
+      ],
+      "text": "Outputs should be concise, explicit, and directly usable inside a spec pack."
+    },
+    {
+      "claim_id": "claim-8",
+      "confidence": "strong",
+      "latent_type": "workflow_norms",
+      "provenance_refs": [
+        {
+          "end_event_id": "019c687b-3d0d-71c0-8929-9128cbf24060:6",
+          "end_line_no": 6,
+          "end_timestamp": "2026-02-16T22:05:56.927Z",
+          "rule_ids": [
+            "dont_rule.explicit"
+          ],
+          "segment_id": "019c687b-3d0d-71c0-8929-9128cbf24060:2",
+          "session_id": "019c687b-3d0d-71c0-8929-9128cbf24060",
+          "source_id": "019c687b-3d0d-71c0-8929-9128cbf24060",
+          "start_event_id": "019c687b-3d0d-71c0-8929-9128cbf24060:3",
+          "start_line_no": 3,
+          "start_timestamp": "2026-02-16T22:05:56.927Z",
+          "statement": "Do not carry skills across turns unless re-mentioned."
+        },
+        {
+          "end_event_id": "019c9ca4-ac1c-76e2-b883-017d68d982a1:4",
+          "end_line_no": 4,
+          "end_timestamp": "2026-02-27T01:09:31.568Z",
+          "rule_ids": [
+            "dont_rule.explicit"
+          ],
+          "segment_id": "019c9ca4-ac1c-76e2-b883-017d68d982a1:1",
+          "session_id": "019c9ca4-ac1c-76e2-b883-017d68d982a1",
+          "source_id": "019c9ca4-ac1c-76e2-b883-017d68d982a1",
+          "start_event_id": "019c9ca4-ac1c-76e2-b883-017d68d982a1:2",
+          "start_line_no": 2,
+          "start_timestamp": "2026-02-27T01:09:31.567Z",
+          "statement": "Do not carry skills across turns unless re-mentioned."
+        },
+        {
+          "end_event_id": "019c9ca4-ac1c-76e2-b883-017d68d982a1:18178",
+          "end_line_no": 18178,
+          "end_timestamp": "2026-03-02T16:42:41.247Z",
+          "rule_ids": [
+            "dont_rule.explicit"
+          ],
+          "segment_id": "019c9ca4-ac1c-76e2-b883-017d68d982a1:2357",
+          "session_id": "019c9ca4-ac1c-76e2-b883-017d68d982a1",
+          "source_id": "019c9ca4-ac1c-76e2-b883-017d68d982a1",
+          "start_event_id": "019c9ca4-ac1c-76e2-b883-017d68d982a1:18171",
+          "start_line_no": 18171,
+          "start_timestamp": "2026-03-02T16:41:51.791Z",
+          "statement": "Do not carry skills across turns unless re-mentioned."
+        }
+      ],
+      "section_id": "workflow-rules",
+      "supporting_item_ids": [
+        "global:dont_rule:ab8645828d646d41"
+      ],
+      "text": "Do not carry skills across turns unless re-mentioned."
+    },
+    {
+      "claim_id": "claim-9",
+      "confidence": "strong",
+      "latent_type": "workflow_norms",
+      "provenance_refs": [
+        {
+          "end_event_id": "019c687b-3d0d-71c0-8929-9128cbf24060:6",
+          "end_line_no": 6,
+          "end_timestamp": "2026-02-16T22:05:56.927Z",
+          "rule_ids": [
+            "dont_rule.explicit"
+          ],
+          "segment_id": "019c687b-3d0d-71c0-8929-9128cbf24060:2",
+          "session_id": "019c687b-3d0d-71c0-8929-9128cbf24060",
+          "source_id": "019c687b-3d0d-71c0-8929-9128cbf24060",
+          "start_event_id": "019c687b-3d0d-71c0-8929-9128cbf24060:3",
+          "start_line_no": 3,
+          "start_timestamp": "2026-02-16T22:05:56.927Z",
+          "statement": "don't bulk-load everything."
+        },
+        {
+          "end_event_id": "019c9ca4-ac1c-76e2-b883-017d68d982a1:4",
+          "end_line_no": 4,
+          "end_timestamp": "2026-02-27T01:09:31.568Z",
+          "rule_ids": [
+            "dont_rule.explicit"
+          ],
+          "segment_id": "019c9ca4-ac1c-76e2-b883-017d68d982a1:1",
+          "session_id": "019c9ca4-ac1c-76e2-b883-017d68d982a1",
+          "source_id": "019c9ca4-ac1c-76e2-b883-017d68d982a1",
+          "start_event_id": "019c9ca4-ac1c-76e2-b883-017d68d982a1:2",
+          "start_line_no": 2,
+          "start_timestamp": "2026-02-27T01:09:31.567Z",
+          "statement": "don't bulk-load everything."
+        },
+        {
+          "end_event_id": "019c9ca4-ac1c-76e2-b883-017d68d982a1:18178",
+          "end_line_no": 18178,
+          "end_timestamp": "2026-03-02T16:42:41.247Z",
+          "rule_ids": [
+            "dont_rule.explicit"
+          ],
+          "segment_id": "019c9ca4-ac1c-76e2-b883-017d68d982a1:2357",
+          "session_id": "019c9ca4-ac1c-76e2-b883-017d68d982a1",
+          "source_id": "019c9ca4-ac1c-76e2-b883-017d68d982a1",
+          "start_event_id": "019c9ca4-ac1c-76e2-b883-017d68d982a1:18171",
+          "start_line_no": 18171,
+          "start_timestamp": "2026-03-02T16:41:51.791Z",
+          "statement": "don't bulk-load everything."
+        }
+      ],
+      "section_id": "workflow-rules",
+      "supporting_item_ids": [
+        "global:dont_rule:80f0f574c6788cee"
+      ],
+      "text": "Do not bulk-load everything."
+    },
+    {
+      "claim_id": "claim-10",
+      "confidence": "strong",
+      "latent_type": "workflow_norms",
+      "provenance_refs": [
+        {
+          "end_event_id": "019c9cff-0337-77e0-9ba6-a4f6dc75a92e:4",
+          "end_line_no": 4,
+          "end_timestamp": "2026-02-27T02:48:04.257Z",
+          "rule_ids": [
+            "dont_rule.explicit"
+          ],
+          "segment_id": "019c9cff-0337-77e0-9ba6-a4f6dc75a92e:2",
+          "session_id": "019c9cff-0337-77e0-9ba6-a4f6dc75a92e",
+          "source_id": "019c9cff-0337-77e0-9ba6-a4f6dc75a92e",
+          "start_event_id": "019c9cff-0337-77e0-9ba6-a4f6dc75a92e:3",
+          "start_line_no": 3,
+          "start_timestamp": "2026-02-27T02:48:04.257Z",
+          "statement": "The system never executes trades directly."
+        },
+        {
+          "end_event_id": "019c9d00-0d81-7b52-a1a9-84f7d4b05066:4",
+          "end_line_no": 4,
+          "end_timestamp": "2026-02-27T02:49:12.399Z",
+          "rule_ids": [
+            "dont_rule.explicit"
+          ],
+          "segment_id": "019c9d00-0d81-7b52-a1a9-84f7d4b05066:2",
+          "session_id": "019c9d00-0d81-7b52-a1a9-84f7d4b05066",
+          "source_id": "019c9d00-0d81-7b52-a1a9-84f7d4b05066",
+          "start_event_id": "019c9d00-0d81-7b52-a1a9-84f7d4b05066:3",
+          "start_line_no": 3,
+          "start_timestamp": "2026-02-27T02:49:12.398Z",
+          "statement": "The system never executes trades directly."
+        },
+        {
+          "end_event_id": "019c9d4c-657e-7d71-a062-4d77a75d3786:4",
+          "end_line_no": 4,
+          "end_timestamp": "2026-02-27T04:12:35.657Z",
+          "rule_ids": [
+            "dont_rule.explicit"
+          ],
+          "segment_id": "019c9d4c-657e-7d71-a062-4d77a75d3786:2",
+          "session_id": "019c9d4c-657e-7d71-a062-4d77a75d3786",
+          "source_id": "019c9d4c-657e-7d71-a062-4d77a75d3786",
+          "start_event_id": "019c9d4c-657e-7d71-a062-4d77a75d3786:3",
+          "start_line_no": 3,
+          "start_timestamp": "2026-02-27T04:12:35.657Z",
+          "statement": "The system never executes trades directly."
+        }
+      ],
+      "section_id": "workflow-rules",
+      "supporting_item_ids": [
+        "global:dont_rule:bc4326da08974b3f"
+      ],
+      "text": "The system never executes trades directly."
+    },
+    {
+      "claim_id": "claim-11",
+      "confidence": "strong",
+      "latent_type": "codebase_map_abstractions",
+      "provenance_refs": [
+        {
+          "end_event_id": "019c687b-3d0d-71c0-8929-9128cbf24060:6",
+          "end_line_no": 6,
+          "end_timestamp": "2026-02-16T22:05:56.927Z",
+          "rule_ids": [
+            "code_location.explicit"
+          ],
+          "segment_id": "019c687b-3d0d-71c0-8929-9128cbf24060:2",
+          "session_id": "019c687b-3d0d-71c0-8929-9128cbf24060",
+          "source_id": "019c687b-3d0d-71c0-8929-9128cbf24060",
+          "start_event_id": "019c687b-3d0d-71c0-8929-9128cbf24060:3",
+          "start_line_no": 3,
+          "start_timestamp": "2026-02-16T22:05:56.927Z",
+          "statement": "A skill is a set of local instructions to follow that is stored in a `SKILL.md` file."
+        },
+        {
+          "end_event_id": "019c687b-3d0d-71c0-8929-9128cbf24060:6",
+          "end_line_no": 6,
+          "end_timestamp": "2026-02-16T22:05:56.927Z",
+          "rule_ids": [
+            "code_location.explicit"
+          ],
+          "segment_id": "019c687b-3d0d-71c0-8929-9128cbf24060:2",
+          "session_id": "019c687b-3d0d-71c0-8929-9128cbf24060",
+          "source_id": "019c687b-3d0d-71c0-8929-9128cbf24060",
+          "start_event_id": "019c687b-3d0d-71c0-8929-9128cbf24060:3",
+          "start_line_no": 3,
+          "start_timestamp": "2026-02-16T22:05:56.927Z",
+          "statement": "3) If `SKILL.md` points to extra folders such as `references/`, load only the specific files needed for the request"
+        },
+        {
+          "end_event_id": "019c687b-3d0d-71c0-8929-9128cbf24060:6",
+          "end_line_no": 6,
+          "end_timestamp": "2026-02-16T22:05:56.927Z",
+          "rule_ids": [
+            "code_location.explicit"
+          ],
+          "segment_id": "019c687b-3d0d-71c0-8929-9128cbf24060:2",
+          "session_id": "019c687b-3d0d-71c0-8929-9128cbf24060",
+          "source_id": "019c687b-3d0d-71c0-8929-9128cbf24060",
+          "start_event_id": "019c687b-3d0d-71c0-8929-9128cbf24060:3",
+          "start_line_no": 3,
+          "start_timestamp": "2026-02-16T22:05:56.927Z",
+          "statement": "- Avoid deep reference-chasing: prefer opening only files directly linked from `SKILL.md` unless you're blocked."
+        }
+      ],
+      "section_id": "code-map",
+      "supporting_item_ids": [
+        "global:code_location:83d54b094551d701"
+      ],
+      "text": "A skill is a set of local instructions to follow that is stored in a SKILL.md file."
+    },
+    {
+      "claim_id": "claim-12",
+      "confidence": "strong",
+      "latent_type": "codebase_map_abstractions",
+      "provenance_refs": [
+        {
+          "end_event_id": "019c687b-3d0d-71c0-8929-9128cbf24060:6",
+          "end_line_no": 6,
+          "end_timestamp": "2026-02-16T22:05:56.927Z",
+          "rule_ids": [
+            "code_location.detected"
+          ],
+          "segment_id": "019c687b-3d0d-71c0-8929-9128cbf24060:2",
+          "session_id": "019c687b-3d0d-71c0-8929-9128cbf24060",
+          "source_id": "019c687b-3d0d-71c0-8929-9128cbf24060",
+          "start_event_id": "019c687b-3d0d-71c0-8929-9128cbf24060:3",
+          "start_line_no": 3,
+          "start_timestamp": "2026-02-16T22:05:56.927Z",
+          "statement": "# AGENTS.md instructions for c:\\Users\\Fabio\\Cursor AI projects\\Projects"
+        },
+        {
+          "end_event_id": "019c687b-3d0d-71c0-8929-9128cbf24060:6",
+          "end_line_no": 6,
+          "end_timestamp": "2026-02-16T22:05:56.927Z",
+          "rule_ids": [
+            "code_location.detected"
+          ],
+          "segment_id": "019c687b-3d0d-71c0-8929-9128cbf24060:2",
+          "session_id": "019c687b-3d0d-71c0-8929-9128cbf24060",
+          "source_id": "019c687b-3d0d-71c0-8929-9128cbf24060",
+          "start_event_id": "019c687b-3d0d-71c0-8929-9128cbf24060:3",
+          "start_line_no": 3,
+          "start_timestamp": "2026-02-16T22:05:56.927Z",
+          "statement": "<cwd>c:\\Users\\Fabio\\Cursor AI projects\\Projects</cwd>"
+        },
+        {
+          "end_event_id": "019c9ca4-ac1c-76e2-b883-017d68d982a1:4",
+          "end_line_no": 4,
+          "end_timestamp": "2026-02-27T01:09:31.568Z",
+          "rule_ids": [
+            "code_location.detected"
+          ],
+          "segment_id": "019c9ca4-ac1c-76e2-b883-017d68d982a1:1",
+          "session_id": "019c9ca4-ac1c-76e2-b883-017d68d982a1",
+          "source_id": "019c9ca4-ac1c-76e2-b883-017d68d982a1",
+          "start_event_id": "019c9ca4-ac1c-76e2-b883-017d68d982a1:2",
+          "start_line_no": 2,
+          "start_timestamp": "2026-02-27T01:09:31.567Z",
+          "statement": "# AGENTS.md instructions for c:\\Users\\Fabio\\Cursor AI projects\\Projects"
+        }
+      ],
+      "section_id": "code-map",
+      "supporting_item_ids": [
+        "global:code_location:cc1a8819596b5bd9"
+      ],
+      "text": "Instructions for agents are located in c:\\Users\\Fabio\\Cursor AI projects\\Projects."
+    }
+  ],
+  "versions": {
+    "page_config_version": 2,
+    "renderer_version": 2,
+    "synthesis_prompt_version": 2,
+    "synthesis_schema_version": 1,
+    "wiki_schema_version": 2
+  }
+}

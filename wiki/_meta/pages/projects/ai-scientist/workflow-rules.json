@@ -1,0 +1,475 @@
+{
+  "bucket": "workflow-rules",
+  "citations": [
+    {
+      "citation_id": "claim-1",
+      "item_keys": [
+        "ai-scientist:dont_rule:fb7bb58bfd669516"
+      ],
+      "kind": "synthesized_claim",
+      "label": "claim-1",
+      "provenance_refs": [
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:43347",
+          "end_line_no": 43347,
+          "end_timestamp": "2026-03-11T19:37:55.573Z",
+          "rule_ids": [
+            "dont_rule.explicit"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:5361",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:43343",
+          "start_line_no": 43343,
+          "start_timestamp": "2026-03-11T19:30:44.252Z",
+          "statement": "if the question/evidence are fine but the **reasoning mode is wrong**, do **not** approve it"
+        }
+      ]
+    },
+    {
+      "citation_id": "claim-2",
+      "item_keys": [
+        "ai-scientist:dont_rule:c4581cfbd41cf024"
+      ],
+      "kind": "synthesized_claim",
+      "label": "claim-2",
+      "provenance_refs": [
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:43654",
+          "end_line_no": 43654,
+          "end_timestamp": "2026-03-11T20:15:25.942Z",
+          "rule_ids": [
+            "dont_rule.explicit"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:5423",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:43654",
+          "start_line_no": 43654,
+          "start_timestamp": "2026-03-11T20:15:25.942Z",
+          "statement": "do not ask you to score weak benchmark cases"
+        }
+      ]
+    },
+    {
+      "citation_id": "claim-3",
+      "item_keys": [
+        "ai-scientist:dont_rule:44eabf42b1bd9ba3"
+      ],
+      "kind": "synthesized_claim",
+      "label": "claim-3",
+      "provenance_refs": [
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:43654",
+          "end_line_no": 43654,
+          "end_timestamp": "2026-03-11T20:15:25.942Z",
+          "rule_ids": [
+            "dont_rule.explicit"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:5423",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:43654",
+          "start_line_no": 43654,
+          "start_timestamp": "2026-03-11T20:15:25.942Z",
+          "statement": "`21` still do not"
+        }
+      ]
+    },
+    {
+      "citation_id": "claim-4",
+      "item_keys": [
+        "ai-scientist:dont_rule:44eabf42b1bd9ba3"
+      ],
+      "kind": "synthesized_claim",
+      "label": "claim-4",
+      "provenance_refs": [
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:43654",
+          "end_line_no": 43654,
+          "end_timestamp": "2026-03-11T20:15:25.942Z",
+          "rule_ids": [
+            "dont_rule.explicit"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:5423",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:43654",
+          "start_line_no": 43654,
+          "start_timestamp": "2026-03-11T20:15:25.942Z",
+          "statement": "`21` still do not"
+        }
+      ]
+    },
+    {
+      "citation_id": "claim-5",
+      "item_keys": [
+        "ai-scientist:dont_rule:c4581cfbd41cf024"
+      ],
+      "kind": "synthesized_claim",
+      "label": "claim-5",
+      "provenance_refs": [
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:43654",
+          "end_line_no": 43654,
+          "end_timestamp": "2026-03-11T20:15:25.942Z",
+          "rule_ids": [
+            "dont_rule.explicit"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:5423",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:43654",
+          "start_line_no": 43654,
+          "start_timestamp": "2026-03-11T20:15:25.942Z",
+          "statement": "do not ask you to score weak benchmark cases"
+        }
+      ]
+    },
+    {
+      "citation_id": "claim-6",
+      "item_keys": [
+        "ai-scientist:dont_rule:fb7bb58bfd669516"
+      ],
+      "kind": "synthesized_claim",
+      "label": "claim-6",
+      "provenance_refs": [
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:43347",
+          "end_line_no": 43347,
+          "end_timestamp": "2026-03-11T19:37:55.573Z",
+          "rule_ids": [
+            "dont_rule.explicit"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:5361",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:43343",
+          "start_line_no": 43343,
+          "start_timestamp": "2026-03-11T19:30:44.252Z",
+          "statement": "if the question/evidence are fine but the **reasoning mode is wrong**, do **not** approve it"
+        }
+      ]
+    },
+    {
+      "citation_id": "item-dont_rule-1",
+      "item_keys": [
+        "ai-scientist:dont_rule:44eabf42b1bd9ba3"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-dont_rule-1",
+      "provenance_refs": [
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:43654",
+          "end_line_no": 43654,
+          "end_timestamp": "2026-03-11T20:15:25.942Z",
+          "rule_ids": [
+            "dont_rule.explicit"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:5423",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:43654",
+          "start_line_no": 43654,
+          "start_timestamp": "2026-03-11T20:15:25.942Z",
+          "statement": "`21` still do not"
+        }
+      ]
+    },
+    {
+      "citation_id": "item-dont_rule-2",
+      "item_keys": [
+        "ai-scientist:dont_rule:c4581cfbd41cf024"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-dont_rule-2",
+      "provenance_refs": [
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:43654",
+          "end_line_no": 43654,
+          "end_timestamp": "2026-03-11T20:15:25.942Z",
+          "rule_ids": [
+            "dont_rule.explicit"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:5423",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:43654",
+          "start_line_no": 43654,
+          "start_timestamp": "2026-03-11T20:15:25.942Z",
+          "statement": "do not ask you to score weak benchmark cases"
+        }
+      ]
+    },
+    {
+      "citation_id": "item-dont_rule-3",
+      "item_keys": [
+        "ai-scientist:dont_rule:fb7bb58bfd669516"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-dont_rule-3",
+      "provenance_refs": [
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:43347",
+          "end_line_no": 43347,
+          "end_timestamp": "2026-03-11T19:37:55.573Z",
+          "rule_ids": [
+            "dont_rule.explicit"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:5361",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:43343",
+          "start_line_no": 43343,
+          "start_timestamp": "2026-03-11T19:30:44.252Z",
+          "statement": "if the question/evidence are fine but the **reasoning mode is wrong**, do **not** approve it"
+        }
+      ]
+    }
+  ],
+  "domain": "ai-scientist",
+  "input_item_keys": [
+    "ai-scientist:dont_rule:44eabf42b1bd9ba3",
+    "ai-scientist:dont_rule:c4581cfbd41cf024",
+    "ai-scientist:dont_rule:fb7bb58bfd669516"
+  ],
+  "page_id": "projects/ai-scientist/workflow-rules",
+  "page_type": "bucket_page",
+  "rendered_page_metadata": {
+    "claim_count": 6,
+    "conflict_count": 0,
+    "related_domains": [],
+    "related_pages": [
+      {
+        "page_key": "index",
+        "title": "AI Scientist",
+        "wikilink": "[[projects/ai-scientist/index|AI Scientist]]"
+      },
+      {
+        "page_key": "communication-preferences",
+        "title": "AI Scientist - Communication Preferences",
+        "wikilink": "[[projects/ai-scientist/communication-preferences|AI Scientist - Communication Preferences]]"
+      },
+      {
+        "page_key": "architecture",
+        "title": "AI Scientist - Architecture",
+        "wikilink": "[[projects/ai-scientist/architecture|AI Scientist - Architecture]]"
+      },
+      {
+        "page_key": "code-map",
+        "title": "AI Scientist - Code Map",
+        "wikilink": "[[projects/ai-scientist/code-map|AI Scientist - Code Map]]"
+      },
+      {
+        "page_key": "current-state",
+        "title": "AI Scientist - Current State",
+        "wikilink": "[[projects/ai-scientist/current-state|AI Scientist - Current State]]"
+      },
+      {
+        "page_key": "tasks",
+        "title": "AI Scientist - Tasks",
+        "wikilink": "[[projects/ai-scientist/tasks|AI Scientist - Tasks]]"
+      },
+      {
+        "page_key": "outcomes",
+        "title": "AI Scientist - Outcomes",
+        "wikilink": "[[projects/ai-scientist/outcomes|AI Scientist - Outcomes]]"
+      },
+      {
+        "page_key": "failures",
+        "title": "AI Scientist - Failures",
+        "wikilink": "[[projects/ai-scientist/failures|AI Scientist - Failures]]"
+      },
+      {
+        "page_key": "decisions",
+        "title": "AI Scientist - Decisions",
+        "wikilink": "[[projects/ai-scientist/decisions|AI Scientist - Decisions]]"
+      },
+      {
+        "page_key": "next-steps",
+        "title": "AI Scientist - Next Steps",
+        "wikilink": "[[projects/ai-scientist/next-steps|AI Scientist - Next Steps]]"
+      },
+      {
+        "page_key": "open-questions",
+        "title": "AI Scientist - Open Questions",
+        "wikilink": "[[projects/ai-scientist/open-questions|AI Scientist - Open Questions]]"
+      }
+    ],
+    "relative_page_path": "projects/ai-scientist/workflow-rules.md",
+    "source_count": 1,
+    "title": "AI Scientist - Workflow Rules"
+  },
+  "renderer": "obsidian_markdown",
+  "synthesized_claims": [
+    {
+      "claim_id": "claim-1",
+      "confidence": "strong",
+      "latent_type": "implicit_dos_and_donts",
+      "provenance_refs": [
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:43347",
+          "end_line_no": 43347,
+          "end_timestamp": "2026-03-11T19:37:55.573Z",
+          "rule_ids": [
+            "dont_rule.explicit"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:5361",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:43343",
+          "start_line_no": 43343,
+          "start_timestamp": "2026-03-11T19:30:44.252Z",
+          "statement": "if the question/evidence are fine but the **reasoning mode is wrong**, do **not** approve it"
+        }
+      ],
+      "section_id": "summary",
+      "supporting_item_ids": [
+        "ai-scientist:dont_rule:fb7bb58bfd669516"
+      ],
+      "text": "Do not approve responses if the question or evidence is fine but the reasoning mode is wrong."
+    },
+    {
+      "claim_id": "claim-2",
+      "confidence": "strong",
+      "latent_type": "implicit_dos_and_donts",
+      "provenance_refs": [
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:43654",
+          "end_line_no": 43654,
+          "end_timestamp": "2026-03-11T20:15:25.942Z",
+          "rule_ids": [
+            "dont_rule.explicit"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:5423",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:43654",
+          "start_line_no": 43654,
+          "start_timestamp": "2026-03-11T20:15:25.942Z",
+          "statement": "do not ask you to score weak benchmark cases"
+        }
+      ],
+      "section_id": "summary",
+      "supporting_item_ids": [
+        "ai-scientist:dont_rule:c4581cfbd41cf024"
+      ],
+      "text": "Do not ask to score weak benchmark cases."
+    },
+    {
+      "claim_id": "claim-3",
+      "confidence": "strong",
+      "latent_type": "implicit_dos_and_donts",
+      "provenance_refs": [
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:43654",
+          "end_line_no": 43654,
+          "end_timestamp": "2026-03-11T20:15:25.942Z",
+          "rule_ids": [
+            "dont_rule.explicit"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:5423",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:43654",
+          "start_line_no": 43654,
+          "start_timestamp": "2026-03-11T20:15:25.942Z",
+          "statement": "`21` still do not"
+        }
+      ],
+      "section_id": "summary",
+      "supporting_item_ids": [
+        "ai-scientist:dont_rule:44eabf42b1bd9ba3"
+      ],
+      "text": "Responses that still do not meet criteria should not be approved."
+    },
+    {
+      "claim_id": "claim-4",
+      "confidence": "strong",
+      "latent_type": "implicit_dos_and_donts",
+      "provenance_refs": [
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:43654",
+          "end_line_no": 43654,
+          "end_timestamp": "2026-03-11T20:15:25.942Z",
+          "rule_ids": [
+            "dont_rule.explicit"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:5423",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:43654",
+          "start_line_no": 43654,
+          "start_timestamp": "2026-03-11T20:15:25.942Z",
+          "statement": "`21` still do not"
+        }
+      ],
+      "section_id": "dont_rule",
+      "supporting_item_ids": [
+        "ai-scientist:dont_rule:44eabf42b1bd9ba3"
+      ],
+      "text": "Responses that still do not meet criteria should not be approved."
+    },
+    {
+      "claim_id": "claim-5",
+      "confidence": "strong",
+      "latent_type": "implicit_dos_and_donts",
+      "provenance_refs": [
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:43654",
+          "end_line_no": 43654,
+          "end_timestamp": "2026-03-11T20:15:25.942Z",
+          "rule_ids": [
+            "dont_rule.explicit"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:5423",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:43654",
+          "start_line_no": 43654,
+          "start_timestamp": "2026-03-11T20:15:25.942Z",
+          "statement": "do not ask you to score weak benchmark cases"
+        }
+      ],
+      "section_id": "dont_rule",
+      "supporting_item_ids": [
+        "ai-scientist:dont_rule:c4581cfbd41cf024"
+      ],
+      "text": "Do not ask to score weak benchmark cases."
+    },
+    {
+      "claim_id": "claim-6",
+      "confidence": "strong",
+      "latent_type": "implicit_dos_and_donts",
+      "provenance_refs": [
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:43347",
+          "end_line_no": 43347,
+          "end_timestamp": "2026-03-11T19:37:55.573Z",
+          "rule_ids": [
+            "dont_rule.explicit"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:5361",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:43343",
+          "start_line_no": 43343,
+          "start_timestamp": "2026-03-11T19:30:44.252Z",
+          "statement": "if the question/evidence are fine but the **reasoning mode is wrong**, do **not** approve it"
+        }
+      ],
+      "section_id": "dont_rule",
+      "supporting_item_ids": [
+        "ai-scientist:dont_rule:fb7bb58bfd669516"
+      ],
+      "text": "Do not approve responses if the question or evidence is fine but the reasoning mode is wrong."
+    }
+  ],
+  "versions": {
+    "page_config_version": 2,
+    "renderer_version": 2,
+    "synthesis_prompt_version": 2,
+    "synthesis_schema_version": 1,
+    "wiki_schema_version": 2
+  }
+}

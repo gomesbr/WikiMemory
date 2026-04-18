@@ -1,0 +1,2542 @@
+{
+  "bucket": "architecture",
+  "citations": [
+    {
+      "citation_id": "claim-1",
+      "item_keys": [
+        "open-brain:architecture_note:ba3e4d767bf8af2c"
+      ],
+      "kind": "synthesized_claim",
+      "label": "claim-1",
+      "provenance_refs": [
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:43711",
+          "end_line_no": 43711,
+          "end_timestamp": "2026-03-11T20:26:48.841Z",
+          "rule_ids": [
+            "architecture_note.explicit"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:5433",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:43710",
+          "start_line_no": 43710,
+          "start_timestamp": "2026-03-11T20:26:48.840Z",
+          "statement": "- Prefer generalizable architecture over one-off patches."
+        },
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:44562",
+          "end_line_no": 44562,
+          "end_timestamp": "2026-03-12T00:30:25.279Z",
+          "rule_ids": [
+            "architecture_note.explicit"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:5625",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:44561",
+          "start_line_no": 44561,
+          "start_timestamp": "2026-03-12T00:30:25.278Z",
+          "statement": "- Prefer generalizable architecture over one-off patches."
+        },
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:57251",
+          "end_line_no": 57251,
+          "end_timestamp": "2026-03-13T12:08:42.869Z",
+          "rule_ids": [
+            "architecture_note.explicit"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:8048",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:57250",
+          "start_line_no": 57250,
+          "start_timestamp": "2026-03-13T12:08:42.868Z",
+          "statement": "- Prefer generalizable architecture over one-off patches."
+        }
+      ]
+    },
+    {
+      "citation_id": "claim-2",
+      "item_keys": [
+        "open-brain:architecture_note:4beda0bb4b4f276f"
+      ],
+      "kind": "synthesized_claim",
+      "label": "claim-2",
+      "provenance_refs": [
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:31366",
+          "end_line_no": 31366,
+          "end_timestamp": "2026-03-09T00:12:13.952Z",
+          "rule_ids": [
+            "architecture_note.explicit"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:3409",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:31363",
+          "start_line_no": 31363,
+          "start_timestamp": "2026-03-09T00:08:40.911Z",
+          "statement": "`component_registry`"
+        },
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:31410",
+          "end_line_no": 31410,
+          "end_timestamp": "2026-03-09T00:55:27.741Z",
+          "rule_ids": [
+            "architecture_note.explicit"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:3420",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:31407",
+          "start_line_no": 31407,
+          "start_timestamp": "2026-03-09T00:31:07.281Z",
+          "statement": "`component_registry`"
+        },
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:31434",
+          "end_line_no": 31434,
+          "end_timestamp": "2026-03-09T01:11:52.990Z",
+          "rule_ids": [
+            "architecture_note.explicit"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:3426",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:31431",
+          "start_line_no": 31431,
+          "start_timestamp": "2026-03-09T01:04:32.267Z",
+          "statement": "`component_registry`"
+        }
+      ]
+    },
+    {
+      "citation_id": "claim-3",
+      "item_keys": [
+        "open-brain:architecture_note:518c62e8e53bacec"
+      ],
+      "kind": "synthesized_claim",
+      "label": "claim-3",
+      "provenance_refs": [
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:31366",
+          "end_line_no": 31366,
+          "end_timestamp": "2026-03-09T00:12:13.952Z",
+          "rule_ids": [
+            "architecture_note.explicit"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:3409",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:31363",
+          "start_line_no": 31363,
+          "start_timestamp": "2026-03-09T00:08:40.911Z",
+          "statement": "`strategy_component_bindings`"
+        },
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:31410",
+          "end_line_no": 31410,
+          "end_timestamp": "2026-03-09T00:55:27.741Z",
+          "rule_ids": [
+            "architecture_note.explicit"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:3420",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:31407",
+          "start_line_no": 31407,
+          "start_timestamp": "2026-03-09T00:31:07.281Z",
+          "statement": "`strategy_component_bindings`"
+        },
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:31434",
+          "end_line_no": 31434,
+          "end_timestamp": "2026-03-09T01:11:52.990Z",
+          "rule_ids": [
+            "architecture_note.explicit"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:3426",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:31431",
+          "start_line_no": 31431,
+          "start_timestamp": "2026-03-09T01:04:32.267Z",
+          "statement": "`strategy_component_bindings`"
+        }
+      ]
+    },
+    {
+      "citation_id": "claim-4",
+      "item_keys": [
+        "open-brain:architecture_note:ba3e4d767bf8af2c"
+      ],
+      "kind": "synthesized_claim",
+      "label": "claim-4",
+      "provenance_refs": [
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:43711",
+          "end_line_no": 43711,
+          "end_timestamp": "2026-03-11T20:26:48.841Z",
+          "rule_ids": [
+            "architecture_note.explicit"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:5433",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:43710",
+          "start_line_no": 43710,
+          "start_timestamp": "2026-03-11T20:26:48.840Z",
+          "statement": "- Prefer generalizable architecture over one-off patches."
+        },
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:44562",
+          "end_line_no": 44562,
+          "end_timestamp": "2026-03-12T00:30:25.279Z",
+          "rule_ids": [
+            "architecture_note.explicit"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:5625",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:44561",
+          "start_line_no": 44561,
+          "start_timestamp": "2026-03-12T00:30:25.278Z",
+          "statement": "- Prefer generalizable architecture over one-off patches."
+        },
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:57251",
+          "end_line_no": 57251,
+          "end_timestamp": "2026-03-13T12:08:42.869Z",
+          "rule_ids": [
+            "architecture_note.explicit"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:8048",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:57250",
+          "start_line_no": 57250,
+          "start_timestamp": "2026-03-13T12:08:42.868Z",
+          "statement": "- Prefer generalizable architecture over one-off patches."
+        }
+      ]
+    },
+    {
+      "citation_id": "claim-5",
+      "item_keys": [
+        "open-brain:architecture_note:4beda0bb4b4f276f"
+      ],
+      "kind": "synthesized_claim",
+      "label": "claim-5",
+      "provenance_refs": [
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:31366",
+          "end_line_no": 31366,
+          "end_timestamp": "2026-03-09T00:12:13.952Z",
+          "rule_ids": [
+            "architecture_note.explicit"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:3409",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:31363",
+          "start_line_no": 31363,
+          "start_timestamp": "2026-03-09T00:08:40.911Z",
+          "statement": "`component_registry`"
+        },
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:31410",
+          "end_line_no": 31410,
+          "end_timestamp": "2026-03-09T00:55:27.741Z",
+          "rule_ids": [
+            "architecture_note.explicit"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:3420",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:31407",
+          "start_line_no": 31407,
+          "start_timestamp": "2026-03-09T00:31:07.281Z",
+          "statement": "`component_registry`"
+        },
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:31434",
+          "end_line_no": 31434,
+          "end_timestamp": "2026-03-09T01:11:52.990Z",
+          "rule_ids": [
+            "architecture_note.explicit"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:3426",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:31431",
+          "start_line_no": 31431,
+          "start_timestamp": "2026-03-09T01:04:32.267Z",
+          "statement": "`component_registry`"
+        }
+      ]
+    },
+    {
+      "citation_id": "item-architecture_note-1",
+      "item_keys": [
+        "open-brain:architecture_note:ba3e4d767bf8af2c"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-architecture_note-1",
+      "provenance_refs": [
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:43711",
+          "end_line_no": 43711,
+          "end_timestamp": "2026-03-11T20:26:48.841Z",
+          "rule_ids": [
+            "architecture_note.explicit"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:5433",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:43710",
+          "start_line_no": 43710,
+          "start_timestamp": "2026-03-11T20:26:48.840Z",
+          "statement": "- Prefer generalizable architecture over one-off patches."
+        },
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:44562",
+          "end_line_no": 44562,
+          "end_timestamp": "2026-03-12T00:30:25.279Z",
+          "rule_ids": [
+            "architecture_note.explicit"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:5625",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:44561",
+          "start_line_no": 44561,
+          "start_timestamp": "2026-03-12T00:30:25.278Z",
+          "statement": "- Prefer generalizable architecture over one-off patches."
+        },
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:57251",
+          "end_line_no": 57251,
+          "end_timestamp": "2026-03-13T12:08:42.869Z",
+          "rule_ids": [
+            "architecture_note.explicit"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:8048",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:57250",
+          "start_line_no": 57250,
+          "start_timestamp": "2026-03-13T12:08:42.868Z",
+          "statement": "- Prefer generalizable architecture over one-off patches."
+        }
+      ]
+    },
+    {
+      "citation_id": "item-architecture_note-2",
+      "item_keys": [
+        "open-brain:architecture_note:9abbec94c1f4cd0f"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-architecture_note-2",
+      "provenance_refs": [
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:31345",
+          "end_line_no": 31345,
+          "end_timestamp": "2026-03-08T23:56:56.909Z",
+          "rule_ids": [
+            "architecture_note.explicit"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:3404",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:31345",
+          "start_line_no": 31345,
+          "start_timestamp": "2026-03-08T23:56:56.909Z",
+          "statement": "component_performance"
+        },
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:31349",
+          "end_line_no": 31349,
+          "end_timestamp": "2026-03-08T23:57:00.275Z",
+          "rule_ids": [
+            "architecture_note.explicit"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:3405",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:31346",
+          "start_line_no": 31346,
+          "start_timestamp": "2026-03-08T23:56:56.911Z",
+          "statement": "component_performance"
+        },
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:31366",
+          "end_line_no": 31366,
+          "end_timestamp": "2026-03-09T00:12:13.952Z",
+          "rule_ids": [
+            "architecture_note.explicit"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:3409",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:31363",
+          "start_line_no": 31363,
+          "start_timestamp": "2026-03-09T00:08:40.911Z",
+          "statement": "`component_performance`"
+        }
+      ]
+    },
+    {
+      "citation_id": "item-architecture_note-3",
+      "item_keys": [
+        "open-brain:architecture_note:4beda0bb4b4f276f"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-architecture_note-3",
+      "provenance_refs": [
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:31366",
+          "end_line_no": 31366,
+          "end_timestamp": "2026-03-09T00:12:13.952Z",
+          "rule_ids": [
+            "architecture_note.explicit"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:3409",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:31363",
+          "start_line_no": 31363,
+          "start_timestamp": "2026-03-09T00:08:40.911Z",
+          "statement": "`component_registry`"
+        },
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:31410",
+          "end_line_no": 31410,
+          "end_timestamp": "2026-03-09T00:55:27.741Z",
+          "rule_ids": [
+            "architecture_note.explicit"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:3420",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:31407",
+          "start_line_no": 31407,
+          "start_timestamp": "2026-03-09T00:31:07.281Z",
+          "statement": "`component_registry`"
+        },
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:31434",
+          "end_line_no": 31434,
+          "end_timestamp": "2026-03-09T01:11:52.990Z",
+          "rule_ids": [
+            "architecture_note.explicit"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:3426",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:31431",
+          "start_line_no": 31431,
+          "start_timestamp": "2026-03-09T01:04:32.267Z",
+          "statement": "`component_registry`"
+        }
+      ]
+    },
+    {
+      "citation_id": "item-architecture_note-4",
+      "item_keys": [
+        "open-brain:architecture_note:f20e69831af7254f"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-architecture_note-4",
+      "provenance_refs": [
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:31366",
+          "end_line_no": 31366,
+          "end_timestamp": "2026-03-09T00:12:13.952Z",
+          "rule_ids": [
+            "architecture_note.explicit"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:3409",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:31363",
+          "start_line_no": 31363,
+          "start_timestamp": "2026-03-09T00:08:40.911Z",
+          "statement": "`component_pair_performance`"
+        },
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:31410",
+          "end_line_no": 31410,
+          "end_timestamp": "2026-03-09T00:55:27.741Z",
+          "rule_ids": [
+            "architecture_note.explicit"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:3420",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:31407",
+          "start_line_no": 31407,
+          "start_timestamp": "2026-03-09T00:31:07.281Z",
+          "statement": "`component_pair_performance`"
+        },
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:31434",
+          "end_line_no": 31434,
+          "end_timestamp": "2026-03-09T01:11:52.990Z",
+          "rule_ids": [
+            "architecture_note.explicit"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:3426",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:31431",
+          "start_line_no": 31431,
+          "start_timestamp": "2026-03-09T01:04:32.267Z",
+          "statement": "`component_pair_performance`"
+        }
+      ]
+    },
+    {
+      "citation_id": "item-architecture_note-5",
+      "item_keys": [
+        "open-brain:architecture_note:518c62e8e53bacec"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-architecture_note-5",
+      "provenance_refs": [
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:31366",
+          "end_line_no": 31366,
+          "end_timestamp": "2026-03-09T00:12:13.952Z",
+          "rule_ids": [
+            "architecture_note.explicit"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:3409",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:31363",
+          "start_line_no": 31363,
+          "start_timestamp": "2026-03-09T00:08:40.911Z",
+          "statement": "`strategy_component_bindings`"
+        },
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:31410",
+          "end_line_no": 31410,
+          "end_timestamp": "2026-03-09T00:55:27.741Z",
+          "rule_ids": [
+            "architecture_note.explicit"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:3420",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:31407",
+          "start_line_no": 31407,
+          "start_timestamp": "2026-03-09T00:31:07.281Z",
+          "statement": "`strategy_component_bindings`"
+        },
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:31434",
+          "end_line_no": 31434,
+          "end_timestamp": "2026-03-09T01:11:52.990Z",
+          "rule_ids": [
+            "architecture_note.explicit"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:3426",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:31431",
+          "start_line_no": 31431,
+          "start_timestamp": "2026-03-09T01:04:32.267Z",
+          "statement": "`strategy_component_bindings`"
+        }
+      ]
+    },
+    {
+      "citation_id": "item-architecture_note-6",
+      "item_keys": [
+        "open-brain:architecture_note:69c1f020730ee686"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-architecture_note-6",
+      "provenance_refs": [
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:32109",
+          "end_line_no": 32109,
+          "end_timestamp": "2026-03-09T01:41:48.625Z",
+          "rule_ids": [
+            "architecture_note.explicit"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:3519",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:32102",
+          "start_line_no": 32102,
+          "start_timestamp": "2026-03-09T01:41:41.523Z",
+          "statement": "modifiedcomponents"
+        },
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:83332",
+          "end_line_no": 83332,
+          "end_timestamp": "2026-03-26T20:13:33.949Z",
+          "rule_ids": [
+            "architecture_note.explicit"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:12433",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:83327",
+          "start_line_no": 83327,
+          "start_timestamp": "2026-03-26T20:13:02.800Z",
+          "statement": "modifiedcomponents"
+        }
+      ]
+    },
+    {
+      "citation_id": "item-architecture_note-7",
+      "item_keys": [
+        "open-brain:architecture_note:8a8ce2bc0dff4440"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-architecture_note-7",
+      "provenance_refs": [
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:31434",
+          "end_line_no": 31434,
+          "end_timestamp": "2026-03-09T01:11:52.990Z",
+          "rule_ids": [
+            "architecture_note.explicit"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:3426",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:31431",
+          "start_line_no": 31431,
+          "start_timestamp": "2026-03-09T01:04:32.267Z",
+          "statement": "`component_stability`"
+        },
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:31436",
+          "end_line_no": 31436,
+          "end_timestamp": "2026-03-09T01:11:52.993Z",
+          "rule_ids": [
+            "architecture_note.explicit"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:3428",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:31436",
+          "start_line_no": 31436,
+          "start_timestamp": "2026-03-09T01:11:52.993Z",
+          "statement": "`component_stability`"
+        },
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:31440",
+          "end_line_no": 31440,
+          "end_timestamp": "2026-03-09T01:11:56.428Z",
+          "rule_ids": [
+            "architecture_note.explicit"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:3429",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:31437",
+          "start_line_no": 31437,
+          "start_timestamp": "2026-03-09T01:11:52.994Z",
+          "statement": "`component_stability`"
+        }
+      ]
+    },
+    {
+      "citation_id": "item-architecture_note-8",
+      "item_keys": [
+        "open-brain:architecture_note:00c6379ef16d53a0"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-architecture_note-8",
+      "provenance_refs": [
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:25508",
+          "end_line_no": 25508,
+          "end_timestamp": "2026-03-07T18:16:27.048Z",
+          "rule_ids": [
+            "architecture_note.explicit"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:2605",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:25501",
+          "start_line_no": 25501,
+          "start_timestamp": "2026-03-07T18:16:02.926Z",
+          "statement": "component"
+        },
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:31362",
+          "end_line_no": 31362,
+          "end_timestamp": "2026-03-09T00:08:40.907Z",
+          "rule_ids": [
+            "architecture_note.explicit"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:3408",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:31360",
+          "start_line_no": 31360,
+          "start_timestamp": "2026-03-09T00:08:17.979Z",
+          "statement": "component"
+        },
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:31366",
+          "end_line_no": 31366,
+          "end_timestamp": "2026-03-09T00:12:13.952Z",
+          "rule_ids": [
+            "architecture_note.explicit"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:3409",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:31363",
+          "start_line_no": 31363,
+          "start_timestamp": "2026-03-09T00:08:40.911Z",
+          "statement": "component"
+        }
+      ]
+    },
+    {
+      "citation_id": "item-architecture_note-9",
+      "item_keys": [
+        "open-brain:architecture_note:02b4a8e04574bc78"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-architecture_note-9",
+      "provenance_refs": [
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:2638",
+          "end_line_no": 2638,
+          "end_timestamp": "2026-04-13T03:31:01.784Z",
+          "rule_ids": [
+            "architecture_note.explicit"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:540",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:2635",
+          "start_line_no": 2635,
+          "start_timestamp": "2026-04-13T03:28:43.251Z",
+          "statement": "- `current_state`, `decision`, `architecture_note`, `task_request`, `next_step`, `open_question`, `failure`, project-scoped rules"
+        },
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:2641",
+          "end_line_no": 2641,
+          "end_timestamp": "2026-04-13T03:31:01.789Z",
+          "rule_ids": [
+            "architecture_note.explicit"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:542",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:2641",
+          "start_line_no": 2641,
+          "start_timestamp": "2026-04-13T03:31:01.789Z",
+          "statement": "- `current_state`, `decision`, `architecture_note`, `task_request`, `next_step`, `open_question`, `failure`, project-scoped rules"
+        },
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:2643",
+          "end_line_no": 2643,
+          "end_timestamp": "2026-04-13T03:31:01.981Z",
+          "rule_ids": [
+            "architecture_note.explicit"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:543",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:2642",
+          "start_line_no": 2642,
+          "start_timestamp": "2026-04-13T03:31:01.789Z",
+          "statement": "- `current_state`, `decision`, `architecture_note`, `task_request`, `next_step`, `open_question`, `failure`, project-scoped rules"
+        }
+      ]
+    },
+    {
+      "citation_id": "item-architecture_note-10",
+      "item_keys": [
+        "open-brain:architecture_note:4a399bebb3a43fc1"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-architecture_note-10",
+      "provenance_refs": [
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:2638",
+          "end_line_no": 2638,
+          "end_timestamp": "2026-04-13T03:31:01.784Z",
+          "rule_ids": [
+            "architecture_note.explicit"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:540",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:2635",
+          "start_line_no": 2635,
+          "start_timestamp": "2026-04-13T03:28:43.251Z",
+          "statement": "- `project`: `identity=4`, `current_state=6`, `architecture=5`, `project_rules=4`, `tasks=5`, `next_steps=5`, `open_questions=4`, `failures_risks=4`"
+        },
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:2641",
+          "end_line_no": 2641,
+          "end_timestamp": "2026-04-13T03:31:01.789Z",
+          "rule_ids": [
+            "architecture_note.explicit"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:542",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:2641",
+          "start_line_no": 2641,
+          "start_timestamp": "2026-04-13T03:31:01.789Z",
+          "statement": "- `project`: `identity=4`, `current_state=6`, `architecture=5`, `project_rules=4`, `tasks=5`, `next_steps=5`, `open_questions=4`, `failures_risks=4`"
+        },
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:2643",
+          "end_line_no": 2643,
+          "end_timestamp": "2026-04-13T03:31:01.981Z",
+          "rule_ids": [
+            "architecture_note.explicit"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:543",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:2642",
+          "start_line_no": 2642,
+          "start_timestamp": "2026-04-13T03:31:01.789Z",
+          "statement": "- `project`: `identity=4`, `current_state=6`, `architecture=5`, `project_rules=4`, `tasks=5`, `next_steps=5`, `open_questions=4`, `failures_risks=4`"
+        }
+      ]
+    },
+    {
+      "citation_id": "item-architecture_note-11",
+      "item_keys": [
+        "open-brain:architecture_note:21b7f68063651693"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-architecture_note-11",
+      "provenance_refs": [
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:1824",
+          "end_line_no": 1824,
+          "end_timestamp": "2026-04-13T02:41:56.934Z",
+          "rule_ids": [
+            "architecture_note.explicit"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:395",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:1824",
+          "start_line_no": 1824,
+          "start_timestamp": "2026-04-13T02:41:56.934Z",
+          "statement": "- I also fixed a real Windows integration bug the smoke test exposed: BOM-encoded JSON config/state files are now accepted across the pipeline in [wikimemory/discovery.py](/c:/Users/Fabio/Cursor%20AI%20projects/Projects/WikiMemory/wikimemory/discovery.py), [wikimemory/normalization.py](/c:/Users/Fabio/Cursor%20AI%20projects/Projects/WikiMemory/wikimemory/normalization.py), [wikimemory/segmentation.py](/c:/Users/Fabio/Cursor%20AI%20projects/Projects/WikiMemory/wikimemory/segmentation.py), [wikimemory/classification.py](/c:/Users/Fabio/Cursor%20AI%20projects/Projects/WikiMemory/wikimemory/classification.py), [wikimemory/extraction.py](/c:/Users/Fabio/Cursor%20AI%20projects/Projects/WikiMemory/wikimemory/extraction.py), and [wikimemory/wiki.py](/c:/Users/Fabio/Cursor%20AI%20projects/Projects/WikiMemory/wikimemory/wiki.py)."
+        },
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:1828",
+          "end_line_no": 1828,
+          "end_timestamp": "2026-04-13T02:45:08.085Z",
+          "rule_ids": [
+            "architecture_note.explicit"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:396",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:1825",
+          "start_line_no": 1825,
+          "start_timestamp": "2026-04-13T02:41:56.934Z",
+          "statement": "- I also fixed a real Windows integration bug the smoke test exposed: BOM-encoded JSON config/state files are now accepted across the pipeline in [wikimemory/discovery.py](/c:/Users/Fabio/Cursor%20AI%20projects/Projects/WikiMemory/wikimemory/discovery.py), [wikimemory/normalization.py](/c:/Users/Fabio/Cursor%20AI%20projects/Projects/WikiMemory/wikimemory/normalization.py), [wikimemory/segmentation.py](/c:/Users/Fabio/Cursor%20AI%20projects/Projects/WikiMemory/wikimemory/segmentation.py), [wikimemory/classification.py](/c:/Users/Fabio/Cursor%20AI%20projects/Projects/WikiMemory/wikimemory/classification.py), [wikimemory/extraction.py](/c:/Users/Fabio/Cursor%20AI%20projects/Projects/WikiMemory/wikimemory/extraction.py), and [wikimemory/wiki.py](/c:/Users/Fabio/Cursor%20AI%20projects/Projects/WikiMemory/wikimemory/wiki.py)."
+        }
+      ]
+    },
+    {
+      "citation_id": "item-architecture_note-12",
+      "item_keys": [
+        "open-brain:architecture_note:2cc36c60ba034180"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-architecture_note-12",
+      "provenance_refs": [
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:991",
+          "end_line_no": 991,
+          "end_timestamp": "2026-04-13T01:04:58.753Z",
+          "rule_ids": [
+            "architecture_note.explicit"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:224",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:988",
+          "start_line_no": 988,
+          "start_timestamp": "2026-04-13T01:00:46.126Z",
+          "statement": "- `architecture_note`"
+        },
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:994",
+          "end_line_no": 994,
+          "end_timestamp": "2026-04-13T01:04:59.139Z",
+          "rule_ids": [
+            "architecture_note.explicit"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:226",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:994",
+          "start_line_no": 994,
+          "start_timestamp": "2026-04-13T01:04:59.139Z",
+          "statement": "- `architecture_note`"
+        },
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:996",
+          "end_line_no": 996,
+          "end_timestamp": "2026-04-13T01:04:59.352Z",
+          "rule_ids": [
+            "architecture_note.explicit"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:227",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:995",
+          "start_line_no": 995,
+          "start_timestamp": "2026-04-13T01:04:59.140Z",
+          "statement": "- `architecture_note`"
+        }
+      ]
+    },
+    {
+      "citation_id": "item-architecture_note-13",
+      "item_keys": [
+        "open-brain:architecture_note:19c44efa5f5361a0"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-architecture_note-13",
+      "provenance_refs": [
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:991",
+          "end_line_no": 991,
+          "end_timestamp": "2026-04-13T01:04:58.753Z",
+          "rule_ids": [
+            "architecture_note.explicit"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:224",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:988",
+          "start_line_no": 988,
+          "start_timestamp": "2026-04-13T01:00:46.126Z",
+          "statement": "- `architecture_note` -> `architecture`"
+        },
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:994",
+          "end_line_no": 994,
+          "end_timestamp": "2026-04-13T01:04:59.139Z",
+          "rule_ids": [
+            "architecture_note.explicit"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:226",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:994",
+          "start_line_no": 994,
+          "start_timestamp": "2026-04-13T01:04:59.139Z",
+          "statement": "- `architecture_note` -> `architecture`"
+        },
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:996",
+          "end_line_no": 996,
+          "end_timestamp": "2026-04-13T01:04:59.352Z",
+          "rule_ids": [
+            "architecture_note.explicit"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:227",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:995",
+          "start_line_no": 995,
+          "start_timestamp": "2026-04-13T01:04:59.140Z",
+          "statement": "- `architecture_note` -> `architecture`"
+        }
+      ]
+    },
+    {
+      "citation_id": "item-architecture_note-14",
+      "item_keys": [
+        "open-brain:architecture_note:730b0275a11988e7"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-architecture_note-14",
+      "provenance_refs": [
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:991",
+          "end_line_no": 991,
+          "end_timestamp": "2026-04-13T01:04:58.753Z",
+          "rule_ids": [
+            "architecture_note.explicit"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:224",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:988",
+          "start_line_no": 988,
+          "start_timestamp": "2026-04-13T01:00:46.126Z",
+          "statement": "- `decision`, `architecture_note`, `code_location`, `current_state`, `task_request`, `outcome`, `failure`, `next_step`, `open_question` default to the best non-global segment domain"
+        },
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:994",
+          "end_line_no": 994,
+          "end_timestamp": "2026-04-13T01:04:59.139Z",
+          "rule_ids": [
+            "architecture_note.explicit"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:226",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:994",
+          "start_line_no": 994,
+          "start_timestamp": "2026-04-13T01:04:59.139Z",
+          "statement": "- `decision`, `architecture_note`, `code_location`, `current_state`, `task_request`, `outcome`, `failure`, `next_step`, `open_question` default to the best non-global segment domain"
+        },
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:996",
+          "end_line_no": 996,
+          "end_timestamp": "2026-04-13T01:04:59.352Z",
+          "rule_ids": [
+            "architecture_note.explicit"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:227",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:995",
+          "start_line_no": 995,
+          "start_timestamp": "2026-04-13T01:04:59.140Z",
+          "statement": "- `decision`, `architecture_note`, `code_location`, `current_state`, `task_request`, `outcome`, `failure`, `next_step`, `open_question` default to the best non-global segment domain"
+        }
+      ]
+    },
+    {
+      "citation_id": "item-architecture_note-15",
+      "item_keys": [
+        "open-brain:architecture_note:a6893f532d3b48d0"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-architecture_note-15",
+      "provenance_refs": [
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:991",
+          "end_line_no": 991,
+          "end_timestamp": "2026-04-13T01:04:58.753Z",
+          "rule_ids": [
+            "architecture_note.explicit"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:224",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:988",
+          "start_line_no": 988,
+          "start_timestamp": "2026-04-13T01:00:46.126Z",
+          "statement": "- store them in `code_location` and map them to `architecture_note` or `code_location` items depending on the triggering rule"
+        },
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:994",
+          "end_line_no": 994,
+          "end_timestamp": "2026-04-13T01:04:59.139Z",
+          "rule_ids": [
+            "architecture_note.explicit"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:226",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:994",
+          "start_line_no": 994,
+          "start_timestamp": "2026-04-13T01:04:59.139Z",
+          "statement": "- store them in `code_location` and map them to `architecture_note` or `code_location` items depending on the triggering rule"
+        },
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:996",
+          "end_line_no": 996,
+          "end_timestamp": "2026-04-13T01:04:59.352Z",
+          "rule_ids": [
+            "architecture_note.explicit"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:227",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:995",
+          "start_line_no": 995,
+          "start_timestamp": "2026-04-13T01:04:59.140Z",
+          "statement": "- store them in `code_location` and map them to `architecture_note` or `code_location` items depending on the triggering rule"
+        }
+      ]
+    },
+    {
+      "citation_id": "item-architecture_note-16",
+      "item_keys": [
+        "open-brain:architecture_note:fcb46026457060e9"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-architecture_note-16",
+      "provenance_refs": [
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:980",
+          "end_line_no": 980,
+          "end_timestamp": "2026-04-13T00:58:06.926Z",
+          "rule_ids": [
+            "architecture_note.explicit"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:220",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:977",
+          "start_line_no": 977,
+          "start_timestamp": "2026-04-13T00:53:17.296Z",
+          "statement": "`communication_preference`, `do_rule`, `dont_rule`, `workflow_rule`, `decision`, `architecture_note`, `code_location`, `current_state`, `task_request`, `outcome`, `failure`, `next_step`, `open_question`"
+        }
+      ]
+    },
+    {
+      "citation_id": "item-architecture_note-17",
+      "item_keys": [
+        "open-brain:architecture_note:d48bd10f9d650d5a"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-architecture_note-17",
+      "provenance_refs": [
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:980",
+          "end_line_no": 980,
+          "end_timestamp": "2026-04-13T00:58:06.926Z",
+          "rule_ids": [
+            "architecture_note.explicit"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:220",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:977",
+          "start_line_no": 977,
+          "start_timestamp": "2026-04-13T00:53:17.296Z",
+          "statement": "Introducing an LLM in Phase 5 now would mainly buy you better recall on messy, implicit knowledge: it can pull out decisions, preferences, next steps, and architecture notes even when they\u2019re phrased indirectly or spread across a segment."
+        }
+      ]
+    },
+    {
+      "citation_id": "item-architecture_note-18",
+      "item_keys": [
+        "open-brain:architecture_note:b00bf1a1104b194c"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-architecture_note-18",
+      "provenance_refs": [
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:940",
+          "end_line_no": 940,
+          "end_timestamp": "2026-04-13T00:39:27.116Z",
+          "rule_ids": [
+            "architecture_note.explicit"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:209",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:930",
+          "start_line_no": 930,
+          "start_timestamp": "2026-04-13T00:39:13.026Z",
+          "statement": "- Added Phase 4 classification in [wikimemory/classification.py](/c:/Users/Fabio/Cursor%20AI%20projects/Projects/WikiMemory/wikimemory/classification.py) with a new `run_classification(...)` pipeline that:"
+        },
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:945",
+          "end_line_no": 945,
+          "end_timestamp": "2026-04-13T00:42:55.037Z",
+          "rule_ids": [
+            "architecture_note.explicit"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:210",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:941",
+          "start_line_no": 941,
+          "start_timestamp": "2026-04-13T00:39:27.117Z",
+          "statement": "- Added Phase 4 classification in [wikimemory/classification.py](/c:/Users/Fabio/Cursor%20AI%20projects/Projects/WikiMemory/wikimemory/classification.py) with a new `run_classification(...)` pipeline that:"
+        }
+      ]
+    },
+    {
+      "citation_id": "item-architecture_note-19",
+      "item_keys": [
+        "open-brain:architecture_note:ce9fbbcc082fb832"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-architecture_note-19",
+      "provenance_refs": [
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:738",
+          "end_line_no": 738,
+          "end_timestamp": "2026-04-12T23:56:11.488Z",
+          "rule_ids": [
+            "architecture_note.explicit"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:165",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:728",
+          "start_line_no": 728,
+          "start_timestamp": "2026-04-12T23:55:59.650Z",
+          "statement": "- Added Phase 3 segmentation in [wikimemory/segmentation.py](/c:/Users/Fabio/Cursor%20AI%20projects/Projects/WikiMemory/wikimemory/segmentation.py) with a new `run_segmentation(...)` pipeline that:"
+        },
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:742",
+          "end_line_no": 742,
+          "end_timestamp": "2026-04-13T00:10:33.601Z",
+          "rule_ids": [
+            "architecture_note.explicit"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:166",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:739",
+          "start_line_no": 739,
+          "start_timestamp": "2026-04-12T23:56:11.489Z",
+          "statement": "- Added Phase 3 segmentation in [wikimemory/segmentation.py](/c:/Users/Fabio/Cursor%20AI%20projects/Projects/WikiMemory/wikimemory/segmentation.py) with a new `run_segmentation(...)` pipeline that:"
+        }
+      ]
+    },
+    {
+      "citation_id": "item-architecture_note-20",
+      "item_keys": [
+        "open-brain:architecture_note:49c53b82f492b660"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-architecture_note-20",
+      "provenance_refs": [
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:13",
+          "end_line_no": 13,
+          "end_timestamp": "2026-04-12T21:04:54.204Z",
+          "rule_ids": [
+            "architecture_note.explicit"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:7",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:13",
+          "start_line_no": 13,
+          "start_timestamp": "2026-04-12T21:04:54.204Z",
+          "statement": "Turn classified segments into durable knowledge items such as preferences, rules, decisions, architecture notes, outcomes, and open questions."
+        },
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:18",
+          "end_line_no": 18,
+          "end_timestamp": "2026-04-12T21:31:21.167Z",
+          "rule_ids": [
+            "architecture_note.explicit"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:8",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:14",
+          "start_line_no": 14,
+          "start_timestamp": "2026-04-12T21:04:54.205Z",
+          "statement": "Turn classified segments into durable knowledge items such as preferences, rules, decisions, architecture notes, outcomes, and open questions."
+        }
+      ]
+    },
+    {
+      "citation_id": "item-architecture_note-21",
+      "item_keys": [
+        "open-brain:architecture_note:88b1b99133583dca"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-architecture_note-21",
+      "provenance_refs": [
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:84520",
+          "end_line_no": 84520,
+          "end_timestamp": "2026-03-27T02:54:10.796Z",
+          "rule_ids": [
+            "architecture_note.explicit"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:12641",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:84510",
+          "start_line_no": 84510,
+          "start_timestamp": "2026-03-27T02:53:40.355Z",
+          "statement": "I\u2019ve confirmed the experiment-loop work is already in these files, so I\u2019m building the case-authoring hardening on top of that instead of fighting the existing architecture."
+        }
+      ]
+    },
+    {
+      "citation_id": "item-architecture_note-22",
+      "item_keys": [
+        "open-brain:architecture_note:c94c81a1b735c5c4"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-architecture_note-22",
+      "provenance_refs": [
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:84169",
+          "end_line_no": 84169,
+          "end_timestamp": "2026-03-27T02:11:22.202Z",
+          "rule_ids": [
+            "architecture_note.explicit"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:12585",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:84157",
+          "start_line_no": 84157,
+          "start_timestamp": "2026-03-27T02:10:49.846Z",
+          "statement": "I\u2019ve confirmed the experiment loop already has the contract/trust pattern we want, so I\u2019m mirroring that pattern into the authoring loop instead of inventing a second architecture."
+        }
+      ]
+    },
+    {
+      "citation_id": "item-architecture_note-23",
+      "item_keys": [
+        "open-brain:architecture_note:e4e0a724701b463e"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-architecture_note-23",
+      "provenance_refs": [
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:84126",
+          "end_line_no": 84126,
+          "end_timestamp": "2026-03-27T02:06:38.388Z",
+          "rule_ids": [
+            "architecture_note.explicit"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:12579",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:84118",
+          "start_line_no": 84118,
+          "start_timestamp": "2026-03-27T02:06:05.129Z",
+          "statement": "I\u2019m tightening the judge layer and adding the batch/repair bookkeeping around that existing writer rather than replacing the whole pipeline."
+        }
+      ]
+    },
+    {
+      "citation_id": "item-architecture_note-24",
+      "item_keys": [
+        "open-brain:architecture_note:e46ae29815aebeca"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-architecture_note-24",
+      "provenance_refs": [
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:83990",
+          "end_line_no": 83990,
+          "end_timestamp": "2026-03-27T01:30:57.851Z",
+          "rule_ids": [
+            "architecture_note.explicit"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:12553",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:83982",
+          "start_line_no": 83982,
+          "start_timestamp": "2026-03-27T01:30:24.894Z",
+          "statement": "Reading the actual case-authoring loop entry points so the plan matches the existing architecture."
+        }
+      ]
+    },
+    {
+      "citation_id": "item-architecture_note-25",
+      "item_keys": [
+        "open-brain:architecture_note:c6d7e4291170de0b"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-architecture_note-25",
+      "provenance_refs": [
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:83944",
+          "end_line_no": 83944,
+          "end_timestamp": "2026-03-27T01:17:04.318Z",
+          "rule_ids": [
+            "architecture_note.explicit"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:12541",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:83939",
+          "start_line_no": 83939,
+          "start_timestamp": "2026-03-26T22:17:01.954Z",
+          "statement": "- Added per-strategy `runContract`, explicit `trustState`, staged internal evaluation (`sentinel`, `discriminative`, `full/certification`), hybrid GPT\u20115.4 review/research routing, stronger component-history ranking, and DB-backed `loopState` / best-trusted-candidate tracking."
+        }
+      ]
+    },
+    {
+      "citation_id": "item-architecture_note-26",
+      "item_keys": [
+        "open-brain:architecture_note:2f072c9b74f39d83"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-architecture_note-26",
+      "provenance_refs": [
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:83944",
+          "end_line_no": 83944,
+          "end_timestamp": "2026-03-27T01:17:04.318Z",
+          "rule_ids": [
+            "architecture_note.explicit"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:12541",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:83939",
+          "start_line_no": 83939,
+          "start_timestamp": "2026-03-26T22:17:01.954Z",
+          "statement": "- strategy search now uses component history more directly instead of generic retry behavior"
+        }
+      ]
+    },
+    {
+      "citation_id": "item-architecture_note-27",
+      "item_keys": [
+        "open-brain:architecture_note:7062916e0bf4cd3a"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-architecture_note-27",
+      "provenance_refs": [
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:82840",
+          "end_line_no": 82840,
+          "end_timestamp": "2026-03-26T19:10:20.083Z",
+          "rule_ids": [
+            "architecture_note.explicit"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:12360",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:82837",
+          "start_line_no": 82837,
+          "start_timestamp": "2026-03-26T18:38:58.350Z",
+          "statement": "- A rescue/research-generated strategy uses component-history ranking instead of generic retry-only logic."
+        },
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:82843",
+          "end_line_no": 82843,
+          "end_timestamp": "2026-03-26T19:10:21.490Z",
+          "rule_ids": [
+            "architecture_note.explicit"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:12362",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:82843",
+          "start_line_no": 82843,
+          "start_timestamp": "2026-03-26T19:10:21.490Z",
+          "statement": "- A rescue/research-generated strategy uses component-history ranking instead of generic retry-only logic."
+        },
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:82846",
+          "end_line_no": 82846,
+          "end_timestamp": "2026-03-26T19:10:43.192Z",
+          "rule_ids": [
+            "architecture_note.explicit"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:12363",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:82844",
+          "start_line_no": 82844,
+          "start_timestamp": "2026-03-26T19:10:21.490Z",
+          "statement": "- A rescue/research-generated strategy uses component-history ranking instead of generic retry-only logic."
+        }
+      ]
+    },
+    {
+      "citation_id": "item-architecture_note-28",
+      "item_keys": [
+        "open-brain:architecture_note:0e82f7fb36303c58"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-architecture_note-28",
+      "provenance_refs": [
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:82840",
+          "end_line_no": 82840,
+          "end_timestamp": "2026-03-26T19:10:20.083Z",
+          "rule_ids": [
+            "architecture_note.explicit"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:12360",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:82837",
+          "start_line_no": 82837,
+          "start_timestamp": "2026-03-26T18:38:58.350Z",
+          "statement": "- Before enqueueing rescue/research strategies, rank components and component pairs by:"
+        },
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:82843",
+          "end_line_no": 82843,
+          "end_timestamp": "2026-03-26T19:10:21.490Z",
+          "rule_ids": [
+            "architecture_note.explicit"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:12362",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:82843",
+          "start_line_no": 82843,
+          "start_timestamp": "2026-03-26T19:10:21.490Z",
+          "statement": "- Before enqueueing rescue/research strategies, rank components and component pairs by:"
+        },
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:82846",
+          "end_line_no": 82846,
+          "end_timestamp": "2026-03-26T19:10:43.192Z",
+          "rule_ids": [
+            "architecture_note.explicit"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:12363",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:82844",
+          "start_line_no": 82844,
+          "start_timestamp": "2026-03-26T19:10:21.490Z",
+          "statement": "- Before enqueueing rescue/research strategies, rank components and component pairs by:"
+        }
+      ]
+    },
+    {
+      "citation_id": "item-architecture_note-29",
+      "item_keys": [
+        "open-brain:architecture_note:0703d030488257ac"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-architecture_note-29",
+      "provenance_refs": [
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:82840",
+          "end_line_no": 82840,
+          "end_timestamp": "2026-03-26T19:10:20.083Z",
+          "rule_ids": [
+            "architecture_note.explicit"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:12360",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:82837",
+          "start_line_no": 82837,
+          "start_timestamp": "2026-03-26T18:38:58.350Z",
+          "statement": "- component deltas"
+        },
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:82843",
+          "end_line_no": 82843,
+          "end_timestamp": "2026-03-26T19:10:21.490Z",
+          "rule_ids": [
+            "architecture_note.explicit"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:12362",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:82843",
+          "start_line_no": 82843,
+          "start_timestamp": "2026-03-26T19:10:21.490Z",
+          "statement": "- component deltas"
+        },
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:82846",
+          "end_line_no": 82846,
+          "end_timestamp": "2026-03-26T19:10:43.192Z",
+          "rule_ids": [
+            "architecture_note.explicit"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:12363",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:82844",
+          "start_line_no": 82844,
+          "start_timestamp": "2026-03-26T19:10:21.490Z",
+          "statement": "- component deltas"
+        }
+      ]
+    },
+    {
+      "citation_id": "item-architecture_note-30",
+      "item_keys": [
+        "open-brain:architecture_note:80b662daba01c821"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-architecture_note-30",
+      "provenance_refs": [
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:82840",
+          "end_line_no": 82840,
+          "end_timestamp": "2026-03-26T19:10:20.083Z",
+          "rule_ids": [
+            "architecture_note.explicit"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:12360",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:82837",
+          "start_line_no": 82837,
+          "start_timestamp": "2026-03-26T18:38:58.350Z",
+          "statement": "- Component history affects next-strategy composition in a measurable way."
+        },
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:82843",
+          "end_line_no": 82843,
+          "end_timestamp": "2026-03-26T19:10:21.490Z",
+          "rule_ids": [
+            "architecture_note.explicit"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:12362",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:82843",
+          "start_line_no": 82843,
+          "start_timestamp": "2026-03-26T19:10:21.490Z",
+          "statement": "- Component history affects next-strategy composition in a measurable way."
+        },
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:82846",
+          "end_line_no": 82846,
+          "end_timestamp": "2026-03-26T19:10:43.192Z",
+          "rule_ids": [
+            "architecture_note.explicit"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:12363",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:82844",
+          "start_line_no": 82844,
+          "start_timestamp": "2026-03-26T19:10:21.490Z",
+          "statement": "- Component history affects next-strategy composition in a measurable way."
+        }
+      ]
+    },
+    {
+      "citation_id": "item-architecture_note-31",
+      "item_keys": [
+        "open-brain:architecture_note:18ad3acb03e9c704"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-architecture_note-31",
+      "provenance_refs": [
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:82840",
+          "end_line_no": 82840,
+          "end_timestamp": "2026-03-26T19:10:20.083Z",
+          "rule_ids": [
+            "architecture_note.explicit"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:12360",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:82837",
+          "start_line_no": 82837,
+          "start_timestamp": "2026-03-26T18:38:58.350Z",
+          "statement": "- contribute to component merit as if it were a clean run"
+        },
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:82843",
+          "end_line_no": 82843,
+          "end_timestamp": "2026-03-26T19:10:21.490Z",
+          "rule_ids": [
+            "architecture_note.explicit"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:12362",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:82843",
+          "start_line_no": 82843,
+          "start_timestamp": "2026-03-26T19:10:21.490Z",
+          "statement": "- contribute to component merit as if it were a clean run"
+        },
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:82846",
+          "end_line_no": 82846,
+          "end_timestamp": "2026-03-26T19:10:43.192Z",
+          "rule_ids": [
+            "architecture_note.explicit"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:12363",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:82844",
+          "start_line_no": 82844,
+          "start_timestamp": "2026-03-26T19:10:21.490Z",
+          "statement": "- contribute to component merit as if it were a clean run"
+        }
+      ]
+    },
+    {
+      "citation_id": "item-architecture_note-32",
+      "item_keys": [
+        "open-brain:architecture_note:0f281ebe322fd7c5"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-architecture_note-32",
+      "provenance_refs": [
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:82840",
+          "end_line_no": 82840,
+          "end_timestamp": "2026-03-26T19:10:20.083Z",
+          "rule_ids": [
+            "architecture_note.explicit"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:12360",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:82837",
+          "start_line_no": 82837,
+          "start_timestamp": "2026-03-26T18:38:58.350Z",
+          "statement": "- current component-performance signals"
+        },
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:82843",
+          "end_line_no": 82843,
+          "end_timestamp": "2026-03-26T19:10:21.490Z",
+          "rule_ids": [
+            "architecture_note.explicit"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:12362",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:82843",
+          "start_line_no": 82843,
+          "start_timestamp": "2026-03-26T19:10:21.490Z",
+          "statement": "- current component-performance signals"
+        },
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:82846",
+          "end_line_no": 82846,
+          "end_timestamp": "2026-03-26T19:10:43.192Z",
+          "rule_ids": [
+            "architecture_note.explicit"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:12363",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:82844",
+          "start_line_no": 82844,
+          "start_timestamp": "2026-03-26T19:10:21.490Z",
+          "statement": "- current component-performance signals"
+        }
+      ]
+    },
+    {
+      "citation_id": "item-architecture_note-33",
+      "item_keys": [
+        "open-brain:architecture_note:898af2ec69dd107a"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-architecture_note-33",
+      "provenance_refs": [
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:82840",
+          "end_line_no": 82840,
+          "end_timestamp": "2026-03-26T19:10:20.083Z",
+          "rule_ids": [
+            "architecture_note.explicit"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:12360",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:82837",
+          "start_line_no": 82837,
+          "start_timestamp": "2026-03-26T18:38:58.350Z",
+          "statement": "- exploit component-performance history more directly when generating next strategies"
+        },
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:82843",
+          "end_line_no": 82843,
+          "end_timestamp": "2026-03-26T19:10:21.490Z",
+          "rule_ids": [
+            "architecture_note.explicit"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:12362",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:82843",
+          "start_line_no": 82843,
+          "start_timestamp": "2026-03-26T19:10:21.490Z",
+          "statement": "- exploit component-performance history more directly when generating next strategies"
+        },
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:82846",
+          "end_line_no": 82846,
+          "end_timestamp": "2026-03-26T19:10:43.192Z",
+          "rule_ids": [
+            "architecture_note.explicit"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:12363",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:82844",
+          "start_line_no": 82844,
+          "start_timestamp": "2026-03-26T19:10:21.490Z",
+          "statement": "- exploit component-performance history more directly when generating next strategies"
+        }
+      ]
+    },
+    {
+      "citation_id": "item-architecture_note-34",
+      "item_keys": [
+        "open-brain:architecture_note:e6174a1975bf8c65"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-architecture_note-34",
+      "provenance_refs": [
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:82840",
+          "end_line_no": 82840,
+          "end_timestamp": "2026-03-26T19:10:20.083Z",
+          "rule_ids": [
+            "architecture_note.explicit"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:12360",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:82837",
+          "start_line_no": 82837,
+          "start_timestamp": "2026-03-26T18:38:58.350Z",
+          "statement": "- Generate new strategies by varying only a small number of components at a time."
+        },
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:82843",
+          "end_line_no": 82843,
+          "end_timestamp": "2026-03-26T19:10:21.490Z",
+          "rule_ids": [
+            "architecture_note.explicit"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:12362",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:82843",
+          "start_line_no": 82843,
+          "start_timestamp": "2026-03-26T19:10:21.490Z",
+          "statement": "- Generate new strategies by varying only a small number of components at a time."
+        },
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:82846",
+          "end_line_no": 82846,
+          "end_timestamp": "2026-03-26T19:10:43.192Z",
+          "rule_ids": [
+            "architecture_note.explicit"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:12363",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:82844",
+          "start_line_no": 82844,
+          "start_timestamp": "2026-03-26T19:10:21.490Z",
+          "statement": "- Generate new strategies by varying only a small number of components at a time."
+        }
+      ]
+    },
+    {
+      "citation_id": "item-architecture_note-35",
+      "item_keys": [
+        "open-brain:architecture_note:6642cfff44e389e8"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-architecture_note-35",
+      "provenance_refs": [
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:82840",
+          "end_line_no": 82840,
+          "end_timestamp": "2026-03-26T19:10:20.083Z",
+          "rule_ids": [
+            "architecture_note.explicit"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:12360",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:82837",
+          "start_line_no": 82837,
+          "start_timestamp": "2026-03-26T18:38:58.350Z",
+          "statement": "- Keep `component_performance`, `component_stability`, and `component_pair_performance` as the canonical component history."
+        },
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:82843",
+          "end_line_no": 82843,
+          "end_timestamp": "2026-03-26T19:10:21.490Z",
+          "rule_ids": [
+            "architecture_note.explicit"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:12362",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:82843",
+          "start_line_no": 82843,
+          "start_timestamp": "2026-03-26T19:10:21.490Z",
+          "statement": "- Keep `component_performance`, `component_stability`, and `component_pair_performance` as the canonical component history."
+        },
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:82846",
+          "end_line_no": 82846,
+          "end_timestamp": "2026-03-26T19:10:43.192Z",
+          "rule_ids": [
+            "architecture_note.explicit"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:12363",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:82844",
+          "start_line_no": 82844,
+          "start_timestamp": "2026-03-26T19:10:21.490Z",
+          "statement": "- Keep `component_performance`, `component_stability`, and `component_pair_performance` as the canonical component history."
+        }
+      ]
+    },
+    {
+      "citation_id": "item-architecture_note-36",
+      "item_keys": [
+        "open-brain:architecture_note:9e61fa69139cb433"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-architecture_note-36",
+      "provenance_refs": [
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:82840",
+          "end_line_no": 82840,
+          "end_timestamp": "2026-03-26T19:10:20.083Z",
+          "rule_ids": [
+            "architecture_note.explicit"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:12360",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:82837",
+          "start_line_no": 82837,
+          "start_timestamp": "2026-03-26T18:38:58.350Z",
+          "statement": "- recombining strong stable components"
+        },
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:82843",
+          "end_line_no": 82843,
+          "end_timestamp": "2026-03-26T19:10:21.490Z",
+          "rule_ids": [
+            "architecture_note.explicit"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:12362",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:82843",
+          "start_line_no": 82843,
+          "start_timestamp": "2026-03-26T19:10:21.490Z",
+          "statement": "- recombining strong stable components"
+        },
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:82846",
+          "end_line_no": 82846,
+          "end_timestamp": "2026-03-26T19:10:43.192Z",
+          "rule_ids": [
+            "architecture_note.explicit"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:12363",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:82844",
+          "start_line_no": 82844,
+          "start_timestamp": "2026-03-26T19:10:21.490Z",
+          "statement": "- recombining strong stable components"
+        }
+      ]
+    },
+    {
+      "citation_id": "item-architecture_note-37",
+      "item_keys": [
+        "open-brain:architecture_note:198afadbf7a905ff"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-architecture_note-37",
+      "provenance_refs": [
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:82840",
+          "end_line_no": 82840,
+          "end_timestamp": "2026-03-26T19:10:20.083Z",
+          "rule_ids": [
+            "architecture_note.explicit"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:12360",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:82837",
+          "start_line_no": 82837,
+          "start_timestamp": "2026-03-26T18:38:58.350Z",
+          "statement": "Stronger use of component history"
+        },
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:82843",
+          "end_line_no": 82843,
+          "end_timestamp": "2026-03-26T19:10:21.490Z",
+          "rule_ids": [
+            "architecture_note.explicit"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:12362",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:82843",
+          "start_line_no": 82843,
+          "start_timestamp": "2026-03-26T19:10:21.490Z",
+          "statement": "Stronger use of component history"
+        },
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:82846",
+          "end_line_no": 82846,
+          "end_timestamp": "2026-03-26T19:10:43.192Z",
+          "rule_ids": [
+            "architecture_note.explicit"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:12363",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:82844",
+          "start_line_no": 82844,
+          "start_timestamp": "2026-03-26T19:10:21.490Z",
+          "statement": "Stronger use of component history"
+        }
+      ]
+    },
+    {
+      "citation_id": "item-architecture_note-38",
+      "item_keys": [
+        "open-brain:architecture_note:fa273851592771d5"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-architecture_note-38",
+      "provenance_refs": [
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:82840",
+          "end_line_no": 82840,
+          "end_timestamp": "2026-03-26T19:10:20.083Z",
+          "rule_ids": [
+            "architecture_note.explicit"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:12360",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:82837",
+          "start_line_no": 82837,
+          "start_timestamp": "2026-03-26T18:38:58.350Z",
+          "statement": "This plan keeps the current experiment architecture and improves it in five ways:"
+        },
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:82843",
+          "end_line_no": 82843,
+          "end_timestamp": "2026-03-26T19:10:21.490Z",
+          "rule_ids": [
+            "architecture_note.explicit"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:12362",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:82843",
+          "start_line_no": 82843,
+          "start_timestamp": "2026-03-26T19:10:21.490Z",
+          "statement": "This plan keeps the current experiment architecture and improves it in five ways:"
+        },
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:82846",
+          "end_line_no": 82846,
+          "end_timestamp": "2026-03-26T19:10:43.192Z",
+          "rule_ids": [
+            "architecture_note.explicit"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:12363",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:82844",
+          "start_line_no": 82844,
+          "start_timestamp": "2026-03-26T19:10:21.490Z",
+          "statement": "This plan keeps the current experiment architecture and improves it in five ways:"
+        }
+      ]
+    },
+    {
+      "citation_id": "item-architecture_note-39",
+      "item_keys": [
+        "open-brain:architecture_note:8206694edcd2715a"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-architecture_note-39",
+      "provenance_refs": [
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:82796",
+          "end_line_no": 82796,
+          "end_timestamp": "2026-03-26T15:36:34.751Z",
+          "rule_ids": [
+            "architecture_note.explicit"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:12349",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:82796",
+          "start_line_no": 82796,
+          "start_timestamp": "2026-03-26T15:36:34.751Z",
+          "statement": "- `enqueueResearchCandidates(...)` exists, but the loop is still not exploiting `component_performance`, `component_stability`, and `component_pair_performance` aggressively enough when deciding what to test next"
+        },
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:82800",
+          "end_line_no": 82800,
+          "end_timestamp": "2026-03-26T17:31:39.204Z",
+          "rule_ids": [
+            "architecture_note.explicit"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:12350",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:82797",
+          "start_line_no": 82797,
+          "start_timestamp": "2026-03-26T15:36:34.751Z",
+          "statement": "- `enqueueResearchCandidates(...)` exists, but the loop is still not exploiting `component_performance`, `component_stability`, and `component_pair_performance` aggressively enough when deciding what to test next"
+        }
+      ]
+    },
+    {
+      "citation_id": "item-architecture_note-40",
+      "item_keys": [
+        "open-brain:architecture_note:ca87ed1fb906aa80"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-architecture_note-40",
+      "provenance_refs": [
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:82796",
+          "end_line_no": 82796,
+          "end_timestamp": "2026-03-26T15:36:34.751Z",
+          "rule_ids": [
+            "architecture_note.explicit"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:12349",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:82796",
+          "start_line_no": 82796,
+          "start_timestamp": "2026-03-26T15:36:34.751Z",
+          "statement": "- structured lessons and component-performance persistence"
+        },
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:82800",
+          "end_line_no": 82800,
+          "end_timestamp": "2026-03-26T17:31:39.204Z",
+          "rule_ids": [
+            "architecture_note.explicit"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:12350",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:82797",
+          "start_line_no": 82797,
+          "start_timestamp": "2026-03-26T15:36:34.751Z",
+          "statement": "- structured lessons and component-performance persistence"
+        }
+      ]
+    }
+  ],
+  "domain": "open-brain",
+  "input_item_keys": [
+    "open-brain:architecture_note:ba3e4d767bf8af2c",
+    "open-brain:architecture_note:9abbec94c1f4cd0f",
+    "open-brain:architecture_note:4beda0bb4b4f276f",
+    "open-brain:architecture_note:f20e69831af7254f",
+    "open-brain:architecture_note:518c62e8e53bacec",
+    "open-brain:architecture_note:69c1f020730ee686",
+    "open-brain:architecture_note:8a8ce2bc0dff4440",
+    "open-brain:architecture_note:00c6379ef16d53a0",
+    "open-brain:architecture_note:02b4a8e04574bc78",
+    "open-brain:architecture_note:4a399bebb3a43fc1",
+    "open-brain:architecture_note:21b7f68063651693",
+    "open-brain:architecture_note:2cc36c60ba034180",
+    "open-brain:architecture_note:19c44efa5f5361a0",
+    "open-brain:architecture_note:730b0275a11988e7",
+    "open-brain:architecture_note:a6893f532d3b48d0",
+    "open-brain:architecture_note:fcb46026457060e9",
+    "open-brain:architecture_note:d48bd10f9d650d5a",
+    "open-brain:architecture_note:b00bf1a1104b194c",
+    "open-brain:architecture_note:ce9fbbcc082fb832",
+    "open-brain:architecture_note:49c53b82f492b660",
+    "open-brain:architecture_note:88b1b99133583dca",
+    "open-brain:architecture_note:c94c81a1b735c5c4",
+    "open-brain:architecture_note:e4e0a724701b463e",
+    "open-brain:architecture_note:e46ae29815aebeca",
+    "open-brain:architecture_note:c6d7e4291170de0b",
+    "open-brain:architecture_note:2f072c9b74f39d83",
+    "open-brain:architecture_note:7062916e0bf4cd3a",
+    "open-brain:architecture_note:0e82f7fb36303c58",
+    "open-brain:architecture_note:0703d030488257ac",
+    "open-brain:architecture_note:80b662daba01c821",
+    "open-brain:architecture_note:18ad3acb03e9c704",
+    "open-brain:architecture_note:0f281ebe322fd7c5",
+    "open-brain:architecture_note:898af2ec69dd107a",
+    "open-brain:architecture_note:e6174a1975bf8c65",
+    "open-brain:architecture_note:6642cfff44e389e8",
+    "open-brain:architecture_note:9e61fa69139cb433",
+    "open-brain:architecture_note:198afadbf7a905ff",
+    "open-brain:architecture_note:fa273851592771d5",
+    "open-brain:architecture_note:8206694edcd2715a",
+    "open-brain:architecture_note:ca87ed1fb906aa80"
+  ],
+  "page_id": "projects/open-brain/architecture",
+  "page_type": "bucket_page",
+  "rendered_page_metadata": {
+    "claim_count": 5,
+    "conflict_count": 37,
+    "related_domains": [
+      "global"
+    ],
+    "related_pages": [
+      {
+        "page_key": "index",
+        "title": "Open Brain",
+        "wikilink": "[[projects/open-brain/index|Open Brain]]"
+      },
+      {
+        "page_key": "communication-preferences",
+        "title": "Open Brain - Communication Preferences",
+        "wikilink": "[[projects/open-brain/communication-preferences|Open Brain - Communication Preferences]]"
+      },
+      {
+        "page_key": "workflow-rules",
+        "title": "Open Brain - Workflow Rules",
+        "wikilink": "[[projects/open-brain/workflow-rules|Open Brain - Workflow Rules]]"
+      },
+      {
+        "page_key": "code-map",
+        "title": "Open Brain - Code Map",
+        "wikilink": "[[projects/open-brain/code-map|Open Brain - Code Map]]"
+      },
+      {
+        "page_key": "current-state",
+        "title": "Open Brain - Current State",
+        "wikilink": "[[projects/open-brain/current-state|Open Brain - Current State]]"
+      },
+      {
+        "page_key": "tasks",
+        "title": "Open Brain - Tasks",
+        "wikilink": "[[projects/open-brain/tasks|Open Brain - Tasks]]"
+      },
+      {
+        "page_key": "outcomes",
+        "title": "Open Brain - Outcomes",
+        "wikilink": "[[projects/open-brain/outcomes|Open Brain - Outcomes]]"
+      },
+      {
+        "page_key": "failures",
+        "title": "Open Brain - Failures",
+        "wikilink": "[[projects/open-brain/failures|Open Brain - Failures]]"
+      },
+      {
+        "page_key": "decisions",
+        "title": "Open Brain - Decisions",
+        "wikilink": "[[projects/open-brain/decisions|Open Brain - Decisions]]"
+      },
+      {
+        "page_key": "next-steps",
+        "title": "Open Brain - Next Steps",
+        "wikilink": "[[projects/open-brain/next-steps|Open Brain - Next Steps]]"
+      },
+      {
+        "page_key": "open-questions",
+        "title": "Open Brain - Open Questions",
+        "wikilink": "[[projects/open-brain/open-questions|Open Brain - Open Questions]]"
+      }
+    ],
+    "relative_page_path": "projects/open-brain/architecture.md",
+    "source_count": 3,
+    "title": "Open Brain - Architecture"
+  },
+  "renderer": "obsidian_markdown",
+  "synthesized_claims": [
+    {
+      "claim_id": "claim-1",
+      "confidence": "strong",
+      "latent_type": "architecture_synthesis",
+      "provenance_refs": [
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:43711",
+          "end_line_no": 43711,
+          "end_timestamp": "2026-03-11T20:26:48.841Z",
+          "rule_ids": [
+            "architecture_note.explicit"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:5433",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:43710",
+          "start_line_no": 43710,
+          "start_timestamp": "2026-03-11T20:26:48.840Z",
+          "statement": "- Prefer generalizable architecture over one-off patches."
+        },
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:44562",
+          "end_line_no": 44562,
+          "end_timestamp": "2026-03-12T00:30:25.279Z",
+          "rule_ids": [
+            "architecture_note.explicit"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:5625",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:44561",
+          "start_line_no": 44561,
+          "start_timestamp": "2026-03-12T00:30:25.278Z",
+          "statement": "- Prefer generalizable architecture over one-off patches."
+        },
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:57251",
+          "end_line_no": 57251,
+          "end_timestamp": "2026-03-13T12:08:42.869Z",
+          "rule_ids": [
+            "architecture_note.explicit"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:8048",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:57250",
+          "start_line_no": 57250,
+          "start_timestamp": "2026-03-13T12:08:42.868Z",
+          "statement": "- Prefer generalizable architecture over one-off patches."
+        }
+      ],
+      "section_id": "summary",
+      "supporting_item_ids": [
+        "open-brain:architecture_note:ba3e4d767bf8af2c"
+      ],
+      "text": "Prefer generalizable architecture over one-off patches."
+    },
+    {
+      "claim_id": "claim-2",
+      "confidence": "strong",
+      "latent_type": "architecture_synthesis",
+      "provenance_refs": [
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:31366",
+          "end_line_no": 31366,
+          "end_timestamp": "2026-03-09T00:12:13.952Z",
+          "rule_ids": [
+            "architecture_note.explicit"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:3409",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:31363",
+          "start_line_no": 31363,
+          "start_timestamp": "2026-03-09T00:08:40.911Z",
+          "statement": "`component_registry`"
+        },
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:31410",
+          "end_line_no": 31410,
+          "end_timestamp": "2026-03-09T00:55:27.741Z",
+          "rule_ids": [
+            "architecture_note.explicit"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:3420",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:31407",
+          "start_line_no": 31407,
+          "start_timestamp": "2026-03-09T00:31:07.281Z",
+          "statement": "`component_registry`"
+        },
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:31434",
+          "end_line_no": 31434,
+          "end_timestamp": "2026-03-09T01:11:52.990Z",
+          "rule_ids": [
+            "architecture_note.explicit"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:3426",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:31431",
+          "start_line_no": 31431,
+          "start_timestamp": "2026-03-09T01:04:32.267Z",
+          "statement": "`component_registry`"
+        }
+      ],
+      "section_id": "summary",
+      "supporting_item_ids": [
+        "open-brain:architecture_note:4beda0bb4b4f276f"
+      ],
+      "text": "The `component_registry` is an important element in the architecture."
+    },
+    {
+      "claim_id": "claim-3",
+      "confidence": "strong",
+      "latent_type": "architecture_synthesis",
+      "provenance_refs": [
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:31366",
+          "end_line_no": 31366,
+          "end_timestamp": "2026-03-09T00:12:13.952Z",
+          "rule_ids": [
+            "architecture_note.explicit"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:3409",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:31363",
+          "start_line_no": 31363,
+          "start_timestamp": "2026-03-09T00:08:40.911Z",
+          "statement": "`strategy_component_bindings`"
+        },
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:31410",
+          "end_line_no": 31410,
+          "end_timestamp": "2026-03-09T00:55:27.741Z",
+          "rule_ids": [
+            "architecture_note.explicit"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:3420",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:31407",
+          "start_line_no": 31407,
+          "start_timestamp": "2026-03-09T00:31:07.281Z",
+          "statement": "`strategy_component_bindings`"
+        },
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:31434",
+          "end_line_no": 31434,
+          "end_timestamp": "2026-03-09T01:11:52.990Z",
+          "rule_ids": [
+            "architecture_note.explicit"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:3426",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:31431",
+          "start_line_no": 31431,
+          "start_timestamp": "2026-03-09T01:04:32.267Z",
+          "statement": "`strategy_component_bindings`"
+        }
+      ],
+      "section_id": "summary",
+      "supporting_item_ids": [
+        "open-brain:architecture_note:518c62e8e53bacec"
+      ],
+      "text": "`strategy_component_bindings` play a significant role in the architecture."
+    },
+    {
+      "claim_id": "claim-4",
+      "confidence": "strong",
+      "latent_type": "architecture_synthesis",
+      "provenance_refs": [
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:43711",
+          "end_line_no": 43711,
+          "end_timestamp": "2026-03-11T20:26:48.841Z",
+          "rule_ids": [
+            "architecture_note.explicit"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:5433",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:43710",
+          "start_line_no": 43710,
+          "start_timestamp": "2026-03-11T20:26:48.840Z",
+          "statement": "- Prefer generalizable architecture over one-off patches."
+        },
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:44562",
+          "end_line_no": 44562,
+          "end_timestamp": "2026-03-12T00:30:25.279Z",
+          "rule_ids": [
+            "architecture_note.explicit"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:5625",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:44561",
+          "start_line_no": 44561,
+          "start_timestamp": "2026-03-12T00:30:25.278Z",
+          "statement": "- Prefer generalizable architecture over one-off patches."
+        },
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:57251",
+          "end_line_no": 57251,
+          "end_timestamp": "2026-03-13T12:08:42.869Z",
+          "rule_ids": [
+            "architecture_note.explicit"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:8048",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:57250",
+          "start_line_no": 57250,
+          "start_timestamp": "2026-03-13T12:08:42.868Z",
+          "statement": "- Prefer generalizable architecture over one-off patches."
+        }
+      ],
+      "section_id": "architecture_note",
+      "supporting_item_ids": [
+        "open-brain:architecture_note:ba3e4d767bf8af2c"
+      ],
+      "text": "The architecture should prioritize generalizable solutions over one-off patches."
+    },
+    {
+      "claim_id": "claim-5",
+      "confidence": "strong",
+      "latent_type": "architecture_synthesis",
+      "provenance_refs": [
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:31366",
+          "end_line_no": 31366,
+          "end_timestamp": "2026-03-09T00:12:13.952Z",
+          "rule_ids": [
+            "architecture_note.explicit"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:3409",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:31363",
+          "start_line_no": 31363,
+          "start_timestamp": "2026-03-09T00:08:40.911Z",
+          "statement": "`component_registry`"
+        },
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:31410",
+          "end_line_no": 31410,
+          "end_timestamp": "2026-03-09T00:55:27.741Z",
+          "rule_ids": [
+            "architecture_note.explicit"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:3420",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:31407",
+          "start_line_no": 31407,
+          "start_timestamp": "2026-03-09T00:31:07.281Z",
+          "statement": "`component_registry`"
+        },
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:31434",
+          "end_line_no": 31434,
+          "end_timestamp": "2026-03-09T01:11:52.990Z",
+          "rule_ids": [
+            "architecture_note.explicit"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:3426",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:31431",
+          "start_line_no": 31431,
+          "start_timestamp": "2026-03-09T01:04:32.267Z",
+          "statement": "`component_registry`"
+        }
+      ],
+      "section_id": "architecture_note",
+      "supporting_item_ids": [
+        "open-brain:architecture_note:4beda0bb4b4f276f"
+      ],
+      "text": "The `component_registry` is a key part of the architecture framework."
+    }
+  ],
+  "versions": {
+    "page_config_version": 2,
+    "renderer_version": 2,
+    "synthesis_prompt_version": 2,
+    "synthesis_schema_version": 1,
+    "wiki_schema_version": 2
+  }
+}

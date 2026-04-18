@@ -1,0 +1,3487 @@
+{
+  "bucket": "tasks",
+  "citations": [
+    {
+      "citation_id": "claim-1",
+      "item_keys": [
+        "cross-project:task_request:017361725bf6cd20",
+        "cross-project:task_request:8145db8fc7be9474",
+        "cross-project:task_request:9ce1808b659f8dec",
+        "cross-project:task_request:7b56a9c9424b23aa"
+      ],
+      "kind": "synthesized_claim",
+      "label": "claim-1",
+      "provenance_refs": [
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:5694",
+          "end_line_no": 5694,
+          "end_timestamp": "2026-03-03T21:16:15.038Z",
+          "rule_ids": [
+            "task_request.action"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:513",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:5694",
+          "start_line_no": 5694,
+          "start_timestamp": "2026-03-03T21:16:15.038Z",
+          "statement": "PLEASE IMPLEMENT THIS PLAN:"
+        },
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:5697",
+          "end_line_no": 5697,
+          "end_timestamp": "2026-03-03T21:16:18.295Z",
+          "rule_ids": [
+            "task_request.action"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:514",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:5695",
+          "start_line_no": 5695,
+          "start_timestamp": "2026-03-03T21:16:15.305Z",
+          "statement": "PLEASE IMPLEMENT THIS PLAN:"
+        },
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:20924",
+          "end_line_no": 20924,
+          "end_timestamp": "2026-03-06T21:28:49.509Z",
+          "rule_ids": [
+            "task_request.action"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:1993",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:20924",
+          "start_line_no": 20924,
+          "start_timestamp": "2026-03-06T21:28:49.509Z",
+          "statement": "PLEASE IMPLEMENT THIS PLAN:"
+        },
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:4244",
+          "end_line_no": 4244,
+          "end_timestamp": "2026-04-13T14:39:17.928Z",
+          "rule_ids": [
+            "task_request.action"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:838",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:4240",
+          "start_line_no": 4240,
+          "start_timestamp": "2026-04-13T14:36:58.251Z",
+          "statement": "that\u2019s fixed."
+        },
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:4235",
+          "end_line_no": 4235,
+          "end_timestamp": "2026-04-13T14:36:37.352Z",
+          "rule_ids": [
+            "task_request.action"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:835",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:4231",
+          "start_line_no": 4231,
+          "start_timestamp": "2026-04-13T14:29:59.107Z",
+          "statement": "- Implemented the pointer-first Phase 2 migration."
+        },
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:4235",
+          "end_line_no": 4235,
+          "end_timestamp": "2026-04-13T14:36:37.352Z",
+          "rule_ids": [
+            "task_request.action"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:835",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:4231",
+          "start_line_no": 4231,
+          "start_timestamp": "2026-04-13T14:29:59.107Z",
+          "statement": "- This fixes the root storage problem: Phase 2 no longer mirrors the raw corpus while preserving exact provenance and on-demand recovery."
+        }
+      ]
+    },
+    {
+      "citation_id": "claim-2",
+      "item_keys": [
+        "cross-project:task_request:3cbb0a3d98312cf8",
+        "cross-project:task_request:2f58fd9289a86d2d",
+        "cross-project:task_request:b3a5d9c347a4ddc3"
+      ],
+      "kind": "synthesized_claim",
+      "label": "claim-2",
+      "provenance_refs": [
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:4235",
+          "end_line_no": 4235,
+          "end_timestamp": "2026-04-13T14:36:37.352Z",
+          "rule_ids": [
+            "task_request.action"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:835",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:4231",
+          "start_line_no": 4231,
+          "start_timestamp": "2026-04-13T14:29:59.107Z",
+          "statement": "- Validation passed: `73` local tests green (`1` skipped live test by default), and the env-gated real-data live suite passed on the fixed representative sample set."
+        },
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:4187",
+          "end_line_no": 4187,
+          "end_timestamp": "2026-04-13T14:20:11.899Z",
+          "rule_ids": [
+            "task_request.action"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:827",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:4174",
+          "start_line_no": 4174,
+          "start_timestamp": "2026-04-13T14:19:51.355Z",
+          "statement": "I\u2019ve patched the real-data failure mode and added a regression test."
+        },
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:4173",
+          "end_line_no": 4173,
+          "end_timestamp": "2026-04-13T14:19:42.924Z",
+          "rule_ids": [
+            "task_request.action"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:826",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:4161",
+          "start_line_no": 4161,
+          "start_timestamp": "2026-04-13T14:19:24.952Z",
+          "statement": "I\u2019m adding a narrow regression test so the live-data fix stays locked: repeated `next_step` items on the same file/path should warn, not fail the audit."
+        }
+      ]
+    },
+    {
+      "citation_id": "claim-3",
+      "item_keys": [
+        "cross-project:task_request:96dcb5b8aafdb6bc",
+        "cross-project:task_request:b3d4cd8509eef6c3",
+        "cross-project:task_request:ffca5d41ba98499d"
+      ],
+      "kind": "synthesized_claim",
+      "label": "claim-3",
+      "provenance_refs": [
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:4124",
+          "end_line_no": 4124,
+          "end_timestamp": "2026-04-13T14:18:33.908Z",
+          "rule_ids": [
+            "task_request.action"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:819",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:4111",
+          "start_line_no": 4111,
+          "start_timestamp": "2026-04-13T14:17:14.360Z",
+          "statement": "I\u2019m fixing that policy at the audit layer and tightening the generic `current_state` subject key one last time."
+        },
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:4105",
+          "end_line_no": 4105,
+          "end_timestamp": "2026-04-13T14:08:43.311Z",
+          "rule_ids": [
+            "task_request.action"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:816",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:4097",
+          "start_line_no": 4097,
+          "start_timestamp": "2026-04-13T14:00:32.418Z",
+          "statement": "The live error count is still dropping, which means the fix path is right."
+        },
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:4037",
+          "end_line_no": 4037,
+          "end_timestamp": "2026-04-13T13:26:23.617Z",
+          "rule_ids": [
+            "task_request.action"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:803",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:4019",
+          "start_line_no": 4019,
+          "start_timestamp": "2026-04-13T13:26:04.212Z",
+          "statement": "I\u2019m fixing that at the extraction validator instead of weakening the live test."
+        }
+      ]
+    },
+    {
+      "citation_id": "claim-4",
+      "item_keys": [
+        "cross-project:task_request:6299549b7c5077ec",
+        "cross-project:task_request:03ccfc41997200d3"
+      ],
+      "kind": "synthesized_claim",
+      "label": "claim-4",
+      "provenance_refs": [
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:4037",
+          "end_line_no": 4037,
+          "end_timestamp": "2026-04-13T13:26:23.617Z",
+          "rule_ids": [
+            "task_request.action"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:803",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:4019",
+          "start_line_no": 4019,
+          "start_timestamp": "2026-04-13T13:26:04.212Z",
+          "statement": "The extraction validator fix is in."
+        },
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:3996",
+          "end_line_no": 3996,
+          "end_timestamp": "2026-04-13T13:17:48.421Z",
+          "rule_ids": [
+            "task_request.action"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:799",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:3981",
+          "start_line_no": 3981,
+          "start_timestamp": "2026-04-13T13:04:37.669Z",
+          "statement": "I\u2019m doing the opt-in live-corpus validation now against the fixed real sample set with temp outputs and stubbed LLM calls."
+        }
+      ]
+    },
+    {
+      "citation_id": "claim-5",
+      "item_keys": [
+        "cross-project:task_request:017361725bf6cd20"
+      ],
+      "kind": "synthesized_claim",
+      "label": "claim-5",
+      "provenance_refs": [
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:5694",
+          "end_line_no": 5694,
+          "end_timestamp": "2026-03-03T21:16:15.038Z",
+          "rule_ids": [
+            "task_request.action"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:513",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:5694",
+          "start_line_no": 5694,
+          "start_timestamp": "2026-03-03T21:16:15.038Z",
+          "statement": "PLEASE IMPLEMENT THIS PLAN:"
+        },
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:5697",
+          "end_line_no": 5697,
+          "end_timestamp": "2026-03-03T21:16:18.295Z",
+          "rule_ids": [
+            "task_request.action"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:514",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:5695",
+          "start_line_no": 5695,
+          "start_timestamp": "2026-03-03T21:16:15.305Z",
+          "statement": "PLEASE IMPLEMENT THIS PLAN:"
+        },
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:20924",
+          "end_line_no": 20924,
+          "end_timestamp": "2026-03-06T21:28:49.509Z",
+          "rule_ids": [
+            "task_request.action"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:1993",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:20924",
+          "start_line_no": 20924,
+          "start_timestamp": "2026-03-06T21:28:49.509Z",
+          "statement": "PLEASE IMPLEMENT THIS PLAN:"
+        }
+      ]
+    },
+    {
+      "citation_id": "claim-6",
+      "item_keys": [
+        "cross-project:task_request:9ce1808b659f8dec"
+      ],
+      "kind": "synthesized_claim",
+      "label": "claim-6",
+      "provenance_refs": [
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:4235",
+          "end_line_no": 4235,
+          "end_timestamp": "2026-04-13T14:36:37.352Z",
+          "rule_ids": [
+            "task_request.action"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:835",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:4231",
+          "start_line_no": 4231,
+          "start_timestamp": "2026-04-13T14:29:59.107Z",
+          "statement": "- Implemented the pointer-first Phase 2 migration."
+        }
+      ]
+    },
+    {
+      "citation_id": "item-task_request-1",
+      "item_keys": [
+        "cross-project:task_request:017361725bf6cd20"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-task_request-1",
+      "provenance_refs": [
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:5694",
+          "end_line_no": 5694,
+          "end_timestamp": "2026-03-03T21:16:15.038Z",
+          "rule_ids": [
+            "task_request.action"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:513",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:5694",
+          "start_line_no": 5694,
+          "start_timestamp": "2026-03-03T21:16:15.038Z",
+          "statement": "PLEASE IMPLEMENT THIS PLAN:"
+        },
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:5697",
+          "end_line_no": 5697,
+          "end_timestamp": "2026-03-03T21:16:18.295Z",
+          "rule_ids": [
+            "task_request.action"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:514",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:5695",
+          "start_line_no": 5695,
+          "start_timestamp": "2026-03-03T21:16:15.305Z",
+          "statement": "PLEASE IMPLEMENT THIS PLAN:"
+        },
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:20924",
+          "end_line_no": 20924,
+          "end_timestamp": "2026-03-06T21:28:49.509Z",
+          "rule_ids": [
+            "task_request.action"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:1993",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:20924",
+          "start_line_no": 20924,
+          "start_timestamp": "2026-03-06T21:28:49.509Z",
+          "statement": "PLEASE IMPLEMENT THIS PLAN:"
+        }
+      ]
+    },
+    {
+      "citation_id": "item-task_request-2",
+      "item_keys": [
+        "cross-project:task_request:8145db8fc7be9474"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-task_request-2",
+      "provenance_refs": [
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:4244",
+          "end_line_no": 4244,
+          "end_timestamp": "2026-04-13T14:39:17.928Z",
+          "rule_ids": [
+            "task_request.action"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:838",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:4240",
+          "start_line_no": 4240,
+          "start_timestamp": "2026-04-13T14:36:58.251Z",
+          "statement": "that\u2019s fixed."
+        }
+      ]
+    },
+    {
+      "citation_id": "item-task_request-3",
+      "item_keys": [
+        "cross-project:task_request:9ce1808b659f8dec"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-task_request-3",
+      "provenance_refs": [
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:4235",
+          "end_line_no": 4235,
+          "end_timestamp": "2026-04-13T14:36:37.352Z",
+          "rule_ids": [
+            "task_request.action"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:835",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:4231",
+          "start_line_no": 4231,
+          "start_timestamp": "2026-04-13T14:29:59.107Z",
+          "statement": "- Implemented the pointer-first Phase 2 migration."
+        }
+      ]
+    },
+    {
+      "citation_id": "item-task_request-4",
+      "item_keys": [
+        "cross-project:task_request:7b56a9c9424b23aa"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-task_request-4",
+      "provenance_refs": [
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:4235",
+          "end_line_no": 4235,
+          "end_timestamp": "2026-04-13T14:36:37.352Z",
+          "rule_ids": [
+            "task_request.action"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:835",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:4231",
+          "start_line_no": 4231,
+          "start_timestamp": "2026-04-13T14:29:59.107Z",
+          "statement": "- This fixes the root storage problem: Phase 2 no longer mirrors the raw corpus while preserving exact provenance and on-demand recovery."
+        }
+      ]
+    },
+    {
+      "citation_id": "item-task_request-5",
+      "item_keys": [
+        "cross-project:task_request:3cbb0a3d98312cf8"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-task_request-5",
+      "provenance_refs": [
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:4235",
+          "end_line_no": 4235,
+          "end_timestamp": "2026-04-13T14:36:37.352Z",
+          "rule_ids": [
+            "task_request.action"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:835",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:4231",
+          "start_line_no": 4231,
+          "start_timestamp": "2026-04-13T14:29:59.107Z",
+          "statement": "- Validation passed: `73` local tests green (`1` skipped live test by default), and the env-gated real-data live suite passed on the fixed representative sample set."
+        }
+      ]
+    },
+    {
+      "citation_id": "item-task_request-6",
+      "item_keys": [
+        "cross-project:task_request:2f58fd9289a86d2d"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-task_request-6",
+      "provenance_refs": [
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:4187",
+          "end_line_no": 4187,
+          "end_timestamp": "2026-04-13T14:20:11.899Z",
+          "rule_ids": [
+            "task_request.action"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:827",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:4174",
+          "start_line_no": 4174,
+          "start_timestamp": "2026-04-13T14:19:51.355Z",
+          "statement": "I\u2019ve patched the real-data failure mode and added a regression test."
+        }
+      ]
+    },
+    {
+      "citation_id": "item-task_request-7",
+      "item_keys": [
+        "cross-project:task_request:b3a5d9c347a4ddc3"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-task_request-7",
+      "provenance_refs": [
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:4173",
+          "end_line_no": 4173,
+          "end_timestamp": "2026-04-13T14:19:42.924Z",
+          "rule_ids": [
+            "task_request.action"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:826",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:4161",
+          "start_line_no": 4161,
+          "start_timestamp": "2026-04-13T14:19:24.952Z",
+          "statement": "I\u2019m adding a narrow regression test so the live-data fix stays locked: repeated `next_step` items on the same file/path should warn, not fail the audit."
+        }
+      ]
+    },
+    {
+      "citation_id": "item-task_request-8",
+      "item_keys": [
+        "cross-project:task_request:96dcb5b8aafdb6bc"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-task_request-8",
+      "provenance_refs": [
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:4124",
+          "end_line_no": 4124,
+          "end_timestamp": "2026-04-13T14:18:33.908Z",
+          "rule_ids": [
+            "task_request.action"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:819",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:4111",
+          "start_line_no": 4111,
+          "start_timestamp": "2026-04-13T14:17:14.360Z",
+          "statement": "I\u2019m fixing that policy at the audit layer and tightening the generic `current_state` subject key one last time."
+        }
+      ]
+    },
+    {
+      "citation_id": "item-task_request-9",
+      "item_keys": [
+        "cross-project:task_request:b3d4cd8509eef6c3"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-task_request-9",
+      "provenance_refs": [
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:4105",
+          "end_line_no": 4105,
+          "end_timestamp": "2026-04-13T14:08:43.311Z",
+          "rule_ids": [
+            "task_request.action"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:816",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:4097",
+          "start_line_no": 4097,
+          "start_timestamp": "2026-04-13T14:00:32.418Z",
+          "statement": "The live error count is still dropping, which means the fix path is right."
+        }
+      ]
+    },
+    {
+      "citation_id": "item-task_request-10",
+      "item_keys": [
+        "cross-project:task_request:ffca5d41ba98499d"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-task_request-10",
+      "provenance_refs": [
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:4037",
+          "end_line_no": 4037,
+          "end_timestamp": "2026-04-13T13:26:23.617Z",
+          "rule_ids": [
+            "task_request.action"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:803",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:4019",
+          "start_line_no": 4019,
+          "start_timestamp": "2026-04-13T13:26:04.212Z",
+          "statement": "I\u2019m fixing that at the extraction validator instead of weakening the live test."
+        }
+      ]
+    },
+    {
+      "citation_id": "item-task_request-11",
+      "item_keys": [
+        "cross-project:task_request:6299549b7c5077ec"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-task_request-11",
+      "provenance_refs": [
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:4037",
+          "end_line_no": 4037,
+          "end_timestamp": "2026-04-13T13:26:23.617Z",
+          "rule_ids": [
+            "task_request.action"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:803",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:4019",
+          "start_line_no": 4019,
+          "start_timestamp": "2026-04-13T13:26:04.212Z",
+          "statement": "The extraction validator fix is in."
+        }
+      ]
+    },
+    {
+      "citation_id": "item-task_request-12",
+      "item_keys": [
+        "cross-project:task_request:03ccfc41997200d3"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-task_request-12",
+      "provenance_refs": [
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:3996",
+          "end_line_no": 3996,
+          "end_timestamp": "2026-04-13T13:17:48.421Z",
+          "rule_ids": [
+            "task_request.action"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:799",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:3981",
+          "start_line_no": 3981,
+          "start_timestamp": "2026-04-13T13:04:37.669Z",
+          "statement": "I\u2019m doing the opt-in live-corpus validation now against the fixed real sample set with temp outputs and stubbed LLM calls."
+        }
+      ]
+    },
+    {
+      "citation_id": "item-task_request-13",
+      "item_keys": [
+        "cross-project:task_request:3925534a9d65b7a4"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-task_request-13",
+      "provenance_refs": [
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:3996",
+          "end_line_no": 3996,
+          "end_timestamp": "2026-04-13T13:17:48.421Z",
+          "rule_ids": [
+            "task_request.action"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:799",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:3981",
+          "start_line_no": 3981,
+          "start_timestamp": "2026-04-13T13:04:37.669Z",
+          "statement": "That keeps the fix targeted instead of guessing."
+        }
+      ]
+    },
+    {
+      "citation_id": "item-task_request-14",
+      "item_keys": [
+        "cross-project:task_request:cbbb05e9292764d7"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-task_request-14",
+      "provenance_refs": [
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:3964",
+          "end_line_no": 3964,
+          "end_timestamp": "2026-04-13T13:03:43.450Z",
+          "rule_ids": [
+            "task_request.action"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:795",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:3954",
+          "start_line_no": 3954,
+          "start_timestamp": "2026-04-13T13:03:30.675Z",
+          "statement": "I\u2019m fixing that by carrying exact total text length as metadata instead of weakening the segmentation logic."
+        }
+      ]
+    },
+    {
+      "citation_id": "item-task_request-15",
+      "item_keys": [
+        "cross-project:task_request:ab08a4f54162a6ce"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-task_request-15",
+      "provenance_refs": [
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:3947",
+          "end_line_no": 3947,
+          "end_timestamp": "2026-04-13T13:03:07.853Z",
+          "rule_ids": [
+            "task_request.action"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:792",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:3939",
+          "start_line_no": 3939,
+          "start_timestamp": "2026-04-13T13:03:07.403Z",
+          "statement": "I\u2019m checking whether that\u2019s a real behavior change from the new bounded text and fixing it at the segmentation layer, not by loosening the expectation blindly."
+        }
+      ]
+    },
+    {
+      "citation_id": "item-task_request-16",
+      "item_keys": [
+        "cross-project:task_request:ad9dffc172e5e044"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-task_request-16",
+      "provenance_refs": [
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:3918",
+          "end_line_no": 3918,
+          "end_timestamp": "2026-04-13T13:01:14.930Z",
+          "rule_ids": [
+            "task_request.action"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:787",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:3908",
+          "start_line_no": 3908,
+          "start_timestamp": "2026-04-13T13:01:04.017Z",
+          "statement": "I\u2019m making the extraction tests use the temp source-roots config end to end, then adding one regression where the signal exists only past the bounded Phase 2 text cutoff."
+        }
+      ]
+    },
+    {
+      "citation_id": "item-task_request-17",
+      "item_keys": [
+        "cross-project:task_request:f2c56f9d12d2429b"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-task_request-17",
+      "provenance_refs": [
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:3892",
+          "end_line_no": 3892,
+          "end_timestamp": "2026-04-13T12:59:29.510Z",
+          "rule_ids": [
+            "task_request.action"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:782",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:3887",
+          "start_line_no": 3887,
+          "start_timestamp": "2026-04-13T12:59:18.232Z",
+          "statement": "It will copy only the fixed real sample files into a temp root, so it exercises real data without touching the whole corpus or inflating disk usage."
+        }
+      ]
+    },
+    {
+      "citation_id": "item-task_request-18",
+      "item_keys": [
+        "cross-project:task_request:126bf913b3f510a6"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-task_request-18",
+      "provenance_refs": [
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:3892",
+          "end_line_no": 3892,
+          "end_timestamp": "2026-04-13T12:59:29.510Z",
+          "rule_ids": [
+            "task_request.action"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:782",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:3887",
+          "start_line_no": 3887,
+          "start_timestamp": "2026-04-13T12:59:18.232Z",
+          "statement": "I\u2019m adding the opt-in live-corpus suite now."
+        }
+      ]
+    },
+    {
+      "citation_id": "item-task_request-19",
+      "item_keys": [
+        "cross-project:task_request:e833fffca75ba405"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-task_request-19",
+      "provenance_refs": [
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:3770",
+          "end_line_no": 3770,
+          "end_timestamp": "2026-04-13T12:54:51.246Z",
+          "rule_ids": [
+            "task_request.action"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:764",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:3765",
+          "start_line_no": 3765,
+          "start_timestamp": "2026-04-13T12:54:45.916Z",
+          "statement": "I\u2019m editing Phase 2 now: dropping persisted `raw_event`, adding event digests and bounded text, and switching validation to the new resolver."
+        }
+      ]
+    },
+    {
+      "citation_id": "item-task_request-20",
+      "item_keys": [
+        "cross-project:task_request:432616184f4f7819"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-task_request-20",
+      "provenance_refs": [
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:3759",
+          "end_line_no": 3759,
+          "end_timestamp": "2026-04-13T12:54:11.255Z",
+          "rule_ids": [
+            "task_request.action"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:761",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:3758",
+          "start_line_no": 3758,
+          "start_timestamp": "2026-04-13T12:54:11.254Z",
+          "statement": "fixed"
+        }
+      ]
+    },
+    {
+      "citation_id": "item-task_request-21",
+      "item_keys": [
+        "cross-project:task_request:e88e13a2c751bdaf"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-task_request-21",
+      "provenance_refs": [
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:3759",
+          "end_line_no": 3759,
+          "end_timestamp": "2026-04-13T12:54:11.255Z",
+          "rule_ids": [
+            "task_request.action"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:761",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:3758",
+          "start_line_no": 3758,
+          "start_timestamp": "2026-04-13T12:54:11.254Z",
+          "statement": "I\u2019ve got the fixed source IDs."
+        }
+      ]
+    },
+    {
+      "citation_id": "item-task_request-22",
+      "item_keys": [
+        "cross-project:task_request:bc364fd3904a0e89"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-task_request-22",
+      "provenance_refs": [
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:3751",
+          "end_line_no": 3751,
+          "end_timestamp": "2026-04-13T12:53:46.069Z",
+          "rule_ids": [
+            "task_request.action"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:759",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:3735",
+          "start_line_no": 3735,
+          "start_timestamp": "2026-04-13T12:53:31.595Z",
+          "statement": "I\u2019m locking the fixed live sample manifest now so the new real-data suite runs on stable real files instead of broad corpus scans."
+        }
+      ]
+    },
+    {
+      "citation_id": "item-task_request-23",
+      "item_keys": [
+        "cross-project:task_request:2c2304b80ede46f5"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-task_request-23",
+      "provenance_refs": [
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:3651",
+          "end_line_no": 3651,
+          "end_timestamp": "2026-04-13T12:48:19.655Z",
+          "rule_ids": [
+            "task_request.action"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:745",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:3640",
+          "start_line_no": 3640,
+          "start_timestamp": "2026-04-13T12:48:18.691Z",
+          "statement": "I\u2019m checking the schema catalog and existing state/version boundaries now so the implementation lands with the right invalidation behavior."
+        }
+      ]
+    },
+    {
+      "citation_id": "item-task_request-24",
+      "item_keys": [
+        "cross-project:task_request:112f9bdd240802a6"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-task_request-24",
+      "provenance_refs": [
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:3638",
+          "end_line_no": 3638,
+          "end_timestamp": "2026-04-13T12:48:11.928Z",
+          "rule_ids": [
+            "task_request.action"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:743",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:3627",
+          "start_line_no": 3627,
+          "start_timestamp": "2026-04-13T12:48:11.111Z",
+          "statement": "I\u2019m implementing the pointer-first migration now."
+        }
+      ]
+    },
+    {
+      "citation_id": "item-task_request-25",
+      "item_keys": [
+        "cross-project:task_request:5f95a908d5dd9c68"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-task_request-25",
+      "provenance_refs": [
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:3620",
+          "end_line_no": 3620,
+          "end_timestamp": "2026-04-13T12:47:58.906Z",
+          "rule_ids": [
+            "task_request.action"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:738",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:3617",
+          "start_line_no": 3617,
+          "start_timestamp": "2026-04-13T12:43:21.873Z",
+          "statement": "- `session.json` adds:"
+        },
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:3623",
+          "end_line_no": 3623,
+          "end_timestamp": "2026-04-13T12:47:59.476Z",
+          "rule_ids": [
+            "task_request.action"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:740",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:3623",
+          "start_line_no": 3623,
+          "start_timestamp": "2026-04-13T12:47:59.476Z",
+          "statement": "- `session.json` adds:"
+        },
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:3625",
+          "end_line_no": 3625,
+          "end_timestamp": "2026-04-13T12:48:00.046Z",
+          "rule_ids": [
+            "task_request.action"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:741",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:3624",
+          "start_line_no": 3624,
+          "start_timestamp": "2026-04-13T12:47:59.477Z",
+          "statement": "- `session.json` adds:"
+        }
+      ]
+    },
+    {
+      "citation_id": "item-task_request-26",
+      "item_keys": [
+        "cross-project:task_request:e70246a111476ecc"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-task_request-26",
+      "provenance_refs": [
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:3620",
+          "end_line_no": 3620,
+          "end_timestamp": "2026-04-13T12:47:58.906Z",
+          "rule_ids": [
+            "task_request.action"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:738",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:3617",
+          "start_line_no": 3617,
+          "start_timestamp": "2026-04-13T12:43:21.873Z",
+          "statement": "- Add a fixed live-data sample manifest for robust real-data tests."
+        },
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:3623",
+          "end_line_no": 3623,
+          "end_timestamp": "2026-04-13T12:47:59.476Z",
+          "rule_ids": [
+            "task_request.action"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:740",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:3623",
+          "start_line_no": 3623,
+          "start_timestamp": "2026-04-13T12:47:59.476Z",
+          "statement": "- Add a fixed live-data sample manifest for robust real-data tests."
+        },
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:3625",
+          "end_line_no": 3625,
+          "end_timestamp": "2026-04-13T12:48:00.046Z",
+          "rule_ids": [
+            "task_request.action"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:741",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:3624",
+          "start_line_no": 3624,
+          "start_timestamp": "2026-04-13T12:47:59.477Z",
+          "statement": "- Add a fixed live-data sample manifest for robust real-data tests."
+        }
+      ]
+    },
+    {
+      "citation_id": "item-task_request-27",
+      "item_keys": [
+        "cross-project:task_request:4a8fc0211d14e8d7"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-task_request-27",
+      "provenance_refs": [
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:3620",
+          "end_line_no": 3620,
+          "end_timestamp": "2026-04-13T12:47:58.906Z",
+          "rule_ids": [
+            "task_request.action"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:738",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:3617",
+          "start_line_no": 3617,
+          "start_timestamp": "2026-04-13T12:43:21.873Z",
+          "statement": "- Add a shared `RawEventResolver` used across Phases 2-6."
+        },
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:3623",
+          "end_line_no": 3623,
+          "end_timestamp": "2026-04-13T12:47:59.476Z",
+          "rule_ids": [
+            "task_request.action"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:740",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:3623",
+          "start_line_no": 3623,
+          "start_timestamp": "2026-04-13T12:47:59.476Z",
+          "statement": "- Add a shared `RawEventResolver` used across Phases 2-6."
+        },
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:3625",
+          "end_line_no": 3625,
+          "end_timestamp": "2026-04-13T12:48:00.046Z",
+          "rule_ids": [
+            "task_request.action"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:741",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:3624",
+          "start_line_no": 3624,
+          "start_timestamp": "2026-04-13T12:47:59.477Z",
+          "statement": "- Add a shared `RawEventResolver` used across Phases 2-6."
+        }
+      ]
+    },
+    {
+      "citation_id": "item-task_request-28",
+      "item_keys": [
+        "cross-project:task_request:6e40935c6cbed875"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-task_request-28",
+      "provenance_refs": [
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:3620",
+          "end_line_no": 3620,
+          "end_timestamp": "2026-04-13T12:47:58.906Z",
+          "rule_ids": [
+            "task_request.action"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:738",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:3617",
+          "start_line_no": 3617,
+          "start_timestamp": "2026-04-13T12:43:21.873Z",
+          "statement": "- Add an opt-in robust live-corpus test suite that runs against a fixed representative real-data sample with temp outputs and stubbed LLM calls."
+        },
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:3623",
+          "end_line_no": 3623,
+          "end_timestamp": "2026-04-13T12:47:59.476Z",
+          "rule_ids": [
+            "task_request.action"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:740",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:3623",
+          "start_line_no": 3623,
+          "start_timestamp": "2026-04-13T12:47:59.476Z",
+          "statement": "- Add an opt-in robust live-corpus test suite that runs against a fixed representative real-data sample with temp outputs and stubbed LLM calls."
+        },
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:3625",
+          "end_line_no": 3625,
+          "end_timestamp": "2026-04-13T12:48:00.046Z",
+          "rule_ids": [
+            "task_request.action"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:741",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:3624",
+          "start_line_no": 3624,
+          "start_timestamp": "2026-04-13T12:47:59.477Z",
+          "statement": "- Add an opt-in robust live-corpus test suite that runs against a fixed representative real-data sample with temp outputs and stubbed LLM calls."
+        }
+      ]
+    },
+    {
+      "citation_id": "item-task_request-29",
+      "item_keys": [
+        "cross-project:task_request:30b0fa08d9da9fbc"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-task_request-29",
+      "provenance_refs": [
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:3620",
+          "end_line_no": 3620,
+          "end_timestamp": "2026-04-13T12:47:58.906Z",
+          "rule_ids": [
+            "task_request.action"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:738",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:3617",
+          "start_line_no": 3617,
+          "start_timestamp": "2026-04-13T12:43:21.873Z",
+          "statement": "- add helper seam so future heuristics can hydrate only flagged/truncated events"
+        },
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:3623",
+          "end_line_no": 3623,
+          "end_timestamp": "2026-04-13T12:47:59.476Z",
+          "rule_ids": [
+            "task_request.action"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:740",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:3623",
+          "start_line_no": 3623,
+          "start_timestamp": "2026-04-13T12:47:59.476Z",
+          "statement": "- add helper seam so future heuristics can hydrate only flagged/truncated events"
+        },
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:3625",
+          "end_line_no": 3625,
+          "end_timestamp": "2026-04-13T12:48:00.046Z",
+          "rule_ids": [
+            "task_request.action"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:741",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:3624",
+          "start_line_no": 3624,
+          "start_timestamp": "2026-04-13T12:47:59.477Z",
+          "statement": "- add helper seam so future heuristics can hydrate only flagged/truncated events"
+        }
+      ]
+    },
+    {
+      "citation_id": "item-task_request-30",
+      "item_keys": [
+        "cross-project:task_request:1c5acb3251623ed3"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-task_request-30",
+      "provenance_refs": [
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:3620",
+          "end_line_no": 3620,
+          "end_timestamp": "2026-04-13T12:47:58.906Z",
+          "rule_ids": [
+            "task_request.action"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:738",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:3617",
+          "start_line_no": 3617,
+          "start_timestamp": "2026-04-13T12:43:21.873Z",
+          "statement": "- Chosen real-data testing mode: env-gated fixed live sample, not dynamic auto-sampling."
+        },
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:3623",
+          "end_line_no": 3623,
+          "end_timestamp": "2026-04-13T12:47:59.476Z",
+          "rule_ids": [
+            "task_request.action"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:740",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:3623",
+          "start_line_no": 3623,
+          "start_timestamp": "2026-04-13T12:47:59.476Z",
+          "statement": "- Chosen real-data testing mode: env-gated fixed live sample, not dynamic auto-sampling."
+        },
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:3625",
+          "end_line_no": 3625,
+          "end_timestamp": "2026-04-13T12:48:00.046Z",
+          "rule_ids": [
+            "task_request.action"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:741",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:3624",
+          "start_line_no": 3624,
+          "start_timestamp": "2026-04-13T12:47:59.477Z",
+          "statement": "- Chosen real-data testing mode: env-gated fixed live sample, not dynamic auto-sampling."
+        }
+      ]
+    },
+    {
+      "citation_id": "item-task_request-31",
+      "item_keys": [
+        "cross-project:task_request:9ac0d72faaa58d9a"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-task_request-31",
+      "provenance_refs": [
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:3620",
+          "end_line_no": 3620,
+          "end_timestamp": "2026-04-13T12:47:58.906Z",
+          "rule_ids": [
+            "task_request.action"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:738",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:3617",
+          "start_line_no": 3617,
+          "start_timestamp": "2026-04-13T12:43:21.873Z",
+          "statement": "- New config fixture with explicit representative real source IDs"
+        },
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:3623",
+          "end_line_no": 3623,
+          "end_timestamp": "2026-04-13T12:47:59.476Z",
+          "rule_ids": [
+            "task_request.action"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:740",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:3623",
+          "start_line_no": 3623,
+          "start_timestamp": "2026-04-13T12:47:59.476Z",
+          "statement": "- New config fixture with explicit representative real source IDs"
+        },
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:3625",
+          "end_line_no": 3625,
+          "end_timestamp": "2026-04-13T12:48:00.046Z",
+          "rule_ids": [
+            "task_request.action"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:741",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:3624",
+          "start_line_no": 3624,
+          "start_timestamp": "2026-04-13T12:47:59.477Z",
+          "statement": "- New config fixture with explicit representative real source IDs"
+        }
+      ]
+    },
+    {
+      "citation_id": "item-task_request-32",
+      "item_keys": [
+        "cross-project:task_request:c88ce4a90b27690d"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-task_request-32",
+      "provenance_refs": [
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:3620",
+          "end_line_no": 3620,
+          "end_timestamp": "2026-04-13T12:47:58.906Z",
+          "rule_ids": [
+            "task_request.action"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:738",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:3617",
+          "start_line_no": 3617,
+          "start_timestamp": "2026-04-13T12:43:21.873Z",
+          "statement": "- No persistent raw-event cache is added in v1"
+        },
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:3623",
+          "end_line_no": 3623,
+          "end_timestamp": "2026-04-13T12:47:59.476Z",
+          "rule_ids": [
+            "task_request.action"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:740",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:3623",
+          "start_line_no": 3623,
+          "start_timestamp": "2026-04-13T12:47:59.476Z",
+          "statement": "- No persistent raw-event cache is added in v1"
+        },
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:3625",
+          "end_line_no": 3625,
+          "end_timestamp": "2026-04-13T12:48:00.046Z",
+          "rule_ids": [
+            "task_request.action"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:741",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:3624",
+          "start_line_no": 3624,
+          "start_timestamp": "2026-04-13T12:47:59.477Z",
+          "statement": "- No persistent raw-event cache is added in v1"
+        }
+      ]
+    },
+    {
+      "citation_id": "item-task_request-33",
+      "item_keys": [
+        "cross-project:task_request:ad2f492baa1c71f7"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-task_request-33",
+      "provenance_refs": [
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:3620",
+          "end_line_no": 3620,
+          "end_timestamp": "2026-04-13T12:47:58.906Z",
+          "rule_ids": [
+            "task_request.action"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:738",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:3617",
+          "start_line_no": 3617,
+          "start_timestamp": "2026-04-13T12:43:21.873Z",
+          "statement": "- Prefer optional added metadata over shape churn."
+        },
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:3623",
+          "end_line_no": 3623,
+          "end_timestamp": "2026-04-13T12:47:59.476Z",
+          "rule_ids": [
+            "task_request.action"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:740",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:3623",
+          "start_line_no": 3623,
+          "start_timestamp": "2026-04-13T12:47:59.476Z",
+          "statement": "- Prefer optional added metadata over shape churn."
+        },
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:3625",
+          "end_line_no": 3625,
+          "end_timestamp": "2026-04-13T12:48:00.046Z",
+          "rule_ids": [
+            "task_request.action"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:741",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:3624",
+          "start_line_no": 3624,
+          "start_timestamp": "2026-04-13T12:47:59.477Z",
+          "statement": "- Prefer optional added metadata over shape churn."
+        }
+      ]
+    },
+    {
+      "citation_id": "item-task_request-34",
+      "item_keys": [
+        "cross-project:task_request:937259459c140eb4"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-task_request-34",
+      "provenance_refs": [
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:3620",
+          "end_line_no": 3620,
+          "end_timestamp": "2026-04-13T12:47:58.906Z",
+          "rule_ids": [
+            "task_request.action"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:738",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:3617",
+          "start_line_no": 3617,
+          "start_timestamp": "2026-04-13T12:43:21.873Z",
+          "statement": "- runs the fixed sample set through Phases 1-8 using temp outputs"
+        },
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:3623",
+          "end_line_no": 3623,
+          "end_timestamp": "2026-04-13T12:47:59.476Z",
+          "rule_ids": [
+            "task_request.action"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:740",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:3623",
+          "start_line_no": 3623,
+          "start_timestamp": "2026-04-13T12:47:59.476Z",
+          "statement": "- runs the fixed sample set through Phases 1-8 using temp outputs"
+        },
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:3625",
+          "end_line_no": 3625,
+          "end_timestamp": "2026-04-13T12:48:00.046Z",
+          "rule_ids": [
+            "task_request.action"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:741",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:3624",
+          "start_line_no": 3624,
+          "start_timestamp": "2026-04-13T12:47:59.477Z",
+          "statement": "- runs the fixed sample set through Phases 1-8 using temp outputs"
+        }
+      ]
+    },
+    {
+      "citation_id": "item-task_request-35",
+      "item_keys": [
+        "cross-project:task_request:39292760416886ab"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-task_request-35",
+      "provenance_refs": [
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:3620",
+          "end_line_no": 3620,
+          "end_timestamp": "2026-04-13T12:47:58.906Z",
+          "rule_ids": [
+            "task_request.action"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:738",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:3617",
+          "start_line_no": 3617,
+          "start_timestamp": "2026-04-13T12:43:21.873Z",
+          "statement": "- Update downstream phases to consume the new Phase 2 contract."
+        },
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:3623",
+          "end_line_no": 3623,
+          "end_timestamp": "2026-04-13T12:47:59.476Z",
+          "rule_ids": [
+            "task_request.action"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:740",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:3623",
+          "start_line_no": 3623,
+          "start_timestamp": "2026-04-13T12:47:59.476Z",
+          "statement": "- Update downstream phases to consume the new Phase 2 contract."
+        },
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:3625",
+          "end_line_no": 3625,
+          "end_timestamp": "2026-04-13T12:48:00.046Z",
+          "rule_ids": [
+            "task_request.action"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:741",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:3624",
+          "start_line_no": 3624,
+          "start_timestamp": "2026-04-13T12:47:59.477Z",
+          "statement": "- Update downstream phases to consume the new Phase 2 contract."
+        }
+      ]
+    },
+    {
+      "citation_id": "item-task_request-36",
+      "item_keys": [
+        "cross-project:task_request:230a0cfc710408ef"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-task_request-36",
+      "provenance_refs": [
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:3437",
+          "end_line_no": 3437,
+          "end_timestamp": "2026-04-13T04:44:30.153Z",
+          "rule_ids": [
+            "task_request.action"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:699",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:3432",
+          "start_line_no": 3432,
+          "start_timestamp": "2026-04-13T04:42:52.269Z",
+          "statement": "- Added lock handling, partial-failure recording, scoped refresh propagation, and aggregated refresh reporting"
+        }
+      ]
+    },
+    {
+      "citation_id": "item-task_request-37",
+      "item_keys": [
+        "cross-project:task_request:cfd489db2169aef5"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-task_request-37",
+      "provenance_refs": [
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:3437",
+          "end_line_no": 3437,
+          "end_timestamp": "2026-04-13T04:44:30.153Z",
+          "rule_ids": [
+            "task_request.action"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:699",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:3432",
+          "start_line_no": 3432,
+          "start_timestamp": "2026-04-13T04:42:52.269Z",
+          "statement": "- Fixed refresh delta logic so `new -> stable` / `growing -> stable` lifecycle churn does not trigger unnecessary downstream work"
+        }
+      ]
+    },
+    {
+      "citation_id": "item-task_request-38",
+      "item_keys": [
+        "cross-project:task_request:8dada2f09470ab3e"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-task_request-38",
+      "provenance_refs": [
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:3437",
+          "end_line_no": 3437,
+          "end_timestamp": "2026-04-13T04:44:30.153Z",
+          "rule_ids": [
+            "task_request.action"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:699",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:3432",
+          "start_line_no": 3432,
+          "start_timestamp": "2026-04-13T04:42:52.269Z",
+          "statement": "- The delta fix generalizes beyond the sample by preventing downstream rebuilds on non-semantic discovery status changes while still propagating real source changes"
+        }
+      ]
+    },
+    {
+      "citation_id": "item-task_request-39",
+      "item_keys": [
+        "cross-project:task_request:8d38d4a7886990ef"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-task_request-39",
+      "provenance_refs": [
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:3401",
+          "end_line_no": 3401,
+          "end_timestamp": "2026-04-13T04:41:27.107Z",
+          "rule_ids": [
+            "task_request.action"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:694",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:3394",
+          "start_line_no": 3394,
+          "start_timestamp": "2026-04-13T04:41:11.426Z",
+          "statement": "One remaining failure is just the failure-injection test not actually reaching `classify` after the no-op skip fix."
+        }
+      ]
+    },
+    {
+      "citation_id": "item-task_request-40",
+      "item_keys": [
+        "cross-project:task_request:4521f89838b23ef2"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-task_request-40",
+      "provenance_refs": [
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:3393",
+          "end_line_no": 3393,
+          "end_timestamp": "2026-04-13T04:41:11.425Z",
+          "rule_ids": [
+            "task_request.action"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:693",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:3386",
+          "start_line_no": 3386,
+          "start_timestamp": "2026-04-13T04:40:57.999Z",
+          "statement": "The delta fix is in."
+        },
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:3401",
+          "end_line_no": 3401,
+          "end_timestamp": "2026-04-13T04:41:27.107Z",
+          "rule_ids": [
+            "task_request.action"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:694",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:3394",
+          "start_line_no": 3394,
+          "start_timestamp": "2026-04-13T04:41:11.426Z",
+          "statement": "The delta fix is in."
+        }
+      ]
+    },
+    {
+      "citation_id": "item-task_request-41",
+      "item_keys": [
+        "cross-project:task_request:870cee57d5636643"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-task_request-41",
+      "provenance_refs": [
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:3311",
+          "end_line_no": 3311,
+          "end_timestamp": "2026-04-13T04:38:59.599Z",
+          "rule_ids": [
+            "task_request.action"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:682",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:3288",
+          "start_line_no": 3288,
+          "start_timestamp": "2026-04-13T04:37:38.634Z",
+          "statement": "I\u2019m fixing those first."
+        }
+      ]
+    },
+    {
+      "citation_id": "item-task_request-42",
+      "item_keys": [
+        "cross-project:task_request:8f74563b1ab9708e"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-task_request-42",
+      "provenance_refs": [
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:836",
+          "end_line_no": 836,
+          "end_timestamp": "2026-04-13T00:30:32.885Z",
+          "rule_ids": [
+            "task_request.action"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:189",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:835",
+          "start_line_no": 835,
+          "start_timestamp": "2026-04-13T00:30:32.884Z",
+          "statement": "adding"
+        },
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:2703",
+          "end_line_no": 2703,
+          "end_timestamp": "2026-04-13T03:37:02.113Z",
+          "rule_ids": [
+            "task_request.action"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:553",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:2702",
+          "start_line_no": 2702,
+          "start_timestamp": "2026-04-13T03:37:02.113Z",
+          "statement": "adding"
+        },
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:3272",
+          "end_line_no": 3272,
+          "end_timestamp": "2026-04-13T04:36:04.304Z",
+          "rule_ids": [
+            "task_request.action"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:677",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:3271",
+          "start_line_no": 3271,
+          "start_timestamp": "2026-04-13T04:36:04.303Z",
+          "statement": "adding"
+        }
+      ]
+    },
+    {
+      "citation_id": "item-task_request-43",
+      "item_keys": [
+        "cross-project:task_request:c246dfd61c361747"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-task_request-43",
+      "provenance_refs": [
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:3272",
+          "end_line_no": 3272,
+          "end_timestamp": "2026-04-13T04:36:04.304Z",
+          "rule_ids": [
+            "task_request.action"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:677",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:3271",
+          "start_line_no": 3271,
+          "start_timestamp": "2026-04-13T04:36:04.303Z",
+          "statement": "I\u2019m adding the refresh tests now around the real phase chain with fake wiki/bootstrap synthesis."
+        }
+      ]
+    },
+    {
+      "citation_id": "item-task_request-44",
+      "item_keys": [
+        "cross-project:task_request:cf4c702f7d0699a7"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-task_request-44",
+      "provenance_refs": [
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:3226",
+          "end_line_no": 3226,
+          "end_timestamp": "2026-04-13T04:31:44.102Z",
+          "rule_ids": [
+            "task_request.action"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:665",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:3225",
+          "start_line_no": 3225,
+          "start_timestamp": "2026-04-13T04:31:44.101Z",
+          "statement": "I\u2019m adding `refresh.py` now, then I\u2019ll wire the CLI and build a focused orchestration test matrix around real phase calls with fake LLMs."
+        }
+      ]
+    },
+    {
+      "citation_id": "item-task_request-45",
+      "item_keys": [
+        "cross-project:task_request:ffa4e5da689f8ee3"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-task_request-45",
+      "provenance_refs": [
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:3189",
+          "end_line_no": 3189,
+          "end_timestamp": "2026-04-13T04:28:23.507Z",
+          "rule_ids": [
+            "task_request.action"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:656",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:3186",
+          "start_line_no": 3186,
+          "start_timestamp": "2026-04-13T04:26:02.212Z",
+          "statement": "## Implementation Changes"
+        },
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:3192",
+          "end_line_no": 3192,
+          "end_timestamp": "2026-04-13T04:28:23.512Z",
+          "rule_ids": [
+            "task_request.action"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:658",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:3192",
+          "start_line_no": 3192,
+          "start_timestamp": "2026-04-13T04:28:23.512Z",
+          "statement": "## Implementation Changes"
+        },
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:3194",
+          "end_line_no": 3194,
+          "end_timestamp": "2026-04-13T04:28:26.106Z",
+          "rule_ids": [
+            "task_request.action"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:659",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:3193",
+          "start_line_no": 3193,
+          "start_timestamp": "2026-04-13T04:28:23.513Z",
+          "statement": "## Implementation Changes"
+        }
+      ]
+    },
+    {
+      "citation_id": "item-task_request-46",
+      "item_keys": [
+        "cross-project:task_request:1a3590e4cea4b114"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-task_request-46",
+      "provenance_refs": [
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:3189",
+          "end_line_no": 3189,
+          "end_timestamp": "2026-04-13T04:28:23.507Z",
+          "rule_ids": [
+            "task_request.action"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:656",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:3186",
+          "start_line_no": 3186,
+          "start_timestamp": "2026-04-13T04:26:02.212Z",
+          "statement": "- `--source-id` updates only that source\u2019s downstream slice"
+        },
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:3192",
+          "end_line_no": 3192,
+          "end_timestamp": "2026-04-13T04:28:23.512Z",
+          "rule_ids": [
+            "task_request.action"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:658",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:3192",
+          "start_line_no": 3192,
+          "start_timestamp": "2026-04-13T04:28:23.512Z",
+          "statement": "- `--source-id` updates only that source\u2019s downstream slice"
+        },
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:3194",
+          "end_line_no": 3194,
+          "end_timestamp": "2026-04-13T04:28:26.106Z",
+          "rule_ids": [
+            "task_request.action"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:659",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:3193",
+          "start_line_no": 3193,
+          "start_timestamp": "2026-04-13T04:28:23.513Z",
+          "statement": "- `--source-id` updates only that source\u2019s downstream slice"
+        }
+      ]
+    },
+    {
+      "citation_id": "item-task_request-47",
+      "item_keys": [
+        "cross-project:task_request:a3e6c19335bb6ef6"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-task_request-47",
+      "provenance_refs": [
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:3189",
+          "end_line_no": 3189,
+          "end_timestamp": "2026-04-13T04:28:23.507Z",
+          "rule_ids": [
+            "task_request.action"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:656",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:3186",
+          "start_line_no": 3186,
+          "start_timestamp": "2026-04-13T04:26:02.212Z",
+          "statement": "- Add a stale-safe lock so overlapping scheduled runs fail immediately unless the existing lock is clearly stale."
+        },
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:3192",
+          "end_line_no": 3192,
+          "end_timestamp": "2026-04-13T04:28:23.512Z",
+          "rule_ids": [
+            "task_request.action"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:658",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:3192",
+          "start_line_no": 3192,
+          "start_timestamp": "2026-04-13T04:28:23.512Z",
+          "statement": "- Add a stale-safe lock so overlapping scheduled runs fail immediately unless the existing lock is clearly stale."
+        },
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:3194",
+          "end_line_no": 3194,
+          "end_timestamp": "2026-04-13T04:28:26.106Z",
+          "rule_ids": [
+            "task_request.action"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:659",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:3193",
+          "start_line_no": 3193,
+          "start_timestamp": "2026-04-13T04:28:23.513Z",
+          "statement": "- Add a stale-safe lock so overlapping scheduled runs fail immediately unless the existing lock is clearly stale."
+        }
+      ]
+    },
+    {
+      "citation_id": "item-task_request-48",
+      "item_keys": [
+        "cross-project:task_request:dbe3bb29a6833449"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-task_request-48",
+      "provenance_refs": [
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:3189",
+          "end_line_no": 3189,
+          "end_timestamp": "2026-04-13T04:28:23.507Z",
+          "rule_ids": [
+            "task_request.action"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:656",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:3186",
+          "start_line_no": 3186,
+          "start_timestamp": "2026-04-13T04:26:02.212Z",
+          "statement": "- refresh updates `heartbeat_at` before each phase and after each phase"
+        },
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:3192",
+          "end_line_no": 3192,
+          "end_timestamp": "2026-04-13T04:28:23.512Z",
+          "rule_ids": [
+            "task_request.action"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:658",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:3192",
+          "start_line_no": 3192,
+          "start_timestamp": "2026-04-13T04:28:23.512Z",
+          "statement": "- refresh updates `heartbeat_at` before each phase and after each phase"
+        },
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:3194",
+          "end_line_no": 3194,
+          "end_timestamp": "2026-04-13T04:28:26.106Z",
+          "rule_ids": [
+            "task_request.action"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:659",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:3193",
+          "start_line_no": 3193,
+          "start_timestamp": "2026-04-13T04:28:23.513Z",
+          "statement": "- refresh updates `heartbeat_at` before each phase and after each phase"
+        }
+      ]
+    },
+    {
+      "citation_id": "item-task_request-49",
+      "item_keys": [
+        "cross-project:task_request:9d81406d7e95eb45"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-task_request-49",
+      "provenance_refs": [
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:3101",
+          "end_line_no": 3101,
+          "end_timestamp": "2026-04-13T04:14:59.819Z",
+          "rule_ids": [
+            "task_request.action"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:638",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:3100",
+          "start_line_no": 3100,
+          "start_timestamp": "2026-04-13T04:14:59.819Z",
+          "statement": "I\u2019m adding a focused test matrix now for stale warnings, contradictions, provenance/drift errors, and scoped audit refresh so we can validate the stage before touching docs."
+        }
+      ]
+    },
+    {
+      "citation_id": "item-task_request-50",
+      "item_keys": [
+        "cross-project:task_request:21bd0cc6ec74771e"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-task_request-50",
+      "provenance_refs": [
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:2917",
+          "end_line_no": 2917,
+          "end_timestamp": "2026-04-13T03:53:10.158Z",
+          "rule_ids": [
+            "task_request.action"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:591",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:2912",
+          "start_line_no": 2912,
+          "start_timestamp": "2026-04-13T03:51:53.339Z",
+          "statement": "- Fixed bootstrap staging and budget trimming so high-priority content survives within char limits"
+        }
+      ]
+    },
+    {
+      "citation_id": "item-task_request-51",
+      "item_keys": [
+        "cross-project:task_request:5bff201aa4476eba"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-task_request-51",
+      "provenance_refs": [
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:2917",
+          "end_line_no": 2917,
+          "end_timestamp": "2026-04-13T03:53:10.158Z",
+          "rule_ids": [
+            "task_request.action"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:591",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:2912",
+          "start_line_no": 2912,
+          "start_timestamp": "2026-04-13T03:51:53.339Z",
+          "statement": "- Phase 7 is implemented end-to-end: extracted items + wiki manifests -> compact bootstrap markdown + sidecar manifest + state/run/audit logs"
+        }
+      ]
+    },
+    {
+      "citation_id": "item-task_request-52",
+      "item_keys": [
+        "cross-project:task_request:bf7b34eadb087392"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-task_request-52",
+      "provenance_refs": [
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:2847",
+          "end_line_no": 2847,
+          "end_timestamp": "2026-04-13T03:49:29.874Z",
+          "rule_ids": [
+            "task_request.action"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:582",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:2831",
+          "start_line_no": 2831,
+          "start_timestamp": "2026-04-13T03:49:24.363Z",
+          "statement": "I\u2019m patching the staging bug and adding a focused bootstrap test suite against the existing sample pipeline."
+        }
+      ]
+    },
+    {
+      "citation_id": "item-task_request-53",
+      "item_keys": [
+        "cross-project:task_request:635c640d1be91164"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-task_request-53",
+      "provenance_refs": [
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:2811",
+          "end_line_no": 2811,
+          "end_timestamp": "2026-04-13T03:49:04.128Z",
+          "rule_ids": [
+            "task_request.action"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:578",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:2804",
+          "start_line_no": 2804,
+          "start_timestamp": "2026-04-13T03:49:03.648Z",
+          "statement": "add_argument"
+        }
+      ]
+    },
+    {
+      "citation_id": "item-task_request-54",
+      "item_keys": [
+        "cross-project:task_request:66c04fcd14726de3"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-task_request-54",
+      "provenance_refs": [
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:2790",
+          "end_line_no": 2790,
+          "end_timestamp": "2026-04-13T03:48:46.931Z",
+          "rule_ids": [
+            "task_request.action"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:573",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:2779",
+          "start_line_no": 2779,
+          "start_timestamp": "2026-04-13T03:48:46.185Z",
+          "statement": "I\u2019m adding the smallest targeted test coverage and repo wiring now so we can validate bootstrap without broad churn."
+        }
+      ]
+    },
+    {
+      "citation_id": "item-task_request-55",
+      "item_keys": [
+        "cross-project:task_request:3f958672eefa5945"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-task_request-55",
+      "provenance_refs": [
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:2777",
+          "end_line_no": 2777,
+          "end_timestamp": "2026-04-13T03:48:39.638Z",
+          "rule_ids": [
+            "task_request.action"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:571",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:2763",
+          "start_line_no": 2763,
+          "start_timestamp": "2026-04-13T03:48:39.050Z",
+          "statement": "Implementing Phase 7 now."
+        }
+      ]
+    },
+    {
+      "citation_id": "item-task_request-56",
+      "item_keys": [
+        "cross-project:task_request:f3f6bf2e453f3e80"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-task_request-56",
+      "provenance_refs": [
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:2777",
+          "end_line_no": 2777,
+          "end_timestamp": "2026-04-13T03:48:39.638Z",
+          "rule_ids": [
+            "task_request.action"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:571",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:2763",
+          "start_line_no": 2763,
+          "start_timestamp": "2026-04-13T03:48:39.050Z",
+          "statement": "I\u2019m wiring tests and the last repo updates, then I\u2019ll validate the bootstrap pipeline end-to-end locally."
+        }
+      ]
+    },
+    {
+      "citation_id": "item-task_request-57",
+      "item_keys": [
+        "cross-project:task_request:667979049796f080"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-task_request-57",
+      "provenance_refs": [
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:2753",
+          "end_line_no": 2753,
+          "end_timestamp": "2026-04-13T03:46:09.415Z",
+          "rule_ids": [
+            "task_request.action"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:569",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:2742",
+          "start_line_no": 2742,
+          "start_timestamp": "2026-04-13T03:45:40.146Z",
+          "statement": "I\u2019m adding the Phase 7 tests around the same sample-first harness used by wiki generation."
+        }
+      ]
+    },
+    {
+      "citation_id": "item-task_request-58",
+      "item_keys": [
+        "cross-project:task_request:0f171ef84f0aba3e"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-task_request-58",
+      "provenance_refs": [
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:2753",
+          "end_line_no": 2753,
+          "end_timestamp": "2026-04-13T03:46:09.415Z",
+          "rule_ids": [
+            "task_request.action"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:569",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:2742",
+          "start_line_no": 2742,
+          "start_timestamp": "2026-04-13T03:45:40.146Z",
+          "statement": "I\u2019m running a syntax pass now before I add the bootstrap tests."
+        }
+      ]
+    },
+    {
+      "citation_id": "item-task_request-59",
+      "item_keys": [
+        "cross-project:task_request:e66c1df5b5cfbcc7"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-task_request-59",
+      "provenance_refs": [
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:2703",
+          "end_line_no": 2703,
+          "end_timestamp": "2026-04-13T03:37:02.113Z",
+          "rule_ids": [
+            "task_request.action"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:553",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:2702",
+          "start_line_no": 2702,
+          "start_timestamp": "2026-04-13T03:37:02.113Z",
+          "statement": "I\u2019m adding the new module and config now, then I\u2019ll hook the CLI/tests after the core pipeline is in place."
+        }
+      ]
+    },
+    {
+      "citation_id": "item-task_request-60",
+      "item_keys": [
+        "cross-project:task_request:e98af1089549d919"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-task_request-60",
+      "provenance_refs": [
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:2700",
+          "end_line_no": 2700,
+          "end_timestamp": "2026-04-13T03:35:55.568Z",
+          "rule_ids": [
+            "task_request.action"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:551",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:2678",
+          "start_line_no": 2678,
+          "start_timestamp": "2026-04-13T03:32:11.467Z",
+          "statement": "I\u2019m checking the ignore and packaging files before I add the new generated tree so I don\u2019t leave Phase 7 half-wired."
+        }
+      ]
+    },
+    {
+      "citation_id": "item-task_request-61",
+      "item_keys": [
+        "cross-project:task_request:3f9eb2a641c416df"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-task_request-61",
+      "provenance_refs": [
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:2368",
+          "end_line_no": 2368,
+          "end_timestamp": "2026-04-13T03:03:58.748Z",
+          "rule_ids": [
+            "task_request.action"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:490",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:2362",
+          "start_line_no": 2362,
+          "start_timestamp": "2026-04-13T03:03:42.861Z",
+          "statement": "The index-page packet exposed all domain item ids to synthesis, but only preview items were actually renderable on the page, so citation enrichment crashed on real data."
+        }
+      ]
+    },
+    {
+      "citation_id": "item-task_request-62",
+      "item_keys": [
+        "cross-project:task_request:8a881afa58715f7a"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-task_request-62",
+      "provenance_refs": [
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:2350",
+          "end_line_no": 2350,
+          "end_timestamp": "2026-04-13T03:03:29.629Z",
+          "rule_ids": [
+            "task_request.action"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:486",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:2342",
+          "start_line_no": 2342,
+          "start_timestamp": "2026-04-13T03:03:29.035Z",
+          "statement": "I\u2019m fixing the wiki sample run now and will only report the result."
+        }
+      ]
+    },
+    {
+      "citation_id": "item-task_request-63",
+      "item_keys": [
+        "cross-project:task_request:fac3b30ac1cb4323"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-task_request-63",
+      "provenance_refs": [
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:1600",
+          "end_line_no": 1600,
+          "end_timestamp": "2026-04-13T02:34:11.753Z",
+          "rule_ids": [
+            "task_request.action"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:360",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:1593",
+          "start_line_no": 1593,
+          "start_timestamp": "2026-04-13T02:33:51.708Z",
+          "statement": "- Added wiki outputs under `wiki/` plus manifest/state/audit support:"
+        },
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:1605",
+          "end_line_no": 1605,
+          "end_timestamp": "2026-04-13T02:35:40.543Z",
+          "rule_ids": [
+            "task_request.action"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:361",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:1601",
+          "start_line_no": 1601,
+          "start_timestamp": "2026-04-13T02:34:11.753Z",
+          "statement": "- Added wiki outputs under `wiki/` plus manifest/state/audit support:"
+        }
+      ]
+    },
+    {
+      "citation_id": "item-task_request-64",
+      "item_keys": [
+        "cross-project:task_request:c633f156278ab6f2"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-task_request-64",
+      "provenance_refs": [
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:1600",
+          "end_line_no": 1600,
+          "end_timestamp": "2026-04-13T02:34:11.753Z",
+          "rule_ids": [
+            "task_request.action"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:360",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:1593",
+          "start_line_no": 1593,
+          "start_timestamp": "2026-04-13T02:33:51.708Z",
+          "statement": "- This adds the missing human-facing layer on top of extracted knowledge: deterministic page structure plus bounded OpenAI-backed synthesis with claim manifests and provenance."
+        },
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:1605",
+          "end_line_no": 1605,
+          "end_timestamp": "2026-04-13T02:35:40.543Z",
+          "rule_ids": [
+            "task_request.action"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:361",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:1601",
+          "start_line_no": 1601,
+          "start_timestamp": "2026-04-13T02:34:11.753Z",
+          "statement": "- This adds the missing human-facing layer on top of extracted knowledge: deterministic page structure plus bounded OpenAI-backed synthesis with claim manifests and provenance."
+        }
+      ]
+    },
+    {
+      "citation_id": "item-task_request-65",
+      "item_keys": [
+        "cross-project:task_request:2c6ff262a33dde01"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-task_request-65",
+      "provenance_refs": [
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:1605",
+          "end_line_no": 1605,
+          "end_timestamp": "2026-04-13T02:35:40.543Z",
+          "rule_ids": [
+            "task_request.action"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:361",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:1601",
+          "start_line_no": 1601,
+          "start_timestamp": "2026-04-13T02:34:11.753Z",
+          "statement": "added"
+        }
+      ]
+    },
+    {
+      "citation_id": "item-task_request-66",
+      "item_keys": [
+        "cross-project:task_request:b3c186d24dc8f55f"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-task_request-66",
+      "provenance_refs": [
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:1600",
+          "end_line_no": 1600,
+          "end_timestamp": "2026-04-13T02:34:11.753Z",
+          "rule_ids": [
+            "task_request.action"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:360",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:1593",
+          "start_line_no": 1593,
+          "start_timestamp": "2026-04-13T02:33:51.708Z",
+          "statement": "One small usability gap showed up in the docs: the wiki phase now has a real OpenAI runtime dependency, so I\u2019m adding the env var note before I wrap."
+        }
+      ]
+    },
+    {
+      "citation_id": "item-task_request-67",
+      "item_keys": [
+        "cross-project:task_request:a650629a41842997"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-task_request-67",
+      "provenance_refs": [
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:1558",
+          "end_line_no": 1558,
+          "end_timestamp": "2026-04-13T02:31:15.681Z",
+          "rule_ids": [
+            "task_request.action"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:353",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:1552",
+          "start_line_no": 1552,
+          "start_timestamp": "2026-04-13T02:30:32.427Z",
+          "statement": "I\u2019m fixing that and then adding a focused `test_wiki.py` file that exercises the full discovery\u2192wiki path with mocked synthesis."
+        }
+      ]
+    },
+    {
+      "citation_id": "item-task_request-68",
+      "item_keys": [
+        "cross-project:task_request:535b295e6260ab75"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-task_request-68",
+      "provenance_refs": [
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:1500",
+          "end_line_no": 1500,
+          "end_timestamp": "2026-04-13T02:28:40.917Z",
+          "rule_ids": [
+            "task_request.action"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:342",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:1489",
+          "start_line_no": 1489,
+          "start_timestamp": "2026-04-13T02:28:39.839Z",
+          "statement": "Phase 6 is partially scaffolded, and I\u2019m tightening it by adding the wiki test coverage and then validating the full pipeline end to end."
+        }
+      ]
+    },
+    {
+      "citation_id": "item-task_request-69",
+      "item_keys": [
+        "cross-project:task_request:f5c80a866aebaa6b"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-task_request-69",
+      "provenance_refs": [
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:1479",
+          "end_line_no": 1479,
+          "end_timestamp": "2026-04-13T02:25:47.406Z",
+          "rule_ids": [
+            "task_request.action"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:340",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:1471",
+          "start_line_no": 1471,
+          "start_timestamp": "2026-04-13T02:25:10.610Z",
+          "statement": "I\u2019m adding the Phase 6 tests now."
+        }
+      ]
+    },
+    {
+      "citation_id": "item-task_request-70",
+      "item_keys": [
+        "cross-project:task_request:b107f2666a31df00"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-task_request-70",
+      "provenance_refs": [
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:1469",
+          "end_line_no": 1469,
+          "end_timestamp": "2026-04-13T02:24:55.568Z",
+          "rule_ids": [
+            "task_request.action"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:338",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:1448",
+          "start_line_no": 1448,
+          "start_timestamp": "2026-04-13T02:24:40.733Z",
+          "statement": "I\u2019m doing a tight compile check before I add the wiki tests so we catch any structural issues in the new module first, then I\u2019ll use the tests to harden the behavior around citations, manifests, and incremental rebuilds."
+        }
+      ]
+    },
+    {
+      "citation_id": "item-task_request-71",
+      "item_keys": [
+        "cross-project:task_request:0f74e705cb1e400a"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-task_request-71",
+      "provenance_refs": [
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:1409",
+          "end_line_no": 1409,
+          "end_timestamp": "2026-04-13T02:19:04.741Z",
+          "rule_ids": [
+            "task_request.action"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:325",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:1408",
+          "start_line_no": 1408,
+          "start_timestamp": "2026-04-13T02:19:04.740Z",
+          "statement": "I\u2019ve got the implementation shape locked now: new wiki stage, config, page manifests, and an OpenAI-backed structured synthesis layer that can be patched in tests."
+        }
+      ]
+    },
+    {
+      "citation_id": "item-task_request-72",
+      "item_keys": [
+        "cross-project:task_request:35ff1583999139e2"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-task_request-72",
+      "provenance_refs": [
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:1398",
+          "end_line_no": 1398,
+          "end_timestamp": "2026-04-13T02:15:06.645Z",
+          "rule_ids": [
+            "task_request.action"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:318",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:1387",
+          "start_line_no": 1387,
+          "start_timestamp": "2026-04-13T02:15:05.376Z",
+          "statement": "I\u2019m grounding the Phase 6 implementation against the current extraction/state model before I touch files."
+        }
+      ]
+    },
+    {
+      "citation_id": "item-task_request-73",
+      "item_keys": [
+        "cross-project:task_request:d688dec2bfb20d47"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-task_request-73",
+      "provenance_refs": [
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:1347",
+          "end_line_no": 1347,
+          "end_timestamp": "2026-04-13T02:08:00.126Z",
+          "rule_ids": [
+            "task_request.action"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:304",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:1340",
+          "start_line_no": 1340,
+          "start_timestamp": "2026-04-13T02:05:56.027Z",
+          "statement": "- folder naming conventions optimized for vault browsing"
+        }
+      ]
+    },
+    {
+      "citation_id": "item-task_request-74",
+      "item_keys": [
+        "cross-project:task_request:cb1dd6559c08a9ab"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-task_request-74",
+      "provenance_refs": [
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:1347",
+          "end_line_no": 1347,
+          "end_timestamp": "2026-04-13T02:08:00.126Z",
+          "rule_ids": [
+            "task_request.action"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:304",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:1340",
+          "start_line_no": 1340,
+          "start_timestamp": "2026-04-13T02:05:56.027Z",
+          "statement": "- later you can add `plain-markdown`, `mkdocs`, `docsify`, `html`, etc."
+        }
+      ]
+    },
+    {
+      "citation_id": "item-task_request-75",
+      "item_keys": [
+        "cross-project:task_request:5d0b000565b59394"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-task_request-75",
+      "provenance_refs": [
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:1334",
+          "end_line_no": 1334,
+          "end_timestamp": "2026-04-13T01:58:10.251Z",
+          "rule_ids": [
+            "task_request.action"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:302",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:1334",
+          "start_line_no": 1334,
+          "start_timestamp": "2026-04-13T01:58:10.251Z",
+          "statement": "Examples: prefers concise answers, dislikes unrelated refactors, wants phase-by-phase planning, wants clarification before planning, prefers provenance, prefers implementation over speculation."
+        },
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:1339",
+          "end_line_no": 1339,
+          "end_timestamp": "2026-04-13T02:05:56.026Z",
+          "rule_ids": [
+            "task_request.action"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:303",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:1335",
+          "start_line_no": 1335,
+          "start_timestamp": "2026-04-13T01:58:10.252Z",
+          "statement": "Examples: prefers concise answers, dislikes unrelated refactors, wants phase-by-phase planning, wants clarification before planning, prefers provenance, prefers implementation over speculation."
+        }
+      ]
+    },
+    {
+      "citation_id": "item-task_request-76",
+      "item_keys": [
+        "cross-project:task_request:1fe5b7cc946941f1"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-task_request-76",
+      "provenance_refs": [
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:1334",
+          "end_line_no": 1334,
+          "end_timestamp": "2026-04-13T01:58:10.251Z",
+          "rule_ids": [
+            "task_request.action"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:302",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:1334",
+          "start_line_no": 1334,
+          "start_timestamp": "2026-04-13T01:58:10.251Z",
+          "statement": "Examples: the user consistently optimizes for maintainability, auditability, minimal drift, and incremental correctness, even if each session phrases that differently."
+        },
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:1339",
+          "end_line_no": 1339,
+          "end_timestamp": "2026-04-13T02:05:56.026Z",
+          "rule_ids": [
+            "task_request.action"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:303",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:1335",
+          "start_line_no": 1335,
+          "start_timestamp": "2026-04-13T01:58:10.252Z",
+          "statement": "Examples: the user consistently optimizes for maintainability, auditability, minimal drift, and incremental correctness, even if each session phrases that differently."
+        }
+      ]
+    },
+    {
+      "citation_id": "item-task_request-77",
+      "item_keys": [
+        "cross-project:task_request:28236b681d7a5be9"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-task_request-77",
+      "provenance_refs": [
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:1334",
+          "end_line_no": 1334,
+          "end_timestamp": "2026-04-13T01:58:10.251Z",
+          "rule_ids": [
+            "task_request.action"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:302",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:1334",
+          "start_line_no": 1334,
+          "start_timestamp": "2026-04-13T01:58:10.251Z",
+          "statement": "Examples: what the likely next implementation or validation action is, when it is implied by the work history rather than explicitly stated as \u201cnext step\u201d."
+        },
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:1339",
+          "end_line_no": 1339,
+          "end_timestamp": "2026-04-13T02:05:56.026Z",
+          "rule_ids": [
+            "task_request.action"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:303",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:1335",
+          "start_line_no": 1335,
+          "start_timestamp": "2026-04-13T01:58:10.252Z",
+          "statement": "Examples: what the likely next implementation or validation action is, when it is implied by the work history rather than explicitly stated as \u201cnext step\u201d."
+        }
+      ]
+    },
+    {
+      "citation_id": "item-task_request-78",
+      "item_keys": [
+        "cross-project:task_request:231b2be6e2f0ba66"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-task_request-78",
+      "provenance_refs": [
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:1280",
+          "end_line_no": 1280,
+          "end_timestamp": "2026-04-13T01:30:06.455Z",
+          "rule_ids": [
+            "task_request.action"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:279",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:1275",
+          "start_line_no": 1275,
+          "start_timestamp": "2026-04-13T01:29:46.124Z",
+          "statement": "- Implemented deterministic item extraction for the Phase 5 taxonomy, with:"
+        },
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:1285",
+          "end_line_no": 1285,
+          "end_timestamp": "2026-04-13T01:34:02.654Z",
+          "rule_ids": [
+            "task_request.action"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:280",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:1281",
+          "start_line_no": 1281,
+          "start_timestamp": "2026-04-13T01:30:06.455Z",
+          "statement": "- Implemented deterministic item extraction for the Phase 5 taxonomy, with:"
+        }
+      ]
+    },
+    {
+      "citation_id": "item-task_request-79",
+      "item_keys": [
+        "cross-project:task_request:6c09e8ed0fe774e0"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-task_request-79",
+      "provenance_refs": [
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:1280",
+          "end_line_no": 1280,
+          "end_timestamp": "2026-04-13T01:30:06.455Z",
+          "rule_ids": [
+            "task_request.action"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:279",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:1275",
+          "start_line_no": 1275,
+          "start_timestamp": "2026-04-13T01:29:46.124Z",
+          "statement": "This closes the root capability gap between \u201cclassified segments\u201d and \u201cusable memory artifacts.\u201d Instead of pushing raw segments straight into future wiki/bootstrap phases, the system now creates stable, provenance-backed knowledge items that can be merged, audited, version-invalidated, and reused across later phases."
+        },
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:1285",
+          "end_line_no": 1285,
+          "end_timestamp": "2026-04-13T01:34:02.654Z",
+          "rule_ids": [
+            "task_request.action"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:280",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:1281",
+          "start_line_no": 1281,
+          "start_timestamp": "2026-04-13T01:30:06.455Z",
+          "statement": "This closes the root capability gap between \u201cclassified segments\u201d and \u201cusable memory artifacts.\u201d Instead of pushing raw segments straight into future wiki/bootstrap phases, the system now creates stable, provenance-backed knowledge items that can be merged, audited, version-invalidated, and reused across later phases."
+        }
+      ]
+    },
+    {
+      "citation_id": "item-task_request-80",
+      "item_keys": [
+        "cross-project:task_request:849fcb439ff29f76"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-task_request-80",
+      "provenance_refs": [
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:1201",
+          "end_line_no": 1201,
+          "end_timestamp": "2026-04-13T01:25:51.380Z",
+          "rule_ids": [
+            "task_request.action"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:265",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:1181",
+          "start_line_no": 1181,
+          "start_timestamp": "2026-04-13T01:24:57.021Z",
+          "statement": "I\u2019m adding the Phase 5 test file now, with the scenarios that matter most for later phases: mixed-domain extraction, dedupe/merge, code locations, weak-signal skips, conflicts, supersession, sample scoping, version invalidation, and tombstones."
+        }
+      ]
+    }
+  ],
+  "domain": "cross-project",
+  "input_item_keys": [
+    "cross-project:task_request:017361725bf6cd20",
+    "cross-project:task_request:8145db8fc7be9474",
+    "cross-project:task_request:9ce1808b659f8dec",
+    "cross-project:task_request:7b56a9c9424b23aa",
+    "cross-project:task_request:3cbb0a3d98312cf8",
+    "cross-project:task_request:2f58fd9289a86d2d",
+    "cross-project:task_request:b3a5d9c347a4ddc3",
+    "cross-project:task_request:96dcb5b8aafdb6bc",
+    "cross-project:task_request:b3d4cd8509eef6c3",
+    "cross-project:task_request:ffca5d41ba98499d",
+    "cross-project:task_request:6299549b7c5077ec",
+    "cross-project:task_request:03ccfc41997200d3",
+    "cross-project:task_request:3925534a9d65b7a4",
+    "cross-project:task_request:cbbb05e9292764d7",
+    "cross-project:task_request:ab08a4f54162a6ce",
+    "cross-project:task_request:ad9dffc172e5e044",
+    "cross-project:task_request:f2c56f9d12d2429b",
+    "cross-project:task_request:126bf913b3f510a6",
+    "cross-project:task_request:e833fffca75ba405",
+    "cross-project:task_request:432616184f4f7819",
+    "cross-project:task_request:e88e13a2c751bdaf",
+    "cross-project:task_request:bc364fd3904a0e89",
+    "cross-project:task_request:2c2304b80ede46f5",
+    "cross-project:task_request:112f9bdd240802a6",
+    "cross-project:task_request:5f95a908d5dd9c68",
+    "cross-project:task_request:e70246a111476ecc",
+    "cross-project:task_request:4a8fc0211d14e8d7",
+    "cross-project:task_request:6e40935c6cbed875",
+    "cross-project:task_request:30b0fa08d9da9fbc",
+    "cross-project:task_request:1c5acb3251623ed3",
+    "cross-project:task_request:9ac0d72faaa58d9a",
+    "cross-project:task_request:c88ce4a90b27690d",
+    "cross-project:task_request:ad2f492baa1c71f7",
+    "cross-project:task_request:937259459c140eb4",
+    "cross-project:task_request:39292760416886ab",
+    "cross-project:task_request:230a0cfc710408ef",
+    "cross-project:task_request:cfd489db2169aef5",
+    "cross-project:task_request:8dada2f09470ab3e",
+    "cross-project:task_request:8d38d4a7886990ef",
+    "cross-project:task_request:4521f89838b23ef2",
+    "cross-project:task_request:870cee57d5636643",
+    "cross-project:task_request:8f74563b1ab9708e",
+    "cross-project:task_request:c246dfd61c361747",
+    "cross-project:task_request:cf4c702f7d0699a7",
+    "cross-project:task_request:ffa4e5da689f8ee3",
+    "cross-project:task_request:1a3590e4cea4b114",
+    "cross-project:task_request:a3e6c19335bb6ef6",
+    "cross-project:task_request:dbe3bb29a6833449",
+    "cross-project:task_request:9d81406d7e95eb45",
+    "cross-project:task_request:21bd0cc6ec74771e",
+    "cross-project:task_request:5bff201aa4476eba",
+    "cross-project:task_request:bf7b34eadb087392",
+    "cross-project:task_request:635c640d1be91164",
+    "cross-project:task_request:66c04fcd14726de3",
+    "cross-project:task_request:3f958672eefa5945",
+    "cross-project:task_request:f3f6bf2e453f3e80",
+    "cross-project:task_request:667979049796f080",
+    "cross-project:task_request:0f171ef84f0aba3e",
+    "cross-project:task_request:e66c1df5b5cfbcc7",
+    "cross-project:task_request:e98af1089549d919",
+    "cross-project:task_request:3f9eb2a641c416df",
+    "cross-project:task_request:8a881afa58715f7a",
+    "cross-project:task_request:fac3b30ac1cb4323",
+    "cross-project:task_request:c633f156278ab6f2",
+    "cross-project:task_request:2c6ff262a33dde01",
+    "cross-project:task_request:b3c186d24dc8f55f",
+    "cross-project:task_request:a650629a41842997",
+    "cross-project:task_request:535b295e6260ab75",
+    "cross-project:task_request:f5c80a866aebaa6b",
+    "cross-project:task_request:b107f2666a31df00",
+    "cross-project:task_request:0f74e705cb1e400a",
+    "cross-project:task_request:35ff1583999139e2",
+    "cross-project:task_request:d688dec2bfb20d47",
+    "cross-project:task_request:cb1dd6559c08a9ab",
+    "cross-project:task_request:5d0b000565b59394",
+    "cross-project:task_request:1fe5b7cc946941f1",
+    "cross-project:task_request:28236b681d7a5be9",
+    "cross-project:task_request:231b2be6e2f0ba66",
+    "cross-project:task_request:6c09e8ed0fe774e0",
+    "cross-project:task_request:849fcb439ff29f76"
+  ],
+  "page_id": "projects/cross-project/tasks",
+  "page_type": "bucket_page",
+  "rendered_page_metadata": {
+    "claim_count": 6,
+    "conflict_count": 10,
+    "related_domains": [
+      "ai-scientist",
+      "ai-trader",
+      "open-brain"
+    ],
+    "related_pages": [
+      {
+        "page_key": "index",
+        "title": "Cross-Project",
+        "wikilink": "[[projects/cross-project/index|Cross-Project]]"
+      },
+      {
+        "page_key": "communication-preferences",
+        "title": "Cross-Project - Communication Preferences",
+        "wikilink": "[[projects/cross-project/communication-preferences|Cross-Project - Communication Preferences]]"
+      },
+      {
+        "page_key": "workflow-rules",
+        "title": "Cross-Project - Workflow Rules",
+        "wikilink": "[[projects/cross-project/workflow-rules|Cross-Project - Workflow Rules]]"
+      },
+      {
+        "page_key": "architecture",
+        "title": "Cross-Project - Architecture",
+        "wikilink": "[[projects/cross-project/architecture|Cross-Project - Architecture]]"
+      },
+      {
+        "page_key": "code-map",
+        "title": "Cross-Project - Code Map",
+        "wikilink": "[[projects/cross-project/code-map|Cross-Project - Code Map]]"
+      },
+      {
+        "page_key": "current-state",
+        "title": "Cross-Project - Current State",
+        "wikilink": "[[projects/cross-project/current-state|Cross-Project - Current State]]"
+      },
+      {
+        "page_key": "outcomes",
+        "title": "Cross-Project - Outcomes",
+        "wikilink": "[[projects/cross-project/outcomes|Cross-Project - Outcomes]]"
+      },
+      {
+        "page_key": "failures",
+        "title": "Cross-Project - Failures",
+        "wikilink": "[[projects/cross-project/failures|Cross-Project - Failures]]"
+      },
+      {
+        "page_key": "decisions",
+        "title": "Cross-Project - Decisions",
+        "wikilink": "[[projects/cross-project/decisions|Cross-Project - Decisions]]"
+      },
+      {
+        "page_key": "next-steps",
+        "title": "Cross-Project - Next Steps",
+        "wikilink": "[[projects/cross-project/next-steps|Cross-Project - Next Steps]]"
+      },
+      {
+        "page_key": "open-questions",
+        "title": "Cross-Project - Open Questions",
+        "wikilink": "[[projects/cross-project/open-questions|Cross-Project - Open Questions]]"
+      }
+    ],
+    "relative_page_path": "projects/cross-project/tasks.md",
+    "source_count": 3,
+    "title": "Cross-Project - Tasks"
+  },
+  "renderer": "obsidian_markdown",
+  "synthesized_claims": [
+    {
+      "claim_id": "claim-1",
+      "confidence": "inferred",
+      "latent_type": "project_identity_and_scope",
+      "provenance_refs": [
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:5694",
+          "end_line_no": 5694,
+          "end_timestamp": "2026-03-03T21:16:15.038Z",
+          "rule_ids": [
+            "task_request.action"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:513",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:5694",
+          "start_line_no": 5694,
+          "start_timestamp": "2026-03-03T21:16:15.038Z",
+          "statement": "PLEASE IMPLEMENT THIS PLAN:"
+        },
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:5697",
+          "end_line_no": 5697,
+          "end_timestamp": "2026-03-03T21:16:18.295Z",
+          "rule_ids": [
+            "task_request.action"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:514",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:5695",
+          "start_line_no": 5695,
+          "start_timestamp": "2026-03-03T21:16:15.305Z",
+          "statement": "PLEASE IMPLEMENT THIS PLAN:"
+        },
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:20924",
+          "end_line_no": 20924,
+          "end_timestamp": "2026-03-06T21:28:49.509Z",
+          "rule_ids": [
+            "task_request.action"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:1993",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:20924",
+          "start_line_no": 20924,
+          "start_timestamp": "2026-03-06T21:28:49.509Z",
+          "statement": "PLEASE IMPLEMENT THIS PLAN:"
+        },
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:4244",
+          "end_line_no": 4244,
+          "end_timestamp": "2026-04-13T14:39:17.928Z",
+          "rule_ids": [
+            "task_request.action"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:838",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:4240",
+          "start_line_no": 4240,
+          "start_timestamp": "2026-04-13T14:36:58.251Z",
+          "statement": "that\u2019s fixed."
+        },
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:4235",
+          "end_line_no": 4235,
+          "end_timestamp": "2026-04-13T14:36:37.352Z",
+          "rule_ids": [
+            "task_request.action"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:835",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:4231",
+          "start_line_no": 4231,
+          "start_timestamp": "2026-04-13T14:29:59.107Z",
+          "statement": "- Implemented the pointer-first Phase 2 migration."
+        },
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:4235",
+          "end_line_no": 4235,
+          "end_timestamp": "2026-04-13T14:36:37.352Z",
+          "rule_ids": [
+            "task_request.action"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:835",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:4231",
+          "start_line_no": 4231,
+          "start_timestamp": "2026-04-13T14:29:59.107Z",
+          "statement": "- This fixes the root storage problem: Phase 2 no longer mirrors the raw corpus while preserving exact provenance and on-demand recovery."
+        }
+      ],
+      "section_id": "summary",
+      "supporting_item_ids": [
+        "cross-project:task_request:017361725bf6cd20",
+        "cross-project:task_request:8145db8fc7be9474",
+        "cross-project:task_request:9ce1808b659f8dec",
+        "cross-project:task_request:7b56a9c9424b23aa"
+      ],
+      "text": "The task requests include various implementations and fixes related to the project."
+    },
+    {
+      "claim_id": "claim-2",
+      "confidence": "inferred",
+      "latent_type": "current_state_synthesis",
+      "provenance_refs": [
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:4235",
+          "end_line_no": 4235,
+          "end_timestamp": "2026-04-13T14:36:37.352Z",
+          "rule_ids": [
+            "task_request.action"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:835",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:4231",
+          "start_line_no": 4231,
+          "start_timestamp": "2026-04-13T14:29:59.107Z",
+          "statement": "- Validation passed: `73` local tests green (`1` skipped live test by default), and the env-gated real-data live suite passed on the fixed representative sample set."
+        },
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:4187",
+          "end_line_no": 4187,
+          "end_timestamp": "2026-04-13T14:20:11.899Z",
+          "rule_ids": [
+            "task_request.action"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:827",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:4174",
+          "start_line_no": 4174,
+          "start_timestamp": "2026-04-13T14:19:51.355Z",
+          "statement": "I\u2019ve patched the real-data failure mode and added a regression test."
+        },
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:4173",
+          "end_line_no": 4173,
+          "end_timestamp": "2026-04-13T14:19:42.924Z",
+          "rule_ids": [
+            "task_request.action"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:826",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:4161",
+          "start_line_no": 4161,
+          "start_timestamp": "2026-04-13T14:19:24.952Z",
+          "statement": "I\u2019m adding a narrow regression test so the live-data fix stays locked: repeated `next_step` items on the same file/path should warn, not fail the audit."
+        }
+      ],
+      "section_id": "summary",
+      "supporting_item_ids": [
+        "cross-project:task_request:3cbb0a3d98312cf8",
+        "cross-project:task_request:2f58fd9289a86d2d",
+        "cross-project:task_request:b3a5d9c347a4ddc3"
+      ],
+      "text": "Validation tests have been conducted to ensure the functionality of the implemented changes."
+    },
+    {
+      "claim_id": "claim-3",
+      "confidence": "inferred",
+      "latent_type": "implicit_next_steps",
+      "provenance_refs": [
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:4124",
+          "end_line_no": 4124,
+          "end_timestamp": "2026-04-13T14:18:33.908Z",
+          "rule_ids": [
+            "task_request.action"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:819",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:4111",
+          "start_line_no": 4111,
+          "start_timestamp": "2026-04-13T14:17:14.360Z",
+          "statement": "I\u2019m fixing that policy at the audit layer and tightening the generic `current_state` subject key one last time."
+        },
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:4105",
+          "end_line_no": 4105,
+          "end_timestamp": "2026-04-13T14:08:43.311Z",
+          "rule_ids": [
+            "task_request.action"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:816",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:4097",
+          "start_line_no": 4097,
+          "start_timestamp": "2026-04-13T14:00:32.418Z",
+          "statement": "The live error count is still dropping, which means the fix path is right."
+        },
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:4037",
+          "end_line_no": 4037,
+          "end_timestamp": "2026-04-13T13:26:23.617Z",
+          "rule_ids": [
+            "task_request.action"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:803",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:4019",
+          "start_line_no": 4019,
+          "start_timestamp": "2026-04-13T13:26:04.212Z",
+          "statement": "I\u2019m fixing that at the extraction validator instead of weakening the live test."
+        }
+      ],
+      "section_id": "summary",
+      "supporting_item_ids": [
+        "cross-project:task_request:96dcb5b8aafdb6bc",
+        "cross-project:task_request:b3d4cd8509eef6c3",
+        "cross-project:task_request:ffca5d41ba98499d"
+      ],
+      "text": "There are ongoing efforts to improve the extraction validator and address live error counts."
+    },
+    {
+      "claim_id": "claim-4",
+      "confidence": "inferred",
+      "latent_type": "workflow_norms",
+      "provenance_refs": [
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:4037",
+          "end_line_no": 4037,
+          "end_timestamp": "2026-04-13T13:26:23.617Z",
+          "rule_ids": [
+            "task_request.action"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:803",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:4019",
+          "start_line_no": 4019,
+          "start_timestamp": "2026-04-13T13:26:04.212Z",
+          "statement": "The extraction validator fix is in."
+        },
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:3996",
+          "end_line_no": 3996,
+          "end_timestamp": "2026-04-13T13:17:48.421Z",
+          "rule_ids": [
+            "task_request.action"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:799",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:3981",
+          "start_line_no": 3981,
+          "start_timestamp": "2026-04-13T13:04:37.669Z",
+          "statement": "I\u2019m doing the opt-in live-corpus validation now against the fixed real sample set with temp outputs and stubbed LLM calls."
+        }
+      ],
+      "section_id": "summary",
+      "supporting_item_ids": [
+        "cross-project:task_request:6299549b7c5077ec",
+        "cross-project:task_request:03ccfc41997200d3"
+      ],
+      "text": "The project is currently focused on live-corpus validation against fixed sample sets."
+    },
+    {
+      "claim_id": "claim-5",
+      "confidence": "inferred",
+      "latent_type": "project_identity_and_scope",
+      "provenance_refs": [
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:5694",
+          "end_line_no": 5694,
+          "end_timestamp": "2026-03-03T21:16:15.038Z",
+          "rule_ids": [
+            "task_request.action"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:513",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:5694",
+          "start_line_no": 5694,
+          "start_timestamp": "2026-03-03T21:16:15.038Z",
+          "statement": "PLEASE IMPLEMENT THIS PLAN:"
+        },
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:5697",
+          "end_line_no": 5697,
+          "end_timestamp": "2026-03-03T21:16:18.295Z",
+          "rule_ids": [
+            "task_request.action"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:514",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:5695",
+          "start_line_no": 5695,
+          "start_timestamp": "2026-03-03T21:16:15.305Z",
+          "statement": "PLEASE IMPLEMENT THIS PLAN:"
+        },
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:20924",
+          "end_line_no": 20924,
+          "end_timestamp": "2026-03-06T21:28:49.509Z",
+          "rule_ids": [
+            "task_request.action"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:1993",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:20924",
+          "start_line_no": 20924,
+          "start_timestamp": "2026-03-06T21:28:49.509Z",
+          "statement": "PLEASE IMPLEMENT THIS PLAN:"
+        }
+      ],
+      "section_id": "task_request",
+      "supporting_item_ids": [
+        "cross-project:task_request:017361725bf6cd20"
+      ],
+      "text": "The plan for implementation has been outlined and is currently active."
+    },
+    {
+      "claim_id": "claim-6",
+      "confidence": "inferred",
+      "latent_type": "architecture_synthesis",
+      "provenance_refs": [
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:4235",
+          "end_line_no": 4235,
+          "end_timestamp": "2026-04-13T14:36:37.352Z",
+          "rule_ids": [
+            "task_request.action"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:835",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:4231",
+          "start_line_no": 4231,
+          "start_timestamp": "2026-04-13T14:29:59.107Z",
+          "statement": "- Implemented the pointer-first Phase 2 migration."
+        }
+      ],
+      "section_id": "task_request",
+      "supporting_item_ids": [
+        "cross-project:task_request:9ce1808b659f8dec"
+      ],
+      "text": "The pointer-first Phase 2 migration has been successfully implemented, addressing storage issues."
+    }
+  ],
+  "versions": {
+    "page_config_version": 2,
+    "renderer_version": 2,
+    "synthesis_prompt_version": 2,
+    "synthesis_schema_version": 1,
+    "wiki_schema_version": 2
+  }
+}

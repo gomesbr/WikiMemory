@@ -1,0 +1,4466 @@
+{
+  "bucket": "open-questions",
+  "citations": [
+    {
+      "citation_id": "claim-1",
+      "item_keys": [
+        "ai-trader:open_question:7ceff77d2b51bfbc"
+      ],
+      "kind": "synthesized_claim",
+      "label": "claim-1",
+      "provenance_refs": [
+        {
+          "end_event_id": "019c9cff-0337-77e0-9ba6-a4f6dc75a92e:4",
+          "end_line_no": 4,
+          "end_timestamp": "2026-02-27T02:48:04.257Z",
+          "rule_ids": [
+            "open_question.explicit"
+          ],
+          "segment_id": "019c9cff-0337-77e0-9ba6-a4f6dc75a92e:2",
+          "session_id": "019c9cff-0337-77e0-9ba6-a4f6dc75a92e",
+          "source_id": "019c9cff-0337-77e0-9ba6-a4f6dc75a92e",
+          "start_event_id": "019c9cff-0337-77e0-9ba6-a4f6dc75a92e:3",
+          "start_line_no": 3,
+          "start_timestamp": "2026-02-27T02:48:04.257Z",
+          "statement": "### How to use skills"
+        },
+        {
+          "end_event_id": "019c9d00-0d81-7b52-a1a9-84f7d4b05066:4",
+          "end_line_no": 4,
+          "end_timestamp": "2026-02-27T02:49:12.399Z",
+          "rule_ids": [
+            "open_question.explicit"
+          ],
+          "segment_id": "019c9d00-0d81-7b52-a1a9-84f7d4b05066:2",
+          "session_id": "019c9d00-0d81-7b52-a1a9-84f7d4b05066",
+          "source_id": "019c9d00-0d81-7b52-a1a9-84f7d4b05066",
+          "start_event_id": "019c9d00-0d81-7b52-a1a9-84f7d4b05066:3",
+          "start_line_no": 3,
+          "start_timestamp": "2026-02-27T02:49:12.398Z",
+          "statement": "### How to use skills"
+        },
+        {
+          "end_event_id": "019c9d4c-657e-7d71-a062-4d77a75d3786:4",
+          "end_line_no": 4,
+          "end_timestamp": "2026-02-27T04:12:35.657Z",
+          "rule_ids": [
+            "open_question.explicit"
+          ],
+          "segment_id": "019c9d4c-657e-7d71-a062-4d77a75d3786:2",
+          "session_id": "019c9d4c-657e-7d71-a062-4d77a75d3786",
+          "source_id": "019c9d4c-657e-7d71-a062-4d77a75d3786",
+          "start_event_id": "019c9d4c-657e-7d71-a062-4d77a75d3786:3",
+          "start_line_no": 3,
+          "start_timestamp": "2026-02-27T04:12:35.657Z",
+          "statement": "### How to use skills"
+        }
+      ]
+    },
+    {
+      "citation_id": "claim-2",
+      "item_keys": [
+        "ai-trader:open_question:8665e78469d967e0"
+      ],
+      "kind": "synthesized_claim",
+      "label": "claim-2",
+      "provenance_refs": [
+        {
+          "end_event_id": "019c9cff-0337-77e0-9ba6-a4f6dc75a92e:4",
+          "end_line_no": 4,
+          "end_timestamp": "2026-02-27T02:48:04.257Z",
+          "rule_ids": [
+            "open_question.explicit"
+          ],
+          "segment_id": "019c9cff-0337-77e0-9ba6-a4f6dc75a92e:2",
+          "session_id": "019c9cff-0337-77e0-9ba6-a4f6dc75a92e",
+          "source_id": "019c9cff-0337-77e0-9ba6-a4f6dc75a92e",
+          "start_event_id": "019c9cff-0337-77e0-9ba6-a4f6dc75a92e:3",
+          "start_line_no": 3,
+          "start_timestamp": "2026-02-27T02:48:04.257Z",
+          "statement": "- Announce which skill(s) you're using and why (one short line)."
+        },
+        {
+          "end_event_id": "019c9d00-0d81-7b52-a1a9-84f7d4b05066:4",
+          "end_line_no": 4,
+          "end_timestamp": "2026-02-27T02:49:12.399Z",
+          "rule_ids": [
+            "open_question.explicit"
+          ],
+          "segment_id": "019c9d00-0d81-7b52-a1a9-84f7d4b05066:2",
+          "session_id": "019c9d00-0d81-7b52-a1a9-84f7d4b05066",
+          "source_id": "019c9d00-0d81-7b52-a1a9-84f7d4b05066",
+          "start_event_id": "019c9d00-0d81-7b52-a1a9-84f7d4b05066:3",
+          "start_line_no": 3,
+          "start_timestamp": "2026-02-27T02:49:12.398Z",
+          "statement": "- Announce which skill(s) you're using and why (one short line)."
+        },
+        {
+          "end_event_id": "019c9d4c-657e-7d71-a062-4d77a75d3786:4",
+          "end_line_no": 4,
+          "end_timestamp": "2026-02-27T04:12:35.657Z",
+          "rule_ids": [
+            "open_question.explicit"
+          ],
+          "segment_id": "019c9d4c-657e-7d71-a062-4d77a75d3786:2",
+          "session_id": "019c9d4c-657e-7d71-a062-4d77a75d3786",
+          "source_id": "019c9d4c-657e-7d71-a062-4d77a75d3786",
+          "start_event_id": "019c9d4c-657e-7d71-a062-4d77a75d3786:3",
+          "start_line_no": 3,
+          "start_timestamp": "2026-02-27T04:12:35.657Z",
+          "statement": "- Announce which skill(s) you're using and why (one short line)."
+        }
+      ]
+    },
+    {
+      "citation_id": "claim-3",
+      "item_keys": [
+        "ai-trader:open_question:3942f30e4ceacbb8"
+      ],
+      "kind": "synthesized_claim",
+      "label": "claim-3",
+      "provenance_refs": [
+        {
+          "end_event_id": "019c9cff-0337-77e0-9ba6-a4f6dc75a92e:4",
+          "end_line_no": 4,
+          "end_timestamp": "2026-02-27T02:48:04.257Z",
+          "rule_ids": [
+            "open_question.explicit"
+          ],
+          "segment_id": "019c9cff-0337-77e0-9ba6-a4f6dc75a92e:2",
+          "session_id": "019c9cff-0337-77e0-9ba6-a4f6dc75a92e",
+          "source_id": "019c9cff-0337-77e0-9ba6-a4f6dc75a92e",
+          "start_event_id": "019c9cff-0337-77e0-9ba6-a4f6dc75a92e:3",
+          "start_line_no": 3,
+          "start_timestamp": "2026-02-27T02:48:04.257Z",
+          "statement": "- How to use a skill (progressive disclosure):"
+        },
+        {
+          "end_event_id": "019c9d00-0d81-7b52-a1a9-84f7d4b05066:4",
+          "end_line_no": 4,
+          "end_timestamp": "2026-02-27T02:49:12.399Z",
+          "rule_ids": [
+            "open_question.explicit"
+          ],
+          "segment_id": "019c9d00-0d81-7b52-a1a9-84f7d4b05066:2",
+          "session_id": "019c9d00-0d81-7b52-a1a9-84f7d4b05066",
+          "source_id": "019c9d00-0d81-7b52-a1a9-84f7d4b05066",
+          "start_event_id": "019c9d00-0d81-7b52-a1a9-84f7d4b05066:3",
+          "start_line_no": 3,
+          "start_timestamp": "2026-02-27T02:49:12.398Z",
+          "statement": "- How to use a skill (progressive disclosure):"
+        },
+        {
+          "end_event_id": "019c9d4c-657e-7d71-a062-4d77a75d3786:4",
+          "end_line_no": 4,
+          "end_timestamp": "2026-02-27T04:12:35.657Z",
+          "rule_ids": [
+            "open_question.explicit"
+          ],
+          "segment_id": "019c9d4c-657e-7d71-a062-4d77a75d3786:2",
+          "session_id": "019c9d4c-657e-7d71-a062-4d77a75d3786",
+          "source_id": "019c9d4c-657e-7d71-a062-4d77a75d3786",
+          "start_event_id": "019c9d4c-657e-7d71-a062-4d77a75d3786:3",
+          "start_line_no": 3,
+          "start_timestamp": "2026-02-27T04:12:35.657Z",
+          "statement": "- How to use a skill (progressive disclosure):"
+        }
+      ]
+    },
+    {
+      "citation_id": "claim-4",
+      "item_keys": [
+        "ai-trader:open_question:92a52a6e7964be67"
+      ],
+      "kind": "synthesized_claim",
+      "label": "claim-4",
+      "provenance_refs": [
+        {
+          "end_event_id": "019c9cff-0337-77e0-9ba6-a4f6dc75a92e:4",
+          "end_line_no": 4,
+          "end_timestamp": "2026-02-27T02:48:04.257Z",
+          "rule_ids": [
+            "open_question.explicit"
+          ],
+          "segment_id": "019c9cff-0337-77e0-9ba6-a4f6dc75a92e:2",
+          "session_id": "019c9cff-0337-77e0-9ba6-a4f6dc75a92e",
+          "source_id": "019c9cff-0337-77e0-9ba6-a4f6dc75a92e",
+          "start_event_id": "019c9cff-0337-77e0-9ba6-a4f6dc75a92e:3",
+          "start_line_no": 3,
+          "start_timestamp": "2026-02-27T02:48:04.257Z",
+          "statement": "- Trigger rules: If the user names a skill (with `$SkillName` or plain text) OR the task clearly matches a skill's description shown above, you must use that skill for that turn."
+        },
+        {
+          "end_event_id": "019c9d00-0d81-7b52-a1a9-84f7d4b05066:4",
+          "end_line_no": 4,
+          "end_timestamp": "2026-02-27T02:49:12.399Z",
+          "rule_ids": [
+            "open_question.explicit"
+          ],
+          "segment_id": "019c9d00-0d81-7b52-a1a9-84f7d4b05066:2",
+          "session_id": "019c9d00-0d81-7b52-a1a9-84f7d4b05066",
+          "source_id": "019c9d00-0d81-7b52-a1a9-84f7d4b05066",
+          "start_event_id": "019c9d00-0d81-7b52-a1a9-84f7d4b05066:3",
+          "start_line_no": 3,
+          "start_timestamp": "2026-02-27T02:49:12.398Z",
+          "statement": "- Trigger rules: If the user names a skill (with `$SkillName` or plain text) OR the task clearly matches a skill's description shown above, you must use that skill for that turn."
+        },
+        {
+          "end_event_id": "019c9d4c-657e-7d71-a062-4d77a75d3786:4",
+          "end_line_no": 4,
+          "end_timestamp": "2026-02-27T04:12:35.657Z",
+          "rule_ids": [
+            "open_question.explicit"
+          ],
+          "segment_id": "019c9d4c-657e-7d71-a062-4d77a75d3786:2",
+          "session_id": "019c9d4c-657e-7d71-a062-4d77a75d3786",
+          "source_id": "019c9d4c-657e-7d71-a062-4d77a75d3786",
+          "start_event_id": "019c9d4c-657e-7d71-a062-4d77a75d3786:3",
+          "start_line_no": 3,
+          "start_timestamp": "2026-02-27T04:12:35.657Z",
+          "statement": "- Trigger rules: If the user names a skill (with `$SkillName` or plain text) OR the task clearly matches a skill's description shown above, you must use that skill for that turn."
+        }
+      ]
+    },
+    {
+      "citation_id": "claim-5",
+      "item_keys": [
+        "ai-trader:open_question:362bb8d4b00230e6"
+      ],
+      "kind": "synthesized_claim",
+      "label": "claim-5",
+      "provenance_refs": [
+        {
+          "end_event_id": "019c9cff-0337-77e0-9ba6-a4f6dc75a92e:4",
+          "end_line_no": 4,
+          "end_timestamp": "2026-02-27T02:48:04.257Z",
+          "rule_ids": [
+            "open_question.explicit"
+          ],
+          "segment_id": "019c9cff-0337-77e0-9ba6-a4f6dc75a92e:2",
+          "session_id": "019c9cff-0337-77e0-9ba6-a4f6dc75a92e",
+          "source_id": "019c9cff-0337-77e0-9ba6-a4f6dc75a92e",
+          "start_event_id": "019c9cff-0337-77e0-9ba6-a4f6dc75a92e:3",
+          "start_line_no": 3,
+          "start_timestamp": "2026-02-27T02:48:04.257Z",
+          "statement": "If you skip an obvious skill, say why."
+        },
+        {
+          "end_event_id": "019c9d00-0d81-7b52-a1a9-84f7d4b05066:4",
+          "end_line_no": 4,
+          "end_timestamp": "2026-02-27T02:49:12.399Z",
+          "rule_ids": [
+            "open_question.explicit"
+          ],
+          "segment_id": "019c9d00-0d81-7b52-a1a9-84f7d4b05066:2",
+          "session_id": "019c9d00-0d81-7b52-a1a9-84f7d4b05066",
+          "source_id": "019c9d00-0d81-7b52-a1a9-84f7d4b05066",
+          "start_event_id": "019c9d00-0d81-7b52-a1a9-84f7d4b05066:3",
+          "start_line_no": 3,
+          "start_timestamp": "2026-02-27T02:49:12.398Z",
+          "statement": "If you skip an obvious skill, say why."
+        },
+        {
+          "end_event_id": "019c9d4c-657e-7d71-a062-4d77a75d3786:4",
+          "end_line_no": 4,
+          "end_timestamp": "2026-02-27T04:12:35.657Z",
+          "rule_ids": [
+            "open_question.explicit"
+          ],
+          "segment_id": "019c9d4c-657e-7d71-a062-4d77a75d3786:2",
+          "session_id": "019c9d4c-657e-7d71-a062-4d77a75d3786",
+          "source_id": "019c9d4c-657e-7d71-a062-4d77a75d3786",
+          "start_event_id": "019c9d4c-657e-7d71-a062-4d77a75d3786:3",
+          "start_line_no": 3,
+          "start_timestamp": "2026-02-27T04:12:35.657Z",
+          "statement": "If you skip an obvious skill, say why."
+        }
+      ]
+    },
+    {
+      "citation_id": "claim-6",
+      "item_keys": [
+        "ai-trader:open_question:e08f1715a6cd4319"
+      ],
+      "kind": "synthesized_claim",
+      "label": "claim-6",
+      "provenance_refs": [
+        {
+          "end_event_id": "019c9cff-0337-77e0-9ba6-a4f6dc75a92e:4",
+          "end_line_no": 4,
+          "end_timestamp": "2026-02-27T02:48:04.257Z",
+          "rule_ids": [
+            "open_question.explicit"
+          ],
+          "segment_id": "019c9cff-0337-77e0-9ba6-a4f6dc75a92e:2",
+          "session_id": "019c9cff-0337-77e0-9ba6-a4f6dc75a92e",
+          "source_id": "019c9cff-0337-77e0-9ba6-a4f6dc75a92e",
+          "start_event_id": "019c9cff-0337-77e0-9ba6-a4f6dc75a92e:3",
+          "start_line_no": 3,
+          "start_timestamp": "2026-02-27T02:48:04.257Z",
+          "statement": "This skill should be used when users want to create a new skill (or update an existing skill) that extends Codex's capabilities with specialized knowledge, workflows, or tool integrations."
+        },
+        {
+          "end_event_id": "019c9d00-0d81-7b52-a1a9-84f7d4b05066:4",
+          "end_line_no": 4,
+          "end_timestamp": "2026-02-27T02:49:12.399Z",
+          "rule_ids": [
+            "open_question.explicit"
+          ],
+          "segment_id": "019c9d00-0d81-7b52-a1a9-84f7d4b05066:2",
+          "session_id": "019c9d00-0d81-7b52-a1a9-84f7d4b05066",
+          "source_id": "019c9d00-0d81-7b52-a1a9-84f7d4b05066",
+          "start_event_id": "019c9d00-0d81-7b52-a1a9-84f7d4b05066:3",
+          "start_line_no": 3,
+          "start_timestamp": "2026-02-27T02:49:12.398Z",
+          "statement": "This skill should be used when users want to create a new skill (or update an existing skill) that extends Codex's capabilities with specialized knowledge, workflows, or tool integrations."
+        },
+        {
+          "end_event_id": "019c9d4c-657e-7d71-a062-4d77a75d3786:4",
+          "end_line_no": 4,
+          "end_timestamp": "2026-02-27T04:12:35.657Z",
+          "rule_ids": [
+            "open_question.explicit"
+          ],
+          "segment_id": "019c9d4c-657e-7d71-a062-4d77a75d3786:2",
+          "session_id": "019c9d4c-657e-7d71-a062-4d77a75d3786",
+          "source_id": "019c9d4c-657e-7d71-a062-4d77a75d3786",
+          "start_event_id": "019c9d4c-657e-7d71-a062-4d77a75d3786:3",
+          "start_line_no": 3,
+          "start_timestamp": "2026-02-27T04:12:35.657Z",
+          "statement": "This skill should be used when users want to create a new skill (or update an existing skill) that extends Codex's capabilities with specialized knowledge, workflows, or tool integrations."
+        }
+      ]
+    },
+    {
+      "citation_id": "claim-7",
+      "item_keys": [
+        "ai-trader:open_question:127b0d432e12ac07"
+      ],
+      "kind": "synthesized_claim",
+      "label": "claim-7",
+      "provenance_refs": [
+        {
+          "end_event_id": "019ca705-c215-7221-8e6a-d28b922add82:5",
+          "end_line_no": 5,
+          "end_timestamp": "2026-03-01T01:31:38.636Z",
+          "rule_ids": [
+            "open_question.explicit"
+          ],
+          "segment_id": "019ca705-c215-7221-8e6a-d28b922add82:2",
+          "session_id": "019ca705-c215-7221-8e6a-d28b922add82",
+          "source_id": "019ca705-c215-7221-8e6a-d28b922add82",
+          "start_event_id": "019ca705-c215-7221-8e6a-d28b922add82:5",
+          "start_line_no": 5,
+          "start_timestamp": "2026-03-01T01:31:38.636Z",
+          "statement": "- Decomposition items should be implementable in single focused story runs."
+        },
+        {
+          "end_event_id": "019ca705-c215-7221-8e6a-d28b922add82:9",
+          "end_line_no": 9,
+          "end_timestamp": "2026-03-01T01:31:39.552Z",
+          "rule_ids": [
+            "open_question.explicit"
+          ],
+          "segment_id": "019ca705-c215-7221-8e6a-d28b922add82:3",
+          "session_id": "019ca705-c215-7221-8e6a-d28b922add82",
+          "source_id": "019ca705-c215-7221-8e6a-d28b922add82",
+          "start_event_id": "019ca705-c215-7221-8e6a-d28b922add82:6",
+          "start_line_no": 6,
+          "start_timestamp": "2026-03-01T01:31:38.636Z",
+          "statement": "- Decomposition items should be implementable in single focused story runs."
+        },
+        {
+          "end_event_id": "019ca705-c215-7221-8e6a-d28b922add82:54",
+          "end_line_no": 54,
+          "end_timestamp": "2026-03-01T02:36:55.290Z",
+          "rule_ids": [
+            "open_question.explicit"
+          ],
+          "segment_id": "019ca705-c215-7221-8e6a-d28b922add82:9",
+          "session_id": "019ca705-c215-7221-8e6a-d28b922add82",
+          "source_id": "019ca705-c215-7221-8e6a-d28b922add82",
+          "start_event_id": "019ca705-c215-7221-8e6a-d28b922add82:54",
+          "start_line_no": 54,
+          "start_timestamp": "2026-03-01T02:36:55.290Z",
+          "statement": "- Decomposition items should be implementable in single focused story runs."
+        }
+      ]
+    },
+    {
+      "citation_id": "item-open_question-1",
+      "item_keys": [
+        "ai-trader:open_question:7ceff77d2b51bfbc"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-open_question-1",
+      "provenance_refs": [
+        {
+          "end_event_id": "019c9cff-0337-77e0-9ba6-a4f6dc75a92e:4",
+          "end_line_no": 4,
+          "end_timestamp": "2026-02-27T02:48:04.257Z",
+          "rule_ids": [
+            "open_question.explicit"
+          ],
+          "segment_id": "019c9cff-0337-77e0-9ba6-a4f6dc75a92e:2",
+          "session_id": "019c9cff-0337-77e0-9ba6-a4f6dc75a92e",
+          "source_id": "019c9cff-0337-77e0-9ba6-a4f6dc75a92e",
+          "start_event_id": "019c9cff-0337-77e0-9ba6-a4f6dc75a92e:3",
+          "start_line_no": 3,
+          "start_timestamp": "2026-02-27T02:48:04.257Z",
+          "statement": "### How to use skills"
+        },
+        {
+          "end_event_id": "019c9d00-0d81-7b52-a1a9-84f7d4b05066:4",
+          "end_line_no": 4,
+          "end_timestamp": "2026-02-27T02:49:12.399Z",
+          "rule_ids": [
+            "open_question.explicit"
+          ],
+          "segment_id": "019c9d00-0d81-7b52-a1a9-84f7d4b05066:2",
+          "session_id": "019c9d00-0d81-7b52-a1a9-84f7d4b05066",
+          "source_id": "019c9d00-0d81-7b52-a1a9-84f7d4b05066",
+          "start_event_id": "019c9d00-0d81-7b52-a1a9-84f7d4b05066:3",
+          "start_line_no": 3,
+          "start_timestamp": "2026-02-27T02:49:12.398Z",
+          "statement": "### How to use skills"
+        },
+        {
+          "end_event_id": "019c9d4c-657e-7d71-a062-4d77a75d3786:4",
+          "end_line_no": 4,
+          "end_timestamp": "2026-02-27T04:12:35.657Z",
+          "rule_ids": [
+            "open_question.explicit"
+          ],
+          "segment_id": "019c9d4c-657e-7d71-a062-4d77a75d3786:2",
+          "session_id": "019c9d4c-657e-7d71-a062-4d77a75d3786",
+          "source_id": "019c9d4c-657e-7d71-a062-4d77a75d3786",
+          "start_event_id": "019c9d4c-657e-7d71-a062-4d77a75d3786:3",
+          "start_line_no": 3,
+          "start_timestamp": "2026-02-27T04:12:35.657Z",
+          "statement": "### How to use skills"
+        }
+      ]
+    },
+    {
+      "citation_id": "item-open_question-2",
+      "item_keys": [
+        "ai-trader:open_question:8665e78469d967e0"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-open_question-2",
+      "provenance_refs": [
+        {
+          "end_event_id": "019c9cff-0337-77e0-9ba6-a4f6dc75a92e:4",
+          "end_line_no": 4,
+          "end_timestamp": "2026-02-27T02:48:04.257Z",
+          "rule_ids": [
+            "open_question.explicit"
+          ],
+          "segment_id": "019c9cff-0337-77e0-9ba6-a4f6dc75a92e:2",
+          "session_id": "019c9cff-0337-77e0-9ba6-a4f6dc75a92e",
+          "source_id": "019c9cff-0337-77e0-9ba6-a4f6dc75a92e",
+          "start_event_id": "019c9cff-0337-77e0-9ba6-a4f6dc75a92e:3",
+          "start_line_no": 3,
+          "start_timestamp": "2026-02-27T02:48:04.257Z",
+          "statement": "- Announce which skill(s) you're using and why (one short line)."
+        },
+        {
+          "end_event_id": "019c9d00-0d81-7b52-a1a9-84f7d4b05066:4",
+          "end_line_no": 4,
+          "end_timestamp": "2026-02-27T02:49:12.399Z",
+          "rule_ids": [
+            "open_question.explicit"
+          ],
+          "segment_id": "019c9d00-0d81-7b52-a1a9-84f7d4b05066:2",
+          "session_id": "019c9d00-0d81-7b52-a1a9-84f7d4b05066",
+          "source_id": "019c9d00-0d81-7b52-a1a9-84f7d4b05066",
+          "start_event_id": "019c9d00-0d81-7b52-a1a9-84f7d4b05066:3",
+          "start_line_no": 3,
+          "start_timestamp": "2026-02-27T02:49:12.398Z",
+          "statement": "- Announce which skill(s) you're using and why (one short line)."
+        },
+        {
+          "end_event_id": "019c9d4c-657e-7d71-a062-4d77a75d3786:4",
+          "end_line_no": 4,
+          "end_timestamp": "2026-02-27T04:12:35.657Z",
+          "rule_ids": [
+            "open_question.explicit"
+          ],
+          "segment_id": "019c9d4c-657e-7d71-a062-4d77a75d3786:2",
+          "session_id": "019c9d4c-657e-7d71-a062-4d77a75d3786",
+          "source_id": "019c9d4c-657e-7d71-a062-4d77a75d3786",
+          "start_event_id": "019c9d4c-657e-7d71-a062-4d77a75d3786:3",
+          "start_line_no": 3,
+          "start_timestamp": "2026-02-27T04:12:35.657Z",
+          "statement": "- Announce which skill(s) you're using and why (one short line)."
+        }
+      ]
+    },
+    {
+      "citation_id": "item-open_question-3",
+      "item_keys": [
+        "ai-trader:open_question:3942f30e4ceacbb8"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-open_question-3",
+      "provenance_refs": [
+        {
+          "end_event_id": "019c9cff-0337-77e0-9ba6-a4f6dc75a92e:4",
+          "end_line_no": 4,
+          "end_timestamp": "2026-02-27T02:48:04.257Z",
+          "rule_ids": [
+            "open_question.explicit"
+          ],
+          "segment_id": "019c9cff-0337-77e0-9ba6-a4f6dc75a92e:2",
+          "session_id": "019c9cff-0337-77e0-9ba6-a4f6dc75a92e",
+          "source_id": "019c9cff-0337-77e0-9ba6-a4f6dc75a92e",
+          "start_event_id": "019c9cff-0337-77e0-9ba6-a4f6dc75a92e:3",
+          "start_line_no": 3,
+          "start_timestamp": "2026-02-27T02:48:04.257Z",
+          "statement": "- How to use a skill (progressive disclosure):"
+        },
+        {
+          "end_event_id": "019c9d00-0d81-7b52-a1a9-84f7d4b05066:4",
+          "end_line_no": 4,
+          "end_timestamp": "2026-02-27T02:49:12.399Z",
+          "rule_ids": [
+            "open_question.explicit"
+          ],
+          "segment_id": "019c9d00-0d81-7b52-a1a9-84f7d4b05066:2",
+          "session_id": "019c9d00-0d81-7b52-a1a9-84f7d4b05066",
+          "source_id": "019c9d00-0d81-7b52-a1a9-84f7d4b05066",
+          "start_event_id": "019c9d00-0d81-7b52-a1a9-84f7d4b05066:3",
+          "start_line_no": 3,
+          "start_timestamp": "2026-02-27T02:49:12.398Z",
+          "statement": "- How to use a skill (progressive disclosure):"
+        },
+        {
+          "end_event_id": "019c9d4c-657e-7d71-a062-4d77a75d3786:4",
+          "end_line_no": 4,
+          "end_timestamp": "2026-02-27T04:12:35.657Z",
+          "rule_ids": [
+            "open_question.explicit"
+          ],
+          "segment_id": "019c9d4c-657e-7d71-a062-4d77a75d3786:2",
+          "session_id": "019c9d4c-657e-7d71-a062-4d77a75d3786",
+          "source_id": "019c9d4c-657e-7d71-a062-4d77a75d3786",
+          "start_event_id": "019c9d4c-657e-7d71-a062-4d77a75d3786:3",
+          "start_line_no": 3,
+          "start_timestamp": "2026-02-27T04:12:35.657Z",
+          "statement": "- How to use a skill (progressive disclosure):"
+        }
+      ]
+    },
+    {
+      "citation_id": "item-open_question-4",
+      "item_keys": [
+        "ai-trader:open_question:92a52a6e7964be67"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-open_question-4",
+      "provenance_refs": [
+        {
+          "end_event_id": "019c9cff-0337-77e0-9ba6-a4f6dc75a92e:4",
+          "end_line_no": 4,
+          "end_timestamp": "2026-02-27T02:48:04.257Z",
+          "rule_ids": [
+            "open_question.explicit"
+          ],
+          "segment_id": "019c9cff-0337-77e0-9ba6-a4f6dc75a92e:2",
+          "session_id": "019c9cff-0337-77e0-9ba6-a4f6dc75a92e",
+          "source_id": "019c9cff-0337-77e0-9ba6-a4f6dc75a92e",
+          "start_event_id": "019c9cff-0337-77e0-9ba6-a4f6dc75a92e:3",
+          "start_line_no": 3,
+          "start_timestamp": "2026-02-27T02:48:04.257Z",
+          "statement": "- Trigger rules: If the user names a skill (with `$SkillName` or plain text) OR the task clearly matches a skill's description shown above, you must use that skill for that turn."
+        },
+        {
+          "end_event_id": "019c9d00-0d81-7b52-a1a9-84f7d4b05066:4",
+          "end_line_no": 4,
+          "end_timestamp": "2026-02-27T02:49:12.399Z",
+          "rule_ids": [
+            "open_question.explicit"
+          ],
+          "segment_id": "019c9d00-0d81-7b52-a1a9-84f7d4b05066:2",
+          "session_id": "019c9d00-0d81-7b52-a1a9-84f7d4b05066",
+          "source_id": "019c9d00-0d81-7b52-a1a9-84f7d4b05066",
+          "start_event_id": "019c9d00-0d81-7b52-a1a9-84f7d4b05066:3",
+          "start_line_no": 3,
+          "start_timestamp": "2026-02-27T02:49:12.398Z",
+          "statement": "- Trigger rules: If the user names a skill (with `$SkillName` or plain text) OR the task clearly matches a skill's description shown above, you must use that skill for that turn."
+        },
+        {
+          "end_event_id": "019c9d4c-657e-7d71-a062-4d77a75d3786:4",
+          "end_line_no": 4,
+          "end_timestamp": "2026-02-27T04:12:35.657Z",
+          "rule_ids": [
+            "open_question.explicit"
+          ],
+          "segment_id": "019c9d4c-657e-7d71-a062-4d77a75d3786:2",
+          "session_id": "019c9d4c-657e-7d71-a062-4d77a75d3786",
+          "source_id": "019c9d4c-657e-7d71-a062-4d77a75d3786",
+          "start_event_id": "019c9d4c-657e-7d71-a062-4d77a75d3786:3",
+          "start_line_no": 3,
+          "start_timestamp": "2026-02-27T04:12:35.657Z",
+          "statement": "- Trigger rules: If the user names a skill (with `$SkillName` or plain text) OR the task clearly matches a skill's description shown above, you must use that skill for that turn."
+        }
+      ]
+    },
+    {
+      "citation_id": "item-open_question-5",
+      "item_keys": [
+        "ai-trader:open_question:362bb8d4b00230e6"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-open_question-5",
+      "provenance_refs": [
+        {
+          "end_event_id": "019c9cff-0337-77e0-9ba6-a4f6dc75a92e:4",
+          "end_line_no": 4,
+          "end_timestamp": "2026-02-27T02:48:04.257Z",
+          "rule_ids": [
+            "open_question.explicit"
+          ],
+          "segment_id": "019c9cff-0337-77e0-9ba6-a4f6dc75a92e:2",
+          "session_id": "019c9cff-0337-77e0-9ba6-a4f6dc75a92e",
+          "source_id": "019c9cff-0337-77e0-9ba6-a4f6dc75a92e",
+          "start_event_id": "019c9cff-0337-77e0-9ba6-a4f6dc75a92e:3",
+          "start_line_no": 3,
+          "start_timestamp": "2026-02-27T02:48:04.257Z",
+          "statement": "If you skip an obvious skill, say why."
+        },
+        {
+          "end_event_id": "019c9d00-0d81-7b52-a1a9-84f7d4b05066:4",
+          "end_line_no": 4,
+          "end_timestamp": "2026-02-27T02:49:12.399Z",
+          "rule_ids": [
+            "open_question.explicit"
+          ],
+          "segment_id": "019c9d00-0d81-7b52-a1a9-84f7d4b05066:2",
+          "session_id": "019c9d00-0d81-7b52-a1a9-84f7d4b05066",
+          "source_id": "019c9d00-0d81-7b52-a1a9-84f7d4b05066",
+          "start_event_id": "019c9d00-0d81-7b52-a1a9-84f7d4b05066:3",
+          "start_line_no": 3,
+          "start_timestamp": "2026-02-27T02:49:12.398Z",
+          "statement": "If you skip an obvious skill, say why."
+        },
+        {
+          "end_event_id": "019c9d4c-657e-7d71-a062-4d77a75d3786:4",
+          "end_line_no": 4,
+          "end_timestamp": "2026-02-27T04:12:35.657Z",
+          "rule_ids": [
+            "open_question.explicit"
+          ],
+          "segment_id": "019c9d4c-657e-7d71-a062-4d77a75d3786:2",
+          "session_id": "019c9d4c-657e-7d71-a062-4d77a75d3786",
+          "source_id": "019c9d4c-657e-7d71-a062-4d77a75d3786",
+          "start_event_id": "019c9d4c-657e-7d71-a062-4d77a75d3786:3",
+          "start_line_no": 3,
+          "start_timestamp": "2026-02-27T04:12:35.657Z",
+          "statement": "If you skip an obvious skill, say why."
+        }
+      ]
+    },
+    {
+      "citation_id": "item-open_question-6",
+      "item_keys": [
+        "ai-trader:open_question:e08f1715a6cd4319"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-open_question-6",
+      "provenance_refs": [
+        {
+          "end_event_id": "019c9cff-0337-77e0-9ba6-a4f6dc75a92e:4",
+          "end_line_no": 4,
+          "end_timestamp": "2026-02-27T02:48:04.257Z",
+          "rule_ids": [
+            "open_question.explicit"
+          ],
+          "segment_id": "019c9cff-0337-77e0-9ba6-a4f6dc75a92e:2",
+          "session_id": "019c9cff-0337-77e0-9ba6-a4f6dc75a92e",
+          "source_id": "019c9cff-0337-77e0-9ba6-a4f6dc75a92e",
+          "start_event_id": "019c9cff-0337-77e0-9ba6-a4f6dc75a92e:3",
+          "start_line_no": 3,
+          "start_timestamp": "2026-02-27T02:48:04.257Z",
+          "statement": "This skill should be used when users want to create a new skill (or update an existing skill) that extends Codex's capabilities with specialized knowledge, workflows, or tool integrations."
+        },
+        {
+          "end_event_id": "019c9d00-0d81-7b52-a1a9-84f7d4b05066:4",
+          "end_line_no": 4,
+          "end_timestamp": "2026-02-27T02:49:12.399Z",
+          "rule_ids": [
+            "open_question.explicit"
+          ],
+          "segment_id": "019c9d00-0d81-7b52-a1a9-84f7d4b05066:2",
+          "session_id": "019c9d00-0d81-7b52-a1a9-84f7d4b05066",
+          "source_id": "019c9d00-0d81-7b52-a1a9-84f7d4b05066",
+          "start_event_id": "019c9d00-0d81-7b52-a1a9-84f7d4b05066:3",
+          "start_line_no": 3,
+          "start_timestamp": "2026-02-27T02:49:12.398Z",
+          "statement": "This skill should be used when users want to create a new skill (or update an existing skill) that extends Codex's capabilities with specialized knowledge, workflows, or tool integrations."
+        },
+        {
+          "end_event_id": "019c9d4c-657e-7d71-a062-4d77a75d3786:4",
+          "end_line_no": 4,
+          "end_timestamp": "2026-02-27T04:12:35.657Z",
+          "rule_ids": [
+            "open_question.explicit"
+          ],
+          "segment_id": "019c9d4c-657e-7d71-a062-4d77a75d3786:2",
+          "session_id": "019c9d4c-657e-7d71-a062-4d77a75d3786",
+          "source_id": "019c9d4c-657e-7d71-a062-4d77a75d3786",
+          "start_event_id": "019c9d4c-657e-7d71-a062-4d77a75d3786:3",
+          "start_line_no": 3,
+          "start_timestamp": "2026-02-27T04:12:35.657Z",
+          "statement": "This skill should be used when users want to create a new skill (or update an existing skill) that extends Codex's capabilities with specialized knowledge, workflows, or tool integrations."
+        }
+      ]
+    },
+    {
+      "citation_id": "item-open_question-7",
+      "item_keys": [
+        "ai-trader:open_question:127b0d432e12ac07"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-open_question-7",
+      "provenance_refs": [
+        {
+          "end_event_id": "019ca705-c215-7221-8e6a-d28b922add82:5",
+          "end_line_no": 5,
+          "end_timestamp": "2026-03-01T01:31:38.636Z",
+          "rule_ids": [
+            "open_question.explicit"
+          ],
+          "segment_id": "019ca705-c215-7221-8e6a-d28b922add82:2",
+          "session_id": "019ca705-c215-7221-8e6a-d28b922add82",
+          "source_id": "019ca705-c215-7221-8e6a-d28b922add82",
+          "start_event_id": "019ca705-c215-7221-8e6a-d28b922add82:5",
+          "start_line_no": 5,
+          "start_timestamp": "2026-03-01T01:31:38.636Z",
+          "statement": "- Decomposition items should be implementable in single focused story runs."
+        },
+        {
+          "end_event_id": "019ca705-c215-7221-8e6a-d28b922add82:9",
+          "end_line_no": 9,
+          "end_timestamp": "2026-03-01T01:31:39.552Z",
+          "rule_ids": [
+            "open_question.explicit"
+          ],
+          "segment_id": "019ca705-c215-7221-8e6a-d28b922add82:3",
+          "session_id": "019ca705-c215-7221-8e6a-d28b922add82",
+          "source_id": "019ca705-c215-7221-8e6a-d28b922add82",
+          "start_event_id": "019ca705-c215-7221-8e6a-d28b922add82:6",
+          "start_line_no": 6,
+          "start_timestamp": "2026-03-01T01:31:38.636Z",
+          "statement": "- Decomposition items should be implementable in single focused story runs."
+        },
+        {
+          "end_event_id": "019ca705-c215-7221-8e6a-d28b922add82:54",
+          "end_line_no": 54,
+          "end_timestamp": "2026-03-01T02:36:55.290Z",
+          "rule_ids": [
+            "open_question.explicit"
+          ],
+          "segment_id": "019ca705-c215-7221-8e6a-d28b922add82:9",
+          "session_id": "019ca705-c215-7221-8e6a-d28b922add82",
+          "source_id": "019ca705-c215-7221-8e6a-d28b922add82",
+          "start_event_id": "019ca705-c215-7221-8e6a-d28b922add82:54",
+          "start_line_no": 54,
+          "start_timestamp": "2026-03-01T02:36:55.290Z",
+          "statement": "- Decomposition items should be implementable in single focused story runs."
+        }
+      ]
+    },
+    {
+      "citation_id": "item-open_question-8",
+      "item_keys": [
+        "ai-trader:open_question:5c1fe2ac70ef4b67"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-open_question-8",
+      "provenance_refs": [
+        {
+          "end_event_id": "019ca705-c215-7221-8e6a-d28b922add82:5",
+          "end_line_no": 5,
+          "end_timestamp": "2026-03-01T01:31:38.636Z",
+          "rule_ids": [
+            "open_question.explicit"
+          ],
+          "segment_id": "019ca705-c215-7221-8e6a-d28b922add82:2",
+          "session_id": "019ca705-c215-7221-8e6a-d28b922add82",
+          "source_id": "019ca705-c215-7221-8e6a-d28b922add82",
+          "start_event_id": "019ca705-c215-7221-8e6a-d28b922add82:5",
+          "start_line_no": 5,
+          "start_timestamp": "2026-03-01T01:31:38.636Z",
+          "statement": "- If status is `blocked`, `blockerReason` is mandatory and must state exactly what user input/access is required."
+        },
+        {
+          "end_event_id": "019ca705-c215-7221-8e6a-d28b922add82:9",
+          "end_line_no": 9,
+          "end_timestamp": "2026-03-01T01:31:39.552Z",
+          "rule_ids": [
+            "open_question.explicit"
+          ],
+          "segment_id": "019ca705-c215-7221-8e6a-d28b922add82:3",
+          "session_id": "019ca705-c215-7221-8e6a-d28b922add82",
+          "source_id": "019ca705-c215-7221-8e6a-d28b922add82",
+          "start_event_id": "019ca705-c215-7221-8e6a-d28b922add82:6",
+          "start_line_no": 6,
+          "start_timestamp": "2026-03-01T01:31:38.636Z",
+          "statement": "- If status is `blocked`, `blockerReason` is mandatory and must state exactly what user input/access is required."
+        },
+        {
+          "end_event_id": "019ca705-c215-7221-8e6a-d28b922add82:54",
+          "end_line_no": 54,
+          "end_timestamp": "2026-03-01T02:36:55.290Z",
+          "rule_ids": [
+            "open_question.explicit"
+          ],
+          "segment_id": "019ca705-c215-7221-8e6a-d28b922add82:9",
+          "session_id": "019ca705-c215-7221-8e6a-d28b922add82",
+          "source_id": "019ca705-c215-7221-8e6a-d28b922add82",
+          "start_event_id": "019ca705-c215-7221-8e6a-d28b922add82:54",
+          "start_line_no": 54,
+          "start_timestamp": "2026-03-01T02:36:55.290Z",
+          "statement": "- If status is `blocked`, `blockerReason` is mandatory and must state exactly what user input/access is required."
+        }
+      ]
+    },
+    {
+      "citation_id": "item-open_question-9",
+      "item_keys": [
+        "ai-trader:open_question:18dba11d86953887"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-open_question-9",
+      "provenance_refs": [
+        {
+          "end_event_id": "019ca705-c215-7221-8e6a-d28b922add82:5",
+          "end_line_no": 5,
+          "end_timestamp": "2026-03-01T01:31:38.636Z",
+          "rule_ids": [
+            "open_question.explicit"
+          ],
+          "segment_id": "019ca705-c215-7221-8e6a-d28b922add82:2",
+          "session_id": "019ca705-c215-7221-8e6a-d28b922add82",
+          "source_id": "019ca705-c215-7221-8e6a-d28b922add82",
+          "start_event_id": "019ca705-c215-7221-8e6a-d28b922add82:5",
+          "start_line_no": 5,
+          "start_timestamp": "2026-03-01T01:31:38.636Z",
+          "statement": "- State why chosen fix is durable"
+        },
+        {
+          "end_event_id": "019ca705-c215-7221-8e6a-d28b922add82:9",
+          "end_line_no": 9,
+          "end_timestamp": "2026-03-01T01:31:39.552Z",
+          "rule_ids": [
+            "open_question.explicit"
+          ],
+          "segment_id": "019ca705-c215-7221-8e6a-d28b922add82:3",
+          "session_id": "019ca705-c215-7221-8e6a-d28b922add82",
+          "source_id": "019ca705-c215-7221-8e6a-d28b922add82",
+          "start_event_id": "019ca705-c215-7221-8e6a-d28b922add82:6",
+          "start_line_no": 6,
+          "start_timestamp": "2026-03-01T01:31:38.636Z",
+          "statement": "- State why chosen fix is durable"
+        },
+        {
+          "end_event_id": "019ca705-c215-7221-8e6a-d28b922add82:54",
+          "end_line_no": 54,
+          "end_timestamp": "2026-03-01T02:36:55.290Z",
+          "rule_ids": [
+            "open_question.explicit"
+          ],
+          "segment_id": "019ca705-c215-7221-8e6a-d28b922add82:9",
+          "session_id": "019ca705-c215-7221-8e6a-d28b922add82",
+          "source_id": "019ca705-c215-7221-8e6a-d28b922add82",
+          "start_event_id": "019ca705-c215-7221-8e6a-d28b922add82:54",
+          "start_line_no": 54,
+          "start_timestamp": "2026-03-01T02:36:55.290Z",
+          "statement": "- State why chosen fix is durable"
+        }
+      ]
+    },
+    {
+      "citation_id": "item-open_question-10",
+      "item_keys": [
+        "ai-trader:open_question:1e3885cdedfdacea"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-open_question-10",
+      "provenance_refs": [
+        {
+          "end_event_id": "019ca705-c215-7221-8e6a-d28b922add82:5",
+          "end_line_no": 5,
+          "end_timestamp": "2026-03-01T01:31:38.636Z",
+          "rule_ids": [
+            "open_question.explicit"
+          ],
+          "segment_id": "019ca705-c215-7221-8e6a-d28b922add82:2",
+          "session_id": "019ca705-c215-7221-8e6a-d28b922add82",
+          "source_id": "019ca705-c215-7221-8e6a-d28b922add82",
+          "start_event_id": "019ca705-c215-7221-8e6a-d28b922add82:5",
+          "start_line_no": 5,
+          "start_timestamp": "2026-03-01T01:31:38.636Z",
+          "statement": "[{\"title\":\"<task title>\",\"description\":\"<what/why>\",\"status\":\"backlog|ready|blocked\",\"priority\":\"low|normal|high\",\"agent\":\"coder\",\"blockerReason\":\"<required only for blocked>\"}]"
+        },
+        {
+          "end_event_id": "019ca705-c215-7221-8e6a-d28b922add82:9",
+          "end_line_no": 9,
+          "end_timestamp": "2026-03-01T01:31:39.552Z",
+          "rule_ids": [
+            "open_question.explicit"
+          ],
+          "segment_id": "019ca705-c215-7221-8e6a-d28b922add82:3",
+          "session_id": "019ca705-c215-7221-8e6a-d28b922add82",
+          "source_id": "019ca705-c215-7221-8e6a-d28b922add82",
+          "start_event_id": "019ca705-c215-7221-8e6a-d28b922add82:6",
+          "start_line_no": 6,
+          "start_timestamp": "2026-03-01T01:31:38.636Z",
+          "statement": "[{\"title\":\"<task title>\",\"description\":\"<what/why>\",\"status\":\"backlog|ready|blocked\",\"priority\":\"low|normal|high\",\"agent\":\"coder\",\"blockerReason\":\"<required only for blocked>\"}]"
+        },
+        {
+          "end_event_id": "019ca705-c215-7221-8e6a-d28b922add82:54",
+          "end_line_no": 54,
+          "end_timestamp": "2026-03-01T02:36:55.290Z",
+          "rule_ids": [
+            "open_question.explicit"
+          ],
+          "segment_id": "019ca705-c215-7221-8e6a-d28b922add82:9",
+          "session_id": "019ca705-c215-7221-8e6a-d28b922add82",
+          "source_id": "019ca705-c215-7221-8e6a-d28b922add82",
+          "start_event_id": "019ca705-c215-7221-8e6a-d28b922add82:54",
+          "start_line_no": 54,
+          "start_timestamp": "2026-03-01T02:36:55.290Z",
+          "statement": "[{\"title\":\"<task title>\",\"description\":\"<what/why>\",\"status\":\"backlog|ready|blocked\",\"priority\":\"low|normal|high\",\"agent\":\"coder\",\"blockerReason\":\"<required only for blocked>\"}]"
+        }
+      ]
+    },
+    {
+      "citation_id": "item-open_question-11",
+      "item_keys": [
+        "ai-trader:open_question:597ed4b4ac0b08bc"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-open_question-11",
+      "provenance_refs": [
+        {
+          "end_event_id": "019ca705-c215-7221-8e6a-d28b922add82:5",
+          "end_line_no": 5,
+          "end_timestamp": "2026-03-01T01:31:38.636Z",
+          "rule_ids": [
+            "open_question.explicit"
+          ],
+          "segment_id": "019ca705-c215-7221-8e6a-d28b922add82:2",
+          "session_id": "019ca705-c215-7221-8e6a-d28b922add82",
+          "source_id": "019ca705-c215-7221-8e6a-d28b922add82",
+          "start_event_id": "019ca705-c215-7221-8e6a-d28b922add82:5",
+          "start_line_no": 5,
+          "start_timestamp": "2026-03-01T01:31:38.636Z",
+          "statement": "Cases should be stable, minimal, and sensitive to regressions in behavior."
+        },
+        {
+          "end_event_id": "019ca705-c215-7221-8e6a-d28b922add82:9",
+          "end_line_no": 9,
+          "end_timestamp": "2026-03-01T01:31:39.552Z",
+          "rule_ids": [
+            "open_question.explicit"
+          ],
+          "segment_id": "019ca705-c215-7221-8e6a-d28b922add82:3",
+          "session_id": "019ca705-c215-7221-8e6a-d28b922add82",
+          "source_id": "019ca705-c215-7221-8e6a-d28b922add82",
+          "start_event_id": "019ca705-c215-7221-8e6a-d28b922add82:6",
+          "start_line_no": 6,
+          "start_timestamp": "2026-03-01T01:31:38.636Z",
+          "statement": "Cases should be stable, minimal, and sensitive to regressions in behavior."
+        },
+        {
+          "end_event_id": "019ca705-c215-7221-8e6a-d28b922add82:54",
+          "end_line_no": 54,
+          "end_timestamp": "2026-03-01T02:36:55.290Z",
+          "rule_ids": [
+            "open_question.explicit"
+          ],
+          "segment_id": "019ca705-c215-7221-8e6a-d28b922add82:9",
+          "session_id": "019ca705-c215-7221-8e6a-d28b922add82",
+          "source_id": "019ca705-c215-7221-8e6a-d28b922add82",
+          "start_event_id": "019ca705-c215-7221-8e6a-d28b922add82:54",
+          "start_line_no": 54,
+          "start_timestamp": "2026-03-01T02:36:55.290Z",
+          "statement": "Cases should be stable, minimal, and sensitive to regressions in behavior."
+        }
+      ]
+    },
+    {
+      "citation_id": "item-open_question-12",
+      "item_keys": [
+        "ai-trader:open_question:ea9969a06f08d95a"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-open_question-12",
+      "provenance_refs": [
+        {
+          "end_event_id": "019ca705-c215-7221-8e6a-d28b922add82:5",
+          "end_line_no": 5,
+          "end_timestamp": "2026-03-01T01:31:38.636Z",
+          "rule_ids": [
+            "open_question.explicit"
+          ],
+          "segment_id": "019ca705-c215-7221-8e6a-d28b922add82:2",
+          "session_id": "019ca705-c215-7221-8e6a-d28b922add82",
+          "source_id": "019ca705-c215-7221-8e6a-d28b922add82",
+          "start_event_id": "019ca705-c215-7221-8e6a-d28b922add82:5",
+          "start_line_no": 5,
+          "start_timestamp": "2026-03-01T01:31:38.636Z",
+          "statement": "Output should be concise, explicit, and directly usable inside a spec pack."
+        },
+        {
+          "end_event_id": "019ca705-c215-7221-8e6a-d28b922add82:9",
+          "end_line_no": 9,
+          "end_timestamp": "2026-03-01T01:31:39.552Z",
+          "rule_ids": [
+            "open_question.explicit"
+          ],
+          "segment_id": "019ca705-c215-7221-8e6a-d28b922add82:3",
+          "session_id": "019ca705-c215-7221-8e6a-d28b922add82",
+          "source_id": "019ca705-c215-7221-8e6a-d28b922add82",
+          "start_event_id": "019ca705-c215-7221-8e6a-d28b922add82:6",
+          "start_line_no": 6,
+          "start_timestamp": "2026-03-01T01:31:38.636Z",
+          "statement": "Output should be concise, explicit, and directly usable inside a spec pack."
+        },
+        {
+          "end_event_id": "019ca705-c215-7221-8e6a-d28b922add82:54",
+          "end_line_no": 54,
+          "end_timestamp": "2026-03-01T02:36:55.290Z",
+          "rule_ids": [
+            "open_question.explicit"
+          ],
+          "segment_id": "019ca705-c215-7221-8e6a-d28b922add82:9",
+          "session_id": "019ca705-c215-7221-8e6a-d28b922add82",
+          "source_id": "019ca705-c215-7221-8e6a-d28b922add82",
+          "start_event_id": "019ca705-c215-7221-8e6a-d28b922add82:54",
+          "start_line_no": 54,
+          "start_timestamp": "2026-03-01T02:36:55.290Z",
+          "statement": "Output should be concise, explicit, and directly usable inside a spec pack."
+        }
+      ]
+    },
+    {
+      "citation_id": "item-open_question-13",
+      "item_keys": [
+        "ai-trader:open_question:95763cca930dae19"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-open_question-13",
+      "provenance_refs": [
+        {
+          "end_event_id": "019ca705-c215-7221-8e6a-d28b922add82:5",
+          "end_line_no": 5,
+          "end_timestamp": "2026-03-01T01:31:38.636Z",
+          "rule_ids": [
+            "open_question.explicit"
+          ],
+          "segment_id": "019ca705-c215-7221-8e6a-d28b922add82:2",
+          "session_id": "019ca705-c215-7221-8e6a-d28b922add82",
+          "source_id": "019ca705-c215-7221-8e6a-d28b922add82",
+          "start_event_id": "019ca705-c215-7221-8e6a-d28b922add82:5",
+          "start_line_no": 5,
+          "start_timestamp": "2026-03-01T01:31:38.636Z",
+          "statement": "- Each item should be atomic and independently verifiable."
+        },
+        {
+          "end_event_id": "019ca705-c215-7221-8e6a-d28b922add82:9",
+          "end_line_no": 9,
+          "end_timestamp": "2026-03-01T01:31:39.552Z",
+          "rule_ids": [
+            "open_question.explicit"
+          ],
+          "segment_id": "019ca705-c215-7221-8e6a-d28b922add82:3",
+          "session_id": "019ca705-c215-7221-8e6a-d28b922add82",
+          "source_id": "019ca705-c215-7221-8e6a-d28b922add82",
+          "start_event_id": "019ca705-c215-7221-8e6a-d28b922add82:6",
+          "start_line_no": 6,
+          "start_timestamp": "2026-03-01T01:31:38.636Z",
+          "statement": "- Each item should be atomic and independently verifiable."
+        },
+        {
+          "end_event_id": "019ca705-c215-7221-8e6a-d28b922add82:54",
+          "end_line_no": 54,
+          "end_timestamp": "2026-03-01T02:36:55.290Z",
+          "rule_ids": [
+            "open_question.explicit"
+          ],
+          "segment_id": "019ca705-c215-7221-8e6a-d28b922add82:9",
+          "session_id": "019ca705-c215-7221-8e6a-d28b922add82",
+          "source_id": "019ca705-c215-7221-8e6a-d28b922add82",
+          "start_event_id": "019ca705-c215-7221-8e6a-d28b922add82:54",
+          "start_line_no": 54,
+          "start_timestamp": "2026-03-01T02:36:55.290Z",
+          "statement": "- Each item should be atomic and independently verifiable."
+        }
+      ]
+    },
+    {
+      "citation_id": "item-open_question-14",
+      "item_keys": [
+        "ai-trader:open_question:03247fa5d1a73686"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-open_question-14",
+      "provenance_refs": [
+        {
+          "end_event_id": "019ca705-c215-7221-8e6a-d28b922add82:5",
+          "end_line_no": 5,
+          "end_timestamp": "2026-03-01T01:31:38.636Z",
+          "rule_ids": [
+            "open_question.explicit"
+          ],
+          "segment_id": "019ca705-c215-7221-8e6a-d28b922add82:2",
+          "session_id": "019ca705-c215-7221-8e6a-d28b922add82",
+          "source_id": "019ca705-c215-7221-8e6a-d28b922add82",
+          "start_event_id": "019ca705-c215-7221-8e6a-d28b922add82:5",
+          "start_line_no": 5,
+          "start_timestamp": "2026-03-01T01:31:38.636Z",
+          "statement": "<story title> - <what changes> - <evidence>"
+        },
+        {
+          "end_event_id": "019ca705-c215-7221-8e6a-d28b922add82:9",
+          "end_line_no": 9,
+          "end_timestamp": "2026-03-01T01:31:39.552Z",
+          "rule_ids": [
+            "open_question.explicit"
+          ],
+          "segment_id": "019ca705-c215-7221-8e6a-d28b922add82:3",
+          "session_id": "019ca705-c215-7221-8e6a-d28b922add82",
+          "source_id": "019ca705-c215-7221-8e6a-d28b922add82",
+          "start_event_id": "019ca705-c215-7221-8e6a-d28b922add82:6",
+          "start_line_no": 6,
+          "start_timestamp": "2026-03-01T01:31:38.636Z",
+          "statement": "<story title> - <what changes> - <evidence>"
+        },
+        {
+          "end_event_id": "019ca705-c215-7221-8e6a-d28b922add82:54",
+          "end_line_no": 54,
+          "end_timestamp": "2026-03-01T02:36:55.290Z",
+          "rule_ids": [
+            "open_question.explicit"
+          ],
+          "segment_id": "019ca705-c215-7221-8e6a-d28b922add82:9",
+          "session_id": "019ca705-c215-7221-8e6a-d28b922add82",
+          "source_id": "019ca705-c215-7221-8e6a-d28b922add82",
+          "start_event_id": "019ca705-c215-7221-8e6a-d28b922add82:54",
+          "start_line_no": 54,
+          "start_timestamp": "2026-03-01T02:36:55.290Z",
+          "statement": "<story title> - <what changes> - <evidence>"
+        }
+      ]
+    },
+    {
+      "citation_id": "item-open_question-15",
+      "item_keys": [
+        "ai-trader:open_question:1773732768fc47a5"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-open_question-15",
+      "provenance_refs": [
+        {
+          "end_event_id": "019ca705-c215-7221-8e6a-d28b922add82:5",
+          "end_line_no": 5,
+          "end_timestamp": "2026-03-01T01:31:38.636Z",
+          "rule_ids": [
+            "open_question.explicit"
+          ],
+          "segment_id": "019ca705-c215-7221-8e6a-d28b922add82:2",
+          "session_id": "019ca705-c215-7221-8e6a-d28b922add82",
+          "source_id": "019ca705-c215-7221-8e6a-d28b922add82",
+          "start_event_id": "019ca705-c215-7221-8e6a-d28b922add82:5",
+          "start_line_no": 5,
+          "start_timestamp": "2026-03-01T01:31:38.636Z",
+          "statement": "- Implement only what is needed for this request."
+        },
+        {
+          "end_event_id": "019ca705-c215-7221-8e6a-d28b922add82:9",
+          "end_line_no": 9,
+          "end_timestamp": "2026-03-01T01:31:39.552Z",
+          "rule_ids": [
+            "open_question.explicit"
+          ],
+          "segment_id": "019ca705-c215-7221-8e6a-d28b922add82:3",
+          "session_id": "019ca705-c215-7221-8e6a-d28b922add82",
+          "source_id": "019ca705-c215-7221-8e6a-d28b922add82",
+          "start_event_id": "019ca705-c215-7221-8e6a-d28b922add82:6",
+          "start_line_no": 6,
+          "start_timestamp": "2026-03-01T01:31:38.636Z",
+          "statement": "- Implement only what is needed for this request."
+        },
+        {
+          "end_event_id": "019ca766-5bc5-78d1-aa87-19b2cfd3b1a5:19",
+          "end_line_no": 19,
+          "end_timestamp": "2026-03-01T03:26:30.376Z",
+          "rule_ids": [
+            "open_question.explicit"
+          ],
+          "segment_id": "019ca766-5bc5-78d1-aa87-19b2cfd3b1a5:6",
+          "session_id": "019ca766-5bc5-78d1-aa87-19b2cfd3b1a5",
+          "source_id": "019ca766-5bc5-78d1-aa87-19b2cfd3b1a5",
+          "start_event_id": "019ca766-5bc5-78d1-aa87-19b2cfd3b1a5:19",
+          "start_line_no": 19,
+          "start_timestamp": "2026-03-01T03:26:30.376Z",
+          "statement": "- Implement only what is needed for this request."
+        }
+      ]
+    },
+    {
+      "citation_id": "item-open_question-16",
+      "item_keys": [
+        "ai-trader:open_question:e5a7d39faee279b2"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-open_question-16",
+      "provenance_refs": [
+        {
+          "end_event_id": "019ca705-c215-7221-8e6a-d28b922add82:54",
+          "end_line_no": 54,
+          "end_timestamp": "2026-03-01T02:36:55.290Z",
+          "rule_ids": [
+            "open_question.explicit"
+          ],
+          "segment_id": "019ca705-c215-7221-8e6a-d28b922add82:9",
+          "session_id": "019ca705-c215-7221-8e6a-d28b922add82",
+          "source_id": "019ca705-c215-7221-8e6a-d28b922add82",
+          "start_event_id": "019ca705-c215-7221-8e6a-d28b922add82:54",
+          "start_line_no": 54,
+          "start_timestamp": "2026-03-01T02:36:55.290Z",
+          "statement": "- Implement or investigate only what is required for this request."
+        },
+        {
+          "end_event_id": "019ca705-c215-7221-8e6a-d28b922add82:58",
+          "end_line_no": 58,
+          "end_timestamp": "2026-03-01T02:36:56.003Z",
+          "rule_ids": [
+            "open_question.explicit"
+          ],
+          "segment_id": "019ca705-c215-7221-8e6a-d28b922add82:10",
+          "session_id": "019ca705-c215-7221-8e6a-d28b922add82",
+          "source_id": "019ca705-c215-7221-8e6a-d28b922add82",
+          "start_event_id": "019ca705-c215-7221-8e6a-d28b922add82:55",
+          "start_line_no": 55,
+          "start_timestamp": "2026-03-01T02:36:55.292Z",
+          "statement": "- Implement or investigate only what is required for this request."
+        },
+        {
+          "end_event_id": "019ca705-c215-7221-8e6a-d28b922add82:88",
+          "end_line_no": 88,
+          "end_timestamp": "2026-03-01T02:53:53.037Z",
+          "rule_ids": [
+            "open_question.explicit"
+          ],
+          "segment_id": "019ca705-c215-7221-8e6a-d28b922add82:14",
+          "session_id": "019ca705-c215-7221-8e6a-d28b922add82",
+          "source_id": "019ca705-c215-7221-8e6a-d28b922add82",
+          "start_event_id": "019ca705-c215-7221-8e6a-d28b922add82:88",
+          "start_line_no": 88,
+          "start_timestamp": "2026-03-01T02:53:53.037Z",
+          "statement": "- Implement or investigate only what is required for this request."
+        }
+      ]
+    },
+    {
+      "citation_id": "item-open_question-17",
+      "item_keys": [
+        "ai-trader:open_question:cf8bf799b7e5fe90"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-open_question-17",
+      "provenance_refs": [
+        {
+          "end_event_id": "019c687b-3d0d-71c0-8929-9128cbf24060:17",
+          "end_line_no": 17,
+          "end_timestamp": "2026-02-16T22:16:30.330Z",
+          "rule_ids": [
+            "open_question.explicit"
+          ],
+          "segment_id": "019c687b-3d0d-71c0-8929-9128cbf24060:6",
+          "session_id": "019c687b-3d0d-71c0-8929-9128cbf24060",
+          "source_id": "019c687b-3d0d-71c0-8929-9128cbf24060",
+          "start_event_id": "019c687b-3d0d-71c0-8929-9128cbf24060:13",
+          "start_line_no": 13,
+          "start_timestamp": "2026-02-16T22:06:15.010Z",
+          "statement": "should"
+        },
+        {
+          "end_event_id": "019c687b-3d0d-71c0-8929-9128cbf24060:10724",
+          "end_line_no": 10724,
+          "end_timestamp": "2026-02-22T22:05:51.223Z",
+          "rule_ids": [
+            "open_question.explicit"
+          ],
+          "segment_id": "019c687b-3d0d-71c0-8929-9128cbf24060:849",
+          "session_id": "019c687b-3d0d-71c0-8929-9128cbf24060",
+          "source_id": "019c687b-3d0d-71c0-8929-9128cbf24060",
+          "start_event_id": "019c687b-3d0d-71c0-8929-9128cbf24060:10720",
+          "start_line_no": 10720,
+          "start_timestamp": "2026-02-22T22:00:26.577Z",
+          "statement": "should"
+        },
+        {
+          "end_event_id": "019c9ca4-ac1c-76e2-b883-017d68d982a1:10738",
+          "end_line_no": 10738,
+          "end_timestamp": "2026-02-28T23:23:29.632Z",
+          "rule_ids": [
+            "open_question.explicit"
+          ],
+          "segment_id": "019c9ca4-ac1c-76e2-b883-017d68d982a1:1398",
+          "session_id": "019c9ca4-ac1c-76e2-b883-017d68d982a1",
+          "source_id": "019c9ca4-ac1c-76e2-b883-017d68d982a1",
+          "start_event_id": "019c9ca4-ac1c-76e2-b883-017d68d982a1:10732",
+          "start_line_no": 10732,
+          "start_timestamp": "2026-02-28T23:15:26.990Z",
+          "statement": "should"
+        }
+      ]
+    },
+    {
+      "citation_id": "item-open_question-18",
+      "item_keys": [
+        "ai-trader:open_question:a0e554df0f8948d2"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-open_question-18",
+      "provenance_refs": [
+        {
+          "end_event_id": "019c687b-3d0d-71c0-8929-9128cbf24060:1358",
+          "end_line_no": 1358,
+          "end_timestamp": "2026-02-16T23:47:05.569Z",
+          "rule_ids": [
+            "open_question.explicit"
+          ],
+          "segment_id": "019c687b-3d0d-71c0-8929-9128cbf24060:98",
+          "session_id": "019c687b-3d0d-71c0-8929-9128cbf24060",
+          "source_id": "019c687b-3d0d-71c0-8929-9128cbf24060",
+          "start_event_id": "019c687b-3d0d-71c0-8929-9128cbf24060:1333",
+          "start_line_no": 1333,
+          "start_timestamp": "2026-02-16T23:46:30.532Z",
+          "statement": "### What I changed"
+        },
+        {
+          "end_event_id": "019c687b-3d0d-71c0-8929-9128cbf24060:1362",
+          "end_line_no": 1362,
+          "end_timestamp": "2026-02-16T23:55:59.981Z",
+          "rule_ids": [
+            "open_question.explicit"
+          ],
+          "segment_id": "019c687b-3d0d-71c0-8929-9128cbf24060:99",
+          "session_id": "019c687b-3d0d-71c0-8929-9128cbf24060",
+          "source_id": "019c687b-3d0d-71c0-8929-9128cbf24060",
+          "start_event_id": "019c687b-3d0d-71c0-8929-9128cbf24060:1359",
+          "start_line_no": 1359,
+          "start_timestamp": "2026-02-16T23:47:05.569Z",
+          "statement": "### What I changed"
+        },
+        {
+          "end_event_id": "019c687b-3d0d-71c0-8929-9128cbf24060:3780",
+          "end_line_no": 3780,
+          "end_timestamp": "2026-02-17T06:34:22.187Z",
+          "rule_ids": [
+            "open_question.explicit"
+          ],
+          "segment_id": "019c687b-3d0d-71c0-8929-9128cbf24060:289",
+          "session_id": "019c687b-3d0d-71c0-8929-9128cbf24060",
+          "source_id": "019c687b-3d0d-71c0-8929-9128cbf24060",
+          "start_event_id": "019c687b-3d0d-71c0-8929-9128cbf24060:3776",
+          "start_line_no": 3776,
+          "start_timestamp": "2026-02-17T06:19:57.130Z",
+          "statement": "What I changed:"
+        }
+      ]
+    },
+    {
+      "citation_id": "item-open_question-19",
+      "item_keys": [
+        "ai-trader:open_question:bbb3d6d51857ecc3"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-open_question-19",
+      "provenance_refs": [
+        {
+          "end_event_id": "019c687b-3d0d-71c0-8929-9128cbf24060:1626",
+          "end_line_no": 1626,
+          "end_timestamp": "2026-02-17T00:02:25.741Z",
+          "rule_ids": [
+            "open_question.explicit"
+          ],
+          "segment_id": "019c687b-3d0d-71c0-8929-9128cbf24060:115",
+          "session_id": "019c687b-3d0d-71c0-8929-9128cbf24060",
+          "source_id": "019c687b-3d0d-71c0-8929-9128cbf24060",
+          "start_event_id": "019c687b-3d0d-71c0-8929-9128cbf24060:1606",
+          "start_line_no": 1606,
+          "start_timestamp": "2026-02-17T00:01:58.198Z",
+          "statement": "### What changed"
+        },
+        {
+          "end_event_id": "019c687b-3d0d-71c0-8929-9128cbf24060:1630",
+          "end_line_no": 1630,
+          "end_timestamp": "2026-02-17T00:21:34.156Z",
+          "rule_ids": [
+            "open_question.explicit"
+          ],
+          "segment_id": "019c687b-3d0d-71c0-8929-9128cbf24060:116",
+          "session_id": "019c687b-3d0d-71c0-8929-9128cbf24060",
+          "source_id": "019c687b-3d0d-71c0-8929-9128cbf24060",
+          "start_event_id": "019c687b-3d0d-71c0-8929-9128cbf24060:1627",
+          "start_line_no": 1627,
+          "start_timestamp": "2026-02-17T00:02:25.741Z",
+          "statement": "### What changed"
+        },
+        {
+          "end_event_id": "019c687b-3d0d-71c0-8929-9128cbf24060:3416",
+          "end_line_no": 3416,
+          "end_timestamp": "2026-02-17T05:33:31.535Z",
+          "rule_ids": [
+            "open_question.explicit"
+          ],
+          "segment_id": "019c687b-3d0d-71c0-8929-9128cbf24060:258",
+          "session_id": "019c687b-3d0d-71c0-8929-9128cbf24060",
+          "source_id": "019c687b-3d0d-71c0-8929-9128cbf24060",
+          "start_event_id": "019c687b-3d0d-71c0-8929-9128cbf24060:3414",
+          "start_line_no": 3414,
+          "start_timestamp": "2026-02-17T05:33:24.524Z",
+          "statement": "**What changed**"
+        }
+      ]
+    },
+    {
+      "citation_id": "item-open_question-20",
+      "item_keys": [
+        "ai-trader:open_question:003ce9a6387cf97d"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-open_question-20",
+      "provenance_refs": [
+        {
+          "end_event_id": "019caf9f-c9e4-7d33-9635-28feaa5b3b4a:5",
+          "end_line_no": 5,
+          "end_timestamp": "2026-03-02T17:36:50.905Z",
+          "rule_ids": [
+            "open_question.explicit"
+          ],
+          "segment_id": "019caf9f-c9e4-7d33-9635-28feaa5b3b4a:3",
+          "session_id": "019caf9f-c9e4-7d33-9635-28feaa5b3b4a",
+          "source_id": "019caf9f-c9e4-7d33-9635-28feaa5b3b4a",
+          "start_event_id": "019caf9f-c9e4-7d33-9635-28feaa5b3b4a:5",
+          "start_line_no": 5,
+          "start_timestamp": "2026-03-02T17:36:50.905Z",
+          "statement": "3) How urgent is this (now, today, this week)..."
+        },
+        {
+          "end_event_id": "019caf9f-c9e4-7d33-9635-28feaa5b3b4a:8",
+          "end_line_no": 8,
+          "end_timestamp": "2026-03-02T17:36:51.548Z",
+          "rule_ids": [
+            "open_question.explicit"
+          ],
+          "segment_id": "019caf9f-c9e4-7d33-9635-28feaa5b3b4a:4",
+          "session_id": "019caf9f-c9e4-7d33-9635-28feaa5b3b4a",
+          "source_id": "019caf9f-c9e4-7d33-9635-28feaa5b3b4a",
+          "start_event_id": "019caf9f-c9e4-7d33-9635-28feaa5b3b4a:6",
+          "start_line_no": 6,
+          "start_timestamp": "2026-03-02T17:36:50.905Z",
+          "statement": "3) How urgent is this (now, today, this week)..."
+        },
+        {
+          "end_event_id": "019caf9f-c9e4-7d33-9635-28feaa5b3b4a:218",
+          "end_line_no": 218,
+          "end_timestamp": "2026-03-02T23:40:12.961Z",
+          "rule_ids": [
+            "open_question.explicit"
+          ],
+          "segment_id": "019caf9f-c9e4-7d33-9635-28feaa5b3b4a:24",
+          "session_id": "019caf9f-c9e4-7d33-9635-28feaa5b3b4a",
+          "source_id": "019caf9f-c9e4-7d33-9635-28feaa5b3b4a",
+          "start_event_id": "019caf9f-c9e4-7d33-9635-28feaa5b3b4a:218",
+          "start_line_no": 218,
+          "start_timestamp": "2026-03-02T23:40:12.961Z",
+          "statement": "3) How urgent is this (now, today, this week)..."
+        }
+      ]
+    },
+    {
+      "citation_id": "item-open_question-21",
+      "item_keys": [
+        "ai-trader:open_question:0dd359ddb00c5d8c"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-open_question-21",
+      "provenance_refs": [
+        {
+          "end_event_id": "019caf9f-c9e4-7d33-9635-28feaa5b3b4a:5",
+          "end_line_no": 5,
+          "end_timestamp": "2026-03-02T17:36:50.905Z",
+          "rule_ids": [
+            "open_question.explicit"
+          ],
+          "segment_id": "019caf9f-c9e4-7d33-9635-28feaa5b3b4a:3",
+          "session_id": "019caf9f-c9e4-7d33-9635-28feaa5b3b4a",
+          "source_id": "019caf9f-c9e4-7d33-9635-28feaa5b3b4a",
+          "start_event_id": "019caf9f-c9e4-7d33-9635-28feaa5b3b4a:5",
+          "start_line_no": 5,
+          "start_timestamp": "2026-03-02T17:36:50.905Z",
+          "statement": "To make sure I hit the mark this time: 1) What exactly do you want me to try again (task/deliverable)?"
+        },
+        {
+          "end_event_id": "019caf9f-c9e4-7d33-9635-28feaa5b3b4a:8",
+          "end_line_no": 8,
+          "end_timestamp": "2026-03-02T17:36:51.548Z",
+          "rule_ids": [
+            "open_question.explicit"
+          ],
+          "segment_id": "019caf9f-c9e4-7d33-9635-28feaa5b3b4a:4",
+          "session_id": "019caf9f-c9e4-7d33-9635-28feaa5b3b4a",
+          "source_id": "019caf9f-c9e4-7d33-9635-28feaa5b3b4a",
+          "start_event_id": "019caf9f-c9e4-7d33-9635-28feaa5b3b4a:6",
+          "start_line_no": 6,
+          "start_timestamp": "2026-03-02T17:36:50.905Z",
+          "statement": "To make sure I hit the mark this time: 1) What exactly do you want me to try again (task/deliverable)?"
+        },
+        {
+          "end_event_id": "019caf9f-c9e4-7d33-9635-28feaa5b3b4a:218",
+          "end_line_no": 218,
+          "end_timestamp": "2026-03-02T23:40:12.961Z",
+          "rule_ids": [
+            "open_question.explicit"
+          ],
+          "segment_id": "019caf9f-c9e4-7d33-9635-28feaa5b3b4a:24",
+          "session_id": "019caf9f-c9e4-7d33-9635-28feaa5b3b4a",
+          "source_id": "019caf9f-c9e4-7d33-9635-28feaa5b3b4a",
+          "start_event_id": "019caf9f-c9e4-7d33-9635-28feaa5b3b4a:218",
+          "start_line_no": 218,
+          "start_timestamp": "2026-03-02T23:40:12.961Z",
+          "statement": "To make sure I hit the mark this time: 1) What exactly do you want me to try again (task/deliverable)?"
+        }
+      ]
+    },
+    {
+      "citation_id": "item-open_question-22",
+      "item_keys": [
+        "ai-trader:open_question:ff4950c23e2f1c40"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-open_question-22",
+      "provenance_refs": [
+        {
+          "end_event_id": "019c687b-3d0d-71c0-8929-9128cbf24060:21",
+          "end_line_no": 21,
+          "end_timestamp": "2026-02-16T22:16:31.362Z",
+          "rule_ids": [
+            "open_question.explicit"
+          ],
+          "segment_id": "019c687b-3d0d-71c0-8929-9128cbf24060:7",
+          "session_id": "019c687b-3d0d-71c0-8929-9128cbf24060",
+          "source_id": "019c687b-3d0d-71c0-8929-9128cbf24060",
+          "start_event_id": "019c687b-3d0d-71c0-8929-9128cbf24060:18",
+          "start_line_no": 18,
+          "start_timestamp": "2026-02-16T22:16:30.331Z",
+          "statement": "why"
+        },
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:77220",
+          "end_line_no": 77220,
+          "end_timestamp": "2026-03-17T01:19:11.525Z",
+          "rule_ids": [
+            "open_question.explicit"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:11452",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:77220",
+          "start_line_no": 77220,
+          "start_timestamp": "2026-03-17T01:19:11.525Z",
+          "statement": "Why"
+        },
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:236",
+          "end_line_no": 236,
+          "end_timestamp": "2026-04-12T22:11:57.420Z",
+          "rule_ids": [
+            "open_question.explicit"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:55",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:229",
+          "start_line_no": 229,
+          "start_timestamp": "2026-04-12T22:11:31.321Z",
+          "statement": "**Why**"
+        }
+      ]
+    },
+    {
+      "citation_id": "item-open_question-23",
+      "item_keys": [
+        "ai-trader:open_question:1352adbd25f73a35"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-open_question-23",
+      "provenance_refs": [
+        {
+          "end_event_id": "019c687b-3d0d-71c0-8929-9128cbf24060:4441",
+          "end_line_no": 4441,
+          "end_timestamp": "2026-02-17T17:06:39.674Z",
+          "rule_ids": [
+            "open_question.explicit"
+          ],
+          "segment_id": "019c687b-3d0d-71c0-8929-9128cbf24060:343",
+          "session_id": "019c687b-3d0d-71c0-8929-9128cbf24060",
+          "source_id": "019c687b-3d0d-71c0-8929-9128cbf24060",
+          "start_event_id": "019c687b-3d0d-71c0-8929-9128cbf24060:4423",
+          "start_line_no": 4423,
+          "start_timestamp": "2026-02-17T17:02:07.906Z",
+          "statement": "What to do now:"
+        },
+        {
+          "end_event_id": "019c9ca4-ac1c-76e2-b883-017d68d982a1:842",
+          "end_line_no": 842,
+          "end_timestamp": "2026-02-27T04:51:44.362Z",
+          "rule_ids": [
+            "open_question.explicit"
+          ],
+          "segment_id": "019c9ca4-ac1c-76e2-b883-017d68d982a1:56",
+          "session_id": "019c9ca4-ac1c-76e2-b883-017d68d982a1",
+          "source_id": "019c9ca4-ac1c-76e2-b883-017d68d982a1",
+          "start_event_id": "019c9ca4-ac1c-76e2-b883-017d68d982a1:838",
+          "start_line_no": 838,
+          "start_timestamp": "2026-02-27T04:46:48.776Z",
+          "statement": "What to do now:"
+        },
+        {
+          "end_event_id": "019c9ca4-ac1c-76e2-b883-017d68d982a1:9163",
+          "end_line_no": 9163,
+          "end_timestamp": "2026-02-28T20:44:01.967Z",
+          "rule_ids": [
+            "open_question.explicit"
+          ],
+          "segment_id": "019c9ca4-ac1c-76e2-b883-017d68d982a1:1186",
+          "session_id": "019c9ca4-ac1c-76e2-b883-017d68d982a1",
+          "source_id": "019c9ca4-ac1c-76e2-b883-017d68d982a1",
+          "start_event_id": "019c9ca4-ac1c-76e2-b883-017d68d982a1:9159",
+          "start_line_no": 9159,
+          "start_timestamp": "2026-02-28T20:42:35.827Z",
+          "statement": "### What to do now"
+        }
+      ]
+    },
+    {
+      "citation_id": "item-open_question-24",
+      "item_keys": [
+        "ai-trader:open_question:3ef0ea42c23a1439"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-open_question-24",
+      "provenance_refs": [
+        {
+          "end_event_id": "019cab13-b21e-76f3-9029-bcd0333cd3eb:5",
+          "end_line_no": 5,
+          "end_timestamp": "2026-03-01T20:25:20.872Z",
+          "rule_ids": [
+            "open_question.explicit"
+          ],
+          "segment_id": "019cab13-b21e-76f3-9029-bcd0333cd3eb:2",
+          "session_id": "019cab13-b21e-76f3-9029-bcd0333cd3eb",
+          "source_id": "019cab13-b21e-76f3-9029-bcd0333cd3eb",
+          "start_event_id": "019cab13-b21e-76f3-9029-bcd0333cd3eb:5",
+          "start_line_no": 5,
+          "start_timestamp": "2026-03-01T20:25:20.872Z",
+          "statement": "- [2026-03-01T18:17:38.581Z] (user) No, just read my previous text about the workflow and tell me what you think"
+        },
+        {
+          "end_event_id": "019cab13-b21e-76f3-9029-bcd0333cd3eb:9",
+          "end_line_no": 9,
+          "end_timestamp": "2026-03-01T20:25:21.922Z",
+          "rule_ids": [
+            "open_question.explicit"
+          ],
+          "segment_id": "019cab13-b21e-76f3-9029-bcd0333cd3eb:3",
+          "session_id": "019cab13-b21e-76f3-9029-bcd0333cd3eb",
+          "source_id": "019cab13-b21e-76f3-9029-bcd0333cd3eb",
+          "start_event_id": "019cab13-b21e-76f3-9029-bcd0333cd3eb:6",
+          "start_line_no": 6,
+          "start_timestamp": "2026-03-01T20:25:20.872Z",
+          "statement": "- [2026-03-01T18:17:38.581Z] (user) No, just read my previous text about the workflow and tell me what you think"
+        },
+        {
+          "end_event_id": "019caf9f-c9e4-7d33-9635-28feaa5b3b4a:218",
+          "end_line_no": 218,
+          "end_timestamp": "2026-03-02T23:40:12.961Z",
+          "rule_ids": [
+            "open_question.explicit"
+          ],
+          "segment_id": "019caf9f-c9e4-7d33-9635-28feaa5b3b4a:24",
+          "session_id": "019caf9f-c9e4-7d33-9635-28feaa5b3b4a",
+          "source_id": "019caf9f-c9e4-7d33-9635-28feaa5b3b4a",
+          "start_event_id": "019caf9f-c9e4-7d33-9635-28feaa5b3b4a:218",
+          "start_line_no": 218,
+          "start_timestamp": "2026-03-02T23:40:12.961Z",
+          "statement": "- [2026-03-01T18:17:38.581Z] (user) No, just read my previous text about the workflow and tell me what you think"
+        }
+      ]
+    },
+    {
+      "citation_id": "item-open_question-25",
+      "item_keys": [
+        "ai-trader:open_question:8b636daf9968e6d9"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-open_question-25",
+      "provenance_refs": [
+        {
+          "end_event_id": "019caaf1-3a40-7082-ac18-8fe3f3eb0dd0:1053",
+          "end_line_no": 1053,
+          "end_timestamp": "2026-03-01T20:01:11.587Z",
+          "rule_ids": [
+            "open_question.explicit"
+          ],
+          "segment_id": "019caaf1-3a40-7082-ac18-8fe3f3eb0dd0:91",
+          "session_id": "019caaf1-3a40-7082-ac18-8fe3f3eb0dd0",
+          "source_id": "019caaf1-3a40-7082-ac18-8fe3f3eb0dd0",
+          "start_event_id": "019caaf1-3a40-7082-ac18-8fe3f3eb0dd0:1053",
+          "start_line_no": 1053,
+          "start_timestamp": "2026-03-01T20:01:11.587Z",
+          "statement": "What I learned:"
+        },
+        {
+          "end_event_id": "019caaf1-3a40-7082-ac18-8fe3f3eb0dd0:1057",
+          "end_line_no": 1057,
+          "end_timestamp": "2026-03-01T20:01:13.290Z",
+          "rule_ids": [
+            "open_question.explicit"
+          ],
+          "segment_id": "019caaf1-3a40-7082-ac18-8fe3f3eb0dd0:92",
+          "session_id": "019caaf1-3a40-7082-ac18-8fe3f3eb0dd0",
+          "source_id": "019caaf1-3a40-7082-ac18-8fe3f3eb0dd0",
+          "start_event_id": "019caaf1-3a40-7082-ac18-8fe3f3eb0dd0:1054",
+          "start_line_no": 1054,
+          "start_timestamp": "2026-03-01T20:01:11.589Z",
+          "statement": "What I learned:"
+        },
+        {
+          "end_event_id": "019caaf1-3a40-7082-ac18-8fe3f3eb0dd0:1065",
+          "end_line_no": 1065,
+          "end_timestamp": "2026-03-01T20:02:15.153Z",
+          "rule_ids": [
+            "open_question.explicit"
+          ],
+          "segment_id": "019caaf1-3a40-7082-ac18-8fe3f3eb0dd0:96",
+          "session_id": "019caaf1-3a40-7082-ac18-8fe3f3eb0dd0",
+          "source_id": "019caaf1-3a40-7082-ac18-8fe3f3eb0dd0",
+          "start_event_id": "019caaf1-3a40-7082-ac18-8fe3f3eb0dd0:1065",
+          "start_line_no": 1065,
+          "start_timestamp": "2026-03-01T20:02:15.153Z",
+          "statement": "**What I Learned**"
+        }
+      ]
+    },
+    {
+      "citation_id": "item-open_question-26",
+      "item_keys": [
+        "ai-trader:open_question:1a8147490bc8bc6e"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-open_question-26",
+      "provenance_refs": [
+        {
+          "end_event_id": "019c9f43-944f-7403-a8a0-8484dd96dfab:105",
+          "end_line_no": 105,
+          "end_timestamp": "2026-02-27T13:23:31.282Z",
+          "rule_ids": [
+            "open_question.explicit"
+          ],
+          "segment_id": "019c9f43-944f-7403-a8a0-8484dd96dfab:17",
+          "session_id": "019c9f43-944f-7403-a8a0-8484dd96dfab",
+          "source_id": "019c9f43-944f-7403-a8a0-8484dd96dfab",
+          "start_event_id": "019c9f43-944f-7403-a8a0-8484dd96dfab:102",
+          "start_line_no": 102,
+          "start_timestamp": "2026-02-27T13:23:31.269Z",
+          "statement": "**What It Does**"
+        },
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:2406",
+          "end_line_no": 2406,
+          "end_timestamp": "2026-03-03T02:23:50.250Z",
+          "rule_ids": [
+            "open_question.explicit"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:183",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:2400",
+          "start_line_no": 2400,
+          "start_timestamp": "2026-03-03T02:22:14.684Z",
+          "statement": "What it does:"
+        }
+      ]
+    },
+    {
+      "citation_id": "item-open_question-27",
+      "item_keys": [
+        "ai-trader:open_question:8d89f5c48626a883"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-open_question-27",
+      "provenance_refs": [
+        {
+          "end_event_id": "019c9ca4-ac1c-76e2-b883-017d68d982a1:11156",
+          "end_line_no": 11156,
+          "end_timestamp": "2026-02-28T23:51:51.684Z",
+          "rule_ids": [
+            "open_question.explicit"
+          ],
+          "segment_id": "019c9ca4-ac1c-76e2-b883-017d68d982a1:1453",
+          "session_id": "019c9ca4-ac1c-76e2-b883-017d68d982a1",
+          "source_id": "019c9ca4-ac1c-76e2-b883-017d68d982a1",
+          "start_event_id": "019c9ca4-ac1c-76e2-b883-017d68d982a1:11156",
+          "start_line_no": 11156,
+          "start_timestamp": "2026-02-28T23:51:51.684Z",
+          "statement": "### What I fixed"
+        },
+        {
+          "end_event_id": "019c9ca4-ac1c-76e2-b883-017d68d982a1:11160",
+          "end_line_no": 11160,
+          "end_timestamp": "2026-03-01T00:25:14.817Z",
+          "rule_ids": [
+            "open_question.explicit"
+          ],
+          "segment_id": "019c9ca4-ac1c-76e2-b883-017d68d982a1:1454",
+          "session_id": "019c9ca4-ac1c-76e2-b883-017d68d982a1",
+          "source_id": "019c9ca4-ac1c-76e2-b883-017d68d982a1",
+          "start_event_id": "019c9ca4-ac1c-76e2-b883-017d68d982a1:11157",
+          "start_line_no": 11157,
+          "start_timestamp": "2026-02-28T23:51:51.684Z",
+          "statement": "### What I fixed"
+        },
+        {
+          "end_event_id": "019c9ca4-ac1c-76e2-b883-017d68d982a1:12311",
+          "end_line_no": 12311,
+          "end_timestamp": "2026-03-01T03:36:34.362Z",
+          "rule_ids": [
+            "open_question.explicit"
+          ],
+          "segment_id": "019c9ca4-ac1c-76e2-b883-017d68d982a1:1609",
+          "session_id": "019c9ca4-ac1c-76e2-b883-017d68d982a1",
+          "source_id": "019c9ca4-ac1c-76e2-b883-017d68d982a1",
+          "start_event_id": "019c9ca4-ac1c-76e2-b883-017d68d982a1:12307",
+          "start_line_no": 12307,
+          "start_timestamp": "2026-03-01T03:35:02.780Z",
+          "statement": "What I fixed:"
+        }
+      ]
+    },
+    {
+      "citation_id": "item-open_question-28",
+      "item_keys": [
+        "ai-trader:open_question:1fb67c8d4126a36d"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-open_question-28",
+      "provenance_refs": [
+        {
+          "end_event_id": "019c9ca4-ac1c-76e2-b883-017d68d982a1:16587",
+          "end_line_no": 16587,
+          "end_timestamp": "2026-03-02T02:50:29.698Z",
+          "rule_ids": [
+            "open_question.explicit"
+          ],
+          "segment_id": "019c9ca4-ac1c-76e2-b883-017d68d982a1:2171",
+          "session_id": "019c9ca4-ac1c-76e2-b883-017d68d982a1",
+          "source_id": "019c9ca4-ac1c-76e2-b883-017d68d982a1",
+          "start_event_id": "019c9ca4-ac1c-76e2-b883-017d68d982a1:16581",
+          "start_line_no": 16581,
+          "start_timestamp": "2026-03-01T22:55:53.946Z",
+          "statement": "What I verified:"
+        },
+        {
+          "end_event_id": "019cb0ef-a044-7090-9627-7f2d616c46f2:450",
+          "end_line_no": 450,
+          "end_timestamp": "2026-03-03T00:28:44.262Z",
+          "rule_ids": [
+            "open_question.explicit"
+          ],
+          "segment_id": "019cb0ef-a044-7090-9627-7f2d616c46f2:50",
+          "session_id": "019cb0ef-a044-7090-9627-7f2d616c46f2",
+          "source_id": "019cb0ef-a044-7090-9627-7f2d616c46f2",
+          "start_event_id": "019cb0ef-a044-7090-9627-7f2d616c46f2:450",
+          "start_line_no": 450,
+          "start_timestamp": "2026-03-03T00:28:44.262Z",
+          "statement": "**What I verified**"
+        },
+        {
+          "end_event_id": "019cb0ef-a044-7090-9627-7f2d616c46f2:454",
+          "end_line_no": 454,
+          "end_timestamp": "2026-03-03T00:28:45.519Z",
+          "rule_ids": [
+            "open_question.explicit"
+          ],
+          "segment_id": "019cb0ef-a044-7090-9627-7f2d616c46f2:51",
+          "session_id": "019cb0ef-a044-7090-9627-7f2d616c46f2",
+          "source_id": "019cb0ef-a044-7090-9627-7f2d616c46f2",
+          "start_event_id": "019cb0ef-a044-7090-9627-7f2d616c46f2:451",
+          "start_line_no": 451,
+          "start_timestamp": "2026-03-03T00:28:44.264Z",
+          "statement": "**What I verified**"
+        }
+      ]
+    },
+    {
+      "citation_id": "item-open_question-29",
+      "item_keys": [
+        "ai-trader:open_question:627e3f2d97cc3c5d"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-open_question-29",
+      "provenance_refs": [
+        {
+          "end_event_id": "019caf9f-c9e4-7d33-9635-28feaa5b3b4a:262",
+          "end_line_no": 262,
+          "end_timestamp": "2026-03-02T23:41:32.204Z",
+          "rule_ids": [
+            "open_question.explicit"
+          ],
+          "segment_id": "019caf9f-c9e4-7d33-9635-28feaa5b3b4a:30",
+          "session_id": "019caf9f-c9e4-7d33-9635-28feaa5b3b4a",
+          "source_id": "019caf9f-c9e4-7d33-9635-28feaa5b3b4a",
+          "start_event_id": "019caf9f-c9e4-7d33-9635-28feaa5b3b4a:262",
+          "start_line_no": 262,
+          "start_timestamp": "2026-03-02T23:41:32.204Z",
+          "statement": "- Do not explain how to use the agent."
+        },
+        {
+          "end_event_id": "019caf9f-c9e4-7d33-9635-28feaa5b3b4a:265",
+          "end_line_no": 265,
+          "end_timestamp": "2026-03-02T23:41:33.020Z",
+          "rule_ids": [
+            "open_question.explicit"
+          ],
+          "segment_id": "019caf9f-c9e4-7d33-9635-28feaa5b3b4a:31",
+          "session_id": "019caf9f-c9e4-7d33-9635-28feaa5b3b4a",
+          "source_id": "019caf9f-c9e4-7d33-9635-28feaa5b3b4a",
+          "start_event_id": "019caf9f-c9e4-7d33-9635-28feaa5b3b4a:263",
+          "start_line_no": 263,
+          "start_timestamp": "2026-03-02T23:41:32.206Z",
+          "statement": "- Do not explain how to use the agent."
+        },
+        {
+          "end_event_id": "019cb0ef-a044-7090-9627-7f2d616c46f2:5",
+          "end_line_no": 5,
+          "end_timestamp": "2026-03-02T23:43:40.284Z",
+          "rule_ids": [
+            "open_question.explicit"
+          ],
+          "segment_id": "019cb0ef-a044-7090-9627-7f2d616c46f2:3",
+          "session_id": "019cb0ef-a044-7090-9627-7f2d616c46f2",
+          "source_id": "019cb0ef-a044-7090-9627-7f2d616c46f2",
+          "start_event_id": "019cb0ef-a044-7090-9627-7f2d616c46f2:5",
+          "start_line_no": 5,
+          "start_timestamp": "2026-03-02T23:43:40.284Z",
+          "statement": "- Do not explain how to use the agent."
+        }
+      ]
+    },
+    {
+      "citation_id": "item-open_question-30",
+      "item_keys": [
+        "ai-trader:open_question:3e620b1b5efb2c4a"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-open_question-30",
+      "provenance_refs": [
+        {
+          "end_event_id": "019caf9f-c9e4-7d33-9635-28feaa5b3b4a:218",
+          "end_line_no": 218,
+          "end_timestamp": "2026-03-02T23:40:12.961Z",
+          "rule_ids": [
+            "open_question.explicit"
+          ],
+          "segment_id": "019caf9f-c9e4-7d33-9635-28feaa5b3b4a:24",
+          "session_id": "019caf9f-c9e4-7d33-9635-28feaa5b3b4a",
+          "source_id": "019caf9f-c9e4-7d33-9635-28feaa5b3b4a",
+          "start_event_id": "019caf9f-c9e4-7d33-9635-28feaa5b3b4a:218",
+          "start_line_no": 218,
+          "start_timestamp": "2026-03-02T23:40:12.961Z",
+          "statement": "- What are you talking about?"
+        },
+        {
+          "end_event_id": "019caf9f-c9e4-7d33-9635-28feaa5b3b4a:221",
+          "end_line_no": 221,
+          "end_timestamp": "2026-03-02T23:40:13.794Z",
+          "rule_ids": [
+            "open_question.explicit"
+          ],
+          "segment_id": "019caf9f-c9e4-7d33-9635-28feaa5b3b4a:25",
+          "session_id": "019caf9f-c9e4-7d33-9635-28feaa5b3b4a",
+          "source_id": "019caf9f-c9e4-7d33-9635-28feaa5b3b4a",
+          "start_event_id": "019caf9f-c9e4-7d33-9635-28feaa5b3b4a:219",
+          "start_line_no": 219,
+          "start_timestamp": "2026-03-02T23:40:13.125Z",
+          "statement": "- What are you talking about?"
+        },
+        {
+          "end_event_id": "019caf9f-c9e4-7d33-9635-28feaa5b3b4a:262",
+          "end_line_no": 262,
+          "end_timestamp": "2026-03-02T23:41:32.204Z",
+          "rule_ids": [
+            "open_question.explicit"
+          ],
+          "segment_id": "019caf9f-c9e4-7d33-9635-28feaa5b3b4a:30",
+          "session_id": "019caf9f-c9e4-7d33-9635-28feaa5b3b4a",
+          "source_id": "019caf9f-c9e4-7d33-9635-28feaa5b3b4a",
+          "start_event_id": "019caf9f-c9e4-7d33-9635-28feaa5b3b4a:262",
+          "start_line_no": 262,
+          "start_timestamp": "2026-03-02T23:41:32.204Z",
+          "statement": "- What are you talking about?"
+        }
+      ]
+    },
+    {
+      "citation_id": "item-open_question-31",
+      "item_keys": [
+        "ai-trader:open_question:e7af4a6b2e046671"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-open_question-31",
+      "provenance_refs": [
+        {
+          "end_event_id": "019caf9f-c9e4-7d33-9635-28feaa5b3b4a:218",
+          "end_line_no": 218,
+          "end_timestamp": "2026-03-02T23:40:12.961Z",
+          "rule_ids": [
+            "open_question.explicit"
+          ],
+          "segment_id": "019caf9f-c9e4-7d33-9635-28feaa5b3b4a:24",
+          "session_id": "019caf9f-c9e4-7d33-9635-28feaa5b3b4a",
+          "source_id": "019caf9f-c9e4-7d33-9635-28feaa5b3b4a",
+          "start_event_id": "019caf9f-c9e4-7d33-9635-28feaa5b3b4a:218",
+          "start_line_no": 218,
+          "start_timestamp": "2026-03-02T23:40:12.961Z",
+          "statement": "Remember, you are the strategist that will create the trade cards, so It is your decision to know what kind of data you need inside the application."
+        },
+        {
+          "end_event_id": "019caf9f-c9e4-7d33-9635-28feaa5b3b4a:221",
+          "end_line_no": 221,
+          "end_timestamp": "2026-03-02T23:40:13.794Z",
+          "rule_ids": [
+            "open_question.explicit"
+          ],
+          "segment_id": "019caf9f-c9e4-7d33-9635-28feaa5b3b4a:25",
+          "session_id": "019caf9f-c9e4-7d33-9635-28feaa5b3b4a",
+          "source_id": "019caf9f-c9e4-7d33-9635-28feaa5b3b4a",
+          "start_event_id": "019caf9f-c9e4-7d33-9635-28feaa5b3b4a:219",
+          "start_line_no": 219,
+          "start_timestamp": "2026-03-02T23:40:13.125Z",
+          "statement": "Remember, you are the strategist that will create the trade cards, so It is your decision to know what kind of data you need inside the application."
+        },
+        {
+          "end_event_id": "019caf9f-c9e4-7d33-9635-28feaa5b3b4a:262",
+          "end_line_no": 262,
+          "end_timestamp": "2026-03-02T23:41:32.204Z",
+          "rule_ids": [
+            "open_question.explicit"
+          ],
+          "segment_id": "019caf9f-c9e4-7d33-9635-28feaa5b3b4a:30",
+          "session_id": "019caf9f-c9e4-7d33-9635-28feaa5b3b4a",
+          "source_id": "019caf9f-c9e4-7d33-9635-28feaa5b3b4a",
+          "start_event_id": "019caf9f-c9e4-7d33-9635-28feaa5b3b4a:262",
+          "start_line_no": 262,
+          "start_timestamp": "2026-03-02T23:41:32.204Z",
+          "statement": "Remember, you are the strategist that will create the trade cards, so It is your decision to know what kind of data you need inside the application."
+        }
+      ]
+    },
+    {
+      "citation_id": "item-open_question-32",
+      "item_keys": [
+        "ai-trader:open_question:6bee616eb933d71f"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-open_question-32",
+      "provenance_refs": [
+        {
+          "end_event_id": "019caca3-cd0b-73b0-99f0-1ef6221f7cae:5",
+          "end_line_no": 5,
+          "end_timestamp": "2026-03-02T03:42:22.407Z",
+          "rule_ids": [
+            "open_question.explicit"
+          ],
+          "segment_id": "019caca3-cd0b-73b0-99f0-1ef6221f7cae:3",
+          "session_id": "019caca3-cd0b-73b0-99f0-1ef6221f7cae",
+          "source_id": "019caca3-cd0b-73b0-99f0-1ef6221f7cae",
+          "start_event_id": "019caca3-cd0b-73b0-99f0-1ef6221f7cae:5",
+          "start_line_no": 5,
+          "start_timestamp": "2026-03-02T03:42:22.407Z",
+          "statement": "- [2026-02-28T20:21:32.072Z] (user) Hey bot, can you check why the coder can\u2019t access the AITrader folder since he has access to the root folder (Projects)?"
+        },
+        {
+          "end_event_id": "019caca3-cd0b-73b0-99f0-1ef6221f7cae:9",
+          "end_line_no": 9,
+          "end_timestamp": "2026-03-02T03:42:22.939Z",
+          "rule_ids": [
+            "open_question.explicit"
+          ],
+          "segment_id": "019caca3-cd0b-73b0-99f0-1ef6221f7cae:4",
+          "session_id": "019caca3-cd0b-73b0-99f0-1ef6221f7cae",
+          "source_id": "019caca3-cd0b-73b0-99f0-1ef6221f7cae",
+          "start_event_id": "019caca3-cd0b-73b0-99f0-1ef6221f7cae:6",
+          "start_line_no": 6,
+          "start_timestamp": "2026-03-02T03:42:22.408Z",
+          "statement": "- [2026-02-28T20:21:32.072Z] (user) Hey bot, can you check why the coder can\u2019t access the AITrader folder since he has access to the root folder (Projects)?"
+        },
+        {
+          "end_event_id": "019caf9f-c9e4-7d33-9635-28feaa5b3b4a:5",
+          "end_line_no": 5,
+          "end_timestamp": "2026-03-02T17:36:50.905Z",
+          "rule_ids": [
+            "open_question.explicit"
+          ],
+          "segment_id": "019caf9f-c9e4-7d33-9635-28feaa5b3b4a:3",
+          "session_id": "019caf9f-c9e4-7d33-9635-28feaa5b3b4a",
+          "source_id": "019caf9f-c9e4-7d33-9635-28feaa5b3b4a",
+          "start_event_id": "019caf9f-c9e4-7d33-9635-28feaa5b3b4a:5",
+          "start_line_no": 5,
+          "start_timestamp": "2026-03-02T17:36:50.905Z",
+          "statement": "- [2026-02-28T20:21:32.072Z] (user) Hey bot, can you check why the coder can\u2019t access the AITrader folder since he has access to the root folder (Projects)?"
+        }
+      ]
+    },
+    {
+      "citation_id": "item-open_question-33",
+      "item_keys": [
+        "ai-trader:open_question:775cdadc0633591d"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-open_question-33",
+      "provenance_refs": [
+        {
+          "end_event_id": "019c687b-3d0d-71c0-8929-9128cbf24060:3473",
+          "end_line_no": 3473,
+          "end_timestamp": "2026-02-17T05:56:13.770Z",
+          "rule_ids": [
+            "open_question.explicit"
+          ],
+          "segment_id": "019c687b-3d0d-71c0-8929-9128cbf24060:263",
+          "session_id": "019c687b-3d0d-71c0-8929-9128cbf24060",
+          "source_id": "019c687b-3d0d-71c0-8929-9128cbf24060",
+          "start_event_id": "019c687b-3d0d-71c0-8929-9128cbf24060:3469",
+          "start_line_no": 3469,
+          "start_timestamp": "2026-02-17T05:54:16.817Z",
+          "statement": "What to do:"
+        },
+        {
+          "end_event_id": "019c9ca4-ac1c-76e2-b883-017d68d982a1:18135",
+          "end_line_no": 18135,
+          "end_timestamp": "2026-03-02T16:02:14.365Z",
+          "rule_ids": [
+            "open_question.explicit"
+          ],
+          "segment_id": "019c9ca4-ac1c-76e2-b883-017d68d982a1:2353",
+          "session_id": "019c9ca4-ac1c-76e2-b883-017d68d982a1",
+          "source_id": "019c9ca4-ac1c-76e2-b883-017d68d982a1",
+          "start_event_id": "019c9ca4-ac1c-76e2-b883-017d68d982a1:18131",
+          "start_line_no": 18131,
+          "start_timestamp": "2026-03-02T15:44:14.712Z",
+          "statement": "What to do:"
+        }
+      ]
+    },
+    {
+      "citation_id": "item-open_question-34",
+      "item_keys": [
+        "ai-trader:open_question:314aaf77a79cbb5d"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-open_question-34",
+      "provenance_refs": [
+        {
+          "end_event_id": "019caaa7-2fe4-7a72-9693-6b998656746e:5",
+          "end_line_no": 5,
+          "end_timestamp": "2026-03-01T18:26:49.645Z",
+          "rule_ids": [
+            "open_question.explicit"
+          ],
+          "segment_id": "019caaa7-2fe4-7a72-9693-6b998656746e:2",
+          "session_id": "019caaa7-2fe4-7a72-9693-6b998656746e",
+          "source_id": "019caaa7-2fe4-7a72-9693-6b998656746e",
+          "start_event_id": "019caaa7-2fe4-7a72-9693-6b998656746e:5",
+          "start_line_no": 5,
+          "start_timestamp": "2026-03-01T18:26:49.645Z",
+          "statement": "I think you need more knowledge of the features in the trader app so you can understand what you and the team needs to inforce and what the app will enforce deterministically."
+        },
+        {
+          "end_event_id": "019caaa7-2fe4-7a72-9693-6b998656746e:9",
+          "end_line_no": 9,
+          "end_timestamp": "2026-03-01T18:26:52.305Z",
+          "rule_ids": [
+            "open_question.explicit"
+          ],
+          "segment_id": "019caaa7-2fe4-7a72-9693-6b998656746e:3",
+          "session_id": "019caaa7-2fe4-7a72-9693-6b998656746e",
+          "source_id": "019caaa7-2fe4-7a72-9693-6b998656746e",
+          "start_event_id": "019caaa7-2fe4-7a72-9693-6b998656746e:6",
+          "start_line_no": 6,
+          "start_timestamp": "2026-03-01T18:26:49.645Z",
+          "statement": "I think you need more knowledge of the features in the trader app so you can understand what you and the team needs to inforce and what the app will enforce deterministically."
+        },
+        {
+          "end_event_id": "019caaf1-3a40-7082-ac18-8fe3f3eb0dd0:5",
+          "end_line_no": 5,
+          "end_timestamp": "2026-03-01T19:47:42.034Z",
+          "rule_ids": [
+            "open_question.explicit"
+          ],
+          "segment_id": "019caaf1-3a40-7082-ac18-8fe3f3eb0dd0:2",
+          "session_id": "019caaf1-3a40-7082-ac18-8fe3f3eb0dd0",
+          "source_id": "019caaf1-3a40-7082-ac18-8fe3f3eb0dd0",
+          "start_event_id": "019caaf1-3a40-7082-ac18-8fe3f3eb0dd0:5",
+          "start_line_no": 5,
+          "start_timestamp": "2026-03-01T19:47:42.034Z",
+          "statement": "I think you need more knowledge of the features in the trader app so you can understand what you and the team needs to inforce and what the app will enforce deterministically."
+        }
+      ]
+    },
+    {
+      "citation_id": "item-open_question-35",
+      "item_keys": [
+        "ai-trader:open_question:9fb14a91ecb035f5"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-open_question-35",
+      "provenance_refs": [
+        {
+          "end_event_id": "019ca705-c215-7221-8e6a-d28b922add82:88",
+          "end_line_no": 88,
+          "end_timestamp": "2026-03-01T02:53:53.037Z",
+          "rule_ids": [
+            "open_question.explicit"
+          ],
+          "segment_id": "019ca705-c215-7221-8e6a-d28b922add82:14",
+          "session_id": "019ca705-c215-7221-8e6a-d28b922add82",
+          "source_id": "019ca705-c215-7221-8e6a-d28b922add82",
+          "start_event_id": "019ca705-c215-7221-8e6a-d28b922add82:88",
+          "start_line_no": 88,
+          "start_timestamp": "2026-03-01T02:53:53.037Z",
+          "statement": "The coder should know to to circumvent that since it knows those are windows powershell commands."
+        },
+        {
+          "end_event_id": "019ca705-c215-7221-8e6a-d28b922add82:92",
+          "end_line_no": 92,
+          "end_timestamp": "2026-03-01T02:53:54.160Z",
+          "rule_ids": [
+            "open_question.explicit"
+          ],
+          "segment_id": "019ca705-c215-7221-8e6a-d28b922add82:15",
+          "session_id": "019ca705-c215-7221-8e6a-d28b922add82",
+          "source_id": "019ca705-c215-7221-8e6a-d28b922add82",
+          "start_event_id": "019ca705-c215-7221-8e6a-d28b922add82:89",
+          "start_line_no": 89,
+          "start_timestamp": "2026-03-01T02:53:53.040Z",
+          "statement": "The coder should know to to circumvent that since it knows those are windows powershell commands."
+        },
+        {
+          "end_event_id": "019caaf1-3a40-7082-ac18-8fe3f3eb0dd0:5",
+          "end_line_no": 5,
+          "end_timestamp": "2026-03-01T19:47:42.034Z",
+          "rule_ids": [
+            "open_question.explicit"
+          ],
+          "segment_id": "019caaf1-3a40-7082-ac18-8fe3f3eb0dd0:2",
+          "session_id": "019caaf1-3a40-7082-ac18-8fe3f3eb0dd0",
+          "source_id": "019caaf1-3a40-7082-ac18-8fe3f3eb0dd0",
+          "start_event_id": "019caaf1-3a40-7082-ac18-8fe3f3eb0dd0:5",
+          "start_line_no": 5,
+          "start_timestamp": "2026-03-01T19:47:42.034Z",
+          "statement": "The coder should know to to circumvent that since it knows those are windows powershell commands."
+        }
+      ]
+    },
+    {
+      "citation_id": "item-open_question-36",
+      "item_keys": [
+        "ai-trader:open_question:b61f0cb8aeca4410"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-open_question-36",
+      "provenance_refs": [
+        {
+          "end_event_id": "019ca705-c215-7221-8e6a-d28b922add82:54",
+          "end_line_no": 54,
+          "end_timestamp": "2026-03-01T02:36:55.290Z",
+          "rule_ids": [
+            "open_question.explicit"
+          ],
+          "segment_id": "019ca705-c215-7221-8e6a-d28b922add82:9",
+          "session_id": "019ca705-c215-7221-8e6a-d28b922add82",
+          "source_id": "019ca705-c215-7221-8e6a-d28b922add82",
+          "start_event_id": "019ca705-c215-7221-8e6a-d28b922add82:54",
+          "start_line_no": 54,
+          "start_timestamp": "2026-03-01T02:36:55.290Z",
+          "statement": "A couple quick confirmations so I handle this correctly: 1) Which tracker should I operate on: our in-chat CodexClaw task tracker here, or an external tool (Notion/Jira/etc.)?"
+        },
+        {
+          "end_event_id": "019ca705-c215-7221-8e6a-d28b922add82:58",
+          "end_line_no": 58,
+          "end_timestamp": "2026-03-01T02:36:56.003Z",
+          "rule_ids": [
+            "open_question.explicit"
+          ],
+          "segment_id": "019ca705-c215-7221-8e6a-d28b922add82:10",
+          "session_id": "019ca705-c215-7221-8e6a-d28b922add82",
+          "source_id": "019ca705-c215-7221-8e6a-d28b922add82",
+          "start_event_id": "019ca705-c215-7221-8e6a-d28b922add82:55",
+          "start_line_no": 55,
+          "start_timestamp": "2026-03-01T02:36:55.292Z",
+          "statement": "A couple quick confirmations so I handle this correctly: 1) Which tracker should I operate on: our in-chat CodexClaw task tracker here, or an external tool (Notion/Jira/etc.)?"
+        },
+        {
+          "end_event_id": "019ca705-c215-7221-8e6a-d28b922add82:88",
+          "end_line_no": 88,
+          "end_timestamp": "2026-03-01T02:53:53.037Z",
+          "rule_ids": [
+            "open_question.explicit"
+          ],
+          "segment_id": "019ca705-c215-7221-8e6a-d28b922add82:14",
+          "session_id": "019ca705-c215-7221-8e6a-d28b922add82",
+          "source_id": "019ca705-c215-7221-8e6a-d28b922add82",
+          "start_event_id": "019ca705-c215-7221-8e6a-d28b922add82:88",
+          "start_line_no": 88,
+          "start_timestamp": "2026-03-01T02:53:53.037Z",
+          "statement": "A couple quick confirmations so I handle this correctly: 1) Which tracker should I operate on: our in-chat CodexClaw task tracker here, or an external tool (Notion/Jira/etc.)?"
+        }
+      ]
+    },
+    {
+      "citation_id": "item-open_question-37",
+      "item_keys": [
+        "ai-trader:open_question:32c929cdf3819bad"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-open_question-37",
+      "provenance_refs": [
+        {
+          "end_event_id": "019ca705-c215-7221-8e6a-d28b922add82:88",
+          "end_line_no": 88,
+          "end_timestamp": "2026-03-01T02:53:53.037Z",
+          "rule_ids": [
+            "open_question.explicit"
+          ],
+          "segment_id": "019ca705-c215-7221-8e6a-d28b922add82:14",
+          "session_id": "019ca705-c215-7221-8e6a-d28b922add82",
+          "source_id": "019ca705-c215-7221-8e6a-d28b922add82",
+          "start_event_id": "019ca705-c215-7221-8e6a-d28b922add82:88",
+          "start_line_no": 88,
+          "start_timestamp": "2026-03-01T02:53:53.037Z",
+          "statement": "- I will then tell you what I believe your intention was for AITrader and what my role is in it."
+        },
+        {
+          "end_event_id": "019ca705-c215-7221-8e6a-d28b922add82:92",
+          "end_line_no": 92,
+          "end_timestamp": "2026-03-01T02:53:54.160Z",
+          "rule_ids": [
+            "open_question.explicit"
+          ],
+          "segment_id": "019ca705-c215-7221-8e6a-d28b922add82:15",
+          "session_id": "019ca705-c215-7221-8e6a-d28b922add82",
+          "source_id": "019ca705-c215-7221-8e6a-d28b922add82",
+          "start_event_id": "019ca705-c215-7221-8e6a-d28b922add82:89",
+          "start_line_no": 89,
+          "start_timestamp": "2026-03-01T02:53:53.040Z",
+          "statement": "- I will then tell you what I believe your intention was for AITrader and what my role is in it."
+        },
+        {
+          "end_event_id": "019ca766-5bc5-78d1-aa87-19b2cfd3b1a5:19",
+          "end_line_no": 19,
+          "end_timestamp": "2026-03-01T03:26:30.376Z",
+          "rule_ids": [
+            "open_question.explicit"
+          ],
+          "segment_id": "019ca766-5bc5-78d1-aa87-19b2cfd3b1a5:6",
+          "session_id": "019ca766-5bc5-78d1-aa87-19b2cfd3b1a5",
+          "source_id": "019ca766-5bc5-78d1-aa87-19b2cfd3b1a5",
+          "start_event_id": "019ca766-5bc5-78d1-aa87-19b2cfd3b1a5:19",
+          "start_line_no": 19,
+          "start_timestamp": "2026-03-01T03:26:30.376Z",
+          "statement": "- I will then tell you what I believe your intention was for AITrader and what my role is in it."
+        }
+      ]
+    },
+    {
+      "citation_id": "item-open_question-38",
+      "item_keys": [
+        "ai-trader:open_question:7d126b3092249c32"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-open_question-38",
+      "provenance_refs": [
+        {
+          "end_event_id": "019ca705-c215-7221-8e6a-d28b922add82:5",
+          "end_line_no": 5,
+          "end_timestamp": "2026-03-01T01:31:38.636Z",
+          "rule_ids": [
+            "open_question.explicit"
+          ],
+          "segment_id": "019ca705-c215-7221-8e6a-d28b922add82:2",
+          "session_id": "019ca705-c215-7221-8e6a-d28b922add82",
+          "source_id": "019ca705-c215-7221-8e6a-d28b922add82",
+          "start_event_id": "019ca705-c215-7221-8e6a-d28b922add82:5",
+          "start_line_no": 5,
+          "start_timestamp": "2026-03-01T01:31:38.636Z",
+          "statement": "Quick confirmers: 1) Should I prioritize Data Map v1 for Trade Cards, Peter DiCarlo strategy research, or run both in parallel?"
+        },
+        {
+          "end_event_id": "019ca705-c215-7221-8e6a-d28b922add82:9",
+          "end_line_no": 9,
+          "end_timestamp": "2026-03-01T01:31:39.552Z",
+          "rule_ids": [
+            "open_question.explicit"
+          ],
+          "segment_id": "019ca705-c215-7221-8e6a-d28b922add82:3",
+          "session_id": "019ca705-c215-7221-8e6a-d28b922add82",
+          "source_id": "019ca705-c215-7221-8e6a-d28b922add82",
+          "start_event_id": "019ca705-c215-7221-8e6a-d28b922add82:6",
+          "start_line_no": 6,
+          "start_timestamp": "2026-03-01T01:31:38.636Z",
+          "statement": "Quick confirmers: 1) Should I prioritize Data Map v1 for Trade Cards, Peter DiCarlo strategy research, or run both in parallel?"
+        },
+        {
+          "end_event_id": "019ca766-5bc5-78d1-aa87-19b2cfd3b1a5:19",
+          "end_line_no": 19,
+          "end_timestamp": "2026-03-01T03:26:30.376Z",
+          "rule_ids": [
+            "open_question.explicit"
+          ],
+          "segment_id": "019ca766-5bc5-78d1-aa87-19b2cfd3b1a5:6",
+          "session_id": "019ca766-5bc5-78d1-aa87-19b2cfd3b1a5",
+          "source_id": "019ca766-5bc5-78d1-aa87-19b2cfd3b1a5",
+          "start_event_id": "019ca766-5bc5-78d1-aa87-19b2cfd3b1a5:19",
+          "start_line_no": 19,
+          "start_timestamp": "2026-03-01T03:26:30.376Z",
+          "statement": "Quick confirmers: 1) Should I prioritize Data Map v1 for Trade Cards, Peter DiCarlo strategy research, or run both in parallel?"
+        }
+      ]
+    },
+    {
+      "citation_id": "item-open_question-39",
+      "item_keys": [
+        "ai-trader:open_question:cbbce8cdbe017d9c"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-open_question-39",
+      "provenance_refs": [
+        {
+          "end_event_id": "019c687b-3d0d-71c0-8929-9128cbf24060:6347",
+          "end_line_no": 6347,
+          "end_timestamp": "2026-02-17T20:27:25.267Z",
+          "rule_ids": [
+            "open_question.explicit"
+          ],
+          "segment_id": "019c687b-3d0d-71c0-8929-9128cbf24060:483",
+          "session_id": "019c687b-3d0d-71c0-8929-9128cbf24060",
+          "source_id": "019c687b-3d0d-71c0-8929-9128cbf24060",
+          "start_event_id": "019c687b-3d0d-71c0-8929-9128cbf24060:6333",
+          "start_line_no": 6333,
+          "start_timestamp": "2026-02-17T20:26:43.428Z",
+          "statement": "### What you should do now"
+        },
+        {
+          "end_event_id": "019c687b-3d0d-71c0-8929-9128cbf24060:6351",
+          "end_line_no": 6351,
+          "end_timestamp": "2026-02-17T21:08:31.971Z",
+          "rule_ids": [
+            "open_question.explicit"
+          ],
+          "segment_id": "019c687b-3d0d-71c0-8929-9128cbf24060:484",
+          "session_id": "019c687b-3d0d-71c0-8929-9128cbf24060",
+          "source_id": "019c687b-3d0d-71c0-8929-9128cbf24060",
+          "start_event_id": "019c687b-3d0d-71c0-8929-9128cbf24060:6348",
+          "start_line_no": 6348,
+          "start_timestamp": "2026-02-17T20:27:25.267Z",
+          "statement": "### What you should do now"
+        },
+        {
+          "end_event_id": "019c687b-3d0d-71c0-8929-9128cbf24060:10444",
+          "end_line_no": 10444,
+          "end_timestamp": "2026-02-21T18:30:40.527Z",
+          "rule_ids": [
+            "open_question.explicit"
+          ],
+          "segment_id": "019c687b-3d0d-71c0-8929-9128cbf24060:822",
+          "session_id": "019c687b-3d0d-71c0-8929-9128cbf24060",
+          "source_id": "019c687b-3d0d-71c0-8929-9128cbf24060",
+          "start_event_id": "019c687b-3d0d-71c0-8929-9128cbf24060:10431",
+          "start_line_no": 10431,
+          "start_timestamp": "2026-02-21T18:28:39.170Z",
+          "statement": "What you should do now:"
+        }
+      ]
+    },
+    {
+      "citation_id": "item-open_question-40",
+      "item_keys": [
+        "ai-trader:open_question:72271bed635ff12e"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-open_question-40",
+      "provenance_refs": [
+        {
+          "end_event_id": "019c687b-3d0d-71c0-8929-9128cbf24060:2233",
+          "end_line_no": 2233,
+          "end_timestamp": "2026-02-17T03:45:41.203Z",
+          "rule_ids": [
+            "open_question.explicit"
+          ],
+          "segment_id": "019c687b-3d0d-71c0-8929-9128cbf24060:172",
+          "session_id": "019c687b-3d0d-71c0-8929-9128cbf24060",
+          "source_id": "019c687b-3d0d-71c0-8929-9128cbf24060",
+          "start_event_id": "019c687b-3d0d-71c0-8929-9128cbf24060:2233",
+          "start_line_no": 2233,
+          "start_timestamp": "2026-02-17T03:45:41.203Z",
+          "statement": "**What I added**"
+        },
+        {
+          "end_event_id": "019c687b-3d0d-71c0-8929-9128cbf24060:2237",
+          "end_line_no": 2237,
+          "end_timestamp": "2026-02-17T03:57:50.652Z",
+          "rule_ids": [
+            "open_question.explicit"
+          ],
+          "segment_id": "019c687b-3d0d-71c0-8929-9128cbf24060:173",
+          "session_id": "019c687b-3d0d-71c0-8929-9128cbf24060",
+          "source_id": "019c687b-3d0d-71c0-8929-9128cbf24060",
+          "start_event_id": "019c687b-3d0d-71c0-8929-9128cbf24060:2234",
+          "start_line_no": 2234,
+          "start_timestamp": "2026-02-17T03:45:41.204Z",
+          "statement": "**What I added**"
+        },
+        {
+          "end_event_id": "019c687b-3d0d-71c0-8929-9128cbf24060:2830",
+          "end_line_no": 2830,
+          "end_timestamp": "2026-02-17T04:45:58.788Z",
+          "rule_ids": [
+            "open_question.explicit"
+          ],
+          "segment_id": "019c687b-3d0d-71c0-8929-9128cbf24060:220",
+          "session_id": "019c687b-3d0d-71c0-8929-9128cbf24060",
+          "source_id": "019c687b-3d0d-71c0-8929-9128cbf24060",
+          "start_event_id": "019c687b-3d0d-71c0-8929-9128cbf24060:2802",
+          "start_line_no": 2802,
+          "start_timestamp": "2026-02-17T04:45:24.703Z",
+          "statement": "**What I added**"
+        }
+      ]
+    },
+    {
+      "citation_id": "item-open_question-41",
+      "item_keys": [
+        "ai-trader:open_question:6a4bb50d7428a6ff"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-open_question-41",
+      "provenance_refs": [
+        {
+          "end_event_id": "019c9d6b-6077-7c33-bb98-d1504ca0d6d4:15",
+          "end_line_no": 15,
+          "end_timestamp": "2026-02-27T04:47:03.936Z",
+          "rule_ids": [
+            "open_question.explicit"
+          ],
+          "segment_id": "019c9d6b-6077-7c33-bb98-d1504ca0d6d4:3",
+          "session_id": "019c9d6b-6077-7c33-bb98-d1504ca0d6d4",
+          "source_id": "019c9d6b-6077-7c33-bb98-d1504ca0d6d4",
+          "start_event_id": "019c9d6b-6077-7c33-bb98-d1504ca0d6d4:5",
+          "start_line_no": 5,
+          "start_timestamp": "2026-02-27T04:46:25.990Z",
+          "statement": "How can I help today?"
+        },
+        {
+          "end_event_id": "019c9d6f-34ed-7dc1-a7cc-4209d931f215:16",
+          "end_line_no": 16,
+          "end_timestamp": "2026-02-27T04:50:58.355Z",
+          "rule_ids": [
+            "open_question.explicit"
+          ],
+          "segment_id": "019c9d6f-34ed-7dc1-a7cc-4209d931f215:3",
+          "session_id": "019c9d6f-34ed-7dc1-a7cc-4209d931f215",
+          "source_id": "019c9d6f-34ed-7dc1-a7cc-4209d931f215",
+          "start_event_id": "019c9d6f-34ed-7dc1-a7cc-4209d931f215:5",
+          "start_line_no": 5,
+          "start_timestamp": "2026-02-27T04:50:36.984Z",
+          "statement": "How can I help today?"
+        }
+      ]
+    },
+    {
+      "citation_id": "item-open_question-42",
+      "item_keys": [
+        "ai-trader:open_question:91b611305ba3f8b4"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-open_question-42",
+      "provenance_refs": [
+        {
+          "end_event_id": "019c9d5b-b1a6-7fc1-a6c4-c7c8abe77031:14",
+          "end_line_no": 14,
+          "end_timestamp": "2026-02-27T04:29:21.546Z",
+          "rule_ids": [
+            "open_question.explicit"
+          ],
+          "segment_id": "019c9d5b-b1a6-7fc1-a6c4-c7c8abe77031:4",
+          "session_id": "019c9d5b-b1a6-7fc1-a6c4-c7c8abe77031",
+          "source_id": "019c9d5b-b1a6-7fc1-a6c4-c7c8abe77031",
+          "start_event_id": "019c9d5b-b1a6-7fc1-a6c4-c7c8abe77031:11",
+          "start_line_no": 11,
+          "start_timestamp": "2026-02-27T04:29:21.538Z",
+          "statement": "How can I help with CodexClaw today?"
+        },
+        {
+          "end_event_id": "019c9d6a-1df2-7290-9e8a-1e3b28e2feb9:17",
+          "end_line_no": 17,
+          "end_timestamp": "2026-02-27T04:45:19.096Z",
+          "rule_ids": [
+            "open_question.explicit"
+          ],
+          "segment_id": "019c9d6a-1df2-7290-9e8a-1e3b28e2feb9:4",
+          "session_id": "019c9d6a-1df2-7290-9e8a-1e3b28e2feb9",
+          "source_id": "019c9d6a-1df2-7290-9e8a-1e3b28e2feb9",
+          "start_event_id": "019c9d6a-1df2-7290-9e8a-1e3b28e2feb9:13",
+          "start_line_no": 13,
+          "start_timestamp": "2026-02-27T04:45:18.862Z",
+          "statement": "How can I help with CodexClaw today?"
+        }
+      ]
+    },
+    {
+      "citation_id": "item-open_question-43",
+      "item_keys": [
+        "ai-trader:open_question:58a3edd91b6e6914"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-open_question-43",
+      "provenance_refs": [
+        {
+          "end_event_id": "019c9d57-dec5-7f12-9b7a-20330759fbfd:10",
+          "end_line_no": 10,
+          "end_timestamp": "2026-02-27T04:25:14.309Z",
+          "rule_ids": [
+            "open_question.explicit"
+          ],
+          "segment_id": "019c9d57-dec5-7f12-9b7a-20330759fbfd:3",
+          "session_id": "019c9d57-dec5-7f12-9b7a-20330759fbfd",
+          "source_id": "019c9d57-dec5-7f12-9b7a-20330759fbfd",
+          "start_event_id": "019c9d57-dec5-7f12-9b7a-20330759fbfd:5",
+          "start_line_no": 5,
+          "start_timestamp": "2026-02-27T04:25:07.879Z",
+          "statement": "User says: Hey, how are you?"
+        },
+        {
+          "end_event_id": "019c9d60-390c-7251-8e71-54bb184c5607:15",
+          "end_line_no": 15,
+          "end_timestamp": "2026-02-27T04:34:22.969Z",
+          "rule_ids": [
+            "open_question.explicit"
+          ],
+          "segment_id": "019c9d60-390c-7251-8e71-54bb184c5607:3",
+          "session_id": "019c9d60-390c-7251-8e71-54bb184c5607",
+          "source_id": "019c9d60-390c-7251-8e71-54bb184c5607",
+          "start_event_id": "019c9d60-390c-7251-8e71-54bb184c5607:5",
+          "start_line_no": 5,
+          "start_timestamp": "2026-02-27T04:34:15.009Z",
+          "statement": "User says: Hey, how are you?"
+        }
+      ]
+    },
+    {
+      "citation_id": "item-open_question-44",
+      "item_keys": [
+        "ai-trader:open_question:fd179e42cd22a14f"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-open_question-44",
+      "provenance_refs": [
+        {
+          "end_event_id": "019c9d5e-15f7-7483-a5de-bac1f5d3e835:8",
+          "end_line_no": 8,
+          "end_timestamp": "2026-02-27T04:31:55.497Z",
+          "rule_ids": [
+            "open_question.explicit"
+          ],
+          "segment_id": "019c9d5e-15f7-7483-a5de-bac1f5d3e835:3",
+          "session_id": "019c9d5e-15f7-7483-a5de-bac1f5d3e835",
+          "source_id": "019c9d5e-15f7-7483-a5de-bac1f5d3e835",
+          "start_event_id": "019c9d5e-15f7-7483-a5de-bac1f5d3e835:5",
+          "start_line_no": 5,
+          "start_timestamp": "2026-02-27T04:31:54.953Z",
+          "statement": "User message: Hey, how are you?"
+        },
+        {
+          "end_event_id": "019c9d5e-3ea5-7503-a2c9-74d8f75a220b:8",
+          "end_line_no": 8,
+          "end_timestamp": "2026-02-27T04:32:05.814Z",
+          "rule_ids": [
+            "open_question.explicit"
+          ],
+          "segment_id": "019c9d5e-3ea5-7503-a2c9-74d8f75a220b:3",
+          "session_id": "019c9d5e-3ea5-7503-a2c9-74d8f75a220b",
+          "source_id": "019c9d5e-3ea5-7503-a2c9-74d8f75a220b",
+          "start_event_id": "019c9d5e-3ea5-7503-a2c9-74d8f75a220b:5",
+          "start_line_no": 5,
+          "start_timestamp": "2026-02-27T04:32:05.367Z",
+          "statement": "User message: Hey, how are you?"
+        }
+      ]
+    },
+    {
+      "citation_id": "item-open_question-45",
+      "item_keys": [
+        "ai-trader:open_question:7b1a4750168b5e80"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-open_question-45",
+      "provenance_refs": [
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:4540",
+          "end_line_no": 4540,
+          "end_timestamp": "2026-04-13T16:41:08.265Z",
+          "rule_ids": [
+            "open_question.explicit"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:896",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:4524",
+          "start_line_no": 4524,
+          "start_timestamp": "2026-04-13T16:40:59.810Z",
+          "statement": "I\u2019m starting the real full-corpus load now and I\u2019ll handle it phase by phase, fixing only root-cause issues if they show up and stopping only on completion or the 10GB derived-data cap."
+        }
+      ]
+    },
+    {
+      "citation_id": "item-open_question-46",
+      "item_keys": [
+        "ai-trader:open_question:dbf73513b471f02e"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-open_question-46",
+      "provenance_refs": [
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:4522",
+          "end_line_no": 4522,
+          "end_timestamp": "2026-04-13T16:40:44.057Z",
+          "rule_ids": [
+            "open_question.explicit"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:894",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:4520",
+          "start_line_no": 4520,
+          "start_timestamp": "2026-04-13T16:40:43.827Z",
+          "statement": "Do what you supposed to do, now!"
+        }
+      ]
+    },
+    {
+      "citation_id": "item-open_question-47",
+      "item_keys": [
+        "ai-trader:open_question:c61280dc26e966d8"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-open_question-47",
+      "provenance_refs": [
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:4519",
+          "end_line_no": 4519,
+          "end_timestamp": "2026-04-13T16:40:43.825Z",
+          "rule_ids": [
+            "open_question.explicit"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:893",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:4511",
+          "start_line_no": 4511,
+          "start_timestamp": "2026-04-13T16:39:16.991Z",
+          "statement": "go back to my previous instructions and tell me what you should have done"
+        }
+      ]
+    },
+    {
+      "citation_id": "item-open_question-48",
+      "item_keys": [
+        "ai-trader:open_question:57dfe066fc6c30e4"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-open_question-48",
+      "provenance_refs": [
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:4519",
+          "end_line_no": 4519,
+          "end_timestamp": "2026-04-13T16:40:43.825Z",
+          "rule_ids": [
+            "open_question.explicit"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:893",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:4511",
+          "start_line_no": 4511,
+          "start_timestamp": "2026-04-13T16:39:16.991Z",
+          "statement": "I should have:"
+        }
+      ]
+    },
+    {
+      "citation_id": "item-open_question-49",
+      "item_keys": [
+        "ai-trader:open_question:1aac3a8a39629a18"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-open_question-49",
+      "provenance_refs": [
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:4519",
+          "end_line_no": 4519,
+          "end_timestamp": "2026-04-13T16:40:43.825Z",
+          "rule_ids": [
+            "open_question.explicit"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:893",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:4511",
+          "start_line_no": 4511,
+          "start_timestamp": "2026-04-13T16:39:16.991Z",
+          "statement": "that is NOT what I've asked you."
+        }
+      ]
+    },
+    {
+      "citation_id": "item-open_question-50",
+      "item_keys": [
+        "ai-trader:open_question:4f91519c61e12d4a"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-open_question-50",
+      "provenance_refs": [
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:4519",
+          "end_line_no": 4519,
+          "end_timestamp": "2026-04-13T16:40:43.825Z",
+          "rule_ids": [
+            "open_question.explicit"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:893",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:4511",
+          "start_line_no": 4511,
+          "start_timestamp": "2026-04-13T16:39:16.991Z",
+          "statement": "What I completed was:"
+        }
+      ]
+    },
+    {
+      "citation_id": "item-open_question-51",
+      "item_keys": [
+        "ai-trader:open_question:2bb312226768eece"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-open_question-51",
+      "provenance_refs": [
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:4505",
+          "end_line_no": 4505,
+          "end_timestamp": "2026-04-13T16:36:52.470Z",
+          "rule_ids": [
+            "open_question.explicit"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:891",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:4505",
+          "start_line_no": 4505,
+          "start_timestamp": "2026-04-13T16:36:52.470Z",
+          "statement": "- What I completed was:"
+        },
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:4510",
+          "end_line_no": 4510,
+          "end_timestamp": "2026-04-13T16:39:16.989Z",
+          "rule_ids": [
+            "open_question.explicit"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:892",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:4506",
+          "start_line_no": 4506,
+          "start_timestamp": "2026-04-13T16:36:52.471Z",
+          "statement": "- What I completed was:"
+        }
+      ]
+    },
+    {
+      "citation_id": "item-open_question-52",
+      "item_keys": [
+        "ai-trader:open_question:7e4accfefb001322"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-open_question-52",
+      "provenance_refs": [
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:4470",
+          "end_line_no": 4470,
+          "end_timestamp": "2026-04-13T16:35:40.222Z",
+          "rule_ids": [
+            "open_question.explicit"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:884",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:4468",
+          "start_line_no": 4468,
+          "start_timestamp": "2026-04-13T16:35:38.461Z",
+          "statement": "what is the final total size, size per phase and record count per phase?"
+        }
+      ]
+    },
+    {
+      "citation_id": "item-open_question-53",
+      "item_keys": [
+        "ai-trader:open_question:f98d0f1ae7b96698"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-open_question-53",
+      "provenance_refs": [
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:4470",
+          "end_line_no": 4470,
+          "end_timestamp": "2026-04-13T16:35:40.222Z",
+          "rule_ids": [
+            "open_question.explicit"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:884",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:4468",
+          "start_line_no": 4468,
+          "start_timestamp": "2026-04-13T16:35:38.461Z",
+          "statement": "what went wrong and what changes did you make to fix it?"
+        }
+      ]
+    },
+    {
+      "citation_id": "item-open_question-54",
+      "item_keys": [
+        "ai-trader:open_question:278e798a1a113851"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-open_question-54",
+      "provenance_refs": [
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:3094",
+          "end_line_no": 3094,
+          "end_timestamp": "2026-04-13T04:14:17.460Z",
+          "rule_ids": [
+            "open_question.explicit"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:635",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:3083",
+          "start_line_no": 3083,
+          "start_timestamp": "2026-04-13T04:14:06.181Z",
+          "statement": "I found one state-snapshot issue while reviewing the new module: full audit runs should replace prior target state, not carry stale keys forward."
+        }
+      ]
+    },
+    {
+      "citation_id": "item-open_question-55",
+      "item_keys": [
+        "ai-trader:open_question:b77681031a0ab55b"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-open_question-55",
+      "provenance_refs": [
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:2956",
+          "end_line_no": 2956,
+          "end_timestamp": "2026-04-13T04:03:12.867Z",
+          "rule_ids": [
+            "open_question.explicit"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:601",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:2953",
+          "start_line_no": 2953,
+          "start_timestamp": "2026-04-13T03:59:30.621Z",
+          "statement": "- Audit is manifest-first: it does **not** parse rendered wiki/bootstrap markdown beyond what is already represented in manifests."
+        },
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:2960",
+          "end_line_no": 2960,
+          "end_timestamp": "2026-04-13T04:03:12.903Z",
+          "rule_ids": [
+            "open_question.explicit"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:603",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:2960",
+          "start_line_no": 2960,
+          "start_timestamp": "2026-04-13T04:03:12.903Z",
+          "statement": "- Audit is manifest-first: it does **not** parse rendered wiki/bootstrap markdown beyond what is already represented in manifests."
+        },
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:2962",
+          "end_line_no": 2962,
+          "end_timestamp": "2026-04-13T04:03:13.202Z",
+          "rule_ids": [
+            "open_question.explicit"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:604",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:2961",
+          "start_line_no": 2961,
+          "start_timestamp": "2026-04-13T04:03:12.903Z",
+          "statement": "- Audit is manifest-first: it does **not** parse rendered wiki/bootstrap markdown beyond what is already represented in manifests."
+        }
+      ]
+    },
+    {
+      "citation_id": "item-open_question-56",
+      "item_keys": [
+        "ai-trader:open_question:dc5c97d7ad33c7fe"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-open_question-56",
+      "provenance_refs": [
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:2956",
+          "end_line_no": 2956,
+          "end_timestamp": "2026-04-13T04:03:12.867Z",
+          "rule_ids": [
+            "open_question.explicit"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:601",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:2953",
+          "start_line_no": 2953,
+          "start_timestamp": "2026-04-13T03:59:30.621Z",
+          "statement": "- detect repeated extracted domain items that should already have merged but still appear as separate canonical items"
+        },
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:2960",
+          "end_line_no": 2960,
+          "end_timestamp": "2026-04-13T04:03:12.903Z",
+          "rule_ids": [
+            "open_question.explicit"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:603",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:2960",
+          "start_line_no": 2960,
+          "start_timestamp": "2026-04-13T04:03:12.903Z",
+          "statement": "- detect repeated extracted domain items that should already have merged but still appear as separate canonical items"
+        },
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:2962",
+          "end_line_no": 2962,
+          "end_timestamp": "2026-04-13T04:03:13.202Z",
+          "rule_ids": [
+            "open_question.explicit"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:604",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:2961",
+          "start_line_no": 2961,
+          "start_timestamp": "2026-04-13T04:03:12.903Z",
+          "statement": "- detect repeated extracted domain items that should already have merged but still appear as separate canonical items"
+        }
+      ]
+    },
+    {
+      "citation_id": "item-open_question-57",
+      "item_keys": [
+        "ai-trader:open_question:3abc78ba48ef4b57"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-open_question-57",
+      "provenance_refs": [
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:2956",
+          "end_line_no": 2956,
+          "end_timestamp": "2026-04-13T04:03:12.867Z",
+          "rule_ids": [
+            "open_question.explicit"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:601",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:2953",
+          "start_line_no": 2953,
+          "start_timestamp": "2026-04-13T03:59:30.621Z",
+          "statement": "- durable item should not be marked stale"
+        },
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:2960",
+          "end_line_no": 2960,
+          "end_timestamp": "2026-04-13T04:03:12.903Z",
+          "rule_ids": [
+            "open_question.explicit"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:603",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:2960",
+          "start_line_no": 2960,
+          "start_timestamp": "2026-04-13T04:03:12.903Z",
+          "statement": "- durable item should not be marked stale"
+        },
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:2962",
+          "end_line_no": 2962,
+          "end_timestamp": "2026-04-13T04:03:13.202Z",
+          "rule_ids": [
+            "open_question.explicit"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:604",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:2961",
+          "start_line_no": 2961,
+          "start_timestamp": "2026-04-13T04:03:12.903Z",
+          "statement": "- durable item should not be marked stale"
+        }
+      ]
+    },
+    {
+      "citation_id": "item-open_question-58",
+      "item_keys": [
+        "ai-trader:open_question:579f042ff6bc66b6"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-open_question-58",
+      "provenance_refs": [
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:2956",
+          "end_line_no": 2956,
+          "end_timestamp": "2026-04-13T04:03:12.867Z",
+          "rule_ids": [
+            "open_question.explicit"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:601",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:2953",
+          "start_line_no": 2953,
+          "start_timestamp": "2026-04-13T03:59:30.621Z",
+          "statement": "- no unaffected findings should change ids or timestamps"
+        },
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:2960",
+          "end_line_no": 2960,
+          "end_timestamp": "2026-04-13T04:03:12.903Z",
+          "rule_ids": [
+            "open_question.explicit"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:603",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:2960",
+          "start_line_no": 2960,
+          "start_timestamp": "2026-04-13T04:03:12.903Z",
+          "statement": "- no unaffected findings should change ids or timestamps"
+        },
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:2962",
+          "end_line_no": 2962,
+          "end_timestamp": "2026-04-13T04:03:13.202Z",
+          "rule_ids": [
+            "open_question.explicit"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:604",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:2961",
+          "start_line_no": 2961,
+          "start_timestamp": "2026-04-13T04:03:12.903Z",
+          "statement": "- no unaffected findings should change ids or timestamps"
+        }
+      ]
+    },
+    {
+      "citation_id": "item-open_question-59",
+      "item_keys": [
+        "ai-trader:open_question:6a90e61f0eafe3f8"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-open_question-59",
+      "provenance_refs": [
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:2956",
+          "end_line_no": 2956,
+          "end_timestamp": "2026-04-13T04:03:12.867Z",
+          "rule_ids": [
+            "open_question.explicit"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:601",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:2953",
+          "start_line_no": 2953,
+          "start_timestamp": "2026-04-13T03:59:30.621Z",
+          "statement": "- superseded older temporal item should not produce a contradiction error"
+        },
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:2960",
+          "end_line_no": 2960,
+          "end_timestamp": "2026-04-13T04:03:12.903Z",
+          "rule_ids": [
+            "open_question.explicit"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:603",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:2960",
+          "start_line_no": 2960,
+          "start_timestamp": "2026-04-13T04:03:12.903Z",
+          "statement": "- superseded older temporal item should not produce a contradiction error"
+        },
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:2962",
+          "end_line_no": 2962,
+          "end_timestamp": "2026-04-13T04:03:13.202Z",
+          "rule_ids": [
+            "open_question.explicit"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:604",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:2961",
+          "start_line_no": 2961,
+          "start_timestamp": "2026-04-13T04:03:12.903Z",
+          "statement": "- superseded older temporal item should not produce a contradiction error"
+        }
+      ]
+    },
+    {
+      "citation_id": "item-open_question-60",
+      "item_keys": [
+        "ai-trader:open_question:0a9ed4bd31d395a7"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-open_question-60",
+      "provenance_refs": [
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:2502",
+          "end_line_no": 2502,
+          "end_timestamp": "2026-04-13T03:13:26.434Z",
+          "rule_ids": [
+            "open_question.explicit"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:511",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:2494",
+          "start_line_no": 2494,
+          "start_timestamp": "2026-04-13T03:12:44.449Z",
+          "statement": "That means the next fix should be aggressive notice suppression/dedup for low-value weak candidates, not more label tuning."
+        }
+      ]
+    },
+    {
+      "citation_id": "item-open_question-61",
+      "item_keys": [
+        "ai-trader:open_question:6ccfdfaa995d224a"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-open_question-61",
+      "provenance_refs": [
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:2281",
+          "end_line_no": 2281,
+          "end_timestamp": "2026-04-13T03:01:25.729Z",
+          "rule_ids": [
+            "open_question.explicit"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:472",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:2279",
+          "start_line_no": 2279,
+          "start_timestamp": "2026-04-13T03:01:25.539Z",
+          "statement": "whats next?"
+        }
+      ]
+    },
+    {
+      "citation_id": "item-open_question-62",
+      "item_keys": [
+        "ai-trader:open_question:f02399aae7d85d25"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-open_question-62",
+      "provenance_refs": [
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:2278",
+          "end_line_no": 2278,
+          "end_timestamp": "2026-04-13T03:01:25.538Z",
+          "rule_ids": [
+            "open_question.explicit"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:471",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:2270",
+          "start_line_no": 2270,
+          "start_timestamp": "2026-04-13T03:00:39.285Z",
+          "statement": "what is the unclassified cound now?"
+        }
+      ]
+    },
+    {
+      "citation_id": "item-open_question-63",
+      "item_keys": [
+        "ai-trader:open_question:bdfe3b7de9cb0188"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-open_question-63",
+      "provenance_refs": [
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:2228",
+          "end_line_no": 2228,
+          "end_timestamp": "2026-04-13T02:59:13.420Z",
+          "rule_ids": [
+            "open_question.explicit"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:465",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:2216",
+          "start_line_no": 2216,
+          "start_timestamp": "2026-04-13T02:59:00.506Z",
+          "statement": "The sample still showed \u201cunchanged\u201d because I\u2019d already invalidated Phase 4 once during the previous pass, so I\u2019m now forcing a clean rerun on the same temp real-data sample and rechecking the actual persisted counts."
+        }
+      ]
+    },
+    {
+      "citation_id": "item-open_question-64",
+      "item_keys": [
+        "ai-trader:open_question:6498fa201b38f567"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-open_question-64",
+      "provenance_refs": [
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:2149",
+          "end_line_no": 2149,
+          "end_timestamp": "2026-04-13T02:56:45.026Z",
+          "rule_ids": [
+            "open_question.explicit"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:452",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:2148",
+          "start_line_no": 2148,
+          "start_timestamp": "2026-04-13T02:56:45.025Z",
+          "statement": "I\u2019ve got the root fix: the remaining misses are two flavors of low-signal context, and they should be handled by the same inheritance mechanism instead of new domain rules."
+        }
+      ]
+    },
+    {
+      "citation_id": "item-open_question-65",
+      "item_keys": [
+        "ai-trader:open_question:1e948a78ce1a7205"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-open_question-65",
+      "provenance_refs": [
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:2070",
+          "end_line_no": 2070,
+          "end_timestamp": "2026-04-13T02:53:50.216Z",
+          "rule_ids": [
+            "open_question.explicit"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:437",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:2065",
+          "start_line_no": 2065,
+          "start_timestamp": "2026-04-13T02:53:45.400Z",
+          "statement": "I\u2019m debugging that override path directly instead of guessing, because those last seven should be mechanically explainable."
+        }
+      ]
+    },
+    {
+      "citation_id": "item-open_question-66",
+      "item_keys": [
+        "ai-trader:open_question:bb88946c553918aa"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-open_question-66",
+      "provenance_refs": [
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:2051",
+          "end_line_no": 2051,
+          "end_timestamp": "2026-04-13T02:53:07.044Z",
+          "rule_ids": [
+            "open_question.explicit"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:433",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:2035",
+          "start_line_no": 2035,
+          "start_timestamp": "2026-04-13T02:52:47.359Z",
+          "statement": "this should tell us whether Phase 5 is merely less noisy or genuinely under control."
+        }
+      ]
+    },
+    {
+      "citation_id": "item-open_question-67",
+      "item_keys": [
+        "ai-trader:open_question:7c2128bf1c2608c7"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-open_question-67",
+      "provenance_refs": [
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:2034",
+          "end_line_no": 2034,
+          "end_timestamp": "2026-04-13T02:52:44.926Z",
+          "rule_ids": [
+            "open_question.explicit"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:432",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:2024",
+          "start_line_no": 2024,
+          "start_timestamp": "2026-04-13T02:52:32.192Z",
+          "statement": "I\u2019m moving the filter up to the evidence intake layer so extraction only works from conversational/summary-bearing events, which should cut a whole class of noisy outputs at once."
+        }
+      ]
+    },
+    {
+      "citation_id": "item-open_question-68",
+      "item_keys": [
+        "ai-trader:open_question:70fe252e3cf7ee41"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-open_question-68",
+      "provenance_refs": [
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:1951",
+          "end_line_no": 1951,
+          "end_timestamp": "2026-04-13T02:50:05.634Z",
+          "rule_ids": [
+            "open_question.explicit"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:418",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:1950",
+          "start_line_no": 1950,
+          "start_timestamp": "2026-04-13T02:50:05.633Z",
+          "statement": "the other shows the code-location filter still needs to reject \u201cexample/documentation\u201d prose more aggressively."
+        }
+      ]
+    },
+    {
+      "citation_id": "item-open_question-69",
+      "item_keys": [
+        "ai-trader:open_question:9d25902a36fccc35"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-open_question-69",
+      "provenance_refs": [
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:1824",
+          "end_line_no": 1824,
+          "end_timestamp": "2026-04-13T02:41:56.934Z",
+          "rule_ids": [
+            "open_question.explicit"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:395",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:1824",
+          "start_line_no": 1824,
+          "start_timestamp": "2026-04-13T02:41:56.934Z",
+          "statement": "- More importantly, the live sample shows the current Phase 4/5 heuristics are not production-ready for instruction-heavy sessions:"
+        },
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:1828",
+          "end_line_no": 1828,
+          "end_timestamp": "2026-04-13T02:45:08.085Z",
+          "rule_ids": [
+            "open_question.explicit"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:396",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:1825",
+          "start_line_no": 1825,
+          "start_timestamp": "2026-04-13T02:41:56.934Z",
+          "statement": "- More importantly, the live sample shows the current Phase 4/5 heuristics are not production-ready for instruction-heavy sessions:"
+        }
+      ]
+    },
+    {
+      "citation_id": "item-open_question-70",
+      "item_keys": [
+        "ai-trader:open_question:96ff4cccac9fa078"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-open_question-70",
+      "provenance_refs": [
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:1815",
+          "end_line_no": 1815,
+          "end_timestamp": "2026-04-13T02:41:21.153Z",
+          "rule_ids": [
+            "open_question.explicit"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:392",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:1810",
+          "start_line_no": 1810,
+          "start_timestamp": "2026-04-13T02:41:05.863Z",
+          "statement": "I\u2019m rerunning the full suite once so we keep the repo stable, then I\u2019ll summarize the real-data findings separately from the code fix, because the live sample exposed some quality issues we shouldn\u2019t blur together."
+        }
+      ]
+    },
+    {
+      "citation_id": "item-open_question-71",
+      "item_keys": [
+        "ai-trader:open_question:6c6d3c95f9436fc8"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-open_question-71",
+      "provenance_refs": [
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:1624",
+          "end_line_no": 1624,
+          "end_timestamp": "2026-04-13T02:36:17.753Z",
+          "rule_ids": [
+            "open_question.explicit"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:364",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:1610",
+          "start_line_no": 1610,
+          "start_timestamp": "2026-04-13T02:35:56.234Z",
+          "statement": "I\u2019m running the actual pipeline against your real Codex sessions on a small sample now, and I\u2019ll report exactly what passed and where any real-data issue shows up."
+        }
+      ]
+    },
+    {
+      "citation_id": "item-open_question-72",
+      "item_keys": [
+        "ai-trader:open_question:7a2a23a80c9ffe65"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-open_question-72",
+      "provenance_refs": [
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:1298",
+          "end_line_no": 1298,
+          "end_timestamp": "2026-04-13T01:44:56.229Z",
+          "rule_ids": [
+            "open_question.explicit"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:285",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:1296",
+          "start_line_no": 1296,
+          "start_timestamp": "2026-04-13T01:44:54.895Z",
+          "statement": "Phase 6 should start using llms already."
+        }
+      ]
+    },
+    {
+      "citation_id": "item-open_question-73",
+      "item_keys": [
+        "ai-trader:open_question:308a1b948ad10f1b"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-open_question-73",
+      "provenance_refs": [
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:1298",
+          "end_line_no": 1298,
+          "end_timestamp": "2026-04-13T01:44:56.229Z",
+          "rule_ids": [
+            "open_question.explicit"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:285",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:1296",
+          "start_line_no": 1296,
+          "start_timestamp": "2026-04-13T01:44:54.895Z",
+          "statement": "Why the hold up?"
+        }
+      ]
+    },
+    {
+      "citation_id": "item-open_question-74",
+      "item_keys": [
+        "ai-trader:open_question:82dfbe286dea7147"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-open_question-74",
+      "provenance_refs": [
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:1290",
+          "end_line_no": 1290,
+          "end_timestamp": "2026-04-13T01:34:37.159Z",
+          "rule_ids": [
+            "open_question.explicit"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:283",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:1290",
+          "start_line_no": 1290,
+          "start_timestamp": "2026-04-13T01:34:37.159Z",
+          "statement": "- but the actual output unit should still be page/domain rebuilds"
+        },
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:1295",
+          "end_line_no": 1295,
+          "end_timestamp": "2026-04-13T01:44:54.892Z",
+          "rule_ids": [
+            "open_question.explicit"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:284",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:1291",
+          "start_line_no": 1291,
+          "start_timestamp": "2026-04-13T01:34:37.160Z",
+          "statement": "- but the actual output unit should still be page/domain rebuilds"
+        }
+      ]
+    },
+    {
+      "citation_id": "item-open_question-75",
+      "item_keys": [
+        "ai-trader:open_question:143d36d4dbb3567e"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-open_question-75",
+      "provenance_refs": [
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:1290",
+          "end_line_no": 1290,
+          "end_timestamp": "2026-04-13T01:34:37.159Z",
+          "rule_ids": [
+            "open_question.explicit"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:283",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:1290",
+          "start_line_no": 1290,
+          "start_timestamp": "2026-04-13T01:34:37.159Z",
+          "statement": "- show them inline with clear markers"
+        },
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:1295",
+          "end_line_no": 1295,
+          "end_timestamp": "2026-04-13T01:44:54.892Z",
+          "rule_ids": [
+            "open_question.explicit"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:284",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:1291",
+          "start_line_no": 1291,
+          "start_timestamp": "2026-04-13T01:34:37.160Z",
+          "statement": "- show them inline with clear markers"
+        }
+      ]
+    },
+    {
+      "citation_id": "item-open_question-76",
+      "item_keys": [
+        "ai-trader:open_question:ec87c5075f1284cc"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-open_question-76",
+      "provenance_refs": [
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:1290",
+          "end_line_no": 1290,
+          "end_timestamp": "2026-04-13T01:34:37.159Z",
+          "rule_ids": [
+            "open_question.explicit"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:283",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:1290",
+          "start_line_no": 1290,
+          "start_timestamp": "2026-04-13T01:34:37.159Z",
+          "statement": "Do you want overview pages to contain short synthesized summaries, or should Phase 6 stay deterministic and mostly assemble structured extracted items without prose summarization?"
+        },
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:1295",
+          "end_line_no": 1295,
+          "end_timestamp": "2026-04-13T01:44:54.892Z",
+          "rule_ids": [
+            "open_question.explicit"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:284",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:1291",
+          "start_line_no": 1291,
+          "start_timestamp": "2026-04-13T01:34:37.160Z",
+          "statement": "Do you want overview pages to contain short synthesized summaries, or should Phase 6 stay deterministic and mostly assemble structured extracted items without prose summarization?"
+        }
+      ]
+    },
+    {
+      "citation_id": "item-open_question-77",
+      "item_keys": [
+        "ai-trader:open_question:8366b3b8ee532294"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-open_question-77",
+      "provenance_refs": [
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:1290",
+          "end_line_no": 1290,
+          "end_timestamp": "2026-04-13T01:34:37.159Z",
+          "rule_ids": [
+            "open_question.explicit"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:283",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:1290",
+          "start_line_no": 1290,
+          "start_timestamp": "2026-04-13T01:34:37.159Z",
+          "statement": "For temporal content, should page ordering prioritize recency?"
+        },
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:1295",
+          "end_line_no": 1295,
+          "end_timestamp": "2026-04-13T01:44:54.892Z",
+          "rule_ids": [
+            "open_question.explicit"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:284",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:1291",
+          "start_line_no": 1291,
+          "start_timestamp": "2026-04-13T01:34:37.160Z",
+          "statement": "For temporal content, should page ordering prioritize recency?"
+        }
+      ]
+    },
+    {
+      "citation_id": "item-open_question-78",
+      "item_keys": [
+        "ai-trader:open_question:0087a8f1cb6412e2"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-open_question-78",
+      "provenance_refs": [
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:1290",
+          "end_line_no": 1290,
+          "end_timestamp": "2026-04-13T01:34:37.159Z",
+          "rule_ids": [
+            "open_question.explicit"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:283",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:1290",
+          "start_line_no": 1290,
+          "start_timestamp": "2026-04-13T01:34:37.159Z",
+          "statement": "How should provenance show up in markdown?"
+        },
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:1295",
+          "end_line_no": 1295,
+          "end_timestamp": "2026-04-13T01:44:54.892Z",
+          "rule_ids": [
+            "open_question.explicit"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:284",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:1291",
+          "start_line_no": 1291,
+          "start_timestamp": "2026-04-13T01:34:37.160Z",
+          "statement": "How should provenance show up in markdown?"
+        }
+      ]
+    },
+    {
+      "citation_id": "item-open_question-79",
+      "item_keys": [
+        "ai-trader:open_question:48e8d5ae2209872d"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-open_question-79",
+      "provenance_refs": [
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:1290",
+          "end_line_no": 1290,
+          "end_timestamp": "2026-04-13T01:34:37.159Z",
+          "rule_ids": [
+            "open_question.explicit"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:283",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:1290",
+          "start_line_no": 1290,
+          "start_timestamp": "2026-04-13T01:34:37.159Z",
+          "statement": "How visible should conflicts / low-confidence items be in the wiki?"
+        },
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:1295",
+          "end_line_no": 1295,
+          "end_timestamp": "2026-04-13T01:44:54.892Z",
+          "rule_ids": [
+            "open_question.explicit"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:284",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:1291",
+          "start_line_no": 1291,
+          "start_timestamp": "2026-04-13T01:34:37.160Z",
+          "statement": "How visible should conflicts / low-confidence items be in the wiki?"
+        }
+      ]
+    },
+    {
+      "citation_id": "item-open_question-80",
+      "item_keys": [
+        "ai-trader:open_question:673bc4464deeb7b1"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-open_question-80",
+      "provenance_refs": [
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:1290",
+          "end_line_no": 1290,
+          "end_timestamp": "2026-04-13T01:34:37.159Z",
+          "rule_ids": [
+            "open_question.explicit"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:283",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:1290",
+          "start_line_no": 1290,
+          "start_timestamp": "2026-04-13T01:34:37.159Z",
+          "statement": "Should `cross-project` get its own first-class namespace?"
+        },
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:1295",
+          "end_line_no": 1295,
+          "end_timestamp": "2026-04-13T01:44:54.892Z",
+          "rule_ids": [
+            "open_question.explicit"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:284",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:1291",
+          "start_line_no": 1291,
+          "start_timestamp": "2026-04-13T01:34:37.160Z",
+          "statement": "Should `cross-project` get its own first-class namespace?"
+        }
+      ]
+    }
+  ],
+  "domain": "ai-trader",
+  "input_item_keys": [
+    "ai-trader:open_question:7ceff77d2b51bfbc",
+    "ai-trader:open_question:8665e78469d967e0",
+    "ai-trader:open_question:3942f30e4ceacbb8",
+    "ai-trader:open_question:92a52a6e7964be67",
+    "ai-trader:open_question:362bb8d4b00230e6",
+    "ai-trader:open_question:e08f1715a6cd4319",
+    "ai-trader:open_question:127b0d432e12ac07",
+    "ai-trader:open_question:5c1fe2ac70ef4b67",
+    "ai-trader:open_question:18dba11d86953887",
+    "ai-trader:open_question:1e3885cdedfdacea",
+    "ai-trader:open_question:597ed4b4ac0b08bc",
+    "ai-trader:open_question:ea9969a06f08d95a",
+    "ai-trader:open_question:95763cca930dae19",
+    "ai-trader:open_question:03247fa5d1a73686",
+    "ai-trader:open_question:1773732768fc47a5",
+    "ai-trader:open_question:e5a7d39faee279b2",
+    "ai-trader:open_question:cf8bf799b7e5fe90",
+    "ai-trader:open_question:a0e554df0f8948d2",
+    "ai-trader:open_question:bbb3d6d51857ecc3",
+    "ai-trader:open_question:003ce9a6387cf97d",
+    "ai-trader:open_question:0dd359ddb00c5d8c",
+    "ai-trader:open_question:ff4950c23e2f1c40",
+    "ai-trader:open_question:1352adbd25f73a35",
+    "ai-trader:open_question:3ef0ea42c23a1439",
+    "ai-trader:open_question:8b636daf9968e6d9",
+    "ai-trader:open_question:1a8147490bc8bc6e",
+    "ai-trader:open_question:8d89f5c48626a883",
+    "ai-trader:open_question:1fb67c8d4126a36d",
+    "ai-trader:open_question:627e3f2d97cc3c5d",
+    "ai-trader:open_question:3e620b1b5efb2c4a",
+    "ai-trader:open_question:e7af4a6b2e046671",
+    "ai-trader:open_question:6bee616eb933d71f",
+    "ai-trader:open_question:775cdadc0633591d",
+    "ai-trader:open_question:314aaf77a79cbb5d",
+    "ai-trader:open_question:9fb14a91ecb035f5",
+    "ai-trader:open_question:b61f0cb8aeca4410",
+    "ai-trader:open_question:32c929cdf3819bad",
+    "ai-trader:open_question:7d126b3092249c32",
+    "ai-trader:open_question:cbbce8cdbe017d9c",
+    "ai-trader:open_question:72271bed635ff12e",
+    "ai-trader:open_question:6a4bb50d7428a6ff",
+    "ai-trader:open_question:91b611305ba3f8b4",
+    "ai-trader:open_question:58a3edd91b6e6914",
+    "ai-trader:open_question:fd179e42cd22a14f",
+    "ai-trader:open_question:7b1a4750168b5e80",
+    "ai-trader:open_question:dbf73513b471f02e",
+    "ai-trader:open_question:c61280dc26e966d8",
+    "ai-trader:open_question:57dfe066fc6c30e4",
+    "ai-trader:open_question:1aac3a8a39629a18",
+    "ai-trader:open_question:4f91519c61e12d4a",
+    "ai-trader:open_question:2bb312226768eece",
+    "ai-trader:open_question:7e4accfefb001322",
+    "ai-trader:open_question:f98d0f1ae7b96698",
+    "ai-trader:open_question:278e798a1a113851",
+    "ai-trader:open_question:b77681031a0ab55b",
+    "ai-trader:open_question:dc5c97d7ad33c7fe",
+    "ai-trader:open_question:3abc78ba48ef4b57",
+    "ai-trader:open_question:579f042ff6bc66b6",
+    "ai-trader:open_question:6a90e61f0eafe3f8",
+    "ai-trader:open_question:0a9ed4bd31d395a7",
+    "ai-trader:open_question:6ccfdfaa995d224a",
+    "ai-trader:open_question:f02399aae7d85d25",
+    "ai-trader:open_question:bdfe3b7de9cb0188",
+    "ai-trader:open_question:6498fa201b38f567",
+    "ai-trader:open_question:1e948a78ce1a7205",
+    "ai-trader:open_question:bb88946c553918aa",
+    "ai-trader:open_question:7c2128bf1c2608c7",
+    "ai-trader:open_question:70fe252e3cf7ee41",
+    "ai-trader:open_question:9d25902a36fccc35",
+    "ai-trader:open_question:96ff4cccac9fa078",
+    "ai-trader:open_question:6c6d3c95f9436fc8",
+    "ai-trader:open_question:7a2a23a80c9ffe65",
+    "ai-trader:open_question:308a1b948ad10f1b",
+    "ai-trader:open_question:82dfbe286dea7147",
+    "ai-trader:open_question:143d36d4dbb3567e",
+    "ai-trader:open_question:ec87c5075f1284cc",
+    "ai-trader:open_question:8366b3b8ee532294",
+    "ai-trader:open_question:0087a8f1cb6412e2",
+    "ai-trader:open_question:48e8d5ae2209872d",
+    "ai-trader:open_question:673bc4464deeb7b1"
+  ],
+  "page_id": "projects/ai-trader/open-questions",
+  "page_type": "bucket_page",
+  "rendered_page_metadata": {
+    "claim_count": 7,
+    "conflict_count": 2,
+    "related_domains": [
+      "global"
+    ],
+    "related_pages": [
+      {
+        "page_key": "index",
+        "title": "AI Trader",
+        "wikilink": "[[projects/ai-trader/index|AI Trader]]"
+      },
+      {
+        "page_key": "communication-preferences",
+        "title": "AI Trader - Communication Preferences",
+        "wikilink": "[[projects/ai-trader/communication-preferences|AI Trader - Communication Preferences]]"
+      },
+      {
+        "page_key": "workflow-rules",
+        "title": "AI Trader - Workflow Rules",
+        "wikilink": "[[projects/ai-trader/workflow-rules|AI Trader - Workflow Rules]]"
+      },
+      {
+        "page_key": "architecture",
+        "title": "AI Trader - Architecture",
+        "wikilink": "[[projects/ai-trader/architecture|AI Trader - Architecture]]"
+      },
+      {
+        "page_key": "code-map",
+        "title": "AI Trader - Code Map",
+        "wikilink": "[[projects/ai-trader/code-map|AI Trader - Code Map]]"
+      },
+      {
+        "page_key": "current-state",
+        "title": "AI Trader - Current State",
+        "wikilink": "[[projects/ai-trader/current-state|AI Trader - Current State]]"
+      },
+      {
+        "page_key": "tasks",
+        "title": "AI Trader - Tasks",
+        "wikilink": "[[projects/ai-trader/tasks|AI Trader - Tasks]]"
+      },
+      {
+        "page_key": "outcomes",
+        "title": "AI Trader - Outcomes",
+        "wikilink": "[[projects/ai-trader/outcomes|AI Trader - Outcomes]]"
+      },
+      {
+        "page_key": "failures",
+        "title": "AI Trader - Failures",
+        "wikilink": "[[projects/ai-trader/failures|AI Trader - Failures]]"
+      },
+      {
+        "page_key": "decisions",
+        "title": "AI Trader - Decisions",
+        "wikilink": "[[projects/ai-trader/decisions|AI Trader - Decisions]]"
+      },
+      {
+        "page_key": "next-steps",
+        "title": "AI Trader - Next Steps",
+        "wikilink": "[[projects/ai-trader/next-steps|AI Trader - Next Steps]]"
+      }
+    ],
+    "relative_page_path": "projects/ai-trader/open-questions.md",
+    "source_count": 74,
+    "title": "AI Trader - Open Questions"
+  },
+  "renderer": "obsidian_markdown",
+  "synthesized_claims": [
+    {
+      "claim_id": "claim-1",
+      "confidence": "strong",
+      "latent_type": "implicit_next_steps",
+      "provenance_refs": [
+        {
+          "end_event_id": "019c9cff-0337-77e0-9ba6-a4f6dc75a92e:4",
+          "end_line_no": 4,
+          "end_timestamp": "2026-02-27T02:48:04.257Z",
+          "rule_ids": [
+            "open_question.explicit"
+          ],
+          "segment_id": "019c9cff-0337-77e0-9ba6-a4f6dc75a92e:2",
+          "session_id": "019c9cff-0337-77e0-9ba6-a4f6dc75a92e",
+          "source_id": "019c9cff-0337-77e0-9ba6-a4f6dc75a92e",
+          "start_event_id": "019c9cff-0337-77e0-9ba6-a4f6dc75a92e:3",
+          "start_line_no": 3,
+          "start_timestamp": "2026-02-27T02:48:04.257Z",
+          "statement": "### How to use skills"
+        },
+        {
+          "end_event_id": "019c9d00-0d81-7b52-a1a9-84f7d4b05066:4",
+          "end_line_no": 4,
+          "end_timestamp": "2026-02-27T02:49:12.399Z",
+          "rule_ids": [
+            "open_question.explicit"
+          ],
+          "segment_id": "019c9d00-0d81-7b52-a1a9-84f7d4b05066:2",
+          "session_id": "019c9d00-0d81-7b52-a1a9-84f7d4b05066",
+          "source_id": "019c9d00-0d81-7b52-a1a9-84f7d4b05066",
+          "start_event_id": "019c9d00-0d81-7b52-a1a9-84f7d4b05066:3",
+          "start_line_no": 3,
+          "start_timestamp": "2026-02-27T02:49:12.398Z",
+          "statement": "### How to use skills"
+        },
+        {
+          "end_event_id": "019c9d4c-657e-7d71-a062-4d77a75d3786:4",
+          "end_line_no": 4,
+          "end_timestamp": "2026-02-27T04:12:35.657Z",
+          "rule_ids": [
+            "open_question.explicit"
+          ],
+          "segment_id": "019c9d4c-657e-7d71-a062-4d77a75d3786:2",
+          "session_id": "019c9d4c-657e-7d71-a062-4d77a75d3786",
+          "source_id": "019c9d4c-657e-7d71-a062-4d77a75d3786",
+          "start_event_id": "019c9d4c-657e-7d71-a062-4d77a75d3786:3",
+          "start_line_no": 3,
+          "start_timestamp": "2026-02-27T04:12:35.657Z",
+          "statement": "### How to use skills"
+        }
+      ],
+      "section_id": "summary",
+      "supporting_item_ids": [
+        "ai-trader:open_question:7ceff77d2b51bfbc"
+      ],
+      "text": "There are several open questions regarding how to effectively use skills in the AI Trader project."
+    },
+    {
+      "claim_id": "claim-2",
+      "confidence": "strong",
+      "latent_type": "implicit_dos_and_donts",
+      "provenance_refs": [
+        {
+          "end_event_id": "019c9cff-0337-77e0-9ba6-a4f6dc75a92e:4",
+          "end_line_no": 4,
+          "end_timestamp": "2026-02-27T02:48:04.257Z",
+          "rule_ids": [
+            "open_question.explicit"
+          ],
+          "segment_id": "019c9cff-0337-77e0-9ba6-a4f6dc75a92e:2",
+          "session_id": "019c9cff-0337-77e0-9ba6-a4f6dc75a92e",
+          "source_id": "019c9cff-0337-77e0-9ba6-a4f6dc75a92e",
+          "start_event_id": "019c9cff-0337-77e0-9ba6-a4f6dc75a92e:3",
+          "start_line_no": 3,
+          "start_timestamp": "2026-02-27T02:48:04.257Z",
+          "statement": "- Announce which skill(s) you're using and why (one short line)."
+        },
+        {
+          "end_event_id": "019c9d00-0d81-7b52-a1a9-84f7d4b05066:4",
+          "end_line_no": 4,
+          "end_timestamp": "2026-02-27T02:49:12.399Z",
+          "rule_ids": [
+            "open_question.explicit"
+          ],
+          "segment_id": "019c9d00-0d81-7b52-a1a9-84f7d4b05066:2",
+          "session_id": "019c9d00-0d81-7b52-a1a9-84f7d4b05066",
+          "source_id": "019c9d00-0d81-7b52-a1a9-84f7d4b05066",
+          "start_event_id": "019c9d00-0d81-7b52-a1a9-84f7d4b05066:3",
+          "start_line_no": 3,
+          "start_timestamp": "2026-02-27T02:49:12.398Z",
+          "statement": "- Announce which skill(s) you're using and why (one short line)."
+        },
+        {
+          "end_event_id": "019c9d4c-657e-7d71-a062-4d77a75d3786:4",
+          "end_line_no": 4,
+          "end_timestamp": "2026-02-27T04:12:35.657Z",
+          "rule_ids": [
+            "open_question.explicit"
+          ],
+          "segment_id": "019c9d4c-657e-7d71-a062-4d77a75d3786:2",
+          "session_id": "019c9d4c-657e-7d71-a062-4d77a75d3786",
+          "source_id": "019c9d4c-657e-7d71-a062-4d77a75d3786",
+          "start_event_id": "019c9d4c-657e-7d71-a062-4d77a75d3786:3",
+          "start_line_no": 3,
+          "start_timestamp": "2026-02-27T04:12:35.657Z",
+          "statement": "- Announce which skill(s) you're using and why (one short line)."
+        }
+      ],
+      "section_id": "summary",
+      "supporting_item_ids": [
+        "ai-trader:open_question:8665e78469d967e0"
+      ],
+      "text": "Users should announce which skill(s) they are using and the reason for their choice."
+    },
+    {
+      "claim_id": "claim-3",
+      "confidence": "strong",
+      "latent_type": "workflow_norms",
+      "provenance_refs": [
+        {
+          "end_event_id": "019c9cff-0337-77e0-9ba6-a4f6dc75a92e:4",
+          "end_line_no": 4,
+          "end_timestamp": "2026-02-27T02:48:04.257Z",
+          "rule_ids": [
+            "open_question.explicit"
+          ],
+          "segment_id": "019c9cff-0337-77e0-9ba6-a4f6dc75a92e:2",
+          "session_id": "019c9cff-0337-77e0-9ba6-a4f6dc75a92e",
+          "source_id": "019c9cff-0337-77e0-9ba6-a4f6dc75a92e",
+          "start_event_id": "019c9cff-0337-77e0-9ba6-a4f6dc75a92e:3",
+          "start_line_no": 3,
+          "start_timestamp": "2026-02-27T02:48:04.257Z",
+          "statement": "- How to use a skill (progressive disclosure):"
+        },
+        {
+          "end_event_id": "019c9d00-0d81-7b52-a1a9-84f7d4b05066:4",
+          "end_line_no": 4,
+          "end_timestamp": "2026-02-27T02:49:12.399Z",
+          "rule_ids": [
+            "open_question.explicit"
+          ],
+          "segment_id": "019c9d00-0d81-7b52-a1a9-84f7d4b05066:2",
+          "session_id": "019c9d00-0d81-7b52-a1a9-84f7d4b05066",
+          "source_id": "019c9d00-0d81-7b52-a1a9-84f7d4b05066",
+          "start_event_id": "019c9d00-0d81-7b52-a1a9-84f7d4b05066:3",
+          "start_line_no": 3,
+          "start_timestamp": "2026-02-27T02:49:12.398Z",
+          "statement": "- How to use a skill (progressive disclosure):"
+        },
+        {
+          "end_event_id": "019c9d4c-657e-7d71-a062-4d77a75d3786:4",
+          "end_line_no": 4,
+          "end_timestamp": "2026-02-27T04:12:35.657Z",
+          "rule_ids": [
+            "open_question.explicit"
+          ],
+          "segment_id": "019c9d4c-657e-7d71-a062-4d77a75d3786:2",
+          "session_id": "019c9d4c-657e-7d71-a062-4d77a75d3786",
+          "source_id": "019c9d4c-657e-7d71-a062-4d77a75d3786",
+          "start_event_id": "019c9d4c-657e-7d71-a062-4d77a75d3786:3",
+          "start_line_no": 3,
+          "start_timestamp": "2026-02-27T04:12:35.657Z",
+          "statement": "- How to use a skill (progressive disclosure):"
+        }
+      ],
+      "section_id": "summary",
+      "supporting_item_ids": [
+        "ai-trader:open_question:3942f30e4ceacbb8"
+      ],
+      "text": "Progressive disclosure is recommended for explaining how to use a skill."
+    },
+    {
+      "claim_id": "claim-4",
+      "confidence": "strong",
+      "latent_type": "workflow_norms",
+      "provenance_refs": [
+        {
+          "end_event_id": "019c9cff-0337-77e0-9ba6-a4f6dc75a92e:4",
+          "end_line_no": 4,
+          "end_timestamp": "2026-02-27T02:48:04.257Z",
+          "rule_ids": [
+            "open_question.explicit"
+          ],
+          "segment_id": "019c9cff-0337-77e0-9ba6-a4f6dc75a92e:2",
+          "session_id": "019c9cff-0337-77e0-9ba6-a4f6dc75a92e",
+          "source_id": "019c9cff-0337-77e0-9ba6-a4f6dc75a92e",
+          "start_event_id": "019c9cff-0337-77e0-9ba6-a4f6dc75a92e:3",
+          "start_line_no": 3,
+          "start_timestamp": "2026-02-27T02:48:04.257Z",
+          "statement": "- Trigger rules: If the user names a skill (with `$SkillName` or plain text) OR the task clearly matches a skill's description shown above, you must use that skill for that turn."
+        },
+        {
+          "end_event_id": "019c9d00-0d81-7b52-a1a9-84f7d4b05066:4",
+          "end_line_no": 4,
+          "end_timestamp": "2026-02-27T02:49:12.399Z",
+          "rule_ids": [
+            "open_question.explicit"
+          ],
+          "segment_id": "019c9d00-0d81-7b52-a1a9-84f7d4b05066:2",
+          "session_id": "019c9d00-0d81-7b52-a1a9-84f7d4b05066",
+          "source_id": "019c9d00-0d81-7b52-a1a9-84f7d4b05066",
+          "start_event_id": "019c9d00-0d81-7b52-a1a9-84f7d4b05066:3",
+          "start_line_no": 3,
+          "start_timestamp": "2026-02-27T02:49:12.398Z",
+          "statement": "- Trigger rules: If the user names a skill (with `$SkillName` or plain text) OR the task clearly matches a skill's description shown above, you must use that skill for that turn."
+        },
+        {
+          "end_event_id": "019c9d4c-657e-7d71-a062-4d77a75d3786:4",
+          "end_line_no": 4,
+          "end_timestamp": "2026-02-27T04:12:35.657Z",
+          "rule_ids": [
+            "open_question.explicit"
+          ],
+          "segment_id": "019c9d4c-657e-7d71-a062-4d77a75d3786:2",
+          "session_id": "019c9d4c-657e-7d71-a062-4d77a75d3786",
+          "source_id": "019c9d4c-657e-7d71-a062-4d77a75d3786",
+          "start_event_id": "019c9d4c-657e-7d71-a062-4d77a75d3786:3",
+          "start_line_no": 3,
+          "start_timestamp": "2026-02-27T04:12:35.657Z",
+          "statement": "- Trigger rules: If the user names a skill (with `$SkillName` or plain text) OR the task clearly matches a skill's description shown above, you must use that skill for that turn."
+        }
+      ],
+      "section_id": "summary",
+      "supporting_item_ids": [
+        "ai-trader:open_question:92a52a6e7964be67"
+      ],
+      "text": "Specific trigger rules dictate when a skill must be used based on user input or task description."
+    },
+    {
+      "claim_id": "claim-5",
+      "confidence": "strong",
+      "latent_type": "implicit_dos_and_donts",
+      "provenance_refs": [
+        {
+          "end_event_id": "019c9cff-0337-77e0-9ba6-a4f6dc75a92e:4",
+          "end_line_no": 4,
+          "end_timestamp": "2026-02-27T02:48:04.257Z",
+          "rule_ids": [
+            "open_question.explicit"
+          ],
+          "segment_id": "019c9cff-0337-77e0-9ba6-a4f6dc75a92e:2",
+          "session_id": "019c9cff-0337-77e0-9ba6-a4f6dc75a92e",
+          "source_id": "019c9cff-0337-77e0-9ba6-a4f6dc75a92e",
+          "start_event_id": "019c9cff-0337-77e0-9ba6-a4f6dc75a92e:3",
+          "start_line_no": 3,
+          "start_timestamp": "2026-02-27T02:48:04.257Z",
+          "statement": "If you skip an obvious skill, say why."
+        },
+        {
+          "end_event_id": "019c9d00-0d81-7b52-a1a9-84f7d4b05066:4",
+          "end_line_no": 4,
+          "end_timestamp": "2026-02-27T02:49:12.399Z",
+          "rule_ids": [
+            "open_question.explicit"
+          ],
+          "segment_id": "019c9d00-0d81-7b52-a1a9-84f7d4b05066:2",
+          "session_id": "019c9d00-0d81-7b52-a1a9-84f7d4b05066",
+          "source_id": "019c9d00-0d81-7b52-a1a9-84f7d4b05066",
+          "start_event_id": "019c9d00-0d81-7b52-a1a9-84f7d4b05066:3",
+          "start_line_no": 3,
+          "start_timestamp": "2026-02-27T02:49:12.398Z",
+          "statement": "If you skip an obvious skill, say why."
+        },
+        {
+          "end_event_id": "019c9d4c-657e-7d71-a062-4d77a75d3786:4",
+          "end_line_no": 4,
+          "end_timestamp": "2026-02-27T04:12:35.657Z",
+          "rule_ids": [
+            "open_question.explicit"
+          ],
+          "segment_id": "019c9d4c-657e-7d71-a062-4d77a75d3786:2",
+          "session_id": "019c9d4c-657e-7d71-a062-4d77a75d3786",
+          "source_id": "019c9d4c-657e-7d71-a062-4d77a75d3786",
+          "start_event_id": "019c9d4c-657e-7d71-a062-4d77a75d3786:3",
+          "start_line_no": 3,
+          "start_timestamp": "2026-02-27T04:12:35.657Z",
+          "statement": "If you skip an obvious skill, say why."
+        }
+      ],
+      "section_id": "open_question",
+      "supporting_item_ids": [
+        "ai-trader:open_question:362bb8d4b00230e6"
+      ],
+      "text": "If a user skips an obvious skill, they should explain why."
+    },
+    {
+      "claim_id": "claim-6",
+      "confidence": "strong",
+      "latent_type": "project_identity_and_scope",
+      "provenance_refs": [
+        {
+          "end_event_id": "019c9cff-0337-77e0-9ba6-a4f6dc75a92e:4",
+          "end_line_no": 4,
+          "end_timestamp": "2026-02-27T02:48:04.257Z",
+          "rule_ids": [
+            "open_question.explicit"
+          ],
+          "segment_id": "019c9cff-0337-77e0-9ba6-a4f6dc75a92e:2",
+          "session_id": "019c9cff-0337-77e0-9ba6-a4f6dc75a92e",
+          "source_id": "019c9cff-0337-77e0-9ba6-a4f6dc75a92e",
+          "start_event_id": "019c9cff-0337-77e0-9ba6-a4f6dc75a92e:3",
+          "start_line_no": 3,
+          "start_timestamp": "2026-02-27T02:48:04.257Z",
+          "statement": "This skill should be used when users want to create a new skill (or update an existing skill) that extends Codex's capabilities with specialized knowledge, workflows, or tool integrations."
+        },
+        {
+          "end_event_id": "019c9d00-0d81-7b52-a1a9-84f7d4b05066:4",
+          "end_line_no": 4,
+          "end_timestamp": "2026-02-27T02:49:12.399Z",
+          "rule_ids": [
+            "open_question.explicit"
+          ],
+          "segment_id": "019c9d00-0d81-7b52-a1a9-84f7d4b05066:2",
+          "session_id": "019c9d00-0d81-7b52-a1a9-84f7d4b05066",
+          "source_id": "019c9d00-0d81-7b52-a1a9-84f7d4b05066",
+          "start_event_id": "019c9d00-0d81-7b52-a1a9-84f7d4b05066:3",
+          "start_line_no": 3,
+          "start_timestamp": "2026-02-27T02:49:12.398Z",
+          "statement": "This skill should be used when users want to create a new skill (or update an existing skill) that extends Codex's capabilities with specialized knowledge, workflows, or tool integrations."
+        },
+        {
+          "end_event_id": "019c9d4c-657e-7d71-a062-4d77a75d3786:4",
+          "end_line_no": 4,
+          "end_timestamp": "2026-02-27T04:12:35.657Z",
+          "rule_ids": [
+            "open_question.explicit"
+          ],
+          "segment_id": "019c9d4c-657e-7d71-a062-4d77a75d3786:2",
+          "session_id": "019c9d4c-657e-7d71-a062-4d77a75d3786",
+          "source_id": "019c9d4c-657e-7d71-a062-4d77a75d3786",
+          "start_event_id": "019c9d4c-657e-7d71-a062-4d77a75d3786:3",
+          "start_line_no": 3,
+          "start_timestamp": "2026-02-27T04:12:35.657Z",
+          "statement": "This skill should be used when users want to create a new skill (or update an existing skill) that extends Codex's capabilities with specialized knowledge, workflows, or tool integrations."
+        }
+      ],
+      "section_id": "open_question",
+      "supporting_item_ids": [
+        "ai-trader:open_question:e08f1715a6cd4319"
+      ],
+      "text": "A skill should be used when creating or updating skills that extend Codex's capabilities."
+    },
+    {
+      "claim_id": "claim-7",
+      "confidence": "strong",
+      "latent_type": "workflow_norms",
+      "provenance_refs": [
+        {
+          "end_event_id": "019ca705-c215-7221-8e6a-d28b922add82:5",
+          "end_line_no": 5,
+          "end_timestamp": "2026-03-01T01:31:38.636Z",
+          "rule_ids": [
+            "open_question.explicit"
+          ],
+          "segment_id": "019ca705-c215-7221-8e6a-d28b922add82:2",
+          "session_id": "019ca705-c215-7221-8e6a-d28b922add82",
+          "source_id": "019ca705-c215-7221-8e6a-d28b922add82",
+          "start_event_id": "019ca705-c215-7221-8e6a-d28b922add82:5",
+          "start_line_no": 5,
+          "start_timestamp": "2026-03-01T01:31:38.636Z",
+          "statement": "- Decomposition items should be implementable in single focused story runs."
+        },
+        {
+          "end_event_id": "019ca705-c215-7221-8e6a-d28b922add82:9",
+          "end_line_no": 9,
+          "end_timestamp": "2026-03-01T01:31:39.552Z",
+          "rule_ids": [
+            "open_question.explicit"
+          ],
+          "segment_id": "019ca705-c215-7221-8e6a-d28b922add82:3",
+          "session_id": "019ca705-c215-7221-8e6a-d28b922add82",
+          "source_id": "019ca705-c215-7221-8e6a-d28b922add82",
+          "start_event_id": "019ca705-c215-7221-8e6a-d28b922add82:6",
+          "start_line_no": 6,
+          "start_timestamp": "2026-03-01T01:31:38.636Z",
+          "statement": "- Decomposition items should be implementable in single focused story runs."
+        },
+        {
+          "end_event_id": "019ca705-c215-7221-8e6a-d28b922add82:54",
+          "end_line_no": 54,
+          "end_timestamp": "2026-03-01T02:36:55.290Z",
+          "rule_ids": [
+            "open_question.explicit"
+          ],
+          "segment_id": "019ca705-c215-7221-8e6a-d28b922add82:9",
+          "session_id": "019ca705-c215-7221-8e6a-d28b922add82",
+          "source_id": "019ca705-c215-7221-8e6a-d28b922add82",
+          "start_event_id": "019ca705-c215-7221-8e6a-d28b922add82:54",
+          "start_line_no": 54,
+          "start_timestamp": "2026-03-01T02:36:55.290Z",
+          "statement": "- Decomposition items should be implementable in single focused story runs."
+        }
+      ],
+      "section_id": "open_question",
+      "supporting_item_ids": [
+        "ai-trader:open_question:127b0d432e12ac07"
+      ],
+      "text": "Decomposition items should be implementable in single focused story runs."
+    }
+  ],
+  "versions": {
+    "page_config_version": 2,
+    "renderer_version": 2,
+    "synthesis_prompt_version": 2,
+    "synthesis_schema_version": 1,
+    "wiki_schema_version": 2
+  }
+}

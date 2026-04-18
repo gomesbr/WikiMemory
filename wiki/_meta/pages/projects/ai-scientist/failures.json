@@ -1,0 +1,743 @@
+{
+  "bucket": "failures",
+  "citations": [
+    {
+      "citation_id": "claim-1",
+      "item_keys": [
+        "ai-scientist:failure:3ca3c18b54e45dca"
+      ],
+      "kind": "synthesized_claim",
+      "label": "claim-1",
+      "provenance_refs": [
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:976",
+          "end_line_no": 976,
+          "end_timestamp": "2026-04-13T00:53:17.295Z",
+          "rule_ids": [
+            "failure.explicit"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:219",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:973",
+          "start_line_no": 973,
+          "start_timestamp": "2026-04-13T00:52:51.805Z",
+          "statement": "`communication_preference`, `do_rule`, `dont_rule`, `workflow_rule`, `decision`, `architecture_note`, `code_location`, `current_state`, `task_request`, `outcome`, `failure`, `next_step`, `open_question`"
+        }
+      ]
+    },
+    {
+      "citation_id": "claim-2",
+      "item_keys": [
+        "ai-scientist:failure:b9e39c63e235dde9",
+        "ai-scientist:failure:f316f112424382f4"
+      ],
+      "kind": "synthesized_claim",
+      "label": "claim-2",
+      "provenance_refs": [
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:43654",
+          "end_line_no": 43654,
+          "end_timestamp": "2026-03-11T20:15:25.942Z",
+          "rule_ids": [
+            "failure.explicit"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:5423",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:43654",
+          "start_line_no": 43654,
+          "start_timestamp": "2026-03-11T20:15:25.942Z",
+          "statement": "- **generator-quality failures**"
+        },
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:43654",
+          "end_line_no": 43654,
+          "end_timestamp": "2026-03-11T20:15:25.942Z",
+          "rule_ids": [
+            "failure.explicit"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:5423",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:43654",
+          "start_line_no": 43654,
+          "start_timestamp": "2026-03-11T20:15:25.942Z",
+          "statement": "- not **owner-calibration failures**"
+        }
+      ]
+    },
+    {
+      "citation_id": "claim-3",
+      "item_keys": [
+        "ai-scientist:failure:55bcf31ecf0edf72"
+      ],
+      "kind": "synthesized_claim",
+      "label": "claim-3",
+      "provenance_refs": [
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:43654",
+          "end_line_no": 43654,
+          "end_timestamp": "2026-03-11T20:15:25.942Z",
+          "rule_ids": [
+            "failure.explicit"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:5423",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:43654",
+          "start_line_no": 43654,
+          "start_timestamp": "2026-03-11T20:15:25.942Z",
+          "statement": "If you want, next I can turn these 21 into a concrete generator-fix backlog by failure family, so we can systematically eliminate this excluded slice."
+        }
+      ]
+    },
+    {
+      "citation_id": "claim-4",
+      "item_keys": [
+        "ai-scientist:failure:c10c0c491a526f79"
+      ],
+      "kind": "synthesized_claim",
+      "label": "claim-4",
+      "provenance_refs": [
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:43347",
+          "end_line_no": 43347,
+          "end_timestamp": "2026-03-11T19:37:55.573Z",
+          "rule_ids": [
+            "failure.explicit"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:5361",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:43343",
+          "start_line_no": 43343,
+          "start_timestamp": "2026-03-11T19:30:44.252Z",
+          "statement": "- the main issue is that several `Yes` decisions approved cases where the **question/evidence are okay, but the lens is wrong**"
+        }
+      ]
+    },
+    {
+      "citation_id": "claim-5",
+      "item_keys": [
+        "ai-scientist:failure:506322626fafb057"
+      ],
+      "kind": "synthesized_claim",
+      "label": "claim-5",
+      "provenance_refs": [
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:976",
+          "end_line_no": 976,
+          "end_timestamp": "2026-04-13T00:53:17.295Z",
+          "rule_ids": [
+            "failure.explicit"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:219",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:973",
+          "start_line_no": 973,
+          "start_timestamp": "2026-04-13T00:52:51.805Z",
+          "statement": "Should temporal items like `current_state`, `next_step`, `outcome`, and `failure` carry a lifecycle marker such as:"
+        }
+      ]
+    },
+    {
+      "citation_id": "claim-6",
+      "item_keys": [
+        "ai-scientist:failure:fc8d6e1f45b44a9d"
+      ],
+      "kind": "synthesized_claim",
+      "label": "claim-6",
+      "provenance_refs": [
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:43654",
+          "end_line_no": 43654,
+          "end_timestamp": "2026-03-11T20:15:25.942Z",
+          "rule_ids": [
+            "failure.explicit"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:5423",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:43654",
+          "start_line_no": 43654,
+          "start_timestamp": "2026-03-11T20:15:25.942Z",
+          "statement": "They are not missing because of a queue bug anymore."
+        }
+      ]
+    },
+    {
+      "citation_id": "claim-7",
+      "item_keys": [
+        "ai-scientist:failure:c48d264840f4bd6e"
+      ],
+      "kind": "synthesized_claim",
+      "label": "claim-7",
+      "provenance_refs": [
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:43654",
+          "end_line_no": 43654,
+          "end_timestamp": "2026-03-11T20:15:25.942Z",
+          "rule_ids": [
+            "failure.explicit"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:5423",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:43654",
+          "start_line_no": 43654,
+          "start_timestamp": "2026-03-11T20:15:25.942Z",
+          "statement": "**The broader failure mode**"
+        }
+      ]
+    },
+    {
+      "citation_id": "item-failure-1",
+      "item_keys": [
+        "ai-scientist:failure:3ca3c18b54e45dca"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-failure-1",
+      "provenance_refs": [
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:976",
+          "end_line_no": 976,
+          "end_timestamp": "2026-04-13T00:53:17.295Z",
+          "rule_ids": [
+            "failure.explicit"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:219",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:973",
+          "start_line_no": 973,
+          "start_timestamp": "2026-04-13T00:52:51.805Z",
+          "statement": "`communication_preference`, `do_rule`, `dont_rule`, `workflow_rule`, `decision`, `architecture_note`, `code_location`, `current_state`, `task_request`, `outcome`, `failure`, `next_step`, `open_question`"
+        }
+      ]
+    },
+    {
+      "citation_id": "item-failure-2",
+      "item_keys": [
+        "ai-scientist:failure:506322626fafb057"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-failure-2",
+      "provenance_refs": [
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:976",
+          "end_line_no": 976,
+          "end_timestamp": "2026-04-13T00:53:17.295Z",
+          "rule_ids": [
+            "failure.explicit"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:219",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:973",
+          "start_line_no": 973,
+          "start_timestamp": "2026-04-13T00:52:51.805Z",
+          "statement": "Should temporal items like `current_state`, `next_step`, `outcome`, and `failure` carry a lifecycle marker such as:"
+        }
+      ]
+    },
+    {
+      "citation_id": "item-failure-3",
+      "item_keys": [
+        "ai-scientist:failure:c48d264840f4bd6e"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-failure-3",
+      "provenance_refs": [
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:43654",
+          "end_line_no": 43654,
+          "end_timestamp": "2026-03-11T20:15:25.942Z",
+          "rule_ids": [
+            "failure.explicit"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:5423",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:43654",
+          "start_line_no": 43654,
+          "start_timestamp": "2026-03-11T20:15:25.942Z",
+          "statement": "**The broader failure mode**"
+        }
+      ]
+    },
+    {
+      "citation_id": "item-failure-4",
+      "item_keys": [
+        "ai-scientist:failure:b9e39c63e235dde9"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-failure-4",
+      "provenance_refs": [
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:43654",
+          "end_line_no": 43654,
+          "end_timestamp": "2026-03-11T20:15:25.942Z",
+          "rule_ids": [
+            "failure.explicit"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:5423",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:43654",
+          "start_line_no": 43654,
+          "start_timestamp": "2026-03-11T20:15:25.942Z",
+          "statement": "- **generator-quality failures**"
+        }
+      ]
+    },
+    {
+      "citation_id": "item-failure-5",
+      "item_keys": [
+        "ai-scientist:failure:f316f112424382f4"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-failure-5",
+      "provenance_refs": [
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:43654",
+          "end_line_no": 43654,
+          "end_timestamp": "2026-03-11T20:15:25.942Z",
+          "rule_ids": [
+            "failure.explicit"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:5423",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:43654",
+          "start_line_no": 43654,
+          "start_timestamp": "2026-03-11T20:15:25.942Z",
+          "statement": "- not **owner-calibration failures**"
+        }
+      ]
+    },
+    {
+      "citation_id": "item-failure-6",
+      "item_keys": [
+        "ai-scientist:failure:55bcf31ecf0edf72"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-failure-6",
+      "provenance_refs": [
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:43654",
+          "end_line_no": 43654,
+          "end_timestamp": "2026-03-11T20:15:25.942Z",
+          "rule_ids": [
+            "failure.explicit"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:5423",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:43654",
+          "start_line_no": 43654,
+          "start_timestamp": "2026-03-11T20:15:25.942Z",
+          "statement": "If you want, next I can turn these 21 into a concrete generator-fix backlog by failure family, so we can systematically eliminate this excluded slice."
+        }
+      ]
+    },
+    {
+      "citation_id": "item-failure-7",
+      "item_keys": [
+        "ai-scientist:failure:c753599c8d5f2741"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-failure-7",
+      "provenance_refs": [
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:43654",
+          "end_line_no": 43654,
+          "end_timestamp": "2026-03-11T20:15:25.942Z",
+          "rule_ids": [
+            "failure.explicit"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:5423",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:43654",
+          "start_line_no": 43654,
+          "start_timestamp": "2026-03-11T20:15:25.942Z",
+          "statement": "The underlying issue is:"
+        }
+      ]
+    },
+    {
+      "citation_id": "item-failure-8",
+      "item_keys": [
+        "ai-scientist:failure:fc8d6e1f45b44a9d"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-failure-8",
+      "provenance_refs": [
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:43654",
+          "end_line_no": 43654,
+          "end_timestamp": "2026-03-11T20:15:25.942Z",
+          "rule_ids": [
+            "failure.explicit"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:5423",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:43654",
+          "start_line_no": 43654,
+          "start_timestamp": "2026-03-11T20:15:25.942Z",
+          "statement": "They are not missing because of a queue bug anymore."
+        }
+      ]
+    },
+    {
+      "citation_id": "item-failure-9",
+      "item_keys": [
+        "ai-scientist:failure:76e80ba49afb67df"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-failure-9",
+      "provenance_refs": [
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:43347",
+          "end_line_no": 43347,
+          "end_timestamp": "2026-03-11T19:37:55.573Z",
+          "rule_ids": [
+            "failure.explicit"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:5361",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:43343",
+          "start_line_no": 43343,
+          "start_timestamp": "2026-03-11T19:30:44.252Z",
+          "statement": "- same issue"
+        }
+      ]
+    },
+    {
+      "citation_id": "item-failure-10",
+      "item_keys": [
+        "ai-scientist:failure:c10c0c491a526f79"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-failure-10",
+      "provenance_refs": [
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:43347",
+          "end_line_no": 43347,
+          "end_timestamp": "2026-03-11T19:37:55.573Z",
+          "rule_ids": [
+            "failure.explicit"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:5361",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:43343",
+          "start_line_no": 43343,
+          "start_timestamp": "2026-03-11T19:30:44.252Z",
+          "statement": "- the main issue is that several `Yes` decisions approved cases where the **question/evidence are okay, but the lens is wrong**"
+        }
+      ]
+    }
+  ],
+  "domain": "ai-scientist",
+  "input_item_keys": [
+    "ai-scientist:failure:3ca3c18b54e45dca",
+    "ai-scientist:failure:506322626fafb057",
+    "ai-scientist:failure:c48d264840f4bd6e",
+    "ai-scientist:failure:b9e39c63e235dde9",
+    "ai-scientist:failure:f316f112424382f4",
+    "ai-scientist:failure:55bcf31ecf0edf72",
+    "ai-scientist:failure:c753599c8d5f2741",
+    "ai-scientist:failure:fc8d6e1f45b44a9d",
+    "ai-scientist:failure:76e80ba49afb67df",
+    "ai-scientist:failure:c10c0c491a526f79"
+  ],
+  "page_id": "projects/ai-scientist/failures",
+  "page_type": "bucket_page",
+  "rendered_page_metadata": {
+    "claim_count": 7,
+    "conflict_count": 0,
+    "related_domains": [
+      "global"
+    ],
+    "related_pages": [
+      {
+        "page_key": "index",
+        "title": "AI Scientist",
+        "wikilink": "[[projects/ai-scientist/index|AI Scientist]]"
+      },
+      {
+        "page_key": "communication-preferences",
+        "title": "AI Scientist - Communication Preferences",
+        "wikilink": "[[projects/ai-scientist/communication-preferences|AI Scientist - Communication Preferences]]"
+      },
+      {
+        "page_key": "workflow-rules",
+        "title": "AI Scientist - Workflow Rules",
+        "wikilink": "[[projects/ai-scientist/workflow-rules|AI Scientist - Workflow Rules]]"
+      },
+      {
+        "page_key": "architecture",
+        "title": "AI Scientist - Architecture",
+        "wikilink": "[[projects/ai-scientist/architecture|AI Scientist - Architecture]]"
+      },
+      {
+        "page_key": "code-map",
+        "title": "AI Scientist - Code Map",
+        "wikilink": "[[projects/ai-scientist/code-map|AI Scientist - Code Map]]"
+      },
+      {
+        "page_key": "current-state",
+        "title": "AI Scientist - Current State",
+        "wikilink": "[[projects/ai-scientist/current-state|AI Scientist - Current State]]"
+      },
+      {
+        "page_key": "tasks",
+        "title": "AI Scientist - Tasks",
+        "wikilink": "[[projects/ai-scientist/tasks|AI Scientist - Tasks]]"
+      },
+      {
+        "page_key": "outcomes",
+        "title": "AI Scientist - Outcomes",
+        "wikilink": "[[projects/ai-scientist/outcomes|AI Scientist - Outcomes]]"
+      },
+      {
+        "page_key": "decisions",
+        "title": "AI Scientist - Decisions",
+        "wikilink": "[[projects/ai-scientist/decisions|AI Scientist - Decisions]]"
+      },
+      {
+        "page_key": "next-steps",
+        "title": "AI Scientist - Next Steps",
+        "wikilink": "[[projects/ai-scientist/next-steps|AI Scientist - Next Steps]]"
+      },
+      {
+        "page_key": "open-questions",
+        "title": "AI Scientist - Open Questions",
+        "wikilink": "[[projects/ai-scientist/open-questions|AI Scientist - Open Questions]]"
+      }
+    ],
+    "relative_page_path": "projects/ai-scientist/failures.md",
+    "source_count": 2,
+    "title": "AI Scientist - Failures"
+  },
+  "renderer": "obsidian_markdown",
+  "synthesized_claims": [
+    {
+      "claim_id": "claim-1",
+      "confidence": "strong",
+      "latent_type": "recurring_failure_patterns",
+      "provenance_refs": [
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:976",
+          "end_line_no": 976,
+          "end_timestamp": "2026-04-13T00:53:17.295Z",
+          "rule_ids": [
+            "failure.explicit"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:219",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:973",
+          "start_line_no": 973,
+          "start_timestamp": "2026-04-13T00:52:51.805Z",
+          "statement": "`communication_preference`, `do_rule`, `dont_rule`, `workflow_rule`, `decision`, `architecture_note`, `code_location`, `current_state`, `task_request`, `outcome`, `failure`, `next_step`, `open_question`"
+        }
+      ],
+      "section_id": "summary",
+      "supporting_item_ids": [
+        "ai-scientist:failure:3ca3c18b54e45dca"
+      ],
+      "text": "The AI Scientist project has identified various failure modes that need addressing."
+    },
+    {
+      "claim_id": "claim-2",
+      "confidence": "strong",
+      "latent_type": "recurring_failure_patterns",
+      "provenance_refs": [
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:43654",
+          "end_line_no": 43654,
+          "end_timestamp": "2026-03-11T20:15:25.942Z",
+          "rule_ids": [
+            "failure.explicit"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:5423",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:43654",
+          "start_line_no": 43654,
+          "start_timestamp": "2026-03-11T20:15:25.942Z",
+          "statement": "- **generator-quality failures**"
+        },
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:43654",
+          "end_line_no": 43654,
+          "end_timestamp": "2026-03-11T20:15:25.942Z",
+          "rule_ids": [
+            "failure.explicit"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:5423",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:43654",
+          "start_line_no": 43654,
+          "start_timestamp": "2026-03-11T20:15:25.942Z",
+          "statement": "- not **owner-calibration failures**"
+        }
+      ],
+      "section_id": "summary",
+      "supporting_item_ids": [
+        "ai-scientist:failure:b9e39c63e235dde9",
+        "ai-scientist:failure:f316f112424382f4"
+      ],
+      "text": "Failures include generator-quality failures and owner-calibration failures."
+    },
+    {
+      "claim_id": "claim-3",
+      "confidence": "strong",
+      "latent_type": "implicit_next_steps",
+      "provenance_refs": [
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:43654",
+          "end_line_no": 43654,
+          "end_timestamp": "2026-03-11T20:15:25.942Z",
+          "rule_ids": [
+            "failure.explicit"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:5423",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:43654",
+          "start_line_no": 43654,
+          "start_timestamp": "2026-03-11T20:15:25.942Z",
+          "statement": "If you want, next I can turn these 21 into a concrete generator-fix backlog by failure family, so we can systematically eliminate this excluded slice."
+        }
+      ],
+      "section_id": "summary",
+      "supporting_item_ids": [
+        "ai-scientist:failure:55bcf31ecf0edf72"
+      ],
+      "text": "There is a need to systematically eliminate excluded slices of failures by creating a concrete backlog."
+    },
+    {
+      "claim_id": "claim-4",
+      "confidence": "strong",
+      "latent_type": "recurring_failure_patterns",
+      "provenance_refs": [
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:43347",
+          "end_line_no": 43347,
+          "end_timestamp": "2026-03-11T19:37:55.573Z",
+          "rule_ids": [
+            "failure.explicit"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:5361",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:43343",
+          "start_line_no": 43343,
+          "start_timestamp": "2026-03-11T19:30:44.252Z",
+          "statement": "- the main issue is that several `Yes` decisions approved cases where the **question/evidence are okay, but the lens is wrong**"
+        }
+      ],
+      "section_id": "summary",
+      "supporting_item_ids": [
+        "ai-scientist:failure:c10c0c491a526f79"
+      ],
+      "text": "The main issue is that several decisions were made based on incorrect lenses despite acceptable questions and evidence."
+    },
+    {
+      "claim_id": "claim-5",
+      "confidence": "strong",
+      "latent_type": "implicit_dos_and_donts",
+      "provenance_refs": [
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:976",
+          "end_line_no": 976,
+          "end_timestamp": "2026-04-13T00:53:17.295Z",
+          "rule_ids": [
+            "failure.explicit"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:219",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:973",
+          "start_line_no": 973,
+          "start_timestamp": "2026-04-13T00:52:51.805Z",
+          "statement": "Should temporal items like `current_state`, `next_step`, `outcome`, and `failure` carry a lifecycle marker such as:"
+        }
+      ],
+      "section_id": "failure",
+      "supporting_item_ids": [
+        "ai-scientist:failure:506322626fafb057"
+      ],
+      "text": "Temporal items like current state, next step, outcome, and failure should carry a lifecycle marker."
+    },
+    {
+      "claim_id": "claim-6",
+      "confidence": "strong",
+      "latent_type": "current_state_synthesis",
+      "provenance_refs": [
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:43654",
+          "end_line_no": 43654,
+          "end_timestamp": "2026-03-11T20:15:25.942Z",
+          "rule_ids": [
+            "failure.explicit"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:5423",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:43654",
+          "start_line_no": 43654,
+          "start_timestamp": "2026-03-11T20:15:25.942Z",
+          "statement": "They are not missing because of a queue bug anymore."
+        }
+      ],
+      "section_id": "failure",
+      "supporting_item_ids": [
+        "ai-scientist:failure:fc8d6e1f45b44a9d"
+      ],
+      "text": "The underlying issue in the failures is not due to a queue bug anymore."
+    },
+    {
+      "claim_id": "claim-7",
+      "confidence": "strong",
+      "latent_type": "architecture_synthesis",
+      "provenance_refs": [
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:43654",
+          "end_line_no": 43654,
+          "end_timestamp": "2026-03-11T20:15:25.942Z",
+          "rule_ids": [
+            "failure.explicit"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:5423",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:43654",
+          "start_line_no": 43654,
+          "start_timestamp": "2026-03-11T20:15:25.942Z",
+          "statement": "**The broader failure mode**"
+        }
+      ],
+      "section_id": "failure",
+      "supporting_item_ids": [
+        "ai-scientist:failure:c48d264840f4bd6e"
+      ],
+      "text": "There is a broader failure mode that encompasses various issues identified in the project."
+    }
+  ],
+  "versions": {
+    "page_config_version": 2,
+    "renderer_version": 2,
+    "synthesis_prompt_version": 2,
+    "synthesis_schema_version": 1,
+    "wiki_schema_version": 2
+  }
+}

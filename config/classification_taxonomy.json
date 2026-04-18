@@ -1,0 +1,255 @@
+{
+  "schema_version": 1,
+  "taxonomy_version": 1,
+  "thresholds": {
+    "weak_min": 4,
+    "inferred_min": 8,
+    "strong_min": 12,
+    "dominance_gap": 3,
+    "cross_project_min": 9,
+    "global_secondary_min": 6,
+    "project_presence_min": 5
+  },
+  "labels": [
+    {
+      "label": "global",
+      "category": "global",
+      "aliases": [
+        {
+          "id": "global.alias.communication_preferences",
+          "terms": [
+            "communication preference",
+            "communication preferences"
+          ],
+          "weight": 14
+        },
+        {
+          "id": "global.alias.workflow_rules",
+          "terms": [
+            "workflow rule",
+            "workflow rules"
+          ],
+          "weight": 14
+        },
+        {
+          "id": "global.alias.agent_style",
+          "terms": [
+            "agent behavior",
+            "interaction style",
+            "response style"
+          ],
+          "weight": 12
+        }
+      ],
+      "keywords": [
+        {
+          "id": "global.keyword.preferences",
+          "terms": [
+            "be concise",
+            "prefer concise",
+            "do not refactor unrelated files",
+            "don't refactor unrelated files",
+            "do not rewrite unrelated files",
+            "workflow",
+            "preference",
+            "preferences"
+          ],
+          "weight": 6
+        },
+        {
+          "id": "global.keyword.rules",
+          "terms": [
+            "do not",
+            "don't",
+            "always",
+            "never"
+          ],
+          "weight": 2
+        }
+      ],
+      "global_patterns": [
+        {
+          "id": "global.pattern.dos_donts",
+          "terms": [
+            "do / don't",
+            "do and don't",
+            "dos and donts",
+            "do's and don'ts"
+          ],
+          "weight": 10
+        }
+      ]
+    },
+    {
+      "label": "ai-trader",
+      "category": "project",
+      "aliases": [
+        {
+          "id": "ai-trader.alias.project_name",
+          "terms": [
+            "ai trader",
+            "aitrader",
+            "openclaw"
+          ],
+          "weight": 14
+        }
+      ],
+      "keywords": [
+        {
+          "id": "ai-trader.keyword.domain",
+          "terms": [
+            "trading",
+            "trade",
+            "broker",
+            "portfolio",
+            "market data",
+            "marketdata",
+            "strategy",
+            "backtest",
+            "exchange",
+            "ohlcv",
+            "options chain",
+            "options chains",
+            "earnings",
+            "alpaca",
+            "alpha vantage",
+            "tradier",
+            "finnhub",
+            "financial modeling prep",
+            "fmp",
+            "vix",
+            "risk-free",
+            "spy",
+            "qqq",
+            "nasdaq-100",
+            "s&p 500",
+            "fred"
+          ],
+          "weight": 5
+        }
+      ],
+      "path_hints": [
+        {
+          "id": "ai-trader.path.project",
+          "terms": [
+            "ai-trader",
+            "trader",
+            "aitrader",
+            "openclaw"
+          ],
+          "weight": 6
+        }
+      ],
+      "repo_hints": [
+        {
+          "id": "ai-trader.repo.project",
+          "terms": [
+            "ai-trader",
+            "trader",
+            "aitrader",
+            "openclaw"
+          ],
+          "weight": 6
+        }
+      ]
+    },
+    {
+      "label": "open-brain",
+      "category": "project",
+      "aliases": [
+        {
+          "id": "open-brain.alias.project_name",
+          "terms": [
+            "open brain",
+            "openbrain"
+          ],
+          "weight": 14
+        }
+      ],
+      "keywords": [
+        {
+          "id": "open-brain.keyword.memory",
+          "terms": [
+            "memory system",
+            "memory-system",
+            "bootstrap memory",
+            "wiki memory",
+            "knowledge wiki",
+            "memory pipeline",
+            "retrieval",
+            "rag system"
+          ],
+          "weight": 5
+        }
+      ],
+      "path_hints": [
+        {
+          "id": "open-brain.path.project",
+          "terms": [
+            "open-brain",
+            "wikimemory"
+          ],
+          "weight": 5
+        }
+      ],
+      "repo_hints": [
+        {
+          "id": "open-brain.repo.project",
+          "terms": [
+            "open-brain",
+            "wikimemory"
+          ],
+          "weight": 5
+        }
+      ]
+    },
+    {
+      "label": "ai-scientist",
+      "category": "project",
+      "aliases": [
+        {
+          "id": "ai-scientist.alias.project_name",
+          "terms": [
+            "ai scientist",
+            "aiscientist"
+          ],
+          "weight": 14
+        }
+      ],
+      "keywords": [
+        {
+          "id": "ai-scientist.keyword.optimization",
+          "terms": [
+            "hypothesis loop",
+            "optimization loop",
+            "rag optimization",
+            "evaluation loop",
+            "benchmark",
+            "precision",
+            "recall",
+            "optimizer"
+          ],
+          "weight": 5
+        }
+      ],
+      "path_hints": [
+        {
+          "id": "ai-scientist.path.project",
+          "terms": [
+            "ai-scientist"
+          ],
+          "weight": 5
+        }
+      ],
+      "repo_hints": [
+        {
+          "id": "ai-scientist.repo.project",
+          "terms": [
+            "ai-scientist"
+          ],
+          "weight": 5
+        }
+      ]
+    }
+  ]
+}

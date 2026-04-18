@@ -1,0 +1,1246 @@
+{
+  "bucket": "open-questions",
+  "citations": [
+    {
+      "citation_id": "claim-1",
+      "item_keys": [
+        "ai-scientist:open_question:6053ddf7a9339635"
+      ],
+      "kind": "synthesized_claim",
+      "label": "claim-1",
+      "provenance_refs": [
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:976",
+          "end_line_no": 976,
+          "end_timestamp": "2026-04-13T00:53:17.295Z",
+          "rule_ids": [
+            "open_question.explicit"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:219",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:973",
+          "start_line_no": 973,
+          "start_timestamp": "2026-04-13T00:52:51.805Z",
+          "statement": "For contradictory extracted items, should Phase 5:"
+        }
+      ]
+    },
+    {
+      "citation_id": "claim-2",
+      "item_keys": [
+        "ai-scientist:open_question:24e115fe8f24c8a4"
+      ],
+      "kind": "synthesized_claim",
+      "label": "claim-2",
+      "provenance_refs": [
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:976",
+          "end_line_no": 976,
+          "end_timestamp": "2026-04-13T00:53:17.295Z",
+          "rule_ids": [
+            "open_question.explicit"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:219",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:973",
+          "start_line_no": 973,
+          "start_timestamp": "2026-04-13T00:52:51.805Z",
+          "statement": "For Phase 5, the main implication is that extracted items should carry stable domain/item identifiers and future page-target hints cleanly enough that wiki synthesis can map them into Obsidian pages later."
+        }
+      ]
+    },
+    {
+      "citation_id": "claim-3",
+      "item_keys": [
+        "ai-scientist:open_question:944dacdfaf30ec04"
+      ],
+      "kind": "synthesized_claim",
+      "label": "claim-3",
+      "provenance_refs": [
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:976",
+          "end_line_no": 976,
+          "end_timestamp": "2026-04-13T00:53:17.295Z",
+          "rule_ids": [
+            "open_question.explicit"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:219",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:973",
+          "start_line_no": 973,
+          "start_timestamp": "2026-04-13T00:52:51.805Z",
+          "statement": "Should Phase 5 use this fixed v1 item taxonomy?"
+        }
+      ]
+    },
+    {
+      "citation_id": "claim-4",
+      "item_keys": [
+        "ai-scientist:open_question:2c6ca5acc6df51c5"
+      ],
+      "kind": "synthesized_claim",
+      "label": "claim-4",
+      "provenance_refs": [
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:976",
+          "end_line_no": 976,
+          "end_timestamp": "2026-04-13T00:53:17.295Z",
+          "rule_ids": [
+            "open_question.explicit"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:219",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:973",
+          "start_line_no": 973,
+          "start_timestamp": "2026-04-13T00:52:51.805Z",
+          "statement": "Should temporal items like `current_state`, `next_step`, `outcome`, and `failure` carry a lifecycle marker such as:"
+        }
+      ]
+    },
+    {
+      "citation_id": "claim-5",
+      "item_keys": [
+        "ai-scientist:open_question:67dd80bb6b97b412"
+      ],
+      "kind": "synthesized_claim",
+      "label": "claim-5",
+      "provenance_refs": [
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:976",
+          "end_line_no": 976,
+          "end_timestamp": "2026-04-13T00:53:17.295Z",
+          "rule_ids": [
+            "open_question.explicit"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:219",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:973",
+          "start_line_no": 973,
+          "start_timestamp": "2026-04-13T00:52:51.805Z",
+          "statement": "To support future Obsidian wiki generation, should each extracted item also carry a lightweight future target hint like:"
+        }
+      ]
+    },
+    {
+      "citation_id": "claim-6",
+      "item_keys": [
+        "ai-scientist:open_question:ea72b1353d807019"
+      ],
+      "kind": "synthesized_claim",
+      "label": "claim-6",
+      "provenance_refs": [
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:976",
+          "end_line_no": 976,
+          "end_timestamp": "2026-04-13T00:53:17.295Z",
+          "rule_ids": [
+            "open_question.explicit"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:219",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:973",
+          "start_line_no": 973,
+          "start_timestamp": "2026-04-13T00:52:51.805Z",
+          "statement": "When repeated items are merged, should the merged item keep:"
+        }
+      ]
+    },
+    {
+      "citation_id": "claim-7",
+      "item_keys": [
+        "ai-scientist:open_question:7fa79c9ba89f1271"
+      ],
+      "kind": "synthesized_claim",
+      "label": "claim-7",
+      "provenance_refs": [
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:44666",
+          "end_line_no": 44666,
+          "end_timestamp": "2026-03-12T00:50:11.029Z",
+          "rule_ids": [
+            "open_question.explicit"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:5648",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:44660",
+          "start_line_no": 44660,
+          "start_timestamp": "2026-03-12T00:49:14.079Z",
+          "statement": "If we say success is \u201cbehavior-correct\u201d and clarifying is a valid win, I need your preference on whether that gap should block loop start or just block final certification."
+        }
+      ]
+    },
+    {
+      "citation_id": "item-open_question-1",
+      "item_keys": [
+        "ai-scientist:open_question:6053ddf7a9339635"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-open_question-1",
+      "provenance_refs": [
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:976",
+          "end_line_no": 976,
+          "end_timestamp": "2026-04-13T00:53:17.295Z",
+          "rule_ids": [
+            "open_question.explicit"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:219",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:973",
+          "start_line_no": 973,
+          "start_timestamp": "2026-04-13T00:52:51.805Z",
+          "statement": "For contradictory extracted items, should Phase 5:"
+        }
+      ]
+    },
+    {
+      "citation_id": "item-open_question-2",
+      "item_keys": [
+        "ai-scientist:open_question:24e115fe8f24c8a4"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-open_question-2",
+      "provenance_refs": [
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:976",
+          "end_line_no": 976,
+          "end_timestamp": "2026-04-13T00:53:17.295Z",
+          "rule_ids": [
+            "open_question.explicit"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:219",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:973",
+          "start_line_no": 973,
+          "start_timestamp": "2026-04-13T00:52:51.805Z",
+          "statement": "For Phase 5, the main implication is that extracted items should carry stable domain/item identifiers and future page-target hints cleanly enough that wiki synthesis can map them into Obsidian pages later."
+        }
+      ]
+    },
+    {
+      "citation_id": "item-open_question-3",
+      "item_keys": [
+        "ai-scientist:open_question:cf8bf799b7e5fe90"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-open_question-3",
+      "provenance_refs": [
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:976",
+          "end_line_no": 976,
+          "end_timestamp": "2026-04-13T00:53:17.295Z",
+          "rule_ids": [
+            "open_question.explicit"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:219",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:973",
+          "start_line_no": 973,
+          "start_timestamp": "2026-04-13T00:52:51.805Z",
+          "statement": "should"
+        }
+      ]
+    },
+    {
+      "citation_id": "item-open_question-4",
+      "item_keys": [
+        "ai-scientist:open_question:944dacdfaf30ec04"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-open_question-4",
+      "provenance_refs": [
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:976",
+          "end_line_no": 976,
+          "end_timestamp": "2026-04-13T00:53:17.295Z",
+          "rule_ids": [
+            "open_question.explicit"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:219",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:973",
+          "start_line_no": 973,
+          "start_timestamp": "2026-04-13T00:52:51.805Z",
+          "statement": "Should Phase 5 use this fixed v1 item taxonomy?"
+        }
+      ]
+    },
+    {
+      "citation_id": "item-open_question-5",
+      "item_keys": [
+        "ai-scientist:open_question:2c6ca5acc6df51c5"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-open_question-5",
+      "provenance_refs": [
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:976",
+          "end_line_no": 976,
+          "end_timestamp": "2026-04-13T00:53:17.295Z",
+          "rule_ids": [
+            "open_question.explicit"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:219",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:973",
+          "start_line_no": 973,
+          "start_timestamp": "2026-04-13T00:52:51.805Z",
+          "statement": "Should temporal items like `current_state`, `next_step`, `outcome`, and `failure` carry a lifecycle marker such as:"
+        }
+      ]
+    },
+    {
+      "citation_id": "item-open_question-6",
+      "item_keys": [
+        "ai-scientist:open_question:69a3a7c199f27b0e"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-open_question-6",
+      "provenance_refs": [
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:976",
+          "end_line_no": 976,
+          "end_timestamp": "2026-04-13T00:53:17.295Z",
+          "rule_ids": [
+            "open_question.explicit"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:219",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:973",
+          "start_line_no": 973,
+          "start_timestamp": "2026-04-13T00:52:51.805Z",
+          "statement": "The remaining choices are about how much intelligence extraction should have now, and how extraction should shape the later wiki/bootstrap layers without prematurely hardwiring them."
+        }
+      ]
+    },
+    {
+      "citation_id": "item-open_question-7",
+      "item_keys": [
+        "ai-scientist:open_question:67dd80bb6b97b412"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-open_question-7",
+      "provenance_refs": [
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:976",
+          "end_line_no": 976,
+          "end_timestamp": "2026-04-13T00:53:17.295Z",
+          "rule_ids": [
+            "open_question.explicit"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:219",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:973",
+          "start_line_no": 973,
+          "start_timestamp": "2026-04-13T00:52:51.805Z",
+          "statement": "To support future Obsidian wiki generation, should each extracted item also carry a lightweight future target hint like:"
+        }
+      ]
+    },
+    {
+      "citation_id": "item-open_question-8",
+      "item_keys": [
+        "ai-scientist:open_question:ea72b1353d807019"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-open_question-8",
+      "provenance_refs": [
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:976",
+          "end_line_no": 976,
+          "end_timestamp": "2026-04-13T00:53:17.295Z",
+          "rule_ids": [
+            "open_question.explicit"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:219",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:973",
+          "start_line_no": 973,
+          "start_timestamp": "2026-04-13T00:52:51.805Z",
+          "statement": "When repeated items are merged, should the merged item keep:"
+        }
+      ]
+    },
+    {
+      "citation_id": "item-open_question-9",
+      "item_keys": [
+        "ai-scientist:open_question:7fa79c9ba89f1271"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-open_question-9",
+      "provenance_refs": [
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:44666",
+          "end_line_no": 44666,
+          "end_timestamp": "2026-03-12T00:50:11.029Z",
+          "rule_ids": [
+            "open_question.explicit"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:5648",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:44660",
+          "start_line_no": 44660,
+          "start_timestamp": "2026-03-12T00:49:14.079Z",
+          "statement": "If we say success is \u201cbehavior-correct\u201d and clarifying is a valid win, I need your preference on whether that gap should block loop start or just block final certification."
+        }
+      ]
+    },
+    {
+      "citation_id": "item-open_question-10",
+      "item_keys": [
+        "ai-scientist:open_question:fb4394dff707ca88"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-open_question-10",
+      "provenance_refs": [
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:44202",
+          "end_line_no": 44202,
+          "end_timestamp": "2026-03-11T22:58:51.481Z",
+          "rule_ids": [
+            "open_question.explicit"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:5547",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:44200",
+          "start_line_no": 44200,
+          "start_timestamp": "2026-03-11T22:58:51.477Z",
+          "statement": "twhat"
+        }
+      ]
+    },
+    {
+      "citation_id": "item-open_question-11",
+      "item_keys": [
+        "ai-scientist:open_question:706e553e7d2aba20"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-open_question-11",
+      "provenance_refs": [
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:43654",
+          "end_line_no": 43654,
+          "end_timestamp": "2026-03-11T20:15:25.942Z",
+          "rule_ids": [
+            "open_question.explicit"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:5423",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:43654",
+          "start_line_no": 43654,
+          "start_timestamp": "2026-03-11T20:15:25.942Z",
+          "statement": "**What this means operationally**"
+        }
+      ]
+    },
+    {
+      "citation_id": "item-open_question-12",
+      "item_keys": [
+        "ai-scientist:open_question:ea10ff29b632f45e"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-open_question-12",
+      "provenance_refs": [
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:43654",
+          "end_line_no": 43654,
+          "end_timestamp": "2026-03-11T20:15:25.942Z",
+          "rule_ids": [
+            "open_question.explicit"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:5423",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:43654",
+          "start_line_no": 43654,
+          "start_timestamp": "2026-03-11T20:15:25.942Z",
+          "statement": "**What those excluded cases are**"
+        }
+      ]
+    },
+    {
+      "citation_id": "item-open_question-13",
+      "item_keys": [
+        "ai-scientist:open_question:d6427f2f73b557af"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-open_question-13",
+      "provenance_refs": [
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:43654",
+          "end_line_no": 43654,
+          "end_timestamp": "2026-03-11T20:15:25.942Z",
+          "rule_ids": [
+            "open_question.explicit"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:5423",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:43654",
+          "start_line_no": 43654,
+          "start_timestamp": "2026-03-11T20:15:25.942Z",
+          "statement": "**Why they are excluded**"
+        }
+      ]
+    },
+    {
+      "citation_id": "item-open_question-14",
+      "item_keys": [
+        "ai-scientist:open_question:97f1c5075c97d912"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-open_question-14",
+      "provenance_refs": [
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:43654",
+          "end_line_no": 43654,
+          "end_timestamp": "2026-03-11T20:15:25.942Z",
+          "rule_ids": [
+            "open_question.explicit"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:5423",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:43654",
+          "start_line_no": 43654,
+          "start_timestamp": "2026-03-11T20:15:25.942Z",
+          "statement": "- `What did Grok assistant suggest for leaving time to reach Ava Mediterraegean by 6 p.m.?`"
+        }
+      ]
+    },
+    {
+      "citation_id": "item-open_question-15",
+      "item_keys": [
+        "ai-scientist:open_question:cd305edd5a64c862"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-open_question-15",
+      "provenance_refs": [
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:43654",
+          "end_line_no": 43654,
+          "end_timestamp": "2026-03-11T20:15:25.942Z",
+          "rule_ids": [
+            "open_question.explicit"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:5423",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:43654",
+          "start_line_no": 43654,
+          "start_timestamp": "2026-03-11T20:15:25.942Z",
+          "statement": "- `What did Jenn mention regarding her financial totals and the 401k before marriage?`"
+        }
+      ]
+    },
+    {
+      "citation_id": "item-open_question-16",
+      "item_keys": [
+        "ai-scientist:open_question:f1f047b2cdc60654"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-open_question-16",
+      "provenance_refs": [
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:43654",
+          "end_line_no": 43654,
+          "end_timestamp": "2026-03-11T20:15:25.942Z",
+          "rule_ids": [
+            "open_question.explicit"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:5423",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:43654",
+          "start_line_no": 43654,
+          "start_timestamp": "2026-03-11T20:15:25.942Z",
+          "statement": "- `What did Jenn say she needed to bring for Uncle Bob and mom tomorrow?`"
+        }
+      ]
+    },
+    {
+      "citation_id": "item-open_question-17",
+      "item_keys": [
+        "ai-scientist:open_question:b063e8f97e2f74b2"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-open_question-17",
+      "provenance_refs": [
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:43654",
+          "end_line_no": 43654,
+          "end_timestamp": "2026-03-11T20:15:25.942Z",
+          "rule_ids": [
+            "open_question.explicit"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:5423",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:43654",
+          "start_line_no": 43654,
+          "start_timestamp": "2026-03-11T20:15:25.942Z",
+          "statement": "- `What recommendations did Grok assistant provide for arriving at the Biltmore Estates?`"
+        }
+      ]
+    },
+    {
+      "citation_id": "item-open_question-18",
+      "item_keys": [
+        "ai-scientist:open_question:6bf24c081f508e51"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-open_question-18",
+      "provenance_refs": [
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:43654",
+          "end_line_no": 43654,
+          "end_timestamp": "2026-03-11T20:15:25.942Z",
+          "rule_ids": [
+            "open_question.explicit"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:5423",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:43654",
+          "start_line_no": 43654,
+          "start_timestamp": "2026-03-11T20:15:25.942Z",
+          "statement": "- `What route did Grok assistant suggest for parking and the final destination?`"
+        }
+      ]
+    },
+    {
+      "citation_id": "item-open_question-19",
+      "item_keys": [
+        "ai-scientist:open_question:214d645b8f4e35e3"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-open_question-19",
+      "provenance_refs": [
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:43654",
+          "end_line_no": 43654,
+          "end_timestamp": "2026-03-11T20:15:25.942Z",
+          "rule_ids": [
+            "open_question.explicit"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:5423",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:43654",
+          "start_line_no": 43654,
+          "start_timestamp": "2026-03-11T20:15:25.942Z",
+          "statement": "- `What troubleshooting steps did the Chatgpt assistant provide related to the project in the last month?`"
+        }
+      ]
+    },
+    {
+      "citation_id": "item-open_question-20",
+      "item_keys": [
+        "ai-scientist:open_question:d25ac11ad6a83f12"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-open_question-20",
+      "provenance_refs": [
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:43654",
+          "end_line_no": 43654,
+          "end_timestamp": "2026-03-11T20:15:25.942Z",
+          "rule_ids": [
+            "open_question.explicit"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:5423",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:43654",
+          "start_line_no": 43654,
+          "start_timestamp": "2026-03-11T20:15:25.942Z",
+          "statement": "That is why the failing set is concentrated in:"
+        }
+      ]
+    },
+    {
+      "citation_id": "item-open_question-21",
+      "item_keys": [
+        "ai-scientist:open_question:6b334270365a5b7f"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-open_question-21",
+      "provenance_refs": [
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:43347",
+          "end_line_no": 43347,
+          "end_timestamp": "2026-03-11T19:37:55.573Z",
+          "rule_ids": [
+            "open_question.explicit"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:5361",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:43343",
+          "start_line_no": 43343,
+          "start_timestamp": "2026-03-11T19:30:44.252Z",
+          "statement": "**What I would revisit**"
+        }
+      ]
+    },
+    {
+      "citation_id": "item-open_question-22",
+      "item_keys": [
+        "ai-scientist:open_question:eaa8d27cfd9b5889"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-open_question-22",
+      "provenance_refs": [
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:43347",
+          "end_line_no": 43347,
+          "end_timestamp": "2026-03-11T19:37:55.573Z",
+          "rule_ids": [
+            "open_question.explicit"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:5361",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:43343",
+          "start_line_no": 43343,
+          "start_timestamp": "2026-03-11T19:30:44.252Z",
+          "statement": "**What looks solid**"
+        }
+      ]
+    },
+    {
+      "citation_id": "item-open_question-23",
+      "item_keys": [
+        "ai-scientist:open_question:a23d562c68ba8a7c"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-open_question-23",
+      "provenance_refs": [
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:43347",
+          "end_line_no": 43347,
+          "end_timestamp": "2026-03-11T19:37:55.573Z",
+          "rule_ids": [
+            "open_question.explicit"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:5361",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:43343",
+          "start_line_no": 43343,
+          "start_timestamp": "2026-03-11T19:30:44.252Z",
+          "statement": "- `What did Jenn say about the 401k numbers and why she didn't include them?`"
+        }
+      ]
+    },
+    {
+      "citation_id": "item-open_question-24",
+      "item_keys": [
+        "ai-scientist:open_question:26eca1c828f84a77"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-open_question-24",
+      "provenance_refs": [
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:43347",
+          "end_line_no": 43347,
+          "end_timestamp": "2026-03-11T19:37:55.573Z",
+          "rule_ids": [
+            "open_question.explicit"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:5361",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:43343",
+          "start_line_no": 43343,
+          "start_timestamp": "2026-03-11T19:30:44.252Z",
+          "statement": "- for this benchmark, that should usually be `No + Clear + note: lens mismatch`"
+        }
+      ]
+    },
+    {
+      "citation_id": "item-open_question-25",
+      "item_keys": [
+        "ai-scientist:open_question:f1e46d872b2e6060"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-open_question-25",
+      "provenance_refs": [
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:43347",
+          "end_line_no": 43347,
+          "end_timestamp": "2026-03-11T19:37:55.573Z",
+          "rule_ids": [
+            "open_question.explicit"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:5361",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:43343",
+          "start_line_no": 43343,
+          "start_timestamp": "2026-03-11T19:30:44.252Z",
+          "statement": "- question is `What areas in robotics...`"
+        }
+      ]
+    },
+    {
+      "citation_id": "item-open_question-26",
+      "item_keys": [
+        "ai-scientist:open_question:33b44157ba93739a"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-open_question-26",
+      "provenance_refs": [
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:43347",
+          "end_line_no": 43347,
+          "end_timestamp": "2026-03-11T19:37:55.573Z",
+          "rule_ids": [
+            "open_question.explicit"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:5361",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:43343",
+          "start_line_no": 43343,
+          "start_timestamp": "2026-03-11T19:30:44.252Z",
+          "statement": "- question is just `What did Grok assistant say...`"
+        }
+      ]
+    },
+    {
+      "citation_id": "item-open_question-27",
+      "item_keys": [
+        "ai-scientist:open_question:bd32333b8de6ca39"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-open_question-27",
+      "provenance_refs": [
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:43347",
+          "end_line_no": 43347,
+          "end_timestamp": "2026-03-11T19:37:55.573Z",
+          "rule_ids": [
+            "open_question.explicit"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:5361",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:43343",
+          "start_line_no": 43343,
+          "start_timestamp": "2026-03-11T19:30:44.252Z",
+          "statement": "- question is still `What did Grok assistant say...`"
+        }
+      ]
+    },
+    {
+      "citation_id": "item-open_question-28",
+      "item_keys": [
+        "ai-scientist:open_question:923257505fac8c29"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-open_question-28",
+      "provenance_refs": [
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:43347",
+          "end_line_no": 43347,
+          "end_timestamp": "2026-03-11T19:37:55.573Z",
+          "rule_ids": [
+            "open_question.explicit"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:5361",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:43343",
+          "start_line_no": 43343,
+          "start_timestamp": "2026-03-11T19:30:44.252Z",
+          "statement": "- question: `What recommendations did Grok assistant give...`"
+        }
+      ]
+    },
+    {
+      "citation_id": "item-open_question-29",
+      "item_keys": [
+        "ai-scientist:open_question:3bf5ce0724817da3"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-open_question-29",
+      "provenance_refs": [
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:43347",
+          "end_line_no": 43347,
+          "end_timestamp": "2026-03-11T19:37:55.573Z",
+          "rule_ids": [
+            "open_question.explicit"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:5361",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:43343",
+          "start_line_no": 43343,
+          "start_timestamp": "2026-03-11T19:30:44.252Z",
+          "statement": "- should clarify which project + weak summarization"
+        }
+      ]
+    },
+    {
+      "citation_id": "item-open_question-30",
+      "item_keys": [
+        "ai-scientist:open_question:6f832eb77eb18b1e"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-open_question-30",
+      "provenance_refs": [
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:31377",
+          "end_line_no": 31377,
+          "end_timestamp": "2026-03-09T00:12:25.298Z",
+          "rule_ids": [
+            "open_question.explicit"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:3412",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:31377",
+          "start_line_no": 31377,
+          "start_timestamp": "2026-03-09T00:12:25.298Z",
+          "statement": "What makes systems like DeepMind\u2019s automated research pipelines or Sakana\u2019s AI Scientist compelling is that they explicitly operate on testable hypotheses, not just configurations."
+        },
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:31381",
+          "end_line_no": 31381,
+          "end_timestamp": "2026-03-09T00:12:28.704Z",
+          "rule_ids": [
+            "open_question.explicit"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:3413",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:31378",
+          "start_line_no": 31378,
+          "start_timestamp": "2026-03-09T00:12:25.300Z",
+          "statement": "What makes systems like DeepMind\u2019s automated research pipelines or Sakana\u2019s AI Scientist compelling is that they explicitly operate on testable hypotheses, not just configurations."
+        }
+      ]
+    }
+  ],
+  "domain": "ai-scientist",
+  "input_item_keys": [
+    "ai-scientist:open_question:6053ddf7a9339635",
+    "ai-scientist:open_question:24e115fe8f24c8a4",
+    "ai-scientist:open_question:cf8bf799b7e5fe90",
+    "ai-scientist:open_question:944dacdfaf30ec04",
+    "ai-scientist:open_question:2c6ca5acc6df51c5",
+    "ai-scientist:open_question:69a3a7c199f27b0e",
+    "ai-scientist:open_question:67dd80bb6b97b412",
+    "ai-scientist:open_question:ea72b1353d807019",
+    "ai-scientist:open_question:7fa79c9ba89f1271",
+    "ai-scientist:open_question:fb4394dff707ca88",
+    "ai-scientist:open_question:706e553e7d2aba20",
+    "ai-scientist:open_question:ea10ff29b632f45e",
+    "ai-scientist:open_question:d6427f2f73b557af",
+    "ai-scientist:open_question:97f1c5075c97d912",
+    "ai-scientist:open_question:cd305edd5a64c862",
+    "ai-scientist:open_question:f1f047b2cdc60654",
+    "ai-scientist:open_question:b063e8f97e2f74b2",
+    "ai-scientist:open_question:6bf24c081f508e51",
+    "ai-scientist:open_question:214d645b8f4e35e3",
+    "ai-scientist:open_question:d25ac11ad6a83f12",
+    "ai-scientist:open_question:6b334270365a5b7f",
+    "ai-scientist:open_question:eaa8d27cfd9b5889",
+    "ai-scientist:open_question:a23d562c68ba8a7c",
+    "ai-scientist:open_question:26eca1c828f84a77",
+    "ai-scientist:open_question:f1e46d872b2e6060",
+    "ai-scientist:open_question:33b44157ba93739a",
+    "ai-scientist:open_question:bd32333b8de6ca39",
+    "ai-scientist:open_question:923257505fac8c29",
+    "ai-scientist:open_question:3bf5ce0724817da3",
+    "ai-scientist:open_question:6f832eb77eb18b1e"
+  ],
+  "page_id": "projects/ai-scientist/open-questions",
+  "page_type": "bucket_page",
+  "rendered_page_metadata": {
+    "claim_count": 7,
+    "conflict_count": 0,
+    "related_domains": [
+      "global"
+    ],
+    "related_pages": [
+      {
+        "page_key": "index",
+        "title": "AI Scientist",
+        "wikilink": "[[projects/ai-scientist/index|AI Scientist]]"
+      },
+      {
+        "page_key": "communication-preferences",
+        "title": "AI Scientist - Communication Preferences",
+        "wikilink": "[[projects/ai-scientist/communication-preferences|AI Scientist - Communication Preferences]]"
+      },
+      {
+        "page_key": "workflow-rules",
+        "title": "AI Scientist - Workflow Rules",
+        "wikilink": "[[projects/ai-scientist/workflow-rules|AI Scientist - Workflow Rules]]"
+      },
+      {
+        "page_key": "architecture",
+        "title": "AI Scientist - Architecture",
+        "wikilink": "[[projects/ai-scientist/architecture|AI Scientist - Architecture]]"
+      },
+      {
+        "page_key": "code-map",
+        "title": "AI Scientist - Code Map",
+        "wikilink": "[[projects/ai-scientist/code-map|AI Scientist - Code Map]]"
+      },
+      {
+        "page_key": "current-state",
+        "title": "AI Scientist - Current State",
+        "wikilink": "[[projects/ai-scientist/current-state|AI Scientist - Current State]]"
+      },
+      {
+        "page_key": "tasks",
+        "title": "AI Scientist - Tasks",
+        "wikilink": "[[projects/ai-scientist/tasks|AI Scientist - Tasks]]"
+      },
+      {
+        "page_key": "outcomes",
+        "title": "AI Scientist - Outcomes",
+        "wikilink": "[[projects/ai-scientist/outcomes|AI Scientist - Outcomes]]"
+      },
+      {
+        "page_key": "failures",
+        "title": "AI Scientist - Failures",
+        "wikilink": "[[projects/ai-scientist/failures|AI Scientist - Failures]]"
+      },
+      {
+        "page_key": "decisions",
+        "title": "AI Scientist - Decisions",
+        "wikilink": "[[projects/ai-scientist/decisions|AI Scientist - Decisions]]"
+      },
+      {
+        "page_key": "next-steps",
+        "title": "AI Scientist - Next Steps",
+        "wikilink": "[[projects/ai-scientist/next-steps|AI Scientist - Next Steps]]"
+      }
+    ],
+    "relative_page_path": "projects/ai-scientist/open-questions.md",
+    "source_count": 2,
+    "title": "AI Scientist - Open Questions"
+  },
+  "renderer": "obsidian_markdown",
+  "synthesized_claims": [
+    {
+      "claim_id": "claim-1",
+      "confidence": "strong",
+      "latent_type": "implicit_next_steps",
+      "provenance_refs": [
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:976",
+          "end_line_no": 976,
+          "end_timestamp": "2026-04-13T00:53:17.295Z",
+          "rule_ids": [
+            "open_question.explicit"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:219",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:973",
+          "start_line_no": 973,
+          "start_timestamp": "2026-04-13T00:52:51.805Z",
+          "statement": "For contradictory extracted items, should Phase 5:"
+        }
+      ],
+      "section_id": "summary",
+      "supporting_item_ids": [
+        "ai-scientist:open_question:6053ddf7a9339635"
+      ],
+      "text": "Phase 5 should address contradictory extracted items."
+    },
+    {
+      "claim_id": "claim-2",
+      "confidence": "strong",
+      "latent_type": "implicit_next_steps",
+      "provenance_refs": [
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:976",
+          "end_line_no": 976,
+          "end_timestamp": "2026-04-13T00:53:17.295Z",
+          "rule_ids": [
+            "open_question.explicit"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:219",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:973",
+          "start_line_no": 973,
+          "start_timestamp": "2026-04-13T00:52:51.805Z",
+          "statement": "For Phase 5, the main implication is that extracted items should carry stable domain/item identifiers and future page-target hints cleanly enough that wiki synthesis can map them into Obsidian pages later."
+        }
+      ],
+      "section_id": "summary",
+      "supporting_item_ids": [
+        "ai-scientist:open_question:24e115fe8f24c8a4"
+      ],
+      "text": "For Phase 5, extracted items need stable identifiers for future mapping into Obsidian pages."
+    },
+    {
+      "claim_id": "claim-3",
+      "confidence": "strong",
+      "latent_type": "implicit_next_steps",
+      "provenance_refs": [
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:976",
+          "end_line_no": 976,
+          "end_timestamp": "2026-04-13T00:53:17.295Z",
+          "rule_ids": [
+            "open_question.explicit"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:219",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:973",
+          "start_line_no": 973,
+          "start_timestamp": "2026-04-13T00:52:51.805Z",
+          "statement": "Should Phase 5 use this fixed v1 item taxonomy?"
+        }
+      ],
+      "section_id": "summary",
+      "supporting_item_ids": [
+        "ai-scientist:open_question:944dacdfaf30ec04"
+      ],
+      "text": "Phase 5 may need to utilize a fixed v1 item taxonomy."
+    },
+    {
+      "claim_id": "claim-4",
+      "confidence": "strong",
+      "latent_type": "implicit_next_steps",
+      "provenance_refs": [
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:976",
+          "end_line_no": 976,
+          "end_timestamp": "2026-04-13T00:53:17.295Z",
+          "rule_ids": [
+            "open_question.explicit"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:219",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:973",
+          "start_line_no": 973,
+          "start_timestamp": "2026-04-13T00:52:51.805Z",
+          "statement": "Should temporal items like `current_state`, `next_step`, `outcome`, and `failure` carry a lifecycle marker such as:"
+        }
+      ],
+      "section_id": "summary",
+      "supporting_item_ids": [
+        "ai-scientist:open_question:2c6ca5acc6df51c5"
+      ],
+      "text": "Temporal items should carry lifecycle markers to indicate their status."
+    },
+    {
+      "claim_id": "claim-5",
+      "confidence": "strong",
+      "latent_type": "implicit_next_steps",
+      "provenance_refs": [
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:976",
+          "end_line_no": 976,
+          "end_timestamp": "2026-04-13T00:53:17.295Z",
+          "rule_ids": [
+            "open_question.explicit"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:219",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:973",
+          "start_line_no": 973,
+          "start_timestamp": "2026-04-13T00:52:51.805Z",
+          "statement": "To support future Obsidian wiki generation, should each extracted item also carry a lightweight future target hint like:"
+        }
+      ],
+      "section_id": "open_question",
+      "supporting_item_ids": [
+        "ai-scientist:open_question:67dd80bb6b97b412"
+      ],
+      "text": "Should each extracted item carry a lightweight future target hint for Obsidian wiki generation?"
+    },
+    {
+      "claim_id": "claim-6",
+      "confidence": "strong",
+      "latent_type": "implicit_next_steps",
+      "provenance_refs": [
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:976",
+          "end_line_no": 976,
+          "end_timestamp": "2026-04-13T00:53:17.295Z",
+          "rule_ids": [
+            "open_question.explicit"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:219",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:973",
+          "start_line_no": 973,
+          "start_timestamp": "2026-04-13T00:52:51.805Z",
+          "statement": "When repeated items are merged, should the merged item keep:"
+        }
+      ],
+      "section_id": "open_question",
+      "supporting_item_ids": [
+        "ai-scientist:open_question:ea72b1353d807019"
+      ],
+      "text": "When merging repeated items, should the merged item retain certain attributes?"
+    },
+    {
+      "claim_id": "claim-7",
+      "confidence": "strong",
+      "latent_type": "implicit_next_steps",
+      "provenance_refs": [
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:44666",
+          "end_line_no": 44666,
+          "end_timestamp": "2026-03-12T00:50:11.029Z",
+          "rule_ids": [
+            "open_question.explicit"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:5648",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:44660",
+          "start_line_no": 44660,
+          "start_timestamp": "2026-03-12T00:49:14.079Z",
+          "statement": "If we say success is \u201cbehavior-correct\u201d and clarifying is a valid win, I need your preference on whether that gap should block loop start or just block final certification."
+        }
+      ],
+      "section_id": "open_question",
+      "supporting_item_ids": [
+        "ai-scientist:open_question:7fa79c9ba89f1271"
+      ],
+      "text": "Clarification on whether a gap in behavior-correct success should block loop start or final certification is needed."
+    }
+  ],
+  "versions": {
+    "page_config_version": 2,
+    "renderer_version": 2,
+    "synthesis_prompt_version": 2,
+    "synthesis_schema_version": 1,
+    "wiki_schema_version": 2
+  }
+}

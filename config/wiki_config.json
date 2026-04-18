@@ -1,0 +1,187 @@
+{
+  "schema_version": 1,
+  "wiki_schema_version": 2,
+  "renderer": "obsidian_markdown",
+  "renderer_version": 2,
+  "page_config_version": 2,
+  "synthesis_prompt_version": 2,
+  "synthesis_schema_version": 1,
+  "provider": {
+    "type": "openai",
+    "api_key_env": "OPENAI_API_KEY",
+    "base_url_env": "WIKIMEMORY_OPENAI_BASE_URL",
+    "model_env": "WIKIMEMORY_OPENAI_MODEL",
+    "default_model": "gpt-4o-mini",
+    "temperature": 0.2
+  },
+  "approved_latent_types": [
+    "communication_preferences",
+    "workflow_norms",
+    "implicit_dos_and_donts",
+    "project_identity_and_scope",
+    "architecture_synthesis",
+    "codebase_map_abstractions",
+    "current_state_synthesis",
+    "decision_synthesis",
+    "decision_lineage",
+    "implicit_next_steps",
+    "partially_explicit_open_questions",
+    "recurring_failure_patterns",
+    "cross_project_relationships",
+    "temporal_evolution",
+    "contradiction_framing",
+    "confidence_weighted_synthesis",
+    "naming_normalization",
+    "multi_session_intent_patterns",
+    "segment_theme_consolidation",
+    "human_readable_synthesis_prose"
+  ],
+  "index_preview_items": 5,
+  "bucket_item_limits": {
+    "communication-preferences": 15,
+    "workflow-rules": 25,
+    "architecture": 40,
+    "code-map": 60,
+    "current-state": 30,
+    "tasks": 80,
+    "outcomes": 40,
+    "failures": 60,
+    "decisions": 50,
+    "next-steps": 60,
+    "open-questions": 80,
+    "default": 50
+  },
+  "page_size_caps": {
+    "index": 25600,
+    "communication-preferences": 76800,
+    "workflow-rules": 76800,
+    "default_bucket": 204800
+  },
+  "generic_claim_banned_patterns": [
+    "is important",
+    "are important",
+    "there are ongoing tasks",
+    "clear communication is necessary",
+    "clear communication is important",
+    "workflow rules are essential"
+  ],
+  "domains": [
+    {
+      "domain": "global",
+      "title": "Global",
+      "path": "global",
+      "kind": "global"
+    },
+    {
+      "domain": "ai-trader",
+      "title": "AI Trader",
+      "path": "projects/ai-trader",
+      "kind": "project"
+    },
+    {
+      "domain": "open-brain",
+      "title": "Open Brain",
+      "path": "projects/open-brain",
+      "kind": "project"
+    },
+    {
+      "domain": "ai-scientist",
+      "title": "AI Scientist",
+      "path": "projects/ai-scientist",
+      "kind": "project"
+    },
+    {
+      "domain": "cross-project",
+      "title": "Cross-Project",
+      "path": "projects/cross-project",
+      "kind": "cross-project"
+    },
+    {
+      "domain": "unclassified",
+      "title": "Unclassified",
+      "path": "unclassified",
+      "kind": "misc"
+    }
+  ],
+  "buckets": [
+    {
+      "page_key": "communication-preferences",
+      "title": "Communication Preferences",
+      "item_types": [
+        "communication_preference"
+      ]
+    },
+    {
+      "page_key": "workflow-rules",
+      "title": "Workflow Rules",
+      "item_types": [
+        "workflow_rule",
+        "do_rule",
+        "dont_rule"
+      ]
+    },
+    {
+      "page_key": "architecture",
+      "title": "Architecture",
+      "item_types": [
+        "architecture_note"
+      ]
+    },
+    {
+      "page_key": "code-map",
+      "title": "Code Map",
+      "item_types": [
+        "code_location"
+      ]
+    },
+    {
+      "page_key": "current-state",
+      "title": "Current State",
+      "item_types": [
+        "current_state"
+      ]
+    },
+    {
+      "page_key": "tasks",
+      "title": "Tasks",
+      "item_types": [
+        "task_request"
+      ]
+    },
+    {
+      "page_key": "outcomes",
+      "title": "Outcomes",
+      "item_types": [
+        "outcome"
+      ]
+    },
+    {
+      "page_key": "failures",
+      "title": "Failures",
+      "item_types": [
+        "failure"
+      ]
+    },
+    {
+      "page_key": "decisions",
+      "title": "Decisions",
+      "item_types": [
+        "decision"
+      ]
+    },
+    {
+      "page_key": "next-steps",
+      "title": "Next Steps",
+      "item_types": [
+        "next_step"
+      ]
+    },
+    {
+      "page_key": "open-questions",
+      "title": "Open Questions",
+      "item_types": [
+        "open_question"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,2852 @@
+{
+  "bucket": "code-map",
+  "citations": [
+    {
+      "citation_id": "claim-1",
+      "item_keys": [
+        "cross-project:code_location:5e757e8990aa8684",
+        "cross-project:code_location:91643a6197db1c2c"
+      ],
+      "kind": "synthesized_claim",
+      "label": "claim-1",
+      "provenance_refs": [
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:5627",
+          "end_line_no": 5627,
+          "end_timestamp": "2026-03-03T19:35:13.039Z",
+          "rule_ids": [
+            "code_location.detected"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:500",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:5607",
+          "start_line_no": 5607,
+          "start_timestamp": "2026-03-03T19:34:31.482Z",
+          "statement": "- open_brain_runbook.md: CodexClaw/docs/operations/open_brain_runbook.md"
+        },
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:5688",
+          "end_line_no": 5688,
+          "end_timestamp": "2026-03-03T20:35:43.883Z",
+          "rule_ids": [
+            "code_location.detected"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:510",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:5682",
+          "start_line_no": 5682,
+          "start_timestamp": "2026-03-03T20:34:40.927Z",
+          "statement": "- open_brain_runbook.md: CodexClaw/docs/operations/open_brain_runbook.md"
+        },
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:5694",
+          "end_line_no": 5694,
+          "end_timestamp": "2026-03-03T21:16:15.038Z",
+          "rule_ids": [
+            "code_location.detected"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:513",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:5694",
+          "start_line_no": 5694,
+          "start_timestamp": "2026-03-03T21:16:15.038Z",
+          "statement": "- open_brain_runbook.md: CodexClaw/docs/operations/open_brain_runbook.md"
+        },
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:4983",
+          "end_line_no": 4983,
+          "end_timestamp": "2026-03-03T14:56:04.891Z",
+          "rule_ids": [
+            "code_location.detected"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:431",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:4973",
+          "start_line_no": 4973,
+          "start_timestamp": "2026-03-03T14:01:29.757Z",
+          "statement": "- runbook.md: CodexClaw/docs/operations/runbook.md"
+        },
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:11061",
+          "end_line_no": 11061,
+          "end_timestamp": "2026-03-05T05:22:23.915Z",
+          "rule_ids": [
+            "code_location.detected"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:940",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:11044",
+          "start_line_no": 11044,
+          "start_timestamp": "2026-03-05T05:21:53.540Z",
+          "statement": "- runbook.md: CodexClaw/docs/operations/runbook.md"
+        },
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:11125",
+          "end_line_no": 11125,
+          "end_timestamp": "2026-03-05T05:30:12.326Z",
+          "rule_ids": [
+            "code_location.detected"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:947",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:11115",
+          "start_line_no": 11115,
+          "start_timestamp": "2026-03-05T05:26:48.661Z",
+          "statement": "- runbook.md: CodexClaw/docs/operations/runbook.md"
+        }
+      ]
+    },
+    {
+      "citation_id": "claim-2",
+      "item_keys": [
+        "cross-project:code_location:69c63c98d6895fc9",
+        "cross-project:code_location:c80f1b8c1a6f29eb"
+      ],
+      "kind": "synthesized_claim",
+      "label": "claim-2",
+      "provenance_refs": [
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:11061",
+          "end_line_no": 11061,
+          "end_timestamp": "2026-03-05T05:22:23.915Z",
+          "rule_ids": [
+            "code_location.detected"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:940",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:11044",
+          "start_line_no": 11044,
+          "start_timestamp": "2026-03-05T05:21:53.540Z",
+          "statement": "- strategist.md: CodexClaw/personas/strategist.md"
+        },
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:11125",
+          "end_line_no": 11125,
+          "end_timestamp": "2026-03-05T05:30:12.326Z",
+          "rule_ids": [
+            "code_location.detected"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:947",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:11115",
+          "start_line_no": 11115,
+          "start_timestamp": "2026-03-05T05:26:48.661Z",
+          "statement": "- strategist.md: CodexClaw/personas/strategist.md"
+        },
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:11142",
+          "end_line_no": 11142,
+          "end_timestamp": "2026-03-05T05:30:44.585Z",
+          "rule_ids": [
+            "code_location.detected"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:948",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:11126",
+          "start_line_no": 11126,
+          "start_timestamp": "2026-03-05T05:30:12.327Z",
+          "statement": "- strategist.md: CodexClaw/personas/strategist.md"
+        },
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:11061",
+          "end_line_no": 11061,
+          "end_timestamp": "2026-03-05T05:22:23.915Z",
+          "rule_ids": [
+            "code_location.detected"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:940",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:11044",
+          "start_line_no": 11044,
+          "start_timestamp": "2026-03-05T05:21:53.540Z",
+          "statement": "- research.md: CodexClaw/personas/research.md"
+        },
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:11125",
+          "end_line_no": 11125,
+          "end_timestamp": "2026-03-05T05:30:12.326Z",
+          "rule_ids": [
+            "code_location.detected"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:947",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:11115",
+          "start_line_no": 11115,
+          "start_timestamp": "2026-03-05T05:26:48.661Z",
+          "statement": "- research.md: CodexClaw/personas/research.md"
+        },
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:11142",
+          "end_line_no": 11142,
+          "end_timestamp": "2026-03-05T05:30:44.585Z",
+          "rule_ids": [
+            "code_location.detected"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:948",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:11126",
+          "start_line_no": 11126,
+          "start_timestamp": "2026-03-05T05:30:12.327Z",
+          "statement": "- research.md: CodexClaw/personas/research.md"
+        }
+      ]
+    },
+    {
+      "citation_id": "item-code_location-1",
+      "item_keys": [
+        "cross-project:code_location:5e757e8990aa8684"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-code_location-1",
+      "provenance_refs": [
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:5627",
+          "end_line_no": 5627,
+          "end_timestamp": "2026-03-03T19:35:13.039Z",
+          "rule_ids": [
+            "code_location.detected"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:500",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:5607",
+          "start_line_no": 5607,
+          "start_timestamp": "2026-03-03T19:34:31.482Z",
+          "statement": "- open_brain_runbook.md: CodexClaw/docs/operations/open_brain_runbook.md"
+        },
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:5688",
+          "end_line_no": 5688,
+          "end_timestamp": "2026-03-03T20:35:43.883Z",
+          "rule_ids": [
+            "code_location.detected"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:510",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:5682",
+          "start_line_no": 5682,
+          "start_timestamp": "2026-03-03T20:34:40.927Z",
+          "statement": "- open_brain_runbook.md: CodexClaw/docs/operations/open_brain_runbook.md"
+        },
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:5694",
+          "end_line_no": 5694,
+          "end_timestamp": "2026-03-03T21:16:15.038Z",
+          "rule_ids": [
+            "code_location.detected"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:513",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:5694",
+          "start_line_no": 5694,
+          "start_timestamp": "2026-03-03T21:16:15.038Z",
+          "statement": "- open_brain_runbook.md: CodexClaw/docs/operations/open_brain_runbook.md"
+        }
+      ]
+    },
+    {
+      "citation_id": "item-code_location-2",
+      "item_keys": [
+        "cross-project:code_location:91643a6197db1c2c"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-code_location-2",
+      "provenance_refs": [
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:4983",
+          "end_line_no": 4983,
+          "end_timestamp": "2026-03-03T14:56:04.891Z",
+          "rule_ids": [
+            "code_location.detected"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:431",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:4973",
+          "start_line_no": 4973,
+          "start_timestamp": "2026-03-03T14:01:29.757Z",
+          "statement": "- runbook.md: CodexClaw/docs/operations/runbook.md"
+        },
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:11061",
+          "end_line_no": 11061,
+          "end_timestamp": "2026-03-05T05:22:23.915Z",
+          "rule_ids": [
+            "code_location.detected"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:940",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:11044",
+          "start_line_no": 11044,
+          "start_timestamp": "2026-03-05T05:21:53.540Z",
+          "statement": "- runbook.md: CodexClaw/docs/operations/runbook.md"
+        },
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:11125",
+          "end_line_no": 11125,
+          "end_timestamp": "2026-03-05T05:30:12.326Z",
+          "rule_ids": [
+            "code_location.detected"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:947",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:11115",
+          "start_line_no": 11115,
+          "start_timestamp": "2026-03-05T05:26:48.661Z",
+          "statement": "- runbook.md: CodexClaw/docs/operations/runbook.md"
+        }
+      ]
+    },
+    {
+      "citation_id": "item-code_location-3",
+      "item_keys": [
+        "cross-project:code_location:69c63c98d6895fc9"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-code_location-3",
+      "provenance_refs": [
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:11061",
+          "end_line_no": 11061,
+          "end_timestamp": "2026-03-05T05:22:23.915Z",
+          "rule_ids": [
+            "code_location.detected"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:940",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:11044",
+          "start_line_no": 11044,
+          "start_timestamp": "2026-03-05T05:21:53.540Z",
+          "statement": "- strategist.md: CodexClaw/personas/strategist.md"
+        },
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:11125",
+          "end_line_no": 11125,
+          "end_timestamp": "2026-03-05T05:30:12.326Z",
+          "rule_ids": [
+            "code_location.detected"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:947",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:11115",
+          "start_line_no": 11115,
+          "start_timestamp": "2026-03-05T05:26:48.661Z",
+          "statement": "- strategist.md: CodexClaw/personas/strategist.md"
+        },
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:11142",
+          "end_line_no": 11142,
+          "end_timestamp": "2026-03-05T05:30:44.585Z",
+          "rule_ids": [
+            "code_location.detected"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:948",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:11126",
+          "start_line_no": 11126,
+          "start_timestamp": "2026-03-05T05:30:12.327Z",
+          "statement": "- strategist.md: CodexClaw/personas/strategist.md"
+        }
+      ]
+    },
+    {
+      "citation_id": "item-code_location-4",
+      "item_keys": [
+        "cross-project:code_location:c80f1b8c1a6f29eb"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-code_location-4",
+      "provenance_refs": [
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:11061",
+          "end_line_no": 11061,
+          "end_timestamp": "2026-03-05T05:22:23.915Z",
+          "rule_ids": [
+            "code_location.detected"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:940",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:11044",
+          "start_line_no": 11044,
+          "start_timestamp": "2026-03-05T05:21:53.540Z",
+          "statement": "- research.md: CodexClaw/personas/research.md"
+        },
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:11125",
+          "end_line_no": 11125,
+          "end_timestamp": "2026-03-05T05:30:12.326Z",
+          "rule_ids": [
+            "code_location.detected"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:947",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:11115",
+          "start_line_no": 11115,
+          "start_timestamp": "2026-03-05T05:26:48.661Z",
+          "statement": "- research.md: CodexClaw/personas/research.md"
+        },
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:11142",
+          "end_line_no": 11142,
+          "end_timestamp": "2026-03-05T05:30:44.585Z",
+          "rule_ids": [
+            "code_location.detected"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:948",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:11126",
+          "start_line_no": 11126,
+          "start_timestamp": "2026-03-05T05:30:12.327Z",
+          "statement": "- research.md: CodexClaw/personas/research.md"
+        }
+      ]
+    },
+    {
+      "citation_id": "item-code_location-5",
+      "item_keys": [
+        "cross-project:code_location:a6525ef6f0ac019d"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-code_location-5",
+      "provenance_refs": [
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:12664",
+          "end_line_no": 12664,
+          "end_timestamp": "2026-03-05T14:31:08.425Z",
+          "rule_ids": [
+            "code_location.explicit"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:1074",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:12648",
+          "start_line_no": 12648,
+          "start_timestamp": "2026-03-05T14:30:37.670Z",
+          "statement": "+ FullyQualifiedErrorId : PathNotFound,Microsoft.PowerShell.Commands.GetContentCommand"
+        },
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:16358",
+          "end_line_no": 16358,
+          "end_timestamp": "2026-03-06T00:32:41.859Z",
+          "rule_ids": [
+            "code_location.explicit"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:1420",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:16344",
+          "start_line_no": 16344,
+          "start_timestamp": "2026-03-06T00:32:07.778Z",
+          "statement": "+ FullyQualifiedErrorId : PathNotFound,Microsoft.PowerShell.Commands.GetContentCommand"
+        }
+      ]
+    },
+    {
+      "citation_id": "item-code_location-6",
+      "item_keys": [
+        "cross-project:code_location:daded0f9d0f83394"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-code_location-6",
+      "provenance_refs": [
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:5627",
+          "end_line_no": 5627,
+          "end_timestamp": "2026-03-03T19:35:13.039Z",
+          "rule_ids": [
+            "code_location.detected"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:500",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:5607",
+          "start_line_no": 5607,
+          "start_timestamp": "2026-03-03T19:34:31.482Z",
+          "statement": "- prod-grok-backend.json: c:\\Users\\Fabio\\AppData\\Local\\Temp\\e2ddf759-eba7-489f-8946-d78e822532bd_6496f4fc-d714-437a-bcbc-a845241a02b7.zip.2bd\\ttl\\30d\\export_data\\0ddfd3a1-9485-4b4a-b5a8-ebd1be61b56b\\prod-grok-backend.json"
+        },
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:5688",
+          "end_line_no": 5688,
+          "end_timestamp": "2026-03-03T20:35:43.883Z",
+          "rule_ids": [
+            "code_location.detected"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:510",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:5682",
+          "start_line_no": 5682,
+          "start_timestamp": "2026-03-03T20:34:40.927Z",
+          "statement": "- prod-grok-backend.json: c:\\Users\\Fabio\\AppData\\Local\\Temp\\e2ddf759-eba7-489f-8946-d78e822532bd_6496f4fc-d714-437a-bcbc-a845241a02b7.zip.2bd\\ttl\\30d\\export_data\\0ddfd3a1-9485-4b4a-b5a8-ebd1be61b56b\\prod-grok-backend.json"
+        },
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:5694",
+          "end_line_no": 5694,
+          "end_timestamp": "2026-03-03T21:16:15.038Z",
+          "rule_ids": [
+            "code_location.detected"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:513",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:5694",
+          "start_line_no": 5694,
+          "start_timestamp": "2026-03-03T21:16:15.038Z",
+          "statement": "- prod-grok-backend.json: c:\\Users\\Fabio\\AppData\\Local\\Temp\\e2ddf759-eba7-489f-8946-d78e822532bd_6496f4fc-d714-437a-bcbc-a845241a02b7.zip.2bd\\ttl\\30d\\export_data\\0ddfd3a1-9485-4b4a-b5a8-ebd1be61b56b\\prod-grok-backend.json"
+        }
+      ]
+    },
+    {
+      "citation_id": "item-code_location-7",
+      "item_keys": [
+        "cross-project:code_location:254b04cc22c49f58"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-code_location-7",
+      "provenance_refs": [
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:3189",
+          "end_line_no": 3189,
+          "end_timestamp": "2026-04-13T04:28:23.507Z",
+          "rule_ids": [
+            "code_location.detected"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:656",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:3186",
+          "start_line_no": 3186,
+          "start_timestamp": "2026-04-13T04:26:02.212Z",
+          "statement": "- `--config` default `config/refresh_config.json`"
+        },
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:3189",
+          "end_line_no": 3189,
+          "end_timestamp": "2026-04-13T04:28:23.507Z",
+          "rule_ids": [
+            "code_location.detected"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:656",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:3186",
+          "start_line_no": 3186,
+          "start_timestamp": "2026-04-13T04:26:02.212Z",
+          "statement": "- New config: `config/refresh_config.json`"
+        },
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:3192",
+          "end_line_no": 3192,
+          "end_timestamp": "2026-04-13T04:28:23.512Z",
+          "rule_ids": [
+            "code_location.detected"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:658",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:3192",
+          "start_line_no": 3192,
+          "start_timestamp": "2026-04-13T04:28:23.512Z",
+          "statement": "- `--config` default `config/refresh_config.json`"
+        }
+      ]
+    },
+    {
+      "citation_id": "item-code_location-8",
+      "item_keys": [
+        "cross-project:code_location:4ed8e63d033fb75d"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-code_location-8",
+      "provenance_refs": [
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:3189",
+          "end_line_no": 3189,
+          "end_timestamp": "2026-04-13T04:28:23.507Z",
+          "rule_ids": [
+            "code_location.detected"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:656",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:3186",
+          "start_line_no": 3186,
+          "start_timestamp": "2026-04-13T04:26:02.212Z",
+          "statement": "- `audits/refresh_notices.jsonl`"
+        },
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:3192",
+          "end_line_no": 3192,
+          "end_timestamp": "2026-04-13T04:28:23.512Z",
+          "rule_ids": [
+            "code_location.detected"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:658",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:3192",
+          "start_line_no": 3192,
+          "start_timestamp": "2026-04-13T04:28:23.512Z",
+          "statement": "- `audits/refresh_notices.jsonl`"
+        },
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:3194",
+          "end_line_no": 3194,
+          "end_timestamp": "2026-04-13T04:28:26.106Z",
+          "rule_ids": [
+            "code_location.detected"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:659",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:3193",
+          "start_line_no": 3193,
+          "start_timestamp": "2026-04-13T04:28:23.513Z",
+          "statement": "- `audits/refresh_notices.jsonl`"
+        }
+      ]
+    },
+    {
+      "citation_id": "item-code_location-9",
+      "item_keys": [
+        "cross-project:code_location:86682338e4efe71f"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-code_location-9",
+      "provenance_refs": [
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:3189",
+          "end_line_no": 3189,
+          "end_timestamp": "2026-04-13T04:28:23.507Z",
+          "rule_ids": [
+            "code_location.detected"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:656",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:3186",
+          "start_line_no": 3186,
+          "start_timestamp": "2026-04-13T04:26:02.212Z",
+          "statement": "- `refresh` reads `state/source_registry.json` before and after discovery and derives `changed_source_ids` from any source with:"
+        },
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:3192",
+          "end_line_no": 3192,
+          "end_timestamp": "2026-04-13T04:28:23.512Z",
+          "rule_ids": [
+            "code_location.detected"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:658",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:3192",
+          "start_line_no": 3192,
+          "start_timestamp": "2026-04-13T04:28:23.512Z",
+          "statement": "- `refresh` reads `state/source_registry.json` before and after discovery and derives `changed_source_ids` from any source with:"
+        },
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:3194",
+          "end_line_no": 3194,
+          "end_timestamp": "2026-04-13T04:28:26.106Z",
+          "rule_ids": [
+            "code_location.detected"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:659",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:3193",
+          "start_line_no": 3193,
+          "start_timestamp": "2026-04-13T04:28:23.513Z",
+          "statement": "- `refresh` reads `state/source_registry.json` before and after discovery and derives `changed_source_ids` from any source with:"
+        }
+      ]
+    },
+    {
+      "citation_id": "item-code_location-10",
+      "item_keys": [
+        "cross-project:code_location:10663f90e4db1027"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-code_location-10",
+      "provenance_refs": [
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:3189",
+          "end_line_no": 3189,
+          "end_timestamp": "2026-04-13T04:28:23.507Z",
+          "rule_ids": [
+            "code_location.detected"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:656",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:3186",
+          "start_line_no": 3186,
+          "start_timestamp": "2026-04-13T04:26:02.212Z",
+          "statement": "- `state/refresh_runs.jsonl`"
+        },
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:3192",
+          "end_line_no": 3192,
+          "end_timestamp": "2026-04-13T04:28:23.512Z",
+          "rule_ids": [
+            "code_location.detected"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:658",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:3192",
+          "start_line_no": 3192,
+          "start_timestamp": "2026-04-13T04:28:23.512Z",
+          "statement": "- `state/refresh_runs.jsonl`"
+        },
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:3194",
+          "end_line_no": 3194,
+          "end_timestamp": "2026-04-13T04:28:26.106Z",
+          "rule_ids": [
+            "code_location.detected"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:659",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:3193",
+          "start_line_no": 3193,
+          "start_timestamp": "2026-04-13T04:28:23.513Z",
+          "statement": "- `state/refresh_runs.jsonl`"
+        }
+      ]
+    },
+    {
+      "citation_id": "item-code_location-11",
+      "item_keys": [
+        "cross-project:code_location:1ac0b20787bf6100"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-code_location-11",
+      "provenance_refs": [
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:3189",
+          "end_line_no": 3189,
+          "end_timestamp": "2026-04-13T04:28:23.507Z",
+          "rule_ids": [
+            "code_location.detected"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:656",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:3186",
+          "start_line_no": 3186,
+          "start_timestamp": "2026-04-13T04:26:02.212Z",
+          "statement": "- `state/refresh_state.json`"
+        },
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:3192",
+          "end_line_no": 3192,
+          "end_timestamp": "2026-04-13T04:28:23.512Z",
+          "rule_ids": [
+            "code_location.detected"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:658",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:3192",
+          "start_line_no": 3192,
+          "start_timestamp": "2026-04-13T04:28:23.512Z",
+          "statement": "- `state/refresh_state.json`"
+        },
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:3194",
+          "end_line_no": 3194,
+          "end_timestamp": "2026-04-13T04:28:26.106Z",
+          "rule_ids": [
+            "code_location.detected"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:659",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:3193",
+          "start_line_no": 3193,
+          "start_timestamp": "2026-04-13T04:28:23.513Z",
+          "statement": "- `state/refresh_state.json`"
+        }
+      ]
+    },
+    {
+      "citation_id": "item-code_location-12",
+      "item_keys": [
+        "cross-project:code_location:37eb6cd467ea8167"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-code_location-12",
+      "provenance_refs": [
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:1600",
+          "end_line_no": 1600,
+          "end_timestamp": "2026-04-13T02:34:11.753Z",
+          "rule_ids": [
+            "code_location.detected"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:360",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:1593",
+          "start_line_no": 1593,
+          "start_timestamp": "2026-04-13T02:33:51.708Z",
+          "statement": "- `audits/wiki_notices.jsonl`"
+        },
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:1605",
+          "end_line_no": 1605,
+          "end_timestamp": "2026-04-13T02:35:40.543Z",
+          "rule_ids": [
+            "code_location.detected"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:361",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:1601",
+          "start_line_no": 1601,
+          "start_timestamp": "2026-04-13T02:34:11.753Z",
+          "statement": "- `audits/wiki_notices.jsonl`"
+        }
+      ]
+    },
+    {
+      "citation_id": "item-code_location-13",
+      "item_keys": [
+        "cross-project:code_location:d51ebe4de739e677"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-code_location-13",
+      "provenance_refs": [
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:1600",
+          "end_line_no": 1600,
+          "end_timestamp": "2026-04-13T02:34:11.753Z",
+          "rule_ids": [
+            "code_location.detected"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:360",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:1593",
+          "start_line_no": 1593,
+          "start_timestamp": "2026-04-13T02:33:51.708Z",
+          "statement": "- `state/wiki_runs.jsonl`"
+        },
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:1605",
+          "end_line_no": 1605,
+          "end_timestamp": "2026-04-13T02:35:40.543Z",
+          "rule_ids": [
+            "code_location.detected"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:361",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:1601",
+          "start_line_no": 1601,
+          "start_timestamp": "2026-04-13T02:34:11.753Z",
+          "statement": "- `state/wiki_runs.jsonl`"
+        }
+      ]
+    },
+    {
+      "citation_id": "item-code_location-14",
+      "item_keys": [
+        "cross-project:code_location:e5dbbe3eace00141"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-code_location-14",
+      "provenance_refs": [
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:1600",
+          "end_line_no": 1600,
+          "end_timestamp": "2026-04-13T02:34:11.753Z",
+          "rule_ids": [
+            "code_location.detected"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:360",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:1593",
+          "start_line_no": 1593,
+          "start_timestamp": "2026-04-13T02:33:51.708Z",
+          "statement": "- `state/wiki_state.json`"
+        },
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:1605",
+          "end_line_no": 1605,
+          "end_timestamp": "2026-04-13T02:35:40.543Z",
+          "rule_ids": [
+            "code_location.detected"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:361",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:1601",
+          "start_line_no": 1601,
+          "start_timestamp": "2026-04-13T02:34:11.753Z",
+          "statement": "- `state/wiki_state.json`"
+        }
+      ]
+    },
+    {
+      "citation_id": "item-code_location-15",
+      "item_keys": [
+        "cross-project:code_location:84f7178ddc36c6af"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-code_location-15",
+      "provenance_refs": [
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:1558",
+          "end_line_no": 1558,
+          "end_timestamp": "2026-04-13T02:31:15.681Z",
+          "rule_ids": [
+            "code_location.explicit"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:353",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:1552",
+          "start_line_no": 1552,
+          "start_timestamp": "2026-04-13T02:30:32.427Z",
+          "statement": "I\u2019m fixing that and then adding a focused `test_wiki.py` file that exercises the full discovery\u2192wiki path with mocked synthesis."
+        }
+      ]
+    },
+    {
+      "citation_id": "item-code_location-16",
+      "item_keys": [
+        "cross-project:code_location:ec5168978add80d0"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-code_location-16",
+      "provenance_refs": [
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:1280",
+          "end_line_no": 1280,
+          "end_timestamp": "2026-04-13T01:30:06.455Z",
+          "rule_ids": [
+            "code_location.detected"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:279",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:1275",
+          "start_line_no": 1275,
+          "start_timestamp": "2026-04-13T01:29:46.124Z",
+          "statement": "- `audits/extraction_notices.jsonl`"
+        },
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:1285",
+          "end_line_no": 1285,
+          "end_timestamp": "2026-04-13T01:34:02.654Z",
+          "rule_ids": [
+            "code_location.detected"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:280",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:1281",
+          "start_line_no": 1281,
+          "start_timestamp": "2026-04-13T01:30:06.455Z",
+          "statement": "- `audits/extraction_notices.jsonl`"
+        }
+      ]
+    },
+    {
+      "citation_id": "item-code_location-17",
+      "item_keys": [
+        "cross-project:code_location:36f8dbabe00d530e"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-code_location-17",
+      "provenance_refs": [
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:1280",
+          "end_line_no": 1280,
+          "end_timestamp": "2026-04-13T01:30:06.455Z",
+          "rule_ids": [
+            "code_location.detected"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:279",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:1275",
+          "start_line_no": 1275,
+          "start_timestamp": "2026-04-13T01:29:46.124Z",
+          "statement": "- `state/extraction_runs.jsonl`"
+        },
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:1285",
+          "end_line_no": 1285,
+          "end_timestamp": "2026-04-13T01:34:02.654Z",
+          "rule_ids": [
+            "code_location.detected"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:280",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:1281",
+          "start_line_no": 1281,
+          "start_timestamp": "2026-04-13T01:30:06.455Z",
+          "statement": "- `state/extraction_runs.jsonl`"
+        }
+      ]
+    },
+    {
+      "citation_id": "item-code_location-18",
+      "item_keys": [
+        "cross-project:code_location:7a04c66122af8115"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-code_location-18",
+      "provenance_refs": [
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:1280",
+          "end_line_no": 1280,
+          "end_timestamp": "2026-04-13T01:30:06.455Z",
+          "rule_ids": [
+            "code_location.detected"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:279",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:1275",
+          "start_line_no": 1275,
+          "start_timestamp": "2026-04-13T01:29:46.124Z",
+          "statement": "- `state/extraction_state.json`"
+        },
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:1285",
+          "end_line_no": 1285,
+          "end_timestamp": "2026-04-13T01:34:02.654Z",
+          "rule_ids": [
+            "code_location.detected"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:280",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:1281",
+          "start_line_no": 1281,
+          "start_timestamp": "2026-04-13T01:30:06.455Z",
+          "statement": "- `state/extraction_state.json`"
+        }
+      ]
+    },
+    {
+      "citation_id": "item-code_location-19",
+      "item_keys": [
+        "cross-project:code_location:ea4112f3a17cc438"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-code_location-19",
+      "provenance_refs": [
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:940",
+          "end_line_no": 940,
+          "end_timestamp": "2026-04-13T00:39:27.116Z",
+          "rule_ids": [
+            "code_location.detected"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:209",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:930",
+          "start_line_no": 930,
+          "start_timestamp": "2026-04-13T00:39:13.026Z",
+          "statement": "- Validation passed for the relevant scope: `python -m unittest tests.test_normalization tests.test_segmentation tests.test_classification -v` completed successfully."
+        },
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:940",
+          "end_line_no": 940,
+          "end_timestamp": "2026-04-13T00:39:27.116Z",
+          "rule_ids": [
+            "code_location.detected"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:209",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:930",
+          "start_line_no": 930,
+          "start_timestamp": "2026-04-13T00:39:13.026Z",
+          "statement": "python -m unittest tests.test_normalization tests.test_segmentation tests.test_classification -v"
+        },
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:945",
+          "end_line_no": 945,
+          "end_timestamp": "2026-04-13T00:42:55.037Z",
+          "rule_ids": [
+            "code_location.detected"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:210",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:941",
+          "start_line_no": 941,
+          "start_timestamp": "2026-04-13T00:39:27.117Z",
+          "statement": "- Validation passed for the relevant scope: `python -m unittest tests.test_normalization tests.test_segmentation tests.test_classification -v` completed successfully."
+        }
+      ]
+    },
+    {
+      "citation_id": "item-code_location-20",
+      "item_keys": [
+        "cross-project:code_location:2c7c9c76b6d2758d"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-code_location-20",
+      "provenance_refs": [
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:762",
+          "end_line_no": 762,
+          "end_timestamp": "2026-04-13T00:11:26.728Z",
+          "rule_ids": [
+            "code_location.detected"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:171",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:762",
+          "start_line_no": 762,
+          "start_timestamp": "2026-04-13T00:11:26.728Z",
+          "statement": "- `audits/classification_notices.jsonl` for low-confidence / unclassified / conflicting cases"
+        },
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:766",
+          "end_line_no": 766,
+          "end_timestamp": "2026-04-13T00:22:52.289Z",
+          "rule_ids": [
+            "code_location.detected"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:172",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:763",
+          "start_line_no": 763,
+          "start_timestamp": "2026-04-13T00:11:26.729Z",
+          "statement": "- `audits/classification_notices.jsonl` for low-confidence / unclassified / conflicting cases"
+        }
+      ]
+    },
+    {
+      "citation_id": "item-code_location-21",
+      "item_keys": [
+        "cross-project:code_location:bca5f51206431ed6"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-code_location-21",
+      "provenance_refs": [
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:762",
+          "end_line_no": 762,
+          "end_timestamp": "2026-04-13T00:11:26.728Z",
+          "rule_ids": [
+            "code_location.detected"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:171",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:762",
+          "start_line_no": 762,
+          "start_timestamp": "2026-04-13T00:11:26.728Z",
+          "statement": "- `classified/sources/<source_id>/segments.jsonl`"
+        },
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:766",
+          "end_line_no": 766,
+          "end_timestamp": "2026-04-13T00:22:52.289Z",
+          "rule_ids": [
+            "code_location.detected"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:172",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:763",
+          "start_line_no": 763,
+          "start_timestamp": "2026-04-13T00:11:26.729Z",
+          "statement": "- `classified/sources/<source_id>/segments.jsonl`"
+        }
+      ]
+    },
+    {
+      "citation_id": "item-code_location-22",
+      "item_keys": [
+        "cross-project:code_location:2951c44156e0ac4d"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-code_location-22",
+      "provenance_refs": [
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:762",
+          "end_line_no": 762,
+          "end_timestamp": "2026-04-13T00:11:26.728Z",
+          "rule_ids": [
+            "code_location.detected"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:171",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:762",
+          "start_line_no": 762,
+          "start_timestamp": "2026-04-13T00:11:26.728Z",
+          "statement": "- `classified/sources/<source_id>/stats.json`"
+        },
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:766",
+          "end_line_no": 766,
+          "end_timestamp": "2026-04-13T00:22:52.289Z",
+          "rule_ids": [
+            "code_location.detected"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:172",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:763",
+          "start_line_no": 763,
+          "start_timestamp": "2026-04-13T00:11:26.729Z",
+          "statement": "- `classified/sources/<source_id>/stats.json`"
+        }
+      ]
+    },
+    {
+      "citation_id": "item-code_location-23",
+      "item_keys": [
+        "cross-project:code_location:3fb1af7a67bed036"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-code_location-23",
+      "provenance_refs": [
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:762",
+          "end_line_no": 762,
+          "end_timestamp": "2026-04-13T00:11:26.728Z",
+          "rule_ids": [
+            "code_location.detected"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:171",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:762",
+          "start_line_no": 762,
+          "start_timestamp": "2026-04-13T00:11:26.728Z",
+          "statement": "- `state/classification_runs.jsonl`"
+        },
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:766",
+          "end_line_no": 766,
+          "end_timestamp": "2026-04-13T00:22:52.289Z",
+          "rule_ids": [
+            "code_location.detected"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:172",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:763",
+          "start_line_no": 763,
+          "start_timestamp": "2026-04-13T00:11:26.729Z",
+          "statement": "- `state/classification_runs.jsonl`"
+        }
+      ]
+    },
+    {
+      "citation_id": "item-code_location-24",
+      "item_keys": [
+        "cross-project:code_location:e56473a31a39e1b6"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-code_location-24",
+      "provenance_refs": [
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:517",
+          "end_line_no": 517,
+          "end_timestamp": "2026-04-12T23:32:14.480Z",
+          "rule_ids": [
+            "code_location.detected"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:120",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:516",
+          "start_line_no": 516,
+          "start_timestamp": "2026-04-12T23:32:06.469Z",
+          "statement": "- `state/segmentation_state.json`"
+        },
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:742",
+          "end_line_no": 742,
+          "end_timestamp": "2026-04-13T00:10:33.601Z",
+          "rule_ids": [
+            "code_location.detected"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:166",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:739",
+          "start_line_no": 739,
+          "start_timestamp": "2026-04-12T23:56:11.489Z",
+          "statement": "- writes `session_flow.json`, `stats.json`, `state/segmentation_state.json`, and `state/segmentation_runs.jsonl`"
+        }
+      ]
+    },
+    {
+      "citation_id": "item-code_location-25",
+      "item_keys": [
+        "cross-project:code_location:83c74456a5c0e598"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-code_location-25",
+      "provenance_refs": [
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:517",
+          "end_line_no": 517,
+          "end_timestamp": "2026-04-12T23:32:14.480Z",
+          "rule_ids": [
+            "code_location.detected"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:120",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:516",
+          "start_line_no": 516,
+          "start_timestamp": "2026-04-12T23:32:06.469Z",
+          "statement": "- `state/segmentation_runs.jsonl`"
+        }
+      ]
+    },
+    {
+      "citation_id": "item-code_location-26",
+      "item_keys": [
+        "cross-project:code_location:204d87edab04d5d8"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-code_location-26",
+      "provenance_refs": [
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:494",
+          "end_line_no": 494,
+          "end_timestamp": "2026-04-12T23:31:20.906Z",
+          "rule_ids": [
+            "code_location.detected"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:116",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:489",
+          "start_line_no": 489,
+          "start_timestamp": "2026-04-12T23:29:24.670Z",
+          "statement": "`C:\\Users\\Fabio\\.codex\\sessions`"
+        }
+      ]
+    },
+    {
+      "citation_id": "item-code_location-27",
+      "item_keys": [
+        "cross-project:code_location:1b5429e249a0750a"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-code_location-27",
+      "provenance_refs": [
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:69377",
+          "end_line_no": 69377,
+          "end_timestamp": "2026-03-15T12:00:11.009Z",
+          "rule_ids": [
+            "code_location.detected"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:10249",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:69359",
+          "start_line_no": 69359,
+          "start_timestamp": "2026-03-15T12:00:00.907Z",
+          "statement": "I\u2019ll quickly verify current `/` response and local `dist/ui.js` contents from host and container match."
+        }
+      ]
+    },
+    {
+      "citation_id": "item-code_location-28",
+      "item_keys": [
+        "cross-project:code_location:d6a1e081a3e33dca"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-code_location-28",
+      "provenance_refs": [
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:61238",
+          "end_line_no": 61238,
+          "end_timestamp": "2026-03-13T20:49:08.126Z",
+          "rule_ids": [
+            "code_location.explicit"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:8796",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:61232",
+          "start_line_no": 61232,
+          "start_timestamp": "2026-03-13T20:48:55.693Z",
+          "statement": "I\u2019m resuming on the narrow path we already scoped: validate the latest `v2_experiments.ts` patch, then either keep the miner running or fix the next real bottleneck and rerun."
+        }
+      ]
+    },
+    {
+      "citation_id": "item-code_location-29",
+      "item_keys": [
+        "cross-project:code_location:5332c38feafbfe33"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-code_location-29",
+      "provenance_refs": [
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:57588",
+          "end_line_no": 57588,
+          "end_timestamp": "2026-03-13T12:28:37.087Z",
+          "rule_ids": [
+            "code_location.explicit"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:8101",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:57582",
+          "start_line_no": 57582,
+          "start_timestamp": "2026-03-13T12:28:24.888Z",
+          "statement": "Implementing v1.9 in the scoped files only: `src/v2_types.ts`, `src/v2_ask.ts`, `src/v2_experiments.ts`, and `src/ui.ts`."
+        }
+      ]
+    },
+    {
+      "citation_id": "item-code_location-30",
+      "item_keys": [
+        "cross-project:code_location:438d50336c140960"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-code_location-30",
+      "provenance_refs": [
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:57249",
+          "end_line_no": 57249,
+          "end_timestamp": "2026-03-13T12:08:42.868Z",
+          "rule_ids": [
+            "code_location.detected"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:8047",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:57242",
+          "start_line_no": 57242,
+          "start_timestamp": "2026-03-13T12:01:54.580Z",
+          "statement": "In `src/v2_ask.ts` and `src/v2_types.ts`:"
+        }
+      ]
+    },
+    {
+      "citation_id": "item-code_location-31",
+      "item_keys": [
+        "cross-project:code_location:a6ed6e22c239d7eb"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-code_location-31",
+      "provenance_refs": [
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:20915",
+          "end_line_no": 20915,
+          "end_timestamp": "2026-03-06T21:22:00.003Z",
+          "rule_ids": [
+            "code_location.explicit"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:1989",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:20910",
+          "start_line_no": 20910,
+          "start_timestamp": "2026-03-06T21:21:49.354Z",
+          "statement": "(file: C:/Users/Fabio/.codex/skills/.system/skill-creator/SKILL.md)"
+        }
+      ]
+    },
+    {
+      "citation_id": "item-code_location-32",
+      "item_keys": [
+        "cross-project:code_location:d8c39ff74733f2be"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-code_location-32",
+      "provenance_refs": [
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:20915",
+          "end_line_no": 20915,
+          "end_timestamp": "2026-03-06T21:22:00.003Z",
+          "rule_ids": [
+            "code_location.explicit"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:1989",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:20910",
+          "start_line_no": 20910,
+          "start_timestamp": "2026-03-06T21:21:49.354Z",
+          "statement": "(file: C:/Users/Fabio/.codex/skills/.system/skill-installer/SKILL.md)"
+        }
+      ]
+    },
+    {
+      "citation_id": "item-code_location-33",
+      "item_keys": [
+        "cross-project:code_location:83d54b094551d701"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-code_location-33",
+      "provenance_refs": [
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:20915",
+          "end_line_no": 20915,
+          "end_timestamp": "2026-03-06T21:22:00.003Z",
+          "rule_ids": [
+            "code_location.explicit"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:1989",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:20910",
+          "start_line_no": 20910,
+          "start_timestamp": "2026-03-06T21:21:49.354Z",
+          "statement": "A skill is a set of local instructions to follow that is stored in a `SKILL.md` file."
+        },
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:20915",
+          "end_line_no": 20915,
+          "end_timestamp": "2026-03-06T21:22:00.003Z",
+          "rule_ids": [
+            "code_location.explicit"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:1989",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:20910",
+          "start_line_no": 20910,
+          "start_timestamp": "2026-03-06T21:21:49.354Z",
+          "statement": "3) If `SKILL.md` points to extra folders such as `references/`, load only the specific files needed for the request"
+        },
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:20915",
+          "end_line_no": 20915,
+          "end_timestamp": "2026-03-06T21:22:00.003Z",
+          "rule_ids": [
+            "code_location.explicit"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:1989",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:20910",
+          "start_line_no": 20910,
+          "start_timestamp": "2026-03-06T21:21:49.354Z",
+          "statement": "- Avoid deep reference-chasing: prefer opening only files directly linked from `SKILL.md` unless you're blocked."
+        }
+      ]
+    },
+    {
+      "citation_id": "item-code_location-34",
+      "item_keys": [
+        "cross-project:code_location:1b4f4a8439c6fbda"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-code_location-34",
+      "provenance_refs": [
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:20909",
+          "end_line_no": 20909,
+          "end_timestamp": "2026-03-06T21:21:49.354Z",
+          "rule_ids": [
+            "code_location.explicit"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:1988",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:20902",
+          "start_line_no": 20902,
+          "start_timestamp": "2026-03-06T21:11:32.292Z",
+          "statement": "https://api.python.langchain.com/en/latest/langchain/retrievers/langchain.retrievers.parent_document_retriever.ParentDocumentRetriever.html"
+        }
+      ]
+    },
+    {
+      "citation_id": "item-code_location-35",
+      "item_keys": [
+        "cross-project:code_location:9ad7118c4dedbf01"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-code_location-35",
+      "provenance_refs": [
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:20909",
+          "end_line_no": 20909,
+          "end_timestamp": "2026-03-06T21:21:49.354Z",
+          "rule_ids": [
+            "code_location.detected"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:1988",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:20902",
+          "start_line_no": 20902,
+          "start_timestamp": "2026-03-06T21:11:32.292Z",
+          "statement": "https://arxiv.org/abs/2104.08663"
+        }
+      ]
+    },
+    {
+      "citation_id": "item-code_location-36",
+      "item_keys": [
+        "cross-project:code_location:6405b40263ce01b6"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-code_location-36",
+      "provenance_refs": [
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:20909",
+          "end_line_no": 20909,
+          "end_timestamp": "2026-03-06T21:21:49.354Z",
+          "rule_ids": [
+            "code_location.detected"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:1988",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:20902",
+          "start_line_no": 20902,
+          "start_timestamp": "2026-03-06T21:11:32.292Z",
+          "statement": "https://arxiv.org/abs/2501.13956"
+        }
+      ]
+    },
+    {
+      "citation_id": "item-code_location-37",
+      "item_keys": [
+        "cross-project:code_location:df02548e91efcfd4"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-code_location-37",
+      "provenance_refs": [
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:20909",
+          "end_line_no": 20909,
+          "end_timestamp": "2026-03-06T21:21:49.354Z",
+          "rule_ids": [
+            "code_location.detected"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:1988",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:20902",
+          "start_line_no": 20902,
+          "start_timestamp": "2026-03-06T21:11:32.292Z",
+          "statement": "https://docs.ragas.io/en/v0.4.3/concepts/metrics/"
+        }
+      ]
+    },
+    {
+      "citation_id": "item-code_location-38",
+      "item_keys": [
+        "cross-project:code_location:4ef6a3921c6fe72a"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-code_location-38",
+      "provenance_refs": [
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:17487",
+          "end_line_no": 17487,
+          "end_timestamp": "2026-03-06T13:48:45.101Z",
+          "rule_ids": [
+            "code_location.detected"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:1526",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:17481",
+          "start_line_no": 17481,
+          "start_timestamp": "2026-03-06T13:45:33.500Z",
+          "statement": "Add `src/structure_parser.ts` (deterministic parser + canonicalizer)."
+        }
+      ]
+    },
+    {
+      "citation_id": "item-code_location-39",
+      "item_keys": [
+        "cross-project:code_location:56b9d0a42a14dda0"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-code_location-39",
+      "provenance_refs": [
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:17487",
+          "end_line_no": 17487,
+          "end_timestamp": "2026-03-06T13:48:45.101Z",
+          "rule_ids": [
+            "code_location.explicit"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:1526",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:17481",
+          "start_line_no": 17481,
+          "start_timestamp": "2026-03-06T13:45:33.500Z",
+          "statement": "In `metadata_provider.ts`, if `content_kind=table`, skip strict model-only path and merge parser output + fallback metadata."
+        }
+      ]
+    },
+    {
+      "citation_id": "item-code_location-40",
+      "item_keys": [
+        "cross-project:code_location:81d0cc11d4092e36"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-code_location-40",
+      "provenance_refs": [
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:16358",
+          "end_line_no": 16358,
+          "end_timestamp": "2026-03-06T00:32:41.859Z",
+          "rule_ids": [
+            "code_location.detected"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:1420",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:16344",
+          "start_line_no": 16344,
+          "start_timestamp": "2026-03-06T00:32:07.778Z",
+          "statement": "+ CategoryInfo : ObjectNotFound: (C:\\Users\\Fabio\\..._worker.err.log:String) [Get-Content], Ite"
+        }
+      ]
+    },
+    {
+      "citation_id": "item-code_location-41",
+      "item_keys": [
+        "cross-project:code_location:5ffd00ac046aeb9e"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-code_location-41",
+      "provenance_refs": [
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:16358",
+          "end_line_no": 16358,
+          "end_timestamp": "2026-03-06T00:32:41.859Z",
+          "rule_ids": [
+            "code_location.detected"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:1420",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:16344",
+          "start_line_no": 16344,
+          "start_timestamp": "2026-03-06T00:32:07.778Z",
+          "statement": "+ CategoryInfo : ObjectNotFound: (C:\\Users\\Fabio\\...ueue_worker.log:String) [Get-Content], Ite"
+        }
+      ]
+    },
+    {
+      "citation_id": "item-code_location-42",
+      "item_keys": [
+        "cross-project:code_location:ff2f64f2ba3c1285"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-code_location-42",
+      "provenance_refs": [
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:12664",
+          "end_line_no": 12664,
+          "end_timestamp": "2026-03-05T14:31:08.425Z",
+          "rule_ids": [
+            "code_location.detected"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:1074",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:12648",
+          "start_line_no": 12648,
+          "start_timestamp": "2026-03-05T14:30:37.670Z",
+          "statement": "+ CategoryInfo : ObjectNotFound: (C:\\Users\\Fabio\\...app_context.log:String) [Get-Content], ItemNotFoundException"
+        }
+      ]
+    },
+    {
+      "citation_id": "item-code_location-43",
+      "item_keys": [
+        "cross-project:code_location:d945ffe2c4290b84"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-code_location-43",
+      "provenance_refs": [
+        {
+          "end_event_id": "019cbacf-74e5-7411-a1ab-6595d49c26a2:3279",
+          "end_line_no": 3279,
+          "end_timestamp": "2026-03-05T04:53:29.129Z",
+          "rule_ids": [
+            "code_location.detected"
+          ],
+          "segment_id": "019cbacf-74e5-7411-a1ab-6595d49c26a2:275",
+          "session_id": "019cbacf-74e5-7411-a1ab-6595d49c26a2",
+          "source_id": "019cbacf-74e5-7411-a1ab-6595d49c26a2",
+          "start_event_id": "019cbacf-74e5-7411-a1ab-6595d49c26a2:3267",
+          "start_line_no": 3267,
+          "start_timestamp": "2026-03-05T04:53:25.608Z",
+          "statement": "I found a likely inconsistency in `docs/operations/runbook.md` around execution actions versus the new Phase 2 lane (`roll`/`adjust_stop`)."
+        }
+      ]
+    },
+    {
+      "citation_id": "item-code_location-44",
+      "item_keys": [
+        "cross-project:code_location:93a6cb136c7f72b6"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-code_location-44",
+      "provenance_refs": [
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:9357",
+          "end_line_no": 9357,
+          "end_timestamp": "2026-03-04T17:50:29.969Z",
+          "rule_ids": [
+            "code_location.explicit"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:807",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:9346",
+          "start_line_no": 9346,
+          "start_timestamp": "2026-03-04T17:50:18.930Z",
+          "statement": "First I\u2019ll inspect current `src/ui/server.ts` and `src/ui/skin.ts` structure, then patch shell/layout, add the new UI summary endpoints, and restyle all modules to the calm minimal system without breaking existing actions."
+        },
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:10609",
+          "end_line_no": 10609,
+          "end_timestamp": "2026-03-04T23:20:56.882Z",
+          "rule_ids": [
+            "code_location.explicit"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:906",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:10608",
+          "start_line_no": 10608,
+          "start_timestamp": "2026-03-04T23:20:56.881Z",
+          "statement": "First I\u2019ll move your local CodexClaw checkout to `main` at `origin/main`, verify the redesigned baseline files, then apply Phase 2 polish in `src/ui/server.ts`, `src/ui/skin.ts`, and the runbook."
+        }
+      ]
+    },
+    {
+      "citation_id": "item-code_location-45",
+      "item_keys": [
+        "cross-project:code_location:e994e7b931ef707b"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-code_location-45",
+      "provenance_refs": [
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:10461",
+          "end_line_no": 10461,
+          "end_timestamp": "2026-03-04T19:40:19.898Z",
+          "rule_ids": [
+            "code_location.detected"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:892",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:10436",
+          "start_line_no": 10436,
+          "start_timestamp": "2026-03-04T19:38:59.482Z",
+          "statement": "I also resolved the CodexClaw merge conflict before merging (in `src/db.ts`) and fixed a merge artifact in `src/config.ts` (duplicate `schedulerEnabled` key), then rebuilt successfully."
+        }
+      ]
+    },
+    {
+      "citation_id": "item-code_location-46",
+      "item_keys": [
+        "cross-project:code_location:e1ef761e983f00fe"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-code_location-46",
+      "provenance_refs": [
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:10152",
+          "end_line_no": 10152,
+          "end_timestamp": "2026-03-04T19:25:03.267Z",
+          "rule_ids": [
+            "code_location.detected"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:875",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:10126",
+          "start_line_no": 10126,
+          "start_timestamp": "2026-03-04T19:23:28.795Z",
+          "statement": "- Updated [daily_repo_sync.ps1](/c:/Users/Fabio/Cursor%20AI%20projects/Projects/daily_repo_sync.ps1)"
+        },
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:10225",
+          "end_line_no": 10225,
+          "end_timestamp": "2026-03-04T19:29:38.964Z",
+          "rule_ids": [
+            "code_location.detected"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:878",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:10208",
+          "start_line_no": 10208,
+          "start_timestamp": "2026-03-04T19:27:57.525Z",
+          "statement": "- [daily_repo_sync.ps1](/c:/Users/Fabio/Cursor%20AI%20projects/Projects/daily_repo_sync.ps1)"
+        }
+      ]
+    },
+    {
+      "citation_id": "item-code_location-47",
+      "item_keys": [
+        "cross-project:code_location:1d9fa8c8e17c821c"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-code_location-47",
+      "provenance_refs": [
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:5797",
+          "end_line_no": 5797,
+          "end_timestamp": "2026-03-03T21:19:26.754Z",
+          "rule_ids": [
+            "code_location.detected"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:521",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:5787",
+          "start_line_no": 5787,
+          "start_timestamp": "2026-03-03T21:19:13.661Z",
+          "statement": "I\u2019ll reopen `src/types.ts` raw and rewrite it cleanly in one pass so we keep type contracts consistent."
+        }
+      ]
+    },
+    {
+      "citation_id": "item-code_location-48",
+      "item_keys": [
+        "cross-project:code_location:ae123493369c03be"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-code_location-48",
+      "provenance_refs": [
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:5627",
+          "end_line_no": 5627,
+          "end_timestamp": "2026-03-03T19:35:13.039Z",
+          "rule_ids": [
+            "code_location.detected"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:500",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:5607",
+          "start_line_no": 5607,
+          "start_timestamp": "2026-03-03T19:34:31.482Z",
+          "statement": "- open_brain_cutover.md: CodexClaw/docs/operations/open_brain_cutover.md"
+        },
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:5688",
+          "end_line_no": 5688,
+          "end_timestamp": "2026-03-03T20:35:43.883Z",
+          "rule_ids": [
+            "code_location.detected"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:510",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:5682",
+          "start_line_no": 5682,
+          "start_timestamp": "2026-03-03T20:34:40.927Z",
+          "statement": "- open_brain_cutover.md: CodexClaw/docs/operations/open_brain_cutover.md"
+        },
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:5694",
+          "end_line_no": 5694,
+          "end_timestamp": "2026-03-03T21:16:15.038Z",
+          "rule_ids": [
+            "code_location.detected"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:513",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:5694",
+          "start_line_no": 5694,
+          "start_timestamp": "2026-03-03T21:16:15.038Z",
+          "statement": "- open_brain_cutover.md: CodexClaw/docs/operations/open_brain_cutover.md"
+        }
+      ]
+    },
+    {
+      "citation_id": "item-code_location-49",
+      "item_keys": [
+        "cross-project:code_location:c48ab18af31f3227"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-code_location-49",
+      "provenance_refs": [
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:5451",
+          "end_line_no": 5451,
+          "end_timestamp": "2026-03-03T18:49:16.847Z",
+          "rule_ids": [
+            "code_location.detected"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:482",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:5441",
+          "start_line_no": 5441,
+          "start_timestamp": "2026-03-03T18:46:53.265Z",
+          "statement": "npm run import:whatsapp -- --input \"D:\\Fabio\\Documents\\AI\\AI Brain\\AI_Brain_Imports\\whatsapp\\whatsappdump.zip\" --namespace personal.main --api-key \"$key\""
+        }
+      ]
+    },
+    {
+      "citation_id": "item-code_location-50",
+      "item_keys": [
+        "cross-project:code_location:0b2c4da1e45510a3"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-code_location-50",
+      "provenance_refs": [
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:4983",
+          "end_line_no": 4983,
+          "end_timestamp": "2026-03-03T14:56:04.891Z",
+          "rule_ids": [
+            "code_location.detected"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:431",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:4973",
+          "start_line_no": 4973,
+          "start_timestamp": "2026-03-03T14:01:29.757Z",
+          "statement": "- 2026-03-03T01-26-46-737Z_8041307210_strategist.md: CodexClaw/store/reports/2026-03-03T01-26-46-737Z_8041307210_strategist.md"
+        }
+      ]
+    },
+    {
+      "citation_id": "item-code_location-51",
+      "item_keys": [
+        "cross-project:code_location:058580cf60ed97d3"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-code_location-51",
+      "provenance_refs": [
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:4983",
+          "end_line_no": 4983,
+          "end_timestamp": "2026-03-03T14:56:04.891Z",
+          "rule_ids": [
+            "code_location.detected"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:431",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:4973",
+          "start_line_no": 4973,
+          "start_timestamp": "2026-03-03T14:01:29.757Z",
+          "statement": "- HANDOFF_2026-03-02.md: CodexClaw/docs/HANDOFF_2026-03-02.md"
+        }
+      ]
+    },
+    {
+      "citation_id": "item-code_location-52",
+      "item_keys": [
+        "cross-project:code_location:3f3b4011c39c10e0"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-code_location-52",
+      "provenance_refs": [
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:4968",
+          "end_line_no": 4968,
+          "end_timestamp": "2026-03-03T06:40:48.713Z",
+          "rule_ids": [
+            "code_location.detected"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:429",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:4968",
+          "start_line_no": 4968,
+          "start_timestamp": "2026-03-03T06:40:48.713Z",
+          "statement": "- [openbrain.ts](\\/c:/Users/Fabio/Cursor%20AI%20projects/Projects/AITrader/apps/approval_ui/src/openbrain.ts)"
+        },
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:4972",
+          "end_line_no": 4972,
+          "end_timestamp": "2026-03-03T14:01:29.745Z",
+          "rule_ids": [
+            "code_location.detected"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:430",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:4969",
+          "start_line_no": 4969,
+          "start_timestamp": "2026-03-03T06:40:48.715Z",
+          "statement": "- [openbrain.ts](\\/c:/Users/Fabio/Cursor%20AI%20projects/Projects/AITrader/apps/approval_ui/src/openbrain.ts)"
+        }
+      ]
+    },
+    {
+      "citation_id": "item-code_location-53",
+      "item_keys": [
+        "cross-project:code_location:cc1a8819596b5bd9"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-code_location-53",
+      "provenance_refs": [
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:10152",
+          "end_line_no": 10152,
+          "end_timestamp": "2026-03-04T19:25:03.267Z",
+          "rule_ids": [
+            "code_location.detected"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:875",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:10126",
+          "start_line_no": 10126,
+          "start_timestamp": "2026-03-04T19:23:28.795Z",
+          "statement": "- `C:\\Users\\Fabio\\Cursor AI projects\\Projects\\sync-logs\\`"
+        },
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:12664",
+          "end_line_no": 12664,
+          "end_timestamp": "2026-03-05T14:31:08.425Z",
+          "rule_ids": [
+            "code_location.detected"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:1074",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:12648",
+          "start_line_no": 12648,
+          "start_timestamp": "2026-03-05T14:30:37.670Z",
+          "statement": "Progress check command not working for me: PS C:\\Users\\Fabio\\Cursor AI projects\\Projects> Get-Content .\\reembed_whatsapp_context.log -Wait -Tail 30"
+        },
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:12664",
+          "end_line_no": 12664,
+          "end_timestamp": "2026-03-05T14:31:08.425Z",
+          "rule_ids": [
+            "code_location.detected"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:1074",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:12648",
+          "start_line_no": 12648,
+          "start_timestamp": "2026-03-05T14:30:37.670Z",
+          "statement": "PS C:\\Users\\Fabio\\Cursor AI projects\\Projects>"
+        }
+      ]
+    },
+    {
+      "citation_id": "item-code_location-54",
+      "item_keys": [
+        "cross-project:code_location:62e324b41d571546"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-code_location-54",
+      "provenance_refs": [
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:3189",
+          "end_line_no": 3189,
+          "end_timestamp": "2026-04-13T04:28:23.507Z",
+          "rule_ids": [
+            "code_location.explicit"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:656",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:3186",
+          "start_line_no": 3186,
+          "start_timestamp": "2026-04-13T04:26:02.212Z",
+          "statement": "- `lock_path = state/refresh.lock.json`"
+        },
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:3189",
+          "end_line_no": 3189,
+          "end_timestamp": "2026-04-13T04:28:23.507Z",
+          "rule_ids": [
+            "code_location.explicit"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:656",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:3186",
+          "start_line_no": 3186,
+          "start_timestamp": "2026-04-13T04:26:02.212Z",
+          "statement": "- ephemeral lock file: `state/refresh.lock.json`"
+        },
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:3192",
+          "end_line_no": 3192,
+          "end_timestamp": "2026-04-13T04:28:23.512Z",
+          "rule_ids": [
+            "code_location.explicit"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:658",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:3192",
+          "start_line_no": 3192,
+          "start_timestamp": "2026-04-13T04:28:23.512Z",
+          "statement": "- `lock_path = state/refresh.lock.json`"
+        }
+      ]
+    },
+    {
+      "citation_id": "item-code_location-55",
+      "item_keys": [
+        "cross-project:code_location:25998cf21416e34a"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-code_location-55",
+      "provenance_refs": [
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:3189",
+          "end_line_no": 3189,
+          "end_timestamp": "2026-04-13T04:28:23.507Z",
+          "rule_ids": [
+            "code_location.detected"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:656",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:3186",
+          "start_line_no": 3186,
+          "start_timestamp": "2026-04-13T04:26:02.212Z",
+          "statement": "- acquire `state/refresh.lock.json` before any phase"
+        },
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:3192",
+          "end_line_no": 3192,
+          "end_timestamp": "2026-04-13T04:28:23.512Z",
+          "rule_ids": [
+            "code_location.detected"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:658",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:3192",
+          "start_line_no": 3192,
+          "start_timestamp": "2026-04-13T04:28:23.512Z",
+          "statement": "- acquire `state/refresh.lock.json` before any phase"
+        },
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:3194",
+          "end_line_no": 3194,
+          "end_timestamp": "2026-04-13T04:28:26.106Z",
+          "rule_ids": [
+            "code_location.detected"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:659",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:3193",
+          "start_line_no": 3193,
+          "start_timestamp": "2026-04-13T04:28:23.513Z",
+          "statement": "- acquire `state/refresh.lock.json` before any phase"
+        }
+      ]
+    },
+    {
+      "citation_id": "item-code_location-56",
+      "item_keys": [
+        "cross-project:code_location:33d4eeafa10ffbc8"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-code_location-56",
+      "provenance_refs": [
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:940",
+          "end_line_no": 940,
+          "end_timestamp": "2026-04-13T00:39:27.116Z",
+          "rule_ids": [
+            "code_location.detected"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:209",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:930",
+          "start_line_no": 930,
+          "start_timestamp": "2026-04-13T00:39:13.026Z",
+          "statement": "- writes `classified/sources/<source_id>/segments.jsonl`, `classified/sources/<source_id>/stats.json`, `state/classification_state.json`, `state/classification_runs.jsonl`, and `audits/classification_notices.jsonl`"
+        },
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:945",
+          "end_line_no": 945,
+          "end_timestamp": "2026-04-13T00:42:55.037Z",
+          "rule_ids": [
+            "code_location.detected"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:210",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:941",
+          "start_line_no": 941,
+          "start_timestamp": "2026-04-13T00:39:27.117Z",
+          "statement": "- writes `classified/sources/<source_id>/segments.jsonl`, `classified/sources/<source_id>/stats.json`, `state/classification_state.json`, `state/classification_runs.jsonl`, and `audits/classification_notices.jsonl`"
+        }
+      ]
+    },
+    {
+      "citation_id": "item-code_location-57",
+      "item_keys": [
+        "cross-project:code_location:82ae0783956f4f29"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-code_location-57",
+      "provenance_refs": [
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:762",
+          "end_line_no": 762,
+          "end_timestamp": "2026-04-13T00:11:26.728Z",
+          "rule_ids": [
+            "code_location.detected"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:171",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:762",
+          "start_line_no": 762,
+          "start_timestamp": "2026-04-13T00:11:26.728Z",
+          "statement": "- `state/classification_state.json`"
+        },
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:766",
+          "end_line_no": 766,
+          "end_timestamp": "2026-04-13T00:22:52.289Z",
+          "rule_ids": [
+            "code_location.detected"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:172",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:763",
+          "start_line_no": 763,
+          "start_timestamp": "2026-04-13T00:11:26.729Z",
+          "statement": "- `state/classification_state.json`"
+        }
+      ]
+    },
+    {
+      "citation_id": "item-code_location-58",
+      "item_keys": [
+        "cross-project:code_location:01e414c9abc7193b"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-code_location-58",
+      "provenance_refs": [
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:57249",
+          "end_line_no": 57249,
+          "end_timestamp": "2026-03-13T12:08:42.868Z",
+          "rule_ids": [
+            "code_location.detected"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:8047",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:57242",
+          "start_line_no": 57242,
+          "start_timestamp": "2026-03-13T12:01:54.580Z",
+          "statement": "In `src/v2_experiments.ts`:"
+        },
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:57249",
+          "end_line_no": 57249,
+          "end_timestamp": "2026-03-13T12:08:42.868Z",
+          "rule_ids": [
+            "code_location.detected"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:8047",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:57242",
+          "start_line_no": 57242,
+          "start_timestamp": "2026-03-13T12:01:54.580Z",
+          "statement": "Extend the evaluation/readiness model in `src/v2_experiments.ts`, `src/v2_types.ts`, and Evolution read models:"
+        },
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:60951",
+          "end_line_no": 60951,
+          "end_timestamp": "2026-03-13T20:26:33.248Z",
+          "rule_ids": [
+            "code_location.detected"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:8742",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:60945",
+          "start_line_no": 60945,
+          "start_timestamp": "2026-03-13T20:26:05.092Z",
+          "statement": "I\u2019m resuming on the narrow scope that was already identified: human WhatsApp ownership/target reasoning and question voice in `src/v2_experiments.ts`, then I\u2019ll validate and restart the miner."
+        }
+      ]
+    },
+    {
+      "citation_id": "item-code_location-59",
+      "item_keys": [
+        "cross-project:code_location:84b41d873dba3c88"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-code_location-59",
+      "provenance_refs": [
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:59194",
+          "end_line_no": 59194,
+          "end_timestamp": "2026-03-13T17:46:24.323Z",
+          "rule_ids": [
+            "code_location.explicit"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:8405",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:59182",
+          "start_line_no": 59182,
+          "start_timestamp": "2026-03-13T17:44:35.694Z",
+          "statement": "I\u2019m patching only the whole-corpus mining path in `src/v2_experiments.ts`."
+        },
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:60532",
+          "end_line_no": 60532,
+          "end_timestamp": "2026-03-13T19:57:18.846Z",
+          "rule_ids": [
+            "code_location.explicit"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:8665",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:60526",
+          "start_line_no": 60526,
+          "start_timestamp": "2026-03-13T19:57:05.870Z",
+          "statement": "I\u2019m resuming inside the exact bottleneck path: WhatsApp human-thread ownership/context resolution and human-safe post-draft domain assignment in `src/v2_experiments.ts`."
+        },
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:60635",
+          "end_line_no": 60635,
+          "end_timestamp": "2026-03-13T20:05:28.690Z",
+          "rule_ids": [
+            "code_location.explicit"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:8686",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:60629",
+          "start_line_no": 60629,
+          "start_timestamp": "2026-03-13T20:05:11.645Z",
+          "statement": "I\u2019m resuming inside the exact bottleneck path: ownership/context resolution for human WhatsApp threads and provisional domain assignment in `src/v2_experiments.ts`."
+        }
+      ]
+    },
+    {
+      "citation_id": "item-code_location-60",
+      "item_keys": [
+        "cross-project:code_location:a2ed6c83484e42d4"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-code_location-60",
+      "provenance_refs": [
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:12664",
+          "end_line_no": 12664,
+          "end_timestamp": "2026-03-05T14:31:08.425Z",
+          "rule_ids": [
+            "code_location.explicit"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:1074",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:12648",
+          "start_line_no": 12648,
+          "start_timestamp": "2026-03-05T14:30:37.670Z",
+          "statement": "Get-Content : Cannot find path 'C:\\Users\\Fabio\\Cursor AI projects\\Projects\\reembed_whatsapp_context.log' because it does not exist."
+        }
+      ]
+    }
+  ],
+  "domain": "cross-project",
+  "input_item_keys": [
+    "cross-project:code_location:5e757e8990aa8684",
+    "cross-project:code_location:91643a6197db1c2c",
+    "cross-project:code_location:69c63c98d6895fc9",
+    "cross-project:code_location:c80f1b8c1a6f29eb",
+    "cross-project:code_location:a6525ef6f0ac019d",
+    "cross-project:code_location:daded0f9d0f83394",
+    "cross-project:code_location:254b04cc22c49f58",
+    "cross-project:code_location:4ed8e63d033fb75d",
+    "cross-project:code_location:86682338e4efe71f",
+    "cross-project:code_location:10663f90e4db1027",
+    "cross-project:code_location:1ac0b20787bf6100",
+    "cross-project:code_location:37eb6cd467ea8167",
+    "cross-project:code_location:d51ebe4de739e677",
+    "cross-project:code_location:e5dbbe3eace00141",
+    "cross-project:code_location:84f7178ddc36c6af",
+    "cross-project:code_location:ec5168978add80d0",
+    "cross-project:code_location:36f8dbabe00d530e",
+    "cross-project:code_location:7a04c66122af8115",
+    "cross-project:code_location:ea4112f3a17cc438",
+    "cross-project:code_location:2c7c9c76b6d2758d",
+    "cross-project:code_location:bca5f51206431ed6",
+    "cross-project:code_location:2951c44156e0ac4d",
+    "cross-project:code_location:3fb1af7a67bed036",
+    "cross-project:code_location:e56473a31a39e1b6",
+    "cross-project:code_location:83c74456a5c0e598",
+    "cross-project:code_location:204d87edab04d5d8",
+    "cross-project:code_location:1b5429e249a0750a",
+    "cross-project:code_location:d6a1e081a3e33dca",
+    "cross-project:code_location:5332c38feafbfe33",
+    "cross-project:code_location:438d50336c140960",
+    "cross-project:code_location:a6ed6e22c239d7eb",
+    "cross-project:code_location:d8c39ff74733f2be",
+    "cross-project:code_location:83d54b094551d701",
+    "cross-project:code_location:1b4f4a8439c6fbda",
+    "cross-project:code_location:9ad7118c4dedbf01",
+    "cross-project:code_location:6405b40263ce01b6",
+    "cross-project:code_location:df02548e91efcfd4",
+    "cross-project:code_location:4ef6a3921c6fe72a",
+    "cross-project:code_location:56b9d0a42a14dda0",
+    "cross-project:code_location:81d0cc11d4092e36",
+    "cross-project:code_location:5ffd00ac046aeb9e",
+    "cross-project:code_location:ff2f64f2ba3c1285",
+    "cross-project:code_location:d945ffe2c4290b84",
+    "cross-project:code_location:93a6cb136c7f72b6",
+    "cross-project:code_location:e994e7b931ef707b",
+    "cross-project:code_location:e1ef761e983f00fe",
+    "cross-project:code_location:1d9fa8c8e17c821c",
+    "cross-project:code_location:ae123493369c03be",
+    "cross-project:code_location:c48ab18af31f3227",
+    "cross-project:code_location:0b2c4da1e45510a3",
+    "cross-project:code_location:058580cf60ed97d3",
+    "cross-project:code_location:3f3b4011c39c10e0",
+    "cross-project:code_location:cc1a8819596b5bd9",
+    "cross-project:code_location:62e324b41d571546",
+    "cross-project:code_location:25998cf21416e34a",
+    "cross-project:code_location:33d4eeafa10ffbc8",
+    "cross-project:code_location:82ae0783956f4f29",
+    "cross-project:code_location:01e414c9abc7193b",
+    "cross-project:code_location:84b41d873dba3c88",
+    "cross-project:code_location:a2ed6c83484e42d4"
+  ],
+  "page_id": "projects/cross-project/code-map",
+  "page_type": "bucket_page",
+  "rendered_page_metadata": {
+    "claim_count": 2,
+    "conflict_count": 8,
+    "related_domains": [
+      "ai-scientist",
+      "ai-trader",
+      "open-brain"
+    ],
+    "related_pages": [
+      {
+        "page_key": "index",
+        "title": "Cross-Project",
+        "wikilink": "[[projects/cross-project/index|Cross-Project]]"
+      },
+      {
+        "page_key": "communication-preferences",
+        "title": "Cross-Project - Communication Preferences",
+        "wikilink": "[[projects/cross-project/communication-preferences|Cross-Project - Communication Preferences]]"
+      },
+      {
+        "page_key": "workflow-rules",
+        "title": "Cross-Project - Workflow Rules",
+        "wikilink": "[[projects/cross-project/workflow-rules|Cross-Project - Workflow Rules]]"
+      },
+      {
+        "page_key": "architecture",
+        "title": "Cross-Project - Architecture",
+        "wikilink": "[[projects/cross-project/architecture|Cross-Project - Architecture]]"
+      },
+      {
+        "page_key": "current-state",
+        "title": "Cross-Project - Current State",
+        "wikilink": "[[projects/cross-project/current-state|Cross-Project - Current State]]"
+      },
+      {
+        "page_key": "tasks",
+        "title": "Cross-Project - Tasks",
+        "wikilink": "[[projects/cross-project/tasks|Cross-Project - Tasks]]"
+      },
+      {
+        "page_key": "outcomes",
+        "title": "Cross-Project - Outcomes",
+        "wikilink": "[[projects/cross-project/outcomes|Cross-Project - Outcomes]]"
+      },
+      {
+        "page_key": "failures",
+        "title": "Cross-Project - Failures",
+        "wikilink": "[[projects/cross-project/failures|Cross-Project - Failures]]"
+      },
+      {
+        "page_key": "decisions",
+        "title": "Cross-Project - Decisions",
+        "wikilink": "[[projects/cross-project/decisions|Cross-Project - Decisions]]"
+      },
+      {
+        "page_key": "next-steps",
+        "title": "Cross-Project - Next Steps",
+        "wikilink": "[[projects/cross-project/next-steps|Cross-Project - Next Steps]]"
+      },
+      {
+        "page_key": "open-questions",
+        "title": "Cross-Project - Open Questions",
+        "wikilink": "[[projects/cross-project/open-questions|Cross-Project - Open Questions]]"
+      }
+    ],
+    "relative_page_path": "projects/cross-project/code-map.md",
+    "source_count": 3,
+    "title": "Cross-Project - Code Map"
+  },
+  "renderer": "obsidian_markdown",
+  "synthesized_claims": [
+    {
+      "claim_id": "claim-1",
+      "confidence": "strong",
+      "latent_type": "codebase_map_abstractions",
+      "provenance_refs": [
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:5627",
+          "end_line_no": 5627,
+          "end_timestamp": "2026-03-03T19:35:13.039Z",
+          "rule_ids": [
+            "code_location.detected"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:500",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:5607",
+          "start_line_no": 5607,
+          "start_timestamp": "2026-03-03T19:34:31.482Z",
+          "statement": "- open_brain_runbook.md: CodexClaw/docs/operations/open_brain_runbook.md"
+        },
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:5688",
+          "end_line_no": 5688,
+          "end_timestamp": "2026-03-03T20:35:43.883Z",
+          "rule_ids": [
+            "code_location.detected"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:510",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:5682",
+          "start_line_no": 5682,
+          "start_timestamp": "2026-03-03T20:34:40.927Z",
+          "statement": "- open_brain_runbook.md: CodexClaw/docs/operations/open_brain_runbook.md"
+        },
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:5694",
+          "end_line_no": 5694,
+          "end_timestamp": "2026-03-03T21:16:15.038Z",
+          "rule_ids": [
+            "code_location.detected"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:513",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:5694",
+          "start_line_no": 5694,
+          "start_timestamp": "2026-03-03T21:16:15.038Z",
+          "statement": "- open_brain_runbook.md: CodexClaw/docs/operations/open_brain_runbook.md"
+        },
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:4983",
+          "end_line_no": 4983,
+          "end_timestamp": "2026-03-03T14:56:04.891Z",
+          "rule_ids": [
+            "code_location.detected"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:431",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:4973",
+          "start_line_no": 4973,
+          "start_timestamp": "2026-03-03T14:01:29.757Z",
+          "statement": "- runbook.md: CodexClaw/docs/operations/runbook.md"
+        },
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:11061",
+          "end_line_no": 11061,
+          "end_timestamp": "2026-03-05T05:22:23.915Z",
+          "rule_ids": [
+            "code_location.detected"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:940",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:11044",
+          "start_line_no": 11044,
+          "start_timestamp": "2026-03-05T05:21:53.540Z",
+          "statement": "- runbook.md: CodexClaw/docs/operations/runbook.md"
+        },
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:11125",
+          "end_line_no": 11125,
+          "end_timestamp": "2026-03-05T05:30:12.326Z",
+          "rule_ids": [
+            "code_location.detected"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:947",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:11115",
+          "start_line_no": 11115,
+          "start_timestamp": "2026-03-05T05:26:48.661Z",
+          "statement": "- runbook.md: CodexClaw/docs/operations/runbook.md"
+        }
+      ],
+      "section_id": "code_location",
+      "supporting_item_ids": [
+        "cross-project:code_location:5e757e8990aa8684",
+        "cross-project:code_location:91643a6197db1c2c"
+      ],
+      "text": "The code location section includes paths to various documentation files such as open_brain_runbook.md and runbook.md."
+    },
+    {
+      "claim_id": "claim-2",
+      "confidence": "strong",
+      "latent_type": "project_identity_and_scope",
+      "provenance_refs": [
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:11061",
+          "end_line_no": 11061,
+          "end_timestamp": "2026-03-05T05:22:23.915Z",
+          "rule_ids": [
+            "code_location.detected"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:940",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:11044",
+          "start_line_no": 11044,
+          "start_timestamp": "2026-03-05T05:21:53.540Z",
+          "statement": "- strategist.md: CodexClaw/personas/strategist.md"
+        },
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:11125",
+          "end_line_no": 11125,
+          "end_timestamp": "2026-03-05T05:30:12.326Z",
+          "rule_ids": [
+            "code_location.detected"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:947",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:11115",
+          "start_line_no": 11115,
+          "start_timestamp": "2026-03-05T05:26:48.661Z",
+          "statement": "- strategist.md: CodexClaw/personas/strategist.md"
+        },
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:11142",
+          "end_line_no": 11142,
+          "end_timestamp": "2026-03-05T05:30:44.585Z",
+          "rule_ids": [
+            "code_location.detected"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:948",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:11126",
+          "start_line_no": 11126,
+          "start_timestamp": "2026-03-05T05:30:12.327Z",
+          "statement": "- strategist.md: CodexClaw/personas/strategist.md"
+        },
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:11061",
+          "end_line_no": 11061,
+          "end_timestamp": "2026-03-05T05:22:23.915Z",
+          "rule_ids": [
+            "code_location.detected"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:940",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:11044",
+          "start_line_no": 11044,
+          "start_timestamp": "2026-03-05T05:21:53.540Z",
+          "statement": "- research.md: CodexClaw/personas/research.md"
+        },
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:11125",
+          "end_line_no": 11125,
+          "end_timestamp": "2026-03-05T05:30:12.326Z",
+          "rule_ids": [
+            "code_location.detected"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:947",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:11115",
+          "start_line_no": 11115,
+          "start_timestamp": "2026-03-05T05:26:48.661Z",
+          "statement": "- research.md: CodexClaw/personas/research.md"
+        },
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:11142",
+          "end_line_no": 11142,
+          "end_timestamp": "2026-03-05T05:30:44.585Z",
+          "rule_ids": [
+            "code_location.detected"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:948",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:11126",
+          "start_line_no": 11126,
+          "start_timestamp": "2026-03-05T05:30:12.327Z",
+          "statement": "- research.md: CodexClaw/personas/research.md"
+        }
+      ],
+      "section_id": "code_location",
+      "supporting_item_ids": [
+        "cross-project:code_location:69c63c98d6895fc9",
+        "cross-project:code_location:c80f1b8c1a6f29eb"
+      ],
+      "text": "It lists persona documents like strategist.md and research.md as part of the CodexClaw project."
+    }
+  ],
+  "versions": {
+    "page_config_version": 2,
+    "renderer_version": 2,
+    "synthesis_prompt_version": 2,
+    "synthesis_schema_version": 1,
+    "wiki_schema_version": 2
+  }
+}

@@ -1,0 +1,451 @@
+{
+  "bucket": "decisions",
+  "citations": [
+    {
+      "citation_id": "claim-1",
+      "item_keys": [
+        "ai-scientist:decision:e3cde8df3cd9e052"
+      ],
+      "kind": "synthesized_claim",
+      "label": "claim-1",
+      "provenance_refs": [
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:976",
+          "end_line_no": 976,
+          "end_timestamp": "2026-04-13T00:53:17.295Z",
+          "rule_ids": [
+            "decision.explicit"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:219",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:973",
+          "start_line_no": 973,
+          "start_timestamp": "2026-04-13T00:52:51.805Z",
+          "statement": "I need these last decisions before I lock the Phase 5 plan:"
+        }
+      ]
+    },
+    {
+      "citation_id": "claim-2",
+      "item_keys": [
+        "ai-scientist:decision:0c274afb4836d334"
+      ],
+      "kind": "synthesized_claim",
+      "label": "claim-2",
+      "provenance_refs": [
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:976",
+          "end_line_no": 976,
+          "end_timestamp": "2026-04-13T00:53:17.295Z",
+          "rule_ids": [
+            "decision.explicit"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:219",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:973",
+          "start_line_no": 973,
+          "start_timestamp": "2026-04-13T00:52:51.805Z",
+          "statement": "Introducing an LLM in Phase 5 now would mainly buy you better recall on messy, implicit knowledge: it can pull out decisions, preferences, next steps, and architecture notes even when they\u2019re phrased indirectly or spread across a segment."
+        }
+      ]
+    },
+    {
+      "citation_id": "claim-3",
+      "item_keys": [
+        "ai-scientist:decision:b3175de9e5e166a9"
+      ],
+      "kind": "synthesized_claim",
+      "label": "claim-3",
+      "provenance_refs": [
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:43347",
+          "end_line_no": 43347,
+          "end_timestamp": "2026-03-11T19:37:55.573Z",
+          "rule_ids": [
+            "decision.explicit"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:5361",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:43343",
+          "start_line_no": 43343,
+          "start_timestamp": "2026-03-11T19:30:44.252Z",
+          "statement": "- the main issue is that several `Yes` decisions approved cases where the **question/evidence are okay, but the lens is wrong**"
+        }
+      ]
+    },
+    {
+      "citation_id": "claim-4",
+      "item_keys": [
+        "ai-scientist:decision:2c90be38f0575244"
+      ],
+      "kind": "synthesized_claim",
+      "label": "claim-4",
+      "provenance_refs": [
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:43347",
+          "end_line_no": 43347,
+          "end_timestamp": "2026-03-11T19:37:55.573Z",
+          "rule_ids": [
+            "decision.explicit"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:5361",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:43343",
+          "start_line_no": 43343,
+          "start_timestamp": "2026-03-11T19:30:44.252Z",
+          "statement": "- your `No` decisions were mostly strong"
+        }
+      ]
+    },
+    {
+      "citation_id": "item-decision-1",
+      "item_keys": [
+        "ai-scientist:decision:8eb41dc129a061a6"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-decision-1",
+      "provenance_refs": [
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:976",
+          "end_line_no": 976,
+          "end_timestamp": "2026-04-13T00:53:17.295Z",
+          "rule_ids": [
+            "decision.explicit"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:219",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:973",
+          "start_line_no": 973,
+          "start_timestamp": "2026-04-13T00:52:51.805Z",
+          "statement": "`communication_preference`, `do_rule`, `dont_rule`, `workflow_rule`, `decision`, `architecture_note`, `code_location`, `current_state`, `task_request`, `outcome`, `failure`, `next_step`, `open_question`"
+        }
+      ]
+    },
+    {
+      "citation_id": "item-decision-2",
+      "item_keys": [
+        "ai-scientist:decision:e3cde8df3cd9e052"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-decision-2",
+      "provenance_refs": [
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:976",
+          "end_line_no": 976,
+          "end_timestamp": "2026-04-13T00:53:17.295Z",
+          "rule_ids": [
+            "decision.explicit"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:219",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:973",
+          "start_line_no": 973,
+          "start_timestamp": "2026-04-13T00:52:51.805Z",
+          "statement": "I need these last decisions before I lock the Phase 5 plan:"
+        }
+      ]
+    },
+    {
+      "citation_id": "item-decision-3",
+      "item_keys": [
+        "ai-scientist:decision:0c274afb4836d334"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-decision-3",
+      "provenance_refs": [
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:976",
+          "end_line_no": 976,
+          "end_timestamp": "2026-04-13T00:53:17.295Z",
+          "rule_ids": [
+            "decision.explicit"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:219",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:973",
+          "start_line_no": 973,
+          "start_timestamp": "2026-04-13T00:52:51.805Z",
+          "statement": "Introducing an LLM in Phase 5 now would mainly buy you better recall on messy, implicit knowledge: it can pull out decisions, preferences, next steps, and architecture notes even when they\u2019re phrased indirectly or spread across a segment."
+        }
+      ]
+    },
+    {
+      "citation_id": "item-decision-4",
+      "item_keys": [
+        "ai-scientist:decision:af73391256dceed2"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-decision-4",
+      "provenance_refs": [
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:43654",
+          "end_line_no": 43654,
+          "end_timestamp": "2026-03-11T20:15:25.942Z",
+          "rule_ids": [
+            "decision.explicit"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:5423",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:43654",
+          "start_line_no": 43654,
+          "start_timestamp": "2026-03-11T20:15:25.942Z",
+          "statement": "- only cases with `admissionDecision.admitted = true`"
+        }
+      ]
+    },
+    {
+      "citation_id": "item-decision-5",
+      "item_keys": [
+        "ai-scientist:decision:b3175de9e5e166a9"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-decision-5",
+      "provenance_refs": [
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:43347",
+          "end_line_no": 43347,
+          "end_timestamp": "2026-03-11T19:37:55.573Z",
+          "rule_ids": [
+            "decision.explicit"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:5361",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:43343",
+          "start_line_no": 43343,
+          "start_timestamp": "2026-03-11T19:30:44.252Z",
+          "statement": "- the main issue is that several `Yes` decisions approved cases where the **question/evidence are okay, but the lens is wrong**"
+        }
+      ]
+    },
+    {
+      "citation_id": "item-decision-6",
+      "item_keys": [
+        "ai-scientist:decision:2c90be38f0575244"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-decision-6",
+      "provenance_refs": [
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:43347",
+          "end_line_no": 43347,
+          "end_timestamp": "2026-03-11T19:37:55.573Z",
+          "rule_ids": [
+            "decision.explicit"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:5361",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:43343",
+          "start_line_no": 43343,
+          "start_timestamp": "2026-03-11T19:30:44.252Z",
+          "statement": "- your `No` decisions were mostly strong"
+        }
+      ]
+    }
+  ],
+  "domain": "ai-scientist",
+  "input_item_keys": [
+    "ai-scientist:decision:8eb41dc129a061a6",
+    "ai-scientist:decision:e3cde8df3cd9e052",
+    "ai-scientist:decision:0c274afb4836d334",
+    "ai-scientist:decision:af73391256dceed2",
+    "ai-scientist:decision:b3175de9e5e166a9",
+    "ai-scientist:decision:2c90be38f0575244"
+  ],
+  "page_id": "projects/ai-scientist/decisions",
+  "page_type": "bucket_page",
+  "rendered_page_metadata": {
+    "claim_count": 4,
+    "conflict_count": 0,
+    "related_domains": [
+      "global"
+    ],
+    "related_pages": [
+      {
+        "page_key": "index",
+        "title": "AI Scientist",
+        "wikilink": "[[projects/ai-scientist/index|AI Scientist]]"
+      },
+      {
+        "page_key": "communication-preferences",
+        "title": "AI Scientist - Communication Preferences",
+        "wikilink": "[[projects/ai-scientist/communication-preferences|AI Scientist - Communication Preferences]]"
+      },
+      {
+        "page_key": "workflow-rules",
+        "title": "AI Scientist - Workflow Rules",
+        "wikilink": "[[projects/ai-scientist/workflow-rules|AI Scientist - Workflow Rules]]"
+      },
+      {
+        "page_key": "architecture",
+        "title": "AI Scientist - Architecture",
+        "wikilink": "[[projects/ai-scientist/architecture|AI Scientist - Architecture]]"
+      },
+      {
+        "page_key": "code-map",
+        "title": "AI Scientist - Code Map",
+        "wikilink": "[[projects/ai-scientist/code-map|AI Scientist - Code Map]]"
+      },
+      {
+        "page_key": "current-state",
+        "title": "AI Scientist - Current State",
+        "wikilink": "[[projects/ai-scientist/current-state|AI Scientist - Current State]]"
+      },
+      {
+        "page_key": "tasks",
+        "title": "AI Scientist - Tasks",
+        "wikilink": "[[projects/ai-scientist/tasks|AI Scientist - Tasks]]"
+      },
+      {
+        "page_key": "outcomes",
+        "title": "AI Scientist - Outcomes",
+        "wikilink": "[[projects/ai-scientist/outcomes|AI Scientist - Outcomes]]"
+      },
+      {
+        "page_key": "failures",
+        "title": "AI Scientist - Failures",
+        "wikilink": "[[projects/ai-scientist/failures|AI Scientist - Failures]]"
+      },
+      {
+        "page_key": "next-steps",
+        "title": "AI Scientist - Next Steps",
+        "wikilink": "[[projects/ai-scientist/next-steps|AI Scientist - Next Steps]]"
+      },
+      {
+        "page_key": "open-questions",
+        "title": "AI Scientist - Open Questions",
+        "wikilink": "[[projects/ai-scientist/open-questions|AI Scientist - Open Questions]]"
+      }
+    ],
+    "relative_page_path": "projects/ai-scientist/decisions.md",
+    "source_count": 2,
+    "title": "AI Scientist - Decisions"
+  },
+  "renderer": "obsidian_markdown",
+  "synthesized_claims": [
+    {
+      "claim_id": "claim-1",
+      "confidence": "strong",
+      "latent_type": "implicit_next_steps",
+      "provenance_refs": [
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:976",
+          "end_line_no": 976,
+          "end_timestamp": "2026-04-13T00:53:17.295Z",
+          "rule_ids": [
+            "decision.explicit"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:219",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:973",
+          "start_line_no": 973,
+          "start_timestamp": "2026-04-13T00:52:51.805Z",
+          "statement": "I need these last decisions before I lock the Phase 5 plan:"
+        }
+      ],
+      "section_id": "summary",
+      "supporting_item_ids": [
+        "ai-scientist:decision:e3cde8df3cd9e052"
+      ],
+      "text": "There is a need to finalize decisions before locking the Phase 5 plan."
+    },
+    {
+      "claim_id": "claim-2",
+      "confidence": "strong",
+      "latent_type": "architecture_synthesis",
+      "provenance_refs": [
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:976",
+          "end_line_no": 976,
+          "end_timestamp": "2026-04-13T00:53:17.295Z",
+          "rule_ids": [
+            "decision.explicit"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:219",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:973",
+          "start_line_no": 973,
+          "start_timestamp": "2026-04-13T00:52:51.805Z",
+          "statement": "Introducing an LLM in Phase 5 now would mainly buy you better recall on messy, implicit knowledge: it can pull out decisions, preferences, next steps, and architecture notes even when they\u2019re phrased indirectly or spread across a segment."
+        }
+      ],
+      "section_id": "summary",
+      "supporting_item_ids": [
+        "ai-scientist:decision:0c274afb4836d334"
+      ],
+      "text": "Introducing a large language model (LLM) in Phase 5 could enhance recall of implicit knowledge and decisions."
+    },
+    {
+      "claim_id": "claim-3",
+      "confidence": "strong",
+      "latent_type": "recurring_failure_patterns",
+      "provenance_refs": [
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:43347",
+          "end_line_no": 43347,
+          "end_timestamp": "2026-03-11T19:37:55.573Z",
+          "rule_ids": [
+            "decision.explicit"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:5361",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:43343",
+          "start_line_no": 43343,
+          "start_timestamp": "2026-03-11T19:30:44.252Z",
+          "statement": "- the main issue is that several `Yes` decisions approved cases where the **question/evidence are okay, but the lens is wrong**"
+        }
+      ],
+      "section_id": "decision",
+      "supporting_item_ids": [
+        "ai-scientist:decision:b3175de9e5e166a9"
+      ],
+      "text": "Several 'Yes' decisions were made based on incorrect lenses despite the evidence being acceptable."
+    },
+    {
+      "claim_id": "claim-4",
+      "confidence": "strong",
+      "latent_type": "decision_lineage",
+      "provenance_refs": [
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:43347",
+          "end_line_no": 43347,
+          "end_timestamp": "2026-03-11T19:37:55.573Z",
+          "rule_ids": [
+            "decision.explicit"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:5361",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:43343",
+          "start_line_no": 43343,
+          "start_timestamp": "2026-03-11T19:30:44.252Z",
+          "statement": "- your `No` decisions were mostly strong"
+        }
+      ],
+      "section_id": "decision",
+      "supporting_item_ids": [
+        "ai-scientist:decision:2c90be38f0575244"
+      ],
+      "text": "Most 'No' decisions made were strong and justified."
+    }
+  ],
+  "versions": {
+    "page_config_version": 2,
+    "renderer_version": 2,
+    "synthesis_prompt_version": 2,
+    "synthesis_schema_version": 1,
+    "wiki_schema_version": 2
+  }
+}

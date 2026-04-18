@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "refresh_schema_version": 1,
+  "rules_version": 1,
+  "paths": {
+    "source_roots_config": "source_roots.json",
+    "normalization_schema": "../schema/normalization_catalog.json",
+    "classification_taxonomy": "classification_taxonomy.json",
+    "extraction_rules": "extraction_rules.json",
+    "wiki_config": "wiki_config.json",
+    "bootstrap_config": "bootstrap_config.json",
+    "audit_config": "audit_config.json"
+  },
+  "lock": {
+    "lock_path": "refresh.lock.json",
+    "stale_after_minutes": 180
+  }
+}

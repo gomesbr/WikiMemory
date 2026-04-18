@@ -1,0 +1,4044 @@
+{
+  "bucket": "code-map",
+  "citations": [
+    {
+      "citation_id": "claim-1",
+      "item_keys": [
+        "open-brain:code_location:a6ed6e22c239d7eb",
+        "open-brain:code_location:d8c39ff74733f2be",
+        "open-brain:code_location:83d54b094551d701"
+      ],
+      "kind": "synthesized_claim",
+      "label": "claim-1",
+      "provenance_refs": [
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:5453",
+          "end_line_no": 5453,
+          "end_timestamp": "2026-03-03T18:49:16.849Z",
+          "rule_ids": [
+            "code_location.explicit"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:483",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:5452",
+          "start_line_no": 5452,
+          "start_timestamp": "2026-03-03T18:49:16.847Z",
+          "statement": "(file: C:/Users/Fabio/.codex/skills/.system/skill-creator/SKILL.md)"
+        },
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:6795",
+          "end_line_no": 6795,
+          "end_timestamp": "2026-03-04T04:09:39.213Z",
+          "rule_ids": [
+            "code_location.explicit"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:608",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:6794",
+          "start_line_no": 6794,
+          "start_timestamp": "2026-03-04T04:09:39.212Z",
+          "statement": "(file: C:/Users/Fabio/.codex/skills/.system/skill-creator/SKILL.md)"
+        },
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:43711",
+          "end_line_no": 43711,
+          "end_timestamp": "2026-03-11T20:26:48.841Z",
+          "rule_ids": [
+            "code_location.explicit"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:5433",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:43710",
+          "start_line_no": 43710,
+          "start_timestamp": "2026-03-11T20:26:48.840Z",
+          "statement": "(file: C:/Users/Fabio/.codex/skills/.system/skill-creator/SKILL.md)"
+        },
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:5453",
+          "end_line_no": 5453,
+          "end_timestamp": "2026-03-03T18:49:16.849Z",
+          "rule_ids": [
+            "code_location.explicit"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:483",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:5452",
+          "start_line_no": 5452,
+          "start_timestamp": "2026-03-03T18:49:16.847Z",
+          "statement": "(file: C:/Users/Fabio/.codex/skills/.system/skill-installer/SKILL.md)"
+        },
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:6795",
+          "end_line_no": 6795,
+          "end_timestamp": "2026-03-04T04:09:39.213Z",
+          "rule_ids": [
+            "code_location.explicit"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:608",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:6794",
+          "start_line_no": 6794,
+          "start_timestamp": "2026-03-04T04:09:39.212Z",
+          "statement": "(file: C:/Users/Fabio/.codex/skills/.system/skill-installer/SKILL.md)"
+        },
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:43711",
+          "end_line_no": 43711,
+          "end_timestamp": "2026-03-11T20:26:48.841Z",
+          "rule_ids": [
+            "code_location.explicit"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:5433",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:43710",
+          "start_line_no": 43710,
+          "start_timestamp": "2026-03-11T20:26:48.840Z",
+          "statement": "(file: C:/Users/Fabio/.codex/skills/.system/skill-installer/SKILL.md)"
+        },
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:5453",
+          "end_line_no": 5453,
+          "end_timestamp": "2026-03-03T18:49:16.849Z",
+          "rule_ids": [
+            "code_location.explicit"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:483",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:5452",
+          "start_line_no": 5452,
+          "start_timestamp": "2026-03-03T18:49:16.847Z",
+          "statement": "A skill is a set of local instructions to follow that is stored in a `SKILL.md` file."
+        },
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:5453",
+          "end_line_no": 5453,
+          "end_timestamp": "2026-03-03T18:49:16.849Z",
+          "rule_ids": [
+            "code_location.explicit"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:483",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:5452",
+          "start_line_no": 5452,
+          "start_timestamp": "2026-03-03T18:49:16.847Z",
+          "statement": "3) If `SKILL.md` points to extra folders such as `references/`, load only the specific files needed for the request"
+        },
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:5453",
+          "end_line_no": 5453,
+          "end_timestamp": "2026-03-03T18:49:16.849Z",
+          "rule_ids": [
+            "code_location.explicit"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:483",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:5452",
+          "start_line_no": 5452,
+          "start_timestamp": "2026-03-03T18:49:16.847Z",
+          "statement": "- Avoid deep reference-chasing: prefer opening only files directly linked from `SKILL.md` unless you're blocked."
+        }
+      ]
+    },
+    {
+      "citation_id": "claim-2",
+      "item_keys": [
+        "open-brain:code_location:7af6834d76468263",
+        "open-brain:code_location:71c8030c83edac1f"
+      ],
+      "kind": "synthesized_claim",
+      "label": "claim-2",
+      "provenance_refs": [
+        {
+          "end_event_id": "019c9ca4-ac1c-76e2-b883-017d68d982a1:19635",
+          "end_line_no": 19635,
+          "end_timestamp": "2026-03-08T18:20:41.626Z",
+          "rule_ids": [
+            "code_location.detected"
+          ],
+          "segment_id": "019c9ca4-ac1c-76e2-b883-017d68d982a1:2491",
+          "session_id": "019c9ca4-ac1c-76e2-b883-017d68d982a1",
+          "source_id": "019c9ca4-ac1c-76e2-b883-017d68d982a1",
+          "start_event_id": "019c9ca4-ac1c-76e2-b883-017d68d982a1:19624",
+          "start_line_no": 19624,
+          "start_timestamp": "2026-03-08T18:16:33.187Z",
+          "statement": "- loop_b922379a-73be-44a8-891e-d635c9ed1ab0.log: OpenBrain/generated/strategy_program/loop_b922379a-73be-44a8-891e-d635c9ed1ab0.log"
+        },
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:27545",
+          "end_line_no": 27545,
+          "end_timestamp": "2026-03-08T03:18:55.515Z",
+          "rule_ids": [
+            "code_location.detected"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:2898",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:27539",
+          "start_line_no": 27539,
+          "start_timestamp": "2026-03-08T03:13:59.111Z",
+          "statement": "- Loop log: `OpenBrain/generated/strategy_program/loop_b922379a-73be-44a8-891e-d635c9ed1ab0.log`"
+        },
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:28661",
+          "end_line_no": 28661,
+          "end_timestamp": "2026-03-08T06:27:11.034Z",
+          "rule_ids": [
+            "code_location.detected"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:3039",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:28657",
+          "start_line_no": 28657,
+          "start_timestamp": "2026-03-08T06:27:05.325Z",
+          "statement": "- loop_b922379a-73be-44a8-891e-d635c9ed1ab0.log: OpenBrain/generated/strategy_program/loop_b922379a-73be-44a8-891e-d635c9ed1ab0.log"
+        },
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:30995",
+          "end_line_no": 30995,
+          "end_timestamp": "2026-03-08T22:13:12.180Z",
+          "rule_ids": [
+            "code_location.explicit"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:3359",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:30995",
+          "start_line_no": 30995,
+          "start_timestamp": "2026-03-08T22:13:12.180Z",
+          "statement": "## Active file: OpenBrain/generated/chat_transcripts/openbrain_chat_transcript_2026-03-02_to_2026-03-08_utf8.md"
+        },
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:30995",
+          "end_line_no": 30995,
+          "end_timestamp": "2026-03-08T22:13:12.180Z",
+          "rule_ids": [
+            "code_location.detected"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:3359",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:30995",
+          "start_line_no": 30995,
+          "start_timestamp": "2026-03-08T22:13:12.180Z",
+          "statement": "- openbrain_chat_transcript_2026-03-02_to_2026-03-08_utf8.md: OpenBrain/generated/chat_transcripts/openbrain_chat_transcript_2026-03-02_to_2026-03-08_utf8.md"
+        },
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:30999",
+          "end_line_no": 30999,
+          "end_timestamp": "2026-03-08T22:13:26.195Z",
+          "rule_ids": [
+            "code_location.explicit"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:3360",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:30996",
+          "start_line_no": 30996,
+          "start_timestamp": "2026-03-08T22:13:12.197Z",
+          "statement": "## Active file: OpenBrain/generated/chat_transcripts/openbrain_chat_transcript_2026-03-02_to_2026-03-08_utf8.md"
+        }
+      ]
+    },
+    {
+      "citation_id": "claim-3",
+      "item_keys": [
+        "open-brain:code_location:d6a1e081a3e33dca"
+      ],
+      "kind": "synthesized_claim",
+      "label": "claim-3",
+      "provenance_refs": [
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:26894",
+          "end_line_no": 26894,
+          "end_timestamp": "2026-03-07T23:09:06.236Z",
+          "rule_ids": [
+            "code_location.explicit"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:2810",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:26891",
+          "start_line_no": 26891,
+          "start_timestamp": "2026-03-07T23:09:05.783Z",
+          "statement": "I\u2019m now adding the new experiment engine module (`v2_experiments.ts`) with real-data case generation, strategy catalog execution, per-case scoring/failure buckets, leaderboard, and winner decisioning."
+        },
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:37383",
+          "end_line_no": 37383,
+          "end_timestamp": "2026-03-10T13:45:35.780Z",
+          "rule_ids": [
+            "code_location.explicit"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:4297",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:37377",
+          "start_line_no": 37377,
+          "start_timestamp": "2026-03-10T13:45:32.516Z",
+          "statement": "I\u2019ve confirmed the workspace is still dirty in many unrelated areas, so I\u2019m only touching the case generator path in `v2_experiments.ts`."
+        },
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:37689",
+          "end_line_no": 37689,
+          "end_timestamp": "2026-03-10T15:54:47.194Z",
+          "rule_ids": [
+            "code_location.explicit"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:4360",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:37681",
+          "start_line_no": 37681,
+          "start_timestamp": "2026-03-10T15:54:41.710Z",
+          "statement": "I\u2019ve confirmed the current generator is still dominated by template helpers near the top of `v2_experiments.ts`, so the core change is not just adding metadata \u2014 it\u2019s replacing that question authoring path."
+        }
+      ]
+    },
+    {
+      "citation_id": "item-code_location-1",
+      "item_keys": [
+        "open-brain:code_location:af8cb931889cd951"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-code_location-1",
+      "provenance_refs": [
+        {
+          "end_event_id": "019c9ca4-ac1c-76e2-b883-017d68d982a1:19635",
+          "end_line_no": 19635,
+          "end_timestamp": "2026-03-08T18:20:41.626Z",
+          "rule_ids": [
+            "code_location.detected"
+          ],
+          "segment_id": "019c9ca4-ac1c-76e2-b883-017d68d982a1:2491",
+          "session_id": "019c9ca4-ac1c-76e2-b883-017d68d982a1",
+          "source_id": "019c9ca4-ac1c-76e2-b883-017d68d982a1",
+          "start_event_id": "019c9ca4-ac1c-76e2-b883-017d68d982a1:19624",
+          "start_line_no": 19624,
+          "start_timestamp": "2026-03-08T18:16:33.187Z",
+          "statement": "- loop_2efee43d-c2a8-48a6-aeb4-cb947357c6ac.log: OpenBrain/generated/strategy_program/loop_2efee43d-c2a8-48a6-aeb4-cb947357c6ac.log"
+        },
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:29418",
+          "end_line_no": 29418,
+          "end_timestamp": "2026-03-08T12:38:38.938Z",
+          "rule_ids": [
+            "code_location.detected"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:3140",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:29414",
+          "start_line_no": 29414,
+          "start_timestamp": "2026-03-08T12:38:34.495Z",
+          "statement": "- loop_2efee43d-c2a8-48a6-aeb4-cb947357c6ac.log: OpenBrain/generated/strategy_program/loop_2efee43d-c2a8-48a6-aeb4-cb947357c6ac.log"
+        },
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:29556",
+          "end_line_no": 29556,
+          "end_timestamp": "2026-03-08T12:49:21.614Z",
+          "rule_ids": [
+            "code_location.detected"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:3156",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:29552",
+          "start_line_no": 29552,
+          "start_timestamp": "2026-03-08T12:49:17.013Z",
+          "statement": "- loop_2efee43d-c2a8-48a6-aeb4-cb947357c6ac.log: OpenBrain/generated/strategy_program/loop_2efee43d-c2a8-48a6-aeb4-cb947357c6ac.log"
+        }
+      ]
+    },
+    {
+      "citation_id": "item-code_location-2",
+      "item_keys": [
+        "open-brain:code_location:cef2a1f9a4bb06fa"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-code_location-2",
+      "provenance_refs": [
+        {
+          "end_event_id": "019c9ca4-ac1c-76e2-b883-017d68d982a1:19635",
+          "end_line_no": 19635,
+          "end_timestamp": "2026-03-08T18:20:41.626Z",
+          "rule_ids": [
+            "code_location.detected"
+          ],
+          "segment_id": "019c9ca4-ac1c-76e2-b883-017d68d982a1:2491",
+          "session_id": "019c9ca4-ac1c-76e2-b883-017d68d982a1",
+          "source_id": "019c9ca4-ac1c-76e2-b883-017d68d982a1",
+          "start_event_id": "019c9ca4-ac1c-76e2-b883-017d68d982a1:19624",
+          "start_line_no": 19624,
+          "start_timestamp": "2026-03-08T18:16:33.187Z",
+          "statement": "- sms_state_2efee43d-c2a8-48a6-aeb4-cb947357c6ac.json: OpenBrain/generated/strategy_program/sms_state_2efee43d-c2a8-48a6-aeb4-cb947357c6ac.json"
+        },
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:29418",
+          "end_line_no": 29418,
+          "end_timestamp": "2026-03-08T12:38:38.938Z",
+          "rule_ids": [
+            "code_location.detected"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:3140",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:29414",
+          "start_line_no": 29414,
+          "start_timestamp": "2026-03-08T12:38:34.495Z",
+          "statement": "- sms_state_2efee43d-c2a8-48a6-aeb4-cb947357c6ac.json: OpenBrain/generated/strategy_program/sms_state_2efee43d-c2a8-48a6-aeb4-cb947357c6ac.json"
+        },
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:29556",
+          "end_line_no": 29556,
+          "end_timestamp": "2026-03-08T12:49:21.614Z",
+          "rule_ids": [
+            "code_location.detected"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:3156",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:29552",
+          "start_line_no": 29552,
+          "start_timestamp": "2026-03-08T12:49:17.013Z",
+          "statement": "- sms_state_2efee43d-c2a8-48a6-aeb4-cb947357c6ac.json: OpenBrain/generated/strategy_program/sms_state_2efee43d-c2a8-48a6-aeb4-cb947357c6ac.json"
+        }
+      ]
+    },
+    {
+      "citation_id": "item-code_location-3",
+      "item_keys": [
+        "open-brain:code_location:d060ec75a30f0654"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-code_location-3",
+      "provenance_refs": [
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:3845",
+          "end_line_no": 3845,
+          "end_timestamp": "2026-03-03T05:55:23.026Z",
+          "rule_ids": [
+            "code_location.detected"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:325",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:3842",
+          "start_line_no": 3842,
+          "start_timestamp": "2026-03-03T05:37:29.750Z",
+          "statement": "- `OpenBrain/README.md`"
+        },
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:3847",
+          "end_line_no": 3847,
+          "end_timestamp": "2026-03-03T05:55:23.036Z",
+          "rule_ids": [
+            "code_location.detected"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:327",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:3847",
+          "start_line_no": 3847,
+          "start_timestamp": "2026-03-03T05:55:23.036Z",
+          "statement": "- `OpenBrain/README.md`"
+        },
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:3850",
+          "end_line_no": 3850,
+          "end_timestamp": "2026-03-03T05:55:26.408Z",
+          "rule_ids": [
+            "code_location.detected"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:328",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:3848",
+          "start_line_no": 3848,
+          "start_timestamp": "2026-03-03T05:55:23.037Z",
+          "statement": "- `OpenBrain/README.md`"
+        }
+      ]
+    },
+    {
+      "citation_id": "item-code_location-4",
+      "item_keys": [
+        "open-brain:code_location:daded0f9d0f83394"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-code_location-4",
+      "provenance_refs": [
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:5102",
+          "end_line_no": 5102,
+          "end_timestamp": "2026-03-03T17:07:05.422Z",
+          "rule_ids": [
+            "code_location.detected"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:443",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:5090",
+          "start_line_no": 5090,
+          "start_timestamp": "2026-03-03T17:06:39.058Z",
+          "statement": "- prod-grok-backend.json: c:\\Users\\Fabio\\AppData\\Local\\Temp\\e2ddf759-eba7-489f-8946-d78e822532bd_6496f4fc-d714-437a-bcbc-a845241a02b7.zip.2bd\\ttl\\30d\\export_data\\0ddfd3a1-9485-4b4a-b5a8-ebd1be61b56b\\prod-grok-backend.json"
+        },
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:5181",
+          "end_line_no": 5181,
+          "end_timestamp": "2026-03-03T17:29:05.214Z",
+          "rule_ids": [
+            "code_location.detected"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:451",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:5173",
+          "start_line_no": 5173,
+          "start_timestamp": "2026-03-03T17:26:55.184Z",
+          "statement": "- prod-grok-backend.json: c:\\Users\\Fabio\\AppData\\Local\\Temp\\e2ddf759-eba7-489f-8946-d78e822532bd_6496f4fc-d714-437a-bcbc-a845241a02b7.zip.2bd\\ttl\\30d\\export_data\\0ddfd3a1-9485-4b4a-b5a8-ebd1be61b56b\\prod-grok-backend.json"
+        },
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:5194",
+          "end_line_no": 5194,
+          "end_timestamp": "2026-03-03T17:29:24.329Z",
+          "rule_ids": [
+            "code_location.detected"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:452",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:5182",
+          "start_line_no": 5182,
+          "start_timestamp": "2026-03-03T17:29:05.255Z",
+          "statement": "- prod-grok-backend.json: c:\\Users\\Fabio\\AppData\\Local\\Temp\\e2ddf759-eba7-489f-8946-d78e822532bd_6496f4fc-d714-437a-bcbc-a845241a02b7.zip.2bd\\ttl\\30d\\export_data\\0ddfd3a1-9485-4b4a-b5a8-ebd1be61b56b\\prod-grok-backend.json"
+        }
+      ]
+    },
+    {
+      "citation_id": "item-code_location-5",
+      "item_keys": [
+        "open-brain:code_location:7af6834d76468263"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-code_location-5",
+      "provenance_refs": [
+        {
+          "end_event_id": "019c9ca4-ac1c-76e2-b883-017d68d982a1:19635",
+          "end_line_no": 19635,
+          "end_timestamp": "2026-03-08T18:20:41.626Z",
+          "rule_ids": [
+            "code_location.detected"
+          ],
+          "segment_id": "019c9ca4-ac1c-76e2-b883-017d68d982a1:2491",
+          "session_id": "019c9ca4-ac1c-76e2-b883-017d68d982a1",
+          "source_id": "019c9ca4-ac1c-76e2-b883-017d68d982a1",
+          "start_event_id": "019c9ca4-ac1c-76e2-b883-017d68d982a1:19624",
+          "start_line_no": 19624,
+          "start_timestamp": "2026-03-08T18:16:33.187Z",
+          "statement": "- loop_b922379a-73be-44a8-891e-d635c9ed1ab0.log: OpenBrain/generated/strategy_program/loop_b922379a-73be-44a8-891e-d635c9ed1ab0.log"
+        },
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:27545",
+          "end_line_no": 27545,
+          "end_timestamp": "2026-03-08T03:18:55.515Z",
+          "rule_ids": [
+            "code_location.detected"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:2898",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:27539",
+          "start_line_no": 27539,
+          "start_timestamp": "2026-03-08T03:13:59.111Z",
+          "statement": "- Loop log: `OpenBrain/generated/strategy_program/loop_b922379a-73be-44a8-891e-d635c9ed1ab0.log`"
+        },
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:28661",
+          "end_line_no": 28661,
+          "end_timestamp": "2026-03-08T06:27:11.034Z",
+          "rule_ids": [
+            "code_location.detected"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:3039",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:28657",
+          "start_line_no": 28657,
+          "start_timestamp": "2026-03-08T06:27:05.325Z",
+          "statement": "- loop_b922379a-73be-44a8-891e-d635c9ed1ab0.log: OpenBrain/generated/strategy_program/loop_b922379a-73be-44a8-891e-d635c9ed1ab0.log"
+        }
+      ]
+    },
+    {
+      "citation_id": "item-code_location-6",
+      "item_keys": [
+        "open-brain:code_location:0be20f4588875dcc"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-code_location-6",
+      "provenance_refs": [
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:27443",
+          "end_line_no": 27443,
+          "end_timestamp": "2026-03-07T23:53:48.015Z",
+          "rule_ids": [
+            "code_location.detected"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:2885",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:27443",
+          "start_line_no": 27443,
+          "start_timestamp": "2026-03-07T23:53:48.015Z",
+          "statement": "- [src/v2_types.ts](c:/Users/Fabio/Cursor AI projects/Projects/OpenBrain/src/v2_types.ts)"
+        },
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:27447",
+          "end_line_no": 27447,
+          "end_timestamp": "2026-03-08T02:58:52.423Z",
+          "rule_ids": [
+            "code_location.detected"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:2886",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:27444",
+          "start_line_no": 27444,
+          "start_timestamp": "2026-03-07T23:53:48.016Z",
+          "statement": "- [src/v2_types.ts](c:/Users/Fabio/Cursor AI projects/Projects/OpenBrain/src/v2_types.ts)"
+        },
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:32670",
+          "end_line_no": 32670,
+          "end_timestamp": "2026-03-09T02:34:19.599Z",
+          "rule_ids": [
+            "code_location.detected"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:3599",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:32670",
+          "start_line_no": 32670,
+          "start_timestamp": "2026-03-09T02:34:19.599Z",
+          "statement": "- [src/v2_types.ts](c:\\Users\\Fabio\\Cursor AI projects\\Projects\\OpenBrain\\src\\v2_types.ts)"
+        }
+      ]
+    },
+    {
+      "citation_id": "item-code_location-7",
+      "item_keys": [
+        "open-brain:code_location:71c8030c83edac1f"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-code_location-7",
+      "provenance_refs": [
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:30995",
+          "end_line_no": 30995,
+          "end_timestamp": "2026-03-08T22:13:12.180Z",
+          "rule_ids": [
+            "code_location.explicit"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:3359",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:30995",
+          "start_line_no": 30995,
+          "start_timestamp": "2026-03-08T22:13:12.180Z",
+          "statement": "## Active file: OpenBrain/generated/chat_transcripts/openbrain_chat_transcript_2026-03-02_to_2026-03-08_utf8.md"
+        },
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:30995",
+          "end_line_no": 30995,
+          "end_timestamp": "2026-03-08T22:13:12.180Z",
+          "rule_ids": [
+            "code_location.detected"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:3359",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:30995",
+          "start_line_no": 30995,
+          "start_timestamp": "2026-03-08T22:13:12.180Z",
+          "statement": "- openbrain_chat_transcript_2026-03-02_to_2026-03-08_utf8.md: OpenBrain/generated/chat_transcripts/openbrain_chat_transcript_2026-03-02_to_2026-03-08_utf8.md"
+        },
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:30999",
+          "end_line_no": 30999,
+          "end_timestamp": "2026-03-08T22:13:26.195Z",
+          "rule_ids": [
+            "code_location.explicit"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:3360",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:30996",
+          "start_line_no": 30996,
+          "start_timestamp": "2026-03-08T22:13:12.197Z",
+          "statement": "## Active file: OpenBrain/generated/chat_transcripts/openbrain_chat_transcript_2026-03-02_to_2026-03-08_utf8.md"
+        }
+      ]
+    },
+    {
+      "citation_id": "item-code_location-8",
+      "item_keys": [
+        "open-brain:code_location:d6a1e081a3e33dca"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-code_location-8",
+      "provenance_refs": [
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:26894",
+          "end_line_no": 26894,
+          "end_timestamp": "2026-03-07T23:09:06.236Z",
+          "rule_ids": [
+            "code_location.explicit"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:2810",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:26891",
+          "start_line_no": 26891,
+          "start_timestamp": "2026-03-07T23:09:05.783Z",
+          "statement": "I\u2019m now adding the new experiment engine module (`v2_experiments.ts`) with real-data case generation, strategy catalog execution, per-case scoring/failure buckets, leaderboard, and winner decisioning."
+        },
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:37383",
+          "end_line_no": 37383,
+          "end_timestamp": "2026-03-10T13:45:35.780Z",
+          "rule_ids": [
+            "code_location.explicit"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:4297",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:37377",
+          "start_line_no": 37377,
+          "start_timestamp": "2026-03-10T13:45:32.516Z",
+          "statement": "I\u2019ve confirmed the workspace is still dirty in many unrelated areas, so I\u2019m only touching the case generator path in `v2_experiments.ts`."
+        },
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:37689",
+          "end_line_no": 37689,
+          "end_timestamp": "2026-03-10T15:54:47.194Z",
+          "rule_ids": [
+            "code_location.explicit"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:4360",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:37681",
+          "start_line_no": 37681,
+          "start_timestamp": "2026-03-10T15:54:41.710Z",
+          "statement": "I\u2019ve confirmed the current generator is still dominated by template helpers near the top of `v2_experiments.ts`, so the core change is not just adding metadata \u2014 it\u2019s replacing that question authoring path."
+        }
+      ]
+    },
+    {
+      "citation_id": "item-code_location-9",
+      "item_keys": [
+        "open-brain:code_location:c34fc78a1fd196dd"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-code_location-9",
+      "provenance_refs": [
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:6275",
+          "end_line_no": 6275,
+          "end_timestamp": "2026-03-03T21:40:22.720Z",
+          "rule_ids": [
+            "code_location.detected"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:554",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:6259",
+          "start_line_no": 6259,
+          "start_timestamp": "2026-03-03T21:39:19.605Z",
+          "statement": "- [src/ui.ts](/c:/Users/Fabio/Cursor%20AI%20projects/Projects/OpenBrain/src/ui.ts)"
+        },
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:6279",
+          "end_line_no": 6279,
+          "end_timestamp": "2026-03-03T21:55:32.164Z",
+          "rule_ids": [
+            "code_location.detected"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:555",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:6276",
+          "start_line_no": 6276,
+          "start_timestamp": "2026-03-03T21:40:22.722Z",
+          "statement": "- [src/ui.ts](/c:/Users/Fabio/Cursor%20AI%20projects/Projects/OpenBrain/src/ui.ts)"
+        },
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:7280",
+          "end_line_no": 7280,
+          "end_timestamp": "2026-03-04T05:03:36.607Z",
+          "rule_ids": [
+            "code_location.explicit"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:649",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:7271",
+          "start_line_no": 7271,
+          "start_timestamp": "2026-03-04T05:02:53.823Z",
+          "statement": "- File: [src/ui.ts](c:/Users/Fabio/Cursor%20AI%20projects/Projects/OpenBrain/src/ui.ts)"
+        }
+      ]
+    },
+    {
+      "citation_id": "item-code_location-10",
+      "item_keys": [
+        "open-brain:code_location:a6ed6e22c239d7eb"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-code_location-10",
+      "provenance_refs": [
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:5453",
+          "end_line_no": 5453,
+          "end_timestamp": "2026-03-03T18:49:16.849Z",
+          "rule_ids": [
+            "code_location.explicit"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:483",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:5452",
+          "start_line_no": 5452,
+          "start_timestamp": "2026-03-03T18:49:16.847Z",
+          "statement": "(file: C:/Users/Fabio/.codex/skills/.system/skill-creator/SKILL.md)"
+        },
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:6795",
+          "end_line_no": 6795,
+          "end_timestamp": "2026-03-04T04:09:39.213Z",
+          "rule_ids": [
+            "code_location.explicit"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:608",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:6794",
+          "start_line_no": 6794,
+          "start_timestamp": "2026-03-04T04:09:39.212Z",
+          "statement": "(file: C:/Users/Fabio/.codex/skills/.system/skill-creator/SKILL.md)"
+        },
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:43711",
+          "end_line_no": 43711,
+          "end_timestamp": "2026-03-11T20:26:48.841Z",
+          "rule_ids": [
+            "code_location.explicit"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:5433",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:43710",
+          "start_line_no": 43710,
+          "start_timestamp": "2026-03-11T20:26:48.840Z",
+          "statement": "(file: C:/Users/Fabio/.codex/skills/.system/skill-creator/SKILL.md)"
+        }
+      ]
+    },
+    {
+      "citation_id": "item-code_location-11",
+      "item_keys": [
+        "open-brain:code_location:d8c39ff74733f2be"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-code_location-11",
+      "provenance_refs": [
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:5453",
+          "end_line_no": 5453,
+          "end_timestamp": "2026-03-03T18:49:16.849Z",
+          "rule_ids": [
+            "code_location.explicit"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:483",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:5452",
+          "start_line_no": 5452,
+          "start_timestamp": "2026-03-03T18:49:16.847Z",
+          "statement": "(file: C:/Users/Fabio/.codex/skills/.system/skill-installer/SKILL.md)"
+        },
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:6795",
+          "end_line_no": 6795,
+          "end_timestamp": "2026-03-04T04:09:39.213Z",
+          "rule_ids": [
+            "code_location.explicit"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:608",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:6794",
+          "start_line_no": 6794,
+          "start_timestamp": "2026-03-04T04:09:39.212Z",
+          "statement": "(file: C:/Users/Fabio/.codex/skills/.system/skill-installer/SKILL.md)"
+        },
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:43711",
+          "end_line_no": 43711,
+          "end_timestamp": "2026-03-11T20:26:48.841Z",
+          "rule_ids": [
+            "code_location.explicit"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:5433",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:43710",
+          "start_line_no": 43710,
+          "start_timestamp": "2026-03-11T20:26:48.840Z",
+          "statement": "(file: C:/Users/Fabio/.codex/skills/.system/skill-installer/SKILL.md)"
+        }
+      ]
+    },
+    {
+      "citation_id": "item-code_location-12",
+      "item_keys": [
+        "open-brain:code_location:83d54b094551d701"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-code_location-12",
+      "provenance_refs": [
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:5453",
+          "end_line_no": 5453,
+          "end_timestamp": "2026-03-03T18:49:16.849Z",
+          "rule_ids": [
+            "code_location.explicit"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:483",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:5452",
+          "start_line_no": 5452,
+          "start_timestamp": "2026-03-03T18:49:16.847Z",
+          "statement": "A skill is a set of local instructions to follow that is stored in a `SKILL.md` file."
+        },
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:5453",
+          "end_line_no": 5453,
+          "end_timestamp": "2026-03-03T18:49:16.849Z",
+          "rule_ids": [
+            "code_location.explicit"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:483",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:5452",
+          "start_line_no": 5452,
+          "start_timestamp": "2026-03-03T18:49:16.847Z",
+          "statement": "3) If `SKILL.md` points to extra folders such as `references/`, load only the specific files needed for the request"
+        },
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:5453",
+          "end_line_no": 5453,
+          "end_timestamp": "2026-03-03T18:49:16.849Z",
+          "rule_ids": [
+            "code_location.explicit"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:483",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:5452",
+          "start_line_no": 5452,
+          "start_timestamp": "2026-03-03T18:49:16.847Z",
+          "statement": "- Avoid deep reference-chasing: prefer opening only files directly linked from `SKILL.md` unless you're blocked."
+        }
+      ]
+    },
+    {
+      "citation_id": "item-code_location-13",
+      "item_keys": [
+        "open-brain:code_location:fd5f8efbf5952ac2"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-code_location-13",
+      "provenance_refs": [
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:3845",
+          "end_line_no": 3845,
+          "end_timestamp": "2026-03-03T05:55:23.026Z",
+          "rule_ids": [
+            "code_location.detected"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:325",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:3842",
+          "start_line_no": 3842,
+          "start_timestamp": "2026-03-03T05:37:29.750Z",
+          "statement": "- `src/server.ts` (REST API)"
+        },
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:3847",
+          "end_line_no": 3847,
+          "end_timestamp": "2026-03-03T05:55:23.036Z",
+          "rule_ids": [
+            "code_location.detected"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:327",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:3847",
+          "start_line_no": 3847,
+          "start_timestamp": "2026-03-03T05:55:23.036Z",
+          "statement": "- `src/server.ts` (REST API)"
+        },
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:3850",
+          "end_line_no": 3850,
+          "end_timestamp": "2026-03-03T05:55:26.408Z",
+          "rule_ids": [
+            "code_location.detected"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:328",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:3848",
+          "start_line_no": 3848,
+          "start_timestamp": "2026-03-03T05:55:23.037Z",
+          "statement": "- `src/server.ts` (REST API)"
+        }
+      ]
+    },
+    {
+      "citation_id": "item-code_location-14",
+      "item_keys": [
+        "open-brain:code_location:518025d66a5b7b22"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-code_location-14",
+      "provenance_refs": [
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:22751",
+          "end_line_no": 22751,
+          "end_timestamp": "2026-03-07T00:49:22.265Z",
+          "rule_ids": [
+            "code_location.detected"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:2239",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:22747",
+          "start_line_no": 22747,
+          "start_timestamp": "2026-03-07T00:49:13.856Z",
+          "statement": "- dq_audit_latest.json: OpenBrain/generated/dq_audit_latest.json"
+        },
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:22773",
+          "end_line_no": 22773,
+          "end_timestamp": "2026-03-07T00:55:56.914Z",
+          "rule_ids": [
+            "code_location.detected"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:2242",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:22769",
+          "start_line_no": 22769,
+          "start_timestamp": "2026-03-07T00:55:49.365Z",
+          "statement": "- dq_audit_latest.json: OpenBrain/generated/dq_audit_latest.json"
+        },
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:22873",
+          "end_line_no": 22873,
+          "end_timestamp": "2026-03-07T01:04:43.097Z",
+          "rule_ids": [
+            "code_location.detected"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:2256",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:22869",
+          "start_line_no": 22869,
+          "start_timestamp": "2026-03-07T01:04:35.117Z",
+          "statement": "- dq_audit_latest.json: OpenBrain/generated/dq_audit_latest.json"
+        }
+      ]
+    },
+    {
+      "citation_id": "item-code_location-15",
+      "item_keys": [
+        "open-brain:code_location:fe62bdda4acec25f"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-code_location-15",
+      "provenance_refs": [
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:6275",
+          "end_line_no": 6275,
+          "end_timestamp": "2026-03-03T21:40:22.720Z",
+          "rule_ids": [
+            "code_location.detected"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:554",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:6259",
+          "start_line_no": 6259,
+          "start_timestamp": "2026-03-03T21:39:19.605Z",
+          "statement": "- [package.json](/c:/Users/Fabio/Cursor%20AI%20projects/Projects/OpenBrain/package.json)"
+        },
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:6279",
+          "end_line_no": 6279,
+          "end_timestamp": "2026-03-03T21:55:32.164Z",
+          "rule_ids": [
+            "code_location.detected"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:555",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:6276",
+          "start_line_no": 6276,
+          "start_timestamp": "2026-03-03T21:40:22.722Z",
+          "statement": "- [package.json](/c:/Users/Fabio/Cursor%20AI%20projects/Projects/OpenBrain/package.json)"
+        },
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:11993",
+          "end_line_no": 11993,
+          "end_timestamp": "2026-03-05T13:09:36.797Z",
+          "rule_ids": [
+            "code_location.detected"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:1021",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:11970",
+          "start_line_no": 11970,
+          "start_timestamp": "2026-03-05T13:08:23.125Z",
+          "statement": "- [package.json](c:/Users/Fabio/Cursor%20AI%20projects/Projects/OpenBrain/package.json)"
+        }
+      ]
+    },
+    {
+      "citation_id": "item-code_location-16",
+      "item_keys": [
+        "open-brain:code_location:5e757e8990aa8684"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-code_location-16",
+      "provenance_refs": [
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:3845",
+          "end_line_no": 3845,
+          "end_timestamp": "2026-03-03T05:55:23.026Z",
+          "rule_ids": [
+            "code_location.detected"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:325",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:3842",
+          "start_line_no": 3842,
+          "start_timestamp": "2026-03-03T05:37:29.750Z",
+          "statement": "- `CodexClaw/docs/operations/open_brain_runbook.md`"
+        },
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:3847",
+          "end_line_no": 3847,
+          "end_timestamp": "2026-03-03T05:55:23.036Z",
+          "rule_ids": [
+            "code_location.detected"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:327",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:3847",
+          "start_line_no": 3847,
+          "start_timestamp": "2026-03-03T05:55:23.036Z",
+          "statement": "- `CodexClaw/docs/operations/open_brain_runbook.md`"
+        },
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:3850",
+          "end_line_no": 3850,
+          "end_timestamp": "2026-03-03T05:55:26.408Z",
+          "rule_ids": [
+            "code_location.detected"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:328",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:3848",
+          "start_line_no": 3848,
+          "start_timestamp": "2026-03-03T05:55:23.037Z",
+          "statement": "- `CodexClaw/docs/operations/open_brain_runbook.md`"
+        }
+      ]
+    },
+    {
+      "citation_id": "item-code_location-17",
+      "item_keys": [
+        "open-brain:code_location:91643a6197db1c2c"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-code_location-17",
+      "provenance_refs": [
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:3464",
+          "end_line_no": 3464,
+          "end_timestamp": "2026-03-03T04:26:33.171Z",
+          "rule_ids": [
+            "code_location.detected"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:273",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:3455",
+          "start_line_no": 3455,
+          "start_timestamp": "2026-03-03T04:26:19.321Z",
+          "statement": "- runbook.md: CodexClaw/docs/operations/runbook.md"
+        },
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:3669",
+          "end_line_no": 3669,
+          "end_timestamp": "2026-03-03T04:48:08.564Z",
+          "rule_ids": [
+            "code_location.detected"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:303",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:3652",
+          "start_line_no": 3652,
+          "start_timestamp": "2026-03-03T04:47:14.839Z",
+          "statement": "- runbook.md: CodexClaw/docs/operations/runbook.md"
+        },
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:3737",
+          "end_line_no": 3737,
+          "end_timestamp": "2026-03-03T05:01:39.881Z",
+          "rule_ids": [
+            "code_location.detected"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:311",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:3724",
+          "start_line_no": 3724,
+          "start_timestamp": "2026-03-03T05:01:24.121Z",
+          "statement": "- runbook.md: CodexClaw/docs/operations/runbook.md"
+        }
+      ]
+    },
+    {
+      "citation_id": "item-code_location-18",
+      "item_keys": [
+        "open-brain:code_location:2df97dc3c977c70b"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-code_location-18",
+      "provenance_refs": [
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:6275",
+          "end_line_no": 6275,
+          "end_timestamp": "2026-03-03T21:40:22.720Z",
+          "rule_ids": [
+            "code_location.detected"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:554",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:6259",
+          "start_line_no": 6259,
+          "start_timestamp": "2026-03-03T21:39:19.605Z",
+          "statement": "- [src/config.ts](/c:/Users/Fabio/Cursor%20AI%20projects/Projects/OpenBrain/src/config.ts)"
+        },
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:6279",
+          "end_line_no": 6279,
+          "end_timestamp": "2026-03-03T21:55:32.164Z",
+          "rule_ids": [
+            "code_location.detected"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:555",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:6276",
+          "start_line_no": 6276,
+          "start_timestamp": "2026-03-03T21:40:22.722Z",
+          "statement": "- [src/config.ts](/c:/Users/Fabio/Cursor%20AI%20projects/Projects/OpenBrain/src/config.ts)"
+        },
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:10381",
+          "end_line_no": 10381,
+          "end_timestamp": "2026-03-04T19:35:42.379Z",
+          "rule_ids": [
+            "code_location.detected"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:889",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:10366",
+          "start_line_no": 10366,
+          "start_timestamp": "2026-03-04T19:35:02.656Z",
+          "statement": "I resolved `db.ts` by keeping your branch version, but build caught one merge artifact in `src/config.ts` (duplicate key)."
+        }
+      ]
+    },
+    {
+      "citation_id": "item-code_location-19",
+      "item_keys": [
+        "open-brain:code_location:9847b24b55490e78"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-code_location-19",
+      "provenance_refs": [
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:15169",
+          "end_line_no": 15169,
+          "end_timestamp": "2026-03-05T21:50:53.966Z",
+          "rule_ids": [
+            "code_location.explicit"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:1327",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:15169",
+          "start_line_no": 15169,
+          "start_timestamp": "2026-03-05T21:50:53.966Z",
+          "statement": "npm run v2:bench:signal -- --mode=profile --set=signal_140 --chat=personal.main --min-score=0.28 --min-rows=20"
+        },
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:15173",
+          "end_line_no": 15173,
+          "end_timestamp": "2026-03-05T22:09:16.024Z",
+          "rule_ids": [
+            "code_location.explicit"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:1328",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:15170",
+          "start_line_no": 15170,
+          "start_timestamp": "2026-03-05T21:50:53.967Z",
+          "statement": "npm run v2:bench:signal -- --mode=profile --set=signal_140 --chat=personal.main --min-score=0.28 --min-rows=20"
+        },
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:18155",
+          "end_line_no": 18155,
+          "end_timestamp": "2026-03-06T15:50:36.460Z",
+          "rule_ids": [
+            "code_location.explicit"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:1624",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:18146",
+          "start_line_no": 18146,
+          "start_timestamp": "2026-03-06T15:48:12.365Z",
+          "statement": "I also need one final rebuild for compatibility: some screens still use V1-derived snapshots, so I\u2019m triggering a full V1 brain rebuild (`personal.main`, 3650d) to keep both paths aligned while we finish migration."
+        }
+      ]
+    },
+    {
+      "citation_id": "item-code_location-20",
+      "item_keys": [
+        "open-brain:code_location:dd8c05baf70d3f1d"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-code_location-20",
+      "provenance_refs": [
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:39181",
+          "end_line_no": 39181,
+          "end_timestamp": "2026-03-10T20:20:34.883Z",
+          "rule_ids": [
+            "code_location.detected"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:4615",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:39179",
+          "start_line_no": 39179,
+          "start_timestamp": "2026-03-10T20:20:32.413Z",
+          "statement": "- metadata_provider.ts: OpenBrain/src/metadata_provider.ts"
+        },
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:39206",
+          "end_line_no": 39206,
+          "end_timestamp": "2026-03-10T20:27:07.786Z",
+          "rule_ids": [
+            "code_location.detected"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:4620",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:39203",
+          "start_line_no": 39203,
+          "start_timestamp": "2026-03-10T20:26:37.035Z",
+          "statement": "- metadata_provider.ts: OpenBrain/src/metadata_provider.ts"
+        },
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:39247",
+          "end_line_no": 39247,
+          "end_timestamp": "2026-03-10T20:37:55.111Z",
+          "rule_ids": [
+            "code_location.detected"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:4627",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:39246",
+          "start_line_no": 39246,
+          "start_timestamp": "2026-03-10T20:37:55.110Z",
+          "statement": "- metadata_provider.ts: OpenBrain/src/metadata_provider.ts"
+        }
+      ]
+    },
+    {
+      "citation_id": "item-code_location-21",
+      "item_keys": [
+        "open-brain:code_location:49efcfead49c5f4a"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-code_location-21",
+      "provenance_refs": [
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:14196",
+          "end_line_no": 14196,
+          "end_timestamp": "2026-03-05T19:35:12.966Z",
+          "rule_ids": [
+            "code_location.detected"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:1245",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:14196",
+          "start_line_no": 14196,
+          "start_timestamp": "2026-03-05T19:35:12.966Z",
+          "statement": "- Agent mesh dispatcher (controller/specialists/adjudicator flow) in [v2_mesh.ts](/c:/Users/Fabio/Cursor%20AI%20projects/Projects/OpenBrain/src/v2_mesh.ts:181)."
+        },
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:14200",
+          "end_line_no": 14200,
+          "end_timestamp": "2026-03-05T19:40:30.890Z",
+          "rule_ids": [
+            "code_location.detected"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:1246",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:14197",
+          "start_line_no": 14197,
+          "start_timestamp": "2026-03-05T19:35:12.968Z",
+          "statement": "- Agent mesh dispatcher (controller/specialists/adjudicator flow) in [v2_mesh.ts](/c:/Users/Fabio/Cursor%20AI%20projects/Projects/OpenBrain/src/v2_mesh.ts:181)."
+        },
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:19715",
+          "end_line_no": 19715,
+          "end_timestamp": "2026-03-06T18:39:46.813Z",
+          "rule_ids": [
+            "code_location.detected"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:1822",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:19709",
+          "start_line_no": 19709,
+          "start_timestamp": "2026-03-06T18:37:39.928Z",
+          "statement": "- Sufficiency now uses **quality score** (coverage/relevance), not fixed evidence count, in [v2_mesh.ts](c:/Users/Fabio/Cursor%20AI%20projects/Projects/OpenBrain/src/v2_mesh.ts)"
+        }
+      ]
+    },
+    {
+      "citation_id": "item-code_location-22",
+      "item_keys": [
+        "open-brain:code_location:25f9d5f0ad3ef4d8"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-code_location-22",
+      "provenance_refs": [
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:14196",
+          "end_line_no": 14196,
+          "end_timestamp": "2026-03-05T19:35:12.966Z",
+          "rule_ids": [
+            "code_location.detected"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:1245",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:14196",
+          "start_line_no": 14196,
+          "start_timestamp": "2026-03-05T19:35:12.966Z",
+          "statement": "- V2 ask loop with bounded refinement, sufficiency/contradiction checks, answer contract, evidence linking in [v2_ask.ts](/c:/Users/Fabio/Cursor%20AI%20projects/Projects/OpenBrain/src/v2_ask.ts:150)."
+        },
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:14200",
+          "end_line_no": 14200,
+          "end_timestamp": "2026-03-05T19:40:30.890Z",
+          "rule_ids": [
+            "code_location.detected"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:1246",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:14197",
+          "start_line_no": 14197,
+          "start_timestamp": "2026-03-05T19:35:12.968Z",
+          "statement": "- V2 ask loop with bounded refinement, sufficiency/contradiction checks, answer contract, evidence linking in [v2_ask.ts](/c:/Users/Fabio/Cursor%20AI%20projects/Projects/OpenBrain/src/v2_ask.ts:150)."
+        },
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:19715",
+          "end_line_no": 19715,
+          "end_timestamp": "2026-03-06T18:39:46.813Z",
+          "rule_ids": [
+            "code_location.detected"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:1822",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:19709",
+          "start_line_no": 19709,
+          "start_timestamp": "2026-03-06T18:37:39.928Z",
+          "statement": "- Planner prompt now: capability-first + hypotheses (not \u201csubqueries only\u201d) in [v2_ask.ts](c:/Users/Fabio/Cursor%20AI%20projects/Projects/OpenBrain/src/v2_ask.ts)"
+        }
+      ]
+    },
+    {
+      "citation_id": "item-code_location-23",
+      "item_keys": [
+        "open-brain:code_location:9ad7118c4dedbf01"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-code_location-23",
+      "provenance_refs": [
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:20901",
+          "end_line_no": 20901,
+          "end_timestamp": "2026-03-06T21:11:32.291Z",
+          "rule_ids": [
+            "code_location.detected"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:1987",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:20901",
+          "start_line_no": 20901,
+          "start_timestamp": "2026-03-06T21:11:32.291Z",
+          "statement": "https://arxiv.org/abs/2104.08663"
+        },
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:31340",
+          "end_line_no": 31340,
+          "end_timestamp": "2026-03-08T23:16:14.006Z",
+          "rule_ids": [
+            "code_location.detected"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:3402",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:31340",
+          "start_line_no": 31340,
+          "start_timestamp": "2026-03-08T23:16:14.006Z",
+          "statement": "- Retrieval benchmarking breadth: [BEIR](https://arxiv.org/abs/2104.08663)"
+        },
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:31344",
+          "end_line_no": 31344,
+          "end_timestamp": "2026-03-08T23:56:56.899Z",
+          "rule_ids": [
+            "code_location.detected"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:3403",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:31341",
+          "start_line_no": 31341,
+          "start_timestamp": "2026-03-08T23:16:14.008Z",
+          "statement": "- Retrieval benchmarking breadth: [BEIR](https://arxiv.org/abs/2104.08663)"
+        }
+      ]
+    },
+    {
+      "citation_id": "item-code_location-24",
+      "item_keys": [
+        "open-brain:code_location:b4e6ac2ed270852b"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-code_location-24",
+      "provenance_refs": [
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:4968",
+          "end_line_no": 4968,
+          "end_timestamp": "2026-03-03T06:40:48.713Z",
+          "rule_ids": [
+            "code_location.detected"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:429",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:4968",
+          "start_line_no": 4968,
+          "start_timestamp": "2026-03-03T06:40:48.713Z",
+          "statement": "- REST API in [server.ts](\\/c:/Users/Fabio/Cursor%20AI%20projects/Projects/OpenBrain/src/server.ts)"
+        },
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:4972",
+          "end_line_no": 4972,
+          "end_timestamp": "2026-03-03T14:01:29.745Z",
+          "rule_ids": [
+            "code_location.detected"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:430",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:4969",
+          "start_line_no": 4969,
+          "start_timestamp": "2026-03-03T06:40:48.715Z",
+          "statement": "- REST API in [server.ts](\\/c:/Users/Fabio/Cursor%20AI%20projects/Projects/OpenBrain/src/server.ts)"
+        },
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:14196",
+          "end_line_no": 14196,
+          "end_timestamp": "2026-03-05T19:35:12.966Z",
+          "rule_ids": [
+            "code_location.detected"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:1245",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:14196",
+          "start_line_no": 14196,
+          "start_timestamp": "2026-03-05T19:35:12.966Z",
+          "statement": "- V2 REST routes (`/v2/brain/*`, `/v2/quality/*`, `/v2/benchmarks/*`, `/v2/services/*`) in [server.ts](/c:/Users/Fabio/Cursor%20AI%20projects/Projects/OpenBrain/src/server.ts:571)."
+        }
+      ]
+    },
+    {
+      "citation_id": "item-code_location-25",
+      "item_keys": [
+        "open-brain:code_location:aee9c7321c8c34cb"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-code_location-25",
+      "provenance_refs": [
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:4968",
+          "end_line_no": 4968,
+          "end_timestamp": "2026-03-03T06:40:48.713Z",
+          "rule_ids": [
+            "code_location.detected"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:429",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:4968",
+          "start_line_no": 4968,
+          "start_timestamp": "2026-03-03T06:40:48.713Z",
+          "statement": "- DB + dedupe + vector search in [db.ts](\\/c:/Users/Fabio/Cursor%20AI%20projects/Projects/OpenBrain/src/db.ts)"
+        },
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:4972",
+          "end_line_no": 4972,
+          "end_timestamp": "2026-03-03T14:01:29.745Z",
+          "rule_ids": [
+            "code_location.detected"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:430",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:4969",
+          "start_line_no": 4969,
+          "start_timestamp": "2026-03-03T06:40:48.715Z",
+          "statement": "- DB + dedupe + vector search in [db.ts](\\/c:/Users/Fabio/Cursor%20AI%20projects/Projects/OpenBrain/src/db.ts)"
+        },
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:6608",
+          "end_line_no": 6608,
+          "end_timestamp": "2026-03-04T03:08:13.068Z",
+          "rule_ids": [
+            "code_location.explicit"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:584",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:6602",
+          "start_line_no": 6602,
+          "start_timestamp": "2026-03-04T03:05:22.546Z",
+          "statement": "- Your search path is currently semantic/vector-driven in [db.ts](/c:/Users/Fabio/Cursor%20AI%20projects/Projects/OpenBrain/src/db.ts)."
+        }
+      ]
+    },
+    {
+      "citation_id": "item-code_location-26",
+      "item_keys": [
+        "open-brain:code_location:8c481b50a94924b0"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-code_location-26",
+      "provenance_refs": [
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:244",
+          "end_line_no": 244,
+          "end_timestamp": "2026-04-12T22:42:29.155Z",
+          "rule_ids": [
+            "code_location.explicit"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:57",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:242",
+          "start_line_no": 242,
+          "start_timestamp": "2026-04-12T22:42:27.722Z",
+          "statement": "- __init__.py: WikiMemory/wikimemory/__init__.py"
+        },
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:278",
+          "end_line_no": 278,
+          "end_timestamp": "2026-04-12T22:56:12.292Z",
+          "rule_ids": [
+            "code_location.explicit"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:66",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:276",
+          "start_line_no": 276,
+          "start_timestamp": "2026-04-12T22:56:12.063Z",
+          "statement": "- __init__.py: WikiMemory/wikimemory/__init__.py"
+        },
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:293",
+          "end_line_no": 293,
+          "end_timestamp": "2026-04-12T23:05:27.456Z",
+          "rule_ids": [
+            "code_location.explicit"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:71",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:293",
+          "start_line_no": 293,
+          "start_timestamp": "2026-04-12T23:05:27.456Z",
+          "statement": "- __init__.py: WikiMemory/wikimemory/__init__.py"
+        }
+      ]
+    },
+    {
+      "citation_id": "item-code_location-27",
+      "item_keys": [
+        "open-brain:code_location:b1cacae7301fc217"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-code_location-27",
+      "provenance_refs": [
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:244",
+          "end_line_no": 244,
+          "end_timestamp": "2026-04-12T22:42:29.155Z",
+          "rule_ids": [
+            "code_location.explicit"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:57",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:242",
+          "start_line_no": 242,
+          "start_timestamp": "2026-04-12T22:42:27.722Z",
+          "statement": "- __main__.py: WikiMemory/wikimemory/__main__.py"
+        },
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:278",
+          "end_line_no": 278,
+          "end_timestamp": "2026-04-12T22:56:12.292Z",
+          "rule_ids": [
+            "code_location.explicit"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:66",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:276",
+          "start_line_no": 276,
+          "start_timestamp": "2026-04-12T22:56:12.063Z",
+          "statement": "- __main__.py: WikiMemory/wikimemory/__main__.py"
+        },
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:293",
+          "end_line_no": 293,
+          "end_timestamp": "2026-04-12T23:05:27.456Z",
+          "rule_ids": [
+            "code_location.explicit"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:71",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:293",
+          "start_line_no": 293,
+          "start_timestamp": "2026-04-12T23:05:27.456Z",
+          "statement": "- __main__.py: WikiMemory/wikimemory/__main__.py"
+        }
+      ]
+    },
+    {
+      "citation_id": "item-code_location-28",
+      "item_keys": [
+        "open-brain:code_location:601211f367c2be60"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-code_location-28",
+      "provenance_refs": [
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:244",
+          "end_line_no": 244,
+          "end_timestamp": "2026-04-12T22:42:29.155Z",
+          "rule_ids": [
+            "code_location.detected"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:57",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:242",
+          "start_line_no": 242,
+          "start_timestamp": "2026-04-12T22:42:27.722Z",
+          "statement": "- pyproject.toml: WikiMemory/pyproject.toml"
+        },
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:278",
+          "end_line_no": 278,
+          "end_timestamp": "2026-04-12T22:56:12.292Z",
+          "rule_ids": [
+            "code_location.detected"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:66",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:276",
+          "start_line_no": 276,
+          "start_timestamp": "2026-04-12T22:56:12.063Z",
+          "statement": "- pyproject.toml: WikiMemory/pyproject.toml"
+        },
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:293",
+          "end_line_no": 293,
+          "end_timestamp": "2026-04-12T23:05:27.456Z",
+          "rule_ids": [
+            "code_location.detected"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:71",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:293",
+          "start_line_no": 293,
+          "start_timestamp": "2026-04-12T23:05:27.456Z",
+          "statement": "- pyproject.toml: WikiMemory/pyproject.toml"
+        }
+      ]
+    },
+    {
+      "citation_id": "item-code_location-29",
+      "item_keys": [
+        "open-brain:code_location:a2bd2812fa4d4408"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-code_location-29",
+      "provenance_refs": [
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:738",
+          "end_line_no": 738,
+          "end_timestamp": "2026-04-12T23:56:11.488Z",
+          "rule_ids": [
+            "code_location.detected"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:165",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:728",
+          "start_line_no": 728,
+          "start_timestamp": "2026-04-12T23:55:59.650Z",
+          "statement": "- Updated [.gitignore](/c:/Users/Fabio/Cursor%20AI%20projects/Projects/WikiMemory/.gitignore) and [README.md](/c:/Users/Fabio/Cursor%20AI%20projects/Projects/WikiMemory/README.md) for the new `segmented/` artifacts and command."
+        },
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:742",
+          "end_line_no": 742,
+          "end_timestamp": "2026-04-13T00:10:33.601Z",
+          "rule_ids": [
+            "code_location.detected"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:166",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:739",
+          "start_line_no": 739,
+          "start_timestamp": "2026-04-12T23:56:11.489Z",
+          "statement": "- Updated [.gitignore](/c:/Users/Fabio/Cursor%20AI%20projects/Projects/WikiMemory/.gitignore) and [README.md](/c:/Users/Fabio/Cursor%20AI%20projects/Projects/WikiMemory/README.md) for the new `segmented/` artifacts and command."
+        },
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:1600",
+          "end_line_no": 1600,
+          "end_timestamp": "2026-04-13T02:34:11.753Z",
+          "rule_ids": [
+            "code_location.detected"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:360",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:1593",
+          "start_line_no": 1593,
+          "start_timestamp": "2026-04-13T02:33:51.708Z",
+          "statement": "- Updated [README.md](/c:/Users/Fabio/Cursor%20AI%20projects/Projects/WikiMemory/README.md) and fixed the wiki renderer\u2019s project-domain constant so the page/link layer runs cleanly."
+        }
+      ]
+    },
+    {
+      "citation_id": "item-code_location-30",
+      "item_keys": [
+        "open-brain:code_location:203d2bcd5f9c08b9"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-code_location-30",
+      "provenance_refs": [
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:468",
+          "end_line_no": 468,
+          "end_timestamp": "2026-04-12T23:20:56.428Z",
+          "rule_ids": [
+            "code_location.explicit"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:109",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:468",
+          "start_line_no": 468,
+          "start_timestamp": "2026-04-12T23:20:56.428Z",
+          "statement": "- Added [tests/test_normalization.py](</c:/Users/Fabio/Cursor AI projects/Projects/WikiMemory/tests/test_normalization.py>) covering:"
+        },
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:472",
+          "end_line_no": 472,
+          "end_timestamp": "2026-04-12T23:25:39.859Z",
+          "rule_ids": [
+            "code_location.explicit"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:110",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:469",
+          "start_line_no": 469,
+          "start_timestamp": "2026-04-12T23:20:56.429Z",
+          "statement": "- Added [tests/test_normalization.py](</c:/Users/Fabio/Cursor AI projects/Projects/WikiMemory/tests/test_normalization.py>) covering:"
+        },
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:4230",
+          "end_line_no": 4230,
+          "end_timestamp": "2026-04-13T14:29:59.107Z",
+          "rule_ids": [
+            "code_location.explicit"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:834",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:4230",
+          "start_line_no": 4230,
+          "start_timestamp": "2026-04-13T14:29:59.107Z",
+          "statement": "- Added/updated regression tests in [tests/test_normalization.py](/c:/Users/Fabio/Cursor%20AI%20projects/Projects/WikiMemory/tests/test_normalization.py), [tests/test_raw_event_resolver.py](/c:/Users/Fabio/Cursor%20AI%20projects/Projects/WikiMemory/tests/test_raw_event_resolver.py), [tests/test_extraction.py](/c:/Users/Fabio/Cursor%20AI%20projects/Projects/WikiMemory/tests/test_extraction.py), [tests/test_audit.py](/c:/Users/Fabio/Cursor%20AI%20projects/Projects/WikiMemory/tests/test_audit.py), and updated [README.md](/c:/Users/Fabio/Cursor%20AI%20projects/Projects/WikiMemory/README.md)."
+        }
+      ]
+    },
+    {
+      "citation_id": "item-code_location-31",
+      "item_keys": [
+        "open-brain:code_location:7987fd3c76928b94"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-code_location-31",
+      "provenance_refs": [
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:244",
+          "end_line_no": 244,
+          "end_timestamp": "2026-04-12T22:42:29.155Z",
+          "rule_ids": [
+            "code_location.explicit"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:57",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:242",
+          "start_line_no": 242,
+          "start_timestamp": "2026-04-12T22:42:27.722Z",
+          "statement": "- cli.py: WikiMemory/wikimemory/cli.py"
+        },
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:278",
+          "end_line_no": 278,
+          "end_timestamp": "2026-04-12T22:56:12.292Z",
+          "rule_ids": [
+            "code_location.explicit"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:66",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:276",
+          "start_line_no": 276,
+          "start_timestamp": "2026-04-12T22:56:12.063Z",
+          "statement": "- cli.py: WikiMemory/wikimemory/cli.py"
+        },
+        {
+          "end_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:293",
+          "end_line_no": 293,
+          "end_timestamp": "2026-04-12T23:05:27.456Z",
+          "rule_ids": [
+            "code_location.explicit"
+          ],
+          "segment_id": "019d837d-d249-71c3-9637-b8d6992ce805:71",
+          "session_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "source_id": "019d837d-d249-71c3-9637-b8d6992ce805",
+          "start_event_id": "019d837d-d249-71c3-9637-b8d6992ce805:293",
+          "start_line_no": 293,
+          "start_timestamp": "2026-04-12T23:05:27.456Z",
+          "statement": "- cli.py: WikiMemory/wikimemory/cli.py"
+        }
+      ]
+    },
+    {
+      "citation_id": "item-code_location-32",
+      "item_keys": [
+        "open-brain:code_location:ea923144f532357f"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-code_location-32",
+      "provenance_refs": [
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:72086",
+          "end_line_no": 72086,
+          "end_timestamp": "2026-03-15T22:30:30.731Z",
+          "rule_ids": [
+            "code_location.detected"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:10629",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:72082",
+          "start_line_no": 72082,
+          "start_timestamp": "2026-03-15T22:30:15.670Z",
+          "statement": "- Added a new backend network layer in [src/v2_network.ts](C:\\Users\\Fabio\\Cursor AI projects\\Projects\\OpenBrain\\src\\v2_network.ts)."
+        },
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:72091",
+          "end_line_no": 72091,
+          "end_timestamp": "2026-03-15T23:58:43.362Z",
+          "rule_ids": [
+            "code_location.detected"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:10630",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:72087",
+          "start_line_no": 72087,
+          "start_timestamp": "2026-03-15T22:30:30.732Z",
+          "statement": "- Added a new backend network layer in [src/v2_network.ts](C:\\Users\\Fabio\\Cursor AI projects\\Projects\\OpenBrain\\src\\v2_network.ts)."
+        },
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:72377",
+          "end_line_no": 72377,
+          "end_timestamp": "2026-03-16T00:13:49.151Z",
+          "rule_ids": [
+            "code_location.detected"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:10675",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:72372",
+          "start_line_no": 72372,
+          "start_timestamp": "2026-03-16T00:13:20.833Z",
+          "statement": "- Fixed the `Network` graph at the graph-data layer in [src/v2_network.ts](C:\\Users\\Fabio\\Cursor AI projects\\Projects\\OpenBrain\\src\\v2_network.ts)."
+        }
+      ]
+    },
+    {
+      "citation_id": "item-code_location-33",
+      "item_keys": [
+        "open-brain:code_location:8d8361927b4b8e96"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-code_location-33",
+      "provenance_refs": [
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:71575",
+          "end_line_no": 71575,
+          "end_timestamp": "2026-03-15T19:39:48.674Z",
+          "rule_ids": [
+            "code_location.detected"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:10529",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:71575",
+          "start_line_no": 71575,
+          "start_timestamp": "2026-03-15T19:39:48.674Z",
+          "statement": "- [generated/strategy_program/whole_corpus_family_backfill_runner.ts](C:\\Users\\Fabio\\Cursor AI projects\\Projects\\OpenBrain\\generated\\strategy_program\\whole_corpus_family_backfill_runner.ts)"
+        },
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:71580",
+          "end_line_no": 71580,
+          "end_timestamp": "2026-03-15T19:46:19.341Z",
+          "rule_ids": [
+            "code_location.detected"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:10530",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:71576",
+          "start_line_no": 71576,
+          "start_timestamp": "2026-03-15T19:39:48.674Z",
+          "statement": "- [generated/strategy_program/whole_corpus_family_backfill_runner.ts](C:\\Users\\Fabio\\Cursor AI projects\\Projects\\OpenBrain\\generated\\strategy_program\\whole_corpus_family_backfill_runner.ts)"
+        },
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:76591",
+          "end_line_no": 76591,
+          "end_timestamp": "2026-03-16T17:55:20.181Z",
+          "rule_ids": [
+            "code_location.detected"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:11345",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:76586",
+          "start_line_no": 76586,
+          "start_timestamp": "2026-03-16T17:43:28.831Z",
+          "statement": "- [generated/strategy_program/whole_corpus_family_backfill_runner.ts](C:\\Users\\Fabio\\Cursor AI projects\\Projects\\OpenBrain\\generated\\strategy_program\\whole_corpus_family_backfill_runner.ts)"
+        }
+      ]
+    },
+    {
+      "citation_id": "item-code_location-34",
+      "item_keys": [
+        "open-brain:code_location:e9e40616586e35b7"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-code_location-34",
+      "provenance_refs": [
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:3845",
+          "end_line_no": 3845,
+          "end_timestamp": "2026-03-03T05:55:23.026Z",
+          "rule_ids": [
+            "code_location.detected"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:325",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:3842",
+          "start_line_no": 3842,
+          "start_timestamp": "2026-03-03T05:37:29.750Z",
+          "statement": "- `sql/001_init.sql`"
+        },
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:3847",
+          "end_line_no": 3847,
+          "end_timestamp": "2026-03-03T05:55:23.036Z",
+          "rule_ids": [
+            "code_location.detected"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:327",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:3847",
+          "start_line_no": 3847,
+          "start_timestamp": "2026-03-03T05:55:23.036Z",
+          "statement": "- `sql/001_init.sql`"
+        },
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:3850",
+          "end_line_no": 3850,
+          "end_timestamp": "2026-03-03T05:55:26.408Z",
+          "rule_ids": [
+            "code_location.detected"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:328",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:3848",
+          "start_line_no": 3848,
+          "start_timestamp": "2026-03-03T05:55:23.037Z",
+          "statement": "- `sql/001_init.sql`"
+        }
+      ]
+    },
+    {
+      "citation_id": "item-code_location-35",
+      "item_keys": [
+        "open-brain:code_location:49092fc90e416b45"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-code_location-35",
+      "provenance_refs": [
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:28318",
+          "end_line_no": 28318,
+          "end_timestamp": "2026-03-08T05:53:33.564Z",
+          "rule_ids": [
+            "code_location.detected"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:2996",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:28312",
+          "start_line_no": 28312,
+          "start_timestamp": "2026-03-08T04:46:09.350Z",
+          "statement": "- CPU guard log: `generated/strategy_program/cpu_guard.log`"
+        },
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:71575",
+          "end_line_no": 71575,
+          "end_timestamp": "2026-03-15T19:39:48.674Z",
+          "rule_ids": [
+            "code_location.detected"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:10529",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:71575",
+          "start_line_no": 71575,
+          "start_timestamp": "2026-03-15T19:39:48.674Z",
+          "statement": "- `generated/strategy_program/cpu_guard.log`"
+        },
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:71580",
+          "end_line_no": 71580,
+          "end_timestamp": "2026-03-15T19:46:19.341Z",
+          "rule_ids": [
+            "code_location.detected"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:10530",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:71576",
+          "start_line_no": 71576,
+          "start_timestamp": "2026-03-15T19:39:48.674Z",
+          "statement": "- `generated/strategy_program/cpu_guard.log`"
+        }
+      ]
+    },
+    {
+      "citation_id": "item-code_location-36",
+      "item_keys": [
+        "open-brain:code_location:8e8022362f90cf70"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-code_location-36",
+      "provenance_refs": [
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:19053",
+          "end_line_no": 19053,
+          "end_timestamp": "2026-03-06T17:37:54.944Z",
+          "rule_ids": [
+            "code_location.detected"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:1739",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:19042",
+          "start_line_no": 19042,
+          "start_timestamp": "2026-03-06T17:37:34.189Z",
+          "statement": "I confirmed there\u2019s no persistent `AGENTS.md` in `OpenBrain`, so I\u2019m adding one now with a hard rule: solve classes of problems generically (intent -> subqueries -> evidence sufficiency), never ad-hoc single-question hints."
+        },
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:20858",
+          "end_line_no": 20858,
+          "end_timestamp": "2026-03-06T20:58:04.603Z",
+          "rule_ids": [
+            "code_location.explicit"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:1976",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:20855",
+          "start_line_no": 20855,
+          "start_timestamp": "2026-03-06T20:45:58.405Z",
+          "statement": "Add a CodexClaw guard test asserting runtime profile loading uses `store/workspaces/<chat>/<agent>/AGENTS.md` only and does not consume repo-root `AGENTS.md`."
+        },
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:71283",
+          "end_line_no": 71283,
+          "end_timestamp": "2026-03-15T15:44:19.701Z",
+          "rule_ids": [
+            "code_location.explicit"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:10475",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:71268",
+          "start_line_no": 71268,
+          "start_timestamp": "2026-03-15T15:43:51.317Z",
+          "statement": "I\u2019m using the root `AGENTS.md` constraints and focusing only on the login path now: served UI, auth endpoints, and the exact runtime code the browser gets."
+        }
+      ]
+    },
+    {
+      "citation_id": "item-code_location-37",
+      "item_keys": [
+        "open-brain:code_location:c36b55600c6cb829"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-code_location-37",
+      "provenance_refs": [
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:6275",
+          "end_line_no": 6275,
+          "end_timestamp": "2026-03-03T21:40:22.720Z",
+          "rule_ids": [
+            "code_location.detected"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:554",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:6259",
+          "start_line_no": 6259,
+          "start_timestamp": "2026-03-03T21:39:19.605Z",
+          "statement": "- [src/session.ts](/c:/Users/Fabio/Cursor%20AI%20projects/Projects/OpenBrain/src/session.ts)"
+        },
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:6279",
+          "end_line_no": 6279,
+          "end_timestamp": "2026-03-03T21:55:32.164Z",
+          "rule_ids": [
+            "code_location.detected"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:555",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:6276",
+          "start_line_no": 6276,
+          "start_timestamp": "2026-03-03T21:40:22.722Z",
+          "statement": "- [src/session.ts](/c:/Users/Fabio/Cursor%20AI%20projects/Projects/OpenBrain/src/session.ts)"
+        },
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:70570",
+          "end_line_no": 70570,
+          "end_timestamp": "2026-03-15T12:43:26.656Z",
+          "rule_ids": [
+            "code_location.detected"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:10391",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:70561",
+          "start_line_no": 70561,
+          "start_timestamp": "2026-03-15T12:43:23.423Z",
+          "statement": "I\u2019m patching `src/session.ts` directly with a safer username lookup and then validating build + login API again."
+        }
+      ]
+    },
+    {
+      "citation_id": "item-code_location-38",
+      "item_keys": [
+        "open-brain:code_location:f92c75534c911210"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-code_location-38",
+      "provenance_refs": [
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:65747",
+          "end_line_no": 65747,
+          "end_timestamp": "2026-03-14T21:12:27.645Z",
+          "rule_ids": [
+            "code_location.detected"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:9646",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:65742",
+          "start_line_no": 65742,
+          "start_timestamp": "2026-03-14T15:33:06.466Z",
+          "statement": "- [whole_corpus_family_backfill_cursor.json](c:\\Users\\Fabio\\Cursor%20AI%20projects\\Projects\\OpenBrain\\generated\\strategy_program\\whole_corpus_family_backfill_cursor.json)"
+        },
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:68496",
+          "end_line_no": 68496,
+          "end_timestamp": "2026-03-15T03:37:18.263Z",
+          "rule_ids": [
+            "code_location.detected"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:10125",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:68491",
+          "start_line_no": 68491,
+          "start_timestamp": "2026-03-15T03:35:25.392Z",
+          "statement": "- [whole_corpus_family_backfill_cursor.json](C:\\Users\\Fabio\\Cursor%20AI%20projects\\Projects\\OpenBrain\\generated\\strategy_program\\whole_corpus_family_backfill_cursor.json) (updated `2026-03-14 22:50:20`)"
+        },
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:68535",
+          "end_line_no": 68535,
+          "end_timestamp": "2026-03-15T03:41:02.891Z",
+          "rule_ids": [
+            "code_location.detected"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:10134",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:68530",
+          "start_line_no": 68530,
+          "start_timestamp": "2026-03-15T03:38:32.241Z",
+          "statement": "- [whole_corpus_family_backfill_cursor.json](C:\\Users\\Fabio\\Cursor%20AI%20projects\\Projects\\OpenBrain\\generated\\strategy_program\\whole_corpus_family_backfill_cursor.json)"
+        }
+      ]
+    },
+    {
+      "citation_id": "item-code_location-39",
+      "item_keys": [
+        "open-brain:code_location:32f670d120407975"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-code_location-39",
+      "provenance_refs": [
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:65544",
+          "end_line_no": 65544,
+          "end_timestamp": "2026-03-14T15:13:44.021Z",
+          "rule_ids": [
+            "code_location.detected"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:9610",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:65541",
+          "start_line_no": 65541,
+          "start_timestamp": "2026-03-14T15:13:40.280Z",
+          "statement": "- openbrain_chat_transcript_2026-03-08_to_2026-03-14_utf8.md: OpenBrain/generated/chat_transcripts/openbrain_chat_transcript_2026-03-08_to_2026-03-14_utf8.md"
+        },
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:65581",
+          "end_line_no": 65581,
+          "end_timestamp": "2026-03-14T15:22:50.708Z",
+          "rule_ids": [
+            "code_location.detected"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:9617",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:65578",
+          "start_line_no": 65578,
+          "start_timestamp": "2026-03-14T15:22:44.485Z",
+          "statement": "- openbrain_chat_transcript_2026-03-08_to_2026-03-14_utf8.md: OpenBrain/generated/chat_transcripts/openbrain_chat_transcript_2026-03-08_to_2026-03-14_utf8.md"
+        },
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:65751",
+          "end_line_no": 65751,
+          "end_timestamp": "2026-03-14T21:12:36.075Z",
+          "rule_ids": [
+            "code_location.detected"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:9647",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:65748",
+          "start_line_no": 65748,
+          "start_timestamp": "2026-03-14T21:12:27.647Z",
+          "statement": "- openbrain_chat_transcript_2026-03-08_to_2026-03-14_utf8.md: OpenBrain/generated/chat_transcripts/openbrain_chat_transcript_2026-03-08_to_2026-03-14_utf8.md"
+        }
+      ]
+    },
+    {
+      "citation_id": "item-code_location-40",
+      "item_keys": [
+        "open-brain:code_location:41819e46ae85c964"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-code_location-40",
+      "provenance_refs": [
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:45641",
+          "end_line_no": 45641,
+          "end_timestamp": "2026-03-12T02:02:46.099Z",
+          "rule_ids": [
+            "code_location.detected"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:5822",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:45641",
+          "start_line_no": 45641,
+          "start_timestamp": "2026-03-12T02:02:46.099Z",
+          "statement": "- [ui.ts](c:\\Users\\Fabio\\Cursor%20AI%20projects\\Projects\\OpenBrain\\src\\ui.ts)"
+        },
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:45646",
+          "end_line_no": 45646,
+          "end_timestamp": "2026-03-12T02:21:39.634Z",
+          "rule_ids": [
+            "code_location.detected"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:5823",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:45642",
+          "start_line_no": 45642,
+          "start_timestamp": "2026-03-12T02:02:50.186Z",
+          "statement": "- [ui.ts](c:\\Users\\Fabio\\Cursor%20AI%20projects\\Projects\\OpenBrain\\src\\ui.ts)"
+        },
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:57779",
+          "end_line_no": 57779,
+          "end_timestamp": "2026-03-13T13:07:05.911Z",
+          "rule_ids": [
+            "code_location.detected"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:8137",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:57774",
+          "start_line_no": 57774,
+          "start_timestamp": "2026-03-13T12:41:02.069Z",
+          "statement": "- Evolution UI now surfaces that facet coverage in [ui.ts](c:\\Users\\Fabio\\Cursor%20AI%20projects\\Projects\\OpenBrain\\src\\ui.ts)."
+        }
+      ]
+    },
+    {
+      "citation_id": "item-code_location-41",
+      "item_keys": [
+        "open-brain:code_location:eff55c78440ec495"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-code_location-41",
+      "provenance_refs": [
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:51288",
+          "end_line_no": 51288,
+          "end_timestamp": "2026-03-12T21:25:55.947Z",
+          "rule_ids": [
+            "code_location.detected"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:6892",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:51285",
+          "start_line_no": 51285,
+          "start_timestamp": "2026-03-12T21:25:49.689Z",
+          "statement": "- low_confidence_actor_pronouns.csv: OpenBrain/generated/actor_pronoun_review/low_confidence_actor_pronouns.csv"
+        },
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:51311",
+          "end_line_no": 51311,
+          "end_timestamp": "2026-03-12T21:29:42.501Z",
+          "rule_ids": [
+            "code_location.detected"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:6897",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:51308",
+          "start_line_no": 51308,
+          "start_timestamp": "2026-03-12T21:29:36.670Z",
+          "statement": "- low_confidence_actor_pronouns.csv: OpenBrain/generated/actor_pronoun_review/low_confidence_actor_pronouns.csv"
+        },
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:51330",
+          "end_line_no": 51330,
+          "end_timestamp": "2026-03-12T21:36:37.614Z",
+          "rule_ids": [
+            "code_location.detected"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:6902",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:51327",
+          "start_line_no": 51327,
+          "start_timestamp": "2026-03-12T21:36:31.106Z",
+          "statement": "- low_confidence_actor_pronouns.csv: OpenBrain/generated/actor_pronoun_review/low_confidence_actor_pronouns.csv"
+        }
+      ]
+    },
+    {
+      "citation_id": "item-code_location-42",
+      "item_keys": [
+        "open-brain:code_location:7536531b05748886"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-code_location-42",
+      "provenance_refs": [
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:33067",
+          "end_line_no": 33067,
+          "end_timestamp": "2026-03-09T03:56:55.160Z",
+          "rule_ids": [
+            "code_location.detected"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:3661",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:33067",
+          "start_line_no": 33067,
+          "start_timestamp": "2026-03-09T03:56:55.160Z",
+          "statement": "- RAGChecker (fine-grained diagnostic metrics): https://arxiv.org/abs/2408.08067"
+        },
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:33071",
+          "end_line_no": 33071,
+          "end_timestamp": "2026-03-09T04:05:08.390Z",
+          "rule_ids": [
+            "code_location.detected"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:3662",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:33068",
+          "start_line_no": 33068,
+          "start_timestamp": "2026-03-09T03:56:55.161Z",
+          "statement": "- RAGChecker (fine-grained diagnostic metrics): https://arxiv.org/abs/2408.08067"
+        },
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:44580",
+          "end_line_no": 44580,
+          "end_timestamp": "2026-03-12T00:33:56.322Z",
+          "rule_ids": [
+            "code_location.detected"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:5629",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:44580",
+          "start_line_no": 44580,
+          "start_timestamp": "2026-03-12T00:33:56.322Z",
+          "statement": "Source: [RAGChecker](https://arxiv.org/abs/2408.08067)"
+        }
+      ]
+    },
+    {
+      "citation_id": "item-code_location-43",
+      "item_keys": [
+        "open-brain:code_location:15508d16103c5460"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-code_location-43",
+      "provenance_refs": [
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:5900",
+          "end_line_no": 5900,
+          "end_timestamp": "2026-03-03T21:26:52.081Z",
+          "rule_ids": [
+            "code_location.explicit"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:533",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:5897",
+          "start_line_no": 5897,
+          "start_timestamp": "2026-03-03T21:26:51.213Z",
+          "statement": "I\u2019m rewiring `server.ts` in one pass: route segmentation (API-key memory endpoints vs session-auth brain endpoints), login/logout/session, privacy mode endpoints, brain query/profile/graph/timeline/insights/jobs APIs, plus app HTML serving and worker/migration bootstrap."
+        },
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:39862",
+          "end_line_no": 39862,
+          "end_timestamp": "2026-03-10T22:43:18.079Z",
+          "rule_ids": [
+            "code_location.explicit"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:4728",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:39851",
+          "start_line_no": 39851,
+          "start_timestamp": "2026-03-10T22:43:09.884Z",
+          "statement": "I\u2019m switching to `server.ts` now to expose the taxonomy operations and experiment freshness/reseed paths so the UI can drive all of this without terminal commands."
+        }
+      ]
+    },
+    {
+      "citation_id": "item-code_location-44",
+      "item_keys": [
+        "open-brain:code_location:fa1bc65365cb1e99"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-code_location-44",
+      "provenance_refs": [
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:26680",
+          "end_line_no": 26680,
+          "end_timestamp": "2026-03-07T22:43:52.448Z",
+          "rule_ids": [
+            "code_location.detected"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:2775",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:26677",
+          "start_line_no": 26677,
+          "start_timestamp": "2026-03-07T22:34:36.892Z",
+          "statement": "`generated/test_candidates/type_domain_found_dbsignals_v2.csv`"
+        },
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:26704",
+          "end_line_no": 26704,
+          "end_timestamp": "2026-03-07T22:55:53.790Z",
+          "rule_ids": [
+            "code_location.detected"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:2780",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:26701",
+          "start_line_no": 26701,
+          "start_timestamp": "2026-03-07T22:51:10.842Z",
+          "statement": "`generated/test_candidates/type_domain_found_dbsignals_v2.csv`"
+        },
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:26706",
+          "end_line_no": 26706,
+          "end_timestamp": "2026-03-07T22:55:53.793Z",
+          "rule_ids": [
+            "code_location.detected"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:2782",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:26706",
+          "start_line_no": 26706,
+          "start_timestamp": "2026-03-07T22:55:53.793Z",
+          "statement": "`generated/test_candidates/type_domain_found_dbsignals_v2.csv`"
+        }
+      ]
+    },
+    {
+      "citation_id": "item-code_location-45",
+      "item_keys": [
+        "open-brain:code_location:ffa12946862931fd"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-code_location-45",
+      "provenance_refs": [
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:28876",
+          "end_line_no": 28876,
+          "end_timestamp": "2026-03-08T06:46:23.988Z",
+          "rule_ids": [
+            "code_location.detected"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:3067",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:28872",
+          "start_line_no": 28872,
+          "start_timestamp": "2026-03-08T06:43:13.538Z",
+          "statement": "I fixed it in [v2_experiments.ts](c:/Users/Fabio/Cursor%20AI%20projects/Projects/OpenBrain/src/v2_experiments.ts):"
+        },
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:28876",
+          "end_line_no": 28876,
+          "end_timestamp": "2026-03-08T06:46:23.988Z",
+          "rule_ids": [
+            "code_location.detected"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:3067",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:28872",
+          "start_line_no": 28872,
+          "start_timestamp": "2026-03-08T06:43:13.538Z",
+          "statement": "- Added prior-run failure loading and parsing (`loadPreviousFailureBreakdown`) at [v2_experiments.ts:933](c:/Users/Fabio/Cursor%20AI%20projects/Projects/OpenBrain/src/v2_experiments.ts:933)"
+        },
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:28876",
+          "end_line_no": 28876,
+          "end_timestamp": "2026-03-08T06:46:23.988Z",
+          "rule_ids": [
+            "code_location.detected"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:3067",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:28872",
+          "start_line_no": 28872,
+          "start_timestamp": "2026-03-08T06:43:13.538Z",
+          "statement": "- Added bucket-driven config adaptation (`applyLearningAdjustments`) at [v2_experiments.ts:948](c:/Users/Fabio/Cursor%20AI%20projects/Projects/OpenBrain/src/v2_experiments.ts:948)"
+        }
+      ]
+    },
+    {
+      "citation_id": "item-code_location-46",
+      "item_keys": [
+        "open-brain:code_location:763c831f20d0b4f5"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-code_location-46",
+      "provenance_refs": [
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:26042",
+          "end_line_no": 26042,
+          "end_timestamp": "2026-03-07T20:30:11.056Z",
+          "rule_ids": [
+            "code_location.detected"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:2673",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:26039",
+          "start_line_no": 26039,
+          "start_timestamp": "2026-03-07T20:20:43.103Z",
+          "statement": "- CRAG paper: https://arxiv.org/abs/2401.15884"
+        },
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:32326",
+          "end_line_no": 32326,
+          "end_timestamp": "2026-03-09T02:12:18.947Z",
+          "rule_ids": [
+            "code_location.detected"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:3552",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:32321",
+          "start_line_no": 32321,
+          "start_timestamp": "2026-03-09T02:11:34.743Z",
+          "statement": "- [CRAG](https://arxiv.org/abs/2401.15884)"
+        },
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:32330",
+          "end_line_no": 32330,
+          "end_timestamp": "2026-03-09T02:19:46.030Z",
+          "rule_ids": [
+            "code_location.detected"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:3553",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:32327",
+          "start_line_no": 32327,
+          "start_timestamp": "2026-03-09T02:12:18.949Z",
+          "statement": "- [CRAG](https://arxiv.org/abs/2401.15884)"
+        }
+      ]
+    },
+    {
+      "citation_id": "item-code_location-47",
+      "item_keys": [
+        "open-brain:code_location:c9e3459b8af228cc"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-code_location-47",
+      "provenance_refs": [
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:26042",
+          "end_line_no": 26042,
+          "end_timestamp": "2026-03-07T20:30:11.056Z",
+          "rule_ids": [
+            "code_location.detected"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:2673",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:26039",
+          "start_line_no": 26039,
+          "start_timestamp": "2026-03-07T20:20:43.103Z",
+          "statement": "- HyDE paper: https://arxiv.org/abs/2212.10496"
+        },
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:31340",
+          "end_line_no": 31340,
+          "end_timestamp": "2026-03-08T23:16:14.006Z",
+          "rule_ids": [
+            "code_location.detected"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:3402",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:31340",
+          "start_line_no": 31340,
+          "start_timestamp": "2026-03-08T23:16:14.006Z",
+          "statement": "- Query transformation: [HyDE](https://arxiv.org/abs/2212.10496), [Query2doc](https://arxiv.org/abs/2303.07678)"
+        },
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:31344",
+          "end_line_no": 31344,
+          "end_timestamp": "2026-03-08T23:56:56.899Z",
+          "rule_ids": [
+            "code_location.detected"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:3403",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:31341",
+          "start_line_no": 31341,
+          "start_timestamp": "2026-03-08T23:16:14.008Z",
+          "statement": "- Query transformation: [HyDE](https://arxiv.org/abs/2212.10496), [Query2doc](https://arxiv.org/abs/2303.07678)"
+        }
+      ]
+    },
+    {
+      "citation_id": "item-code_location-48",
+      "item_keys": [
+        "open-brain:code_location:bca3664925c75fec"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-code_location-48",
+      "provenance_refs": [
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:22212",
+          "end_line_no": 22212,
+          "end_timestamp": "2026-03-06T23:09:26.072Z",
+          "rule_ids": [
+            "code_location.detected"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:2160",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:22212",
+          "start_line_no": 22212,
+          "start_timestamp": "2026-03-06T23:09:26.072Z",
+          "statement": "- [v2_types.ts](/c:/Users/Fabio/Cursor%20AI%20projects/Projects/OpenBrain/src/v2_types.ts)"
+        },
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:22216",
+          "end_line_no": 22216,
+          "end_timestamp": "2026-03-06T23:12:04.633Z",
+          "rule_ids": [
+            "code_location.detected"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:2161",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:22213",
+          "start_line_no": 22213,
+          "start_timestamp": "2026-03-06T23:09:26.074Z",
+          "statement": "- [v2_types.ts](/c:/Users/Fabio/Cursor%20AI%20projects/Projects/OpenBrain/src/v2_types.ts)"
+        },
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:30282",
+          "end_line_no": 30282,
+          "end_timestamp": "2026-03-08T16:29:54.144Z",
+          "rule_ids": [
+            "code_location.detected"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:3256",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:30278",
+          "start_line_no": 30278,
+          "start_timestamp": "2026-03-08T16:24:45.815Z",
+          "statement": "- Code: [v2_types.ts](c:/Users/Fabio/Cursor%20AI%20projects/Projects/OpenBrain/src/v2_types.ts:258), [v2_experiments.ts](c:/Users/Fabio/Cursor%20AI%20projects/Projects/OpenBrain/src/v2_experiments.ts:1858)"
+        }
+      ]
+    },
+    {
+      "citation_id": "item-code_location-49",
+      "item_keys": [
+        "open-brain:code_location:010b6b464c86edf7"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-code_location-49",
+      "provenance_refs": [
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:26550",
+          "end_line_no": 26550,
+          "end_timestamp": "2026-03-07T22:15:17.034Z",
+          "rule_ids": [
+            "code_location.detected"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:2755",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:26546",
+          "start_line_no": 26546,
+          "start_timestamp": "2026-03-07T22:15:02.494Z",
+          "statement": "- type_domain_found_dbsignals.csv: OpenBrain/generated/test_candidates/type_domain_found_dbsignals.csv"
+        },
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:26610",
+          "end_line_no": 26610,
+          "end_timestamp": "2026-03-07T22:25:34.832Z",
+          "rule_ids": [
+            "code_location.detected"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:2765",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:26606",
+          "start_line_no": 26606,
+          "start_timestamp": "2026-03-07T22:25:24.521Z",
+          "statement": "- type_domain_found_dbsignals.csv: OpenBrain/generated/test_candidates/type_domain_found_dbsignals.csv"
+        },
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:28661",
+          "end_line_no": 28661,
+          "end_timestamp": "2026-03-08T06:27:11.034Z",
+          "rule_ids": [
+            "code_location.detected"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:3039",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:28657",
+          "start_line_no": 28657,
+          "start_timestamp": "2026-03-08T06:27:05.325Z",
+          "statement": "- type_domain_found_dbsignals.csv: OpenBrain/generated/test_candidates/type_domain_found_dbsignals.csv"
+        }
+      ]
+    },
+    {
+      "citation_id": "item-code_location-50",
+      "item_keys": [
+        "open-brain:code_location:ec21e98cd05b07d0"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-code_location-50",
+      "provenance_refs": [
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:26623",
+          "end_line_no": 26623,
+          "end_timestamp": "2026-03-07T22:31:28.773Z",
+          "rule_ids": [
+            "code_location.detected"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:2768",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:26619",
+          "start_line_no": 26619,
+          "start_timestamp": "2026-03-07T22:31:21.211Z",
+          "statement": "- type_domain_found_dbsignals_v2.csv: OpenBrain/generated/test_candidates/type_domain_found_dbsignals_v2.csv"
+        },
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:26685",
+          "end_line_no": 26685,
+          "end_timestamp": "2026-03-07T22:43:59.950Z",
+          "rule_ids": [
+            "code_location.detected"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:2776",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:26681",
+          "start_line_no": 26681,
+          "start_timestamp": "2026-03-07T22:43:52.450Z",
+          "statement": "- type_domain_found_dbsignals_v2.csv: OpenBrain/generated/test_candidates/type_domain_found_dbsignals_v2.csv"
+        },
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:26697",
+          "end_line_no": 26697,
+          "end_timestamp": "2026-03-07T22:50:06.786Z",
+          "rule_ids": [
+            "code_location.detected"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:2778",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:26693",
+          "start_line_no": 26693,
+          "start_timestamp": "2026-03-07T22:49:58.051Z",
+          "statement": "- type_domain_found_dbsignals_v2.csv: OpenBrain/generated/test_candidates/type_domain_found_dbsignals_v2.csv"
+        }
+      ]
+    },
+    {
+      "citation_id": "item-code_location-51",
+      "item_keys": [
+        "open-brain:code_location:aa978a8554adb840"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-code_location-51",
+      "provenance_refs": [
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:26623",
+          "end_line_no": 26623,
+          "end_timestamp": "2026-03-07T22:31:28.773Z",
+          "rule_ids": [
+            "code_location.detected"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:2768",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:26619",
+          "start_line_no": 26619,
+          "start_timestamp": "2026-03-07T22:31:21.211Z",
+          "statement": "- type_domain_missing_dbsignals_v2.csv: OpenBrain/generated/test_candidates/type_domain_missing_dbsignals_v2.csv"
+        },
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:26685",
+          "end_line_no": 26685,
+          "end_timestamp": "2026-03-07T22:43:59.950Z",
+          "rule_ids": [
+            "code_location.detected"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:2776",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:26681",
+          "start_line_no": 26681,
+          "start_timestamp": "2026-03-07T22:43:52.450Z",
+          "statement": "- type_domain_missing_dbsignals_v2.csv: OpenBrain/generated/test_candidates/type_domain_missing_dbsignals_v2.csv"
+        },
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:26697",
+          "end_line_no": 26697,
+          "end_timestamp": "2026-03-07T22:50:06.786Z",
+          "rule_ids": [
+            "code_location.detected"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:2778",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:26693",
+          "start_line_no": 26693,
+          "start_timestamp": "2026-03-07T22:49:58.051Z",
+          "statement": "- type_domain_missing_dbsignals_v2.csv: OpenBrain/generated/test_candidates/type_domain_missing_dbsignals_v2.csv"
+        }
+      ]
+    },
+    {
+      "citation_id": "item-code_location-52",
+      "item_keys": [
+        "open-brain:code_location:f92eb3d39c8b1a47"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-code_location-52",
+      "provenance_refs": [
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:26550",
+          "end_line_no": 26550,
+          "end_timestamp": "2026-03-07T22:15:17.034Z",
+          "rule_ids": [
+            "code_location.detected"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:2755",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:26546",
+          "start_line_no": 26546,
+          "start_timestamp": "2026-03-07T22:15:02.494Z",
+          "statement": "- type_domain_matrix_dbsignals.csv: OpenBrain/generated/test_candidates/type_domain_matrix_dbsignals.csv"
+        },
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:26610",
+          "end_line_no": 26610,
+          "end_timestamp": "2026-03-07T22:25:34.832Z",
+          "rule_ids": [
+            "code_location.detected"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:2765",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:26606",
+          "start_line_no": 26606,
+          "start_timestamp": "2026-03-07T22:25:24.521Z",
+          "statement": "- type_domain_matrix_dbsignals.csv: OpenBrain/generated/test_candidates/type_domain_matrix_dbsignals.csv"
+        },
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:26623",
+          "end_line_no": 26623,
+          "end_timestamp": "2026-03-07T22:31:28.773Z",
+          "rule_ids": [
+            "code_location.detected"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:2768",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:26619",
+          "start_line_no": 26619,
+          "start_timestamp": "2026-03-07T22:31:21.211Z",
+          "statement": "- type_domain_matrix_dbsignals.csv: OpenBrain/generated/test_candidates/type_domain_matrix_dbsignals.csv"
+        }
+      ]
+    },
+    {
+      "citation_id": "item-code_location-53",
+      "item_keys": [
+        "open-brain:code_location:6f1b72afa1173f97"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-code_location-53",
+      "provenance_refs": [
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:8408",
+          "end_line_no": 8408,
+          "end_timestamp": "2026-03-04T15:50:13.228Z",
+          "rule_ids": [
+            "code_location.detected"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:742",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:8404",
+          "start_line_no": 8404,
+          "start_timestamp": "2026-03-04T15:29:11.735Z",
+          "statement": "- [package.json](c:/Users/Fabio/Cursor AI projects/Projects/OpenBrain/package.json)"
+        },
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:9141",
+          "end_line_no": 9141,
+          "end_timestamp": "2026-03-04T17:17:16.822Z",
+          "rule_ids": [
+            "code_location.detected"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:786",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:9137",
+          "start_line_no": 9137,
+          "start_timestamp": "2026-03-04T17:13:20.242Z",
+          "statement": "- Updated test runner: [package.json](c:/Users/Fabio/Cursor AI projects/Projects/OpenBrain/package.json)"
+        },
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:9273",
+          "end_line_no": 9273,
+          "end_timestamp": "2026-03-04T17:31:33.902Z",
+          "rule_ids": [
+            "code_location.detected"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:796",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:9260",
+          "start_line_no": 9260,
+          "start_timestamp": "2026-03-04T17:25:25.436Z",
+          "statement": "- Added npm command in [package.json](c:/Users/Fabio/Cursor AI projects/Projects/OpenBrain/package.json):"
+        }
+      ]
+    },
+    {
+      "citation_id": "item-code_location-54",
+      "item_keys": [
+        "open-brain:code_location:9330f6c13fbf8483"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-code_location-54",
+      "provenance_refs": [
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:22326",
+          "end_line_no": 22326,
+          "end_timestamp": "2026-03-06T23:52:25.265Z",
+          "rule_ids": [
+            "code_location.detected"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:2178",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:22322",
+          "start_line_no": 22322,
+          "start_timestamp": "2026-03-06T23:41:13.895Z",
+          "statement": "- [actor_suspicious.csv](/c:/Users/Fabio/Cursor%20AI%20projects/Projects/OpenBrain/generated/actor_review/actor_suspicious.csv)"
+        },
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:22404",
+          "end_line_no": 22404,
+          "end_timestamp": "2026-03-07T00:12:27.590Z",
+          "rule_ids": [
+            "code_location.detected"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:2189",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:22400",
+          "start_line_no": 22400,
+          "start_timestamp": "2026-03-06T23:57:56.969Z",
+          "statement": "- [actor_suspicious.csv](/c:/Users/Fabio/Cursor%20AI%20projects/Projects/OpenBrain/generated/actor_review/actor_suspicious.csv)"
+        },
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:22768",
+          "end_line_no": 22768,
+          "end_timestamp": "2026-03-07T00:55:49.363Z",
+          "rule_ids": [
+            "code_location.detected"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:2241",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:22762",
+          "start_line_no": 22762,
+          "start_timestamp": "2026-03-07T00:49:55.671Z",
+          "statement": "Current suspicious actors (23) from [actor_suspicious.csv](c:/Users/Fabio/Cursor%20AI%20projects/Projects/OpenBrain/generated/actor_review/actor_suspicious.csv):"
+        }
+      ]
+    },
+    {
+      "citation_id": "item-code_location-55",
+      "item_keys": [
+        "open-brain:code_location:f38a73b1afefdd82"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-code_location-55",
+      "provenance_refs": [
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:14196",
+          "end_line_no": 14196,
+          "end_timestamp": "2026-03-05T19:35:12.966Z",
+          "rule_ids": [
+            "code_location.detected"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:1245",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:14196",
+          "start_line_no": 14196,
+          "start_timestamp": "2026-03-05T19:35:12.966Z",
+          "statement": "- Universal quality evaluate/adjudicate/metrics/bootstrap in [v2_quality.ts](/c:/Users/Fabio/Cursor%20AI%20projects/Projects/OpenBrain/src/v2_quality.ts:82)."
+        },
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:14200",
+          "end_line_no": 14200,
+          "end_timestamp": "2026-03-05T19:40:30.890Z",
+          "rule_ids": [
+            "code_location.detected"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:1246",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:14197",
+          "start_line_no": 14197,
+          "start_timestamp": "2026-03-05T19:35:12.968Z",
+          "statement": "- Universal quality evaluate/adjudicate/metrics/bootstrap in [v2_quality.ts](/c:/Users/Fabio/Cursor%20AI%20projects/Projects/OpenBrain/src/v2_quality.ts:82)."
+        },
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:22228",
+          "end_line_no": 22228,
+          "end_timestamp": "2026-03-06T23:26:00.731Z",
+          "rule_ids": [
+            "code_location.detected"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:2163",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:22222",
+          "start_line_no": 22222,
+          "start_timestamp": "2026-03-06T23:12:29.919Z",
+          "statement": "That change in [v2_quality.ts](/c:/Users/Fabio/Cursor%20AI%20projects/Projects/OpenBrain/src/v2_quality.ts) was to fix a real bootstrap failure."
+        }
+      ]
+    },
+    {
+      "citation_id": "item-code_location-56",
+      "item_keys": [
+        "open-brain:code_location:fc725ad60b00cd91"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-code_location-56",
+      "provenance_refs": [
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:7474",
+          "end_line_no": 7474,
+          "end_timestamp": "2026-03-04T05:27:44.106Z",
+          "rule_ids": [
+            "code_location.detected"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:673",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:7474",
+          "start_line_no": 7474,
+          "start_timestamp": "2026-03-04T05:27:44.106Z",
+          "statement": "- [ui.ts](c:/Users/Fabio/Cursor%20AI%20projects/Projects/OpenBrain/src/ui.ts)"
+        },
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:7478",
+          "end_line_no": 7478,
+          "end_timestamp": "2026-03-04T05:37:17.738Z",
+          "rule_ids": [
+            "code_location.detected"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:674",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:7475",
+          "start_line_no": 7475,
+          "start_timestamp": "2026-03-04T05:27:44.107Z",
+          "statement": "- [ui.ts](c:/Users/Fabio/Cursor%20AI%20projects/Projects/OpenBrain/src/ui.ts)"
+        },
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:19931",
+          "end_line_no": 19931,
+          "end_timestamp": "2026-03-06T18:59:58.492Z",
+          "rule_ids": [
+            "code_location.detected"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:1852",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:19927",
+          "start_line_no": 19927,
+          "start_timestamp": "2026-03-06T18:53:22.806Z",
+          "statement": "- [ui.ts](c:/Users/Fabio/Cursor%20AI%20projects/Projects/OpenBrain/src/ui.ts:332)"
+        }
+      ]
+    },
+    {
+      "citation_id": "item-code_location-57",
+      "item_keys": [
+        "open-brain:code_location:a84f8199b25ab384"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-code_location-57",
+      "provenance_refs": [
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:4968",
+          "end_line_no": 4968,
+          "end_timestamp": "2026-03-03T06:40:48.713Z",
+          "rule_ids": [
+            "code_location.detected"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:429",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:4968",
+          "start_line_no": 4968,
+          "start_timestamp": "2026-03-03T06:40:48.713Z",
+          "statement": "- Docs in [README.md](\\/c:/Users/Fabio/Cursor%20AI%20projects/Projects/OpenBrain/README.md)"
+        },
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:4972",
+          "end_line_no": 4972,
+          "end_timestamp": "2026-03-03T14:01:29.745Z",
+          "rule_ids": [
+            "code_location.detected"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:430",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:4969",
+          "start_line_no": 4969,
+          "start_timestamp": "2026-03-03T06:40:48.715Z",
+          "statement": "- Docs in [README.md](\\/c:/Users/Fabio/Cursor%20AI%20projects/Projects/OpenBrain/README.md)"
+        },
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:6275",
+          "end_line_no": 6275,
+          "end_timestamp": "2026-03-03T21:40:22.720Z",
+          "rule_ids": [
+            "code_location.detected"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:554",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:6259",
+          "start_line_no": 6259,
+          "start_timestamp": "2026-03-03T21:39:19.605Z",
+          "statement": "- [README.md](/c:/Users/Fabio/Cursor%20AI%20projects/Projects/OpenBrain/README.md)"
+        }
+      ]
+    },
+    {
+      "citation_id": "item-code_location-58",
+      "item_keys": [
+        "open-brain:code_location:405e6c120acf62d5"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-code_location-58",
+      "provenance_refs": [
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:14196",
+          "end_line_no": 14196,
+          "end_timestamp": "2026-03-05T19:35:12.966Z",
+          "rule_ids": [
+            "code_location.detected"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:1245",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:14196",
+          "start_line_no": 14196,
+          "start_timestamp": "2026-03-05T19:35:12.966Z",
+          "statement": "- New V2 schema/tables (canonical/silver, candidates, quarantine, quality ledger, answer traceability, benchmark, service auth/audit) in [schema.ts](/c:/Users/Fabio/Cursor%20AI%20projects/Projects/OpenBrain/src/schema.ts:225)."
+        },
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:14200",
+          "end_line_no": 14200,
+          "end_timestamp": "2026-03-05T19:40:30.890Z",
+          "rule_ids": [
+            "code_location.detected"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:1246",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:14197",
+          "start_line_no": 14197,
+          "start_timestamp": "2026-03-05T19:35:12.968Z",
+          "statement": "- New V2 schema/tables (canonical/silver, candidates, quarantine, quality ledger, answer traceability, benchmark, service auth/audit) in [schema.ts](/c:/Users/Fabio/Cursor%20AI%20projects/Projects/OpenBrain/src/schema.ts:225)."
+        },
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:16328",
+          "end_line_no": 16328,
+          "end_timestamp": "2026-03-06T00:25:30.851Z",
+          "rule_ids": [
+            "code_location.detected"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:1417",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:16328",
+          "start_line_no": 16328,
+          "start_timestamp": "2026-03-06T00:25:30.851Z",
+          "statement": "- Added metadata queue table + indexes + trigger in [schema.ts](/c:/Users/Fabio/Cursor%20AI%20projects/Projects/OpenBrain/src/schema.ts)."
+        }
+      ]
+    },
+    {
+      "citation_id": "item-code_location-59",
+      "item_keys": [
+        "open-brain:code_location:d16732dd1a3ca3ea"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-code_location-59",
+      "provenance_refs": [
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:14196",
+          "end_line_no": 14196,
+          "end_timestamp": "2026-03-05T19:35:12.966Z",
+          "rule_ids": [
+            "code_location.detected"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:1245",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:14196",
+          "start_line_no": 14196,
+          "start_timestamp": "2026-03-05T19:35:12.966Z",
+          "statement": "- Published fact/graph search endpoints in [v2_search.ts](/c:/Users/Fabio/Cursor%20AI%20projects/Projects/OpenBrain/src/v2_search.ts:3)."
+        },
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:14200",
+          "end_line_no": 14200,
+          "end_timestamp": "2026-03-05T19:40:30.890Z",
+          "rule_ids": [
+            "code_location.detected"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:1246",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:14197",
+          "start_line_no": 14197,
+          "start_timestamp": "2026-03-05T19:35:12.968Z",
+          "statement": "- Published fact/graph search endpoints in [v2_search.ts](/c:/Users/Fabio/Cursor%20AI%20projects/Projects/OpenBrain/src/v2_search.ts:3)."
+        },
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:22212",
+          "end_line_no": 22212,
+          "end_timestamp": "2026-03-06T23:09:26.072Z",
+          "rule_ids": [
+            "code_location.detected"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:2160",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:22212",
+          "start_line_no": 22212,
+          "start_timestamp": "2026-03-06T23:09:26.072Z",
+          "statement": "- [v2_search.ts](/c:/Users/Fabio/Cursor%20AI%20projects/Projects/OpenBrain/src/v2_search.ts)"
+        }
+      ]
+    },
+    {
+      "citation_id": "item-code_location-60",
+      "item_keys": [
+        "open-brain:code_location:52e57ad7e47ca6ae"
+      ],
+      "kind": "deterministic_item",
+      "label": "item-code_location-60",
+      "provenance_refs": [
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:14196",
+          "end_line_no": 14196,
+          "end_timestamp": "2026-03-05T19:35:12.966Z",
+          "rule_ids": [
+            "code_location.detected"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:1245",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:14196",
+          "start_line_no": 14196,
+          "start_timestamp": "2026-03-05T19:35:12.966Z",
+          "statement": "- Shared TS SDK for other projects/agents in [sdk.ts](/c:/Users/Fabio/Cursor%20AI%20projects/Projects/OpenBrain/src/sdk.ts:35)."
+        },
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:14200",
+          "end_line_no": 14200,
+          "end_timestamp": "2026-03-05T19:40:30.890Z",
+          "rule_ids": [
+            "code_location.detected"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:1246",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:14197",
+          "start_line_no": 14197,
+          "start_timestamp": "2026-03-05T19:35:12.968Z",
+          "statement": "- Shared TS SDK for other projects/agents in [sdk.ts](/c:/Users/Fabio/Cursor%20AI%20projects/Projects/OpenBrain/src/sdk.ts:35)."
+        },
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:22212",
+          "end_line_no": 22212,
+          "end_timestamp": "2026-03-06T23:09:26.072Z",
+          "rule_ids": [
+            "code_location.detected"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:2160",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:22212",
+          "start_line_no": 22212,
+          "start_timestamp": "2026-03-06T23:09:26.072Z",
+          "statement": "- [sdk.ts](/c:/Users/Fabio/Cursor%20AI%20projects/Projects/OpenBrain/src/sdk.ts)"
+        }
+      ]
+    }
+  ],
+  "domain": "open-brain",
+  "input_item_keys": [
+    "open-brain:code_location:af8cb931889cd951",
+    "open-brain:code_location:cef2a1f9a4bb06fa",
+    "open-brain:code_location:d060ec75a30f0654",
+    "open-brain:code_location:daded0f9d0f83394",
+    "open-brain:code_location:7af6834d76468263",
+    "open-brain:code_location:0be20f4588875dcc",
+    "open-brain:code_location:71c8030c83edac1f",
+    "open-brain:code_location:d6a1e081a3e33dca",
+    "open-brain:code_location:c34fc78a1fd196dd",
+    "open-brain:code_location:a6ed6e22c239d7eb",
+    "open-brain:code_location:d8c39ff74733f2be",
+    "open-brain:code_location:83d54b094551d701",
+    "open-brain:code_location:fd5f8efbf5952ac2",
+    "open-brain:code_location:518025d66a5b7b22",
+    "open-brain:code_location:fe62bdda4acec25f",
+    "open-brain:code_location:5e757e8990aa8684",
+    "open-brain:code_location:91643a6197db1c2c",
+    "open-brain:code_location:2df97dc3c977c70b",
+    "open-brain:code_location:9847b24b55490e78",
+    "open-brain:code_location:dd8c05baf70d3f1d",
+    "open-brain:code_location:49efcfead49c5f4a",
+    "open-brain:code_location:25f9d5f0ad3ef4d8",
+    "open-brain:code_location:9ad7118c4dedbf01",
+    "open-brain:code_location:b4e6ac2ed270852b",
+    "open-brain:code_location:aee9c7321c8c34cb",
+    "open-brain:code_location:8c481b50a94924b0",
+    "open-brain:code_location:b1cacae7301fc217",
+    "open-brain:code_location:601211f367c2be60",
+    "open-brain:code_location:a2bd2812fa4d4408",
+    "open-brain:code_location:203d2bcd5f9c08b9",
+    "open-brain:code_location:7987fd3c76928b94",
+    "open-brain:code_location:ea923144f532357f",
+    "open-brain:code_location:8d8361927b4b8e96",
+    "open-brain:code_location:e9e40616586e35b7",
+    "open-brain:code_location:49092fc90e416b45",
+    "open-brain:code_location:8e8022362f90cf70",
+    "open-brain:code_location:c36b55600c6cb829",
+    "open-brain:code_location:f92c75534c911210",
+    "open-brain:code_location:32f670d120407975",
+    "open-brain:code_location:41819e46ae85c964",
+    "open-brain:code_location:eff55c78440ec495",
+    "open-brain:code_location:7536531b05748886",
+    "open-brain:code_location:15508d16103c5460",
+    "open-brain:code_location:fa1bc65365cb1e99",
+    "open-brain:code_location:ffa12946862931fd",
+    "open-brain:code_location:763c831f20d0b4f5",
+    "open-brain:code_location:c9e3459b8af228cc",
+    "open-brain:code_location:bca3664925c75fec",
+    "open-brain:code_location:010b6b464c86edf7",
+    "open-brain:code_location:ec21e98cd05b07d0",
+    "open-brain:code_location:aa978a8554adb840",
+    "open-brain:code_location:f92eb3d39c8b1a47",
+    "open-brain:code_location:6f1b72afa1173f97",
+    "open-brain:code_location:9330f6c13fbf8483",
+    "open-brain:code_location:f38a73b1afefdd82",
+    "open-brain:code_location:fc725ad60b00cd91",
+    "open-brain:code_location:a84f8199b25ab384",
+    "open-brain:code_location:405e6c120acf62d5",
+    "open-brain:code_location:d16732dd1a3ca3ea",
+    "open-brain:code_location:52e57ad7e47ca6ae"
+  ],
+  "page_id": "projects/open-brain/code-map",
+  "page_type": "bucket_page",
+  "rendered_page_metadata": {
+    "claim_count": 3,
+    "conflict_count": 80,
+    "related_domains": [
+      "global"
+    ],
+    "related_pages": [
+      {
+        "page_key": "index",
+        "title": "Open Brain",
+        "wikilink": "[[projects/open-brain/index|Open Brain]]"
+      },
+      {
+        "page_key": "communication-preferences",
+        "title": "Open Brain - Communication Preferences",
+        "wikilink": "[[projects/open-brain/communication-preferences|Open Brain - Communication Preferences]]"
+      },
+      {
+        "page_key": "workflow-rules",
+        "title": "Open Brain - Workflow Rules",
+        "wikilink": "[[projects/open-brain/workflow-rules|Open Brain - Workflow Rules]]"
+      },
+      {
+        "page_key": "architecture",
+        "title": "Open Brain - Architecture",
+        "wikilink": "[[projects/open-brain/architecture|Open Brain - Architecture]]"
+      },
+      {
+        "page_key": "current-state",
+        "title": "Open Brain - Current State",
+        "wikilink": "[[projects/open-brain/current-state|Open Brain - Current State]]"
+      },
+      {
+        "page_key": "tasks",
+        "title": "Open Brain - Tasks",
+        "wikilink": "[[projects/open-brain/tasks|Open Brain - Tasks]]"
+      },
+      {
+        "page_key": "outcomes",
+        "title": "Open Brain - Outcomes",
+        "wikilink": "[[projects/open-brain/outcomes|Open Brain - Outcomes]]"
+      },
+      {
+        "page_key": "failures",
+        "title": "Open Brain - Failures",
+        "wikilink": "[[projects/open-brain/failures|Open Brain - Failures]]"
+      },
+      {
+        "page_key": "decisions",
+        "title": "Open Brain - Decisions",
+        "wikilink": "[[projects/open-brain/decisions|Open Brain - Decisions]]"
+      },
+      {
+        "page_key": "next-steps",
+        "title": "Open Brain - Next Steps",
+        "wikilink": "[[projects/open-brain/next-steps|Open Brain - Next Steps]]"
+      },
+      {
+        "page_key": "open-questions",
+        "title": "Open Brain - Open Questions",
+        "wikilink": "[[projects/open-brain/open-questions|Open Brain - Open Questions]]"
+      }
+    ],
+    "relative_page_path": "projects/open-brain/code-map.md",
+    "source_count": 4,
+    "title": "Open Brain - Code Map"
+  },
+  "renderer": "obsidian_markdown",
+  "synthesized_claims": [
+    {
+      "claim_id": "claim-1",
+      "confidence": "strong",
+      "latent_type": "project_identity_and_scope",
+      "provenance_refs": [
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:5453",
+          "end_line_no": 5453,
+          "end_timestamp": "2026-03-03T18:49:16.849Z",
+          "rule_ids": [
+            "code_location.explicit"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:483",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:5452",
+          "start_line_no": 5452,
+          "start_timestamp": "2026-03-03T18:49:16.847Z",
+          "statement": "(file: C:/Users/Fabio/.codex/skills/.system/skill-creator/SKILL.md)"
+        },
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:6795",
+          "end_line_no": 6795,
+          "end_timestamp": "2026-03-04T04:09:39.213Z",
+          "rule_ids": [
+            "code_location.explicit"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:608",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:6794",
+          "start_line_no": 6794,
+          "start_timestamp": "2026-03-04T04:09:39.212Z",
+          "statement": "(file: C:/Users/Fabio/.codex/skills/.system/skill-creator/SKILL.md)"
+        },
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:43711",
+          "end_line_no": 43711,
+          "end_timestamp": "2026-03-11T20:26:48.841Z",
+          "rule_ids": [
+            "code_location.explicit"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:5433",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:43710",
+          "start_line_no": 43710,
+          "start_timestamp": "2026-03-11T20:26:48.840Z",
+          "statement": "(file: C:/Users/Fabio/.codex/skills/.system/skill-creator/SKILL.md)"
+        },
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:5453",
+          "end_line_no": 5453,
+          "end_timestamp": "2026-03-03T18:49:16.849Z",
+          "rule_ids": [
+            "code_location.explicit"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:483",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:5452",
+          "start_line_no": 5452,
+          "start_timestamp": "2026-03-03T18:49:16.847Z",
+          "statement": "(file: C:/Users/Fabio/.codex/skills/.system/skill-installer/SKILL.md)"
+        },
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:6795",
+          "end_line_no": 6795,
+          "end_timestamp": "2026-03-04T04:09:39.213Z",
+          "rule_ids": [
+            "code_location.explicit"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:608",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:6794",
+          "start_line_no": 6794,
+          "start_timestamp": "2026-03-04T04:09:39.212Z",
+          "statement": "(file: C:/Users/Fabio/.codex/skills/.system/skill-installer/SKILL.md)"
+        },
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:43711",
+          "end_line_no": 43711,
+          "end_timestamp": "2026-03-11T20:26:48.841Z",
+          "rule_ids": [
+            "code_location.explicit"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:5433",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:43710",
+          "start_line_no": 43710,
+          "start_timestamp": "2026-03-11T20:26:48.840Z",
+          "statement": "(file: C:/Users/Fabio/.codex/skills/.system/skill-installer/SKILL.md)"
+        },
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:5453",
+          "end_line_no": 5453,
+          "end_timestamp": "2026-03-03T18:49:16.849Z",
+          "rule_ids": [
+            "code_location.explicit"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:483",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:5452",
+          "start_line_no": 5452,
+          "start_timestamp": "2026-03-03T18:49:16.847Z",
+          "statement": "A skill is a set of local instructions to follow that is stored in a `SKILL.md` file."
+        },
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:5453",
+          "end_line_no": 5453,
+          "end_timestamp": "2026-03-03T18:49:16.849Z",
+          "rule_ids": [
+            "code_location.explicit"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:483",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:5452",
+          "start_line_no": 5452,
+          "start_timestamp": "2026-03-03T18:49:16.847Z",
+          "statement": "3) If `SKILL.md` points to extra folders such as `references/`, load only the specific files needed for the request"
+        },
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:5453",
+          "end_line_no": 5453,
+          "end_timestamp": "2026-03-03T18:49:16.849Z",
+          "rule_ids": [
+            "code_location.explicit"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:483",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:5452",
+          "start_line_no": 5452,
+          "start_timestamp": "2026-03-03T18:49:16.847Z",
+          "statement": "- Avoid deep reference-chasing: prefer opening only files directly linked from `SKILL.md` unless you're blocked."
+        }
+      ],
+      "section_id": "summary",
+      "supporting_item_ids": [
+        "open-brain:code_location:a6ed6e22c239d7eb",
+        "open-brain:code_location:d8c39ff74733f2be",
+        "open-brain:code_location:83d54b094551d701"
+      ],
+      "text": "The project utilizes a skill system defined in SKILL.md files."
+    },
+    {
+      "claim_id": "claim-2",
+      "confidence": "strong",
+      "latent_type": "current_state_synthesis",
+      "provenance_refs": [
+        {
+          "end_event_id": "019c9ca4-ac1c-76e2-b883-017d68d982a1:19635",
+          "end_line_no": 19635,
+          "end_timestamp": "2026-03-08T18:20:41.626Z",
+          "rule_ids": [
+            "code_location.detected"
+          ],
+          "segment_id": "019c9ca4-ac1c-76e2-b883-017d68d982a1:2491",
+          "session_id": "019c9ca4-ac1c-76e2-b883-017d68d982a1",
+          "source_id": "019c9ca4-ac1c-76e2-b883-017d68d982a1",
+          "start_event_id": "019c9ca4-ac1c-76e2-b883-017d68d982a1:19624",
+          "start_line_no": 19624,
+          "start_timestamp": "2026-03-08T18:16:33.187Z",
+          "statement": "- loop_b922379a-73be-44a8-891e-d635c9ed1ab0.log: OpenBrain/generated/strategy_program/loop_b922379a-73be-44a8-891e-d635c9ed1ab0.log"
+        },
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:27545",
+          "end_line_no": 27545,
+          "end_timestamp": "2026-03-08T03:18:55.515Z",
+          "rule_ids": [
+            "code_location.detected"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:2898",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:27539",
+          "start_line_no": 27539,
+          "start_timestamp": "2026-03-08T03:13:59.111Z",
+          "statement": "- Loop log: `OpenBrain/generated/strategy_program/loop_b922379a-73be-44a8-891e-d635c9ed1ab0.log`"
+        },
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:28661",
+          "end_line_no": 28661,
+          "end_timestamp": "2026-03-08T06:27:11.034Z",
+          "rule_ids": [
+            "code_location.detected"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:3039",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:28657",
+          "start_line_no": 28657,
+          "start_timestamp": "2026-03-08T06:27:05.325Z",
+          "statement": "- loop_b922379a-73be-44a8-891e-d635c9ed1ab0.log: OpenBrain/generated/strategy_program/loop_b922379a-73be-44a8-891e-d635c9ed1ab0.log"
+        },
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:30995",
+          "end_line_no": 30995,
+          "end_timestamp": "2026-03-08T22:13:12.180Z",
+          "rule_ids": [
+            "code_location.explicit"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:3359",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:30995",
+          "start_line_no": 30995,
+          "start_timestamp": "2026-03-08T22:13:12.180Z",
+          "statement": "## Active file: OpenBrain/generated/chat_transcripts/openbrain_chat_transcript_2026-03-02_to_2026-03-08_utf8.md"
+        },
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:30995",
+          "end_line_no": 30995,
+          "end_timestamp": "2026-03-08T22:13:12.180Z",
+          "rule_ids": [
+            "code_location.detected"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:3359",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:30995",
+          "start_line_no": 30995,
+          "start_timestamp": "2026-03-08T22:13:12.180Z",
+          "statement": "- openbrain_chat_transcript_2026-03-02_to_2026-03-08_utf8.md: OpenBrain/generated/chat_transcripts/openbrain_chat_transcript_2026-03-02_to_2026-03-08_utf8.md"
+        },
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:30999",
+          "end_line_no": 30999,
+          "end_timestamp": "2026-03-08T22:13:26.195Z",
+          "rule_ids": [
+            "code_location.explicit"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:3360",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:30996",
+          "start_line_no": 30996,
+          "start_timestamp": "2026-03-08T22:13:12.197Z",
+          "statement": "## Active file: OpenBrain/generated/chat_transcripts/openbrain_chat_transcript_2026-03-02_to_2026-03-08_utf8.md"
+        }
+      ],
+      "section_id": "summary",
+      "supporting_item_ids": [
+        "open-brain:code_location:7af6834d76468263",
+        "open-brain:code_location:71c8030c83edac1f"
+      ],
+      "text": "Active files and logs are maintained for tracking the project's development."
+    },
+    {
+      "claim_id": "claim-3",
+      "confidence": "strong",
+      "latent_type": "architecture_synthesis",
+      "provenance_refs": [
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:26894",
+          "end_line_no": 26894,
+          "end_timestamp": "2026-03-07T23:09:06.236Z",
+          "rule_ids": [
+            "code_location.explicit"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:2810",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:26891",
+          "start_line_no": 26891,
+          "start_timestamp": "2026-03-07T23:09:05.783Z",
+          "statement": "I\u2019m now adding the new experiment engine module (`v2_experiments.ts`) with real-data case generation, strategy catalog execution, per-case scoring/failure buckets, leaderboard, and winner decisioning."
+        },
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:37383",
+          "end_line_no": 37383,
+          "end_timestamp": "2026-03-10T13:45:35.780Z",
+          "rule_ids": [
+            "code_location.explicit"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:4297",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:37377",
+          "start_line_no": 37377,
+          "start_timestamp": "2026-03-10T13:45:32.516Z",
+          "statement": "I\u2019ve confirmed the workspace is still dirty in many unrelated areas, so I\u2019m only touching the case generator path in `v2_experiments.ts`."
+        },
+        {
+          "end_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:37689",
+          "end_line_no": 37689,
+          "end_timestamp": "2026-03-10T15:54:47.194Z",
+          "rule_ids": [
+            "code_location.explicit"
+          ],
+          "segment_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:4360",
+          "session_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "source_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783",
+          "start_event_id": "019cb0f9-2d39-7850-a9e1-11263a5a8783:37681",
+          "start_line_no": 37681,
+          "start_timestamp": "2026-03-10T15:54:41.710Z",
+          "statement": "I\u2019ve confirmed the current generator is still dominated by template helpers near the top of `v2_experiments.ts`, so the core change is not just adding metadata \u2014 it\u2019s replacing that question authoring path."
+        }
+      ],
+      "section_id": "summary",
+      "supporting_item_ids": [
+        "open-brain:code_location:d6a1e081a3e33dca"
+      ],
+      "text": "The project includes modules for real-data case generation and strategy execution."
+    }
+  ],
+  "versions": {
+    "page_config_version": 2,
+    "renderer_version": 2,
+    "synthesis_prompt_version": 2,
+    "synthesis_schema_version": 1,
+    "wiki_schema_version": 2
+  }
+}
