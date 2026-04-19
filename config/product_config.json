@@ -81,6 +81,23 @@
       "temperature": 0
     }
   },
+  "memory_extraction": {
+    "enabled": true,
+    "fallback_to_deterministic": true,
+    "window_record_limit": 8,
+    "window_overlap_records": 2,
+    "max_window_chars": 6000,
+    "max_windows_per_run": 1000,
+    "max_candidates_per_window": 12,
+    "provider": {
+      "type": "openai",
+      "api_key_env": "OPENAI_API_KEY",
+      "base_url_env": "WIKIMEMORY_OPENAI_BASE_URL",
+      "model_env": "WIKIMEMORY_OPENAI_MODEL",
+      "default_model": "gpt-5.4-mini",
+      "temperature": 0
+    }
+  },
   "scheduler": {
     "mode": "manual",
     "scan_on_startup": true,

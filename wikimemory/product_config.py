@@ -71,6 +71,18 @@ class RoutingProviderConfig:
 
 
 @dataclass(frozen=True)
+class MemoryExtractionConfig:
+    enabled: bool
+    fallback_to_deterministic: bool
+    window_record_limit: int
+    window_overlap_records: int
+    max_window_chars: int
+    max_windows_per_run: int
+    max_candidates_per_window: int
+    provider: RoutingProviderConfig
+
+
+@dataclass(frozen=True)
 class ProjectRoutingConfig:
     enabled: bool
     unresolved_project: str
@@ -108,6 +120,7 @@ class ProductConfig:
     project_sources: tuple[ProjectSourceConfig, ...]
     project_aliases: tuple[ProjectAliasConfig, ...]
     project_routing: ProjectRoutingConfig
+    memory_extraction: MemoryExtractionConfig
     scheduler: SchedulerConfig
     policies: PolicyConfig
 
@@ -131,6 +144,16 @@ class ProductConfig:
                 "max_sources_per_run": self.project_routing.max_sources_per_run,
                 "max_sample_records_per_source": self.project_routing.max_sample_records_per_source,
                 "provider": self.project_routing.provider.__dict__,
+            },
+            "memory_extraction": {
+                "enabled": self.memory_extraction.enabled,
+                "fallback_to_deterministic": self.memory_extraction.fallback_to_deterministic,
+                "window_record_limit": self.memory_extraction.window_record_limit,
+                "window_overlap_records": self.memory_extraction.window_overlap_records,
+                "max_window_chars": self.memory_extraction.max_window_chars,
+                "max_windows_per_run": self.memory_extraction.max_windows_per_run,
+                "max_candidates_per_window": self.memory_extraction.max_candidates_per_window,
+                "provider": self.memory_extraction.provider.__dict__,
             },
             "scheduler": self.scheduler.__dict__,
             "policies": self.policies.__dict__,
@@ -179,6 +202,7 @@ def default_product_config(project_root: Path | str) -> ProductConfig:
             ProjectAliasConfig(slug=slugify(project_root.name), aliases=(project_root.name,)),
         ),
         project_routing=default_project_routing_config(),
+        memory_extraction=default_memory_extraction_config(enabled=False),
         scheduler=SchedulerConfig(
             mode="manual",
             scan_on_startup=True,
@@ -229,6 +253,7 @@ def parse_product_config(payload: dict[str, Any]) -> ProductConfig:
     scheduler_payload = dict(payload.get("scheduler", {}))
     policies_payload = dict(payload.get("policies", {}))
     project_routing_payload = dict(payload.get("project_routing", {}))
+    memory_extraction_payload = dict(payload.get("memory_extraction", {}))
 
     log_sources = tuple(
         LogSourceConfig(
@@ -279,6 +304,7 @@ def parse_product_config(payload: dict[str, Any]) -> ProductConfig:
         project_sources=project_sources,
         project_aliases=project_aliases,
         project_routing=parse_project_routing_config(project_routing_payload),
+        memory_extraction=parse_memory_extraction_config(memory_extraction_payload),
         scheduler=SchedulerConfig(
             mode=str(scheduler_payload["mode"]),
             scan_on_startup=bool(scheduler_payload["scan_on_startup"]),
@@ -335,6 +361,18 @@ def validate_product_config(config: ProductConfig) -> None:
         raise ProductConfigError("project_routing.max_sources_per_run must be positive")
     if config.project_routing.max_sample_records_per_source <= 0:
         raise ProductConfigError("project_routing.max_sample_records_per_source must be positive")
+    if config.memory_extraction.window_record_limit <= 0:
+        raise ProductConfigError("memory_extraction.window_record_limit must be positive")
+    if config.memory_extraction.window_overlap_records < 0:
+        raise ProductConfigError("memory_extraction.window_overlap_records cannot be negative")
+    if config.memory_extraction.window_overlap_records >= config.memory_extraction.window_record_limit:
+        raise ProductConfigError("memory_extraction.window_overlap_records must be smaller than window_record_limit")
+    if config.memory_extraction.max_window_chars <= 0:
+        raise ProductConfigError("memory_extraction.max_window_chars must be positive")
+    if config.memory_extraction.max_windows_per_run <= 0:
+        raise ProductConfigError("memory_extraction.max_windows_per_run must be positive")
+    if config.memory_extraction.max_candidates_per_window <= 0:
+        raise ProductConfigError("memory_extraction.max_candidates_per_window must be positive")
 
 
 def parse_project_routing_config(payload: dict[str, Any]) -> ProjectRoutingConfig:
@@ -358,6 +396,52 @@ def parse_project_routing_config(payload: dict[str, Any]) -> ProjectRoutingConfi
         max_sources_per_run=int(payload.get("max_sources_per_run", 200)),
         max_sample_records_per_source=int(payload.get("max_sample_records_per_source", 8)),
         provider=provider,
+    )
+
+
+def parse_memory_extraction_config(payload: dict[str, Any]) -> MemoryExtractionConfig:
+    if not payload:
+        return default_memory_extraction_config(enabled=False)
+    provider_payload = dict(payload.get("provider", {}))
+    provider = RoutingProviderConfig(
+        provider_type=str(provider_payload.get("type", "openai")),
+        api_key_env=str(provider_payload.get("api_key_env", "OPENAI_API_KEY")),
+        base_url_env=str(provider_payload.get("base_url_env", "WIKIMEMORY_OPENAI_BASE_URL")),
+        model_env=str(provider_payload.get("model_env", "WIKIMEMORY_OPENAI_MODEL")),
+        default_model=str(provider_payload.get("default_model", "gpt-5.4-mini")),
+        temperature=float(provider_payload.get("temperature", 0)),
+    )
+    if provider.provider_type != "openai":
+        raise ProductConfigError(f"Unsupported memory extraction provider: {provider.provider_type}")
+    return MemoryExtractionConfig(
+        enabled=bool(payload.get("enabled", False)),
+        fallback_to_deterministic=bool(payload.get("fallback_to_deterministic", True)),
+        window_record_limit=int(payload.get("window_record_limit", 8)),
+        window_overlap_records=int(payload.get("window_overlap_records", 2)),
+        max_window_chars=int(payload.get("max_window_chars", 6000)),
+        max_windows_per_run=int(payload.get("max_windows_per_run", 1000)),
+        max_candidates_per_window=int(payload.get("max_candidates_per_window", 12)),
+        provider=provider,
+    )
+
+
+def default_memory_extraction_config(enabled: bool = False) -> MemoryExtractionConfig:
+    return MemoryExtractionConfig(
+        enabled=enabled,
+        fallback_to_deterministic=True,
+        window_record_limit=8,
+        window_overlap_records=2,
+        max_window_chars=6000,
+        max_windows_per_run=1000,
+        max_candidates_per_window=12,
+        provider=RoutingProviderConfig(
+            provider_type="openai",
+            api_key_env="OPENAI_API_KEY",
+            base_url_env="WIKIMEMORY_OPENAI_BASE_URL",
+            model_env="WIKIMEMORY_OPENAI_MODEL",
+            default_model="gpt-5.4-mini",
+            temperature=0,
+        ),
     )
 
 

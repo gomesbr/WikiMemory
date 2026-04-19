@@ -24,6 +24,9 @@ ONE_OFF_RULE_PATTERN = re.compile(
     r"\b(?:please|can you|fix this|run this|open this|show me|hard refresh|restart)\b",
     re.IGNORECASE,
 )
+VERBATIM_LEAK_PATTERN = re.compile(r"^(?:nah|ok|okay|great|please|can you|go|next|agreed|correct|yes)[,.\s:!-]+", re.IGNORECASE)
+AGENT_REASONING_PATTERN = re.compile(r"\b(?:i'm doing|i am doing|i'll|i will|i don't|i do not|next i'll|i’m fixing)\b", re.IGNORECASE)
+RUNTIME_PURPOSE_PATTERN = re.compile(r"\b(?:localhost|https?://|\.env|BROKER_ADAPTER_MODE|ctrl\+f5|hard refresh)\b", re.IGNORECASE)
 
 
 class MemoryLintError(DiscoveryError):
@@ -92,9 +95,12 @@ def run_memory_lint(
             config.agent_platform.bootstrap_target_path,
         )
         items = load_memory_items(memory_dir)
+        candidates = load_optional_jsonl(memory_dir / "_meta" / "candidates.jsonl")
+        windows = load_optional_jsonl(memory_dir / "_meta" / "extraction_windows.jsonl")
         if autofix:
             apply_safe_bootstrap_fixes(target_path)
         findings = lint_items(run_id, items)
+        findings.extend(lint_memory_quality(run_id, items, candidates, windows))
         findings.extend(lint_bootstrap(run_id, target_path, items))
         findings.sort(key=lambda item: str(item["finding_id"]))
         write_jsonl(findings_path, findings)
@@ -163,6 +169,8 @@ def lint_items(run_id: str, items: list[dict[str, object]]) -> list[dict[str, ob
         if memory_class == "recent_project_state" and is_stale(item.get("last_seen_at")):
             project = str(item.get("project") or "unknown")
             stale_recent_by_project[project] = stale_recent_by_project.get(project, 0) + 1
+        if memory_class == "recent_project_state" and str(item.get("temporal_status") or "active") != "active":
+            findings.append(finding(run_id, "error", "freshness", "resolved_temporal_rendered", item_id, "Resolved or superseded temporal memory is still in rendered memory items."))
     for project, count in sorted(stale_recent_by_project.items()):
         findings.append(
             finding(
@@ -174,6 +182,59 @@ def lint_items(run_id: str, items: list[dict[str, object]]) -> list[dict[str, ob
                 f"{count} recent project-state item(s) are older than the configured freshness window.",
             )
         )
+    return findings
+
+
+def lint_memory_quality(
+    run_id: str,
+    items: list[dict[str, object]],
+    candidates: list[dict[str, object]],
+    windows: list[dict[str, object]],
+) -> list[dict[str, object]]:
+    findings: list[dict[str, object]] = []
+    seen: dict[tuple[str, str, str], str] = {}
+    project_item_counts: dict[str, int] = {}
+    project_window_counts: dict[str, int] = {}
+    project_rule_candidate_counts: dict[str, int] = {}
+    project_rule_item_counts: dict[str, int] = {}
+
+    for window in windows:
+        project = str(window.get("project") or "unknown")
+        project_window_counts[project] = project_window_counts.get(project, 0) + 1
+    for candidate in candidates:
+        if str(candidate.get("memory_class")) == "project_rules":
+            project = str(candidate.get("project") or "unknown")
+            project_rule_candidate_counts[project] = project_rule_candidate_counts.get(project, 0) + 1
+
+    for item in items:
+        item_id = str(item.get("item_id") or "unknown")
+        statement = str(item.get("agent_facing_statement") or item.get("statement") or "")
+        project = str(item.get("project") or "global")
+        memory_class = str(item.get("memory_class") or "")
+        project_item_counts[project] = project_item_counts.get(project, 0) + 1
+        if memory_class == "project_rules":
+            project_rule_item_counts[project] = project_rule_item_counts.get(project, 0) + 1
+        if VERBATIM_LEAK_PATTERN.search(statement) or "got even more complicated" in statement.lower():
+            findings.append(finding(run_id, "warning", "quality", "verbatim_user_comment", item_id, "Memory statement appears to leak a raw user comment instead of agent-facing guidance."))
+        if AGENT_REASONING_PATTERN.search(statement):
+            findings.append(finding(run_id, "error", "quality", "agent_reasoning_memory", item_id, "Memory statement appears to contain agent reasoning or progress narration."))
+        if memory_class == "stable_project_summary" and str(item.get("item_type") or "") in {"project_summary", "purpose"} and RUNTIME_PURPOSE_PATTERN.search(statement):
+            findings.append(finding(run_id, "warning", "quality", "runtime_fact_in_project_purpose", item_id, "Project purpose contains runtime/config details that should be routed to constraints or recent context."))
+        duplicate_key = (project, memory_class, normalize_statement(statement))
+        prior = seen.get(duplicate_key)
+        if prior and prior != item_id:
+            findings.append(finding(run_id, "warning", "quality", "duplicate_memory_statement", item_id, "Duplicate memory statement appears in the same scope and class."))
+        seen[duplicate_key] = item_id
+
+    for project, window_count in sorted(project_window_counts.items()):
+        if project == "global":
+            continue
+        item_count = project_item_counts.get(project, 0)
+        if window_count >= 5 and item_count <= 2:
+            findings.append(finding(run_id, "warning", "coverage", "shallow_project_memory", project, "Project has substantial evidence windows but very few memory items."))
+    for project, candidate_count in sorted(project_rule_candidate_counts.items()):
+        if candidate_count >= 2 and project_rule_item_counts.get(project, 0) == 0:
+            findings.append(finding(run_id, "warning", "coverage", "rules_page_suspiciously_empty", project, "Project has rule candidates but no rendered project rules."))
     return findings
 
 
@@ -237,11 +298,21 @@ def load_memory_items(memory_dir: Path) -> list[dict[str, object]]:
     return [json.loads(line) for line in items_path.read_text(encoding="utf-8").splitlines() if line.strip()]
 
 
+def load_optional_jsonl(path: Path) -> list[dict[str, object]]:
+    if not path.exists():
+        return []
+    return [json.loads(line) for line in path.read_text(encoding="utf-8").splitlines() if line.strip()]
+
+
 def write_jsonl(path: Path, rows: list[dict[str, object]]) -> None:
     atomic_write_text(
         path,
         "".join(json.dumps(row, sort_keys=True, separators=(",", ":")) + "\n" for row in rows),
     )
+
+
+def normalize_statement(text: str) -> str:
+    return " ".join(text.lower().split())
 
 
 def stable_id(*parts: object) -> str:

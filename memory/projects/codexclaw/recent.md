@@ -1,7 +1,7 @@
 ---
 type: recent-context
 project: codexclaw
-updated: 2026-04-19T02:18:21.152656Z
+updated: 2026-04-19T04:21:45.645036Z
 tags: [project/codexclaw, recent]
 ---
 
@@ -9,7 +9,8 @@ tags: [project/codexclaw, recent]
 
 ## CURRENT FOCUS
 
-- No current focus extracted yet.
+- Current context: codexClaw Pro is a multi-agent trading orchestrator.
+- Current context: it supports strategist-led natural-language orchestration, research, execution-risk, and coder specialist agents, AI Tracker Kanban for all agent tasks, long-fo...
 
 ## ACTIVE DECISIONS
 

@@ -11,6 +11,7 @@ from pathlib import Path
 from typing import Iterable
 
 from .discovery import DiscoveryError, atomic_write_text, ensure_directory, utc_now
+from .memory_extraction import extract_memory_artifacts
 from .memory_model import MEMORY_FILE_DEFINITIONS
 from .normalization import append_jsonl_text
 from .product_config import MarkdownOutputConfig, load_product_config
@@ -122,16 +123,19 @@ def run_memory_generation(
     try:
         config = load_product_config(product_config_path)
         evidence_records = load_evidence_records(evidence_dir)
-        memory_items = build_memory_items(
+        extraction_artifacts = extract_memory_artifacts(
             evidence_records,
-            project_filter,
+            config=config,
+            project_filter=project_filter,
             require_inferred_rule_review=config.policies.require_confirmation_for_inferred_rule_promotion,
             unresolved_project=config.project_routing.unresolved_project,
+            run_id=run_id,
         )
+        memory_items = extraction_artifacts.items
         memory_items = apply_review_decisions(memory_items, state_dir)
         memory_items = prune_stale_recent_items(memory_items)
         rendered_files = render_memory_files(memory_dir, memory_items, config.markdown_output)
-        write_meta(memory_dir, memory_items)
+        write_meta(memory_dir, memory_items, extraction_artifacts.windows, extraction_artifacts.candidates)
 
         item_counts: defaultdict[str, int] = defaultdict(int)
         for item in memory_items:
@@ -143,6 +147,8 @@ def run_memory_generation(
             "last_rendered_at": utc_now(),
             "item_counts": dict(sorted(item_counts.items())),
             "rendered_file_count": len(rendered_files),
+            "extraction_window_count": len(extraction_artifacts.windows),
+            "extraction_candidate_count": len(extraction_artifacts.candidates),
         }
         atomic_write_text(state_path, json.dumps(state_payload, indent=2))
         finished_at = utc_now()
@@ -156,7 +162,7 @@ def run_memory_generation(
             fatal_error_summary=None,
         )
         atomic_write_text(run_log_path, append_jsonl_text(previous_run_log, [report.to_dict()]))
-        atomic_write_text(notice_log_path, append_jsonl_text(previous_notice_log, []))
+        atomic_write_text(notice_log_path, append_jsonl_text(previous_notice_log, extraction_artifacts.notices))
         return MemoryResult(report, state_path, run_log_path, notice_log_path)
     except Exception as exc:
         finished_at = utc_now()
@@ -448,32 +454,43 @@ def render_project_summary(project: str, items: list[dict[str, object]], markdow
     descriptive_items = [item for item in stable_items if not is_config_instruction_statement(str(item.get("statement") or ""))]
     lines = frontmatter("project-memory", project, (f"project/{project}", "memory"), markdown_output)
     lines.extend([f"# {BRAIN} {title}", ""])
-    purpose_items = [item for item in descriptive_items if project_summary_rank(item)[0] <= 2][:3]
+    used: set[str] = set()
+    purpose_items = take_unseen(
+        [
+            item
+            for item in descriptive_items
+            if str(item.get("item_type")) in {"purpose", "project_summary"}
+            or (str(item.get("item_type") or "") not in {"constraint", "architecture", "decision"} and project_summary_rank(item)[0] <= 2)
+        ],
+        used,
+        3,
+    )
     append_section(lines, "PURPOSE", item_statements(purpose_items) or ["Short project purpose not extracted yet."])
-    append_section(lines, "CORE COMPONENTS", select_by_terms(descriptive_items, ("component", "module", "pipeline", "adapter", "renderer", "service", "engine")) or ["No stable component list extracted yet."])
-    append_section(lines, "CURRENT ARCHITECTURE", select_by_terms(descriptive_items, ("architecture", "input", "process", "storage", "output", "pipeline", "service", "engine")) or item_statements(descriptive_items[3:6]) or ["No stable architecture summary extracted yet."])
-    append_section(lines, "DESIGN PRINCIPLES", select_by_terms(descriptive_items, ("deterministic", "traceable", "modular", "provenance", "incremental")) or ["No stable design principles extracted yet."])
-    append_section(lines, "KEY CONSTRAINTS", select_by_terms(stable_items, ("constraint", "must", "do not", "never", "only", "blocks", "disabled", "strict", "kill switch")) or ["No stable constraints extracted yet."])
-    append_section(lines, "OPEN PROBLEMS", select_by_terms(descriptive_items, ("open", "problem", "blocked", "pending", "todo")) or ["No open project-level problems extracted yet."])
+    append_section(lines, "CORE COMPONENTS", item_statements(take_unseen(filter_by_terms(descriptive_items, ("component", "module", "pipeline", "adapter", "renderer", "service", "engine")), used, 6)) or ["No stable component list extracted yet."])
+    append_section(lines, "CURRENT ARCHITECTURE", item_statements(take_unseen([item for item in descriptive_items if str(item.get("item_type")) == "architecture"] + filter_by_terms(descriptive_items, ("architecture", "input", "process", "storage", "output", "pipeline", "service", "engine")), used, 6)) or ["No stable architecture summary extracted yet."])
+    append_section(lines, "DESIGN PRINCIPLES", item_statements(take_unseen(filter_by_terms(descriptive_items, ("deterministic", "traceable", "modular", "provenance", "incremental")), used, 6)) or ["No stable design principles extracted yet."])
+    append_section(lines, "KEY CONSTRAINTS", item_statements(take_unseen([item for item in stable_items if str(item.get("item_type")) == "constraint"] + filter_by_terms(stable_items, ("constraint", "must", "do not", "never", "only", "blocks", "disabled", "strict", "kill switch")), used, 6)) or ["No stable constraints extracted yet."])
+    append_section(lines, "OPEN PROBLEMS", item_statements(take_unseen(filter_by_terms(descriptive_items, ("open", "problem", "blocked", "pending", "todo")), used, 5)) or ["No open project-level problems extracted yet."])
     append_related(lines, project, markdown_output)
     return lines
 
 
 def render_project_recent(project: str, items: list[dict[str, object]], markdown_output: MarkdownOutputConfig) -> list[str]:
     title = f"{display_project(project)} - Recent Context"
-    ranked = sorted(items, key=lambda item: str(item.get("last_seen_at") or ""), reverse=True)[:PROJECT_RECENT_ITEM_CAP]
+    active_items = [item for item in items if str(item.get("item_type") or "") != "open_question"]
+    ranked = sorted(active_items, key=lambda item: str(item.get("last_seen_at") or ""), reverse=True)[:PROJECT_RECENT_ITEM_CAP]
     used: set[str] = set()
     lines = frontmatter("recent-context", project, (f"project/{project}", "recent"), markdown_output)
     lines.extend([f"# {FIRE} {title}", ""])
-    focus_items = take_unseen([item for item in ranked if "project_delta" in item.get("source_actor_types", [])], used, 3)
+    focus_items = take_unseen([item for item in ranked if str(item.get("item_type")) == "current_state"], used, 4)
     append_section(lines, "CURRENT FOCUS", item_statements(focus_items, max_chars=180) or ["No current focus extracted yet."])
-    decision_items = take_unseen(filter_by_terms(ranked, ("decided", "decision", "agreed", "architecture")), used, 6)
+    decision_items = take_unseen([item for item in ranked if str(item.get("item_type")) == "decision"] + filter_by_terms(ranked, ("decided", "decision", "agreed", "architecture")), used, 6)
     append_section(lines, "ACTIVE DECISIONS", item_statements(decision_items, max_chars=180) or ["No active decisions extracted yet."])
-    progress_items = take_unseen(filter_by_terms(ranked, ("implement", "fix", "continue", "working", "in progress", "go")), used, 8)
+    progress_items = take_unseen([item for item in ranked if str(item.get("item_type")) == "task"] + filter_by_terms(ranked, ("implement", "fix", "continue", "working", "in progress")), used, 8)
     append_section(lines, "IN PROGRESS", item_statements(progress_items, max_chars=180) or ["No active work items extracted yet."])
-    failed_items = take_unseen(filter_by_terms(ranked, ("failed", "avoid", "did not work", "error", "broken")), used, 6)
+    failed_items = take_unseen([item for item in ranked if str(item.get("item_type")) == "failure_risk"] + filter_by_terms(ranked, ("failed", "avoid", "did not work", "error", "broken")), used, 6)
     append_section(lines, "FAILED / AVOID", item_statements(failed_items, max_chars=180) or ["No recent failures extracted yet."])
-    next_items = take_unseen(filter_by_terms(ranked, ("next", "todo", "should", "plan", "remaining")), used, 6)
+    next_items = take_unseen([item for item in ranked if str(item.get("item_type")) == "next_step"] + filter_by_terms(ranked, ("next", "todo", "should", "plan", "remaining")), used, 6)
     append_numbered_section(lines, "NEXT STEPS", item_statements(next_items, max_chars=180) or ["Review current project memory before starting new work."])
     backlog_items = take_unseen(ranked, used, 6)
     append_section(lines, "BACKLOG", item_statements(backlog_items, max_chars=180) or ["No backlog items extracted yet."])
@@ -567,11 +584,10 @@ def item_statements(items: list[dict[str, object]], max_chars: int | None = None
 
 
 def format_item_statement(item: dict[str, object], max_chars: int | None = None) -> str:
-    statement = str(item.get("statement") or "").strip()
+    statement = str(item.get("agent_facing_statement") or item.get("statement") or "").strip()
     if max_chars is not None and len(statement) > max_chars:
         statement = statement[: max_chars - 3].rstrip() + "..."
-    item_id = str(item.get("item_id") or "")
-    return f"{statement} <!-- {item_id} -->" if item_id else statement
+    return statement
 
 
 def inferred_rule_lines(items: list[dict[str, object]]) -> list[str]:
@@ -581,7 +597,7 @@ def inferred_rule_lines(items: list[dict[str, object]]) -> list[str]:
     for item in items:
         confidence = str(item.get("confidence") or "candidate")
         source_count = len(item.get("evidence_ids", []))
-        lines.append(f"{item.get('statement')} (confidence: {confidence}; source_count: {source_count}) <!-- {item.get('item_id')} -->")
+        lines.append(f"{item.get('agent_facing_statement') or item.get('statement')} (confidence: {confidence}; source_count: {source_count})")
     return lines
 
 
@@ -635,11 +651,29 @@ def display_project(project: str) -> str:
     return " ".join(part.capitalize() for part in project.split("-"))
 
 
-def write_meta(memory_dir: Path, items: list[dict[str, object]]) -> None:
+def write_meta(
+    memory_dir: Path,
+    items: list[dict[str, object]],
+    windows: list[dict[str, object]] | None = None,
+    candidates: list[dict[str, object]] | None = None,
+) -> None:
     meta_dir = memory_dir / "_meta"
     ensure_directory(meta_dir)
     content = "".join(json.dumps(item, sort_keys=True, separators=(",", ":")) + "\n" for item in items)
     atomic_write_text(meta_dir / "items.jsonl", content)
+    atomic_write_text(meta_dir / "merged_items.jsonl", content)
+    window_content = "".join(json.dumps(item, sort_keys=True, separators=(",", ":")) + "\n" for item in (windows or []))
+    atomic_write_text(meta_dir / "extraction_windows.jsonl", window_content)
+    candidate_content = "".join(json.dumps(item, sort_keys=True, separators=(",", ":")) + "\n" for item in (candidates or []))
+    atomic_write_text(meta_dir / "candidates.jsonl", candidate_content)
+    manifest = {
+        "schema_version": 1,
+        "item_count": len(items),
+        "window_count": len(windows or []),
+        "candidate_count": len(candidates or []),
+        "rendered_at": utc_now(),
+    }
+    atomic_write_text(meta_dir / "render_manifest.json", json.dumps(manifest, indent=2, sort_keys=True) + "\n")
     review_items = [item for item in items if item.get("review_required")]
     review_content = "".join(json.dumps(item, sort_keys=True, separators=(",", ":")) + "\n" for item in review_items)
     atomic_write_text(meta_dir / "promotion_review.jsonl", review_content)
@@ -662,7 +696,7 @@ def apply_review_decisions(items: list[dict[str, object]], state_dir: Path) -> l
             item["review_required"] = False
             item["review_reason"] = None
             item["promotion_state"] = "durable" if item.get("promotion_state") == "candidate" else item.get("promotion_state")
-            item["confidence"] = "strong" if item.get("confidence") == "candidate" else item.get("confidence")
+            item["confidence"] = "strong" if item.get("confidence") in {"candidate", "medium", "low"} else item.get("confidence")
         filtered.append(item)
     return filtered
 
@@ -671,7 +705,11 @@ def prune_stale_recent_items(items: list[dict[str, object]]) -> list[dict[str, o
     return [
         item
         for item in items
-        if str(item.get("memory_class")) != "recent_project_state" or not is_older_than_days(item.get("last_seen_at"), RECENT_MEMORY_MAX_DAYS)
+        if str(item.get("memory_class")) != "recent_project_state"
+        or (
+            str(item.get("temporal_status") or "active") == "active"
+            and not is_older_than_days(item.get("last_seen_at"), RECENT_MEMORY_MAX_DAYS)
+        )
     ]
 
 
@@ -687,6 +725,8 @@ def is_older_than_days(value: object, days: int) -> bool:
 
 def memory_file_key(item: dict[str, object]) -> str | None:
     memory_class = str(item["memory_class"])
+    if memory_class == "recent_project_state" and str(item.get("temporal_status") or "active") != "active":
+        return None
     return {
         "global_user_rules": "global_user_rules",
         "project_rules": "project_rules",

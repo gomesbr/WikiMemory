@@ -1,7 +1,7 @@
 ---
 type: recent-context
 project: wikimemory
-updated: 2026-04-19T02:18:21.172670Z
+updated: 2026-04-19T04:21:45.684355Z
 tags: [project/wikimemory, recent]
 ---
 
@@ -9,19 +9,23 @@ tags: [project/wikimemory, recent]
 
 ## CURRENT FOCUS
 
-- M config/product_config.json <!-- 4bf59e94464bd01b -->
-- M tests/test_ingest.py <!-- 70c4d6d170abcc14 -->
-- M tests/test_memory_generation.py <!-- c92ec98329c6081e -->
+- Current context: its job is to turn raw `.jsonl` session traces into structured normalized events, segmented conversational/work units, deterministic domain classification, extr...
+- Current context: the user wants the repository to be visible in their GitHub account and expects the project to live under their personal GitHub namespace.
+- Current context: the user wants a quick assessment of whether phase 5 was acceptable before moving on.
+- Current context: the user wants progress updates on whether the current phase is complete and what the unclassified count is now.
 
 ## ACTIVE DECISIONS
 
-- Agreed, work on 4/5, test with same data until 'unclassified' reduces drastically (preferably 0 if possible). Go <!-- d72a598dba5f77db -->
-- Great, agreed. please build the plan <!-- 509e34f1cd4f0a5b -->
-- Perfect, agreed with all 20 items. One more question before we continue with the plan. If I decide not to use obsidian and use some other tool, is the wiki model still valid? An... <!-- 088b0e486eddee91 -->
+- No active decisions extracted yet.
 
 ## IN PROGRESS
 
-- # 🧠 Ai Trader - Project Memory ## PURPOSE - Nah, this got even more complicated. This should be simple. Goal is to have the agent to be stop before more damage is done. So lets... <!-- a450d720c307251b -->
+- Continue with: the user expects changes to be committed and merged into the main branch in git.
+- Continue with: implement the fix at the right abstraction layer so similar issues are also prevented.
+- Continue with: include robust real data tests now that more data can be tested without blowing up disk space.
+- Continue with: the user wants an estimate of how a 7.5 GB corpus would translate into Phase 2 storage footprint under the chosen approach, so future planning should include conc...
+- Continue with: the user is asking about phase 8 planning and wants questions asked if needed before proceeding.
+- Continue with: continue working on phases 4 and 5, and keep testing against the same dataset until the unclassified count drops sharply, ideally to zero.
 
 ## FAILED / AVOID
 
@@ -33,16 +37,12 @@ tags: [project/wikimemory, recent]
 
 ## BACKLOG
 
-- M wikimemory/ingest.py <!-- bb48a81293900f53 -->
-- M wikimemory/memory_generation.py <!-- e0da1652750cc5e0 -->
-- Old data is garbage.delete <!-- add8727a1f287406 -->
-- I don't see it on my gihub app <!-- e4bb8b425c8f2751 -->
-- <INSTRUCTIONS> <!-- a0af8758c11969d4 -->
-- Exactly. Do what you supposed to do, now! <!-- dc688424810017a8 -->
+- Current context: the user expects the project to be stored on the machine's D drive rather than the C drive, and mentioned needing to move Cursor projects because C has limited...
+- Current context: the user is fine with using a sample dataset for now so later phases have something to test against.
 
 ## NOTES
 
-- I remember a phase 10. Is that what this is? <!-- f3fa251eb88a072c -->
+- Keep this file small; it is a rolling window only.
 
 IMPORTANT:
 - This file must stay SMALL.

@@ -1,7 +1,7 @@
 ---
 type: recent-context
 project: open-brain
-updated: 2026-04-19T02:18:21.160248Z
+updated: 2026-04-19T04:21:45.665384Z
 tags: [project/open-brain, recent]
 ---
 
@@ -9,7 +9,7 @@ tags: [project/open-brain, recent]
 
 ## CURRENT FOCUS
 
-- No current focus extracted yet.
+- Current context: openBrain is a local-first memory service for CodexClaw and other agents Postgres + pgvector source-of-truth, REST API for capture/search/stats, Remote MCP endp...
 
 ## ACTIVE DECISIONS
 
@@ -17,13 +17,11 @@ tags: [project/open-brain, recent]
 
 ## IN PROGRESS
 
-- What ? I asked you to fix this : another issue, response reference evidence but I don't see evidence in the evidence section. Could be an interface issue or data issue <!-- a1f7baacc702a906 -->
-- The first caes oopened have these problems. 1)actor names mixed like question say what john said and response says I said. 2) response unnatural mixing half fixed phrase and hal... <!-- 0a3ae72f909eaaa2 -->
-- For the messages, chatgpt is recommending to do this: const client = require('twilio')('ACCOUNT_SID', 'AUTH_TOKEN'); client.messages.create({ body: 'AI Alert: system is working'... <!-- 7ff7eb2dbfa38201 -->
+- Continue with: review all cases and fix those and other problems you find.
 
 ## FAILED / AVOID
 
-- No recent failures extracted yet.
+- Avoid repeating this failure or risk: if a response mentions evidence, ensure the referenced evidence is actually visible in the evidence panel; investigate whether the issue is...
 
 ## NEXT STEPS
 
@@ -31,9 +29,7 @@ tags: [project/open-brain, recent]
 
 ## BACKLOG
 
-- What ? I was talking about the review screen. Stop changing things not related to review screen. Confirm your understanding before starting any change <!-- 9bd242d011a1c532 -->
-- Problem was not evidence empty, but evidence in the response not showing in bottom evidence panel, but other evidence pieces showing in that panel <!-- e397f8ec269faa00 -->
-- another issue, response reference evidence but I don't see evidence in the evidence section. Could be an interface issue or data issue <!-- bfaedf81f6f4b09a -->
+- No backlog items extracted yet.
 
 ## NOTES
 
