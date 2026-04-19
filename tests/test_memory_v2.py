@@ -230,6 +230,33 @@ For Ai Trader, the project is a deterministic autonomous trading system.
         self.assertIn("main.py", project_memory)
         self.assertIn("README.md", "\n".join(project_contexts["ai-trader"]["directory_tree"]))
 
+    def test_project_tree_is_not_truncated(self) -> None:
+        ai_trader_root = self.project_root_dir / "AITrader"
+        for index in range(120):
+            path = ai_trader_root / "src" / "scripts" / f"script_{index:03}.ts"
+            path.parent.mkdir(parents=True, exist_ok=True)
+            path.write_text("export {}\n", encoding="utf-8")
+
+        def no_item_llm(system_prompt: str, payload: dict[str, object], model: str) -> dict[str, object]:
+            if "messages" in payload:
+                return {"candidates": []}
+            return {"items": []}
+
+        result = run_memory_v2(
+            input_dir=self.input_dir,
+            output_dir=self.output_dir,
+            state_dir=self.state_dir,
+            days=["2026-03-13"],
+            project_root_dir=self.project_root_dir,
+            llm_client=no_item_llm,
+            model="stub-model",
+        )
+
+        self.assertTrue(result.report.success, result.report.fatal_error_summary)
+        project_memory = (self.output_dir / "projects" / "ai-trader" / "project.md").read_text(encoding="utf-8")
+        self.assertIn("script_119.ts", project_memory)
+        self.assertNotIn("tree truncated", project_memory)
+
     def test_render_suppresses_project_rules_already_global(self) -> None:
         items = [
             {

@@ -22,8 +22,7 @@ DEFAULT_MODEL = "gpt-5.3-codex"
 DEFAULT_WINDOW_MAX_CHARS = 60000
 DEFAULT_WINDOW_OVERLAP_MESSAGES = 8
 DEFAULT_PROJECT_README_MAX_CHARS = 4000
-DEFAULT_PROJECT_TREE_DEPTH = 2
-DEFAULT_PROJECT_TREE_MAX_ENTRIES = 80
+DEFAULT_PROJECT_TREE_DEPTH = 99
 ALLOWED_CLASSES = {
     "global_rule",
     "project_rule",
@@ -510,13 +509,11 @@ def read_project_readmes(root: Path) -> list[dict[str, object]]:
     return readmes
 
 
-def build_project_tree(root: Path, *, max_depth: int = DEFAULT_PROJECT_TREE_DEPTH, max_entries: int = DEFAULT_PROJECT_TREE_MAX_ENTRIES) -> list[str]:
+def build_project_tree(root: Path, *, max_depth: int = DEFAULT_PROJECT_TREE_DEPTH) -> list[str]:
     lines = [f"{root.name}/"]
-    count = 0
 
     def walk(path: Path, prefix: str, depth: int) -> None:
-        nonlocal count
-        if depth > max_depth or count >= max_entries:
+        if depth > max_depth:
             return
         try:
             children = sorted(path.iterdir(), key=lambda child: (child.is_file(), child.name.lower()))
@@ -524,18 +521,13 @@ def build_project_tree(root: Path, *, max_depth: int = DEFAULT_PROJECT_TREE_DEPT
             return
         children = [child for child in children if include_tree_path(child)]
         for index, child in enumerate(children):
-            if count >= max_entries:
-                return
             connector = "`-- " if index == len(children) - 1 else "|-- "
             lines.append(f"{prefix}{connector}{child.name}{'/' if child.is_dir() else ''}")
-            count += 1
             if child.is_dir():
                 extension = "    " if index == len(children) - 1 else "|   "
                 walk(child, prefix + extension, depth + 1)
 
     walk(root, "", 1)
-    if count >= max_entries:
-        lines.append("... tree truncated ...")
     return lines
 
 
@@ -990,7 +982,7 @@ def append_tree_section(lines: list[str], project_context: dict[str, object] | N
         return
     command = project_context.get("tree_command") or "tree"
     lines.extend([f"`{command}`", "", "```text"])
-    lines.extend(str(line) for line in tree_lines[:DEFAULT_PROJECT_TREE_MAX_ENTRIES])
+    lines.extend(str(line) for line in tree_lines)
     lines.extend(["```", ""])
 
 
