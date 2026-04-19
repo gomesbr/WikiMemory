@@ -6,7 +6,7 @@ import tempfile
 import unittest
 from pathlib import Path
 
-from wikimemory.memory_v2 import parse_daily_chat_markdown, run_memory_v2
+from wikimemory.memory_v2 import parse_daily_chat_markdown, render_memory_v2, run_memory_v2
 
 
 class MemoryV2Tests(unittest.TestCase):
@@ -229,6 +229,46 @@ For Ai Trader, the project is a deterministic autonomous trading system.
         self.assertIn("src/", project_memory)
         self.assertIn("main.py", project_memory)
         self.assertIn("README.md", "\n".join(project_contexts["ai-trader"]["directory_tree"]))
+
+    def test_render_suppresses_project_rules_already_global(self) -> None:
+        items = [
+            {
+                "item_id": "global-completion",
+                "project": "global",
+                "memory_class": "global_rule",
+                "memory_role": "rule",
+                "agent_facing_statement": "For task deliverable outputs, always include a Completion Matrix mapping each acceptance criterion to concrete evidence in pass/fail form.",
+                "confidence": "strong",
+                "temporal_status": "durable",
+                "evidence_refs": [{"source_day": "2026-03-13", "message_index": 1}],
+            },
+            {
+                "item_id": "project-completion",
+                "project": "codexclaw",
+                "memory_class": "project_rule",
+                "memory_role": "rule",
+                "agent_facing_statement": "Task delivery responses must include a Completion Matrix mapping each acceptance criterion to concrete evidence.",
+                "confidence": "strong",
+                "temporal_status": "durable",
+                "evidence_refs": [{"source_day": "2026-03-13", "message_index": 2}],
+            },
+            {
+                "item_id": "project-specific",
+                "project": "codexclaw",
+                "memory_class": "project_rule",
+                "memory_role": "rule",
+                "agent_facing_statement": "Strip internal tracker payload blocks from CodexClaw user-facing responses.",
+                "confidence": "strong",
+                "temporal_status": "durable",
+                "evidence_refs": [{"source_day": "2026-03-13", "message_index": 3}],
+            },
+        ]
+
+        render_memory_v2(self.output_dir, items)
+        rules = (self.output_dir / "projects" / "codexclaw" / "rules.md").read_text(encoding="utf-8")
+
+        self.assertNotIn("Completion Matrix", rules)
+        self.assertIn("tracker payload blocks", rules)
 
 
 if __name__ == "__main__":

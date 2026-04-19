@@ -729,6 +729,7 @@ def validate_items(items: list[dict[str, object]]) -> None:
 def render_memory_v2(output_dir: Path, items: list[dict[str, object]], project_contexts: dict[str, dict[str, object]] | None = None) -> list[Path]:
     rendered: list[Path] = []
     project_contexts = project_contexts or {}
+    items = suppress_project_rules_repeated_globally(items)
     global_items = [item for item in items if item["memory_class"] == "global_rule" and item["project"] == "global"]
     rendered.append(write_global_rules(output_dir / "global" / "user-rules.md", global_items))
     projects = sorted({str(item["project"]) for item in items if item["project"] not in {"global", "unknown"}})
@@ -741,6 +742,51 @@ def render_memory_v2(output_dir: Path, items: list[dict[str, object]], project_c
         if lessons:
             rendered.append(write_lessons_page(output_dir / "projects" / project / "lessons.md", project, lessons))
     return rendered
+
+
+def suppress_project_rules_repeated_globally(items: list[dict[str, object]]) -> list[dict[str, object]]:
+    global_rules = [item for item in items if item.get("project") == "global" and item.get("memory_class") == "global_rule"]
+    if not global_rules:
+        return items
+    global_tokens = [memory_statement_tokens(str(item.get("agent_facing_statement", ""))) for item in global_rules]
+    filtered: list[dict[str, object]] = []
+    for item in items:
+        if item.get("project") != "global" and item.get("memory_class") == "project_rule":
+            tokens = memory_statement_tokens(str(item.get("agent_facing_statement", "")))
+            if any(memory_token_overlap(tokens, global_rule_tokens) >= 0.72 for global_rule_tokens in global_tokens):
+                continue
+        filtered.append(item)
+    return filtered
+
+
+def memory_statement_tokens(statement: str) -> set[str]:
+    stopwords = {
+        "a",
+        "an",
+        "and",
+        "are",
+        "as",
+        "be",
+        "by",
+        "for",
+        "if",
+        "in",
+        "into",
+        "is",
+        "of",
+        "on",
+        "or",
+        "the",
+        "to",
+        "with",
+    }
+    return {token for token in re.findall(r"[a-z0-9_]+", statement.lower()) if len(token) > 2 and token not in stopwords}
+
+
+def memory_token_overlap(left: set[str], right: set[str]) -> float:
+    if not left or not right:
+        return 0.0
+    return len(left & right) / min(len(left), len(right))
 
 
 def write_global_rules(path: Path, items: list[dict[str, object]]) -> Path:
