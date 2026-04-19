@@ -20,9 +20,27 @@ STATE_SCHEMA_VERSION = 1
 MEMORY_SCHEMA_VERSION = 1
 RECENT_MEMORY_MAX_DAYS = 30
 PROJECT_RECENT_ITEM_CAP = 25
+RULE_BUCKET_CAP = 12
+INFERRED_RULE_CAP = 6
 BRAIN = "\U0001f9e0"
 FIRE = "\U0001f525"
 GEAR = "\u2699\ufe0f"
+RENDER_PREFIX_PATTERN = re.compile(
+    r"^(?:Follow this operating rule|Project context|Use this architecture context|Respect this constraint|Current context|Continue with|Track this unresolved question|Carry forward this lesson):\s*",
+    re.IGNORECASE,
+)
+RENDER_REJECT_PATTERN = re.compile(
+    r"(?:\.\.\.|iMPLEMENT THIS PLAN|IMPLEMENT THIS PLAN|PLEASE IMPLEMENT THIS PLAN|<environment_context>|open tabs:|context from my ide setup|single prompt to codex|copy/paste|source_count:|confidence:|^No .* extracted yet\.?$|^No .* selected yet\.?$|^No .* items extracted yet\.?$|^No .* rules selected yet\.?$)",
+    re.IGNORECASE,
+)
+RAW_FIRST_PERSON_PATTERN = re.compile(
+    r"\b(?:i think|i keep|i close|i reopen|i don't|i do not|i'll|i will|i need|i'm|i am|my question|my inputs)\b",
+    re.IGNORECASE,
+)
+TRANSIENT_RENDER_PATTERN = re.compile(
+    r"\b(?:what should you focus|what is next|phase \d+ should be treated as a checkpoint|full-load run|commit and merge|push to git|download obsidian|api key|env file|D drive|unclassified count|notices?:\s*\d+|current phase is complete)\b",
+    re.IGNORECASE,
+)
 USER_RULE_PATTERN = re.compile(r"\b(?:add this to global rules|global rule)\b", re.IGNORECASE)
 GLOBAL_OPERATING_RULE_PATTERN = re.compile(
     r"\b(?:narrate your process|step commentary|short updates|response style|token limits|explanations?|explanation texts|wasting tokens|concise|ask for it|outside the plan|real data|github|git|api key|always add it|do not ask|don't ask)\b",
@@ -538,14 +556,15 @@ def frontmatter(
 
 
 def append_rule_sections(lines: list[str], items: list[dict[str, object]], include_scope_notes: bool) -> None:
-    always = [item for item in items if rule_bucket(item) == "always"]
-    never = [item for item in items if rule_bucket(item) == "never"]
-    conditional = [item for item in items if rule_bucket(item) == "conditional"]
-    explicit = [item for item in items if str(item.get("promotion_state")) == "explicit"]
-    inferred = [item for item in items if str(item.get("promotion_state")) != "explicit"]
-    append_section(lines, "ALWAYS DO", item_statements(always) or ["No always-do rules selected yet."])
-    append_section(lines, "NEVER DO", item_statements(never) or ["No never-do rules selected yet."])
-    append_section(lines, "CONDITIONAL RULES", item_statements(conditional) or ["No conditional rules selected yet."])
+    eligible = dedupe_render_items([item for item in items if is_renderable_item(item)])
+    always = [item for item in eligible if rule_bucket(item) == "always"][:RULE_BUCKET_CAP]
+    never = [item for item in eligible if rule_bucket(item) == "never"][:RULE_BUCKET_CAP]
+    conditional = [item for item in eligible if rule_bucket(item) == "conditional"][:RULE_BUCKET_CAP]
+    explicit = [item for item in eligible if str(item.get("promotion_state")) == "explicit"]
+    inferred = [item for item in eligible if str(item.get("promotion_state")) != "explicit"][:INFERRED_RULE_CAP]
+    append_section(lines, "ALWAYS DO", item_statements(always))
+    append_section(lines, "NEVER DO", item_statements(never))
+    append_section(lines, "CONDITIONAL RULES", item_statements(conditional))
     header = "PROMOTED RULES (EXPLICIT)" if include_scope_notes else "CONFIRMED RULES (EXPLICIT)"
     append_section(lines, header, confirmation_summary(explicit))
     append_section(lines, "INFERRED RULES" if include_scope_notes else "INFERRED RULES (REVIEWABLE)", inferred_rule_lines(inferred))
@@ -555,14 +574,22 @@ def append_rule_sections(lines: list[str], items: list[dict[str, object]], inclu
 
 def append_section(lines: list[str], title: str, bullets: list[str]) -> None:
     lines.extend([f"## {title}", ""])
-    for bullet in bullets:
+    clean_bullets = [bullet for bullet in bullets if is_renderable_text(bullet)]
+    if not clean_bullets:
+        lines.extend(["_None currently extracted._", ""])
+        return
+    for bullet in clean_bullets:
         lines.append(f"- {bullet}")
     lines.append("")
 
 
 def append_numbered_section(lines: list[str], title: str, entries: list[str]) -> None:
     lines.extend([f"## {title}", ""])
-    for index, entry in enumerate(entries, start=1):
+    clean_entries = [entry for entry in entries if is_renderable_text(entry)]
+    if not clean_entries:
+        lines.extend(["_None currently extracted._", ""])
+        return
+    for index, entry in enumerate(clean_entries, start=1):
         lines.append(f"{index}. {entry}")
     lines.append("")
 
@@ -580,30 +607,37 @@ def append_related(lines: list[str], project: str, markdown_output: MarkdownOutp
 
 
 def item_statements(items: list[dict[str, object]], max_chars: int | None = None) -> list[str]:
-    return [format_item_statement(item, max_chars=max_chars) for item in items if str(item.get("statement") or "").strip()]
+    statements = [format_item_statement(item, max_chars=max_chars) for item in items if is_renderable_item(item)]
+    return [statement for statement in statements if is_renderable_text(statement)]
 
 
 def format_item_statement(item: dict[str, object], max_chars: int | None = None) -> str:
     statement = str(item.get("agent_facing_statement") or item.get("statement") or "").strip()
+    statement = clean_render_statement(statement)
     if max_chars is not None and len(statement) > max_chars:
-        statement = statement[: max_chars - 3].rstrip() + "..."
+        return ""
     return statement
 
 
 def inferred_rule_lines(items: list[dict[str, object]]) -> list[str]:
     if not items:
-        return ["No inferred rules pending review."]
+        return []
     lines = []
     for item in items:
+        if not is_renderable_item(item):
+            continue
+        statement = clean_render_statement(str(item.get("agent_facing_statement") or item.get("statement") or ""))
+        if not is_renderable_text(statement):
+            continue
         confidence = str(item.get("confidence") or "candidate")
         source_count = len(item.get("evidence_ids", []))
-        lines.append(f"{item.get('agent_facing_statement') or item.get('statement')} (confidence: {confidence}; source_count: {source_count})")
+        lines.append(f"{statement} (confidence: {confidence}; sources: {source_count})")
     return lines
 
 
 def confirmation_summary(items: list[dict[str, object]]) -> list[str]:
     if not items:
-        return ["No explicit rules selected yet."]
+        return []
     return [f"{len(items)} explicit rule(s) are listed above by behavior bucket."]
 
 
@@ -622,7 +656,9 @@ def select_by_terms(items: list[dict[str, object]], terms: tuple[str, ...], max_
         statement = str(item.get("statement") or "")
         lowered = statement.lower()
         if any(term in lowered for term in terms):
-            selected.append(format_item_statement(item, max_chars=max_chars))
+            rendered = format_item_statement(item, max_chars=max_chars)
+            if is_renderable_text(rendered):
+                selected.append(rendered)
     return selected
 
 
@@ -637,6 +673,8 @@ def filter_by_terms(items: list[dict[str, object]], terms: tuple[str, ...]) -> l
 def take_unseen(items: list[dict[str, object]], used: set[str], limit: int) -> list[dict[str, object]]:
     selected = []
     for item in items:
+        if not is_renderable_item(item):
+            continue
         item_id = str(item.get("item_id") or "")
         if item_id in used:
             continue
@@ -649,6 +687,135 @@ def take_unseen(items: list[dict[str, object]], used: set[str], limit: int) -> l
 
 def display_project(project: str) -> str:
     return " ".join(part.capitalize() for part in project.split("-"))
+
+
+def dedupe_render_items(items: list[dict[str, object]]) -> list[dict[str, object]]:
+    seen: set[str] = set()
+    selected: list[dict[str, object]] = []
+    for item in sorted(items, key=render_rank):
+        statement = clean_render_statement(str(item.get("agent_facing_statement") or item.get("statement") or ""))
+        key = normalize_render_key(statement)
+        if not key or key in seen:
+            continue
+        seen.add(key)
+        selected.append(item)
+    return selected
+
+
+def render_rank(item: dict[str, object]) -> tuple[int, int, str]:
+    confidence = {"explicit": 0, "strong": 1, "medium": 2, "low": 3, "candidate": 4}.get(str(item.get("confidence") or ""), 4)
+    support = -len(item.get("evidence_ids", []))
+    return (confidence, support, str(item.get("last_seen_at") or ""))
+
+
+def clean_render_statement(statement: str) -> str:
+    statement = RENDER_PREFIX_PATTERN.sub("", " ".join(statement.split())).strip()
+    replacements = {
+        "idependent": "independent",
+        "post there": "posted there",
+        "compatubility": "compatibility",
+        "beuiding": "building",
+        "videa": "video",
+        "iddile": "idle",
+        "iddle": "idle",
+        "tha...": "that",
+    }
+    for bad, good in replacements.items():
+        statement = re.sub(re.escape(bad), good, statement, flags=re.IGNORECASE)
+    if statement.lower().startswith("the user wants "):
+        statement = "Prioritize " + statement[15:]
+    if statement.lower().startswith("the user expects "):
+        statement = "Expect " + statement[17:]
+    if "repository to be visible" in statement.lower() and "repository" in statement.lower():
+        statement = "Keep the repository visible under the user's remote repository namespace."
+    if "support notifications" in statement.lower() and "important events" in statement.lower():
+        statement = "Notify the user about notable pipeline events so maintenance work happens at appropriate times."
+    statement = rewrite_phase_references(statement)
+    statement = re.sub(r"\bGitHub Project\b", "remote project board", statement, flags=re.IGNORECASE)
+    statement = re.sub(r"\bGitHub account\b", "remote repository account", statement, flags=re.IGNORECASE)
+    statement = re.sub(r"\bGitHub namespace\b", "remote repository namespace", statement, flags=re.IGNORECASE)
+    statement = re.sub(r"\bfull-load\b", "load", statement, flags=re.IGNORECASE)
+    if statement and statement[-1] not in ".!?":
+        statement += "."
+    return statement
+
+
+def rewrite_phase_references(statement: str) -> str:
+    replacements = {
+        "phase 1": "the source-discovery stage",
+        "phase 2": "the normalization stage",
+        "phase 3": "the segmentation stage",
+        "phase 4": "the domain-classification stage",
+        "phase 5": "the knowledge-extraction stage",
+        "phase 6": "the wiki-synthesis stage",
+        "phase 7": "the bootstrap-memory stage",
+        "phase 8": "the audit stage",
+        "phase 9": "the daily-refresh stage",
+        "phase 10": "the autonomous corpus-load stage",
+    }
+    for source, target in replacements.items():
+        statement = re.sub(rf"\b{re.escape(source)}\b", target, statement, flags=re.IGNORECASE)
+    return statement
+
+
+def is_renderable_item(item: dict[str, object]) -> bool:
+    statement = clean_render_statement(str(item.get("agent_facing_statement") or item.get("statement") or ""))
+    if not is_renderable_text(statement):
+        return False
+    memory_class = str(item.get("memory_class") or "")
+    if memory_class == "global_user_rules" and item.get("project"):
+        return False
+    if memory_class == "global_user_rules" and looks_project_specific(statement):
+        return False
+    project = str(item.get("project") or "")
+    if project and mentions_other_project(statement, project):
+        return False
+    if memory_class == "project_rules" and str(item.get("promotion_state") or "") not in {"explicit", "repeated", "durable"}:
+        return len(item.get("evidence_ids", [])) >= 2 or bool(re.match(r"^(?:no|do not|don't|never|always|must)\b", statement, re.IGNORECASE))
+    return True
+
+
+def is_renderable_text(statement: str) -> bool:
+    if not statement or len(statement.strip()) < 12:
+        return False
+    if RENDER_REJECT_PATTERN.search(statement):
+        return False
+    if TRANSIENT_RENDER_PATTERN.search(statement):
+        return False
+    if RAW_FIRST_PERSON_PATTERN.search(statement):
+        return False
+    if re.match(r"^\d+[\.)]\s+", statement):
+        return False
+    if statement.count("|") >= 2:
+        return False
+    return True
+
+
+def looks_project_specific(statement: str) -> bool:
+    lowered = statement.lower()
+    return bool(
+        re.search(
+            r"\b(?:trade card|lineage|openbrain|wikimemory|codexclaw|ai trader|wash-sale|whatsapp|ibkr|phase \d+|database|ui|screen|button|graph|actor|benchmark)\b",
+            lowered,
+        )
+    )
+
+
+def mentions_other_project(statement: str, project: str) -> bool:
+    lowered = statement.lower()
+    project_terms = {
+        "ai-trader": ("openbrain", "open brain", "codexclaw", "wikimemory"),
+        "open-brain": ("ai trader", "aitrader", "codexclaw", "wikimemory"),
+        "codexclaw": ("ai trader", "aitrader", "openbrain", "open brain", "wikimemory"),
+        "wikimemory": ("ai trader", "aitrader", "openbrain", "open brain", "codexclaw"),
+    }
+    return any(term in lowered for term in project_terms.get(project, ()))
+
+
+def normalize_render_key(statement: str) -> str:
+    cleaned = re.sub(r"\([^)]*\)", "", statement.lower())
+    cleaned = re.sub(r"[^a-z0-9]+", " ", cleaned)
+    return " ".join(cleaned.split())[:160]
 
 
 def write_meta(

@@ -1,7 +1,7 @@
 ---
 type: recent-context
 project: open-brain
-updated: 2026-04-19T04:21:45.665384Z
+updated: 2026-04-19T04:35:36.208962Z
 tags: [project/open-brain, recent]
 ---
 
@@ -9,19 +9,19 @@ tags: [project/open-brain, recent]
 
 ## CURRENT FOCUS
 
-- Current context: openBrain is a local-first memory service for CodexClaw and other agents Postgres + pgvector source-of-truth, REST API for capture/search/stats, Remote MCP endp...
+_None currently extracted._
 
 ## ACTIVE DECISIONS
 
-- No active decisions extracted yet.
+_None currently extracted._
 
 ## IN PROGRESS
 
-- Continue with: review all cases and fix those and other problems you find.
+- review all cases and fix those and other problems you find.
 
 ## FAILED / AVOID
 
-- Avoid repeating this failure or risk: if a response mentions evidence, ensure the referenced evidence is actually visible in the evidence panel; investigate whether the issue is...
+_None currently extracted._
 
 ## NEXT STEPS
 
@@ -29,7 +29,7 @@ tags: [project/open-brain, recent]
 
 ## BACKLOG
 
-- No backlog items extracted yet.
+_None currently extracted._
 
 ## NOTES
 
