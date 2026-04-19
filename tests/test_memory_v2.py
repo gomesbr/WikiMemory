@@ -114,6 +114,10 @@ For Ai Trader, the project is a deterministic autonomous trading system.
         self.assertIn("Always validate memory changes with real data", global_rules)
         self.assertNotIn("Add this to global rules", global_rules)
         self.assertIn("Ai Trader is a deterministic autonomous trading system", project_memory)
+        self.assertIn("[[projects/ai-trader/recent|Ai Trader Recent]]", project_memory)
+        self.assertIn("[[projects/ai-trader/rules|Ai Trader Rules]]", project_memory)
+        self.assertIn("[[global/user-rules|Global User Rules]]", project_memory)
+        self.assertNotIn("[[Ai Trader Recent]]", project_memory)
         self.assertEqual(daily_meta["messages"][0]["text"], "Add this to global rules: always validate memory changes with real data.")
 
     def test_memory_v2_normalizes_llm_schema_variants(self) -> None:

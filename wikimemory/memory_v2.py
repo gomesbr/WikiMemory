@@ -767,7 +767,7 @@ def write_project_page(path: Path, project: str, items: list[dict[str, object]],
     append_tree_section(lines, project_context)
     append_section(lines, "KEY CONSTRAINTS", statements([item for item in items if item["memory_role"] == "constraint" and item["memory_class"] in {"project_summary", "architecture"}], limit=8))
     append_section(lines, "OPEN PROBLEMS", [])
-    append_section(lines, "RELATED", [f"[[{display_project(project)} Recent]]", f"[[{display_project(project)} Rules]]", "[[Global User Rules]]"])
+    append_section(lines, "RELATED", related_links(project))
     write_lines(path, lines)
     return path
 
@@ -914,6 +914,15 @@ def item_rank(item: dict[str, object]) -> tuple[int, str]:
 def write_lines(path: Path, lines: list[str]) -> None:
     ensure_directory(path.parent)
     atomic_write_text(path, "\n".join(lines).rstrip() + "\n")
+
+
+def related_links(project: str) -> list[str]:
+    display = display_project(project)
+    return [
+        f"[[projects/{project}/recent|{display} Recent]]",
+        f"[[projects/{project}/rules|{display} Rules]]",
+        "[[global/user-rules|Global User Rules]]",
+    ]
 
 
 def write_memory_v2_meta(
