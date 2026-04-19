@@ -344,6 +344,119 @@ For Ai Trader, the project is a deterministic autonomous trading system.
         self.assertNotIn("April 05 2026", recent)
         self.assertNotIn("AITrader is a deterministic autonomous trading system", recent)
 
+    def test_ai_trader_example_in_memory_page_discussion_routes_to_wikimemory(self) -> None:
+        def attribution_llm(system_prompt: str, payload: dict[str, object], model: str) -> dict[str, object]:
+            if "messages" in payload:
+                return {
+                    "candidates": [
+                        {
+                            "candidate_id": "example-attribution",
+                            "source_day": "2026-03-13",
+                            "project": "ai-trader",
+                            "memory_class": "project_rule",
+                            "memory_role": "rule",
+                            "agent_facing_statement": "Move the Ai Trader clean-slate compatibility guidance out of project.md PURPOSE and into rules.md during memory page rendering.",
+                            "confidence": "strong",
+                            "temporal_status": "durable",
+                            "evidence_refs": [3],
+                        }
+                    ]
+                }
+            return {
+                "items": [
+                    {
+                        "item_id": "example-attribution",
+                        "project": "ai-trader",
+                        "memory_class": "project_rule",
+                        "memory_role": "rule",
+                        "agent_facing_statement": "Move the Ai Trader clean-slate compatibility guidance out of project.md PURPOSE and into rules.md during memory page rendering.",
+                        "confidence": "strong",
+                        "temporal_status": "durable",
+                        "supporting_candidate_ids": ["example-attribution"],
+                    }
+                ]
+            }
+
+        result = run_memory_v2(
+            input_dir=self.input_dir,
+            output_dir=self.output_dir,
+            state_dir=self.state_dir,
+            days=["2026-03-13"],
+            llm_client=attribution_llm,
+            model="stub-model",
+        )
+
+        self.assertTrue(result.report.success, result.report.fatal_error_summary)
+        self.assertFalse((self.output_dir / "projects" / "ai-trader" / "rules.md").exists())
+        self.assertTrue((self.output_dir / "projects" / "wikimemory" / "rules.md").exists())
+
+    def test_ai_trader_mention_in_wikimemory_evidence_routes_merged_item_to_wikimemory(self) -> None:
+        self.day_file.write_text(
+            """# Codex Chat Export - 2026-04-19
+
+## 2026-04-19T12:41:37.137Z - User
+
+<!-- source: raw.jsonl:10 -->
+
+```text
+# Context from my IDE setup:
+
+## Open tabs:
+- project.md: WikiMemory/memory/projects/ai-trader/project.md
+
+## My request for Codex:
+The context of that line was, the agent was maintaining compatibility with v1 of the system while building v2. How would you rewrite this rule, which should not be in Purpose?
+```
+""",
+            encoding="utf-8",
+        )
+
+        def attribution_llm(system_prompt: str, payload: dict[str, object], model: str) -> dict[str, object]:
+            if "messages" in payload:
+                return {
+                    "candidates": [
+                        {
+                            "candidate_id": "ai-example",
+                            "source_day": "2026-04-19",
+                            "project": "ai-trader",
+                            "memory_class": "project_rule",
+                            "memory_role": "rule",
+                            "agent_facing_statement": "For new AITrader versions that are not yet in production, default to clean-slate design.",
+                            "confidence": "strong",
+                            "temporal_status": "durable",
+                            "evidence_refs": [1],
+                        }
+                    ]
+                }
+            return {
+                "items": [
+                    {
+                        "item_id": "ai-example",
+                        "project": "ai-trader",
+                        "memory_class": "project_rule",
+                        "memory_role": "rule",
+                        "agent_facing_statement": "For new AITrader versions that are not yet in production, default to clean-slate design.",
+                        "confidence": "strong",
+                        "temporal_status": "durable",
+                        "supporting_candidate_ids": ["ai-example"],
+                    }
+                ]
+            }
+
+        result = run_memory_v2(
+            input_dir=self.input_dir,
+            output_dir=self.output_dir,
+            state_dir=self.state_dir,
+            days=["2026-03-13"],
+            llm_client=attribution_llm,
+            model="stub-model",
+        )
+
+        self.assertTrue(result.report.success, result.report.fatal_error_summary)
+        merged = json.loads((self.output_dir / "_meta" / "merged_items.json").read_text(encoding="utf-8"))["items"][0]
+        self.assertEqual(merged["project"], "wikimemory")
+        self.assertFalse((self.output_dir / "projects" / "ai-trader" / "rules.md").exists())
+
     def test_rule_bucket_keeps_positive_boundary_rules_in_always_do(self) -> None:
         statement = "Enforce role boundaries: strategist orchestrates but does not code/execute trades; research provides analysis only."
 

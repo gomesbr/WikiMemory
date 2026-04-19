@@ -183,6 +183,7 @@ def run_memory_v2(
                 if not isinstance(raw_candidate, dict):
                     continue
                 candidate = normalize_candidate(raw_candidate, source_day)
+                candidate = correct_candidate_attribution_from_messages(candidate, messages)
                 if not candidate["evidence_refs"]:
                     continue
                 if candidate["candidate_id"] in seen_candidate_ids:
@@ -294,6 +295,7 @@ def read_cached_daily_payload(output_dir: Path, source_day: str, source_file: Pa
         return None
     if payload.get("source_size") != source_file.stat().st_size:
         return None
+    payload["candidates"] = correct_cached_candidate_attributions(payload)
     return payload
 
 
@@ -301,6 +303,27 @@ def write_daily_payload(output_dir: Path, payload: dict[str, object]) -> None:
     daily_dir = output_dir / "_meta" / "daily"
     ensure_directory(daily_dir)
     atomic_write_text(daily_dir / f"{payload['source_day']}.json", json.dumps(payload, indent=2, ensure_ascii=False, sort_keys=True))
+
+
+def correct_cached_candidate_attributions(payload: dict[str, object]) -> list[dict[str, object]]:
+    messages = [
+        ChatMessage(
+            message_index=int(message["message_index"]),
+            timestamp=str(message.get("timestamp") or ""),
+            actor=str(message.get("actor") or ""),
+            text=str(message.get("text") or ""),
+            source_day=str(message.get("source_day") or payload.get("source_day") or ""),
+            source_file=str(message.get("source_file") or payload.get("source_file") or ""),
+            source_ref=message.get("source_ref") if isinstance(message.get("source_ref"), str) else None,
+        )
+        for message in payload.get("messages", [])
+        if isinstance(message, dict) and message.get("message_index") is not None
+    ]
+    corrected = []
+    for candidate in payload.get("candidates", []):
+        if isinstance(candidate, dict):
+            corrected.append(correct_candidate_attribution_from_messages(candidate, messages))
+    return corrected
 
 
 def parse_daily_chat_markdown(path: Path) -> list[ChatMessage]:
@@ -671,6 +694,7 @@ def normalize_candidate(candidate: dict[str, object], source_day: str) -> dict[s
     memory_class = demote_transient_rule(statement, memory_class)
     memory_role = normalize_memory_role(candidate.get("memory_role"), memory_class)
     project = normalize_project(candidate.get("project"), memory_class)
+    project = correct_example_project_attribution(statement, project)
     evidence_refs = normalize_evidence_refs(candidate.get("evidence_refs"), source_day)
     candidate_id = str(candidate.get("candidate_id") or stable_id(source_day, project, memory_class, memory_role, statement))
     temporal_status = normalize_temporal_status(candidate.get("temporal_status"), memory_class)
@@ -697,6 +721,9 @@ def normalize_item(item: dict[str, object], candidate_lookup: dict[str, dict[str
     memory_class = demote_transient_rule(statement, memory_class)
     memory_role = normalize_memory_role(item.get("memory_role"), memory_class)
     project = normalize_project(item.get("project"), memory_class)
+    project = correct_example_project_attribution(statement, project)
+    if candidate_lookup:
+        project = project_from_supporting_candidates(item, candidate_lookup) or project
     evidence_refs = normalize_evidence_refs(item.get("evidence_refs"), str(item.get("source_day") or ""))
     if not evidence_refs and candidate_lookup:
         evidence_refs = evidence_refs_from_candidates(item, candidate_lookup)
@@ -1259,6 +1286,83 @@ def assign_unknown_projects(candidates: list[dict[str, object]]) -> list[dict[st
             candidate["project"] = inferred_project
         adjusted.append(candidate)
     return adjusted
+
+
+def correct_example_project_attribution(statement: str, project: str) -> str:
+    if project not in {"ai-trader", "open-brain", "codexclaw"}:
+        return project
+    lowered = statement.lower()
+    wikimemory_markers = (
+        "memory page",
+        "memory pages",
+        "project.md",
+        "recent.md",
+        "rules.md",
+        "purpose",
+        "fresh-agent",
+        "memory_role",
+        "wiki memory",
+        "wikimemory",
+        "rendering",
+        "extracted memory",
+        "generated memory",
+    )
+    if any(marker in lowered for marker in wikimemory_markers):
+        return "wikimemory"
+    return project
+
+
+def correct_candidate_attribution_from_messages(candidate: dict[str, object], messages: list[ChatMessage]) -> dict[str, object]:
+    project = str(candidate.get("project") or "")
+    if project not in {"ai-trader", "open-brain", "codexclaw"}:
+        return candidate
+    refs = candidate.get("evidence_refs", [])
+    message_by_index = {message.message_index: message for message in messages}
+    evidence_text = []
+    for ref in refs if isinstance(refs, list) else []:
+        index = ref.get("message_index") if isinstance(ref, dict) else ref
+        message = message_by_index.get(index)
+        if message:
+            evidence_text.append(message.text)
+    if evidence_points_to_wikimemory("\n".join(evidence_text)):
+        corrected = dict(candidate)
+        corrected["project"] = "wikimemory"
+        return corrected
+    return candidate
+
+
+def evidence_points_to_wikimemory(text: str) -> bool:
+    lowered = text.lower()
+    markers = (
+        "wikimemory/",
+        "memory/projects/",
+        "memory pages",
+        "memory page",
+        "fresh-agent",
+        "project.md / purpose",
+        "project.md",
+        "recent.md",
+        "rules.md",
+        "memory_role",
+        "memory-lint",
+        "memory-refresh",
+        "generated memory",
+    )
+    return any(marker in lowered for marker in markers)
+
+
+def project_from_supporting_candidates(item: dict[str, object], candidate_lookup: dict[str, dict[str, object]]) -> str | None:
+    projects = [
+        str(candidate_lookup[candidate_id].get("project"))
+        for candidate_id in extract_candidate_ids(item)
+        if candidate_id in candidate_lookup and candidate_lookup[candidate_id].get("project") not in {None, "unknown"}
+    ]
+    if not projects:
+        return None
+    counts = defaultdict(int)
+    for project in projects:
+        counts[project] += 1
+    return max(counts.items(), key=lambda entry: entry[1])[0]
 
 
 def normalize_project(value: object, memory_class: str) -> str:
