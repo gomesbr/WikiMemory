@@ -820,30 +820,22 @@ def write_project_page(path: Path, project: str, items: list[dict[str, object]],
 
 def write_recent_page(path: Path, project: str, items: list[dict[str, object]]) -> Path:
     recent_classes = {"current_state", "decision", "next_step", "open_question", "failure_risk"}
-    latest_date = latest_item_date(items)
-    latest_items = items_for_date(items, latest_date)
+    temporal_items = [item for item in items if item["memory_class"] in recent_classes and item["temporal_status"] == "active"]
+    latest_date = latest_item_date(temporal_items)
+    latest_items = items_for_date(temporal_items, latest_date)
     active = [item for item in latest_items if item["memory_class"] in recent_classes and item["temporal_status"] == "active"]
-    used_fallback = False
-    if not active:
-        active = latest_recent_fallback_items(latest_items)
-        used_fallback = True
     lines = frontmatter("recent-context", project, [f"project/{project}", "recent"])
     title = f"# {display_project(project)} - Recent Context"
     if latest_date:
         title += f" - {format_display_date(latest_date)}"
     lines.extend([title, ""])
-    append_section(lines, "CURRENT FOCUS", statements(active if used_fallback else [item for item in active if item["memory_class"] == "current_state"], limit=5))
+    append_section(lines, "CURRENT FOCUS", statements([item for item in active if item["memory_class"] == "current_state"], limit=5))
     append_section(lines, "ACTIVE DECISIONS", statements([item for item in active if item["memory_class"] == "decision"], limit=6))
     append_section(lines, "IN PROGRESS", statements([item for item in active if item["memory_class"] == "next_step"], limit=8))
     append_section(lines, "FAILED / AVOID", statements([item for item in active if item["memory_class"] == "failure_risk"], limit=6))
     append_numbered(lines, "OPEN QUESTIONS", statements([item for item in active if item["memory_class"] == "open_question"], limit=6))
     write_lines(path, lines)
     return path
-
-
-def latest_recent_fallback_items(items: list[dict[str, object]], *, limit: int = 5) -> list[dict[str, object]]:
-    candidates = [item for item in items if item.get("memory_class") in {"project_summary", "architecture", "project_rule", "decision"}]
-    return sorted(candidates, key=lambda item: latest_item_date([item]) or "", reverse=True)[:limit]
 
 
 def items_for_date(items: list[dict[str, object]], day: str | None) -> list[dict[str, object]]:
