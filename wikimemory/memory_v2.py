@@ -17,7 +17,7 @@ from .discovery import DiscoveryError, atomic_write_text, ensure_directory, utc_
 from .normalization import append_jsonl_text
 
 MEMORY_V2_SCHEMA_VERSION = 1
-MEMORY_V2_EXTRACTION_VERSION = 1
+MEMORY_V2_EXTRACTION_VERSION = 2
 DEFAULT_MODEL = "gpt-5.3-codex"
 DEFAULT_WINDOW_MAX_CHARS = 60000
 DEFAULT_WINDOW_OVERLAP_MESSAGES = 8
@@ -31,6 +31,7 @@ ALLOWED_CLASSES = {
     "current_state",
     "decision",
     "next_step",
+    "backlog_item",
     "open_question",
     "failure_risk",
     "lesson",
@@ -849,6 +850,7 @@ def write_project_page(path: Path, project: str, items: list[dict[str, object]],
     append_tree_section(lines, project_context)
     append_section(lines, "KEY CONSTRAINTS", statements([item for item in items if item["memory_role"] == "constraint" and item["memory_class"] in {"project_summary", "architecture"}], limit=8))
     append_section(lines, "OPEN PROBLEMS", [])
+    append_numbered(lines, "BACKLOG", statements([item for item in items if item["memory_class"] == "backlog_item" and item["temporal_status"] == "active"], limit=20))
     append_section(lines, "RELATED", related_links(project))
     write_lines(path, lines)
     return path
@@ -871,7 +873,7 @@ def project_purpose_from_readme(project_context: dict[str, object] | None) -> li
 
 
 def write_recent_page(path: Path, project: str, items: list[dict[str, object]]) -> Path:
-    recent_classes = {"current_state", "decision", "next_step", "open_question", "failure_risk"}
+    recent_classes = {"current_state", "decision", "next_step", "open_question", "failure_risk", "backlog_item"}
     temporal_items = [item for item in items if item["memory_class"] in recent_classes and item["temporal_status"] == "active"]
     latest_date = latest_item_date(temporal_items)
     latest_items = items_for_date(temporal_items, latest_date)
@@ -885,6 +887,7 @@ def write_recent_page(path: Path, project: str, items: list[dict[str, object]]) 
     append_section(lines, "ACTIVE DECISIONS", statements([item for item in active if item["memory_class"] == "decision"], limit=6))
     append_section(lines, "IN PROGRESS", statements([item for item in active if item["memory_class"] == "next_step"], limit=8))
     append_section(lines, "FAILED / AVOID", statements([item for item in active if item["memory_class"] == "failure_risk"], limit=6))
+    append_section(lines, "BACKLOG", statements([item for item in active if item["memory_class"] == "backlog_item"], limit=8))
     append_numbered(lines, "OPEN QUESTIONS", statements([item for item in active if item["memory_class"] == "open_question"], limit=6))
     write_lines(path, lines)
     return path
@@ -1165,8 +1168,10 @@ def daily_extraction_prompt() -> str:
         "You extract operational memory candidates for AI coding workflows from a bounded daily chat window. "
         "Return a JSON object with key `candidates`. Favor recall: include useful medium-confidence candidates. "
         "Use only these memory_class values: global_rule, project_rule, project_summary, architecture, current_state, "
-        "decision, next_step, open_question, failure_risk, lesson. Use only these memory_role values: purpose, "
+        "decision, next_step, backlog_item, open_question, failure_risk, lesson. Use only these memory_role values: purpose, "
         "architecture, constraint, rule, recent_state, decision, lesson, discard. Do not invent alternate enum values. "
+        "Extract backlog_item for explicit backlog/later/deferred items and for hinted future work like 'let's do that later' "
+        "or 'we can come back to this', unless later evidence confirms the work was completed, rejected, or discarded. "
         "Extract project identity and architecture when repeated terms/components reveal what a project is, even if this "
         "is inferred rather than explicitly stated. "
         "Rewrite user intent as clear future-agent guidance, never as raw pasted user fragments. "
@@ -1184,6 +1189,8 @@ def merge_prompt() -> str:
         "component, and architecture descriptions, but do not invent facts beyond candidates plus repository context. "
         "Optimize precision: merge semantic duplicates, remove one-off commands from durable rules, keep conflicts "
         "as context-dependent guidance when useful, and keep only active/latest temporal items. "
+        "Keep backlog_item entries active unless evidence confirms the item was worked, completed, rejected, or discarded; "
+        "if resolved, set temporal_status to resolved/historical and do not render it as backlog. "
         "Every item must either copy supporting evidence_refs from candidates or include supporting_candidate_ids. "
         "If a project has enough evidence to infer identity, purpose, components, or architecture, keep concise "
         "project_summary and architecture items so project.md is useful to a fresh agent. "
@@ -1238,6 +1245,8 @@ def normalize_memory_class(value: object, role: object, project: object) -> str:
         return "failure_risk"
     if text in {"task", "todo", "action_item"}:
         return "next_step"
+    if text in {"backlog", "backlog_item", "later", "future_work", "future_task", "deferred", "parking_lot"}:
+        return "backlog_item"
     if text in {"state", "status", "current_focus"}:
         return "current_state"
     role_text = str(role or "").strip().lower().replace("-", "_").replace(" ", "_")

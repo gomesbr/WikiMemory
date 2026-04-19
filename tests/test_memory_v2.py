@@ -350,6 +350,40 @@ For Ai Trader, the project is a deterministic autonomous trading system.
         self.assertNotIn("Treat new AITrader versions as clean-slate", recent)
         self.assertNotIn("previous risk model", recent)
 
+    def test_project_backlog_items_render_in_project_and_recent_pages(self) -> None:
+        items = [
+            {
+                "item_id": "backlog-1",
+                "project": "ai-trader",
+                "memory_class": "backlog_item",
+                "memory_role": "recent_state",
+                "agent_facing_statement": "Later, add portfolio-level drawdown controls to AITrader.",
+                "confidence": "medium",
+                "temporal_status": "active",
+                "evidence_refs": [{"source_day": "2026-04-05", "message_index": 1}],
+            },
+            {
+                "item_id": "backlog-2",
+                "project": "ai-trader",
+                "memory_class": "backlog_item",
+                "memory_role": "recent_state",
+                "agent_facing_statement": "Resolved backlog item should not render.",
+                "confidence": "medium",
+                "temporal_status": "resolved",
+                "evidence_refs": [{"source_day": "2026-04-05", "message_index": 2}],
+            },
+        ]
+
+        render_memory_v2(self.output_dir, items)
+        project_memory = (self.output_dir / "projects" / "ai-trader" / "project.md").read_text(encoding="utf-8")
+        recent = (self.output_dir / "projects" / "ai-trader" / "recent.md").read_text(encoding="utf-8")
+
+        self.assertIn("## BACKLOG", project_memory)
+        self.assertIn("Later, add portfolio-level drawdown controls", project_memory)
+        self.assertIn("## BACKLOG", recent)
+        self.assertIn("Later, add portfolio-level drawdown controls", recent)
+        self.assertNotIn("Resolved backlog item should not render", project_memory)
+
     def test_recent_page_does_not_fallback_to_durable_project_items(self) -> None:
         items = [
             {
