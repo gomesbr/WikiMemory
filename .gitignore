@@ -28,3 +28,6 @@ bootstrap/
 !bootstrap/.gitkeep
 wiki/*
 !wiki/.gitkeep
+experimental_exports/
+memory_v2_pilot/
+memory_v2_full/

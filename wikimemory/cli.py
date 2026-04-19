@@ -17,6 +17,7 @@ from .memory_generation import MemoryResult, run_memory_generation
 from .memory_lint import MemoryLintResult, run_memory_lint
 from .memory_review import MemoryReviewResult, run_memory_review
 from .memory_refresh import MemoryRefreshResult, run_memory_refresh
+from .memory_v2 import MemoryV2Result, run_memory_v2
 from .normalization import NormalizationResult, run_normalization
 from .onboarding import OnboardingReport, run_onboarding
 from .refresh import RefreshResult, run_refresh
@@ -566,6 +567,56 @@ def build_parser() -> argparse.ArgumentParser:
         help="Print the final run report as JSON.",
     )
 
+    memory_v2_parser = subparsers.add_parser(
+        "memory-v2",
+        help="Run the LLM-first V2 memory pipeline from daily Codex chat markdown exports.",
+    )
+    memory_v2_parser.add_argument(
+        "--input-dir",
+        type=Path,
+        default=Path("experimental_exports/codex_chat_by_day"),
+        help="Directory containing daily *-codex-chat.md files.",
+    )
+    memory_v2_parser.add_argument(
+        "--output-dir",
+        type=Path,
+        default=Path("memory_v2_pilot"),
+        help="Directory where V2 pilot memory output is written.",
+    )
+    memory_v2_parser.add_argument(
+        "--state-dir",
+        type=Path,
+        default=Path("state"),
+        help="Directory where memory-v2 run logs are written.",
+    )
+    memory_v2_parser.add_argument(
+        "--project-root-dir",
+        type=Path,
+        default=None,
+        help="Directory containing project repositories used for README/tree context. Defaults to the parent of WikiMemory.",
+    )
+    memory_v2_parser.add_argument(
+        "--day",
+        dest="days",
+        action="append",
+        help="Daily export date to process, e.g. 2026-03-13. Repeat for multiple days.",
+    )
+    memory_v2_parser.add_argument(
+        "--all-days",
+        action="store_true",
+        help="Process all daily chat exports in the input directory.",
+    )
+    memory_v2_parser.add_argument(
+        "--model",
+        default=None,
+        help="OpenAI model id. Defaults to WIKIMEMORY_MEMORY_V2_MODEL or gpt-5.3-codex.",
+    )
+    memory_v2_parser.add_argument(
+        "--json",
+        action="store_true",
+        help="Print the final run report as JSON.",
+    )
+
     agent_bootstrap_parser = subparsers.add_parser(
         "agent-bootstrap",
         help="Generate the configured agent bootstrap file from compact memory artifacts.",
@@ -933,6 +984,16 @@ def format_memory_result(result: MemoryResult) -> str:
     )
 
 
+def format_memory_v2_result(result: MemoryV2Result) -> str:
+    outcome = "succeeded" if result.report.success else "failed"
+    return (
+        f"Memory-v2 {outcome}: days={result.report.day_count}; "
+        f"messages={result.report.message_count}; candidates={result.report.candidate_count}; "
+        f"items={result.report.item_count}; rendered={result.report.rendered_file_count}; "
+        f"output={result.output_dir}; run_log={result.run_log_path}"
+    )
+
+
 def format_agent_bootstrap_result(result: AgentBootstrapResult) -> str:
     outcome = "succeeded" if result.report.success else "failed"
     return (
@@ -1162,6 +1223,24 @@ def main(argv: list[str] | None = None) -> int:
             print(json.dumps(result.report.to_dict(), indent=2, sort_keys=True))
         else:
             print(format_memory_result(result))
+            if result.report.fatal_error_summary:
+                print(result.report.fatal_error_summary)
+        return 0 if result.report.success else 1
+
+    if args.command == "memory-v2":
+        result = run_memory_v2(
+            input_dir=args.input_dir,
+            output_dir=args.output_dir,
+            state_dir=args.state_dir,
+            days=args.days,
+            all_days=args.all_days,
+            model=args.model,
+            project_root_dir=args.project_root_dir,
+        )
+        if args.json:
+            print(json.dumps(result.report.to_dict(), indent=2, sort_keys=True))
+        else:
+            print(format_memory_v2_result(result))
             if result.report.fatal_error_summary:
                 print(result.report.fatal_error_summary)
         return 0 if result.report.success else 1
