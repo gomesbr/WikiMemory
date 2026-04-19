@@ -236,7 +236,7 @@ def build_project_delta_evidence_records(
         if source.adapter != "git_worktree":
             continue
         project_root = Path(source.project_root).expanduser().resolve()
-        slug = slugify(project_root.name or "project")
+        slug = project_slug_for_root(project_root, config)
         if not project_root.exists():
             notices.append(
                 notice(run_id, "warning", "missing_project_root", f"Project root does not exist: {project_root}")
@@ -250,6 +250,17 @@ def build_project_delta_evidence_records(
         records = git_worktree_records(project_root, slug)
         result[Path("projects") / f"{slug}.jsonl"] = records
     return result
+
+
+def project_slug_for_root(project_root: Path, config: ProductConfig) -> str:
+    root_name = project_root.name
+    root_slug = slugify(root_name or "project")
+    for alias_config in config.project_aliases:
+        alias_values = {slugify(alias) for alias in alias_config.aliases}
+        alias_values.add(slugify(alias_config.slug))
+        if root_slug in alias_values:
+            return alias_config.slug
+    return root_slug
 
 
 def git_worktree_records(project_root: Path, project_slug: str) -> list[dict[str, object]]:

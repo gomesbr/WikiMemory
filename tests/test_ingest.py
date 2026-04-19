@@ -338,6 +338,32 @@ class IngestTests(unittest.TestCase):
         self.assertFalse(any(".tmp" in text or "memory/generated.md" in text for text in texts))
         self.assertTrue(any(record["evidence_type"] == "project_overview_file" for record in records))
 
+    def test_project_source_slug_uses_configured_alias(self) -> None:
+        self.init_git_project()
+        alias_root = self.temp_dir / "AITrader"
+        alias_root.mkdir()
+        (alias_root / ".git").mkdir()
+        (alias_root / "README.md").write_text("# AI Trader\n\nAI Trader manages trading automation.\n", encoding="utf-8")
+        payload = default_product_config(self.project_root).to_dict()
+        payload["project_sources"] = [{"adapter": "git_worktree", "project_root": str(alias_root), "include_untracked": True}]
+        payload["project_aliases"] = [{"slug": "ai-trader", "aliases": ["AITrader", "ai-trader"]}]
+        self.product_config.write_text(json.dumps(payload, indent=2), encoding="utf-8")
+
+        with patch("wikimemory.ingest.run_git_optional", return_value="abc123"), patch(
+            "wikimemory.ingest.run_git",
+            side_effect=lambda root, *args: "main" if args == ("branch", "--show-current") else "",
+        ):
+            result = run_ingest(
+                product_config_path=self.product_config,
+                state_dir=self.state_dir,
+                normalized_dir=self.normalized_dir,
+                evidence_dir=self.evidence_dir,
+                audits_dir=self.audits_dir,
+            )
+
+        self.assertTrue(result.report.success, result.report.fatal_error_summary)
+        self.assertTrue((self.evidence_dir / "projects" / "ai-trader.jsonl").exists())
+
     def test_llm_project_routing_rewrites_unresolved_source_records(self) -> None:
         self.init_git_project()
         payload = default_product_config(self.project_root).to_dict()

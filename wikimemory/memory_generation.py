@@ -33,7 +33,11 @@ PROJECT_RULE_PATTERN = re.compile(
     re.IGNORECASE,
 )
 PROJECT_SUMMARY_PATTERN = re.compile(
-    r"\b(?:project is|repo is|repository is|goal is|architecture|design decision|we decided|scope is|built to|intended to)\b",
+    r"^(?:the\s+)?(?:project|repo|repository)\s+is\b|^(?:goal|purpose|scope)\s+is\b|^(?:we\s+decided|design\s+decision|architecture:|built\s+to|intended\s+to)\b",
+    re.IGNORECASE,
+)
+CONVERSATIONAL_SUMMARY_PREFIX_PATTERN = re.compile(
+    r"^(?:nah\b|no[,.\s]|wait\b|ok[,.\s]|yes[,.\s]|agreed\b|correct\b|great\b|this\b|please\b|can you\b)",
     re.IGNORECASE,
 )
 LESSON_PATTERN = re.compile(r"\b(?:lesson learned|next time|avoid repeating|root cause|postmortem)\b", re.IGNORECASE)
@@ -441,15 +445,16 @@ def render_project_summary(project: str, items: list[dict[str, object]], markdow
         [item for item in items if not is_git_head_statement(str(item.get("statement") or ""))],
         key=project_summary_rank,
     )
+    descriptive_items = [item for item in stable_items if not is_config_instruction_statement(str(item.get("statement") or ""))]
     lines = frontmatter("project-memory", project, (f"project/{project}", "memory"), markdown_output)
     lines.extend([f"# {BRAIN} {title}", ""])
-    purpose_items = stable_items[:3]
+    purpose_items = [item for item in descriptive_items if project_summary_rank(item)[0] <= 2][:3]
     append_section(lines, "PURPOSE", item_statements(purpose_items) or ["Short project purpose not extracted yet."])
-    append_section(lines, "CORE COMPONENTS", select_by_terms(stable_items, ("component", "module", "pipeline", "adapter", "renderer", "config")) or ["No stable component list extracted yet."])
-    append_section(lines, "CURRENT ARCHITECTURE", select_by_terms(stable_items, ("architecture", "input", "process", "storage", "output", "pipeline")) or item_statements(stable_items[3:6]) or ["No stable architecture summary extracted yet."])
-    append_section(lines, "DESIGN PRINCIPLES", select_by_terms(stable_items, ("deterministic", "traceable", "modular", "provenance", "incremental")) or ["No stable design principles extracted yet."])
-    append_section(lines, "KEY CONSTRAINTS", select_by_terms(stable_items, ("constraint", "must", "do not", "never", "only")) or ["No stable constraints extracted yet."])
-    append_section(lines, "OPEN PROBLEMS", select_by_terms(stable_items, ("open", "problem", "blocked", "pending", "todo")) or ["No open project-level problems extracted yet."])
+    append_section(lines, "CORE COMPONENTS", select_by_terms(descriptive_items, ("component", "module", "pipeline", "adapter", "renderer", "service", "engine")) or ["No stable component list extracted yet."])
+    append_section(lines, "CURRENT ARCHITECTURE", select_by_terms(descriptive_items, ("architecture", "input", "process", "storage", "output", "pipeline", "service", "engine")) or item_statements(descriptive_items[3:6]) or ["No stable architecture summary extracted yet."])
+    append_section(lines, "DESIGN PRINCIPLES", select_by_terms(descriptive_items, ("deterministic", "traceable", "modular", "provenance", "incremental")) or ["No stable design principles extracted yet."])
+    append_section(lines, "KEY CONSTRAINTS", select_by_terms(stable_items, ("constraint", "must", "do not", "never", "only", "blocks", "disabled", "strict", "kill switch")) or ["No stable constraints extracted yet."])
+    append_section(lines, "OPEN PROBLEMS", select_by_terms(descriptive_items, ("open", "problem", "blocked", "pending", "todo")) or ["No open project-level problems extracted yet."])
     append_related(lines, project, markdown_output)
     return lines
 
@@ -766,6 +771,8 @@ def project_overview_clauses(text: str) -> list[str]:
             pending_prefix = clause.rstrip(":")
             pending_items = []
             continue
+        if is_overview_fragment_noise(clause):
+            continue
         clauses.append(clause)
         if len(clauses) >= 8:
             break
@@ -778,6 +785,16 @@ def compose_colon_clause(prefix: str, items: list[str]) -> str:
     if not items:
         return prefix
     return normalize_statement(f"{prefix} {', '.join(items[:6])}.")
+
+
+def is_overview_fragment_noise(text: str) -> bool:
+    stripped = text.strip()
+    lowered = stripped.lower()
+    if stripped.endswith("/") or re.search(r"^[\w.-]+/$", stripped):
+        return True
+    if len(stripped) < 40 and not re.search(r"\b(?:system|service|pipeline|engine|scaffold|memory|agent|trading)\b", lowered):
+        return True
+    return False
 
 
 def clean_clause(text: str) -> str:
@@ -826,6 +843,8 @@ def is_project_rule_text(text: str) -> bool:
 def is_project_summary_text(text: str) -> bool:
     if len(text) > 360 or SCAFFOLD_PATTERN.search(text) or ONE_OFF_PATTERN.search(text):
         return False
+    if CONVERSATIONAL_SUMMARY_PREFIX_PATTERN.search(text):
+        return False
     return bool(PROJECT_SUMMARY_PATTERN.search(text))
 
 
@@ -861,13 +880,17 @@ def is_git_head_statement(text: str) -> bool:
     return text.strip().startswith("branch=")
 
 
+def is_config_instruction_statement(text: str) -> bool:
+    return bool(re.match(r"^(?:set|export|configure|install|run)\b", text.strip(), re.IGNORECASE))
+
+
 def project_summary_rank(item: dict[str, object]) -> tuple[int, str]:
     text = str(item.get("statement") or "").strip().lower()
     if re.match(r"^\d+\.", text):
         return (8, text)
     if re.search(r"\b(?:is a|is an|its job is|designed to|source of truth|solves that)\b", text):
         return (0, text)
-    if re.search(r"\b(?:pipeline|architecture|input|output|component|adapter|renderer|config)\b", text):
+    if re.search(r"\b(?:pipeline|architecture|input|output|component|adapter|renderer|config|system|service|engine|scaffold)\b", text):
         return (1, text)
     if re.search(r"\b(?:goal is|purpose|built to|intended to)\b", text):
         return (2, text)

@@ -31,6 +31,21 @@
       "adapter": "git_worktree",
       "project_root": ".",
       "include_untracked": true
+    },
+    {
+      "adapter": "git_worktree",
+      "project_root": "../AITrader",
+      "include_untracked": true
+    },
+    {
+      "adapter": "git_worktree",
+      "project_root": "../OpenBrain",
+      "include_untracked": true
+    },
+    {
+      "adapter": "git_worktree",
+      "project_root": "../CodexClaw",
+      "include_untracked": true
     }
   ],
   "project_aliases": [

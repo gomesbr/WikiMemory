@@ -177,7 +177,7 @@ class MemoryGenerationTests(unittest.TestCase):
                     "content_surfaces": [
                         {
                             "path": "README.md",
-                            "text": "# Example Project\n\nExample Project turns raw logs into:\n\n- compact memory files\n- adapter pipeline\n- renderer config",
+                            "text": "# Example Project\n\napproval_ui/\n\nExample Project turns raw logs into:\n\n- compact memory files\n- adapter pipeline\n- renderer config",
                         }
                     ],
                     "provenance": {"path": "README.md"},
@@ -209,7 +209,75 @@ class MemoryGenerationTests(unittest.TestCase):
         self.assertTrue(result.report.success, result.report.fatal_error_summary)
         content = (self.memory_dir / "projects" / "example-project" / "project.md").read_text(encoding="utf-8")
         self.assertIn("turns raw logs into compact memory files", content)
+        self.assertNotIn("approval_ui/", content)
         self.assertNotIn("branch=main", content)
+
+    def test_project_summary_sections_do_not_treat_config_or_constraints_as_purpose(self) -> None:
+        self.write_evidence(
+            "projects/example-project.jsonl",
+            [
+                {
+                    "evidence_id": "overview-1",
+                    "evidence_type": "project_overview_file",
+                    "source_adapter": "git_worktree",
+                    "source_id": "example-project",
+                    "project_hint": "example-project",
+                    "actor_type": "project_delta",
+                    "timestamp": "2026-04-18T00:00:00Z",
+                    "content_surfaces": [
+                        {
+                            "path": "README.md",
+                            "text": "# Example Project\n\nDeterministic trading system scaffold with scoring engine.\n\nSet BROKER_ADAPTER_MODE=mock in `.env`.\n\nGlobal kill switch blocks trading.",
+                        }
+                    ],
+                    "provenance": {"path": "README.md"},
+                    "metadata": {},
+                },
+            ],
+        )
+
+        result = run_memory_generation(
+            product_config_path=self.product_config,
+            state_dir=self.state_dir,
+            evidence_dir=self.evidence_dir,
+            memory_dir=self.memory_dir,
+            audits_dir=self.audits_dir,
+        )
+
+        self.assertTrue(result.report.success, result.report.fatal_error_summary)
+        content = (self.memory_dir / "projects" / "example-project" / "project.md").read_text(encoding="utf-8")
+        purpose = content.split("## PURPOSE", 1)[1].split("## CORE COMPONENTS", 1)[0]
+        constraints = content.split("## KEY CONSTRAINTS", 1)[1].split("## OPEN PROBLEMS", 1)[0]
+        self.assertIn("Deterministic trading system", purpose)
+        self.assertNotIn("BROKER_ADAPTER_MODE", purpose)
+        self.assertNotIn("kill switch", purpose)
+        self.assertIn("kill switch", constraints)
+
+    def test_conversational_goal_correction_does_not_become_project_purpose(self) -> None:
+        self.write_evidence(
+            "logs/sample-source.jsonl",
+            [
+                self.evidence_record(
+                    "e1",
+                    "user",
+                    "Nah, this got even more complicated. This should be simple. Goal is to have the agent stop before more damage is done.",
+                ),
+                self.evidence_record("e2", "user", "Goal is to avoid wash sale at all costs."),
+            ],
+        )
+
+        result = run_memory_generation(
+            product_config_path=self.product_config,
+            state_dir=self.state_dir,
+            evidence_dir=self.evidence_dir,
+            memory_dir=self.memory_dir,
+            audits_dir=self.audits_dir,
+        )
+
+        self.assertTrue(result.report.success, result.report.fatal_error_summary)
+        content = (self.memory_dir / "projects" / "example-project" / "project.md").read_text(encoding="utf-8")
+        self.assertIn("avoid wash sale", content)
+        self.assertNotIn("got even more complicated", content)
 
     def test_operating_directives_route_to_global_without_review(self) -> None:
         self.write_evidence(
