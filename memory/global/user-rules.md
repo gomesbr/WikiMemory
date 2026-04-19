@@ -1,6 +1,6 @@
 ---
 type: global-rules
-updated: 2026-04-19T04:35:35.971838Z
+updated: 2026-04-19T13:07:41.009130Z
 tags: [memory, rules, global]
 ---
 
@@ -12,6 +12,7 @@ tags: [memory, rules, global]
 
 ## NEVER DO
 
+- Do not expose the working directory path in command output or screenshots when running terminal commands.
 - Don't show the array, but each item + value like the other elements.
 - Don't change anything yet.
 - Don't worry about those, run the aggregation load anyways.
@@ -19,7 +20,6 @@ tags: [memory, rules, global]
 - Do not answer the question.
 - Don't ever do that.
 - Don't stop until you find one winner.
-- Don't all questions should have those characteristics?
 - Don't need this.
 - Never a good practice.
 - Don't only look at critical but overall and prune whatever needs to be pruned to remove those 'duplicates', reviewed and not reviewed.
@@ -27,22 +27,22 @@ tags: [memory, rules, global]
 
 ## CONDITIONAL RULES
 
-- When the user asks for repository changes, commit and push without asking again unless credentials or conflicts block the action.
-- no, I can instruct the agent to always use the same source_setup_id while rolling positions, thanks.
 - also please don't make the boxes too far apart like you see on image 2.
 - those don't add up.
 - the mock data available now is not real, so don't try to create rules retroactively based on mock data.
 - if you don't understand the ask, please ask for clarification.
 - you will: - create all files - install dependencies - ensure project runs - verify startup Do not stop until build is complete.
-- we don't need a video file md etc.
 - pleas don't let that happen.
-- i never heard of openrouter.
-- should all date formats be the same while inserting it into db so we don't have any date compatibility issues?
-- wHEN LOAD FINISHES, do not worry about the failed rows, execute the aggregation job anyways, got it?
+- caveat: Don't consider current data in the platform.
+- nothing low-confidence goes straight to “person”." Nothing low confidence should go to anywhere, so don't create rules of high-low confidence just for people, but to every entity type.
+- this was your answer, which is don't see it in this plan: Perfect direction.
+- data must be linked to actors at row level.
+- removing data is always a terrible idea if you don't know what you are doing or WHY that data exists.
+- when compacting context data from this window, always bring the full plan (we are about to create that in a sec).
 
 ## CONFIRMED RULES (EXPLICIT)
 
-- 63 explicit rule(s) are listed above by behavior bucket.
+- 55 explicit rule(s) are listed above by behavior bucket.
 
 ## INFERRED RULES (REVIEWABLE)
 

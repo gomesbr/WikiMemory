@@ -1,7 +1,7 @@
 ---
 type: project-rules
 project: wikimemory
-updated: 2026-04-19T04:35:36.332952Z
+updated: 2026-04-19T13:07:42.179851Z
 tags: [project/wikimemory, rules]
 ---
 
@@ -13,26 +13,27 @@ _None currently extracted._
 
 ## NEVER DO
 
-_None currently extracted._
+- Do not replace existing agent markdown files; append new information to the user-owned markdown file so prior user content is preserved.
+- Do not promote transient commands, progress chatter, or one-off runtime instructions into durable wiki knowledge; extraction should favor stable, generalizable content and suppress noise that only reflects the current interaction.
 
 ## CONDITIONAL RULES
 
-- the autonomous corpus-load stage is intended as an autonomous full-corpus load loop that runs phases repeatedly without user intervention, checks each phase result, and either advances or revises the code holistically before retrying.
-- for the WikiMemory project, only plan one phase at a time: ask clarifying questions first, then refine assumptions, and only then produce the detailed phase plan.
-- the initial knowledge-building scope is limited to three projects, but the system should allow additional projects later through configuration and then run a full historical scan plus ongoing tracking for them.
-- treat the audit stage as the validation/audit stage for artifacts from earlier phases. It should compare manifests and state for contradictions, duplicates, stale entries, missing provenance, and drift between wiki and bootstrap outputs, without parsing rendered markdown directly.
-- the daily-refresh stage is the daily orchestration entrypoint for phases 1 through 8. It should choose full, scoped, or skipped refreshes based on upstream changes and config or schema invalidation.
-- the README should be expanded into a detailed end-to-end project guide so another model can understand the system from that file alone.
-- keep one representative input log in the repository as an example artifact that shows the source-data structure and content variety for downstream model understanding.
-- use the provided Codex prompt template when handing off implementation work: concise output only, no reasoning narration, and multiple-choice questions if blocked.
-- expand the repository README so it explains the project end to end in enough detail for another model to understand the system from that file alone.
-- add one representative sample input log file to the repository so downstream tooling can inspect the source-data structure and content patterns.
-- use numbered multiple-choice questions for any clarification requests so the user can answer with minimal typing.
-- Prioritize the wiki pipeline to stop promoting transient commands, narration, and runtime-local instructions into durable wiki knowledge.
+- When developing a new Wikimemory version that is not yet in production use, do not preserve backward compatibility with the previous version by default. Treat the new version as a clean system unless the user explicitly asks for migration or compatibility support.
+- the project should treat each memory entry as if the system is being evaluated from scratch, without assuming backward compatibility with an older version unless that is explicitly required.
+- Validate memory and extraction changes against real data before treating them as correct.
+- Prioritize the full-data run to be managed as an autonomous loop: run a phase or chunk, evaluate the result, fix issues holistically if needed, then continue without asking for intervention.
+- during the full-data loop, the implementation must check disk growth after each run and avoid letting the corpus exceed the configured space cap.
+- implement all remaining steps in sequence without pausing between them unless blocked.
+- the extraction pipeline should favor useful candidate recall over overly strict filtering, because the log corpus is large and shallow output is a sign that the selection rules are too narrow.
+- memory pages must be written so a new agent can understand every line without hidden context; if a line depends on missing background, it should be rewritten or removed.
+- the WikiMemory system should be designed one phase at a time: ask clarifying questions first, refine assumptions with the user, then produce the detailed plan only after ambiguity is removed.
+- for the WikiMemory project, treat external Codex session logs as immutable source data: discover them from configurable roots, index them without copying raw logs into the project, and support append-aware tracking.
+- the initial WikiMemory scope is limited to three target projects, but the system should allow additional projects to be added later through configuration and then fully rescanned across the root history.
+- the WikiMemory scheduler should run daily and include notification support so the user is aware of updates and can plan code changes accordingly.
 
 ## PROMOTED RULES (EXPLICIT)
 
-- 11 explicit rule(s) are listed above by behavior bucket.
+- 44 explicit rule(s) are listed above by behavior bucket.
 
 ## INFERRED RULES
 

@@ -279,6 +279,59 @@ class MemoryGenerationTests(unittest.TestCase):
         self.assertIn("avoid wash sale", content)
         self.assertNotIn("got even more complicated", content)
 
+    def test_clean_slate_compatibility_guidance_becomes_project_rule_not_purpose(self) -> None:
+        self.write_evidence(
+            "logs/sample-source.jsonl",
+            [
+                self.evidence_record(
+                    "e1",
+                    "user",
+                    "The previous v1 system was not in use while v2 was being developed, so no compatibility is needed. Treat the system as new.",
+                ),
+            ],
+        )
+
+        result = run_memory_generation(
+            product_config_path=self.product_config,
+            state_dir=self.state_dir,
+            evidence_dir=self.evidence_dir,
+            memory_dir=self.memory_dir,
+            audits_dir=self.audits_dir,
+        )
+
+        self.assertTrue(result.report.success, result.report.fatal_error_summary)
+        project = (self.memory_dir / "projects" / "example-project" / "project.md").read_text(encoding="utf-8")
+        rules = (self.memory_dir / "projects" / "example-project" / "rules.md").read_text(encoding="utf-8")
+        expected = (
+            "When developing a new Example Project version that is not yet in production use, do not preserve backward "
+            "compatibility with the previous version by default. Treat the new version as a clean system unless "
+            "the user explicitly asks for migration or compatibility support."
+        )
+        self.assertNotIn("Treat the system as new", project)
+        self.assertNotIn("compatibility with the previous version", project)
+        self.assertIn(expected, rules)
+
+    def test_vague_project_summary_is_not_rendered_as_purpose(self) -> None:
+        self.write_evidence(
+            "logs/sample-source.jsonl",
+            [self.evidence_record("e1", "user", "Every time you make a change, think about the system as new.")],
+        )
+
+        result = run_memory_generation(
+            product_config_path=self.product_config,
+            state_dir=self.state_dir,
+            evidence_dir=self.evidence_dir,
+            memory_dir=self.memory_dir,
+            audits_dir=self.audits_dir,
+        )
+
+        self.assertTrue(result.report.success, result.report.fatal_error_summary)
+        project = (self.memory_dir / "projects" / "example-project" / "project.md").read_text(encoding="utf-8")
+        rules = (self.memory_dir / "projects" / "example-project" / "rules.md").read_text(encoding="utf-8")
+        self.assertNotIn("Every time you make a change", project)
+        self.assertNotIn("think about the system as new", project)
+        self.assertIn("do not preserve backward compatibility", rules)
+
     def test_operating_directives_route_to_global_without_review(self) -> None:
         self.write_evidence(
             "logs/sample-source.jsonl",

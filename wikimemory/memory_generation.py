@@ -30,11 +30,11 @@ RENDER_PREFIX_PATTERN = re.compile(
     re.IGNORECASE,
 )
 RENDER_REJECT_PATTERN = re.compile(
-    r"(?:\.\.\.|iMPLEMENT THIS PLAN|IMPLEMENT THIS PLAN|PLEASE IMPLEMENT THIS PLAN|<environment_context>|open tabs:|context from my ide setup|single prompt to codex|copy/paste|source_count:|confidence:|^No .* extracted yet\.?$|^No .* selected yet\.?$|^No .* items extracted yet\.?$|^No .* rules selected yet\.?$)",
+    r"(?:\.\.\.|iMPLEMENT THIS PLAN|IMPLEMENT THIS PLAN|PLEASE IMPLEMENT THIS PLAN|<environment_context>|open tabs:|context from my ide setup|single prompt to codex|copy/paste|source_count:|confidence:|user profile|senior software engineer|store/reports/|api\.fxtwitter|whatsapp group|hundreds of GB|persistent only for the user|video file md|openrouter|one more think|no_queued_strategies|analyze all memory files|^No .* extracted yet\.?$|^No .* selected yet\.?$|^No .* items extracted yet\.?$|^No .* rules selected yet\.?$)",
     re.IGNORECASE,
 )
 RAW_FIRST_PERSON_PATTERN = re.compile(
-    r"\b(?:i think|i keep|i close|i reopen|i don't|i do not|i'll|i will|i need|i'm|i am|my question|my inputs)\b",
+    r"\b(?:i think|i keep|i close|i reopen|i don't|i do not|i'll|i will|i need|i'm|i am|i want|i requested|i ran|i found|i never|i can|i've|i only|i have|we don't|my question|my inputs|one question|this is what)\b",
     re.IGNORECASE,
 )
 TRANSIENT_RENDER_PATTERN = re.compile(
@@ -55,6 +55,23 @@ PROJECT_SUMMARY_PATTERN = re.compile(
     r"^(?:the\s+)?(?:project|repo|repository)\s+is\b|^(?:goal|purpose|scope)\s+is\b|^(?:we\s+decided|design\s+decision|architecture:|built\s+to|intended\s+to)\b",
     re.IGNORECASE,
 )
+PURPOSE_ACTION_PATTERN = re.compile(
+    r"\b(?:make a change|developing|changing|building|implementing|do not|don't|never|always|must|should|treat .{0,80} as|compatibility|migration|version)\b",
+    re.IGNORECASE,
+)
+PURPOSE_IDENTITY_PATTERN = re.compile(
+    r"\b(?:is a|is an|build a|builds? a|designed to|built to|intended to|source of truth|purpose is|goal is|turns .{0,80} into|platform|system|service|tool|memory layer|trading system)\b",
+    re.IGNORECASE,
+)
+ARCHITECTURE_ROLE_PATTERN = re.compile(
+    r"\b(?:component|module|service|adapter|engine|pipeline|architecture|input|process|storage|output|database|queue|webhook|scaffold|orchestrates)\b",
+    re.IGNORECASE,
+)
+CONSTRAINT_ROLE_PATTERN = re.compile(
+    r"\b(?:constraint|must|only|blocks|strict|kill switch|safety limit|disabled|protect|prevent|avoid|single-user|minimum|maximum|cap|limit)\b",
+    re.IGNORECASE,
+)
+OPEN_PROBLEM_PATTERN = re.compile(r"\b(?:open problem|unresolved|blocked|pending|still needs|todo|must decide|not yet)\b", re.IGNORECASE)
 CONVERSATIONAL_SUMMARY_PREFIX_PATTERN = re.compile(
     r"^(?:nah\b|no[,.\s]|wait\b|ok[,.\s]|yes[,.\s]|agreed\b|correct\b|great\b|this\b|please\b|can you\b)",
     re.IGNORECASE,
@@ -152,6 +169,7 @@ def run_memory_generation(
         memory_items = extraction_artifacts.items
         memory_items = apply_review_decisions(memory_items, state_dir)
         memory_items = prune_stale_recent_items(memory_items)
+        memory_items = normalize_memory_item_roles(memory_items)
         rendered_files = render_memory_files(memory_dir, memory_items, config.markdown_output)
         write_meta(memory_dir, memory_items, extraction_artifacts.windows, extraction_artifacts.candidates)
 
@@ -319,6 +337,7 @@ def make_item(
         "item_id": item_id,
         "memory_schema_version": MEMORY_SCHEMA_VERSION,
         "memory_class": memory_class,
+        "memory_role": item_role({"memory_class": memory_class, "statement": statement}),
         "scope": scope,
         "project": project,
         "promotion_state": promotion_state_value,
@@ -473,22 +492,13 @@ def render_project_summary(project: str, items: list[dict[str, object]], markdow
     lines = frontmatter("project-memory", project, (f"project/{project}", "memory"), markdown_output)
     lines.extend([f"# {BRAIN} {title}", ""])
     used: set[str] = set()
-    purpose_items = take_unseen(
-        [
-            item
-            for item in descriptive_items
-            if str(item.get("item_type")) in {"purpose", "project_summary"}
-            or (str(item.get("item_type") or "") not in {"constraint", "architecture", "decision"} and project_summary_rank(item)[0] <= 2)
-        ],
-        used,
-        3,
-    )
+    purpose_items = take_unseen([item for item in descriptive_items if is_purpose_item(item)], used, 3)
     append_section(lines, "PURPOSE", item_statements(purpose_items) or ["Short project purpose not extracted yet."])
-    append_section(lines, "CORE COMPONENTS", item_statements(take_unseen(filter_by_terms(descriptive_items, ("component", "module", "pipeline", "adapter", "renderer", "service", "engine")), used, 6)) or ["No stable component list extracted yet."])
-    append_section(lines, "CURRENT ARCHITECTURE", item_statements(take_unseen([item for item in descriptive_items if str(item.get("item_type")) == "architecture"] + filter_by_terms(descriptive_items, ("architecture", "input", "process", "storage", "output", "pipeline", "service", "engine")), used, 6)) or ["No stable architecture summary extracted yet."])
+    append_section(lines, "CORE COMPONENTS", item_statements(take_unseen([item for item in descriptive_items if is_architecture_item(item)] + filter_by_terms(descriptive_items, ("component", "module", "pipeline", "adapter", "renderer", "service", "engine")), used, 6)) or ["No stable component list extracted yet."])
+    append_section(lines, "CURRENT ARCHITECTURE", item_statements(take_unseen([item for item in descriptive_items if is_architecture_item(item)] + filter_by_terms(descriptive_items, ("architecture", "input", "process", "storage", "output", "pipeline", "service", "engine")), used, 6)) or ["No stable architecture summary extracted yet."])
     append_section(lines, "DESIGN PRINCIPLES", item_statements(take_unseen(filter_by_terms(descriptive_items, ("deterministic", "traceable", "modular", "provenance", "incremental")), used, 6)) or ["No stable design principles extracted yet."])
-    append_section(lines, "KEY CONSTRAINTS", item_statements(take_unseen([item for item in stable_items if str(item.get("item_type")) == "constraint"] + filter_by_terms(stable_items, ("constraint", "must", "do not", "never", "only", "blocks", "disabled", "strict", "kill switch")), used, 6)) or ["No stable constraints extracted yet."])
-    append_section(lines, "OPEN PROBLEMS", item_statements(take_unseen(filter_by_terms(descriptive_items, ("open", "problem", "blocked", "pending", "todo")), used, 5)) or ["No open project-level problems extracted yet."])
+    append_section(lines, "KEY CONSTRAINTS", item_statements(take_unseen([item for item in stable_items if is_constraint_item(item)] + filter_by_terms(stable_items, ("constraint", "must", "do not", "never", "only", "blocks", "disabled", "strict", "kill switch")), used, 6)) or ["No stable constraints extracted yet."])
+    append_section(lines, "OPEN PROBLEMS", item_statements(take_unseen([item for item in descriptive_items if is_open_problem_item(item)], used, 5)) or ["No open project-level problems extracted yet."])
     append_related(lines, project, markdown_output)
     return lines
 
@@ -614,6 +624,9 @@ def item_statements(items: list[dict[str, object]], max_chars: int | None = None
 def format_item_statement(item: dict[str, object], max_chars: int | None = None) -> str:
     statement = str(item.get("agent_facing_statement") or item.get("statement") or "").strip()
     statement = clean_render_statement(statement)
+    project = str(item.get("project") or "")
+    if project and "new project version" in statement:
+        statement = statement.replace("new project version", f"new {display_project(project)} version")
     if max_chars is not None and len(statement) > max_chars:
         return ""
     return statement
@@ -689,6 +702,60 @@ def display_project(project: str) -> str:
     return " ".join(part.capitalize() for part in project.split("-"))
 
 
+def item_role(item: dict[str, object]) -> str:
+    role = str(item.get("memory_role") or "").strip().lower()
+    statement = clean_render_statement(str(item.get("agent_facing_statement") or item.get("statement") or ""))
+    if role == "purpose" and PURPOSE_ACTION_PATTERN.search(statement):
+        return "rule"
+    if role == "purpose" and not PURPOSE_IDENTITY_PATTERN.search(statement):
+        return "discard"
+    if role:
+        return role
+    memory_class = str(item.get("memory_class") or "")
+    item_type = str(item.get("item_type") or "")
+    if memory_class in {"global_user_rules", "project_rules"}:
+        return "rule"
+    if memory_class == "project_lessons" or item_type == "lesson":
+        return "lesson"
+    if memory_class == "recent_project_state":
+        return "decision" if item_type == "decision" else "recent_state"
+    if item_type == "purpose":
+        return "purpose"
+    if item_type == "architecture":
+        return "architecture"
+    if item_type == "constraint":
+        return "constraint"
+    if item_type == "decision":
+        return "decision"
+    if PURPOSE_ACTION_PATTERN.search(statement):
+        return "rule"
+    if CONSTRAINT_ROLE_PATTERN.search(statement):
+        return "constraint"
+    if PURPOSE_IDENTITY_PATTERN.search(statement):
+        return "purpose"
+    if ARCHITECTURE_ROLE_PATTERN.search(statement):
+        return "architecture"
+    return "discard"
+
+
+def is_purpose_item(item: dict[str, object]) -> bool:
+    statement = clean_render_statement(str(item.get("agent_facing_statement") or item.get("statement") or ""))
+    return item_role(item) == "purpose" and bool(PURPOSE_IDENTITY_PATTERN.search(statement)) and not PURPOSE_ACTION_PATTERN.search(statement)
+
+
+def is_architecture_item(item: dict[str, object]) -> bool:
+    return item_role(item) == "architecture"
+
+
+def is_constraint_item(item: dict[str, object]) -> bool:
+    return item_role(item) == "constraint"
+
+
+def is_open_problem_item(item: dict[str, object]) -> bool:
+    statement = clean_render_statement(str(item.get("agent_facing_statement") or item.get("statement") or ""))
+    return item_role(item) == "recent_state" and OPEN_PROBLEM_PATTERN.search(statement)
+
+
 def dedupe_render_items(items: list[dict[str, object]]) -> list[dict[str, object]]:
     seen: set[str] = set()
     selected: list[dict[str, object]] = []
@@ -702,10 +769,12 @@ def dedupe_render_items(items: list[dict[str, object]]) -> list[dict[str, object
     return selected
 
 
-def render_rank(item: dict[str, object]) -> tuple[int, int, str]:
+def render_rank(item: dict[str, object]) -> tuple[int, int, int, str]:
     confidence = {"explicit": 0, "strong": 1, "medium": 2, "low": 3, "candidate": 4}.get(str(item.get("confidence") or ""), 4)
     support = -len(item.get("evidence_ids", []))
-    return (confidence, support, str(item.get("last_seen_at") or ""))
+    statement = clean_render_statement(str(item.get("agent_facing_statement") or item.get("statement") or ""))
+    priority = -1 if re.search(r"\b(?:backward compatibility|clean system|previous version|new version)\b", statement, re.IGNORECASE) else 0
+    return (priority, confidence, support, str(item.get("last_seen_at") or ""))
 
 
 def clean_render_statement(statement: str) -> str:
@@ -730,10 +799,14 @@ def clean_render_statement(statement: str) -> str:
         statement = "Keep the repository visible under the user's remote repository namespace."
     if "support notifications" in statement.lower() and "important events" in statement.lower():
         statement = "Notify the user about notable pipeline events so maintenance work happens at appropriate times."
+    if re.search(r"\b(?:every time you make a change,?\s*)?think about the system as new\b", statement, re.IGNORECASE):
+        statement = "When developing a new project version that is not yet in production use, do not preserve backward compatibility with the previous version by default. Treat the new version as a clean system unless the user explicitly asks for migration or compatibility support."
     statement = rewrite_phase_references(statement)
     statement = re.sub(r"\bGitHub Project\b", "remote project board", statement, flags=re.IGNORECASE)
     statement = re.sub(r"\bGitHub account\b", "remote repository account", statement, flags=re.IGNORECASE)
     statement = re.sub(r"\bGitHub namespace\b", "remote repository namespace", statement, flags=re.IGNORECASE)
+    statement = re.sub(r"\bGitHub access\b", "remote repository access", statement, flags=re.IGNORECASE)
+    statement = re.sub(r"\bGitHub\b", "the remote repository", statement, flags=re.IGNORECASE)
     statement = re.sub(r"\bfull-load\b", "load", statement, flags=re.IGNORECASE)
     if statement and statement[-1] not in ".!?":
         statement += "."
@@ -763,6 +836,9 @@ def is_renderable_item(item: dict[str, object]) -> bool:
     if not is_renderable_text(statement):
         return False
     memory_class = str(item.get("memory_class") or "")
+    role = item_role(item)
+    if role == "discard":
+        return False
     if memory_class == "global_user_rules" and item.get("project"):
         return False
     if memory_class == "global_user_rules" and looks_project_specific(statement):
@@ -771,6 +847,8 @@ def is_renderable_item(item: dict[str, object]) -> bool:
     if project and mentions_other_project(statement, project):
         return False
     if memory_class == "project_rules" and str(item.get("promotion_state") or "") not in {"explicit", "repeated", "durable"}:
+        if role == "rule" and re.search(r"\b(?:compatibility|migration|clean system|previous version|new version)\b", statement, re.IGNORECASE):
+            return True
         return len(item.get("evidence_ids", [])) >= 2 or bool(re.match(r"^(?:no|do not|don't|never|always|must)\b", statement, re.IGNORECASE))
     return True
 
@@ -783,6 +861,10 @@ def is_renderable_text(statement: str) -> bool:
     if TRANSIENT_RENDER_PATTERN.search(statement):
         return False
     if RAW_FIRST_PERSON_PATTERN.search(statement):
+        return False
+    if statement.strip().endswith("?"):
+        return False
+    if re.search(r"\b(?:maybe|etc\.?|not only the)\b", statement, re.IGNORECASE):
         return False
     if re.match(r"^\d+[\.)]\s+", statement):
         return False
@@ -880,6 +962,28 @@ def prune_stale_recent_items(items: list[dict[str, object]]) -> list[dict[str, o
     ]
 
 
+def normalize_memory_item_roles(items: list[dict[str, object]]) -> list[dict[str, object]]:
+    normalized: list[dict[str, object]] = []
+    for item in items:
+        item = dict(item)
+        role = item_role(item)
+        item["memory_role"] = role
+        if role == "rule" and item.get("project") and item.get("memory_class") != "global_user_rules":
+            item["memory_class"] = "project_rules"
+            item["item_type"] = "project_rule"
+            item["scope"] = "project"
+            item["durability"] = "durable"
+            item["temporal_status"] = "durable"
+        elif role == "purpose" and item.get("memory_class") == "stable_project_summary":
+            item["item_type"] = "purpose"
+        elif role == "architecture" and item.get("memory_class") == "stable_project_summary":
+            item["item_type"] = "architecture"
+        elif role == "constraint" and item.get("memory_class") == "stable_project_summary":
+            item["item_type"] = "constraint"
+        normalized.append(item)
+    return normalized
+
+
 def is_older_than_days(value: object, days: int) -> bool:
     if not value:
         return False
@@ -892,6 +996,11 @@ def is_older_than_days(value: object, days: int) -> bool:
 
 def memory_file_key(item: dict[str, object]) -> str | None:
     memory_class = str(item["memory_class"])
+    role = item_role(item)
+    if role == "discard":
+        return None
+    if role == "rule" and item.get("project") and memory_class != "global_user_rules":
+        return "project_rules"
     if memory_class == "recent_project_state" and str(item.get("temporal_status") or "active") != "active":
         return None
     return {

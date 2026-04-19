@@ -27,6 +27,18 @@ ONE_OFF_RULE_PATTERN = re.compile(
 VERBATIM_LEAK_PATTERN = re.compile(r"^(?:nah|ok|okay|great|please|can you|go|next|agreed|correct|yes)[,.\s:!-]+", re.IGNORECASE)
 AGENT_REASONING_PATTERN = re.compile(r"\b(?:i'm doing|i am doing|i'll|i will|i don't|i do not|next i'll|i’m fixing)\b", re.IGNORECASE)
 RUNTIME_PURPOSE_PATTERN = re.compile(r"\b(?:localhost|https?://|\.env|BROKER_ADAPTER_MODE|ctrl\+f5|hard refresh)\b", re.IGNORECASE)
+PURPOSE_RULE_PATTERN = re.compile(
+    r"\b(?:make a change|developing|changing|building|implementing|do not|don't|never|always|must|should|treat .{0,80} as|compatibility|migration|version)\b",
+    re.IGNORECASE,
+)
+VAGUE_STATEMENT_PATTERN = re.compile(
+    r"\b(?:think about the system as new|this system|that system|it should|this should|do that|fix it|make it better)\b",
+    re.IGNORECASE,
+)
+SUBJECT_ACTION_PATTERN = re.compile(
+    r"\b(?:build|generate|ingest|extract|render|lint|validate|preserve|avoid|prevent|support|treat|do not|don't|never|always|must|should|keep|use|route|classify|store|read|write|notify|provide|show|place|attach|track|resolve)\b",
+    re.IGNORECASE,
+)
 
 
 class MemoryLintError(DiscoveryError):
@@ -220,6 +232,15 @@ def lint_memory_quality(
             findings.append(finding(run_id, "error", "quality", "agent_reasoning_memory", item_id, "Memory statement appears to contain agent reasoning or progress narration."))
         if memory_class == "stable_project_summary" and str(item.get("item_type") or "") in {"project_summary", "purpose"} and RUNTIME_PURPOSE_PATTERN.search(statement):
             findings.append(finding(run_id, "warning", "quality", "runtime_fact_in_project_purpose", item_id, "Project purpose contains runtime/config details that should be routed to constraints or recent context."))
+        role = str(item.get("memory_role") or "")
+        if memory_class == "stable_project_summary" and str(item.get("item_type") or "") in {"project_summary", "purpose"} and PURPOSE_RULE_PATTERN.search(statement):
+            findings.append(finding(run_id, "error", "quality", "purpose_contains_rule", item_id, "Project purpose contains behavior guidance that belongs in project rules."))
+        if memory_class == "stable_project_summary" and role == "rule":
+            findings.append(finding(run_id, "error", "quality", "section_mismatch", item_id, "Rule-role item is still classified as project summary."))
+        if VAGUE_STATEMENT_PATTERN.search(statement):
+            findings.append(finding(run_id, "warning", "quality", "vague_memory_statement", item_id, "Memory statement needs hidden conversation context to be useful."))
+        if len(statement.split()) >= 4 and not SUBJECT_ACTION_PATTERN.search(statement):
+            findings.append(finding(run_id, "warning", "quality", "missing_subject_or_action", item_id, "Memory statement may lack a clear actionable subject or behavior."))
         duplicate_key = (project, memory_class, normalize_statement(statement))
         prior = seen.get(duplicate_key)
         if prior and prior != item_id:

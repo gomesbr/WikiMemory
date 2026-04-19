@@ -1,7 +1,7 @@
 ---
 type: project-rules
 project: open-brain
-updated: 2026-04-19T04:35:36.214638Z
+updated: 2026-04-19T13:07:41.786085Z
 tags: [project/open-brain, rules]
 ---
 
@@ -13,26 +13,33 @@ _None currently extracted._
 
 ## NEVER DO
 
-_None currently extracted._
+- Do not narrow generation to only historically successful domains; the process should continue to work across the broader dataset without relying on user-provided examples.
+- Do not use mocked embeddings for persisted data; embeddings must come from the real source content, and any mock data already inserted should be regenerated with the real embedding provider.
+- Do not stop the group immediately when one strategy succeeds; continue running the remaining strategies in that group until the group finishes.
+- Do not change code while the user is actively reviewing cases unless they explicitly ask for implementation changes.
+- Do not modify the file currently under manual review; the user is inspecting the 'they' file and wants it left untouched during that review pass.
+- Do not require the user to be present in a conversation for it to count as an actor interaction candidate.
+- Do not limit duplicate cleanup to one status bucket; inspect and prune duplicates across the entire case set, including both reviewed and unreviewed records.
+- Do not force the agent to answer from memory when the task is to produce retrieval-oriented subqueries; the agent should only return answers grounded in system evidence, not guesses.
 
 ## CONDITIONAL RULES
 
-- the strategy program should be implemented as a grounded, componentized, hypothesis-driven optimizer upgrade that preserves provenance and supports autonomous continuous looping.
-- add a dashboard section for pre-loop user answers so calibration can be completed inside the interface instead of requiring terminal interaction.
-- build an evolution monitoring module that tracks strategy evolution live at the experiment level and ties it to the pre-loop calibration workflow.
-- Prioritize taxonomy coverage checked against the current database when preparing a new version, but not on every run, and wants a way to handle future domain growth.
-- provide a review workflow where the user can approve or reject candidate new domains, candidate new lenses, and proposed merges or splits of existing domains.
-- when asked to make a change, implement it directly rather than only adding it to the backlog.
-- keep traversing the dataset until completion, continuing to solve blockers while the run is active.
-- the messaging integration work is being done in Node.js using Twilio.
-- the case-generation process should not be narrowed to only a few proven domains; it should continue using the full dataset so the system can surface broader coverage.
-- add a routine that keeps the relevant repositories or working copies clean and up to date on a daily basis.
-- Prioritize a comprehensive emoji translation strategy for WhatsApp across iPhone and Android, including context-sensitive meaning resolution.
-- use JSON as the required format for agent-to-agent communication to keep interactions structured and machine-readable.
+- When developing a new Open Brain version that is not yet in production use, do not preserve backward compatibility with the previous version by default. Treat the new version as a clean system unless the user explicitly asks for migration or compatibility support.
+- backward compatibility is not required for this OpenBrain branch; API, UI, and type changes can be breaking because the product is still experimental.
+- treat names marked with a leading tilde as non-suspicious once the user confirms they are valid contacts, and remove the specific group chat entry the user identified from the suspicious list.
+- after the initial Mission Control redesign, continue with the the normalization stage polish pass to address the empty-feeling layout and improve density, fetch timing, caching, keyboard navigation, and responsive side-panel behavior.
+- the import script should be adjusted to process the newly available Grok export archive as an additional source input for the same ingestion flow.
+- Prioritize the memory system sized for the final combined dump, then multiplied by roughly ten for long-term growth, and wants the architecture reconsidered now if the current database choice will not scale to that horizon.
+- Prioritize a comprehensive life taxonomy and analysis-lens model covering many domains, not a narrow subset, so future design should keep the schema extensible for broad personal analytics.
+- the frontend should be optimized for visual exploration, with graphs and charts as primary presentation modes for insights.
+- use a single consistent date representation when inserting imported records into the database to avoid compatibility problems.
+- add a percentage-complete column to the source breakdown view and keep the per-source summary aligned with the existing row counts.
+- ensure date values and date formats are inserted consistently across every source type, and add a sanity check to catch malformed date handling.
+- when a load finishes, start the aggregation job even if some rows failed during the load; do not block on those row-level failures.
 
 ## PROMOTED RULES (EXPLICIT)
 
-- 46 explicit rule(s) are listed above by behavior bucket.
+- 130 explicit rule(s) are listed above by behavior bucket.
 
 ## INFERRED RULES
 

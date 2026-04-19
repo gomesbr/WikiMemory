@@ -19,6 +19,7 @@ TEMPORAL_ITEM_TYPES = {"current_state", "next_step", "open_question", "task", "f
 PROJECT_SUMMARY_TYPES = {"project_summary", "architecture", "constraint", "decision", "purpose"}
 RULE_ITEM_TYPES = {"global_rule", "project_rule"}
 LESSON_TYPES = {"lesson"}
+MEMORY_ROLES = {"purpose", "architecture", "constraint", "rule", "recent_state", "decision", "lesson", "discard"}
 USER_ACTORS = {"user", "human"}
 AGENT_ACTORS = {"assistant", "agent_reasoning", "tool", "developer", "system"}
 
@@ -67,6 +68,14 @@ CODE_ARTIFACT_PATTERN = re.compile(
 )
 TRANSIENT_REQUEST_PATTERN = re.compile(
     r"(?:<environment_context>|what is next|next phase|one more question|send me the full report|do i need|can i add|how do i|if i decide|is the process|how is .* adding information|should have mentioned|you are helping redesign|implements all remaining|no,? that.?s .*problem|create the plan|phase \d+ should be treated as a checkpoint|full-load run|commit and merge|download obsidian)",
+    re.IGNORECASE,
+)
+CLEAN_SLATE_COMPATIBILITY_PATTERN = re.compile(
+    r"\b(?:system as new|as the system is new|treat (?:it|the system|changes?) as new|no compatibility|compatibility (?:needed|required)|v1|v2|previous version|new version)\b",
+    re.IGNORECASE,
+)
+RULE_LIKE_SUMMARY_PATTERN = re.compile(
+    r"\b(?:every time you make a change|when (?:developing|changing|building|implementing)|do not|don't|never|always|must|should|treat .{0,80} as|preserve backward compatibility|migration|compatibility)\b",
     re.IGNORECASE,
 )
 
@@ -216,6 +225,7 @@ def extract_deterministic_candidates(
                 if item_type in RULE_ITEM_TYPES and is_one_off_instruction(clause):
                     item_type = "next_step"
                 statement = guide_statement(clause, item_type)
+                item_type, statement = apply_memory_role_corrections(item_type, statement, clause)
                 if not statement:
                     continue
                 confidence = "explicit" if EXPLICIT_PROMOTION_PATTERN.search(clause) else "medium"
@@ -258,6 +268,7 @@ def make_candidate(
         "scope": mapped["scope"],
         "memory_class": mapped["memory_class"],
         "item_type": mapped["item_type"],
+        "memory_role": infer_memory_role(mapped["memory_class"], mapped["item_type"], statement),
         "temporal_status": mapped["temporal_status"],
         "subject_key": subject_key(statement),
         "agent_facing_statement": statement,
@@ -297,8 +308,10 @@ def call_openai_memory_extractor(windows: list[dict[str, object]], config: Produ
         "Extract operational memory candidates for AI coding agents from timeline windows. "
         "Return JSON only. Prefer recall at candidate stage: include useful low/medium candidates, "
         "but label confidence accurately. Do not copy the user's words verbatim; rewrite intent as "
-        "clear guidance to a future coding agent. Do not store agent reasoning, tool output, or one-off "
-        "commands as durable rules. Temporal items must remain temporal."
+        "clear guidance to a future coding agent with enough subject, scope, and action to stand alone. "
+        "Do not store agent reasoning, tool output, or one-off commands as durable rules. Temporal items "
+        "must remain temporal. Development behavior, compatibility, workflow, and implementation guidance "
+        "must be project_rule, not project_summary or purpose."
     )
     user_payload = {
         "task": "Extract memory candidates from these windows.",
@@ -322,6 +335,7 @@ def call_openai_memory_extractor(windows: list[dict[str, object]], config: Produ
                     "evidence_ids": ["evidence ids from the window"],
                     "project": "project slug or global",
                     "memory_class": "one allowed class",
+                    "memory_role": "purpose|architecture|constraint|rule|recent_state|decision|lesson|discard",
                     "subject_key": "short stable subject",
                     "agent_facing_statement": "rewritten guidance, not a quote",
                     "confidence": "explicit|strong|medium|low",
@@ -412,6 +426,8 @@ def validate_llm_candidate(raw: dict[str, object], windows: list[dict[str, objec
     mapped = map_item_type(item_type, project)
     statement = normalize_statement(str(raw.get("agent_facing_statement") or raw.get("statement") or ""))
     statement = guide_statement(statement, mapped["item_type"])
+    item_type, statement = apply_memory_role_corrections(item_type, statement, raw.get("agent_facing_statement") or raw.get("statement") or "")
+    mapped = map_item_type(item_type, project)
     if not statement:
         return None
     refs = []
@@ -440,6 +456,7 @@ def validate_llm_candidate(raw: dict[str, object], windows: list[dict[str, objec
         "scope": mapped["scope"],
         "memory_class": mapped["memory_class"],
         "item_type": mapped["item_type"],
+        "memory_role": infer_memory_role(mapped["memory_class"], mapped["item_type"], statement, str(raw.get("memory_role") or "")),
         "temporal_status": temporal_status,
         "subject_key": normalize_for_key(str(raw.get("subject_key") or subject_key(statement))),
         "agent_facing_statement": statement,
@@ -557,6 +574,7 @@ def candidate_to_item(item_id: str, candidate: dict[str, object]) -> dict[str, o
         "memory_extraction_schema_version": MEMORY_EXTRACTION_SCHEMA_VERSION,
         "memory_class": candidate["memory_class"],
         "item_type": candidate.get("item_type"),
+        "memory_role": candidate.get("memory_role") or infer_memory_role(str(candidate.get("memory_class") or ""), str(candidate.get("item_type") or ""), str(candidate.get("agent_facing_statement") or candidate.get("statement") or "")),
         "scope": candidate["scope"],
         "project": candidate.get("project"),
         "promotion_state": "explicit" if candidate.get("promotion_reason") == "explicit_user_instruction" else "candidate",
@@ -609,6 +627,7 @@ def merge_item(target: dict[str, object], candidate: dict[str, object]) -> None:
         target["confidence"] = candidate.get("confidence")
         target["statement"] = candidate.get("agent_facing_statement") or candidate.get("statement")
         target["agent_facing_statement"] = target["statement"]
+        target["memory_role"] = candidate.get("memory_role") or infer_memory_role(str(target.get("memory_class") or ""), str(target.get("item_type") or ""), str(target.get("statement") or ""))
     if candidate.get("promotion_reason") == "explicit_user_instruction":
         target["promotion_state"] = "explicit"
         target["review_required"] = False
@@ -647,6 +666,50 @@ def map_item_type(item_type: str, project: str) -> dict[str, object]:
     if normalized in LESSON_TYPES:
         return {"scope": "project", "project": project, "memory_class": "project_lessons", "item_type": "lesson", "temporal_status": "durable"}
     return {"scope": "project", "project": project, "memory_class": "recent_project_state", "item_type": normalized, "temporal_status": "active"}
+
+
+def apply_memory_role_corrections(item_type: str, statement: str, context: object = "") -> tuple[str, str]:
+    combined = normalize_statement(f"{context} {statement}")
+    if CLEAN_SLATE_COMPATIBILITY_PATTERN.search(combined):
+        return (
+            "project_rule",
+            "When developing a new project version that is not yet in production use, do not preserve backward compatibility with the previous version by default. Treat the new version as a clean system unless the user explicitly asks for migration or compatibility support.",
+        )
+    if item_type in PROJECT_SUMMARY_TYPES and RULE_LIKE_SUMMARY_PATTERN.search(statement):
+        return "project_rule", statement
+    return item_type, statement
+
+
+def infer_memory_role(memory_class: str, item_type: str, statement: str, preferred: str = "") -> str:
+    preferred = preferred.strip().lower()
+    if preferred in MEMORY_ROLES:
+        return preferred
+    if memory_class in {"global_user_rules", "project_rules"}:
+        return "rule"
+    if memory_class == "project_lessons" or item_type == "lesson":
+        return "lesson"
+    if memory_class == "recent_project_state":
+        return "decision" if item_type == "decision" else "recent_state"
+    if item_type == "purpose":
+        return "purpose"
+    if item_type == "architecture":
+        return "architecture"
+    if item_type == "constraint":
+        return "constraint"
+    if item_type == "decision":
+        return "decision"
+    if memory_class == "stable_project_summary":
+        if RULE_LIKE_SUMMARY_PATTERN.search(statement):
+            return "rule"
+        lowered = statement.lower()
+        if re.search(r"\b(?:constraint|must|only|blocks|strict|kill switch|safety limit|disabled)\b", lowered):
+            return "constraint"
+        if re.search(r"\b(?:is a|is an|build a|builds? a|designed to|built to|intended to|source of truth|purpose is|goal is|turns .{0,80} into|platform|system|service|tool|memory layer|trading system)\b", lowered):
+            return "purpose"
+        if re.search(r"\b(?:component|module|service|adapter|engine|pipeline|architecture|input|output|database|queue|webhook)\b", lowered):
+            return "architecture"
+        return "purpose"
+    return "discard"
 
 
 def normalize_item_type(value: str) -> str | None:

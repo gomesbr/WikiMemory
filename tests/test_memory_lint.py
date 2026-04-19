@@ -157,6 +157,35 @@ class MemoryLintTests(unittest.TestCase):
         self.assertTrue(result.report.success, result.report.fatal_error_summary)
         self.assertTrue(any(finding["check_type"] == "empty_statement" for finding in self.read_findings()))
 
+    def test_memory_lint_flags_purpose_rule_and_vague_statement(self) -> None:
+        self.write_items(
+            [
+                self.base_item(
+                    item_id="purpose-rule",
+                    memory_class="stable_project_summary",
+                    memory_role="purpose",
+                    item_type="purpose",
+                    statement="Every time you make a change, think about the system as new.",
+                )
+            ]
+        )
+        (self.temp_dir / "AGENTS.md").write_text(
+            "# Agent Bootstrap\n\n- `memory/global/user-rules.md`\n- Keep this bootstrap tiny.\n",
+            encoding="utf-8",
+        )
+
+        result = run_memory_lint(
+            product_config_path=self.product_config,
+            state_dir=self.state_dir,
+            memory_dir=self.memory_dir,
+            audits_dir=self.audits_dir,
+        )
+
+        self.assertTrue(result.report.success, result.report.fatal_error_summary)
+        findings = self.read_findings()
+        self.assertTrue(any(finding["check_type"] == "purpose_contains_rule" for finding in findings))
+        self.assertTrue(any(finding["check_type"] == "vague_memory_statement" for finding in findings))
+
 
 if __name__ == "__main__":
     unittest.main()

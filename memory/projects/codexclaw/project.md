@@ -1,7 +1,7 @@
 ---
 type: project-memory
 project: codexclaw
-updated: 2026-04-19T04:35:36.095048Z
+updated: 2026-04-19T13:07:41.349626Z
 tags: [project/codexclaw, memory]
 ---
 
@@ -10,22 +10,22 @@ tags: [project/codexclaw, memory]
 ## PURPOSE
 
 - Decisions locked: - Style: **Mission Control-inspired hybrid** (not a clone) - Navigation: **Left rail + content** - Priority modules: **Board, Projects, Memory, Docs** - Ops/Config location: **System tab** - `Future` tab: **Remove now** - Delivery: **Two phases** Video-derived module relevance (from.
-- I've requested this (image, last msg from me) and the system got an error which is stored here: store/reports/2026-03-01T18-37-21-777Z_8041307210_strategist.md Can you investigate and fix it please.
-- Treat the project as a quant-research-oriented agent system.
+- The CodexClaw role includes maintaining dashboards and platform code, improving reliability and observability, and giving implementation-level guidance for requested build tasks.
 
 ## CORE COMPONENTS
 
-- the project appears to organize work around multiple agent roles, including strategist, research, execution, coder, and persona-oriented components, with references to chat and agent source files.
-- the project references local memory storage components, including AGENTS.md, SOUL.md, IDENTITY.md, USER.md, and SQLite memory tables, as part of its agent setup.
+- use PostgreSQL with pgvector as the source of truth, and expose both MCP and REST interfaces for the memory system.
+- codexClaw stores memory in SQLite tables named memory_chunks and memory_f, and related agent instructions reference AGENTS.md, SOUL.md, IDENTITY.md, USER.md, and store/memory/ as part of the working setup.
+- the codebase references agent entry points in src/agent.ts, src/agents/runner.ts, and src/bot.ts; prioritize those files when tracing agent behavior or making changes to the agent pipeline.
+- the CodexClaw agent setup references multiple roles and local instruction files, including AGENTS.md, SOUL.md, IDENTITY.md, USER.md, and memory storage under store/memory, with SQLite-backed memory tables.
+- the project uses a quant research agent as one of its defined roles.
+- the project’s agent setup references CodexClaw Pro Agents and ties the strategist, research, execution, coder, and persona components to the agent files under src/agent.ts, src/agents/runner.ts, and src/bot.ts.
 
 ## CURRENT ARCHITECTURE
 
-- the intended memory backend is PostgreSQL with pgvector as the source of truth, with both MCP and REST interfaces exposed.
-- the project appears to have an established multi-agent setup centered on strategist, research, execution, and coder roles.
-- the project includes a quant research agent role as part of the agent lineup.
-- the project instructions reference CodexClaw Pro Agents and point to agent-related source files under src/agent.ts, src/agents/runner.ts, and src/bot.ts.
-- the repository includes CodexClaw agent instructions and local memory storage references, including SQLite tables for memory chunks and memory facts.
-- the strategist is intended to be the primary conversational agent, routing natural-language requests to the other agents and combining researcher output into trade ideas.
+- use the repository's multi-role agent setup, with strategist, research, execution, and coder responsibilities coordinated through the agent runtime files in the project.
+- run pwd command and then reply only with the exact working directory path from command output.
+- the near-term deployment target is Windows, with a move to a Mac Studio planned later; design storage and runtime assumptions accordingly.
 
 ## DESIGN PRINCIPLES
 
@@ -33,16 +33,14 @@ _None currently extracted._
 
 ## KEY CONSTRAINTS
 
-- for CodexClaw UI work, reuse the project’s designated skin source of truth rather than inventing a new visual system.
-- run pwd command and then reply only with the exact working directory path from command output.
-- storage cost is expected to be the main expense driver for this system.
-- this is what I want to know before we talk about implementation: 1) Why use slack is input source only.
-- treat CodexClaw as an advisory-only trading system: it may suggest closes or adjustments, but it must not place trades directly.
-- treat remote project board sync rate-limit warnings as non-blocking for core tracker behavior; do not surface them as if the main system is failing.
+- the working context for this project is a Windows machine using PowerShell in the CodexClaw repository path shown in the instructions.
+- only focus on the menus and options that are useful here.
+- only split into additional stories/follow-up tasks when clearly necessary.
+- when remote repository access is needed, the user can provide the account details or authentication setup so the agent can continue repository and branch-protection work.
 
 ## OPEN PROBLEMS
 
-- one question, how can I enforce the agent to open only one branch and make all the changes in it, instead of opening multiple branches every time I ask for something.
+_None currently extracted._
 
 ## RELATED
 
