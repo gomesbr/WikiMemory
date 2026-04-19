@@ -209,7 +209,7 @@ def run_memory_v2(
             write_daily_payload(output_dir, daily_payloads[-1])
             all_candidates.extend(candidates)
 
-        project_contexts = collect_project_contexts(project_slugs_from_candidates(all_candidates), project_root_dir)
+        project_contexts = collect_project_contexts(project_slugs_from_candidates(all_candidates), project_root_dir, include_known_projects=True)
         candidate_lookup = {str(candidate.get("candidate_id")): candidate for candidate in all_candidates}
         merged_payload = merge_memory_candidates(all_candidates, model_id, llm_client, project_contexts=project_contexts)
         items = [normalize_item(item, candidate_lookup=candidate_lookup) for item in merged_payload.get("items", []) if isinstance(item, dict)]
@@ -322,6 +322,9 @@ def correct_cached_candidate_attributions(payload: dict[str, object]) -> list[di
     corrected = []
     for candidate in payload.get("candidates", []):
         if isinstance(candidate, dict):
+            candidate = dict(candidate)
+            statement = str(candidate.get("agent_facing_statement") or "")
+            candidate["project"] = correct_project_from_statement(statement, str(candidate.get("project") or "unknown"))
             corrected.append(correct_candidate_attribution_from_messages(candidate, messages))
     return corrected
 
@@ -448,10 +451,18 @@ def project_slugs_from_candidates(candidates: list[dict[str, object]]) -> list[s
     return sorted({str(candidate.get("project")) for candidate in candidates if candidate.get("project") not in {"global", "unknown", "cross-project", None}})
 
 
-def collect_project_contexts(projects: Iterable[str], project_root_dir: Path | str | None = None) -> dict[str, dict[str, object]]:
+def collect_project_contexts(
+    projects: Iterable[str],
+    project_root_dir: Path | str | None = None,
+    *,
+    include_known_projects: bool = False,
+) -> dict[str, dict[str, object]]:
     search_root = Path(project_root_dir) if project_root_dir else default_project_search_root()
     contexts: dict[str, dict[str, object]] = {}
-    for project in projects:
+    selected_projects = set(projects)
+    if include_known_projects:
+        selected_projects.update(PROJECT_DIRECTORY_ALIASES)
+    for project in sorted(selected_projects):
         root = resolve_project_directory(search_root, project)
         if not root:
             continue
@@ -694,6 +705,7 @@ def normalize_candidate(candidate: dict[str, object], source_day: str) -> dict[s
     memory_class = demote_transient_rule(statement, memory_class)
     memory_role = normalize_memory_role(candidate.get("memory_role"), memory_class)
     project = normalize_project(candidate.get("project"), memory_class)
+    project = correct_project_from_statement(statement, project)
     project = correct_example_project_attribution(statement, project)
     evidence_refs = normalize_evidence_refs(candidate.get("evidence_refs"), source_day)
     candidate_id = str(candidate.get("candidate_id") or stable_id(source_day, project, memory_class, memory_role, statement))
@@ -721,6 +733,7 @@ def normalize_item(item: dict[str, object], candidate_lookup: dict[str, dict[str
     memory_class = demote_transient_rule(statement, memory_class)
     memory_role = normalize_memory_role(item.get("memory_role"), memory_class)
     project = normalize_project(item.get("project"), memory_class)
+    project = correct_project_from_statement(statement, project)
     project = correct_example_project_attribution(statement, project)
     if candidate_lookup:
         project = project_from_supporting_candidates(item, candidate_lookup) or project
@@ -759,11 +772,12 @@ def render_memory_v2(output_dir: Path, items: list[dict[str, object]], project_c
     items = suppress_project_rules_repeated_globally(items)
     global_items = [item for item in items if item["memory_class"] == "global_rule" and item["project"] == "global"]
     rendered.append(write_global_rules(output_dir / "global" / "user-rules.md", global_items))
-    projects = sorted({str(item["project"]) for item in items if item["project"] not in {"global", "unknown"}})
+    projects = sorted({str(item["project"]) for item in items if item["project"] not in {"global", "unknown"}} | set(project_contexts))
     for project in projects:
         project_items = [item for item in items if item["project"] == project]
         rendered.append(write_project_page(output_dir / "projects" / project / "project.md", project, project_items, project_contexts.get(project)))
-        rendered.append(write_recent_page(output_dir / "projects" / project / "recent.md", project, project_items))
+        if project_items:
+            rendered.append(write_recent_page(output_dir / "projects" / project / "recent.md", project, project_items))
         rendered.append(write_rules_page(output_dir / "projects" / project / "rules.md", project, project_items))
         lessons = [item for item in project_items if item["memory_class"] == "lesson"]
         if lessons:
@@ -834,7 +848,10 @@ def write_project_page(path: Path, project: str, items: list[dict[str, object]],
     component_items = [item for item in architecture_items if is_component_statement(str(item["agent_facing_statement"]))]
     flow_items = [item for item in architecture_items if item not in component_items]
     lines.extend([f"# {display_project(project)} - Project Memory", ""])
-    append_section(lines, "PURPOSE", statements([item for item in items if item["memory_class"] == "project_summary" and item["memory_role"] == "purpose"], limit=4))
+    purpose = statements([item for item in items if item["memory_class"] == "project_summary" and item["memory_role"] == "purpose"], limit=4)
+    if not purpose:
+        purpose = project_purpose_from_readme(project_context)
+    append_section(lines, "PURPOSE", purpose)
     append_section(lines, "CORE COMPONENTS", statements(component_items, limit=8))
     append_section(lines, "CURRENT ARCHITECTURE", statements(flow_items, limit=8))
     append_tree_section(lines, project_context)
@@ -843,6 +860,22 @@ def write_project_page(path: Path, project: str, items: list[dict[str, object]],
     append_section(lines, "RELATED", related_links(project))
     write_lines(path, lines)
     return path
+
+
+def project_purpose_from_readme(project_context: dict[str, object] | None) -> list[str]:
+    if not project_context:
+        return []
+    readmes = project_context.get("readmes")
+    if not isinstance(readmes, list) or not readmes:
+        return []
+    content = str(readmes[0].get("content") if isinstance(readmes[0], dict) else "")
+    title = next((line.strip("# ").strip() for line in content.splitlines() if line.strip().startswith("#")), "")
+    paragraphs = [line.strip() for line in content.splitlines() if line.strip() and not line.strip().startswith("#")]
+    if title and paragraphs:
+        return [f"{title}: {paragraphs[0]}"]
+    if paragraphs:
+        return [paragraphs[0]]
+    return [title] if title else []
 
 
 def write_recent_page(path: Path, project: str, items: list[dict[str, object]]) -> Path:
@@ -1309,6 +1342,40 @@ def correct_example_project_attribution(statement: str, project: str) -> str:
     )
     if any(marker in lowered for marker in wikimemory_markers):
         return "wikimemory"
+    return project
+
+
+def correct_project_from_statement(statement: str, project: str) -> str:
+    lowered = statement.lower()
+    mentions_ai_trader = re.search(r"\b(ai\s*trader|aitrader|openclaw|open\s*claw)\b", lowered) is not None
+    if not mentions_ai_trader:
+        return project
+    if lowered.startswith("codexclaw ") or "codexclaw git routing" in lowered:
+        return project
+    ai_subject_markers = (
+        "aitrader is",
+        "aitrader includes",
+        "aitrader’s",
+        "aitrader's",
+        "aitrader workspace",
+        "aitrader branch",
+        "aitrader approval",
+        "aitrader roll",
+        "aitrader’s planned",
+        "opentrader",
+        "openclaw:",
+        "openclaw is",
+        "the project is a trading",
+        "the active initiative is to specialize aitrader",
+    )
+    ai_path_markers = (
+        "aitrader/",
+        "projects\\aitrader",
+        "projects/aitrader",
+        "c:\\users\\fabio\\cursor ai projects\\projects\\aitrader",
+    )
+    if project == "unknown" or any(marker in lowered for marker in ai_subject_markers + ai_path_markers):
+        return "ai-trader"
     return project
 
 

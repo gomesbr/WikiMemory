@@ -6,7 +6,7 @@ import tempfile
 import unittest
 from pathlib import Path
 
-from wikimemory.memory_v2 import parse_daily_chat_markdown, render_memory_v2, rule_bucket, split_rule_statement, run_memory_v2
+from wikimemory.memory_v2 import correct_project_from_statement, parse_daily_chat_markdown, render_memory_v2, rule_bucket, split_rule_statement, run_memory_v2
 
 
 class MemoryV2Tests(unittest.TestCase):
@@ -387,7 +387,8 @@ For Ai Trader, the project is a deterministic autonomous trading system.
         )
 
         self.assertTrue(result.report.success, result.report.fatal_error_summary)
-        self.assertFalse((self.output_dir / "projects" / "ai-trader" / "rules.md").exists())
+        self.assertFalse((self.output_dir / "projects" / "ai-trader" / "recent.md").exists())
+        self.assertNotIn("clean-slate", (self.output_dir / "projects" / "ai-trader" / "rules.md").read_text(encoding="utf-8"))
         self.assertTrue((self.output_dir / "projects" / "wikimemory" / "rules.md").exists())
 
     def test_ai_trader_mention_in_wikimemory_evidence_routes_merged_item_to_wikimemory(self) -> None:
@@ -455,7 +456,52 @@ The context of that line was, the agent was maintaining compatibility with v1 of
         self.assertTrue(result.report.success, result.report.fatal_error_summary)
         merged = json.loads((self.output_dir / "_meta" / "merged_items.json").read_text(encoding="utf-8"))["items"][0]
         self.assertEqual(merged["project"], "wikimemory")
-        self.assertFalse((self.output_dir / "projects" / "ai-trader" / "rules.md").exists())
+        self.assertFalse((self.output_dir / "projects" / "ai-trader" / "recent.md").exists())
+        self.assertNotIn("clean-slate", (self.output_dir / "projects" / "ai-trader" / "rules.md").read_text(encoding="utf-8"))
+
+    def test_known_project_with_readme_renders_project_page_even_without_log_items(self) -> None:
+        def no_item_llm(system_prompt: str, payload: dict[str, object], model: str) -> dict[str, object]:
+            if "messages" in payload:
+                return {"candidates": []}
+            return {"items": []}
+
+        result = run_memory_v2(
+            input_dir=self.input_dir,
+            output_dir=self.output_dir,
+            state_dir=self.state_dir,
+            days=["2026-03-13"],
+            project_root_dir=self.project_root_dir,
+            llm_client=no_item_llm,
+            model="stub-model",
+        )
+
+        self.assertTrue(result.report.success, result.report.fatal_error_summary)
+        self.assertTrue((self.output_dir / "projects" / "ai-trader" / "project.md").exists())
+        self.assertTrue((self.output_dir / "projects" / "ai-trader" / "rules.md").exists())
+        self.assertFalse((self.output_dir / "projects" / "ai-trader" / "recent.md").exists())
+
+    def test_ai_trader_subject_statement_routes_to_ai_trader(self) -> None:
+        self.assertEqual(
+            correct_project_from_statement(
+                "AITrader is a monorepo trading platform with services for ingest, worker orchestration, execution, and approval UI.",
+                "unknown",
+            ),
+            "ai-trader",
+        )
+        self.assertEqual(
+            correct_project_from_statement(
+                "High risk of repeated delivery failure persists until filesystem write access is enabled in AITrader workspace.",
+                "codexclaw",
+            ),
+            "ai-trader",
+        )
+        self.assertEqual(
+            correct_project_from_statement(
+                "CodexClaw git routing behavior was fixed so paths like AITrader/docs are recognized as explicit targeting.",
+                "codexclaw",
+            ),
+            "codexclaw",
+        )
 
     def test_rule_bucket_keeps_positive_boundary_rules_in_always_do(self) -> None:
         statement = "Enforce role boundaries: strategist orchestrates but does not code/execute trades; research provides analysis only."
