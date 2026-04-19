@@ -273,6 +273,16 @@ For Ai Trader, the project is a deterministic autonomous trading system.
     def test_recent_page_uses_latest_project_evidence_when_no_active_recent_items(self) -> None:
         items = [
             {
+                "item_id": "old-state",
+                "project": "ai-trader",
+                "memory_class": "current_state",
+                "memory_role": "recent_state",
+                "agent_facing_statement": "Older AITrader work focused on a previous risk model.",
+                "confidence": "strong",
+                "temporal_status": "active",
+                "evidence_refs": [{"source_day": "2026-04-01", "message_index": 1}],
+            },
+            {
                 "item_id": "ai-summary",
                 "project": "ai-trader",
                 "memory_class": "project_summary",
@@ -300,6 +310,7 @@ For Ai Trader, the project is a deterministic autonomous trading system.
         self.assertIn("# Ai Trader - Recent Context - April 05 2026", recent)
         self.assertIn("AITrader is a deterministic autonomous trading system", recent)
         self.assertIn("Treat new AITrader versions as clean-slate", recent)
+        self.assertNotIn("previous risk model", recent)
 
     def test_rule_bucket_keeps_positive_boundary_rules_in_always_do(self) -> None:
         statement = "Enforce role boundaries: strategist orchestrates but does not code/execute trades; research provides analysis only."

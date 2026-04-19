@@ -820,12 +820,13 @@ def write_project_page(path: Path, project: str, items: list[dict[str, object]],
 
 def write_recent_page(path: Path, project: str, items: list[dict[str, object]]) -> Path:
     recent_classes = {"current_state", "decision", "next_step", "open_question", "failure_risk"}
-    active = [item for item in items if item["memory_class"] in recent_classes and item["temporal_status"] == "active"]
+    latest_date = latest_item_date(items)
+    latest_items = items_for_date(items, latest_date)
+    active = [item for item in latest_items if item["memory_class"] in recent_classes and item["temporal_status"] == "active"]
     used_fallback = False
     if not active:
-        active = latest_recent_fallback_items(items)
+        active = latest_recent_fallback_items(latest_items)
         used_fallback = True
-    latest_date = latest_item_date(active or items)
     lines = frontmatter("recent-context", project, [f"project/{project}", "recent"])
     title = f"# {display_project(project)} - Recent Context"
     if latest_date:
@@ -843,6 +844,18 @@ def write_recent_page(path: Path, project: str, items: list[dict[str, object]]) 
 def latest_recent_fallback_items(items: list[dict[str, object]], *, limit: int = 5) -> list[dict[str, object]]:
     candidates = [item for item in items if item.get("memory_class") in {"project_summary", "architecture", "project_rule", "decision"}]
     return sorted(candidates, key=lambda item: latest_item_date([item]) or "", reverse=True)[:limit]
+
+
+def items_for_date(items: list[dict[str, object]], day: str | None) -> list[dict[str, object]]:
+    if not day:
+        return items
+    selected = []
+    for item in items:
+        for ref in item.get("evidence_refs", []):
+            if isinstance(ref, dict) and ref.get("source_day") == day:
+                selected.append(item)
+                break
+    return selected
 
 
 def latest_item_date(items: list[dict[str, object]]) -> str | None:
