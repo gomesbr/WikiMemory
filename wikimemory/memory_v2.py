@@ -925,24 +925,76 @@ def bucket_rule_items(items: list[dict[str, object]]) -> dict[str, list[dict[str
     buckets: dict[str, list[dict[str, object]]] = {"always": [], "never": [], "conditional": []}
     seen: set[str] = set()
     for item in sorted(items, key=item_rank):
-        statement = str(item["agent_facing_statement"]).strip()
-        key = re.sub(r"[^a-z0-9]+", " ", statement.lower()).strip()
-        if not key or key in seen:
-            continue
-        seen.add(key)
-        buckets[rule_bucket(statement)].append(item)
+        for statement in split_rule_statement(str(item["agent_facing_statement"]).strip()):
+            key = re.sub(r"[^a-z0-9]+", " ", statement.lower()).strip()
+            if not key or key in seen:
+                continue
+            seen.add(key)
+            bucket_item = dict(item)
+            bucket_item["agent_facing_statement"] = clean_split_rule_statement(statement)
+            buckets[rule_bucket(statement)].append(bucket_item)
     return buckets
+
+
+def split_rule_statement(statement: str) -> list[str]:
+    if "but " not in statement.lower() or statement.lower().startswith("enforce "):
+        return [statement]
+    parts = [part.strip(" ;") for part in re.split(r";\s*", statement) if part.strip(" ;")]
+    if len(parts) <= 1:
+        return [statement]
+    result: list[str] = []
+    subject = extract_rule_subject(parts[0])
+    for index, part in enumerate(parts):
+        normalized = attach_rule_subject(part, subject) if index > 0 else part
+        result.extend(split_once_by_contrast(normalized))
+    return [part for part in result if part]
+
+
+def clean_split_rule_statement(statement: str) -> str:
+    cleaned = statement.strip()
+    if cleaned.startswith("must not "):
+        cleaned = "Do not " + cleaned.removeprefix("must not ")
+    elif cleaned.startswith("should not "):
+        cleaned = "Do not " + cleaned.removeprefix("should not ")
+    elif cleaned.startswith("once "):
+        cleaned = "Once " + cleaned.removeprefix("once ")
+    if cleaned and cleaned[-1] not in ".!?":
+        cleaned += "."
+    return cleaned
+
+
+def split_once_by_contrast(statement: str) -> list[str]:
+    match = re.search(r"\bbut\s+(must not|should not|do not|does not|must|should|once\b)", statement, flags=re.IGNORECASE)
+    if not match:
+        return [statement]
+    left = statement[: match.start()].strip(" ,;")
+    right = statement[match.start() + 4 :].strip(" ,;")
+    return [part for part in (left, right) if part]
+
+
+def extract_rule_subject(statement: str) -> str | None:
+    match = re.match(r"^([A-Z][A-Za-z0-9_ -]{1,40}?)\s+(?:should|must|handles?|provides?|orchestrates?|does|uses?)\b", statement)
+    return match.group(1).strip() if match else None
+
+
+def attach_rule_subject(statement: str, subject: str | None) -> str:
+    if not subject:
+        return statement
+    lowered = statement.lower()
+    if lowered.startswith(("must ", "must not ", "should ", "should not ", "do not ", "does not ")):
+        return f"{subject} {statement}"
+    return statement
 
 
 def rule_bucket(statement: str) -> str:
     lowered = statement.strip().lower()
     if lowered.startswith(("enforce ", "treat ", "use ", "keep ", "preserve ", "maintain ", "ensure ", "prefer ", "prioritize ")):
         return "always"
-    if lowered.startswith(("do not ", "don't ", "never ", "avoid ", "stop ")):
+    if lowered.startswith(("do not ", "don't ", "never ", "avoid ", "stop ", "must not ", "should not ")):
         return "never"
     if any(term in lowered for term in (" must not ", " should not ", " never ")):
         return "never"
-    if lowered.startswith(("if ", "when ", "while ", "during ", "for ", "in ")):
+    if lowered.startswith(("if ", "when ", "while ", "during ", "for ", "in ", "once ")):
         return "conditional"
     if " unless " in lowered or " when " in lowered:
         return "conditional"

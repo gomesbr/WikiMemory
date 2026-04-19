@@ -6,7 +6,7 @@ import tempfile
 import unittest
 from pathlib import Path
 
-from wikimemory.memory_v2 import parse_daily_chat_markdown, render_memory_v2, rule_bucket, run_memory_v2
+from wikimemory.memory_v2 import parse_daily_chat_markdown, render_memory_v2, rule_bucket, split_rule_statement, run_memory_v2
 
 
 class MemoryV2Tests(unittest.TestCase):
@@ -275,6 +275,47 @@ For Ai Trader, the project is a deterministic autonomous trading system.
 
         self.assertEqual(rule_bucket(statement), "always")
         self.assertEqual(rule_bucket("Do not execute trades from research role."), "never")
+
+    def test_rule_split_handles_mixed_must_do_and_must_not_guidance(self) -> None:
+        statement = "Strategist should follow interview-first clarification for ambiguous asks, but must not re-ask already-answered confirmations; once user routing/ownership is explicit for the turn, proceed."
+
+        self.assertEqual(
+            split_rule_statement(statement),
+            [
+                "Strategist should follow interview-first clarification for ambiguous asks",
+                "must not re-ask already-answered confirmations",
+                "once user routing/ownership is explicit for the turn, proceed.",
+            ],
+        )
+        self.assertEqual(rule_bucket("Strategist should follow interview-first clarification for ambiguous asks"), "always")
+        self.assertEqual(rule_bucket("must not re-ask already-answered confirmations"), "never")
+        self.assertEqual(rule_bucket("once user routing/ownership is explicit for the turn, proceed."), "conditional")
+
+        render_memory_v2(
+            self.output_dir,
+            [
+                {
+                    "item_id": "mixed-rule",
+                    "project": "codexclaw",
+                    "memory_class": "project_rule",
+                    "memory_role": "rule",
+                    "agent_facing_statement": statement,
+                    "confidence": "strong",
+                    "temporal_status": "durable",
+                    "evidence_refs": [{"source_day": "2026-03-13", "message_index": 1}],
+                }
+            ],
+        )
+        rules = (self.output_dir / "projects" / "codexclaw" / "rules.md").read_text(encoding="utf-8")
+        self.assertIn("- Strategist should follow interview-first clarification for ambiguous asks.", rules)
+        self.assertIn("- Do not re-ask already-answered confirmations.", rules)
+        self.assertIn("- Once user routing/ownership is explicit for the turn, proceed.", rules)
+
+    def test_rule_split_keeps_positive_semicolon_enumerations_together(self) -> None:
+        statement = "Enforce role boundaries: strategist orchestrates but does not code/execute trades; research provides analysis only; execution handles monitoring/risk adjustments."
+
+        self.assertEqual(split_rule_statement(statement), [statement])
+        self.assertEqual(rule_bucket(statement), "always")
 
 
 if __name__ == "__main__":
