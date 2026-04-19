@@ -936,6 +936,8 @@ def bucket_rule_items(items: list[dict[str, object]]) -> dict[str, list[dict[str
 
 def rule_bucket(statement: str) -> str:
     lowered = statement.strip().lower()
+    if lowered.startswith(("enforce ", "treat ", "use ", "keep ", "preserve ", "maintain ", "ensure ", "prefer ", "prioritize ")):
+        return "always"
     if lowered.startswith(("do not ", "don't ", "never ", "avoid ", "stop ")):
         return "never"
     if any(term in lowered for term in (" must not ", " should not ", " never ")):

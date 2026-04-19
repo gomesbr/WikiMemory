@@ -6,7 +6,7 @@ import tempfile
 import unittest
 from pathlib import Path
 
-from wikimemory.memory_v2 import parse_daily_chat_markdown, render_memory_v2, run_memory_v2
+from wikimemory.memory_v2 import parse_daily_chat_markdown, render_memory_v2, rule_bucket, run_memory_v2
 
 
 class MemoryV2Tests(unittest.TestCase):
@@ -269,6 +269,12 @@ For Ai Trader, the project is a deterministic autonomous trading system.
 
         self.assertNotIn("Completion Matrix", rules)
         self.assertIn("tracker payload blocks", rules)
+
+    def test_rule_bucket_keeps_positive_boundary_rules_in_always_do(self) -> None:
+        statement = "Enforce role boundaries: strategist orchestrates but does not code/execute trades; research provides analysis only."
+
+        self.assertEqual(rule_bucket(statement), "always")
+        self.assertEqual(rule_bucket("Do not execute trades from research role."), "never")
 
 
 if __name__ == "__main__":
