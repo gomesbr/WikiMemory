@@ -1,41 +1,32 @@
 ---
 type: recent-context
 project: ai-trader
-updated: 2026-04-19T13:07:41.123345Z
+updated: 2026-04-20T01:19:51.487242Z
 tags: [project/ai-trader, recent]
 ---
 
-# 🔥 Ai Trader - Recent Context
+# Ai Trader - Recent Context - March 04 2026
 
 ## CURRENT FOCUS
 
-- execution service will simulate broker submit/fill while keeping the same safety checks and order lifecycle.
+_No selected items from this evidence._
 
 ## ACTIVE DECISIONS
 
-_None currently extracted._
+_No selected items from this evidence._
 
 ## IN PROGRESS
 
-_None currently extracted._
+_No selected items from this evidence._
 
 ## FAILED / AVOID
 
-_None currently extracted._
-
-## NEXT STEPS
-
-1. Review current project memory before starting new work.
+_No selected items from this evidence._
 
 ## BACKLOG
 
-_None currently extracted._
+- Implement real market-data ingestion (provider evaluation + integration), replacing current deterministic/mock-only flow for production use.
 
-## NOTES
+## OPEN QUESTIONS
 
-- Keep this file small; it is a rolling window only.
-
-IMPORTANT:
-- This file must stay SMALL.
-- No history dumping.
-- Rolling window only.
+_No selected items from this evidence._

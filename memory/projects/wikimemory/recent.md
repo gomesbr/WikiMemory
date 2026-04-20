@@ -1,45 +1,36 @@
 ---
 type: recent-context
 project: wikimemory
-updated: 2026-04-19T13:07:42.154825Z
+updated: 2026-04-20T01:19:51.521355Z
 tags: [project/wikimemory, recent]
 ---
 
-# 🔥 Wikimemory - Recent Context
+# Wikimemory - Recent Context - April 18 2026
 
 ## CURRENT FOCUS
 
-_None currently extracted._
+- Current implementation includes memory-first generation/lint/refresh paths and compact bootstrap generation, with phased commands and state/audit artifacts active in the repository.
 
 ## ACTIVE DECISIONS
 
-_None currently extracted._
+_No selected items from this evidence._
 
 ## IN PROGRESS
 
-- now, understand this issue holistically for the whole project and tell me what is the plan to fix this.
-- create a plan to fix every one of those issues, execute the plan, recheck the lines in the same maner until there is no more problematic line.
-- if not, tell me why, what is the plan to fix it, where.
-- implement the fix at the right abstraction layer so similar issues are also prevented.
-- include robust real data tests now that more data can be tested without blowing up disk space.
+_No selected items from this evidence._
 
 ## FAILED / AVOID
 
-_None currently extracted._
-
-## NEXT STEPS
-
-1. Review current project memory before starting new work.
+- Actively growing logs can race during normalization/discovery; correctness should rely on on-handle observed bounds, skip unstable sources when needed, and preserve committed last-good state on anomalies.
 
 ## BACKLOG
 
-_None currently extracted._
+- Improve project association/routing so evidence maps to correct project slugs instead of generic buckets and avoids cross-project leakage.
+- Improve recent-memory quality with decay/windowing/active-context selection and stronger filtering of low-signal scaffold replies.
+- Move memory thresholds/heuristics (stale windows, caps, rule patterns, trivial-message filters) from code into configurable policy.
+- Add bootstrap renderers beyond Codex (e.g., Claude and generic targets).
+- Integrate scheduler/cadence support for the memory-refresh path.
 
-## NOTES
+## OPEN QUESTIONS
 
-- Keep this file small; it is a rolling window only.
-
-IMPORTANT:
-- This file must stay SMALL.
-- No history dumping.
-- Rolling window only.
+_No selected items from this evidence._

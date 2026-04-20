@@ -1,41 +1,32 @@
 ---
 type: recent-context
 project: open-brain
-updated: 2026-04-19T13:07:41.779844Z
+updated: 2026-04-20T01:19:51.509977Z
 tags: [project/open-brain, recent]
 ---
 
-# 🔥 Open Brain - Recent Context
+# Open Brain - Recent Context - April 18 2026
 
 ## CURRENT FOCUS
 
-_None currently extracted._
+- Clarify-first logic is under active normalization toward retrieval-anchor sufficiency; prior ambiguity-driven triggering was considered incorrect and has been undergoing retroactive cleanup/refill adjustments.
 
 ## ACTIVE DECISIONS
 
-_None currently extracted._
+_No selected items from this evidence._
 
 ## IN PROGRESS
 
-- review all cases and fix those and other problems you find.
+_No selected items from this evidence._
 
 ## FAILED / AVOID
 
-_None currently extracted._
-
-## NEXT STEPS
-
-1. Review current project memory before starting new work.
+_No selected items from this evidence._
 
 ## BACKLOG
 
-_None currently extracted._
+_No selected items from this evidence._
 
-## NOTES
+## OPEN QUESTIONS
 
-- Keep this file small; it is a rolling window only.
-
-IMPORTANT:
-- This file must stay SMALL.
-- No history dumping.
-- Rolling window only.
+_No selected items from this evidence._
