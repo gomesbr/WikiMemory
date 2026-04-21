@@ -1,7 +1,7 @@
 ---
 type: project-memory
 project: ai-trader
-updated: 2026-04-20T01:19:51.481153Z
+updated: 2026-04-21T05:01:53.112650Z
 tags: [project/ai-trader, memory]
 ---
 
@@ -9,18 +9,17 @@ tags: [project/ai-trader, memory]
 
 ## PURPOSE
 
-- AITrader is a deterministic, high-trust swing-trading operations platform: it ingests TrendSpider alerts, builds/scorers setup specs, selects options, routes trades through approval-first or optional auto-execution, executes via broker adapter (mock-supported), and tracks risk/tax/wash-sale/performance/trust with replayability and auditability through a web console.
+- AITrader (OpenClaw) is a deterministic autonomous swing-trading platform and control console spanning TrendSpider webhook ingest, setup scoring, options selection, approval/auto execution, IBKR execution, tax/wash-sale/risk controls, trust/performance tracking, and daily swing operations (premarket planning, execution windows, EOD review/reporting).
+- `approval_ui` is a trading workflow approval console where users review trade planning cards, intents, history, and lineage/lifecycle across related trading objects.
 
 ## CORE COMPONENTS
 
-_No selected items from this evidence._
+- Key implementation surfaces include `apps/approval_ui/src/lineage.ts` (lineage model/status), `apps/approval_ui/src/index.ts` (API/query/context), `apps/approval_ui/src/public/app.js` + `styles.css` (UI rendering), and SQL migrations under `sql/migrations/`; lineage is exposed via `GET /ui/lineage`.
 
 ## CURRENT ARCHITECTURE
 
-- Operational lifecycle follows a swing cycle: collect/score intraday triggers, prepare morning execution/closure plan, execute in configured windows, allow emergency exits, then run EOD review and reporting for next-day prep.
-- Strategy management is per-account via Strategy Lab profile records; paper accounts may have multiple active strategies while Roth/taxable accounts are constrained to one active strategy.
-- Approval UI exposes machine-facing `/agent/v1/*` endpoints with bearer-token auth and idempotency requirements for mutating operations.
-- Architecture is a TypeScript pnpm-workspace monorepo with PostgreSQL and DB-backed queue patterns, organized into apps (ingest_service, worker, execution_service, approval_ui) plus shared libs (common, marketdata, signals, options/risk/tax/wash/performance engines, broker, charts, backtest) and SQL migrations enforcing lifecycle/risk invariants.
+- Architecture is a TypeScript pnpm-workspace monorepo under `AITrader` with service apps (`ingest_service`, `execution_service`, `worker`, `approval_ui`), domain libs (signals/options/risk/tax/wash-sale/performance/marketdata/broker/backtest/common/charts), and Postgres migrations enforcing lifecycle/state integrity.
+- Machine-facing automation API is exposed in `approval_ui` under authenticated `/agent/v1/*`, including health/universe/market snapshots/trade-card endpoints and phase-aware position-action endpoints with idempotency and audit semantics.
 
 ## DIRECTORY TREE
 
@@ -222,17 +221,20 @@ AITrader/
 
 ## KEY CONSTRAINTS
 
-_No selected items from this evidence._
+- Git workflow policy: do not merge/push directly to protected branches (`main`, `master`); perform work in feature branches and prepare PR-ready changes.
+- Place system contents directly under `AITrader`; do not create a nested `openclaw` root folder.
+- UI constraints: dark mode with clean spacing and subtle glass/translucent feel; no horizontal page scrolling; avoid layout jitter during refresh; hover states must not move elements (lighter-color hover only).
 
 ## OPEN PROBLEMS
 
-_No selected items from this evidence._
+- Execution/validation may be blocked by missing toolchain (`node`/`pnpm`/`psql`) or policy restrictions (no filesystem writes/command denial); explicitly state validation limits and request user-side verification/unblock when encountered.
+- Lineage rendering has had recurrent instability (connector malfunction/top-left stacking) and may still have frontend edge-coordinate or stale-client failure modes.
 
 ## BACKLOG
 
-1. Ensure representative deterministic mock-data fallback across all console sections/subsections so layouts remain fully populated when live data is empty (real data takes precedence).
-2. Implement real market-data ingestion (provider evaluation + integration), replacing current deterministic/mock-only flow for production use.
-3. Add chart screenshot/preview with visible setup annotations to each trade card (not text-only metadata).
+1. Address pre-existing TypeScript debt in `AITrader/apps/approval_ui/src/index.ts` so `typecheck` passes cleanly.
+2. Implement explicit `adjust_stop` lifecycle lineage path (`intent(adjust_stop) -> order(stop update) -> fill(update ack) -> position metadata update`) and display amendment chain.
+3. Implement full roll lifecycle lineage (roll up/down/forward/out) with close-old/open-new semantics and explicit transition linkage between positions.
 
 ## RELATED
 

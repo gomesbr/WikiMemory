@@ -1,6 +1,6 @@
 ---
 type: global-rules
-updated: 2026-04-20T01:19:51.477277Z
+updated: 2026-04-21T05:01:53.108804Z
 tags: [memory, rules, global]
 ---
 
@@ -8,27 +8,18 @@ tags: [memory, rules, global]
 
 ## ALWAYS DO
 
-- Enforce trade lifecycle integrity via explicit DB key lineage (intent -> order -> fill -> position) and API-level rule enforcement; do not infer lineage by timestamps.
-- Use first-principles, root-cause debugging and deliver durable, generalizable fixes with regression coverage; avoid narrow one-off patches/hardcoding.
-- Maintain one consistent UI design language across apps using the CodexClaw skin tokens (`CodexClaw/src/ui/skin.ts`, `renderOpenClawSkinCss()`); do not introduce new themes unless explicitly requested.
-- Treat CODER_WORKDIR/CODER_ADD_DIRS as writable by default; request additional access only after a concrete command fails with explicit filesystem/permission evidence.
-- Keep responses terse and action-oriented; prioritize executing requested work over explanatory narration unless explanation is explicitly requested.
-- After each memory-generation change, validate quality against rendered pages; if output stays shallow despite rich logs, improve extraction rules.
+- Keep responses terse and execution-focused; prioritize final results and avoid long explanatory narration unless explicitly requested.
+- Keep projects tracked in GitHub repositories and, for this user, automatically push completed repository changes to GitHub without asking for confirmation each time.
 
 ## NEVER DO
 
-- Cancelled/rejected intents are terminal and must not be reactivated. If action is needed after cancel/reject, create a new trade card/setup.
-- Never work directly on protected branches (main/master). Implement on feature branches and keep changes PR-ready.
-- Do not execute or propose trades in this workspace; trading-related output must remain non-execution guidance only.
-- Do not make speculative out-of-scope code changes. Before editing, state exact file/logic scope; if strategy must change, pause and ask before touching additional code.
-- Do not replace user bootstrap markdown files; preserve existing `AGENTS.md`/`CLAUDE.md` content and only update the explicitly managed WikiMemory block.
-- Never display passwords or other secrets in command output or responses; use environment/config values without echoing sensitive content.
+- Follow the workspace operating contract: never propose or execute trades, never work directly on protected branches (`main`/`master`), keep changes PR-ready on the active feature branch, always include a `Completion Matrix` mapping each acceptance criterion to concrete evidence, and if something fails report root cause, fix rationale, and recurrence-prevention evidence.
 
 ## CONDITIONAL RULES
 
-- For implementation/task responses, include a Completion Matrix mapping each acceptance criterion to concrete evidence (pass/fail). If blocked or failing, also report root cause, durable-fix rationale, and non-recurrence/regression evidence.
-- When code changes require DB migrations and DB access is available, run migrations automatically instead of handing SQL migration execution steps to the user.
-- Final memory pages must be rewritten as agent-facing guidance from user intent; avoid verbatim conversational fragments unless a different export mode is explicitly requested.
+- Operate as a senior software engineer focused on reliability, observability, and developer workflows; use first-principles root-cause fixes with regression coverage; prefer generic class-of-problem solutions over one-off patches; and default to completing assigned work as a single tracker item unless splitting is clearly necessary.
+- Before implementing fixes, confirm understanding and scope with the user, and do not change unrelated screens when the issue is scoped to a specific screen (e.g., `review`).
+- When the user has already confirmed correctness or already provided the needed answer, do not ask redundant clarifying questions; proceed with execution and provide evidence-based output.
 
 ## PROVENANCE
 

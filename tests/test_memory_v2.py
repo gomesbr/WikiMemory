@@ -399,11 +399,105 @@ For Ai Trader, the project is a deterministic autonomous trading system.
         ]
 
         render_memory_v2(self.output_dir, items)
-        recent = (self.output_dir / "projects" / "ai-trader" / "recent.md").read_text(encoding="utf-8")
 
-        self.assertIn("# Ai Trader - Recent Context", recent)
-        self.assertNotIn("April 05 2026", recent)
-        self.assertNotIn("AITrader is a deterministic autonomous trading system", recent)
+        self.assertFalse((self.output_dir / "projects" / "ai-trader" / "recent.md").exists())
+
+    def test_quality_gate_moves_project_specific_global_rules(self) -> None:
+        items = [
+            {
+                "item_id": "global-ai-lineage",
+                "project": "global",
+                "memory_class": "global_rule",
+                "memory_role": "rule",
+                "agent_facing_statement": "Enforce trade lifecycle integrity via explicit DB key lineage (intent -> order -> fill -> position) and API-level rule enforcement; do not infer lineage by timestamps.",
+                "confidence": "strong",
+                "temporal_status": "durable",
+                "evidence_refs": [{"source_day": "2026-03-13", "message_index": 1}],
+            },
+            {
+                "item_id": "global-codexclaw-skin",
+                "project": "global",
+                "memory_class": "global_rule",
+                "memory_role": "rule",
+                "agent_facing_statement": "Maintain one consistent UI design language across apps using the CodexClaw skin tokens (CodexClaw/src/ui/skin.ts, renderOpenClawSkinCss()).",
+                "confidence": "strong",
+                "temporal_status": "durable",
+                "evidence_refs": [{"source_day": "2026-03-13", "message_index": 2}],
+            },
+        ]
+
+        render_memory_v2(self.output_dir, items)
+        global_rules = (self.output_dir / "global" / "user-rules.md").read_text(encoding="utf-8")
+        ai_rules = (self.output_dir / "projects" / "ai-trader" / "rules.md").read_text(encoding="utf-8")
+        codexclaw_rules = (self.output_dir / "projects" / "codexclaw" / "rules.md").read_text(encoding="utf-8")
+
+        self.assertNotIn("trade lifecycle integrity", global_rules)
+        self.assertNotIn("CodexClaw skin", global_rules)
+        self.assertIn("trade lifecycle integrity", ai_rules)
+        self.assertIn("CodexClaw skin", codexclaw_rules)
+
+    def test_unknown_ai_trader_lifecycle_item_resolves_to_ai_trader(self) -> None:
+        items = [
+            {
+                "item_id": "unknown-ai-lineage",
+                "project": "unknown",
+                "memory_class": "project_rule",
+                "memory_role": "rule",
+                "agent_facing_statement": "Build lineage from real lifecycle records only; do not fabricate synthetic order/fill/close/fallback anchor nodes.",
+                "confidence": "strong",
+                "temporal_status": "durable",
+                "evidence_refs": [{"source_day": "2026-03-13", "message_index": 1}],
+            }
+        ]
+
+        render_memory_v2(self.output_dir, items)
+        ai_rules = (self.output_dir / "projects" / "ai-trader" / "rules.md").read_text(encoding="utf-8")
+
+        self.assertIn("real lifecycle records", ai_rules)
+        self.assertFalse((self.output_dir / "_review" / "unresolved-project-items.md").exists())
+
+    def test_quality_gate_fixes_known_token_typos(self) -> None:
+        items = [
+            {
+                "item_id": "codexclaw-typo",
+                "project": "codexclaw",
+                "memory_class": "backlog_item",
+                "memory_role": "recent_state",
+                "agent_facing_statement": "Document TRACKER_TASKS/TACKER_UPDATES directive usage in README/AGENTS.",
+                "confidence": "medium",
+                "temporal_status": "active",
+                "evidence_refs": [{"source_day": "2026-03-13", "message_index": 1}],
+            }
+        ]
+
+        render_memory_v2(self.output_dir, items)
+        project_memory = (self.output_dir / "projects" / "codexclaw" / "project.md").read_text(encoding="utf-8")
+        quality = json.loads((self.output_dir / "_meta" / "page_quality_review.json").read_text(encoding="utf-8"))
+
+        self.assertIn("TRACKER_UPDATES", project_memory)
+        self.assertNotIn("TACKER_UPDATES", project_memory)
+        self.assertEqual(quality["bad_line_count"], 0)
+
+    def test_empty_optional_sections_are_omitted(self) -> None:
+        items = [
+            {
+                "item_id": "ai-summary",
+                "project": "ai-trader",
+                "memory_class": "project_summary",
+                "memory_role": "purpose",
+                "agent_facing_statement": "AITrader is a deterministic autonomous trading system.",
+                "confidence": "strong",
+                "temporal_status": "durable",
+                "evidence_refs": [{"source_day": "2026-04-05", "message_index": 1}],
+            }
+        ]
+
+        render_memory_v2(self.output_dir, items)
+        project_memory = (self.output_dir / "projects" / "ai-trader" / "project.md").read_text(encoding="utf-8")
+
+        self.assertIn("## PURPOSE", project_memory)
+        self.assertNotIn("_No selected items", project_memory)
+        self.assertNotIn("## OPEN PROBLEMS", project_memory)
 
     def test_ai_trader_example_in_memory_page_discussion_routes_to_wikimemory(self) -> None:
         def attribution_llm(system_prompt: str, payload: dict[str, object], model: str) -> dict[str, object]:

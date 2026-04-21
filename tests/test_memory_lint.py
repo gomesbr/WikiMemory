@@ -186,6 +186,59 @@ class MemoryLintTests(unittest.TestCase):
         self.assertTrue(any(finding["check_type"] == "purpose_contains_rule" for finding in findings))
         self.assertTrue(any(finding["check_type"] == "vague_memory_statement" for finding in findings))
 
+    def test_memory_lint_flags_v2_scope_and_token_quality(self) -> None:
+        self.write_items(
+            [
+                self.base_item(
+                    item_id="unknown-v2",
+                    memory_class="project_rule",
+                    project="unknown",
+                    statement="Build lineage from real lifecycle records only; do not fabricate synthetic order/fill nodes.",
+                    evidence_refs=[{"source_day": "2026-03-13", "message_index": 1}],
+                    provenance_refs=[{"source_day": "2026-03-13", "message_index": 1}],
+                ),
+                self.base_item(
+                    item_id="global-leak",
+                    memory_class="global_rule",
+                    scope="global",
+                    project="global",
+                    statement="Enforce trade lifecycle integrity via explicit DB key lineage (intent -> order -> fill -> position).",
+                    evidence_refs=[{"source_day": "2026-03-13", "message_index": 2}],
+                    provenance_refs=[{"source_day": "2026-03-13", "message_index": 2}],
+                ),
+                self.base_item(
+                    item_id="token-typo",
+                    memory_class="backlog_item",
+                    project="codexclaw",
+                    statement="Document TRACKER_TASKS/TACKER_UPDATES directive usage.",
+                    evidence_refs=[{"source_day": "2026-03-13", "message_index": 3}],
+                    provenance_refs=[{"source_day": "2026-03-13", "message_index": 3}],
+                ),
+            ]
+        )
+        (self.memory_dir / "_meta" / "page_quality_review.json").write_text(
+            json.dumps({"lines": [{"page": "global/user-rules.md", "line_number": 10, "status": "bad", "reason": "global_scope_leak"}]}),
+            encoding="utf-8",
+        )
+        (self.temp_dir / "AGENTS.md").write_text(
+            "# Agent Bootstrap\n\n- `memory/global/user-rules.md`\n- Keep this bootstrap tiny.\n",
+            encoding="utf-8",
+        )
+
+        result = run_memory_lint(
+            product_config_path=self.product_config,
+            state_dir=self.state_dir,
+            memory_dir=self.memory_dir,
+            audits_dir=self.audits_dir,
+        )
+
+        self.assertTrue(result.report.success, result.report.fatal_error_summary)
+        findings = self.read_findings()
+        self.assertTrue(any(finding["check_type"] == "unknown_project_item" for finding in findings))
+        self.assertTrue(any(finding["check_type"] == "global_scope_leak" for finding in findings))
+        self.assertTrue(any(finding["check_type"] == "known_token_typo" for finding in findings))
+        self.assertTrue(any(finding["check_type"] == "bad_fresh_agent_line" for finding in findings))
+
 
 if __name__ == "__main__":
     unittest.main()

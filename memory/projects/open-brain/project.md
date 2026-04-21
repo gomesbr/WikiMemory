@@ -1,7 +1,7 @@
 ---
 type: project-memory
 project: open-brain
-updated: 2026-04-20T01:19:51.506162Z
+updated: 2026-04-21T05:01:53.135380Z
 tags: [project/open-brain, memory]
 ---
 
@@ -9,15 +9,19 @@ tags: [project/open-brain, memory]
 
 ## PURPOSE
 
-- OpenBrain is a local-first memory and reasoning platform on Postgres+pgvector with REST/MCP interfaces, focused on Ask-first grounded answers and benchmark/calibration-driven quality improvement over real user data; graph/network views are explanation and investigation surfaces layered on the same evidence-backed retrieval core.
+- OpenBrain is a local-first personal memory intelligence system (Postgres + pgvector, REST + MCP) that ingests multi-source history (notably WhatsApp/ChatGPT/Grok/CodexClaw), supports Ask + Network experiences, and runs benchmark/calibration workflows to improve retrieval and reasoning quality over real corpus evidence.
+- OpenBrain work focuses on improving case-generation/review calibration quality (especially human WhatsApp-derived cases) and hardening cleanup+refill loops to maintain a no-gap pending/reviewable pool.
 
 ## CORE COMPONENTS
 
-- Core architecture is TypeScript/Node with Dockerized API+Postgres, pgvector-centered retrieval, importer pipelines (ChatGPT/Grok/WhatsApp/CodexClaw), V2 ask/mesh/search/experiments modules, and DB-backed long-running operational scripts/queues.
+- Runtime configuration uses `runtime_settings` plus shared loader `libs/common/src/settings.ts`; ingest, execution, worker, and incidents logic read DB-backed settings dynamically.
+- Primary implementation surfaces include `src/v2_ask.ts`, `src/v2_search.ts`, `src/v2_mesh.ts`, `src/v2_experiments.ts`, `src/v2_network.ts`, `src/server.ts`, and `src/ui.ts`; scripts under `src/scripts/` drive imports, re-embed/reextract, benchmark, strategy loop, and network/actor backfills.
+- Core logic is centered in `src/v2_experiments.ts` with whole-corpus family-first mining and monitor orchestration (`generated/strategy_program/monitor_whole_corpus_family_backfill.ps1`), plus logs under `generated/strategy_program/*backfill*.log`; outcomes surface through existing experiment/readiness/overview payloads.
 
 ## CURRENT ARCHITECTURE
 
-_No selected items from this evidence._
+- Intended V2 data flow is canonical-first: ingest into `memory_items` -> canonicalize into `canonical_messages` -> embed canonicalized text -> build derived/aggregate artifacts; retrieval should be canonical-first.
+- Persistent memory pipeline stores markdown turns at `store/memory/<chat>/YYYY-MM-DD.md` and indexes chunks in SQLite (`memory_chunks`, `memory_fts`) for retrieval into prompts.
 
 ## DIRECTORY TREE
 
@@ -257,19 +261,27 @@ OpenBrain/
 
 ## KEY CONSTRAINTS
 
-_No selected items from this evidence._
+- Benchmark/test cases and expected answers must be grounded in real DB/published evidence with provenance; synthetic expected answers are not allowed.
+- Prioritize quality over speed; avoid lower-quality shortcuts, and minimize repeated full re-ingests by preferring in-place corrective passes plus a final remediation pass.
+- Enforce CPU safety: avoid sustained 100% utilization; if high CPU persists per guard policy, throttle services stepwise and stop loop at minimum caps with logging.
+- Scope improvements and generation to the whole published corpus/dataset rather than narrow domain-only/refill-only patches.
+- Maintain diversity across source/conversation types and prioritize human conversations (WhatsApp individual/group) over assistant-centric threads.
+- When ambiguity is detected, ask exactly one short, specific, open-ended clarification question and stop before final answering.
+- Avoid overbuilding domain-specific permanent tables; keep most interpretation logic in the agent loop with bounded context/thread reads and strong indexing.
+- Prevent cross-project instruction contamination; OpenBrain runtime prompt/config scope must be isolated so unrelated methodology updates do not alter project agents.
 
 ## OPEN PROBLEMS
 
-_No selected items from this evidence._
+- Recurring risk: actor-resolution drift in WhatsApp/legacy imports (missing actor IDs/metadata/parser issues/Unicode artifacts) can produce wrong speaker labels and incorrect summaries.
 
 ## BACKLOG
 
-1. Deferred Phase 2: build Network as a persistent multi-turn investigation workspace (scene memory, reference resolution, coordinated answer+scene updates, richer evidence tabs) after Phase 1 Ask→Graph contract work.
-2. Network polish backlog: improve central stage visual/interaction quality (collisions, icon/label alignment, drilldown scaling, +N expansion interaction, consistent category/friend color semantics).
-3. Backlog includes systematic case-quality cleanup work: remove malformed/duplicate/low-value items, improve summary/reviewer rationale quality, and apply holistic retroactive fixes when defect classes are discovered.
-4. Investigate and document the People→Network data pipeline/source-of-truth details as groundwork for broader relationship graph evolution centered on the user entity.
-5. Deferred experiment-loop enhancements: statistical early stopping/elimination, background research waves, richer scoreboard/history, and more complex multi-agent debate only if hybrid review underperforms.
+1. Implement cross-project agent access to OpenBrain via REST + MCP + shared SDK with service identities, scoped permissions, namespace isolation, policy enforcement, and audit logging.
+2. Evolve People/Network toward a broader user-centered relationship graph with categorized connection types and richer context.
+3. Phase 2: build persistent Network investigation workspace with conversational follow-ups, contextual reference resolution, and coordinated answer + scene + evidence updates.
+4. Run second-pass retagging to correct wrong domain/lens labels after whole-dataset generation.
+5. Improve `domain_inference.ts` (and related classifier logic) then run full corpus semantic refresh/canonical sync to reduce stale row labeling and improve discovery accuracy.
+6. Fix concrete-cue extraction/tokenization for non-ASCII text (e.g., Spanish/Portuguese) so grounding/oracle checks retain salient words and do not incorrectly reject valid human WhatsApp threads.
 
 ## RELATED
 

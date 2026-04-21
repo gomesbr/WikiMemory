@@ -1,7 +1,7 @@
 ---
 type: project-rules
 project: open-brain
-updated: 2026-04-20T01:19:51.513054Z
+updated: 2026-04-21T05:01:53.140725Z
 tags: [project/open-brain, rules]
 ---
 
@@ -9,20 +9,40 @@ tags: [project/open-brain, rules]
 
 ## ALWAYS DO
 
-- Production-quality data must use real OpenAI embeddings with no mock fallback; if provider quota/credit blocks runs, stop and report rather than silently degrading.
-- Quality-first policy: do not trade extraction/reasoning quality for speed; apply universal quality gating so low-confidence artifacts are not promoted to trusted/published outputs.
-- Inter-agent communication must be JSON-only with structured contracts.
+- Benchmark/test cases and expected answers must be grounded in real DB/published evidence with provenance; synthetic expected answers are not allowed.
+- Use JSON-based communication for agent-to-agent interactions.
+- Prioritize quality over speed; avoid lower-quality shortcuts, and minimize repeated full re-ingests by preferring in-place corrective passes plus a final remediation pass.
+- Answer contract must cite actor + timestamp + anchor + supporting context; if attribution is uncertain, state uncertainty explicitly and ask follow-up.
+- Maintain continuous autonomous strategy-loop operation (including failed-group research/code-wave continuation) without waiting for user input, except agreed stop conditions.
+- Enforce CPU safety: avoid sustained 100% utilization; if high CPU persists per guard policy, throttle services stepwise and stop loop at minimum caps with logging.
+- Provide status updates whenever each strategy/experiment item finishes.
+- Keep runtime DB schema in sync with latest code before smoke tests or handoff; stop services if needed, migrate/update, then restart cleanly.
+- Scope improvements and generation to the whole published corpus/dataset rather than narrow domain-only/refill-only patches.
+- Maintain diversity across source/conversation types and prioritize human conversations (WhatsApp individual/group) over assistant-centric threads.
+- Runtime knobs should be UI-editable and DB-backed for routine operations, and every config change must be audit-logged with actor, timestamp/date, old/new values, and reason.
+- Docker runtime must pass required embedding/provider env vars into `openbrain-api` (including `OPENAI_API_KEY`, `OPENAI_BASE_URL`, embedding mode/fallback, metadata provider settings) to prevent unintended fallback behavior.
 
 ## NEVER DO
 
-- Avoid case-specific or domain-hardcoded prompt hacks; use generic capability-first retrieval/reasoning strategies and natural relative-time phrasing unless fixed dates are explicitly needed.
+- Apply confidence gating across all entity/artifact types; low-confidence outputs must not be promoted downstream until adjudicated.
+- Never display secrets (application passwords, tokens, credentials) in commands/output shown to the user.
+- Never use mock embeddings for production/backfills; run in OpenAI mode with no mock fallback, and if credits/tokens are exhausted, stop and notify the user.
+- Avoid overbuilding domain-specific permanent tables; keep most interpretation logic in the agent loop with bounded context/thread reads and strong indexing.
 
 ## CONDITIONAL RULES
 
-- Benchmark/test cases and scoring must be grounded in real DB evidence with provenance (no synthetic expected answers), and stale cases should be regenerated when source evidence changes.
-- Evaluation governance remains strict: certification/critical quality targets are ~99% class, with early-stop logic when 99% is no longer achievable; ambiguity debt is treated as a hard winner-governance risk.
-- Respect scope/approval boundaries: do analysis-only when requested, avoid off-scope changes, confirm target screen/area after scope confusion, and during live review sessions avoid extra code changes unless asked.
-- For approved bottleneck-fixing phases, run autonomous iterative loops (identify bottleneck → implement narrow fix → validate → repeat) without pausing at checkpoints.
+- When explicitly requested, perform in-depth research first (including user-provided materials/web), present learnings and an ordered experiment plan, then implement.
+- For intelligence-dependent stages, use agent-driven adjudication/corrections and add agents where reasoning is needed instead of relying only on static rules.
+- If timeout/infra failures dominate, fix infra first and validate on baseline (`S0`) before comparative strategy evaluation; if timeouts recur later, stop at that strategy, fix/retest, then resume.
+- When user asks for capability changes, implement them directly; do not respond by only updating backlog documentation.
+- When user is away, run and monitor pipeline continuously with periodic checks (including 3-minute watchdog cadence): detect stalls/failures, inspect rejects, fix invalid rejection causes, relaunch, and keep quality checks active.
+- Synthesis answers must explicitly call out missing direct evidence, provide best indirect estimate with basis/components, include confidence/caveats, and ask a quick confirmation when appropriate.
+- When ambiguity is detected, ask exactly one short, specific, open-ended clarification question and stop before final answering.
+- When user requests analysis-only, do not make code changes unless explicitly asked.
+- For WhatsApp content, separate quoted/tagged text from authored text (`@mentions` are references, not sender identity), and ensure evidence includes exact answer-bearing phrases with the directly answering row prioritized.
+- Apply holistic retroactive fixes across existing active/calibration inventory when a failure class is found; do not ship one-off screenshot-specific patches.
+- Clarify-first should trigger only for true missing-anchor queries; avoid unnecessary clarification when retrieval anchors/keywords are already sufficient.
+- For the referenced fix loop, keep changes narrowly scoped to `src/v2_experiments.ts` unless explicitly requested otherwise.
 
 ## SCOPE NOTES
 

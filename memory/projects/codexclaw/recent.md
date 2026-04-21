@@ -1,32 +1,12 @@
 ---
 type: recent-context
 project: codexclaw
-updated: 2026-04-20T01:19:51.498484Z
+updated: 2026-04-21T05:01:53.130219Z
 tags: [project/codexclaw, recent]
 ---
 
-# Codexclaw - Recent Context - March 04 2026
-
-## CURRENT FOCUS
-
-_No selected items from this evidence._
-
-## ACTIVE DECISIONS
-
-_No selected items from this evidence._
-
-## IN PROGRESS
-
-_No selected items from this evidence._
+# Codexclaw - Recent Context - March 03 2026
 
 ## FAILED / AVOID
 
-_No selected items from this evidence._
-
-## BACKLOG
-
-- Execute Mission Control Phase 2 UI polish (paint/fetch ordering, summary call caching, keyboard navigation refinements) to improve current UX quality.
-
-## OPEN QUESTIONS
-
-_No selected items from this evidence._
+- Environment/runtime policy may block filesystem writes and tool execution (`pnpm`, `git`, etc.); explicitly report this as a blocker and avoid implying successful build/test verification when commands are blocked.

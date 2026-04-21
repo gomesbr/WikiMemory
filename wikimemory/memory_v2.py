@@ -17,7 +17,7 @@ from .discovery import DiscoveryError, atomic_write_text, ensure_directory, utc_
 from .normalization import append_jsonl_text
 
 MEMORY_V2_SCHEMA_VERSION = 1
-MEMORY_V2_EXTRACTION_VERSION = 2
+MEMORY_V2_EXTRACTION_VERSION = 3
 DEFAULT_MODEL = "gpt-5.3-codex"
 DEFAULT_WINDOW_MAX_CHARS = 60000
 DEFAULT_WINDOW_OVERLAP_MESSAGES = 8
@@ -47,6 +47,116 @@ PROJECT_DIRECTORY_ALIASES = {
     "codexclaw": ("CodexClaw", "codexclaw"),
     "wikimemory": ("WikiMemory", "wikimemory"),
 }
+PROJECT_SCOPE_MARKERS = {
+    "ai-trader": (
+        "aitrader",
+        "ai trader",
+        "openclaw",
+        "open claw",
+        "trendspider",
+        "trade card",
+        "trade-card",
+        "trade cards",
+        "trade lifecycle",
+        "trade planning",
+        "strategy lab",
+        "intent -> order -> fill -> position",
+        "intent",
+        "order",
+        "fill",
+        "position",
+        "wash-sale",
+        "wash sale",
+        "broker adapter",
+        "approval ui",
+        "approval-ui",
+        "options contract",
+        "lineage",
+        "tax lot",
+        "tax-lot",
+        "top date",
+        "date-independent",
+        "wash policy",
+        "seasonal wash",
+        "agent_api_token",
+        "x-idempotency-key",
+        "real_data_pipeline_enabled",
+        "agent_allow_mock_data",
+        "real-data cutover",
+        "paper accounts",
+        "non-paper accounts",
+        "port `4103`",
+        "port 4103",
+        "tsx",
+        "frontend assets",
+    ),
+    "codexclaw": (
+        "codexclaw",
+        "mission control",
+        "telegram",
+        "tracker_tasks",
+        "tracker_updates",
+        "tacker_updates",
+        "strategist",
+        "research role",
+        "execution role",
+        "coder role",
+        "skin.ts",
+        "renderopenclawskincss",
+        "propose trades",
+        "execute trades",
+    ),
+    "wikimemory": (
+        "wikimemory",
+        "wiki memory",
+        "memory generation",
+        "memory-generation",
+        "memory pages",
+        "memory page",
+        "memory-v2",
+        "memory v2",
+        "memory-lint",
+        "memory-refresh",
+        "generated memory",
+        "bootstrap memory",
+        "obsidian",
+        "extraction rules",
+        "fresh-agent",
+    ),
+}
+GLOBAL_SCOPE_ALLOW_MARKERS = (
+    "all projects",
+    "every project",
+    "globally",
+    "global rule",
+    "all agents",
+    "workspace",
+    "protected branches",
+    "main/master",
+    "secrets",
+    "passwords",
+    "coder_workdir",
+    "coder_add_dirs",
+    "root-cause",
+    "generalizable",
+    "terse",
+    "action-oriented",
+    "completion matrix",
+    "acceptance criterion",
+    "acceptance criteria",
+)
+PROTECTED_TOKEN_REPLACEMENTS = {
+    "TACKER_TASKS": "TRACKER_TASKS",
+    "TACKER_UPDATES": "TRACKER_UPDATES",
+}
+VAGUE_MEMORY_PATTERNS = (
+    "think about the system as new",
+    "do that",
+    "fix it",
+    "make it better",
+    "this should",
+    "that should",
+)
 TREE_EXCLUDED_DIRS = {
     ".git",
     ".mypy_cache",
@@ -213,9 +323,10 @@ def run_memory_v2(
         candidate_lookup = {str(candidate.get("candidate_id")): candidate for candidate in all_candidates}
         merged_payload = merge_memory_candidates(all_candidates, model_id, llm_client, project_contexts=project_contexts)
         items = [normalize_item(item, candidate_lookup=candidate_lookup) for item in merged_payload.get("items", []) if isinstance(item, dict)]
+        items, quality_operations = quality_gate_items(items, project_contexts=project_contexts)
         validate_items(items)
         rendered = render_memory_v2(output_dir, items, project_contexts=project_contexts)
-        write_memory_v2_meta(output_dir, daily_payloads, items, project_contexts)
+        write_memory_v2_meta(output_dir, daily_payloads, items, project_contexts, quality_operations)
 
         report = MemoryV2Report(
             run_id=run_id,
@@ -759,22 +870,149 @@ def validate_items(items: list[dict[str, object]]) -> None:
             raise MemoryV2Error(f"Memory item has no evidence refs: {item.get('item_id')}")
 
 
+def quality_gate_items(
+    items: list[dict[str, object]],
+    *,
+    project_contexts: dict[str, dict[str, object]] | None = None,
+) -> tuple[list[dict[str, object]], list[dict[str, object]]]:
+    project_contexts = project_contexts or {}
+    gated: list[dict[str, object]] = []
+    operations: list[dict[str, object]] = []
+    for item in items:
+        original = dict(item)
+        adjusted = dict(item)
+        statement = str(adjusted.get("agent_facing_statement") or "")
+        cleaned = apply_protected_token_replacements(statement)
+        if cleaned != statement:
+            adjusted["agent_facing_statement"] = cleaned
+            operations.append(quality_operation("rewrite", original, adjusted, "protected_token_correction"))
+            statement = cleaned
+
+        forced_project = infer_project_from_statement(statement, project_contexts)
+        if adjusted.get("project") == "unknown" and forced_project:
+            adjusted["project"] = forced_project
+            operations.append(quality_operation("move_project", original, adjusted, "resolved_unknown_project_from_statement"))
+        elif adjusted.get("project") == "unknown" and adjusted.get("memory_class") == "project_rule" and has_explicit_global_scope(statement):
+            adjusted["project"] = "global"
+            adjusted["memory_class"] = "global_rule"
+            adjusted["memory_role"] = "rule"
+            operations.append(quality_operation("move_scope", original, adjusted, "unknown_rule_resolved_as_global"))
+        elif adjusted.get("project") == "global" and adjusted.get("memory_class") == "global_rule":
+            if forced_project and not has_explicit_global_scope(statement):
+                adjusted["project"] = forced_project
+                adjusted["memory_class"] = "project_rule"
+                adjusted["memory_role"] = "rule"
+                operations.append(quality_operation("move_scope", original, adjusted, "project_specific_rule_removed_from_global"))
+
+        if adjusted.get("memory_class") == "global_rule" and adjusted.get("project") != "global":
+            adjusted["memory_class"] = "project_rule"
+            adjusted["memory_role"] = "rule"
+            operations.append(quality_operation("move_scope", original, adjusted, "global_rule_with_project_scope"))
+
+        if adjusted.get("memory_class") == "project_summary" and adjusted.get("memory_role") == "purpose":
+            if purpose_statement_is_rule(str(adjusted.get("agent_facing_statement") or "")):
+                adjusted["memory_class"] = "project_rule"
+                adjusted["memory_role"] = "rule"
+                adjusted["temporal_status"] = "durable"
+                operations.append(quality_operation("move_section", original, adjusted, "purpose_rule_moved_to_rules"))
+
+        if adjusted.get("project") == "unknown":
+            adjusted["needs_review"] = True
+            operations.append(quality_operation("review", original, adjusted, "unresolved_project"))
+
+        gated.append(adjusted)
+    return gated, dedupe_quality_operations(operations)
+
+
+def quality_operation(action: str, original: dict[str, object], adjusted: dict[str, object], reason: str) -> dict[str, object]:
+    return {
+        "operation_id": stable_id(action, reason, original.get("item_id"), original.get("agent_facing_statement")),
+        "action": action,
+        "reason": reason,
+        "item_id": original.get("item_id"),
+        "from_project": original.get("project"),
+        "to_project": adjusted.get("project"),
+        "from_memory_class": original.get("memory_class"),
+        "to_memory_class": adjusted.get("memory_class"),
+        "from_memory_role": original.get("memory_role"),
+        "to_memory_role": adjusted.get("memory_role"),
+    }
+
+
+def dedupe_quality_operations(operations: list[dict[str, object]]) -> list[dict[str, object]]:
+    seen: set[str] = set()
+    unique: list[dict[str, object]] = []
+    for operation in operations:
+        operation_id = str(operation.get("operation_id"))
+        if operation_id in seen:
+            continue
+        seen.add(operation_id)
+        unique.append(operation)
+    return unique
+
+
+def apply_protected_token_replacements(statement: str) -> str:
+    corrected = statement
+    for wrong, right in PROTECTED_TOKEN_REPLACEMENTS.items():
+        corrected = re.sub(rf"\b{re.escape(wrong)}\b", right, corrected)
+    return corrected
+
+
+def infer_project_from_statement(statement: str, project_contexts: dict[str, dict[str, object]] | None = None) -> str | None:
+    lowered = statement.lower()
+    scores: dict[str, int] = {}
+    for project, markers in PROJECT_SCOPE_MARKERS.items():
+        score = sum(1 for marker in markers if marker in lowered)
+        if score:
+            scores[project] = score
+    for project in (project_contexts or {}):
+        if project in {"global", "unknown", "cross-project"}:
+            continue
+        aliases = PROJECT_DIRECTORY_ALIASES.get(project, (project,))
+        score = sum(1 for alias in aliases if alias.lower() in lowered)
+        if score:
+            scores[project] = scores.get(project, 0) + score
+    if not scores:
+        return None
+    return max(scores.items(), key=lambda entry: (entry[1], entry[0]))[0]
+
+
+def has_explicit_global_scope(statement: str) -> bool:
+    lowered = statement.lower()
+    return any(marker in lowered for marker in GLOBAL_SCOPE_ALLOW_MARKERS)
+
+
+def purpose_statement_is_rule(statement: str) -> bool:
+    lowered = statement.lower()
+    if any(pattern in lowered for pattern in VAGUE_MEMORY_PATTERNS):
+        return True
+    return bool(
+        re.search(
+            r"\b(?:always|never|do not|don't|must|should|treat|when developing|when building|compatibility|migration|preserve backward)\b",
+            lowered,
+        )
+    )
+
+
 def render_memory_v2(output_dir: Path, items: list[dict[str, object]], project_contexts: dict[str, dict[str, object]] | None = None) -> list[Path]:
     rendered: list[Path] = []
     project_contexts = project_contexts or {}
+    items, _ = quality_gate_items(items, project_contexts=project_contexts)
     items = suppress_project_rules_repeated_globally(items)
+    write_review_items(output_dir, [item for item in items if item.get("project") == "unknown"])
     global_items = [item for item in items if item["memory_class"] == "global_rule" and item["project"] == "global"]
     rendered.append(write_global_rules(output_dir / "global" / "user-rules.md", global_items))
     projects = sorted({str(item["project"]) for item in items if item["project"] not in {"global", "unknown"}} | set(project_contexts))
     for project in projects:
         project_items = [item for item in items if item["project"] == project]
         rendered.append(write_project_page(output_dir / "projects" / project / "project.md", project, project_items, project_contexts.get(project)))
-        if project_items:
+        if should_render_recent_page(project_items):
             rendered.append(write_recent_page(output_dir / "projects" / project / "recent.md", project, project_items))
         rendered.append(write_rules_page(output_dir / "projects" / project / "rules.md", project, project_items))
         lessons = [item for item in project_items if item["memory_class"] == "lesson"]
         if lessons:
             rendered.append(write_lessons_page(output_dir / "projects" / project / "lessons.md", project, lessons))
+    write_page_quality_review(output_dir, review_rendered_pages(output_dir))
     return rendered
 
 
@@ -848,8 +1086,8 @@ def write_project_page(path: Path, project: str, items: list[dict[str, object]],
     append_section(lines, "CORE COMPONENTS", statements(component_items, limit=8))
     append_section(lines, "CURRENT ARCHITECTURE", statements(flow_items, limit=8))
     append_tree_section(lines, project_context)
-    append_section(lines, "KEY CONSTRAINTS", statements([item for item in items if item["memory_role"] == "constraint" and item["memory_class"] in {"project_summary", "architecture"}], limit=8))
-    append_section(lines, "OPEN PROBLEMS", [])
+    append_section(lines, "KEY CONSTRAINTS", statements([item for item in items if item["memory_role"] == "constraint" and item["memory_class"] in {"project_summary", "architecture", "project_rule"}], limit=8))
+    append_section(lines, "OPEN PROBLEMS", statements([item for item in items if item["memory_class"] == "failure_risk" and item["temporal_status"] == "active"], limit=6))
     append_numbered(lines, "BACKLOG", statements([item for item in items if item["memory_class"] == "backlog_item" and item["temporal_status"] == "active"], limit=20))
     append_section(lines, "RELATED", related_links(project))
     write_lines(path, lines)
@@ -891,6 +1129,11 @@ def write_recent_page(path: Path, project: str, items: list[dict[str, object]]) 
     append_numbered(lines, "OPEN QUESTIONS", statements([item for item in active if item["memory_class"] == "open_question"], limit=6))
     write_lines(path, lines)
     return path
+
+
+def should_render_recent_page(items: list[dict[str, object]]) -> bool:
+    recent_classes = {"current_state", "decision", "next_step", "open_question", "failure_risk", "backlog_item"}
+    return any(item["memory_class"] in recent_classes and item["temporal_status"] == "active" for item in items)
 
 
 def items_for_date(items: list[dict[str, object]], day: str | None) -> list[dict[str, object]]:
@@ -958,31 +1201,28 @@ def frontmatter(kind: str, project: str | None, tags: list[str]) -> list[str]:
 
 
 def append_section(lines: list[str], title: str, bullets: list[str]) -> None:
-    lines.extend([f"## {title}", ""])
     if not bullets:
-        lines.extend(["_No selected items from this evidence._", ""])
         return
+    lines.extend([f"## {title}", ""])
     for bullet in bullets:
         lines.append(f"- {bullet}")
     lines.append("")
 
 
 def append_numbered(lines: list[str], title: str, entries: list[str]) -> None:
-    lines.extend([f"## {title}", ""])
     if not entries:
-        lines.extend(["_No selected items from this evidence._", ""])
         return
+    lines.extend([f"## {title}", ""])
     for index, entry in enumerate(entries, 1):
         lines.append(f"{index}. {entry}")
     lines.append("")
 
 
 def append_tree_section(lines: list[str], project_context: dict[str, object] | None) -> None:
-    lines.extend(["## DIRECTORY TREE", ""])
     tree_lines = project_context.get("directory_tree") if project_context else None
     if not isinstance(tree_lines, list) or not tree_lines:
-        lines.extend(["_No repository tree discovered._", ""])
         return
+    lines.extend(["## DIRECTORY TREE", ""])
     command = project_context.get("tree_command") or "tree"
     lines.extend([f"`{command}`", "", "```text"])
     lines.extend(str(line) for line in tree_lines)
@@ -1119,15 +1359,110 @@ def related_links(project: str) -> list[str]:
     ]
 
 
+def write_review_items(output_dir: Path, items: list[dict[str, object]]) -> None:
+    review_dir = output_dir / "_review"
+    if review_dir.exists():
+        shutil.rmtree(review_dir)
+    if not items:
+        return
+    lines = ["# Unresolved Project Items", ""]
+    for item in sorted(items, key=item_rank):
+        lines.append(f"- `{item.get('item_id')}` {item.get('memory_class')}: {item.get('agent_facing_statement')}")
+    write_lines(review_dir / "unresolved-project-items.md", lines)
+
+
+def review_rendered_pages(output_dir: Path) -> dict[str, object]:
+    reviews: list[dict[str, object]] = []
+    for path in sorted(output_dir.rglob("*.md")):
+        relative = path.relative_to(output_dir).as_posix()
+        if relative.startswith("_meta/"):
+            continue
+        reviews.extend(review_rendered_page(output_dir, path))
+    bad_count = sum(1 for review in reviews if review["status"] == "bad")
+    needs_review_count = sum(1 for review in reviews if review["status"] == "needs_review")
+    return {
+        "schema_version": MEMORY_V2_SCHEMA_VERSION,
+        "reviewed_at": utc_now(),
+        "line_count": len(reviews),
+        "bad_line_count": bad_count,
+        "needs_review_line_count": needs_review_count,
+        "lines": reviews,
+    }
+
+
+def review_rendered_page(output_dir: Path, path: Path) -> list[dict[str, object]]:
+    relative = path.relative_to(output_dir).as_posix()
+    reviews: list[dict[str, object]] = []
+    current_section = ""
+    in_tree = False
+    in_code = False
+    for line_number, line in enumerate(path.read_text(encoding="utf-8").splitlines(), 1):
+        stripped = line.strip()
+        if not stripped or stripped == "---" or re.match(r"^(type|project|updated|tags):", stripped):
+            continue
+        if stripped.startswith("## "):
+            current_section = stripped.removeprefix("## ").strip()
+            in_tree = current_section == "DIRECTORY TREE"
+            continue
+        if stripped.startswith("```"):
+            in_code = not in_code
+            continue
+        if in_tree or in_code or stripped.startswith("# "):
+            continue
+        status, reason = rendered_line_status(relative, current_section, stripped)
+        reviews.append(
+            {
+                "page": relative,
+                "line_number": line_number,
+                "section": current_section,
+                "line": stripped,
+                "status": status,
+                "reason": reason,
+            }
+        )
+    return reviews
+
+
+def rendered_line_status(page: str, section: str, line: str) -> tuple[str, str]:
+    lowered = line.lower()
+    if "_no selected items" in lowered:
+        return "bad", "empty_placeholder"
+    if any(wrong.lower() in lowered for wrong in PROTECTED_TOKEN_REPLACEMENTS):
+        return "bad", "known_token_typo"
+    if any(pattern in lowered for pattern in VAGUE_MEMORY_PATTERNS):
+        return "bad", "vague_memory_statement"
+    if re.search(r"^-?\s*(nah|ok|okay|great|please|can you|go|next|agreed|correct|yes)[,.\s:!-]+", line, re.IGNORECASE):
+        return "bad", "verbatim_user_fragment"
+    if page == "global/user-rules.md":
+        forced_project = infer_project_from_statement(line)
+        if forced_project and not has_explicit_global_scope(line):
+            return "bad", "global_scope_leak"
+    if page.endswith("/project.md") and section == "PURPOSE" and purpose_statement_is_rule(line):
+        return "bad", "purpose_contains_rule"
+    return "good", "passes_rubric"
+
+
+def write_page_quality_review(output_dir: Path, payload: dict[str, object]) -> None:
+    meta_dir = output_dir / "_meta"
+    ensure_directory(meta_dir)
+    atomic_write_text(meta_dir / "page_quality_review.json", json.dumps(payload, indent=2, ensure_ascii=False, sort_keys=True))
+
+
 def write_memory_v2_meta(
     output_dir: Path,
     daily_payloads: list[dict[str, object]],
     items: list[dict[str, object]],
     project_contexts: dict[str, dict[str, object]] | None = None,
+    quality_operations: list[dict[str, object]] | None = None,
 ) -> None:
     for payload in daily_payloads:
         write_daily_payload(output_dir, payload)
     atomic_write_text(output_dir / "_meta" / "merged_items.json", json.dumps({"items": items}, indent=2, ensure_ascii=False, sort_keys=True))
+    atomic_write_text(output_dir / "_meta" / "items.jsonl", render_items_jsonl(items))
+    atomic_write_text(
+        output_dir / "_meta" / "quality_operations.json",
+        json.dumps({"operations": quality_operations or []}, indent=2, ensure_ascii=False, sort_keys=True),
+    )
     project_contexts = project_contexts or {}
     atomic_write_text(output_dir / "_meta" / "project_contexts.json", json.dumps(project_contexts, indent=2, ensure_ascii=False, sort_keys=True))
     manifest = {
@@ -1137,8 +1472,25 @@ def write_memory_v2_meta(
         "candidate_count": sum(len(payload["candidates"]) for payload in daily_payloads),
         "item_count": len(items),
         "project_context_count": len(project_contexts),
+        "quality_operation_count": len(quality_operations or []),
     }
     atomic_write_text(output_dir / "_meta" / "manifest.json", json.dumps(manifest, indent=2, sort_keys=True))
+
+
+def render_items_jsonl(items: list[dict[str, object]]) -> str:
+    rows = []
+    for item in items:
+        row = dict(item)
+        row["statement"] = row.get("agent_facing_statement")
+        row["scope"] = "global" if row.get("project") == "global" else "project"
+        row["evidence_ids"] = [
+            stable_id(ref.get("source_day"), ref.get("message_index"), ref.get("actor"))
+            for ref in row.get("evidence_refs", [])
+            if isinstance(ref, dict)
+        ]
+        row["provenance_refs"] = row.get("evidence_refs", [])
+        rows.append(json.dumps(row, ensure_ascii=False, sort_keys=True, separators=(",", ":")))
+    return "\n".join(rows) + ("\n" if rows else "")
 
 
 def write_memory_v2_failure_debug(
@@ -1174,6 +1526,8 @@ def daily_extraction_prompt() -> str:
         "or 'we can come back to this', unless later evidence confirms the work was completed, rejected, or discarded. "
         "Extract project identity and architecture when repeated terms/components reveal what a project is, even if this "
         "is inferred rather than explicitly stated. "
+        "Prefer the most specific project scope supported by evidence; use global only for clearly user-wide behavior. "
+        "Preserve exact code identifiers, env vars, directive names, file names, and API names. "
         "Rewrite user intent as clear future-agent guidance, never as raw pasted user fragments. "
         "Ignore agent reasoning, tool chatter, implementation progress unless it states an outcome the user needs. "
         "Every candidate must include evidence_refs with at least one exact message_index from the provided messages. "
@@ -1189,6 +1543,12 @@ def merge_prompt() -> str:
         "component, and architecture descriptions, but do not invent facts beyond candidates plus repository context. "
         "Optimize precision: merge semantic duplicates, remove one-off commands from durable rules, keep conflicts "
         "as context-dependent guidance when useful, and keep only active/latest temporal items. "
+        "Perform scope and page placement explicitly: global_rule is allowed only for user-wide or explicitly global "
+        "guidance; project-specific systems, product names, files, APIs, UI components, trade lifecycle concepts, "
+        "and memory pipeline behavior must be assigned to the matching project. "
+        "Use project_rule for durable behavior, project_summary/purpose only for what a project is and why it exists, "
+        "architecture for components/data flow, current_state/decision/next_step/open_question/failure_risk for recent "
+        "active context, backlog_item for deferred future work, and lesson only for durable lessons learned. "
         "Keep backlog_item entries active unless evidence confirms the item was worked, completed, rejected, or discarded; "
         "if resolved, set temporal_status to resolved/historical and do not render it as backlog. "
         "Every item must either copy supporting evidence_refs from candidates or include supporting_candidate_ids. "
@@ -1196,6 +1556,8 @@ def merge_prompt() -> str:
         "project_summary and architecture items so project.md is useful to a fresh agent. "
         "Temporary work-loop constraints containing current run/current fix loop/for now belong in current_state or "
         "next_step, not durable project_rule. "
+        "Do not emit project unknown unless the evidence truly cannot be routed after considering candidates and "
+        "project_contexts. Do not mutate code identifiers, file paths, env vars, or directive names. "
         "Every item must be understandable by a new coding agent without reading the source chat. JSON only."
     )
 

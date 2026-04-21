@@ -1,7 +1,7 @@
 ---
 type: project-memory
 project: codexclaw
-updated: 2026-04-20T01:19:51.494261Z
+updated: 2026-04-21T05:01:53.126731Z
 tags: [project/codexclaw, memory]
 ---
 
@@ -9,16 +9,13 @@ tags: [project/codexclaw, memory]
 
 ## PURPOSE
 
-- CodexClaw Pro is a multi-agent trading operations orchestrator (Telegram/Node + optional Ops UI) where strategist-led workflows coordinate research, execution-risk monitoring, and coder development; it is advisory-only and must never execute trades directly.
-
-## CORE COMPONENTS
-
-- Core orchestration is role-separated: strategist is the user-facing orchestrator/final synthesis voice; research provides analysis/trade ideas; execution provides monitoring and risk guidance; coder performs software implementation. Personas are defined in dedicated files and per chat_id+agent state is persisted.
+- CodexClaw Pro is a high-trust trading operations system with strategist-led orchestration and coder execution, emphasizing safety/correctness and not directly executing trades autonomously.
 
 ## CURRENT ARCHITECTURE
 
-- Current architecture supports mixed providers: strategist/research/execution can run via OpenAI Responses API (GPT-5) while coder runs via Codex CLI; a CLI-only alternative for non-coder roles remains under consideration.
-- CodexClaw includes an all-agent AI Tracker (Kanban + APIs), persistent memory/profile layers, skills loading from SKILL.md under skills/, and large-report archiving to store/reports with SQLite indexing; user replies should surface concise highlights plus report location metadata.
+- Core orchestration uses four roles (`strategist`, `research`, `execution`, `coder`) with strategist as orchestrator/final voice; persona specs are in `personas/`, and per-chat/per-agent thread/workspace state is persisted (SQLite plus workspace files).
+- Large strategist outputs are archived under `store/reports/` and indexed in SQLite (`store/db.sqlite`, table `reports`); Telegram responses include highlights plus report path/report ID.
+- Current routing architecture is role-split: `strategist/research/execution` are intended to run via OpenAI Responses API (`gpt-5`), while `coder` runs via Codex CLI.
 
 ## DIRECTORY TREE
 
@@ -1058,18 +1055,16 @@ CodexClaw/
 
 ## KEY CONSTRAINTS
 
-_No selected items from this evidence._
+- Only the `coder` agent should use Codex-oriented model behavior; `strategist`, `research`, and `execution` should use GPT-5-style chat behavior.
+- UI skin source of truth is `src/ui/skin.ts`; reuse `renderOpenClawSkinCss()` and mirror the same token/component style across related apps unless the user explicitly requests a different theme.
+- Treat configured `CODER_WORKDIR` and `CODER_ADD_DIRS` as writable by default; do not request extra access unless a command has already failed with concrete filesystem/permission evidence.
+- UI skin standard: `CodexClaw/src/ui/skin.ts` is source of truth; use `renderOpenClawSkinCss()` for CodexClaw and mirror same tokens/components in other apps unless explicitly asked for a new theme.
 
 ## OPEN PROBLEMS
 
-_No selected items from this evidence._
-
-## BACKLOG
-
-1. Complete unresolved runbook+scheduler package: finalize runbook sections, add idempotent scheduler toggle/verification path, add scheduler gating tests, and provide full build/test/runtime evidence on feature branch.
-2. Execute Mission Control Phase 2 UI polish (paint/fetch ordering, summary call caching, keyboard navigation refinements) to improve current UX quality.
-3. Document TRACKER_TASKS/TACKER_UPDATES directive usage in README/AGENTS so contributors and agents can reliably use agent-created follow-up tasks.
-4. Produce a Mission Control-style Command Center redesign plan that includes only workspace-relevant modules/options and excludes irrelevant areas (e.g., calendar).
+- Primary Telegram send risks are `400: Bad Request: message is too long` (notably beyond 4096 chars) and `400: Bad Request: chat not found` from stale/invalid scheduler `chat_id` values.
+- If multiple local bot processes run simultaneously, Telegram polling can hit `409 getUpdates conflict` and show stale behavior; ensure only one active bot process during validation.
+- Environment/runtime policy may block filesystem writes and tool execution (`pnpm`, `git`, etc.); explicitly report this as a blocker and avoid implying successful build/test verification when commands are blocked.
 
 ## RELATED
 

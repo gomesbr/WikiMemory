@@ -1,7 +1,7 @@
 ---
 type: project-memory
 project: wikimemory
-updated: 2026-04-20T01:19:51.517367Z
+updated: 2026-04-21T05:01:53.146875Z
 tags: [project/wikimemory, memory]
 ---
 
@@ -9,16 +9,14 @@ tags: [project/wikimemory, memory]
 
 ## PURPOSE
 
-- WikiMemory is a file-based, multi-phase memory pipeline that ingests external immutable Codex JSONL logs and produces compact, provenance-backed operational memory outputs (including memory/ artifacts, wiki pages, and bootstrap memory) for future coding agents with high signal and low token cost.
-
-## CORE COMPONENTS
-
-_No selected items from this evidence._
+- WikiMemory is a standalone, file-based operational memory pipeline that ingests external Codex/agent `.jsonl` logs and project-delta evidence, then produces derived knowledge outputs including compact `memory/` markdown, optional wiki outputs, platform bootstrap files, and audit artifacts with provenance-first, incremental processing.
 
 ## CURRENT ARCHITECTURE
 
-- The architecture is phased and manifest/state-driven: discovery -> normalization -> ingest/evidence -> segmentation -> classification -> extraction -> wiki synthesis -> bootstrap -> audit, with orchestration commands for refresh/full-load and per-phase state, notices, and rerun support.
-- Normalization is pointer-first: store provenance pointers and bounded canonical text instead of raw_event mirrors, and use RawEventResolver for exact on-demand hydration when deeper raw context is required.
+- Memory-first output model centers on `memory/global/user-rules.md` and per-project `project.md`, `recent.md`, `rules.md` (optional `lessons.md`) with compact bootstrap mapping; keep `wiki/` as optional compatibility/reporting output rather than primary product surface.
+- WikiMemory content is stored at `C:\Users\Fabio\Cursor AI projects\Projects\WikiMemory\wiki` and intended for use as an Obsidian vault folder.
+- Architecture is phased and stateful with independent CLI stages and per-phase artifacts (discover, normalize, ingest, segment, classify, extract, wiki, bootstrap, audit, refresh/full-load), using atomic/incremental promotion patterns and provenance-bearing outputs under `state/`, `audits/`, and phase-specific directories.
+- Normalization is pointer-first: normalized events store byte-range/source-line provenance plus bounded canonical/text fields instead of persisted `raw_event`; downstream phases should use `wikimemory/raw_event_resolver.py` for lazy hydration only when needed.
 
 ## DIRECTORY TREE
 
@@ -748,48 +746,54 @@ WikiMemory/
 |           |-- items.jsonl
 |           `-- stats.json
 |-- memory/
-|   `-- _meta/
-|       `-- daily/
-|           |-- 2026-02-16.json
-|           |-- 2026-02-17.json
-|           |-- 2026-02-18.json
-|           |-- 2026-02-21.json
-|           |-- 2026-02-22.json
-|           |-- 2026-02-23.json
-|           |-- 2026-02-24.json
-|           |-- 2026-02-25.json
-|           |-- 2026-02-26.json
-|           |-- 2026-02-27.json
-|           |-- 2026-02-28.json
-|           |-- 2026-03-01.json
-|           |-- 2026-03-02.json
-|           |-- 2026-03-03.json
-|           |-- 2026-03-04.json
-|           |-- 2026-03-05.json
-|           |-- 2026-03-06.json
-|           |-- 2026-03-07.json
-|           |-- 2026-03-08.json
-|           |-- 2026-03-09.json
-|           |-- 2026-03-10.json
-|           |-- 2026-03-11.json
-|           |-- 2026-03-12.json
-|           |-- 2026-03-13.json
-|           |-- 2026-03-14.json
-|           |-- 2026-03-15.json
-|           |-- 2026-03-16.json
-|           |-- 2026-03-17.json
-|           |-- 2026-03-20.json
-|           |-- 2026-03-21.json
-|           |-- 2026-03-23.json
-|           |-- 2026-03-24.json
-|           |-- 2026-03-26.json
-|           |-- 2026-03-27.json
-|           |-- 2026-03-28.json
-|           |-- 2026-04-12.json
-|           |-- 2026-04-13.json
-|           |-- 2026-04-14.json
-|           |-- 2026-04-18.json
-|           `-- 2026-04-19.json
+|   |-- _meta/
+|   |   |-- daily/
+|   |   |   |-- 2026-02-16.json
+|   |   |   |-- 2026-02-17.json
+|   |   |   |-- 2026-02-18.json
+|   |   |   |-- 2026-02-21.json
+|   |   |   |-- 2026-02-22.json
+|   |   |   |-- 2026-02-23.json
+|   |   |   |-- 2026-02-24.json
+|   |   |   |-- 2026-02-25.json
+|   |   |   |-- 2026-02-26.json
+|   |   |   |-- 2026-02-27.json
+|   |   |   |-- 2026-02-28.json
+|   |   |   |-- 2026-03-01.json
+|   |   |   |-- 2026-03-02.json
+|   |   |   |-- 2026-03-03.json
+|   |   |   |-- 2026-03-04.json
+|   |   |   |-- 2026-03-05.json
+|   |   |   |-- 2026-03-06.json
+|   |   |   |-- 2026-03-07.json
+|   |   |   |-- 2026-03-08.json
+|   |   |   |-- 2026-03-09.json
+|   |   |   |-- 2026-03-10.json
+|   |   |   |-- 2026-03-11.json
+|   |   |   |-- 2026-03-12.json
+|   |   |   |-- 2026-03-13.json
+|   |   |   |-- 2026-03-14.json
+|   |   |   |-- 2026-03-15.json
+|   |   |   |-- 2026-03-16.json
+|   |   |   |-- 2026-03-17.json
+|   |   |   |-- 2026-03-20.json
+|   |   |   |-- 2026-03-21.json
+|   |   |   |-- 2026-03-23.json
+|   |   |   |-- 2026-03-24.json
+|   |   |   |-- 2026-03-26.json
+|   |   |   |-- 2026-03-27.json
+|   |   |   |-- 2026-03-28.json
+|   |   |   |-- 2026-04-12.json
+|   |   |   |-- 2026-04-13.json
+|   |   |   |-- 2026-04-14.json
+|   |   |   |-- 2026-04-18.json
+|   |   |   `-- 2026-04-19.json
+|   |   |-- items.jsonl
+|   |   |-- page_quality_review.json
+|   |   |-- project_contexts.json
+|   |   `-- quality_operations.json
+|   `-- _review/
+|       `-- unresolved-project-items.md
 |-- normalized/
 |   `-- sources/
 |       |-- 019c687b-3d0d-71c0-8929-9128cbf24060/
@@ -1580,20 +1584,18 @@ WikiMemory/
 
 ## KEY CONSTRAINTS
 
-_No selected items from this evidence._
+- Treat raw logs as external immutable source-of-truth: do not copy/rewrite raw logs in-repo, and process with streaming/append-aware reads that only commit complete lines.
+- LLM synthesis is allowed in bounded form, but every synthesized claim must be grounded in extracted evidence with provenance/citations.
+- Apply temporal invalidation rigorously: older open questions/open items must be marked resolved or superseded when newer evidence closes them, and should not remain rendered as open.
 
 ## OPEN PROBLEMS
 
-_No selected items from this evidence._
+- Live provider-backed synthesis runs are blocked when `OPENAI_API_KEY` is missing; stub/fallback paths validate plumbing but do not verify live-call behavior.
+- Actively growing logs can cause scan/normalization race instability; exclude unstable sources until stable and support fallback rebuild behavior for stale/inconsistent normalization artifacts.
 
 ## BACKLOG
 
-1. Add/maintain explicit notification and audit surfacing for previously unseen but valid outer event types or payload subtypes so schema drift drives parser upgrades without failing normalization.
-2. Improve project association/routing so evidence maps to correct project slugs instead of generic buckets and avoids cross-project leakage.
-3. Improve recent-memory quality with decay/windowing/active-context selection and stronger filtering of low-signal scaffold replies.
-4. Move memory thresholds/heuristics (stale windows, caps, rule patterns, trivial-message filters) from code into configurable policy.
-5. Add bootstrap renderers beyond Codex (e.g., Claude and generic targets).
-6. Integrate scheduler/cadence support for the memory-refresh path.
+1. Improve project association so records map to real project slugs (for example `wikimemory`, `open-brain`, `ai-trader`, `codexclaw`) instead of collapsing into generic `projects`.
 
 ## RELATED
 

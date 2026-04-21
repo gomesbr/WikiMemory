@@ -9,22 +9,26 @@ from pathlib import Path
 
 from .agent_bootstrap import resolve_target_path
 from .discovery import DiscoveryError, atomic_write_text, ensure_directory, utc_now
+from .memory_v2 import PROTECTED_TOKEN_REPLACEMENTS, has_explicit_global_scope, infer_project_from_statement, purpose_statement_is_rule
 from .normalization import append_jsonl_text
 from .product_config import load_product_config
 
 STATE_SCHEMA_VERSION = 1
 MEMORY_LINT_SCHEMA_VERSION = 1
 STALE_RECENT_DAYS = 30
-RULE_CLASSES = {"global_user_rules", "project_rules"}
+RULE_CLASSES = {"global_user_rules", "project_rules", "global_rule", "project_rule"}
+GLOBAL_RULE_CLASSES = {"global_user_rules", "global_rule"}
+PROJECT_RULE_CLASSES = {"project_rules", "project_rule"}
+V2_ACTIVE_RECENT_CLASSES = {"current_state", "decision", "next_step", "open_question", "failure_risk", "backlog_item"}
 NOISE_PATTERN = re.compile(
     r"(?:please implement this plan|context from my ide setup|open tabs:|<permissions instructions>|<collaboration_mode>|localhost|ctrl\+f5)",
     re.IGNORECASE,
 )
 ONE_OFF_RULE_PATTERN = re.compile(
-    r"\b(?:please|can you|fix this|run this|open this|show me|hard refresh|restart)\b",
+    r"\b(?:please|can you|fix this|run this|open this|show me|hard refresh now|restart now|stop (?:doing|asking|explaining|spitting))\b",
     re.IGNORECASE,
 )
-VERBATIM_LEAK_PATTERN = re.compile(r"^(?:nah|ok|okay|great|please|can you|go|next|agreed|correct|yes)[,.\s:!-]+", re.IGNORECASE)
+VERBATIM_LEAK_PATTERN = re.compile(r"^(?:nah|ok|okay|great|please|can you|go|agreed|correct|yes)[,.\s:!-]+", re.IGNORECASE)
 AGENT_REASONING_PATTERN = re.compile(r"\b(?:i'm doing|i am doing|i'll|i will|i don't|i do not|next i'll|i’m fixing)\b", re.IGNORECASE)
 RUNTIME_PURPOSE_PATTERN = re.compile(r"\b(?:localhost|https?://|\.env|BROKER_ADAPTER_MODE|ctrl\+f5|hard refresh)\b", re.IGNORECASE)
 PURPOSE_RULE_PATTERN = re.compile(
@@ -36,7 +40,7 @@ VAGUE_STATEMENT_PATTERN = re.compile(
     re.IGNORECASE,
 )
 SUBJECT_ACTION_PATTERN = re.compile(
-    r"\b(?:build|generate|ingest|extract|render|lint|validate|preserve|avoid|prevent|support|treat|do not|don't|never|always|must|should|keep|use|route|classify|store|read|write|notify|provide|show|place|attach|track|resolve)\b",
+    r"\b(?:is|are|was|were|has|have|had|can|may|includes?|supports?|provides?|runs?|coordinates?|exposes?|requires?|uses?|contains?|tracks?|models?|build|generate|ingest|extract|render|lint|validate|preserve|avoid|prevent|support|treat|do not|don't|never|always|must|should|keep|use|route|classify|store|read|write|notify|provide|show|place|attach|track|resolve|improve|complete|send|perform|evolve|implement|adopt|address|monitor|verify|focuses?|maintain|prioritize|enforce|block|produced?|launched?|open|scope)\b",
     re.IGNORECASE,
 )
 
@@ -114,6 +118,8 @@ def run_memory_lint(
         findings = lint_items(run_id, items)
         findings.extend(lint_memory_quality(run_id, items, candidates, windows))
         findings.extend(lint_bootstrap(run_id, target_path, items))
+        findings.extend(lint_v2_rendered_memory(run_id, memory_dir, items))
+        findings.extend(lint_page_quality_review(run_id, memory_dir))
         findings.sort(key=lambda item: str(item["finding_id"]))
         write_jsonl(findings_path, findings)
 
@@ -164,22 +170,32 @@ def lint_items(run_id: str, items: list[dict[str, object]]) -> list[dict[str, ob
     for item in items:
         item_id = str(item.get("item_id") or "unknown")
         memory_class = str(item.get("memory_class") or "")
-        statement = str(item.get("statement") or "")
+        statement = str(item.get("statement") or item.get("agent_facing_statement") or "")
+        project = str(item.get("project") or ("global" if memory_class in GLOBAL_RULE_CLASSES else "unknown"))
         if not statement.strip():
             findings.append(finding(run_id, "error", "structure", "empty_statement", item_id, "Memory item has an empty statement."))
-        if not item.get("evidence_ids") or not item.get("provenance_refs"):
+        has_evidence = bool(item.get("evidence_ids") or item.get("evidence_refs"))
+        has_provenance = bool(item.get("provenance_refs") or item.get("evidence_refs"))
+        if not has_evidence or not has_provenance:
             findings.append(finding(run_id, "error", "provenance", "missing_provenance", item_id, "Memory item has missing evidence or provenance refs."))
         if memory_class in RULE_CLASSES:
             if NOISE_PATTERN.search(statement):
                 findings.append(finding(run_id, "error", "rule_quality", "schema_noise_rule", item_id, "Durable rule contains scaffold/runtime noise."))
             if ONE_OFF_RULE_PATTERN.search(statement):
                 findings.append(finding(run_id, "warning", "rule_quality", "one_off_rule", item_id, "Durable rule may be a one-off instruction."))
-            if memory_class == "global_user_rules" and item.get("project"):
+            if memory_class in GLOBAL_RULE_CLASSES and project not in {"", "None", "global"}:
                 findings.append(finding(run_id, "error", "scope", "global_rule_has_project", item_id, "Global rule is carrying a project value."))
-            if memory_class == "project_rules" and not item.get("project"):
+            if memory_class in GLOBAL_RULE_CLASSES:
+                forced_project = infer_project_from_statement(statement)
+                if forced_project and not has_explicit_global_scope(statement):
+                    findings.append(finding(run_id, "error", "scope", "global_scope_leak", item_id, "Global rule appears to contain project-specific guidance."))
+            if memory_class in PROJECT_RULE_CLASSES and project in {"", "None", "unknown"}:
                 findings.append(finding(run_id, "error", "scope", "project_rule_missing_project", item_id, "Project rule is missing project scope."))
+        if project == "unknown" and memory_class not in GLOBAL_RULE_CLASSES:
+            findings.append(finding(run_id, "error", "scope", "unknown_project_item", item_id, "Memory item has unresolved project scope."))
+        if any(wrong.lower() in statement.lower() for wrong in PROTECTED_TOKEN_REPLACEMENTS):
+            findings.append(finding(run_id, "error", "quality", "known_token_typo", item_id, "Memory item contains a suspicious mutation of a protected token."))
         if memory_class == "recent_project_state" and is_stale(item.get("last_seen_at")):
-            project = str(item.get("project") or "unknown")
             stale_recent_by_project[project] = stale_recent_by_project.get(project, 0) + 1
         if memory_class == "recent_project_state" and str(item.get("temporal_status") or "active") != "active":
             findings.append(finding(run_id, "error", "freshness", "resolved_temporal_rendered", item_id, "Resolved or superseded temporal memory is still in rendered memory items."))
@@ -233,9 +249,12 @@ def lint_memory_quality(
         if memory_class == "stable_project_summary" and str(item.get("item_type") or "") in {"project_summary", "purpose"} and RUNTIME_PURPOSE_PATTERN.search(statement):
             findings.append(finding(run_id, "warning", "quality", "runtime_fact_in_project_purpose", item_id, "Project purpose contains runtime/config details that should be routed to constraints or recent context."))
         role = str(item.get("memory_role") or "")
-        if memory_class == "stable_project_summary" and str(item.get("item_type") or "") in {"project_summary", "purpose"} and PURPOSE_RULE_PATTERN.search(statement):
+        if (
+            (memory_class == "stable_project_summary" and str(item.get("item_type") or "") in {"project_summary", "purpose"})
+            or (memory_class == "project_summary" and role == "purpose")
+        ) and (PURPOSE_RULE_PATTERN.search(statement) or purpose_statement_is_rule(statement)):
             findings.append(finding(run_id, "error", "quality", "purpose_contains_rule", item_id, "Project purpose contains behavior guidance that belongs in project rules."))
-        if memory_class == "stable_project_summary" and role == "rule":
+        if memory_class in {"stable_project_summary", "project_summary"} and role == "rule":
             findings.append(finding(run_id, "error", "quality", "section_mismatch", item_id, "Rule-role item is still classified as project summary."))
         if VAGUE_STATEMENT_PATTERN.search(statement):
             findings.append(finding(run_id, "warning", "quality", "vague_memory_statement", item_id, "Memory statement needs hidden conversation context to be useful."))
@@ -273,6 +292,71 @@ def lint_bootstrap(run_id: str, target_path: Path, items: list[dict[str, object]
         if str(item.get("memory_class")) == "recent_project_state" and len(statement) >= 12 and statement in content:
             findings.append(finding(run_id, "warning", "structure", "recent_state_inlined", str(item.get("item_id")), "Agent bootstrap should link recent context, not inline it."))
     return findings
+
+
+def lint_v2_rendered_memory(run_id: str, memory_dir: Path, items: list[dict[str, object]]) -> list[dict[str, object]]:
+    findings: list[dict[str, object]] = []
+    latest_active_by_project: dict[str, str] = {}
+    for item in items:
+        project = str(item.get("project") or "")
+        if project in {"", "global", "unknown"}:
+            continue
+        if str(item.get("memory_class")) not in V2_ACTIVE_RECENT_CLASSES or str(item.get("temporal_status") or "active") != "active":
+            continue
+        latest = latest_source_day(item)
+        if latest and latest > latest_active_by_project.get(project, ""):
+            latest_active_by_project[project] = latest
+
+    for project, latest_day in sorted(latest_active_by_project.items()):
+        recent_path = memory_dir / "projects" / project / "recent.md"
+        if not recent_path.exists():
+            findings.append(finding(run_id, "error", "freshness", "recent_missing_latest_work", project, "Project has active recent evidence but no recent.md page."))
+            continue
+        title = next((line.strip() for line in recent_path.read_text(encoding="utf-8").splitlines() if line.startswith("# ")), "")
+        expected = display_date(latest_day)
+        if expected and expected not in title:
+            findings.append(finding(run_id, "error", "freshness", "recent_date_mismatch", project, f"Recent page title does not reflect latest active evidence date {latest_day}."))
+    return findings
+
+
+def lint_page_quality_review(run_id: str, memory_dir: Path) -> list[dict[str, object]]:
+    path = memory_dir / "_meta" / "page_quality_review.json"
+    if not path.exists():
+        return [finding(run_id, "error", "quality", "missing_page_quality_review", str(path), "Fresh-agent page quality review was not generated.")]
+    payload = json.loads(path.read_text(encoding="utf-8"))
+    findings: list[dict[str, object]] = []
+    for line in payload.get("lines", []):
+        if not isinstance(line, dict) or line.get("status") != "bad":
+            continue
+        scope = f"{line.get('page')}:{line.get('line_number')}"
+        findings.append(
+            finding(
+                run_id,
+                "error",
+                "quality",
+                "bad_fresh_agent_line",
+                scope,
+                f"Rendered memory line failed fresh-agent rubric: {line.get('reason')}",
+            )
+        )
+    return findings
+
+
+def latest_source_day(item: dict[str, object]) -> str:
+    days = [
+        str(ref.get("source_day") or "")
+        for ref in item.get("evidence_refs", [])
+        if isinstance(ref, dict) and re.match(r"^\d{4}-\d{2}-\d{2}$", str(ref.get("source_day") or ""))
+    ]
+    return max(days) if days else ""
+
+
+def display_date(day: str) -> str:
+    try:
+        parsed = datetime.fromisoformat(day)
+    except ValueError:
+        return day
+    return parsed.strftime("%B %d %Y")
 
 
 def apply_safe_bootstrap_fixes(target_path: Path) -> None:
@@ -314,9 +398,15 @@ def finding(run_id: str, severity: str, family: str, check_type: str, scope_key:
 
 def load_memory_items(memory_dir: Path) -> list[dict[str, object]]:
     items_path = memory_dir / "_meta" / "items.jsonl"
-    if not items_path.exists():
-        raise MemoryLintError(f"Missing memory item manifest: {items_path}")
-    return [json.loads(line) for line in items_path.read_text(encoding="utf-8").splitlines() if line.strip()]
+    if items_path.exists():
+        return [json.loads(line) for line in items_path.read_text(encoding="utf-8").splitlines() if line.strip()]
+    merged_path = memory_dir / "_meta" / "merged_items.json"
+    if merged_path.exists():
+        payload = json.loads(merged_path.read_text(encoding="utf-8"))
+        items = payload.get("items", [])
+        if isinstance(items, list):
+            return [item for item in items if isinstance(item, dict)]
+    raise MemoryLintError(f"Missing memory item manifest: {items_path}")
 
 
 def load_optional_jsonl(path: Path) -> list[dict[str, object]]:
