@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "consumer_profile_policy_version": 1,
+  "enabled": false,
+  "mode": "review_first",
+  "allowed_sections": [
+    "communication_preferences",
+    "workflow_preferences",
+    "technical_strengths",
+    "active_domains",
+    "current_goals",
+    "persistent_constraints",
+    "collaboration_style",
+    "decision_preferences",
+    "tool_preferences"
+  ],
+  "disallowed_sections": [
+    "iq_or_intelligence_scores",
+    "mental_health",
+    "psychological_diagnosis",
+    "personality_typing",
+    "medical_status",
+    "political_beliefs",
+    "religion",
+    "sexual_orientation",
+    "protected_class_inference",
+    "manipulative_persuasion_targets"
+  ],
+  "minimum_evidence_refs_per_fact": 1,
+  "require_repeated_evidence_for_inferred_traits": true,
+  "allow_explicit_consumer_self_description": true,
+  "require_consumer_review_before_activation": true,
+  "summary_style": "soft_evidence_backed"
+}

@@ -28,17 +28,21 @@ class OnboardingTests(unittest.TestCase):
         self.assertEqual(detected["likely_markdown_mode"], "obsidian_markdown")
         self.assertEqual(detected["likely_bootstrap_renderer"], "codex_agents_md")
         self.assertEqual(detected["likely_bootstrap_target_path"], "AGENTS.md")
+        self.assertEqual(detected["likely_agent_platform"], "codex")
         self.assertIn("config/source_roots.json", detected["existing_config_files"])
 
     def test_run_onboarding_writes_recommended_product_config(self) -> None:
         target_config = self.project_root / "config" / "product_config.generated.json"
-        report = run_onboarding(self.project_root, target_config)
+        brief_path = self.project_root / "config" / "agent_onboarding_brief.generated.md"
+        report = run_onboarding(self.project_root, target_config, brief_path)
         self.assertTrue(target_config.exists())
+        self.assertTrue(brief_path.exists())
         payload = json.loads(target_config.read_text(encoding="utf-8"))
         self.assertEqual(payload["markdown_output"]["mode"], "obsidian_markdown")
         self.assertEqual(payload["agent_platform"]["bootstrap_target_path"], "AGENTS.md")
-        self.assertEqual(report.questions[0].question_id, "markdown_mode")
-        self.assertEqual(report.questions[1].question_id, "bootstrap_target")
+        self.assertEqual(report.questions[0].question_id, "agent_platform")
+        self.assertEqual(report.agent_entry_file, "START_HERE_FOR_AGENT.md")
+        self.assertTrue(report.inferred_options)
         self.assertTrue(payload["project_aliases"])
         self.assertIn("project_routing", payload)
 

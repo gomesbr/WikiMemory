@@ -6,6 +6,7 @@ from pathlib import Path
 from typing import Iterable
 
 from .agent_bootstrap import run_agent_bootstrap
+from .consumer_profile import run_consumer_profile
 from .discovery import DiscoveryError, atomic_write_text, ensure_directory, run_discovery, utc_now
 from .ingest import run_ingest
 from .memory_generation import run_memory_generation
@@ -14,7 +15,7 @@ from .normalization import append_jsonl_text, run_normalization
 
 STATE_SCHEMA_VERSION = 1
 MEMORY_REFRESH_SCHEMA_VERSION = 1
-PHASE_ORDER = ("discover", "normalize", "ingest", "memory", "agent-bootstrap", "memory-lint")
+PHASE_ORDER = ("discover", "normalize", "ingest", "memory", "consumer-profile", "agent-bootstrap", "memory-lint")
 
 
 class MemoryRefreshError(DiscoveryError):
@@ -88,6 +89,13 @@ def run_memory_refresh(
     audits_dir: Path | str,
     bootstrap_output_path: Path | str | None = None,
     source_ids: Iterable[str] | None = None,
+    lint_fix: bool | None = None,
+    lint_fix_rounds: int = 1,
+    lint_model: str | None = None,
+    consumer_profile_model: str | None = None,
+    consumer_profile_extraction_model: str | None = None,
+    consumer_profile_merge_model: str | None = None,
+    consumer_profile_window_max_chars: int | None = None,
 ) -> MemoryRefreshResult:
     source_roots_config_path = Path(source_roots_config_path)
     product_config_path = Path(product_config_path)
@@ -103,6 +111,7 @@ def run_memory_refresh(
     ensure_directory(audits_dir)
     state_path = state_dir / "memory_refresh_state.json"
     run_log_path = state_dir / "memory_refresh_runs.jsonl"
+    previous_state = load_json(state_path)
     previous_run_log = run_log_path.read_text(encoding="utf-8") if run_log_path.exists() else ""
     run_id = f"memory-refresh-{utc_now().replace(':', '').replace('.', '').replace('-', '')}"
     started_at = utc_now()
@@ -113,6 +122,7 @@ def run_memory_refresh(
     error_count = 0
     failed_phase: str | None = None
     fatal_error_summary: str | None = None
+    effective_lint_fix = True if lint_fix is None else lint_fix
 
     phase_callbacks = {
         "discover": lambda: run_discovery(config_path=source_roots_config_path, state_dir=state_dir),
@@ -138,6 +148,16 @@ def run_memory_refresh(
             memory_dir=memory_dir,
             audits_dir=audits_dir,
         ),
+        "consumer-profile": lambda: run_consumer_profile(
+            evidence_dir=evidence_dir,
+            memory_dir=memory_dir,
+            state_dir=state_dir,
+            audits_dir=audits_dir,
+            model=consumer_profile_model,
+            extraction_model=consumer_profile_extraction_model,
+            merge_model=consumer_profile_merge_model,
+            window_max_chars=consumer_profile_window_max_chars,
+        ),
         "agent-bootstrap": lambda: run_agent_bootstrap(
             product_config_path=product_config_path,
             state_dir=state_dir,
@@ -151,6 +171,9 @@ def run_memory_refresh(
             memory_dir=memory_dir,
             audits_dir=audits_dir,
             bootstrap_path=bootstrap_output_path,
+            autofix=effective_lint_fix,
+            max_fix_rounds=lint_fix_rounds,
+            model=lint_model,
         ),
     }
 
@@ -197,10 +220,14 @@ def run_memory_refresh(
             fatal_error_summary=str(exc),
         )
 
+    previous_successful_finished_at = str(previous_state.get("last_successful_refresh_finished_at") or "")
+    last_successful_refresh_finished_at = report.finished_at if report.success else previous_successful_finished_at or None
     state_payload = {
         "schema_version": STATE_SCHEMA_VERSION,
         "memory_refresh_schema_version": MEMORY_REFRESH_SCHEMA_VERSION,
         "last_run_id": run_id,
+        "last_attempted_refresh_finished_at": report.finished_at,
+        "last_successful_refresh_finished_at": last_successful_refresh_finished_at,
         "last_result_status": "succeeded" if report.success else "failed",
         "last_completed_phase": report.last_completed_phase,
         "last_failed_phase": report.failed_phase,
@@ -237,3 +264,9 @@ def summarize_result(result: object) -> dict[str, object]:
         for key, value in payload.items()
         if key not in {"run_id", "started_at", "finished_at", "success", "fatal_error_summary"}
     }
+
+
+def load_json(path: Path) -> dict[str, object]:
+    if not path.exists():
+        return {}
+    return json.loads(path.read_text(encoding="utf-8-sig"))

@@ -3,7 +3,7 @@
   "product_schema_version": 1,
   "environment": {
     "operating_system": "windows",
-    "editor": "cursor",
+    "editor": "unknown",
     "repo_root": "."
   },
   "agent_platform": {
@@ -12,16 +12,16 @@
     "bootstrap_target_path": "AGENTS.md"
   },
   "markdown_output": {
-    "mode": "obsidian_markdown",
+    "mode": "plain_markdown",
     "root_dir": "memory",
     "enable_frontmatter": true,
-    "enable_tags": true,
-    "enable_wikilinks": true
+    "enable_tags": false,
+    "enable_wikilinks": false
   },
   "log_sources": [
     {
       "adapter": "codex_jsonl",
-      "root_alias": "codex_sessions",
+      "root_alias": "agent_sessions",
       "absolute_path": "${WIKIMEMORY_CODEX_SESSIONS_ROOT}",
       "include_glob": "**/*.jsonl"
     }
@@ -31,49 +31,24 @@
       "adapter": "git_worktree",
       "project_root": ".",
       "include_untracked": true
-    },
-    {
-      "adapter": "git_worktree",
-      "project_root": "../AITrader",
-      "include_untracked": true
-    },
-    {
-      "adapter": "git_worktree",
-      "project_root": "../OpenBrain",
-      "include_untracked": true
-    },
-    {
-      "adapter": "git_worktree",
-      "project_root": "../CodexClaw",
-      "include_untracked": true
     }
   ],
   "project_aliases": [
     {
       "slug": "wikimemory",
-      "aliases": ["WikiMemory", "wikimemory", "memory-system", "memory system"]
-    },
-    {
-      "slug": "open-brain",
-      "aliases": ["OpenBrain", "open-brain", "open_brain"]
-    },
-    {
-      "slug": "ai-trader",
-      "aliases": ["AITrader", "ai-trader", "ai_trader"]
-    },
-    {
-      "slug": "codexclaw",
-      "aliases": ["CodexClaw", "codexclaw"]
+      "aliases": [
+        "WikiMemory"
+      ]
     }
   ],
   "project_routing": {
-    "enabled": true,
+    "enabled": false,
     "unresolved_project": "projects",
     "min_confidence": "high",
     "max_sources_per_run": 200,
     "max_sample_records_per_source": 8,
     "provider": {
-      "type": "openai",
+      "provider_type": "openai",
       "api_key_env": "OPENAI_API_KEY",
       "base_url_env": "WIKIMEMORY_OPENAI_BASE_URL",
       "model_env": "WIKIMEMORY_OPENAI_MODEL",
@@ -82,7 +57,7 @@
     }
   },
   "memory_extraction": {
-    "enabled": true,
+    "enabled": false,
     "fallback_to_deterministic": true,
     "window_record_limit": 8,
     "window_overlap_records": 2,
@@ -90,7 +65,7 @@
     "max_windows_per_run": 1000,
     "max_candidates_per_window": 12,
     "provider": {
-      "type": "openai",
+      "provider_type": "openai",
       "api_key_env": "OPENAI_API_KEY",
       "base_url_env": "WIKIMEMORY_OPENAI_BASE_URL",
       "model_env": "WIKIMEMORY_OPENAI_MODEL",
@@ -103,7 +78,24 @@
     "scan_on_startup": true,
     "tick_seconds": 900,
     "project_delta_enabled": true,
-    "log_delta_enabled": true
+    "log_delta_enabled": true,
+    "allowed_weekdays": [
+      "monday",
+      "tuesday",
+      "wednesday",
+      "thursday",
+      "friday"
+    ],
+    "run_hour_local": 9,
+    "run_minute_local": 0,
+    "ingest_interval_hours": 24,
+    "lint_interval_hours": 24,
+    "require_log_update_for_ingest": true,
+    "lint_autofix_enabled": false,
+    "lint_autofix_max_rounds": 1,
+    "consumer_profile_extraction_model": "gpt-4o-mini",
+    "consumer_profile_merge_model": "gpt-5.3-codex",
+    "consumer_profile_window_max_chars": 60000
   },
   "policies": {
     "require_confirmation_for_inferred_rule_promotion": true,

@@ -2,22 +2,26 @@ from __future__ import annotations
 
 import hashlib
 import json
+import os
 import re
 import shutil
 from collections import defaultdict
 from dataclasses import dataclass
-from datetime import datetime, timezone
+from datetime import datetime, timedelta, timezone
 from pathlib import Path
 from typing import Iterable
 
 from .discovery import DiscoveryError, atomic_write_text, ensure_directory, utc_now
 from .memory_extraction import extract_memory_artifacts
 from .memory_model import MEMORY_FILE_DEFINITIONS
+from .memory_v2 import call_llm_json
 from .normalization import append_jsonl_text
 from .product_config import MarkdownOutputConfig, load_product_config
 
 STATE_SCHEMA_VERSION = 1
 MEMORY_SCHEMA_VERSION = 1
+MEMORY_RULE_OVERRIDE_SCHEMA_VERSION = 1
+DEFAULT_CONTINUATIONS_MODEL = "gpt-4o-mini"
 RECENT_MEMORY_MAX_DAYS = 30
 PROJECT_RECENT_ITEM_CAP = 25
 RULE_BUCKET_CAP = 12
@@ -30,7 +34,7 @@ RENDER_PREFIX_PATTERN = re.compile(
     re.IGNORECASE,
 )
 RENDER_REJECT_PATTERN = re.compile(
-    r"(?:\.\.\.|iMPLEMENT THIS PLAN|IMPLEMENT THIS PLAN|PLEASE IMPLEMENT THIS PLAN|<environment_context>|open tabs:|context from my ide setup|single prompt to codex|copy/paste|source_count:|confidence:|user profile|senior software engineer|store/reports/|api\.fxtwitter|whatsapp group|hundreds of GB|persistent only for the user|video file md|openrouter|one more think|no_queued_strategies|analyze all memory files|^No .* extracted yet\.?$|^No .* selected yet\.?$|^No .* items extracted yet\.?$|^No .* rules selected yet\.?$)",
+    r"(?:\.\.\.|iMPLEMENT THIS PLAN|IMPLEMENT THIS PLAN|PLEASE IMPLEMENT THIS PLAN|<environment_context>|open tabs:|context from my ide setup|current context:|single prompt to codex|copy/paste|source_count:|confidence:|user profile|senior software engineer|store/reports/|api\.fxtwitter|whatsapp group|hundreds of GB|persistent only for the user|video file md|openrouter|one more think|no_queued_strategies|analyze all memory files|^No .* extracted yet\.?$|^No .* selected yet\.?$|^No .* items extracted yet\.?$|^No .* rules selected yet\.?$)",
     re.IGNORECASE,
 )
 RAW_FIRST_PERSON_PATTERN = re.compile(
@@ -39,6 +43,10 @@ RAW_FIRST_PERSON_PATTERN = re.compile(
 )
 TRANSIENT_RENDER_PATTERN = re.compile(
     r"\b(?:what should you focus|what is next|phase \d+ should be treated as a checkpoint|full-load run|commit and merge|push to git|download obsidian|api key|env file|D drive|unclassified count|notices?:\s*\d+|current phase is complete)\b",
+    re.IGNORECASE,
+)
+SCAFFOLD_CONTEXT_PATTERN = re.compile(
+    r"(?:\bbelow is the list of skills that can be used\b|\bspecific skill\b|\btool integrations\b|\bassigned task as a single tracker item\b|\bimplementation plans or code-level guidance\b|\bdeveloper workflows\b|\bmaintain dashboards and platform code\b|\bthis skill should be used\b|\bextends codex'?s capabilities\b|\bsenior software engineer\b|\bresponsibilities:\b|\bconsistent ui design language across apps\b)",
     re.IGNORECASE,
 )
 USER_RULE_PATTERN = re.compile(r"\b(?:add this to global rules|global rule)\b", re.IGNORECASE)
@@ -91,6 +99,29 @@ RECENT_NOISE_PATTERN = re.compile(
     re.IGNORECASE,
 )
 AGENT_DURABLE_EXCLUDED_ACTORS = {"assistant", "agent_reasoning", "tool", "unknown", "developer", "system"}
+MEMORY_COMMAND_PREFIX = "memory command:"
+ADD_GLOBAL_RULE_PATTERN = re.compile(r"^memory command:\s*add global rule:\s*(.+)$", re.IGNORECASE)
+ADD_PROJECT_RULE_PATTERN = re.compile(
+    r"^memory command:\s*add project rule(?: for (?P<project>[\w -]+))?:\s*(?P<statement>.+)$",
+    re.IGNORECASE,
+)
+REMOVE_RULE_PATTERN = re.compile(r'^memory command:\s*remove rule:\s*"?(?P<statement>.+?)"?\s*$', re.IGNORECASE)
+REPLACE_RULE_PATTERN = re.compile(
+    r'^memory command:\s*replace rule:\s*"(?P<old>.+?)"\s*->\s*"(?P<new>.+?)"\s*$',
+    re.IGNORECASE,
+)
+RECLASSIFY_RULE_PATTERN = re.compile(
+    r'^memory command:\s*move rule to (?P<scope>global|project)(?: for (?P<project>[\w -]+))?:\s*"?(?P<statement>.+?)"?\s*$',
+    re.IGNORECASE,
+)
+ONE_OFF_GLOBAL_EXCEPTION_PATTERN = re.compile(
+    r"^memory command:\s*one-off global exception:\s*(.+)$",
+    re.IGNORECASE,
+)
+ONE_OFF_PROJECT_EXCEPTION_PATTERN = re.compile(
+    r"^memory command:\s*one-off project exception(?: for (?P<project>[\w -]+))?:\s*(?P<statement>.+)$",
+    re.IGNORECASE,
+)
 
 
 class MemoryGenerationError(DiscoveryError):
@@ -134,6 +165,7 @@ def run_memory_generation(
     memory_dir: Path | str,
     audits_dir: Path | str,
     projects: Iterable[str] | None = None,
+    llm_client=None,
 ) -> MemoryResult:
     product_config_path = Path(product_config_path)
     state_dir = Path(state_dir)
@@ -145,6 +177,7 @@ def run_memory_generation(
     state_path = state_dir / "memory_state.json"
     run_log_path = state_dir / "memory_runs.jsonl"
     notice_log_path = audits_dir / "memory_notices.jsonl"
+    override_state_path = state_dir / "memory_rule_overrides.json"
     run_id = f"memory-{utc_now().replace(':', '').replace('.', '').replace('-', '')}"
     started_at = utc_now()
 
@@ -158,6 +191,7 @@ def run_memory_generation(
     try:
         config = load_product_config(product_config_path)
         evidence_records = load_evidence_records(evidence_dir)
+        override_commands = extract_rule_override_commands(evidence_records)
         extraction_artifacts = extract_memory_artifacts(
             evidence_records,
             config=config,
@@ -168,10 +202,29 @@ def run_memory_generation(
         )
         memory_items = extraction_artifacts.items
         memory_items = apply_review_decisions(memory_items, state_dir)
+        memory_items = apply_rule_overrides(memory_items, override_commands)
         memory_items = prune_stale_recent_items(memory_items)
         memory_items = normalize_memory_item_roles(memory_items)
-        rendered_files = render_memory_files(memory_dir, memory_items, config.markdown_output)
+        rendered_files = render_memory_files(
+            memory_dir,
+            memory_items,
+            config.markdown_output,
+            continuations_model=resolve_continuations_model(config),
+            llm_client=llm_client,
+        )
         write_meta(memory_dir, memory_items, extraction_artifacts.windows, extraction_artifacts.candidates)
+        write_rule_override_state(override_state_path, override_commands)
+        rendered_files.extend(
+            write_consumer_experience_pages(
+                memory_dir,
+                memory_items,
+                evidence_records,
+                override_commands,
+                config.markdown_output,
+                continuations_model=resolve_continuations_model(config),
+                llm_client=llm_client,
+            )
+        )
 
         item_counts: defaultdict[str, int] = defaultdict(int)
         for item in memory_items:
@@ -185,6 +238,7 @@ def run_memory_generation(
             "rendered_file_count": len(rendered_files),
             "extraction_window_count": len(extraction_artifacts.windows),
             "extraction_candidate_count": len(extraction_artifacts.candidates),
+            "override_command_count": len(override_commands),
         }
         atomic_write_text(state_path, json.dumps(state_payload, indent=2))
         finished_at = utc_now()
@@ -419,7 +473,14 @@ def evidence_time_bucket(value: object) -> str:
     return text.split(".", 1)[0]
 
 
-def render_memory_files(memory_dir: Path, items: list[dict[str, object]], markdown_output: MarkdownOutputConfig) -> list[Path]:
+def render_memory_files(
+    memory_dir: Path,
+    items: list[dict[str, object]],
+    markdown_output: MarkdownOutputConfig,
+    *,
+    continuations_model: str,
+    llm_client=None,
+) -> list[Path]:
     clear_generated_memory_tree(memory_dir)
     grouped: defaultdict[str, list[dict[str, object]]] = defaultdict(list)
     for item in items:
@@ -436,7 +497,10 @@ def render_memory_files(memory_dir: Path, items: list[dict[str, object]], markdo
     for project in projects:
         for key in ("project_summary", "project_recent", "project_rules", "project_lessons"):
             definition = MEMORY_FILE_DEFINITIONS[key]
-            project_items = [item for item in grouped[key] if item.get("project") == project]
+            if key == "project_recent":
+                project_items = [item for item in items if item.get("project") == project]
+            else:
+                project_items = [item for item in grouped[key] if item.get("project") == project]
             if definition.optional and not project_items:
                 continue
             target = memory_dir / memory_relative_path(key, project)
@@ -446,15 +510,40 @@ def render_memory_files(memory_dir: Path, items: list[dict[str, object]], markdo
 
 
 def clear_generated_memory_tree(memory_dir: Path) -> None:
-    for child_name in ("global", "projects", "_meta"):
-        target = memory_dir / child_name
-        if target.exists():
-            shutil.rmtree(target)
+    owned_global_files = (
+        memory_dir / "global" / "user-rules.md",
+        memory_dir / "global" / "memory-change-log.md",
+        memory_dir / "global" / "memory-health.md",
+        memory_dir / "global" / "active-exceptions.md",
+        memory_dir / "global" / "daily-conversations.md",
+    )
+    owned_meta_files = (
+        memory_dir / "_meta" / "items.jsonl",
+        memory_dir / "_meta" / "merged_items.jsonl",
+        memory_dir / "_meta" / "extraction_windows.jsonl",
+        memory_dir / "_meta" / "candidates.jsonl",
+        memory_dir / "_meta" / "memory_health.json",
+    )
+    for path in owned_global_files + owned_meta_files:
+        if path.exists():
+            path.unlink()
+    projects_dir = memory_dir / "projects"
+    if projects_dir.exists():
+        for project_dir in projects_dir.iterdir():
+            if not project_dir.is_dir():
+                continue
+            for filename in ("project.md", "recent.md", "rules.md", "lessons.md", "continuations.md"):
+                target = project_dir / filename
+                if target.exists():
+                    target.unlink()
+    daily_dir = memory_dir / "daily-conversations"
+    if daily_dir.exists():
+        shutil.rmtree(daily_dir)
 
 
 def render_global_rules(path: Path, items: list[dict[str, object]], markdown_output: MarkdownOutputConfig) -> None:
     ensure_directory(path.parent)
-    lines = frontmatter("global-rules", None, ("memory", "rules", "global"), markdown_output)
+    lines = frontmatter("global-rules", None, ("memory", "rules", "global"), markdown_output, memory_role="directive")
     lines.extend([f"# {BRAIN} Global User Rules", ""])
     append_rule_sections(lines, items, include_scope_notes=False)
     lines.extend(["## PROVENANCE", "", "- Derived from clear or repeated user instructions.", ""])
@@ -489,7 +578,7 @@ def render_project_summary(project: str, items: list[dict[str, object]], markdow
         key=project_summary_rank,
     )
     descriptive_items = [item for item in stable_items if not is_config_instruction_statement(str(item.get("statement") or ""))]
-    lines = frontmatter("project-memory", project, (f"project/{project}", "memory"), markdown_output)
+    lines = frontmatter("project-memory", project, (f"project/{project}", "memory"), markdown_output, memory_role="descriptive")
     lines.extend([f"# {BRAIN} {title}", ""])
     used: set[str] = set()
     purpose_items = take_unseen([item for item in descriptive_items if is_purpose_item(item)], used, 3)
@@ -505,12 +594,35 @@ def render_project_summary(project: str, items: list[dict[str, object]], markdow
 
 def render_project_recent(project: str, items: list[dict[str, object]], markdown_output: MarkdownOutputConfig) -> list[str]:
     title = f"{display_project(project)} - Recent Context"
-    active_items = [item for item in items if str(item.get("item_type") or "") != "open_question"]
+    active_items = [
+        item
+        for item in items
+        if str(item.get("memory_class") or "") == "recent_project_state"
+        and str(item.get("item_type") or "") != "open_question"
+        and is_renderable_item(item)
+    ]
     ranked = sorted(active_items, key=lambda item: str(item.get("last_seen_at") or ""), reverse=True)[:PROJECT_RECENT_ITEM_CAP]
+    fallback_ranked = sorted(
+        [
+            item
+            for item in items
+            if str(item.get("memory_class") or "") in {"stable_project_summary", "project_lessons"}
+        ],
+        key=lambda item: str(item.get("last_seen_at") or ""),
+        reverse=True,
+    )
     used: set[str] = set()
-    lines = frontmatter("recent-context", project, (f"project/{project}", "recent"), markdown_output)
+    lines = frontmatter("recent-context", project, (f"project/{project}", "recent"), markdown_output, memory_role="descriptive")
     lines.extend([f"# {FIRE} {title}", ""])
     focus_items = take_unseen([item for item in ranked if str(item.get("item_type")) == "current_state"], used, 4)
+    if not focus_items:
+        focus_items = take_unseen(
+            [item for item in ranked if str(item.get("item_type")) in {"task", "next_step", "decision"}],
+            used,
+            3,
+        )
+    if not focus_items:
+        focus_items = take_unseen(fallback_ranked, used, 2)
     append_section(lines, "CURRENT FOCUS", item_statements(focus_items, max_chars=180) or ["No current focus extracted yet."])
     decision_items = take_unseen([item for item in ranked if str(item.get("item_type")) == "decision"] + filter_by_terms(ranked, ("decided", "decision", "agreed", "architecture")), used, 6)
     append_section(lines, "ACTIVE DECISIONS", item_statements(decision_items, max_chars=180) or ["No active decisions extracted yet."])
@@ -530,7 +642,7 @@ def render_project_recent(project: str, items: list[dict[str, object]], markdown
 
 def render_project_rules(project: str, items: list[dict[str, object]], markdown_output: MarkdownOutputConfig) -> list[str]:
     title = f"{display_project(project)} - Project Rules"
-    lines = frontmatter("project-rules", project, (f"project/{project}", "rules"), markdown_output)
+    lines = frontmatter("project-rules", project, (f"project/{project}", "rules"), markdown_output, memory_role="directive")
     lines.extend([f"# {GEAR} {title}", ""])
     append_rule_sections(lines, items, include_scope_notes=True)
     append_related(lines, project, markdown_output, include_global=False)
@@ -539,7 +651,7 @@ def render_project_rules(project: str, items: list[dict[str, object]], markdown_
 
 def render_project_lessons(project: str, items: list[dict[str, object]], markdown_output: MarkdownOutputConfig) -> list[str]:
     title = f"{display_project(project)} - Lessons Learned"
-    lines = frontmatter("lessons", project, (f"project/{project}", "lessons"), markdown_output)
+    lines = frontmatter("lessons", project, (f"project/{project}", "lessons"), markdown_output, memory_role="guidance")
     lines.extend([f"# {BRAIN} {title}", ""])
     append_section(lines, "MEMORY DESIGN", select_by_terms(items, ("memory", "lesson", "next time")) or item_statements(items[:6]) or ["No high-signal memory-design lessons extracted yet."])
     append_section(lines, "SYSTEM DESIGN", select_by_terms(items, ("system", "architecture", "root cause", "postmortem")) or ["No high-signal system-design lessons extracted yet."])
@@ -552,6 +664,7 @@ def frontmatter(
     project: str | None,
     tags: tuple[str, ...],
     markdown_output: MarkdownOutputConfig,
+    memory_role: str,
 ) -> list[str]:
     if not markdown_output.enable_frontmatter:
         return []
@@ -559,6 +672,7 @@ def frontmatter(
     if project:
         lines.append(f"project: {project}")
     lines.append(f"updated: {utc_now()}")
+    lines.append(f"memory_role: {memory_role}")
     if markdown_output.enable_tags:
         lines.append("tags: [" + ", ".join(tags) + "]")
     lines.extend(["---", ""])
@@ -570,13 +684,13 @@ def append_rule_sections(lines: list[str], items: list[dict[str, object]], inclu
     always = [item for item in eligible if rule_bucket(item) == "always"][:RULE_BUCKET_CAP]
     never = [item for item in eligible if rule_bucket(item) == "never"][:RULE_BUCKET_CAP]
     conditional = [item for item in eligible if rule_bucket(item) == "conditional"][:RULE_BUCKET_CAP]
-    explicit = [item for item in eligible if str(item.get("promotion_state")) == "explicit"]
+    visible_explicit = [item for item in always + never + conditional if str(item.get("promotion_state")) == "explicit"]
     inferred = [item for item in eligible if str(item.get("promotion_state")) != "explicit"][:INFERRED_RULE_CAP]
     append_section(lines, "ALWAYS DO", item_statements(always))
     append_section(lines, "NEVER DO", item_statements(never))
     append_section(lines, "CONDITIONAL RULES", item_statements(conditional))
     header = "PROMOTED RULES (EXPLICIT)" if include_scope_notes else "CONFIRMED RULES (EXPLICIT)"
-    append_section(lines, header, confirmation_summary(explicit))
+    append_section(lines, header, confirmation_summary(visible_explicit))
     append_section(lines, "INFERRED RULES" if include_scope_notes else "INFERRED RULES (REVIEWABLE)", inferred_rule_lines(inferred))
     if include_scope_notes:
         append_section(lines, "SCOPE NOTES", ["Applies only to this project."])
@@ -860,6 +974,8 @@ def is_renderable_text(statement: str) -> bool:
         return False
     if TRANSIENT_RENDER_PATTERN.search(statement):
         return False
+    if SCAFFOLD_CONTEXT_PATTERN.search(statement):
+        return False
     if RAW_FIRST_PERSON_PATTERN.search(statement):
         return False
     if statement.strip().endswith("?"):
@@ -886,6 +1002,7 @@ def looks_project_specific(statement: str) -> bool:
 def mentions_other_project(statement: str, project: str) -> bool:
     lowered = statement.lower()
     project_terms = {
+        "aitrader": ("openbrain", "open brain", "codexclaw", "wikimemory"),
         "ai-trader": ("openbrain", "open brain", "codexclaw", "wikimemory"),
         "open-brain": ("ai trader", "aitrader", "codexclaw", "wikimemory"),
         "codexclaw": ("ai trader", "aitrader", "openbrain", "open brain", "wikimemory"),
@@ -950,14 +1067,722 @@ def apply_review_decisions(items: list[dict[str, object]], state_dir: Path) -> l
     return filtered
 
 
+def extract_rule_override_commands(records: list[dict[str, object]]) -> list[dict[str, object]]:
+    commands: list[dict[str, object]] = []
+    for record in records:
+        if str(record.get("actor_type") or "") != "user":
+            continue
+        text = evidence_text(record)
+        if MEMORY_COMMAND_PREFIX not in text.lower():
+            continue
+        for raw_line in text.splitlines():
+            line = raw_line.strip()
+            if not line.lower().startswith(MEMORY_COMMAND_PREFIX):
+                continue
+            command = parse_rule_override_command(line, record)
+            if command:
+                commands.append(command)
+    deduped: dict[str, dict[str, object]] = {}
+    for command in commands:
+        deduped[str(command["command_id"])] = command
+    return sorted(deduped.values(), key=lambda item: str(item.get("timestamp") or ""))
+
+
+def parse_rule_override_command(line: str, record: dict[str, object]) -> dict[str, object] | None:
+    project_hint = slugify(str(record.get("project_hint") or record.get("source_id") or "project"))
+    timestamp = str(record.get("timestamp") or "")
+    evidence_id = str(record.get("evidence_id") or "")
+    provenance = dict(record.get("provenance") or {})
+    source_id = str(record.get("source_id") or provenance.get("source_id") or "")
+    message_index = int(provenance.get("source_line_no") or 0)
+
+    add_global = ADD_GLOBAL_RULE_PATTERN.match(line)
+    if add_global:
+        statement = normalize_statement(add_global.group(1))
+        return override_command(
+            action="add_rule",
+            scope="global",
+            project=None,
+            statement=statement,
+            record=record,
+            timestamp=timestamp,
+            evidence_id=evidence_id,
+            source_id=source_id,
+            message_index=message_index,
+        )
+    add_project = ADD_PROJECT_RULE_PATTERN.match(line)
+    if add_project:
+        statement = normalize_statement(str(add_project.group("statement") or ""))
+        target_project = slugify(str(add_project.group("project") or project_hint))
+        return override_command(
+            action="add_rule",
+            scope="project",
+            project=target_project,
+            statement=statement,
+            record=record,
+            timestamp=timestamp,
+            evidence_id=evidence_id,
+            source_id=source_id,
+            message_index=message_index,
+        )
+    remove_rule = REMOVE_RULE_PATTERN.match(line)
+    if remove_rule:
+        return override_command(
+            action="remove_rule",
+            scope="project" if project_hint not in {"", "project"} else "global",
+            project=None if project_hint in {"", "project"} else project_hint,
+            target_statement=normalize_statement(str(remove_rule.group("statement") or "")),
+            record=record,
+            timestamp=timestamp,
+            evidence_id=evidence_id,
+            source_id=source_id,
+            message_index=message_index,
+        )
+    replace_rule = REPLACE_RULE_PATTERN.match(line)
+    if replace_rule:
+        return override_command(
+            action="replace_rule",
+            scope="project" if project_hint not in {"", "project"} else "global",
+            project=None if project_hint in {"", "project"} else project_hint,
+            statement=normalize_statement(str(replace_rule.group("new") or "")),
+            target_statement=normalize_statement(str(replace_rule.group("old") or "")),
+            record=record,
+            timestamp=timestamp,
+            evidence_id=evidence_id,
+            source_id=source_id,
+            message_index=message_index,
+        )
+    reclassify = RECLASSIFY_RULE_PATTERN.match(line)
+    if reclassify:
+        scope = str(reclassify.group("scope") or "global").lower()
+        target_project = slugify(str(reclassify.group("project") or project_hint)) if scope == "project" else None
+        return override_command(
+            action="reclassify_rule_scope",
+            scope=scope,
+            project=target_project,
+            target_statement=normalize_statement(str(reclassify.group("statement") or "")),
+            record=record,
+            timestamp=timestamp,
+            evidence_id=evidence_id,
+            source_id=source_id,
+            message_index=message_index,
+        )
+    one_off_global = ONE_OFF_GLOBAL_EXCEPTION_PATTERN.match(line)
+    if one_off_global:
+        return override_command(
+            action="mark_one_off_exception",
+            scope="global",
+            project=None,
+            statement=normalize_statement(str(one_off_global.group(1) or "")),
+            record=record,
+            timestamp=timestamp,
+            evidence_id=evidence_id,
+            source_id=source_id,
+            message_index=message_index,
+            mode="one_off",
+        )
+    one_off_project = ONE_OFF_PROJECT_EXCEPTION_PATTERN.match(line)
+    if one_off_project:
+        target_project = slugify(str(one_off_project.group("project") or project_hint))
+        return override_command(
+            action="mark_one_off_exception",
+            scope="project",
+            project=target_project,
+            statement=normalize_statement(str(one_off_project.group("statement") or "")),
+            record=record,
+            timestamp=timestamp,
+            evidence_id=evidence_id,
+            source_id=source_id,
+            message_index=message_index,
+            mode="one_off",
+        )
+    return None
+
+
+def override_command(
+    *,
+    action: str,
+    scope: str,
+    project: str | None,
+    record: dict[str, object],
+    timestamp: str,
+    evidence_id: str,
+    source_id: str,
+    message_index: int,
+    statement: str | None = None,
+    target_statement: str | None = None,
+    mode: str = "durable",
+) -> dict[str, object]:
+    expires_at = None
+    if mode == "one_off" and timestamp:
+        try:
+            expires_at = (datetime.fromisoformat(timestamp.replace("Z", "+00:00")) + timedelta(days=30)).isoformat().replace("+00:00", "Z")
+        except ValueError:
+            expires_at = None
+    payload = {
+        "schema_version": MEMORY_RULE_OVERRIDE_SCHEMA_VERSION,
+        "command_id": stable_id(action, scope, project or "global", statement or "", target_statement or "", evidence_id),
+        "action": action,
+        "scope": scope,
+        "project": project,
+        "statement": statement,
+        "target_statement": target_statement,
+        "mode": mode,
+        "expires_at": expires_at,
+        "timestamp": timestamp,
+        "origin": {
+            "source_id": source_id,
+            "snippet_id": evidence_id,
+            "message_index": message_index,
+        },
+        "source_text": evidence_text(record),
+    }
+    return payload
+
+
+def apply_rule_overrides(items: list[dict[str, object]], commands: list[dict[str, object]]) -> list[dict[str, object]]:
+    updated = [dict(item) for item in items]
+    for command in commands:
+        action = str(command.get("action") or "")
+        if action == "add_rule":
+            updated = add_override_rule(updated, command)
+        elif action == "remove_rule":
+            updated = remove_override_rule(updated, command)
+        elif action == "replace_rule":
+            updated = remove_override_rule(updated, command)
+            updated = add_override_rule(updated, command)
+        elif action == "reclassify_rule_scope":
+            updated = reclassify_override_rule(updated, command)
+    return updated
+
+
+def add_override_rule(items: list[dict[str, object]], command: dict[str, object]) -> list[dict[str, object]]:
+    statement = normalize_statement(str(command.get("statement") or ""))
+    if not statement:
+        return items
+    scope = str(command.get("scope") or "global")
+    project = str(command.get("project") or "")
+    memory_class = "global_user_rules" if scope == "global" else "project_rules"
+    durable_project = None if scope == "global" else project
+    item_id = stable_id("consumer_override", scope, durable_project or "global", statement)
+    new_item = {
+        "item_id": item_id,
+        "memory_schema_version": MEMORY_SCHEMA_VERSION,
+        "memory_class": memory_class,
+        "memory_role": "rule",
+        "scope": "global" if scope == "global" else "project",
+        "project": durable_project,
+        "promotion_state": "explicit",
+        "durability": "durable",
+        "temporal_status": "durable",
+        "statement": statement,
+        "source_actor_types": ["user"],
+        "evidence_ids": [str(command.get("origin", {}).get("snippet_id") or "")],
+        "provenance_refs": [dict(command.get("origin") or {})],
+        "first_seen_at": command.get("timestamp"),
+        "last_seen_at": command.get("timestamp"),
+        "confidence": "explicit",
+        "review_required": False,
+        "review_reason": None,
+        "authority": "consumer_override",
+        "locked_by_consumer": True,
+        "override_command_id": str(command.get("command_id") or ""),
+    }
+    updated: list[dict[str, object]] = []
+    matched = False
+    for item in items:
+        if (
+            str(item.get("memory_role") or "") == "rule"
+            and str(item.get("scope") or "") == new_item["scope"]
+            and str(item.get("project") or "") == str(new_item.get("project") or "")
+            and normalize_statement(str(item.get("statement") or "")) == statement
+        ):
+            merged = dict(item)
+            merged.update(new_item)
+            merged["evidence_ids"] = sorted(set(item.get("evidence_ids", [])) | set(new_item["evidence_ids"]))
+            merged["provenance_refs"] = list(item.get("provenance_refs", [])) + [
+                ref for ref in new_item["provenance_refs"] if ref not in item.get("provenance_refs", [])
+            ]
+            updated.append(merged)
+            matched = True
+            continue
+        updated.append(item)
+    if not matched:
+        updated.append(new_item)
+    return updated
+
+
+def remove_override_rule(items: list[dict[str, object]], command: dict[str, object]) -> list[dict[str, object]]:
+    target_statement = normalize_statement(str(command.get("target_statement") or ""))
+    scope = str(command.get("scope") or "")
+    project = str(command.get("project") or "")
+    return [
+        item
+        for item in items
+        if not (
+            str(item.get("memory_role") or "") == "rule"
+            and normalize_statement(str(item.get("statement") or "")) == target_statement
+            and (not scope or str(item.get("scope") or "") == ("global" if scope == "global" else "project"))
+            and (scope != "project" or not project or str(item.get("project") or "") == project)
+        )
+    ]
+
+
+def reclassify_override_rule(items: list[dict[str, object]], command: dict[str, object]) -> list[dict[str, object]]:
+    target_statement = normalize_statement(str(command.get("target_statement") or ""))
+    scope = str(command.get("scope") or "global")
+    project = str(command.get("project") or "")
+    updated: list[dict[str, object]] = []
+    for item in items:
+        if str(item.get("memory_role") or "") != "rule":
+            updated.append(item)
+            continue
+        if normalize_statement(str(item.get("statement") or "")) != target_statement:
+            updated.append(item)
+            continue
+        rewritten = dict(item)
+        rewritten["scope"] = "global" if scope == "global" else "project"
+        rewritten["project"] = None if scope == "global" else project
+        rewritten["memory_class"] = "global_user_rules" if scope == "global" else "project_rules"
+        rewritten["authority"] = "consumer_override"
+        rewritten["locked_by_consumer"] = True
+        rewritten["override_command_id"] = str(command.get("command_id") or "")
+        updated.append(rewritten)
+    return updated
+
+
+def write_rule_override_state(path: Path, commands: list[dict[str, object]]) -> None:
+    payload = {
+        "schema_version": MEMORY_RULE_OVERRIDE_SCHEMA_VERSION,
+        "last_updated_at": utc_now(),
+        "command_count": len(commands),
+        "active_exception_count": len(active_exception_commands(commands)),
+        "commands": commands,
+    }
+    atomic_write_text(path, json.dumps(payload, indent=2, sort_keys=True) + "\n")
+
+
+def write_consumer_experience_pages(
+    memory_dir: Path,
+    items: list[dict[str, object]],
+    evidence_records: list[dict[str, object]],
+    commands: list[dict[str, object]],
+    markdown_output: MarkdownOutputConfig,
+    *,
+    continuations_model: str,
+    llm_client=None,
+) -> list[Path]:
+    rendered: list[Path] = []
+    health_payload = build_memory_health_payload(items, commands)
+    meta_dir = memory_dir / "_meta"
+    ensure_directory(meta_dir)
+    atomic_write_text(meta_dir / "memory_health.json", json.dumps(health_payload, indent=2, sort_keys=True) + "\n")
+
+    change_log_path = memory_dir / "global" / "memory-change-log.md"
+    render_memory_change_log(change_log_path, commands, markdown_output)
+    rendered.append(change_log_path)
+
+    health_path = memory_dir / "global" / "memory-health.md"
+    render_memory_health(health_path, health_payload, markdown_output)
+    rendered.append(health_path)
+
+    exceptions_path = memory_dir / "global" / "active-exceptions.md"
+    render_active_exceptions(exceptions_path, active_exception_commands(commands), markdown_output)
+    rendered.append(exceptions_path)
+
+    daily_paths = render_daily_conversation_pages(memory_dir, evidence_records, markdown_output)
+    rendered.extend(daily_paths)
+
+    projects = sorted({str(item.get("project") or "") for item in items if item.get("project")})
+    for project in projects:
+        continuation_path = memory_dir / "projects" / project / "continuations.md"
+        render_project_continuations(
+            continuation_path,
+            project,
+            [item for item in items if str(item.get("project") or "") == project],
+            [command for command in active_exception_commands(commands) if str(command.get("project") or "") == project],
+            markdown_output,
+            continuations_model=continuations_model,
+            llm_client=llm_client,
+        )
+        rendered.append(continuation_path)
+    return rendered
+
+
+def render_daily_conversation_pages(
+    memory_dir: Path,
+    evidence_records: list[dict[str, object]],
+    markdown_output: MarkdownOutputConfig,
+) -> list[Path]:
+    grouped: dict[str, list[dict[str, object]]] = defaultdict(list)
+    for record in evidence_records:
+        day = str(record.get("timestamp") or "")[:10]
+        if not re.match(r"^\d{4}-\d{2}-\d{2}$", day):
+            continue
+        if not is_daily_conversation_record(record):
+            continue
+        grouped[day].append(record)
+
+    rendered: list[Path] = []
+    daily_dir = memory_dir / "daily-conversations"
+    ensure_directory(daily_dir)
+    for day in sorted(grouped):
+        path = daily_dir / f"{day}.md"
+        render_daily_conversation_page(path, day, grouped[day], markdown_output)
+        rendered.append(path)
+
+    index_path = memory_dir / "global" / "daily-conversations.md"
+    render_daily_conversation_index(index_path, sorted(grouped), markdown_output)
+    rendered.append(index_path)
+    return rendered
+
+
+def is_daily_conversation_record(record: dict[str, object]) -> bool:
+    if str(record.get("evidence_type") or "") != "log_event":
+        return False
+    actor_type = str(record.get("actor_type") or "")
+    if actor_type not in {"user", "assistant"}:
+        return False
+    text = clean_daily_conversation_text(evidence_text(record))
+    return bool(text)
+
+
+def clean_daily_conversation_text(text: str) -> str:
+    cleaned = " ".join(str(text or "").split()).strip()
+    if not cleaned:
+        return ""
+    reject_prefixes = (
+        "# AGENTS.md instructions",
+        "<environment_context>",
+        "<permissions instructions>",
+        "<collaboration_mode>",
+        "## Available skills",
+        "### Available skills",
+    )
+    if any(cleaned.startswith(prefix) for prefix in reject_prefixes):
+        return ""
+    cleaned = re.sub(r"^# Context from my IDE setup:\s*", "", cleaned, flags=re.IGNORECASE)
+    cleaned = re.sub(r"^## Active file:.*$", "", cleaned, flags=re.IGNORECASE)
+    cleaned = re.sub(r"^## Open tabs:.*$", "", cleaned, flags=re.IGNORECASE)
+    cleaned = re.sub(r"^## My request for Codex:\s*", "", cleaned, flags=re.IGNORECASE)
+    cleaned = cleaned.strip(" -")
+    if len(cleaned) > 280:
+        cleaned = cleaned[:277].rstrip() + "..."
+    return cleaned
+
+
+def render_daily_conversation_page(path: Path, day: str, records: list[dict[str, object]], markdown_output: MarkdownOutputConfig) -> None:
+    ensure_directory(path.parent)
+    lines = frontmatter("daily-conversation-history", None, ("memory", "daily-conversations"), markdown_output, memory_role="descriptive")
+    lines.extend([f"# {BRAIN} Daily Conversation History - {day}", ""])
+    append_section(
+        lines,
+        "SUMMARY",
+        [
+            f"{len(records)} conversation event(s) captured for this day.",
+            "This is a compact readable history derived from artifacts, not a verbatim transcript.",
+        ],
+    )
+    entries: list[str] = []
+    for record in sorted(records, key=lambda item: str(item.get("timestamp") or "")):
+        text = clean_daily_conversation_text(evidence_text(record))
+        if not text:
+            continue
+        actor = "User" if str(record.get("actor_type") or "") == "user" else "Assistant"
+        timestamp = str(record.get("timestamp") or "")
+        time_label = timestamp[11:16] if len(timestamp) >= 16 else "unknown"
+        entries.append(f"{time_label} {actor}: {text}")
+    append_numbered_section(lines, "CONVERSATION", entries or ["No readable conversation content extracted for this day."])
+    atomic_write_text(path, "\n".join(lines))
+
+
+def render_daily_conversation_index(path: Path, days: list[str], markdown_output: MarkdownOutputConfig) -> None:
+    ensure_directory(path.parent)
+    lines = frontmatter("daily-conversation-index", None, ("memory", "daily-conversations", "global"), markdown_output, memory_role="descriptive")
+    lines.extend([f"# {BRAIN} Daily Conversations", ""])
+    append_section(
+        lines,
+        "USAGE",
+        [
+            "Daily conversation pages are available for Obsidian browsing.",
+            "They are not part of the default agent bootstrap and should only be read when explicitly requested.",
+        ],
+    )
+    entries = [f"memory/daily-conversations/{day}.md" for day in reversed(days)]
+    append_section(lines, "AVAILABLE DAYS", entries or ["No daily conversation pages generated yet."])
+    atomic_write_text(path, "\n".join(lines))
+
+
+def resolve_continuations_model(config) -> str:
+    return (
+        os.environ.get("WIKIMEMORY_CONTINUATIONS_MODEL", "").strip()
+        or os.environ.get(config.memory_extraction.provider.model_env, "").strip()
+        or config.memory_extraction.provider.default_model
+        or DEFAULT_CONTINUATIONS_MODEL
+    )
+
+
+def active_exception_commands(commands: list[dict[str, object]]) -> list[dict[str, object]]:
+    active: list[dict[str, object]] = []
+    now = datetime.now(timezone.utc)
+    for command in commands:
+        if str(command.get("action") or "") != "mark_one_off_exception":
+            continue
+        expires_at = str(command.get("expires_at") or "")
+        if expires_at:
+            try:
+                if datetime.fromisoformat(expires_at.replace("Z", "+00:00")) < now:
+                    continue
+            except ValueError:
+                pass
+        active.append(command)
+    return active
+
+
+def build_memory_health_payload(items: list[dict[str, object]], commands: list[dict[str, object]]) -> dict[str, object]:
+    projects = sorted({str(item.get("project") or "") for item in items if item.get("project")})
+    explicit_rules = sum(1 for item in items if str(item.get("memory_role") or "") == "rule" and str(item.get("confidence") or "") == "explicit")
+    review_queue = sum(1 for item in items if item.get("review_required"))
+    locked_rules = sum(1 for item in items if item.get("locked_by_consumer"))
+    stale_recent = sum(
+        1
+        for item in items
+        if str(item.get("memory_class") or "") == "recent_project_state" and is_older_than_days(item.get("last_seen_at"), RECENT_MEMORY_MAX_DAYS)
+    )
+    project_summaries = sum(1 for project in projects if any(str(item.get("project") or "") == project and str(item.get("memory_class") or "") == "stable_project_summary" for item in items))
+    project_recent = sum(1 for project in projects if any(str(item.get("project") or "") == project and str(item.get("memory_class") or "") == "recent_project_state" for item in items))
+    penalties = review_queue * 6 + stale_recent * 8 + max(0, len(projects) - project_summaries) * 10 + max(0, len(projects) - project_recent) * 6
+    score = max(0, min(100, 100 - penalties))
+    return {
+        "generated_at": utc_now(),
+        "score": score,
+        "project_count": len(projects),
+        "explicit_rule_count": explicit_rules,
+        "review_queue_count": review_queue,
+        "locked_rule_count": locked_rules,
+        "active_exception_count": len(active_exception_commands(commands)),
+        "stale_recent_count": stale_recent,
+        "coverage": {
+            "projects_with_summary": project_summaries,
+            "projects_with_recent": project_recent,
+        },
+    }
+
+
+def render_memory_change_log(path: Path, commands: list[dict[str, object]], markdown_output: MarkdownOutputConfig) -> None:
+    ensure_directory(path.parent)
+    lines = frontmatter("memory-change-log", None, ("memory", "changes", "global"), markdown_output, memory_role="descriptive")
+    lines.extend([f"# {BRAIN} Memory Change Log", ""])
+    append_section(
+        lines,
+        "SUMMARY",
+        [
+            f"{len(commands)} consumer-authored memory change command(s) are currently recorded.",
+            "Durable override commands are protected from automatic lint rewrites.",
+        ],
+    )
+    entries = []
+    for command in sorted(commands, key=lambda item: str(item.get("timestamp") or ""), reverse=True)[:20]:
+        action = str(command.get("action") or "")
+        mode = str(command.get("mode") or "durable")
+        scope = str(command.get("scope") or "")
+        project = str(command.get("project") or "")
+        statement = str(command.get("statement") or command.get("target_statement") or "").strip()
+        timestamp = str(command.get("timestamp") or "")
+        qualifier = f"{scope} {project}".strip()
+        entries.append(f"{timestamp}: {action} ({mode}, {qualifier}) -> {statement}")
+    append_section(lines, "RECENT CHANGES", entries)
+    atomic_write_text(path, "\n".join(lines))
+
+
+def render_memory_health(path: Path, payload: dict[str, object], markdown_output: MarkdownOutputConfig) -> None:
+    ensure_directory(path.parent)
+    lines = frontmatter("memory-health", None, ("memory", "health", "global"), markdown_output, memory_role="descriptive")
+    lines.extend([f"# {BRAIN} Memory Health", ""])
+    append_section(
+        lines,
+        "STATUS",
+        [
+            f"Overall memory health score: {payload.get('score')}/100.",
+            f"Projects tracked: {payload.get('project_count')}.",
+            f"Explicit rules: {payload.get('explicit_rule_count')}.",
+            f"Locked consumer overrides: {payload.get('locked_rule_count')}.",
+        ],
+    )
+    append_section(
+        lines,
+        "WATCH LIST",
+        [
+            f"Review queue items: {payload.get('review_queue_count')}.",
+            f"Active one-off exceptions: {payload.get('active_exception_count')}.",
+            f"Stale recent items: {payload.get('stale_recent_count')}.",
+            f"Projects with summary coverage: {payload.get('coverage', {}).get('projects_with_summary', 0)}.",
+            f"Projects with recent coverage: {payload.get('coverage', {}).get('projects_with_recent', 0)}.",
+        ],
+    )
+    atomic_write_text(path, "\n".join(lines))
+
+
+def render_active_exceptions(path: Path, commands: list[dict[str, object]], markdown_output: MarkdownOutputConfig) -> None:
+    ensure_directory(path.parent)
+    lines = frontmatter("active-exceptions", None, ("memory", "exceptions", "global"), markdown_output, memory_role="descriptive")
+    lines.extend([f"# {FIRE} Active Exceptions", ""])
+    bullets = []
+    for command in sorted(commands, key=lambda item: str(item.get("timestamp") or ""), reverse=True):
+        scope = str(command.get("scope") or "")
+        project = str(command.get("project") or "")
+        statement = str(command.get("statement") or "").strip()
+        expires_at = str(command.get("expires_at") or "")
+        label = f"{scope} {project}".strip()
+        bullets.append(f"{label}: {statement} (expires {expires_at or 'unknown'})")
+    append_section(lines, "ACTIVE", bullets)
+    atomic_write_text(path, "\n".join(lines))
+
+
+def render_project_continuations(
+    path: Path,
+    project: str,
+    items: list[dict[str, object]],
+    exceptions: list[dict[str, object]],
+    markdown_output: MarkdownOutputConfig,
+    *,
+    continuations_model: str,
+    llm_client=None,
+) -> None:
+    ensure_directory(path.parent)
+    lines = frontmatter("project-continuations", project, (f"project/{project}", "continuations"), markdown_output, memory_role="descriptive")
+    lines.extend([f"# {FIRE} {display_project(project)} - Continuation Threads", ""])
+    continuations = synthesize_project_continuations(project, items, exceptions, continuations_model, llm_client)
+    append_numbered_section(lines, "LIKELY CONTINUATION THREADS", continuations[:6] or ["No strong continuation thread extracted yet."])
+    append_section(lines, "PROJECT WORKSTYLE HINTS", project_workstyle_hints(items))
+    append_section(
+        lines,
+        "ACTIVE EXCEPTIONS",
+        [str(command.get("statement") or "").strip() for command in exceptions if str(command.get("statement") or "").strip()],
+    )
+    append_section(lines, "USAGE", ["Use these as continuation options only. Do not start work on them until the consumer chooses one."])
+    atomic_write_text(path, "\n".join(lines))
+
+
+def synthesize_project_continuations(
+    project: str,
+    items: list[dict[str, object]],
+    exceptions: list[dict[str, object]],
+    model: str,
+    llm_client=None,
+) -> list[str]:
+    recent_items = [
+        item
+        for item in items
+        if str(item.get("memory_class") or "") == "recent_project_state" and is_renderable_item(item)
+    ]
+    if not recent_items:
+        return []
+    payload = {
+        "task": "Summarize current project continuation options for a new chat bootstrap. Return JSON only.",
+        "project": project,
+        "requirements": {
+            "max_threads": 6,
+            "style": [
+                "Each thread must be a clear resumable option, not a copied chat fragment.",
+                "Do not use second-person commands like 'implement this' or 'do that'.",
+                "Name the workstream or decision clearly enough that the consumer can recognize it.",
+                "Keep each thread concise, ideally one sentence under 140 characters.",
+                "Use only evidence-backed active work, pending decisions, open problems, or next-step clusters.",
+            ],
+        },
+        "recent_items": [serialize_continuation_item(item) for item in sorted(recent_items, key=continuation_rank, reverse=True)[:18]],
+        "project_rules": [clean_render_statement(str(item.get("statement") or "")) for item in items if str(item.get("memory_class") or "") == "project_rules"][:6],
+        "active_exceptions": [str(command.get("statement") or "").strip() for command in exceptions if str(command.get("statement") or "").strip()][:4],
+    }
+    try:
+        response = call_llm_json(continuations_prompt(), payload, model, llm_client)
+    except Exception:
+        return []
+    threads = response.get("threads")
+    if not isinstance(threads, list):
+        return []
+    normalized: list[str] = []
+    seen: set[str] = set()
+    for thread in threads:
+        if isinstance(thread, dict):
+            statement = str(thread.get("summary") or thread.get("title") or "").strip()
+        else:
+            statement = str(thread).strip()
+        statement = clean_render_statement(statement)
+        normalized_statement = normalize_statement(statement)
+        if not statement or normalized_statement in seen:
+            continue
+        if RENDER_REJECT_PATTERN.search(statement) or RECENT_NOISE_PATTERN.search(statement):
+            continue
+        seen.add(normalized_statement)
+        normalized.append(statement)
+    return normalized[:6]
+
+
+def continuations_prompt() -> str:
+    return (
+        "You turn recent project memory into continuation options for a returning consumer. "
+        "Return a JSON object with a 'threads' array. "
+        "Each thread should be a short, concrete resumable option describing a workstream, unresolved problem, or pending decision. "
+        "Do not copy raw imperative chat fragments. "
+        "Do not invent work that is not supported by the evidence. "
+        "Do not assume the consumer wants any thread started automatically."
+    )
+
+
+def serialize_continuation_item(item: dict[str, object]) -> dict[str, object]:
+    return {
+        "item_type": str(item.get("item_type") or ""),
+        "statement": clean_render_statement(str(item.get("statement") or item.get("agent_facing_statement") or "")),
+        "last_seen_at": str(item.get("last_seen_at") or ""),
+        "confidence": str(item.get("confidence") or ""),
+        "temporal_status": str(item.get("temporal_status") or ""),
+    }
+
+
+def continuation_rank(item: dict[str, object]) -> tuple[int, str]:
+    item_type = str(item.get("item_type") or "")
+    priority = {
+        "current_state": 0,
+        "task": 1,
+        "next_step": 1,
+        "decision": 2,
+        "failure_risk": 3,
+        "open_question": 4,
+    }.get(item_type, 5)
+    return (-priority, str(item.get("last_seen_at") or ""))
+
+
+def project_workstyle_hints(items: list[dict[str, object]]) -> list[str]:
+    rules = [item for item in items if str(item.get("memory_class") or "") == "project_rules"]
+    hints = []
+    for item in rules:
+        statement = clean_render_statement(str(item.get("statement") or ""))
+        if re.search(r"\b(?:prefer|always|never|do not|must|show|ask|confirm)\b", statement, re.IGNORECASE):
+            hints.append(statement)
+    return hints[:5]
+
+
 def prune_stale_recent_items(items: list[dict[str, object]]) -> list[dict[str, object]]:
+    latest_recent_by_project: dict[str, str] = {}
+    for item in items:
+        if str(item.get("memory_class")) != "recent_project_state":
+            continue
+        project = str(item.get("project") or "")
+        last_seen_at = str(item.get("last_seen_at") or "")
+        if last_seen_at and last_seen_at > latest_recent_by_project.get(project, ""):
+            latest_recent_by_project[project] = last_seen_at
     return [
         item
         for item in items
         if str(item.get("memory_class")) != "recent_project_state"
         or (
-            str(item.get("temporal_status") or "active") == "active"
-            and not is_older_than_days(item.get("last_seen_at"), RECENT_MEMORY_MAX_DAYS)
+            str(item.get("last_seen_at") or "") == latest_recent_by_project.get(str(item.get("project") or ""), "")
+            or (
+                str(item.get("temporal_status") or "active") == "active"
+                and not is_older_than_days(item.get("last_seen_at"), RECENT_MEMORY_MAX_DAYS)
+            )
         )
     ]
 
@@ -1055,6 +1880,8 @@ def candidate_clauses(text: str) -> list[str]:
     for part in raw_parts:
         clause = clean_clause(part)
         if not is_meaningful_clause(clause):
+            continue
+        if clause.lower().startswith(MEMORY_COMMAND_PREFIX):
             continue
         if clause.startswith("#") or clause.lower().startswith(("open tabs", "active file")):
             continue

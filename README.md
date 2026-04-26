@@ -1,13 +1,16 @@
 # WikiMemory
 
-WikiMemory is a file-based memory pipeline for external Codex session logs.
+Point your code agent to [START_HERE_FOR_AGENT.md](START_HERE_FOR_AGENT.md) to begin configuration.
 
-Its job is to turn raw `.jsonl` session traces into:
+WikiMemory is a file-based memory pipeline for agent session logs and related project context.
+
+Its job is to turn raw session traces and project signals into:
 
 - structured normalized events
 - segmented conversational/work units
 - deterministic domain classification
 - extracted knowledge items
+- optional consumer working-profile inputs for better future collaboration
 - synthesized wiki pages
 - compact bootstrap memory for future agents
 - audit findings over the entire memory layer
@@ -16,7 +19,7 @@ The project is designed to preserve provenance, stay incremental, and keep the r
 
 ## Why This Exists
 
-Codex session logs contain a large amount of useful information, but they are difficult to reuse directly:
+Agent session logs contain a large amount of useful information, but they are difficult to reuse directly:
 
 - they are append-only raw traces
 - they mix user intent, agent reasoning, tool calls, code work, status chatter, and planning
@@ -46,6 +49,34 @@ WikiMemory solves that by building a layered pipeline:
 - LLM use is bounded and evidence-backed, not freeform.
 - Knowledge should be compressed progressively, not copied blindly.
 - Fixes should generalize across the corpus, not overfit one sample.
+- Consumer profiling should stay behavior-oriented, evidence-backed, and non-sensitive.
+
+## Consumer Working Profile
+
+WikiMemory can support a `consumer working profile` to help future agent sessions collaborate better with the same consumer.
+
+This should be limited to work-relevant traits such as:
+
+- communication preferences
+- workflow preferences
+- technical strengths
+- active domains
+- current goals
+- persistent constraints
+
+It should not infer or store:
+
+- IQ or intelligence scores
+- psychological diagnosis
+- mental-health inference
+- protected-class traits
+- other sensitive personal attributes
+
+Reference files:
+
+- `docs/consumer-profile.md`
+- `schema/consumer_working_profile.schema.json`
+- `config/consumer_profile_policy.json`
 
 ## End-to-End Pipeline
 
@@ -106,7 +137,7 @@ Writes:
 
 Before segmentation, the redesigned product foundation can also build a canonical `evidence/` layer:
 
-- log evidence from pointer-first normalized Codex events
+- log evidence from pointer-first normalized agent events
 - project-delta evidence from Git working tree status and HEAD metadata
 - actor/source/provenance fields that future memory-first extraction can consume
 
@@ -155,7 +186,7 @@ The configured agent bootstrap file can then be generated from compact memory:
 python -m wikimemory agent-bootstrap
 ```
 
-For the default Codex configuration this writes `AGENTS.md` as a tiny entry map that points to the derived memory files instead of copying the whole memory layer into the bootstrap.
+In the default configuration this writes a tiny bootstrap entry map, usually `AGENTS.md`, that points to the derived memory files instead of copying the whole memory layer into the bootstrap.
 
 Bootstrap rendering is configurable:
 
@@ -188,17 +219,20 @@ python -m wikimemory memory-review --approve <item_id>
 python -m wikimemory memory-review --reject <item_id>
 ```
 
-Apply safe structural lint fixes, such as repairing missing bootstrap entry links:
+Apply canonical item fixes and rerender pages before the final lint pass:
 
 ```powershell
-python -m wikimemory memory-lint --fix
+python -m wikimemory memory-lint --fix --max-fix-rounds 2
 ```
 
-Install a simple Windows scheduled refresh task:
+Prepare scheduler artifacts without activating anything:
 
 ```powershell
+python -m wikimemory scheduler-plan
 powershell -ExecutionPolicy Bypass -File scripts/install-windows-task.ps1 -IntervalMinutes 60
 ```
+
+`scheduler-plan` writes a dry-run plan to `state/scheduler_plan.json` and a commented activation script to `scripts/install-windows-task.generated.ps1`. Scheduler timing now lives in `config/product_config.json`, including weekdays, local run time, ingest interval, lint interval, log-update gating, and whether future scheduled lint runs should use autofix.
 
 Adapter extension notes live in `docs/adapters.md`.
 
@@ -573,9 +607,16 @@ Most phase commands support standard path overrides and optional scoping by `--s
 
 ### First Setup
 
-1. Configure `config/source_roots.json` or set `WIKIMEMORY_CODEX_SESSIONS_ROOT`
-2. Set `OPENAI_API_KEY`
-3. Run:
+1. Point your code agent to `START_HERE_FOR_AGENT.md`
+2. Or run:
+
+```powershell
+python -m wikimemory onboard
+```
+
+3. Configure `config/source_roots.json` or set `WIKIMEMORY_CODEX_SESSIONS_ROOT`
+4. Set `OPENAI_API_KEY`
+5. Run:
 
 ```powershell
 python -m wikimemory refresh
@@ -772,8 +813,8 @@ The system is usable end-to-end, but it should still be treated as an evolving m
 
 A good one-paragraph explanation is:
 
-WikiMemory is a multi-phase memory pipeline for external Codex session logs. It discovers raw `.jsonl` sessions without copying them into the repo, normalizes them into pointer-based canonical events, segments them into work units, classifies those units into domains such as global, ai-trader, open-brain, ai-scientist, and cross-project, extracts structured durable and temporal knowledge with provenance, synthesizes an Obsidian-compatible wiki using bounded OpenAI-backed summaries over deterministic evidence, compresses the highest-signal subset into bootstrap memory for future agents, audits the outputs for contradictions/drift/quality issues, and supports both incremental daily refreshes and strict full-corpus runs with disk-budget and phase gates.
+WikiMemory is a multi-phase memory pipeline for agent session logs. It discovers raw session traces without copying them into the repo, normalizes them into pointer-based canonical events, segments them into work units, classifies those units into domains, extracts structured durable and temporal knowledge with provenance, synthesizes a readable memory layer using bounded LLM-backed summaries over deterministic evidence, compresses the highest-signal subset into bootstrap memory for future agent sessions, audits the outputs for contradictions, drift, and quality issues, and supports both incremental refreshes and strict full-corpus runs with phase gates.
 
 And the shortest explanation is:
 
-WikiMemory turns raw Codex logs into a provenance-backed wiki and startup memory layer through deterministic preprocessing plus bounded LLM synthesis.
+WikiMemory turns raw agent logs into a provenance-backed memory and startup layer through deterministic preprocessing plus bounded LLM synthesis.

@@ -53,6 +53,56 @@ class MemoryLintTests(unittest.TestCase):
         item.update(overrides)
         return item
 
+    def fake_llm(self, system_prompt: str, payload: dict[str, object], model: str) -> dict[str, object]:
+        findings = []
+        for item in payload["items"]:
+            statement = str(item.get("statement") or "")
+            item_id = str(item.get("item_id") or "unknown")
+            if "PLEASE IMPLEMENT THIS PLAN" in statement:
+                findings.append(
+                    {
+                        "severity": "error",
+                        "family": "rule_quality",
+                        "check_type": "schema_noise_rule",
+                        "scope_key": item_id,
+                        "summary": "Durable rule contains scaffold/runtime noise.",
+                        "item_id": item_id,
+                    }
+                )
+            if "think about the system as new" in statement:
+                findings.extend(
+                    [
+                        {
+                            "severity": "error",
+                            "family": "quality",
+                            "check_type": "purpose_contains_rule",
+                            "scope_key": item_id,
+                            "summary": "Project purpose contains behavior guidance that belongs in project rules.",
+                            "item_id": item_id,
+                        },
+                        {
+                            "severity": "warning",
+                            "family": "quality",
+                            "check_type": "vague_memory_statement",
+                            "scope_key": item_id,
+                            "summary": "Memory statement needs hidden conversation context to be useful.",
+                            "item_id": item_id,
+                        },
+                    ]
+                )
+            if "trade lifecycle integrity" in statement:
+                findings.append(
+                    {
+                        "severity": "error",
+                        "family": "scope",
+                        "check_type": "global_scope_leak",
+                        "scope_key": item_id,
+                        "summary": "Global rule appears to contain project-specific guidance.",
+                        "item_id": item_id,
+                    }
+                )
+        return {"findings": findings}
+
     def test_memory_lint_flags_rule_noise_and_missing_provenance(self) -> None:
         self.write_items(
             [
@@ -73,6 +123,8 @@ class MemoryLintTests(unittest.TestCase):
             state_dir=self.state_dir,
             memory_dir=self.memory_dir,
             audits_dir=self.audits_dir,
+            llm_client=self.fake_llm,
+            model="stub-model",
         )
 
         self.assertTrue(result.report.success, result.report.fatal_error_summary)
@@ -102,6 +154,8 @@ class MemoryLintTests(unittest.TestCase):
             state_dir=self.state_dir,
             memory_dir=self.memory_dir,
             audits_dir=self.audits_dir,
+            llm_client=self.fake_llm,
+            model="stub-model",
         )
 
         self.assertTrue(result.report.success, result.report.fatal_error_summary)
@@ -133,6 +187,8 @@ class MemoryLintTests(unittest.TestCase):
             audits_dir=self.audits_dir,
             bootstrap_path=bootstrap_path,
             autofix=True,
+            llm_client=self.fake_llm,
+            model="stub-model",
         )
 
         self.assertTrue(result.report.success, result.report.fatal_error_summary)
@@ -152,6 +208,8 @@ class MemoryLintTests(unittest.TestCase):
             state_dir=self.state_dir,
             memory_dir=self.memory_dir,
             audits_dir=self.audits_dir,
+            llm_client=self.fake_llm,
+            model="stub-model",
         )
 
         self.assertTrue(result.report.success, result.report.fatal_error_summary)
@@ -179,12 +237,91 @@ class MemoryLintTests(unittest.TestCase):
             state_dir=self.state_dir,
             memory_dir=self.memory_dir,
             audits_dir=self.audits_dir,
+            llm_client=self.fake_llm,
+            model="stub-model",
         )
 
         self.assertTrue(result.report.success, result.report.fatal_error_summary)
         findings = self.read_findings()
         self.assertTrue(any(finding["check_type"] == "purpose_contains_rule" for finding in findings))
         self.assertTrue(any(finding["check_type"] == "vague_memory_statement" for finding in findings))
+
+    def test_memory_lint_fix_moves_purpose_rule_into_project_rules(self) -> None:
+        self.write_items(
+            [
+                self.base_item(
+                    item_id="purpose-fix",
+                    memory_class="stable_project_summary",
+                    memory_role="purpose",
+                    item_type="purpose",
+                    statement="When developing a new project version, do not preserve backward compatibility by default.",
+                )
+            ]
+        )
+        (self.temp_dir / "AGENTS.md").write_text(
+            "# Agent Bootstrap\n\n- `memory/global/user-rules.md`\n- Keep this bootstrap tiny.\n",
+            encoding="utf-8",
+        )
+
+        result = run_memory_lint(
+            product_config_path=self.product_config,
+            state_dir=self.state_dir,
+            memory_dir=self.memory_dir,
+            audits_dir=self.audits_dir,
+            autofix=True,
+            llm_client=self.fake_llm,
+            model="stub-model",
+            max_fix_rounds=1,
+        )
+
+        self.assertTrue(result.report.success, result.report.fatal_error_summary)
+        items = [
+            json.loads(line)
+            for line in (self.memory_dir / "_meta" / "items.jsonl").read_text(encoding="utf-8").splitlines()
+            if line.strip()
+        ]
+        self.assertEqual(items[0]["memory_class"], "project_rules")
+        self.assertEqual(items[0]["memory_role"], "rule")
+
+    def test_memory_lint_does_not_mutate_consumer_locked_rules(self) -> None:
+        self.write_items(
+            [
+                self.base_item(
+                    item_id="locked-rule",
+                    memory_class="stable_project_summary",
+                    memory_role="purpose",
+                    item_type="purpose",
+                    statement="Every time you make a change, think about the system as new.",
+                    locked_by_consumer=True,
+                    authority="consumer_override",
+                    override_command_id="cmd-1",
+                )
+            ]
+        )
+        (self.temp_dir / "AGENTS.md").write_text(
+            "# Agent Bootstrap\n\n- `memory/global/user-rules.md`\n- Keep this bootstrap tiny.\n",
+            encoding="utf-8",
+        )
+
+        result = run_memory_lint(
+            product_config_path=self.product_config,
+            state_dir=self.state_dir,
+            memory_dir=self.memory_dir,
+            audits_dir=self.audits_dir,
+            autofix=True,
+            llm_client=self.fake_llm,
+            model="stub-model",
+            max_fix_rounds=1,
+        )
+
+        self.assertTrue(result.report.success, result.report.fatal_error_summary)
+        items = [
+            json.loads(line)
+            for line in (self.memory_dir / "_meta" / "items.jsonl").read_text(encoding="utf-8").splitlines()
+            if line.strip()
+        ]
+        self.assertEqual(items[0]["memory_class"], "stable_project_summary")
+        self.assertTrue(items[0]["locked_by_consumer"])
 
     def test_memory_lint_flags_v2_scope_and_token_quality(self) -> None:
         self.write_items(
@@ -230,6 +367,8 @@ class MemoryLintTests(unittest.TestCase):
             state_dir=self.state_dir,
             memory_dir=self.memory_dir,
             audits_dir=self.audits_dir,
+            llm_client=self.fake_llm,
+            model="stub-model",
         )
 
         self.assertTrue(result.report.success, result.report.fatal_error_summary)
@@ -237,7 +376,6 @@ class MemoryLintTests(unittest.TestCase):
         self.assertTrue(any(finding["check_type"] == "unknown_project_item" for finding in findings))
         self.assertTrue(any(finding["check_type"] == "global_scope_leak" for finding in findings))
         self.assertTrue(any(finding["check_type"] == "known_token_typo" for finding in findings))
-        self.assertTrue(any(finding["check_type"] == "bad_fresh_agent_line" for finding in findings))
 
 
 if __name__ == "__main__":

@@ -19,6 +19,8 @@ from .normalization import append_jsonl_text
 MEMORY_V2_SCHEMA_VERSION = 1
 MEMORY_V2_EXTRACTION_VERSION = 3
 DEFAULT_MODEL = "gpt-5.3-codex"
+DEFAULT_COMPLETION_TOKENS = 60000
+SMALL_MODEL_COMPLETION_TOKENS = 12000
 DEFAULT_WINDOW_MAX_CHARS = 60000
 DEFAULT_WINDOW_OVERLAP_MESSAGES = 8
 DEFAULT_PROJECT_README_MAX_CHARS = 4000
@@ -697,6 +699,7 @@ def call_llm_json(system_prompt: str, payload: dict[str, object], model: str, ll
     api_key = os.environ.get("OPENAI_API_KEY", "").strip()
     if not api_key:
         raise MemoryV2Error("Missing OPENAI_API_KEY for memory-v2 LLM run.")
+    max_output_tokens = model_max_output_tokens(model)
     request_payload = {
         "model": model,
         "messages": [
@@ -704,7 +707,7 @@ def call_llm_json(system_prompt: str, payload: dict[str, object], model: str, ll
             {"role": "user", "content": json.dumps(payload, ensure_ascii=False, sort_keys=True)},
         ],
         "response_format": {"type": "json_object"},
-        "max_completion_tokens": 60000,
+        "max_completion_tokens": max_output_tokens,
     }
     try:
         response = post_openai_chat(request_payload, api_key)
@@ -712,7 +715,7 @@ def call_llm_json(system_prompt: str, payload: dict[str, object], model: str, ll
     except MemoryV2Error as exc:
         if "not a chat model" not in str(exc).lower():
             raise
-        response = post_openai_response(system_prompt, payload, model, api_key)
+        response = post_openai_response(system_prompt, payload, model, api_key, max_output_tokens=max_output_tokens)
         content = extract_responses_text(response)
     return parse_json_object(content)
 
@@ -728,13 +731,20 @@ def post_openai_chat(payload: dict[str, object], api_key: str) -> dict[str, obje
     return post_json_with_retries(request, "OpenAI memory-v2 request failed")
 
 
-def post_openai_response(system_prompt: str, payload: dict[str, object], model: str, api_key: str) -> dict[str, object]:
+def post_openai_response(
+    system_prompt: str,
+    payload: dict[str, object],
+    model: str,
+    api_key: str,
+    *,
+    max_output_tokens: int,
+) -> dict[str, object]:
     request_payload: dict[str, object] = {
         "model": model,
         "instructions": system_prompt,
         "input": json.dumps(payload, ensure_ascii=False, sort_keys=True),
         "text": {"format": {"type": "json_object"}},
-        "max_output_tokens": 60000,
+        "max_output_tokens": max_output_tokens,
     }
     return post_openai_responses_payload(request_payload, api_key)
 
@@ -788,6 +798,13 @@ def extract_responses_text(response: dict[str, object]) -> str:
     if not chunks:
         raise MemoryV2Error("OpenAI Responses output did not contain text.")
     return "\n".join(chunks)
+
+
+def model_max_output_tokens(model: str) -> int:
+    normalized = str(model or "").strip().lower()
+    if normalized.startswith("gpt-4o-mini"):
+        return SMALL_MODEL_COMPLETION_TOKENS
+    return DEFAULT_COMPLETION_TOKENS
 
 
 def parse_json_object(text: str) -> dict[str, object]:
@@ -1062,7 +1079,7 @@ def memory_token_overlap(left: set[str], right: set[str]) -> float:
 
 
 def write_global_rules(path: Path, items: list[dict[str, object]]) -> Path:
-    lines = frontmatter("global-rules", None, ["memory", "rules", "global"])
+    lines = frontmatter("global-rules", None, ["memory", "rules", "global"], memory_role="directive")
     lines.extend(["# Global User Rules", ""])
     buckets = bucket_rule_items(items)
     append_section(lines, "ALWAYS DO", statements(buckets["always"]))
@@ -1074,7 +1091,7 @@ def write_global_rules(path: Path, items: list[dict[str, object]]) -> Path:
 
 
 def write_project_page(path: Path, project: str, items: list[dict[str, object]], project_context: dict[str, object] | None = None) -> Path:
-    lines = frontmatter("project-memory", project, [f"project/{project}", "memory"])
+    lines = frontmatter("project-memory", project, [f"project/{project}", "memory"], memory_role="descriptive")
     architecture_items = [item for item in items if item["memory_class"] == "architecture"]
     component_items = [item for item in architecture_items if is_component_statement(str(item["agent_facing_statement"]))]
     flow_items = [item for item in architecture_items if item not in component_items]
@@ -1116,7 +1133,7 @@ def write_recent_page(path: Path, project: str, items: list[dict[str, object]]) 
     latest_date = latest_item_date(temporal_items)
     latest_items = items_for_date(temporal_items, latest_date)
     active = [item for item in latest_items if item["memory_class"] in recent_classes and item["temporal_status"] == "active"]
-    lines = frontmatter("recent-context", project, [f"project/{project}", "recent"])
+    lines = frontmatter("recent-context", project, [f"project/{project}", "recent"], memory_role="descriptive")
     title = f"# {display_project(project)} - Recent Context"
     if latest_date:
         title += f" - {format_display_date(latest_date)}"
@@ -1171,7 +1188,7 @@ def format_display_date(day: str) -> str:
 
 def write_rules_page(path: Path, project: str, items: list[dict[str, object]]) -> Path:
     rules = [item for item in items if item["memory_class"] == "project_rule"]
-    lines = frontmatter("project-rules", project, [f"project/{project}", "rules"])
+    lines = frontmatter("project-rules", project, [f"project/{project}", "rules"], memory_role="directive")
     lines.extend([f"# {display_project(project)} - Project Rules", ""])
     buckets = bucket_rule_items(rules)
     append_section(lines, "ALWAYS DO", statements(buckets["always"]))
@@ -1183,18 +1200,19 @@ def write_rules_page(path: Path, project: str, items: list[dict[str, object]]) -
 
 
 def write_lessons_page(path: Path, project: str, items: list[dict[str, object]]) -> Path:
-    lines = frontmatter("lessons", project, [f"project/{project}", "lessons"])
+    lines = frontmatter("lessons", project, [f"project/{project}", "lessons"], memory_role="guidance")
     lines.extend([f"# {display_project(project)} - Lessons Learned", ""])
     append_section(lines, "LESSONS", statements(items, limit=12))
     write_lines(path, lines)
     return path
 
 
-def frontmatter(kind: str, project: str | None, tags: list[str]) -> list[str]:
+def frontmatter(kind: str, project: str | None, tags: list[str], memory_role: str) -> list[str]:
     lines = ["---", f"type: {kind}"]
     if project:
         lines.append(f"project: {project}")
     lines.append(f"updated: {utc_now()}")
+    lines.append(f"memory_role: {memory_role}")
     lines.append("tags: [" + ", ".join(tags) + "]")
     lines.extend(["---", ""])
     return lines

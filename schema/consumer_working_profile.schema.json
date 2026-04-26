@@ -1,0 +1,143 @@
+{
+  "schema_version": 1,
+  "profile_schema_version": 1,
+  "title": "WikiMemory Consumer Working Profile",
+  "description": "A behavior-oriented profile describing how an agent should collaborate with a consumer across sessions. This schema is intentionally limited to non-sensitive, work-relevant observations.",
+  "rules": {
+    "allowed_inference_scope": [
+      "communication_preferences",
+      "workflow_preferences",
+      "technical_strengths",
+      "active_domains",
+      "current_goals",
+      "persistent_constraints",
+      "collaboration_style",
+      "decision_preferences",
+      "tool_preferences"
+    ],
+    "disallowed_inference_scope": [
+      "iq_or_intelligence_scores",
+      "mental_health",
+      "psychological_diagnosis",
+      "personality_typing",
+      "medical_status",
+      "political_beliefs",
+      "religion",
+      "sexual_orientation",
+      "protected_class_inference",
+      "manipulative_persuasion_targets"
+    ],
+    "guidance": [
+      "Prefer observed work patterns over identity claims.",
+      "Use soft evidence-backed wording such as 'appears to prefer' or 'has repeatedly asked for'.",
+      "Only store traits that help the agent collaborate better in future sessions.",
+      "Do not convert one-off moments into stable profile facts without repeated evidence.",
+      "Profile facts should remain editable, reviewable, and removable."
+    ]
+  },
+  "top_level_fields": {
+    "consumer_id": "string",
+    "profile_status": "draft|reviewed|active",
+    "updated_at": "iso8601 string",
+    "summary": "string",
+    "sections": {
+      "communication_preferences": {
+        "items": [
+          {
+            "trait": "string",
+            "preference": "string",
+            "confidence": "low|medium|high",
+            "evidence_refs": [
+              {
+                "source_id": "string",
+                "source_day": "YYYY-MM-DD",
+                "message_index": "integer"
+              }
+            ]
+          }
+        ]
+      },
+      "workflow_preferences": {
+        "items": [
+          {
+            "trait": "string",
+            "preference": "string",
+            "confidence": "low|medium|high",
+            "evidence_refs": []
+          }
+        ]
+      },
+      "technical_strengths": {
+        "items": [
+          {
+            "domain": "string",
+            "observed_level": "familiar|strong|advanced",
+            "notes": "string",
+            "confidence": "low|medium|high",
+            "evidence_refs": []
+          }
+        ]
+      },
+      "active_domains": {
+        "items": [
+          {
+            "domain": "string",
+            "relevance": "current|recurring",
+            "confidence": "low|medium|high",
+            "evidence_refs": []
+          }
+        ]
+      },
+      "current_goals": {
+        "items": [
+          {
+            "goal": "string",
+            "status": "active|paused|completed|unclear",
+            "confidence": "low|medium|high",
+            "evidence_refs": []
+          }
+        ]
+      },
+      "persistent_constraints": {
+        "items": [
+          {
+            "constraint": "string",
+            "type": "tooling|time|process|environment|quality_bar",
+            "confidence": "low|medium|high",
+            "evidence_refs": []
+          }
+        ]
+      },
+      "collaboration_style": {
+        "items": [
+          {
+            "trait": "string",
+            "preference": "string",
+            "confidence": "low|medium|high",
+            "evidence_refs": []
+          }
+        ]
+      },
+      "decision_preferences": {
+        "items": [
+          {
+            "trait": "string",
+            "preference": "string",
+            "confidence": "low|medium|high",
+            "evidence_refs": []
+          }
+        ]
+      },
+      "tool_preferences": {
+        "items": [
+          {
+            "tool": "string",
+            "preference": "string",
+            "confidence": "low|medium|high",
+            "evidence_refs": []
+          }
+        ]
+      }
+    }
+  }
+}

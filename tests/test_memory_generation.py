@@ -117,9 +117,13 @@ class MemoryGenerationTests(unittest.TestCase):
         self.assertFalse(summaries)
         self.assertTrue((self.memory_dir / "global" / "user-rules.md").exists())
         self.assertTrue((self.memory_dir / "projects" / "example-project" / "rules.md").exists())
+        self.assertTrue((self.memory_dir / "global" / "memory-health.md").exists())
+        self.assertTrue((self.memory_dir / "global" / "memory-change-log.md").exists())
+        self.assertTrue((self.memory_dir / "projects" / "example-project" / "continuations.md").exists())
         self.assertTrue((self.memory_dir / "_meta" / "promotion_review.jsonl").exists())
         global_content = (self.memory_dir / "global" / "user-rules.md").read_text(encoding="utf-8")
         self.assertIn("type: global-rules", global_content)
+        self.assertIn("memory_role: directive", global_content)
         self.assertIn("## ALWAYS DO", global_content)
         self.assertIn("## NEVER DO", global_content)
 
@@ -161,6 +165,170 @@ class MemoryGenerationTests(unittest.TestCase):
         approved_rule = next(item for item in self.read_items() if item["item_id"] == rule["item_id"])
         self.assertFalse(approved_rule["review_required"])
         self.assertEqual(approved_rule["confidence"], "strong")
+
+    def test_confirmed_rule_count_matches_rendered_global_buckets(self) -> None:
+        statements = [
+            "Add this to global rules: Always verify evidence before changing memory logic.",
+            "Add this to global rules: Always keep provenance attached to extracted memory.",
+            "Add this to global rules: Always check real data before promoting a memory fix.",
+            "Add this to global rules: Always explain how the fix generalizes.",
+            "Add this to global rules: Do not remove source linkage from evidence rows.",
+            "Add this to global rules: Do not auto-start backlog items without confirmation.",
+            "Add this to global rules: Do not hide unresolved quality issues.",
+            "Add this to global rules: Do not treat mock data as production truth.",
+            "Add this to global rules: Ask for clarification if the request is materially ambiguous.",
+            "Add this to global rules: Keep project backlog items as options, not commands.",
+            "Add this to global rules: If confidence is low, preserve uncertainty in the output.",
+            "Add this to global rules: Use project memory as context only until the consumer confirms direction.",
+            "Add this to global rules: Always validate the smallest relevant path first.",
+        ]
+        records = [
+            self.evidence_record(f"e{index + 1}", "user", statement)
+            for index, statement in enumerate(statements)
+        ]
+        self.write_evidence("logs/sample-source.jsonl", records)
+
+        result = run_memory_generation(
+            product_config_path=self.product_config,
+            state_dir=self.state_dir,
+            evidence_dir=self.evidence_dir,
+            memory_dir=self.memory_dir,
+            audits_dir=self.audits_dir,
+        )
+
+        self.assertTrue(result.report.success, result.report.fatal_error_summary)
+        global_content = (self.memory_dir / "global" / "user-rules.md").read_text(encoding="utf-8")
+        self.assertIn("13 explicit rule(s) are listed above by behavior bucket.", global_content)
+
+    def test_memory_generation_applies_consumer_rule_override_commands(self) -> None:
+        self.write_evidence(
+            "logs/sample-source.jsonl",
+            [
+                self.evidence_record("e1", "user", "Do not narrate your process."),
+                self.evidence_record(
+                    "e2",
+                    "user",
+                    'Memory command: replace rule: "Do not narrate your process." -> "Keep narration brief unless I ask for more detail."',
+                ),
+                self.evidence_record(
+                    "e3",
+                    "user",
+                    "Memory command: add project rule: Always show backlog items as options before starting work.",
+                ),
+            ],
+        )
+
+        result = run_memory_generation(
+            product_config_path=self.product_config,
+            state_dir=self.state_dir,
+            evidence_dir=self.evidence_dir,
+            memory_dir=self.memory_dir,
+            audits_dir=self.audits_dir,
+        )
+
+        self.assertTrue(result.report.success, result.report.fatal_error_summary)
+        items = self.read_items()
+        self.assertFalse(any(item["statement"] == "Do not narrate your process." for item in items))
+        replaced = next(item for item in items if "Keep narration brief" in item["statement"])
+        self.assertEqual(replaced["memory_class"], "project_rules")
+        self.assertTrue(replaced["locked_by_consumer"])
+        self.assertEqual(replaced["authority"], "consumer_override")
+        added = next(
+            item
+            for item in items
+            if "Always show backlog items as options" in item["statement"] and item.get("authority") == "consumer_override"
+        )
+        self.assertEqual(added["memory_class"], "project_rules")
+        self.assertTrue(added["locked_by_consumer"])
+        override_state = json.loads((self.state_dir / "memory_rule_overrides.json").read_text(encoding="utf-8"))
+        self.assertEqual(override_state["command_count"], 2)
+
+    def test_memory_generation_tracks_one_off_exceptions(self) -> None:
+        self.write_evidence(
+            "logs/sample-source.jsonl",
+            [
+                self.evidence_record(
+                    "e1",
+                    "user",
+                    "Memory command: one-off project exception: Ignore the normal backlog ordering and only review the bugfix thread today.",
+                ),
+            ],
+        )
+
+        result = run_memory_generation(
+            product_config_path=self.product_config,
+            state_dir=self.state_dir,
+            evidence_dir=self.evidence_dir,
+            memory_dir=self.memory_dir,
+            audits_dir=self.audits_dir,
+        )
+
+        self.assertTrue(result.report.success, result.report.fatal_error_summary)
+        exceptions = (self.memory_dir / "global" / "active-exceptions.md").read_text(encoding="utf-8")
+        self.assertIn("Ignore the normal backlog ordering", exceptions)
+
+    def test_memory_generation_renders_daily_conversation_pages(self) -> None:
+        first = self.evidence_record("e1", "user", "Please continue implementing the renderer cleanup.")
+        first["timestamp"] = "2026-04-18T10:00:00Z"
+        second = self.evidence_record("e2", "assistant", "I updated the cleanup flow and validated the narrow path.")
+        second["timestamp"] = "2026-04-18T10:05:00Z"
+        third = self.evidence_record("e3", "user", "Now fix the retry behavior too.")
+        third["timestamp"] = "2026-04-19T09:00:00Z"
+        self.write_evidence("logs/sample-source.jsonl", [first, second, third])
+
+        result = run_memory_generation(
+            product_config_path=self.product_config,
+            state_dir=self.state_dir,
+            evidence_dir=self.evidence_dir,
+            memory_dir=self.memory_dir,
+            audits_dir=self.audits_dir,
+        )
+
+        self.assertTrue(result.report.success, result.report.fatal_error_summary)
+        index_content = (self.memory_dir / "global" / "daily-conversations.md").read_text(encoding="utf-8")
+        day_one = (self.memory_dir / "daily-conversations" / "2026-04-18.md").read_text(encoding="utf-8")
+        day_two = (self.memory_dir / "daily-conversations" / "2026-04-19.md").read_text(encoding="utf-8")
+        self.assertIn("memory/daily-conversations/2026-04-18.md", index_content)
+        self.assertIn("memory/daily-conversations/2026-04-19.md", index_content)
+        self.assertIn("10:00 User: Please continue implementing the renderer cleanup.", day_one)
+        self.assertIn("10:05 Assistant: I updated the cleanup flow and validated the narrow path.", day_one)
+        self.assertIn("09:00 User: Now fix the retry behavior too.", day_two)
+
+    def test_memory_generation_uses_llm_to_render_continuations(self) -> None:
+        self.write_evidence(
+            "logs/sample-source.jsonl",
+            [
+                self.evidence_record("e1", "user", "Point the agent to START_HERE_FOR_AGENT.md and finish bootstrap configuration."),
+                self.evidence_record("e2", "user", "Understand the refresh and lint failures holistically, then propose the fix plan."),
+                self.evidence_record("e3", "user", "Add robust real-data tests so larger datasets can be validated safely."),
+            ],
+        )
+
+        def fake_llm_client(system_prompt: str, payload: dict[str, object], model: str) -> dict[str, object]:
+            self.assertIn("threads", system_prompt)
+            self.assertEqual(payload["project"], "example-project")
+            return {
+                "threads": [
+                    "Finish bootstrap and agent configuration flow for WikiMemory onboarding.",
+                    "Stabilize the refresh-plus-lint workflow and validate it on real data.",
+                    "Expand robust real-data test coverage for larger memory corpora.",
+                ]
+            }
+
+        result = run_memory_generation(
+            product_config_path=self.product_config,
+            state_dir=self.state_dir,
+            evidence_dir=self.evidence_dir,
+            memory_dir=self.memory_dir,
+            audits_dir=self.audits_dir,
+            llm_client=fake_llm_client,
+        )
+
+        self.assertTrue(result.report.success, result.report.fatal_error_summary)
+        continuations = (self.memory_dir / "projects" / "example-project" / "continuations.md").read_text(encoding="utf-8")
+        self.assertIn("Finish bootstrap and agent configuration flow", continuations)
+        self.assertIn("Stabilize the refresh-plus-lint workflow", continuations)
+        self.assertNotIn("understand the refresh and lint failures holistically", continuations.lower())
 
     def test_project_overview_file_populates_project_memory(self) -> None:
         self.write_evidence(
@@ -208,6 +376,7 @@ class MemoryGenerationTests(unittest.TestCase):
 
         self.assertTrue(result.report.success, result.report.fatal_error_summary)
         content = (self.memory_dir / "projects" / "example-project" / "project.md").read_text(encoding="utf-8")
+        self.assertIn("memory_role: descriptive", content)
         self.assertIn("turns raw logs into compact memory files", content)
         self.assertNotIn("approval_ui/", content)
         self.assertNotIn("branch=main", content)
@@ -414,6 +583,47 @@ class MemoryGenerationTests(unittest.TestCase):
         self.assertNotIn("Please fix this now.", statements)
         self.assertTrue(any("continue this active task" in statement for statement in statements))
 
+    def test_memory_generation_keeps_latest_project_recent_even_if_old(self) -> None:
+        stale = self.evidence_record("e1", "user", "Please continue the last known aitrader work thread.")
+        stale["timestamp"] = "2025-01-01T00:00:00Z"
+        self.write_evidence("logs/sample-source.jsonl", [stale])
+
+        result = run_memory_generation(
+            product_config_path=self.product_config,
+            state_dir=self.state_dir,
+            evidence_dir=self.evidence_dir,
+            memory_dir=self.memory_dir,
+            audits_dir=self.audits_dir,
+        )
+
+        self.assertTrue(result.report.success, result.report.fatal_error_summary)
+        recent = (self.memory_dir / "projects" / "example-project" / "recent.md").read_text(encoding="utf-8")
+        self.assertIn("continue the last known aitrader work thread", recent.lower())
+        self.assertNotIn("No current focus extracted yet.", recent)
+
+    def test_memory_generation_preserves_consumer_profile_artifacts(self) -> None:
+        self.write_evidence("logs/sample-source.jsonl", [self.evidence_record("e1", "user", "Please continue implementing the renderer cleanup.")])
+        global_dir = self.memory_dir / "global"
+        meta_dir = self.memory_dir / "_meta"
+        global_dir.mkdir(parents=True, exist_ok=True)
+        meta_dir.mkdir(parents=True, exist_ok=True)
+        (global_dir / "consumer-profile.md").write_text("# Consumer Profile\n", encoding="utf-8")
+        (meta_dir / "consumer_profile.json").write_text('{"ok": true}\n', encoding="utf-8")
+        (meta_dir / "consumer_style.json").write_text('{"tone": "direct"}\n', encoding="utf-8")
+
+        result = run_memory_generation(
+            product_config_path=self.product_config,
+            state_dir=self.state_dir,
+            evidence_dir=self.evidence_dir,
+            memory_dir=self.memory_dir,
+            audits_dir=self.audits_dir,
+        )
+
+        self.assertTrue(result.report.success, result.report.fatal_error_summary)
+        self.assertTrue((global_dir / "consumer-profile.md").exists())
+        self.assertTrue((meta_dir / "consumer_profile.json").exists())
+        self.assertTrue((meta_dir / "consumer_style.json").exists())
+
     def test_timeline_resolution_removes_resolved_open_question_from_recent(self) -> None:
         question = self.evidence_record("e1", "user", "Should the memory pipeline use LLM extraction for project records?")
         question["timestamp"] = "2026-04-01T00:00:00Z"
@@ -523,6 +733,64 @@ class MemoryGenerationTests(unittest.TestCase):
         self.assertNotIn("whats next", content)
         self.assertIn("renderer cleanup", content)
 
+    def test_memory_generation_filters_scaffold_context_from_recent(self) -> None:
+        self.write_evidence(
+            "logs/sample-source.jsonl",
+            [
+                self.evidence_record("e1", "user", "Current context: below is the list of skills that can be used."),
+                self.evidence_record(
+                    "e2",
+                    "user",
+                    "Current context: each entry includes a name, description, and file path so you can open the source for full instructions when using a specific skill.",
+                ),
+                self.evidence_record(
+                    "e3",
+                    "user",
+                    "Current context: provide implementation plans or code-level guidance for requested build tasks.",
+                ),
+                self.evidence_record("e4", "user", "Please continue implementing the ingest retry cleanup."),
+            ],
+        )
+
+        result = run_memory_generation(
+            product_config_path=self.product_config,
+            state_dir=self.state_dir,
+            evidence_dir=self.evidence_dir,
+            memory_dir=self.memory_dir,
+            audits_dir=self.audits_dir,
+        )
+
+        self.assertTrue(result.report.success, result.report.fatal_error_summary)
+        content = (self.memory_dir / "projects" / "example-project" / "recent.md").read_text(encoding="utf-8")
+        self.assertNotIn("list of skills", content)
+        self.assertNotIn("specific skill", content)
+        self.assertNotIn("implementation plans or code-level guidance", content)
+        self.assertIn("ingest retry cleanup", content)
+
+    def test_memory_generation_filters_cross_project_recent_noise(self) -> None:
+        self.write_evidence(
+            "logs/sample-source.jsonl",
+            [
+                self.evidence_record("e1", "user", "Current context: reuse for CodexClaw UI work."),
+                self.evidence_record("e2", "user", "Current context: keep a consistent UI design language across apps."),
+                self.evidence_record("e3", "user", "Please continue implementing the aitrader execution retry cleanup."),
+            ],
+        )
+
+        result = run_memory_generation(
+            product_config_path=self.product_config,
+            state_dir=self.state_dir,
+            evidence_dir=self.evidence_dir,
+            memory_dir=self.memory_dir,
+            audits_dir=self.audits_dir,
+        )
+
+        self.assertTrue(result.report.success, result.report.fatal_error_summary)
+        content = (self.memory_dir / "projects" / "example-project" / "recent.md").read_text(encoding="utf-8")
+        self.assertNotIn("CodexClaw UI work", content)
+        self.assertNotIn("design language across apps", content)
+        self.assertIn("aitrader execution retry cleanup", content)
+
     def test_memory_generation_does_not_count_duplicate_log_shapes_as_repetition(self) -> None:
         repeated_text = "Please continue implementing the renderer cleanup."
         first = self.evidence_record("e1", "user", repeated_text)
@@ -622,6 +890,8 @@ class MemoryGenerationTests(unittest.TestCase):
         self.assertTrue(result.report.success, result.report.fatal_error_summary)
         rules = (self.memory_dir / "projects" / "example-project" / "rules.md").read_text(encoding="utf-8")
         recent = (self.memory_dir / "projects" / "example-project" / "recent.md").read_text(encoding="utf-8")
+        self.assertIn("memory_role: directive", rules)
+        self.assertIn("memory_role: descriptive", recent)
         self.assertIn("No fallback should exist", rules)
         self.assertNotIn("No fallback should exist", recent)
 

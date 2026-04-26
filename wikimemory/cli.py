@@ -8,12 +8,14 @@ from .agent_bootstrap import AgentBootstrapResult, run_agent_bootstrap
 from .audit import AuditResult, run_audit
 from .bootstrap import BootstrapResult, run_bootstrap
 from .classification import ClassificationResult, run_classification
+from .consumer_profile import ConsumerProfileResult, run_consumer_profile
 from .discovery import DiscoveryResult, run_discovery
 from .env_loader import load_project_env
 from .extraction import ExtractionResult, run_extraction
 from .full_load import FullLoadResult, run_full_load
 from .ingest import IngestResult, run_ingest
 from .memory_generation import MemoryResult, run_memory_generation
+from .memory_inspection import MemoryInspectionResult, run_memory_inspection
 from .memory_lint import MemoryLintResult, run_memory_lint
 from .memory_review import MemoryReviewResult, run_memory_review
 from .memory_refresh import MemoryRefreshResult, run_memory_refresh
@@ -21,6 +23,7 @@ from .memory_v2 import MemoryV2Result, run_memory_v2
 from .normalization import NormalizationResult, run_normalization
 from .onboarding import OnboardingReport, run_onboarding
 from .refresh import RefreshResult, run_refresh
+from .scheduler import SchedulerPlanResult, run_scheduler_plan
 from .segmentation import SegmentationResult, run_segmentation
 from .wiki import WikiResult, run_wiki
 
@@ -470,6 +473,12 @@ def build_parser() -> argparse.ArgumentParser:
         help="Path where the recommended product config should be written.",
     )
     onboard_parser.add_argument(
+        "--brief-out",
+        type=Path,
+        default=Path("config/agent_onboarding_brief.generated.md"),
+        help="Path where the agent-facing onboarding brief should be written.",
+    )
+    onboard_parser.add_argument(
         "--json",
         action="store_true",
         help="Print the onboarding report as JSON.",
@@ -565,6 +574,44 @@ def build_parser() -> argparse.ArgumentParser:
         "--json",
         action="store_true",
         help="Print the final run report as JSON.",
+    )
+
+    memory_inspect_parser = subparsers.add_parser(
+        "memory-inspect",
+        help="Inspect generated memory state, rules, freshness, health, and continuation artifacts.",
+    )
+    memory_inspect_parser.add_argument(
+        "--action",
+        required=True,
+        choices=("active-rules", "project-rules", "why-rule", "recent-changes", "freshness", "health", "continuations"),
+        help="Inspection action to run.",
+    )
+    memory_inspect_parser.add_argument(
+        "--memory-dir",
+        type=Path,
+        default=Path("memory"),
+        help="Directory containing generated memory artifacts.",
+    )
+    memory_inspect_parser.add_argument(
+        "--state-dir",
+        type=Path,
+        default=Path("state"),
+        help="Directory containing memory state files.",
+    )
+    memory_inspect_parser.add_argument(
+        "--project",
+        type=str,
+        help="Optional project slug for project-scoped inspection actions.",
+    )
+    memory_inspect_parser.add_argument(
+        "--rule-query",
+        type=str,
+        help="Rule substring to explain for why-rule.",
+    )
+    memory_inspect_parser.add_argument(
+        "--json",
+        action="store_true",
+        help="Print the inspection payload as JSON.",
     )
 
     memory_v2_parser = subparsers.add_parser(
@@ -665,7 +712,7 @@ def build_parser() -> argparse.ArgumentParser:
 
     memory_lint_parser = subparsers.add_parser(
         "memory-lint",
-        help="Run deterministic lint checks over compact memory and agent bootstrap artifacts.",
+        help="Run LLM-backed lint checks over compact memory and agent bootstrap artifacts.",
     )
     memory_lint_parser.add_argument(
         "--product-config",
@@ -700,7 +747,18 @@ def build_parser() -> argparse.ArgumentParser:
     memory_lint_parser.add_argument(
         "--fix",
         action="store_true",
-        help="Apply safe structural fixes before linting.",
+        help="Apply canonical item fixes and rerender memory before the final lint pass.",
+    )
+    memory_lint_parser.add_argument(
+        "--max-fix-rounds",
+        type=int,
+        default=1,
+        help="Maximum autofix+rerlint rounds when --fix is enabled.",
+    )
+    memory_lint_parser.add_argument(
+        "--model",
+        default=None,
+        help="OpenAI model id. Defaults to WIKIMEMORY_MEMORY_LINT_MODEL or the memory-v2 default.",
     )
     memory_lint_parser.add_argument(
         "--json",
@@ -743,6 +801,67 @@ def build_parser() -> argparse.ArgumentParser:
         help="Memory item id to reject. Repeat for multiple items.",
     )
     memory_review_parser.add_argument(
+        "--json",
+        action="store_true",
+        help="Print the final run report as JSON.",
+    )
+
+    consumer_profile_parser = subparsers.add_parser(
+        "consumer-profile",
+        help="Build a review-first consumer working profile from evidence-backed user conversation snippets.",
+    )
+    consumer_profile_parser.add_argument(
+        "--evidence-dir",
+        type=Path,
+        default=Path("evidence"),
+        help="Directory containing evidence artifacts.",
+    )
+    consumer_profile_parser.add_argument(
+        "--memory-dir",
+        type=Path,
+        default=Path("memory"),
+        help="Directory where the rendered consumer profile should be written.",
+    )
+    consumer_profile_parser.add_argument(
+        "--state-dir",
+        type=Path,
+        default=Path("state"),
+        help="Directory where consumer-profile state and run logs are written.",
+    )
+    consumer_profile_parser.add_argument(
+        "--audits-dir",
+        type=Path,
+        default=Path("audits"),
+        help="Directory where consumer-profile candidate artifacts are written.",
+    )
+    consumer_profile_parser.add_argument(
+        "--policy",
+        type=Path,
+        default=Path("config/consumer_profile_policy.json"),
+        help="Path to the consumer-profile policy JSON.",
+    )
+    consumer_profile_parser.add_argument(
+        "--model",
+        default="gpt-5.3-codex",
+        help="Fallback model id for consumer-profile phases when phase-specific models are not provided.",
+    )
+    consumer_profile_parser.add_argument(
+        "--extraction-model",
+        default="gpt-4o-mini",
+        help="Model id for extraction windows.",
+    )
+    consumer_profile_parser.add_argument(
+        "--merge-model",
+        default="gpt-5.3-codex",
+        help="Model id for final profile merge.",
+    )
+    consumer_profile_parser.add_argument(
+        "--window-max-chars",
+        type=int,
+        default=None,
+        help="Maximum snippet-text characters per extraction window. Higher values reduce API call count.",
+    )
+    consumer_profile_parser.add_argument(
         "--json",
         action="store_true",
         help="Print the final run report as JSON.",
@@ -813,9 +932,81 @@ def build_parser() -> argparse.ArgumentParser:
         help="Optional source_id to scope evidence ingest. Repeat to target multiple sources.",
     )
     memory_refresh_parser.add_argument(
+        "--lint-fix",
+        action="store_true",
+        default=None,
+        help="Explicitly enable memory-lint autofix during memory-refresh. This is already the default.",
+    )
+    memory_refresh_parser.add_argument(
+        "--no-lint-fix",
+        dest="lint_fix",
+        action="store_false",
+        help="Disable the default memory-lint autofix pass and run verification only.",
+    )
+    memory_refresh_parser.add_argument(
+        "--lint-fix-rounds",
+        type=int,
+        default=1,
+        help="Maximum autofix+rerlint rounds when lint autofix is enabled.",
+    )
+    memory_refresh_parser.add_argument(
+        "--lint-model",
+        default=None,
+        help="Optional model override for the memory-lint phase.",
+    )
+    memory_refresh_parser.add_argument(
+        "--consumer-profile-model",
+        default=None,
+        help="Fallback model id for the consumer-profile phase when phase-specific models are not provided.",
+    )
+    memory_refresh_parser.add_argument(
+        "--consumer-profile-extraction-model",
+        default=None,
+        help="Optional model override for consumer-profile extraction windows.",
+    )
+    memory_refresh_parser.add_argument(
+        "--consumer-profile-merge-model",
+        default=None,
+        help="Optional model override for the consumer-profile final merge.",
+    )
+    memory_refresh_parser.add_argument(
+        "--consumer-profile-window-max-chars",
+        type=int,
+        default=None,
+        help="Optional extraction window size override for consumer-profile generation.",
+    )
+    memory_refresh_parser.add_argument(
         "--json",
         action="store_true",
         help="Print the final run report as JSON.",
+    )
+
+    scheduler_plan_parser = subparsers.add_parser(
+        "scheduler-plan",
+        help="Prepare dry-run scheduler artifacts and compute whether ingest/lint would be due right now.",
+    )
+    scheduler_plan_parser.add_argument(
+        "--product-config",
+        type=Path,
+        default=Path("config/product_config.json"),
+        help="Path to unified product configuration JSON.",
+    )
+    scheduler_plan_parser.add_argument(
+        "--state-dir",
+        type=Path,
+        default=Path("state"),
+        help="Directory containing discovery and run state.",
+    )
+    scheduler_plan_parser.add_argument(
+        "--scripts-dir",
+        type=Path,
+        default=Path("scripts"),
+        help="Directory where the prepared activation script will be written.",
+    )
+    scheduler_plan_parser.add_argument(
+        "--json",
+        action="store_true",
+        help="Print the scheduler plan report as JSON.",
     )
     return parser
 
@@ -955,9 +1146,11 @@ def format_onboarding_report(report: OnboardingReport) -> str:
         f"Onboarding draft ready: root={report.project_root}; "
         f"os={detected.get('operating_system', 'unknown')}; "
         f"editor={detected.get('likely_editor', 'unknown')}; "
+        f"agent={detected.get('likely_agent_platform', 'unknown')}; "
         f"markdown={detected.get('likely_markdown_mode', 'unknown')}; "
         f"bootstrap={detected.get('likely_bootstrap_target_path', 'unknown')}; "
-        f"questions={len(report.questions)}"
+        f"questions={len(report.questions)}; "
+        f"entry={report.agent_entry_file}"
     )
 
 
@@ -982,6 +1175,11 @@ def format_memory_result(result: MemoryResult) -> str:
         f"rendered={result.report.rendered_file_count}; "
         f"state={result.state_path}; run_log={result.run_log_path}; notices={result.notice_log_path}"
     )
+
+
+def format_memory_inspection_result(result: MemoryInspectionResult) -> str:
+    outcome = "succeeded" if result.report.success else "failed"
+    return f"Memory-inspect {outcome}: action={result.report.action}; matches={result.report.match_count}"
 
 
 def format_memory_v2_result(result: MemoryV2Result) -> str:
@@ -1021,6 +1219,15 @@ def format_memory_review_result(result: MemoryReviewResult) -> str:
     )
 
 
+def format_consumer_profile_result(result: ConsumerProfileResult) -> str:
+    outcome = "succeeded" if result.report.success else "failed"
+    return (
+        f"Consumer-profile {outcome}: snippets={result.report.source_snippet_count}; "
+        f"candidates={result.report.candidate_count}; sections={result.report.section_count}; "
+        f"profile={result.profile_path}; json={result.profile_json_path}"
+    )
+
+
 def format_memory_refresh_result(result: MemoryRefreshResult) -> str:
     phases = ",".join(status.phase for status in result.report.phase_statuses)
     outcome = "succeeded" if result.report.success else "failed"
@@ -1030,6 +1237,17 @@ def format_memory_refresh_result(result: MemoryRefreshResult) -> str:
         f"failed_phase={result.report.failed_phase or 'none'}; "
         f"warnings={result.report.warning_count}; errors={result.report.error_count}; "
         f"state={result.state_path}; run_log={result.run_log_path}"
+    )
+
+
+def format_scheduler_plan_result(result: SchedulerPlanResult) -> str:
+    report = result.report
+    return (
+        f"Scheduler-plan ready: ingest_due={report.ingest_due}; "
+        f"lint_due={report.lint_due}; "
+        f"window={report.within_schedule_window}; "
+        f"latest_log_update={report.latest_log_update_at or 'none'}; "
+        f"activation_script={result.activation_script_path}; plan={result.plan_path}"
     )
 
 
@@ -1186,7 +1404,7 @@ def main(argv: list[str] | None = None) -> int:
         return 0 if result.report.success else 1
 
     if args.command == "onboard":
-        result = run_onboarding(project_root=args.project_root, config_path=args.config_out)
+        result = run_onboarding(project_root=args.project_root, config_path=args.config_out, brief_path=args.brief_out)
         if args.json:
             print(json.dumps(result.to_dict(), indent=2, sort_keys=True))
         else:
@@ -1224,6 +1442,24 @@ def main(argv: list[str] | None = None) -> int:
         else:
             print(format_memory_result(result))
             if result.report.fatal_error_summary:
+                print(result.report.fatal_error_summary)
+        return 0 if result.report.success else 1
+
+    if args.command == "memory-inspect":
+        result = run_memory_inspection(
+            action=args.action,
+            memory_dir=args.memory_dir,
+            state_dir=args.state_dir,
+            project=args.project,
+            rule_query=args.rule_query,
+        )
+        if args.json:
+            print(json.dumps(result.payload, indent=2, sort_keys=True))
+        else:
+            print(format_memory_inspection_result(result))
+            if result.report.success:
+                print(json.dumps(result.payload, indent=2, sort_keys=True))
+            elif result.report.fatal_error_summary:
                 print(result.report.fatal_error_summary)
         return 0 if result.report.success else 1
 
@@ -1270,6 +1506,8 @@ def main(argv: list[str] | None = None) -> int:
             audits_dir=args.audits_dir,
             bootstrap_path=args.bootstrap_path,
             autofix=args.fix,
+            model=args.model,
+            max_fix_rounds=args.max_fix_rounds,
         )
         if args.json:
             print(json.dumps(result.report.to_dict(), indent=2, sort_keys=True))
@@ -1295,6 +1533,26 @@ def main(argv: list[str] | None = None) -> int:
                 print(result.report.fatal_error_summary)
         return 0 if result.report.success else 1
 
+    if args.command == "consumer-profile":
+        result = run_consumer_profile(
+            evidence_dir=args.evidence_dir,
+            memory_dir=args.memory_dir,
+            state_dir=args.state_dir,
+            audits_dir=args.audits_dir,
+            policy_path=args.policy,
+            model=args.model,
+            extraction_model=args.extraction_model,
+            merge_model=args.merge_model,
+            window_max_chars=args.window_max_chars,
+        )
+        if args.json:
+            print(json.dumps(result.report.to_dict(), indent=2, sort_keys=True))
+        else:
+            print(format_consumer_profile_result(result))
+            if result.report.fatal_error_summary:
+                print(result.report.fatal_error_summary)
+        return 0 if result.report.success else 1
+
     if args.command == "memory-refresh":
         result = run_memory_refresh(
             source_roots_config_path=args.source_config,
@@ -1307,6 +1565,13 @@ def main(argv: list[str] | None = None) -> int:
             audits_dir=args.audits_dir,
             bootstrap_output_path=args.bootstrap_output_path,
             source_ids=args.source_ids,
+            lint_fix=args.lint_fix,
+            lint_fix_rounds=args.lint_fix_rounds,
+            lint_model=args.lint_model,
+            consumer_profile_model=args.consumer_profile_model,
+            consumer_profile_extraction_model=args.consumer_profile_extraction_model,
+            consumer_profile_merge_model=args.consumer_profile_merge_model,
+            consumer_profile_window_max_chars=args.consumer_profile_window_max_chars,
         )
         if args.json:
             print(json.dumps(result.report.to_dict(), indent=2, sort_keys=True))
@@ -1315,6 +1580,18 @@ def main(argv: list[str] | None = None) -> int:
             if result.report.fatal_error_summary:
                 print(result.report.fatal_error_summary)
         return 0 if result.report.success else 1
+
+    if args.command == "scheduler-plan":
+        result = run_scheduler_plan(
+            product_config_path=args.product_config,
+            state_dir=args.state_dir,
+            scripts_dir=args.scripts_dir,
+        )
+        if args.json:
+            print(json.dumps(result.report.to_dict(), indent=2, sort_keys=True))
+        else:
+            print(format_scheduler_plan_result(result))
+        return 0
 
     result = run_full_load(
         config_path=args.config,

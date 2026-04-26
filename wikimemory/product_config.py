@@ -99,6 +99,17 @@ class SchedulerConfig:
     tick_seconds: int
     project_delta_enabled: bool
     log_delta_enabled: bool
+    allowed_weekdays: tuple[str, ...]
+    run_hour_local: int
+    run_minute_local: int
+    ingest_interval_hours: int
+    lint_interval_hours: int
+    require_log_update_for_ingest: bool
+    lint_autofix_enabled: bool
+    lint_autofix_max_rounds: int
+    consumer_profile_extraction_model: str
+    consumer_profile_merge_model: str
+    consumer_profile_window_max_chars: int
 
 
 @dataclass(frozen=True)
@@ -209,6 +220,17 @@ def default_product_config(project_root: Path | str) -> ProductConfig:
             tick_seconds=900,
             project_delta_enabled=True,
             log_delta_enabled=True,
+            allowed_weekdays=("monday", "tuesday", "wednesday", "thursday", "friday"),
+            run_hour_local=9,
+            run_minute_local=0,
+            ingest_interval_hours=24,
+            lint_interval_hours=24,
+            require_log_update_for_ingest=True,
+            lint_autofix_enabled=False,
+            lint_autofix_max_rounds=1,
+            consumer_profile_extraction_model="gpt-4o-mini",
+            consumer_profile_merge_model="gpt-5.3-codex",
+            consumer_profile_window_max_chars=60000,
         ),
         policies=PolicyConfig(
             require_confirmation_for_inferred_rule_promotion=True,
@@ -311,6 +333,23 @@ def parse_product_config(payload: dict[str, Any]) -> ProductConfig:
             tick_seconds=int(scheduler_payload["tick_seconds"]),
             project_delta_enabled=bool(scheduler_payload["project_delta_enabled"]),
             log_delta_enabled=bool(scheduler_payload["log_delta_enabled"]),
+            allowed_weekdays=tuple(
+                normalize_weekday(str(day))
+                for day in scheduler_payload.get(
+                    "allowed_weekdays",
+                    ["monday", "tuesday", "wednesday", "thursday", "friday"],
+                )
+            ),
+            run_hour_local=int(scheduler_payload.get("run_hour_local", 9)),
+            run_minute_local=int(scheduler_payload.get("run_minute_local", 0)),
+            ingest_interval_hours=int(scheduler_payload.get("ingest_interval_hours", 24)),
+            lint_interval_hours=int(scheduler_payload.get("lint_interval_hours", 24)),
+            require_log_update_for_ingest=bool(scheduler_payload.get("require_log_update_for_ingest", True)),
+            lint_autofix_enabled=bool(scheduler_payload.get("lint_autofix_enabled", False)),
+            lint_autofix_max_rounds=int(scheduler_payload.get("lint_autofix_max_rounds", 1)),
+            consumer_profile_extraction_model=str(scheduler_payload.get("consumer_profile_extraction_model", "gpt-4o-mini")),
+            consumer_profile_merge_model=str(scheduler_payload.get("consumer_profile_merge_model", "gpt-5.3-codex")),
+            consumer_profile_window_max_chars=int(scheduler_payload.get("consumer_profile_window_max_chars", 60000)),
         ),
         policies=PolicyConfig(
             require_confirmation_for_inferred_rule_promotion=bool(
@@ -355,6 +394,20 @@ def validate_product_config(config: ProductConfig) -> None:
         raise ProductConfigError(f"Unsupported scheduler mode: {config.scheduler.mode}")
     if config.scheduler.tick_seconds <= 0:
         raise ProductConfigError("scheduler.tick_seconds must be positive")
+    if not config.scheduler.allowed_weekdays:
+        raise ProductConfigError("scheduler.allowed_weekdays must define at least one day")
+    for day in config.scheduler.allowed_weekdays:
+        normalize_weekday(day)
+    if not 0 <= config.scheduler.run_hour_local <= 23:
+        raise ProductConfigError("scheduler.run_hour_local must be between 0 and 23")
+    if not 0 <= config.scheduler.run_minute_local <= 59:
+        raise ProductConfigError("scheduler.run_minute_local must be between 0 and 59")
+    if config.scheduler.ingest_interval_hours <= 0:
+        raise ProductConfigError("scheduler.ingest_interval_hours must be positive")
+    if config.scheduler.lint_interval_hours <= 0:
+        raise ProductConfigError("scheduler.lint_interval_hours must be positive")
+    if config.scheduler.lint_autofix_max_rounds <= 0:
+        raise ProductConfigError("scheduler.lint_autofix_max_rounds must be positive")
     if config.project_routing.min_confidence not in {"high", "medium", "low"}:
         raise ProductConfigError(f"Unsupported project routing min_confidence: {config.project_routing.min_confidence}")
     if config.project_routing.max_sources_per_run <= 0:
@@ -468,3 +521,23 @@ def slugify(value: str) -> str:
     while "--" in slug:
         slug = slug.replace("--", "-")
     return slug or "project"
+
+
+def normalize_weekday(value: str) -> str:
+    normalized = value.strip().lower()
+    aliases = {
+        "mon": "monday",
+        "tue": "tuesday",
+        "tues": "tuesday",
+        "wed": "wednesday",
+        "thu": "thursday",
+        "thur": "thursday",
+        "thurs": "thursday",
+        "fri": "friday",
+        "sat": "saturday",
+        "sun": "sunday",
+    }
+    normalized = aliases.get(normalized, normalized)
+    if normalized not in {"monday", "tuesday", "wednesday", "thursday", "friday", "saturday", "sunday"}:
+        raise ProductConfigError(f"Unsupported scheduler weekday: {value}")
+    return normalized

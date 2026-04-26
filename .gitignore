@@ -9,6 +9,8 @@ __pycache__/
 
 state/*.json
 state/*.jsonl
+state/*.log
+state/*.txt
 !state/.gitkeep
 
 audits/*.jsonl
@@ -31,3 +33,4 @@ wiki/*
 experimental_exports/
 memory_v2_pilot/
 memory_v2_full/
+config/*.generated.md
