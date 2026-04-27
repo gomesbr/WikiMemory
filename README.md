@@ -78,6 +78,39 @@ Reference files:
 - `schema/consumer_working_profile.schema.json`
 - `config/consumer_profile_policy.json`
 
+## Source Compatibility
+
+WikiMemory is not limited to one vendor's chat product. It is designed to support multiple conversation-history sources through different adapter styles:
+
+- `local_session_log_adapter`
+- `chat_export_adapter`
+- `api_event_capture_adapter`
+
+The setup agent is expected to work on this configuration for the consumer. During onboarding it should inspect the local environment, infer the most likely source type, and configure the right ingestion path instead of expecting the consumer to map the storage model manually.
+
+Compatibility matrix:
+
+| Source | Local raw logs | Export available | Incremental-friendly | Best adapter type | Product fit |
+| --- | --- | --- | --- | --- | --- |
+| Codex CLI / local Codex workflows | Yes | Possible but not required | High | `local_session_log_adapter` | Strong |
+| Claude Code | Yes | Possible | High | `local_session_log_adapter` | Strong |
+| Cursor-style local agent workflows | Usually yes when backed by local session/event files | Sometimes | High | `local_session_log_adapter` | Strong |
+| ChatGPT web / app | No stable local raw log contract | Yes | Medium | `chat_export_adapter` | Medium |
+| Claude web / Claude Desktop | No stable append-only local raw log contract for this use case | Yes | Medium | `chat_export_adapter` | Medium |
+| API-only custom agent apps | Only if the app records them | N/A unless the app adds export | High when instrumented | `api_event_capture_adapter` | Strong when instrumented |
+
+Interpretation:
+
+- `Strong`: best fit for continuous memory refresh because the source can be read incrementally and reprocessed deterministically.
+- `Medium`: usable, but better for periodic imports or backfills than continuous local delta tracking.
+- `Weak` would mean the product needs an additional logging layer before memory quality will be reliable.
+
+Practical rule:
+
+- if the platform stores full local conversations, WikiMemory can usually run incrementally
+- if the platform only offers account export, WikiMemory can still work, but more like import/snapshot mode
+- if the platform offers neither, the solution is to add API-side event capture at the app layer
+
 ## End-to-End Pipeline
 
 ### Phase 1: Discovery
