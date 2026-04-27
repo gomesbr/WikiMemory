@@ -8,7 +8,7 @@ import unittest
 from pathlib import Path
 from uuid import uuid4
 
-from wikimemory.discovery import run_discovery
+from sessionmemory.discovery import run_discovery
 
 
 def make_source_file(path: Path, session_id: str, extra_lines: list[dict] | None = None) -> None:
@@ -33,7 +33,7 @@ def make_source_file(path: Path, session_id: str, extra_lines: list[dict] | None
 
 class DiscoveryTests(unittest.TestCase):
     def setUp(self) -> None:
-        self.temp_dir = Path(tempfile.mkdtemp(prefix="wikimemory-tests-"))
+        self.temp_dir = Path(tempfile.mkdtemp(prefix="sessionmemory-tests-"))
         self.root_a = self.temp_dir / "sessions-a"
         self.root_b = self.temp_dir / "sessions-b"
         self.state_dir = self.temp_dir / "state"
@@ -189,9 +189,9 @@ class DiscoveryTests(unittest.TestCase):
         source_path = self.root_a / relative_path
         make_source_file(source_path, session_id)
 
-        os.environ["WIKIMEMORY_TEST_ROOT"] = str(self.root_a)
-        self.addCleanup(os.environ.pop, "WIKIMEMORY_TEST_ROOT", None)
-        self.write_config("${WIKIMEMORY_TEST_ROOT}")
+        os.environ["SESSIONMEMORY_TEST_ROOT"] = str(self.root_a)
+        self.addCleanup(os.environ.pop, "SESSIONMEMORY_TEST_ROOT", None)
+        self.write_config("${SESSIONMEMORY_TEST_ROOT}")
 
         run_discovery(self.config_path, self.state_dir)
         source_path.unlink()
@@ -203,7 +203,7 @@ class DiscoveryTests(unittest.TestCase):
 
         restored_path = self.root_b / relative_path
         make_source_file(restored_path, session_id)
-        os.environ["WIKIMEMORY_TEST_ROOT"] = str(self.root_b)
+        os.environ["SESSIONMEMORY_TEST_ROOT"] = str(self.root_b)
 
         moved_result = run_discovery(self.config_path, self.state_dir)
         self.assertTrue(moved_result.report.success)

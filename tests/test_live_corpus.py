@@ -8,25 +8,25 @@ import unittest
 from pathlib import Path
 from unittest.mock import patch
 
-from wikimemory.audit import run_audit
-from wikimemory.bootstrap import run_bootstrap
-from wikimemory.classification import run_classification
-from wikimemory.discovery import run_discovery
-from wikimemory.extraction import run_extraction
-from wikimemory.normalization import run_normalization
-from wikimemory.raw_event_resolver import RawEventResolver
-from wikimemory.segmentation import run_segmentation
-from wikimemory.wiki import run_wiki
+from sessionmemory.audit import run_audit
+from sessionmemory.bootstrap import run_bootstrap
+from sessionmemory.classification import run_classification
+from sessionmemory.discovery import run_discovery
+from sessionmemory.extraction import run_extraction
+from sessionmemory.normalization import run_normalization
+from sessionmemory.raw_event_resolver import RawEventResolver
+from sessionmemory.segmentation import run_segmentation
+from sessionmemory.wiki import run_wiki
 
 
 def real_sessions_root() -> Path:
-    return Path(os.environ.get("WIKIMEMORY_CODEX_SESSIONS_ROOT", r"C:\Users\Fabio\.codex\sessions"))
+    return Path(os.environ.get("SESSIONMEMORY_CODEX_SESSIONS_ROOT", r"C:\Users\Fabio\.codex\sessions"))
 
 
-@unittest.skipUnless(os.environ.get("WIKIMEMORY_RUN_LIVE_TESTS") == "1", "live corpus tests disabled")
+@unittest.skipUnless(os.environ.get("SESSIONMEMORY_RUN_LIVE_TESTS") == "1", "live corpus tests disabled")
 class LiveCorpusTests(unittest.TestCase):
     def setUp(self) -> None:
-        self.temp_dir = Path(tempfile.mkdtemp(prefix="wikimemory-live-"))
+        self.temp_dir = Path(tempfile.mkdtemp(prefix="sessionmemory-live-"))
         self.sample_root = self.temp_dir / "sessions"
         self.state_dir = self.temp_dir / "state"
         self.normalized_dir = self.temp_dir / "normalized"
@@ -196,7 +196,7 @@ class LiveCorpusTests(unittest.TestCase):
         )
         self.assertTrue(extraction_result.report.success)
 
-        with patch("wikimemory.wiki.call_openai_structured_json", side_effect=self.make_fake_wiki_synthesizer()):
+        with patch("sessionmemory.wiki.call_openai_structured_json", side_effect=self.make_fake_wiki_synthesizer()):
             wiki_result = run_wiki(
                 config_path=self.wiki_config_path,
                 state_dir=self.state_dir,
@@ -206,7 +206,7 @@ class LiveCorpusTests(unittest.TestCase):
             )
         self.assertTrue(wiki_result.report.success)
 
-        with patch("wikimemory.bootstrap.call_openai_structured_json", side_effect=self.make_fake_bootstrap_synthesizer()):
+        with patch("sessionmemory.bootstrap.call_openai_structured_json", side_effect=self.make_fake_bootstrap_synthesizer()):
             bootstrap_result = run_bootstrap(
                 config_path=self.bootstrap_config_path,
                 state_dir=self.state_dir,

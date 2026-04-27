@@ -9,12 +9,12 @@ from pathlib import Path
 from unittest.mock import patch
 from uuid import uuid4
 
-from wikimemory.classification import run_classification
-from wikimemory.discovery import run_discovery
-from wikimemory.extraction import run_extraction
-from wikimemory.normalization import run_normalization
-from wikimemory.segmentation import run_segmentation
-from wikimemory.wiki import run_wiki
+from sessionmemory.classification import run_classification
+from sessionmemory.discovery import run_discovery
+from sessionmemory.extraction import run_extraction
+from sessionmemory.normalization import run_normalization
+from sessionmemory.segmentation import run_segmentation
+from sessionmemory.wiki import run_wiki
 
 
 def make_source_file(
@@ -48,7 +48,7 @@ def make_source_file(
 
 class WikiTests(unittest.TestCase):
     def setUp(self) -> None:
-        self.temp_dir = Path(tempfile.mkdtemp(prefix="wikimemory-wiki-"))
+        self.temp_dir = Path(tempfile.mkdtemp(prefix="sessionmemory-wiki-"))
         self.root = self.temp_dir / "sessions"
         self.state_dir = self.temp_dir / "state"
         self.normalized_dir = self.temp_dir / "normalized"
@@ -136,7 +136,7 @@ class WikiTests(unittest.TestCase):
         invalid: bool = False,
     ):
         side_effect = self.make_invalid_synthesizer() if invalid else self.make_fake_synthesizer(prefix)
-        with patch("wikimemory.wiki.call_openai_structured_json", side_effect=side_effect):
+        with patch("sessionmemory.wiki.call_openai_structured_json", side_effect=side_effect):
             return run_wiki(
                 config_path=config_path,
                 state_dir=self.state_dir,
@@ -495,7 +495,7 @@ class WikiTests(unittest.TestCase):
         self.write_source_config()
         self.run_until_extracted()
 
-        with patch("wikimemory.wiki.call_openai_structured_json", side_effect=self.make_index_alias_synthesizer("Alias")):
+        with patch("sessionmemory.wiki.call_openai_structured_json", side_effect=self.make_index_alias_synthesizer("Alias")):
             result = run_wiki(
                 config_path=self.write_wiki_config(),
                 state_dir=self.state_dir,
@@ -572,7 +572,7 @@ class WikiTests(unittest.TestCase):
         make_source_file(
             self.source_path(open_brain_id, "open-brain"),
             open_brain_id,
-            cwd="C:\\repos\\wikimemory",
+            cwd="C:\\repos\\sessionmemory",
             extra_lines=[
                 {
                     "timestamp": "2026-04-12T21:05:30.000Z",
@@ -639,7 +639,7 @@ class WikiTests(unittest.TestCase):
         make_source_file(
             self.source_path(open_brain_id, "open-brain"),
             open_brain_id,
-            cwd="C:\\repos\\wikimemory",
+            cwd="C:\\repos\\sessionmemory",
             extra_lines=[
                 {
                     "timestamp": "2026-04-12T21:06:30.000Z",

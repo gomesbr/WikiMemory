@@ -1,5 +1,5 @@
 param(
-    [string]$TaskName = "WikiMemoryRefresh",
+    [string]$TaskName = "SessionMemoryRefresh",
     [string]$ProjectRoot = (Resolve-Path ".").Path,
     [string]$PythonExe = "python"
 )
@@ -7,11 +7,11 @@ param(
 # Prepared only. Review this file before running it to activate the scheduler.
 # Allowed weekdays: monday, tuesday, wednesday, thursday, friday
 # Local run time: 09:00
-# Refresh command: python -m wikimemory memory-refresh --consumer-profile-extraction-model gpt-4o-mini --consumer-profile-merge-model gpt-5.3-codex --consumer-profile-window-max-chars 60000
+# Refresh command: python -m sessionmemory memory-refresh --consumer-profile-extraction-model gpt-4o-mini --consumer-profile-merge-model gpt-5.3-codex --consumer-profile-window-max-chars 60000
 
 $action = New-ScheduledTaskAction `
     -Execute $PythonExe `
-    -Argument "-m wikimemory memory-refresh --consumer-profile-extraction-model gpt-4o-mini --consumer-profile-merge-model gpt-5.3-codex --consumer-profile-window-max-chars 60000" `
+    -Argument "-m sessionmemory memory-refresh --consumer-profile-extraction-model gpt-4o-mini --consumer-profile-merge-model gpt-5.3-codex --consumer-profile-window-max-chars 60000" `
     -WorkingDirectory $ProjectRoot
 
 $trigger = New-ScheduledTaskTrigger `
@@ -29,6 +29,6 @@ $settings = New-ScheduledTaskSettingsSet `
 #     -Action $action `
 #     -Trigger $trigger `
 #     -Settings $settings `
-#     -Description "Run WikiMemory memory refresh based on prepared scheduler policy."
+#     -Description "Run SessionMemory memory refresh based on prepared scheduler policy."
 
 # Write-Host "Prepared scheduler activation script. Uncomment Register-ScheduledTask when you want to activate it."

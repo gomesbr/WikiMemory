@@ -9,8 +9,8 @@ from pathlib import Path
 from unittest.mock import patch
 from uuid import uuid4
 
-from wikimemory.classification import ClassificationResult, ClassificationRunReport
-from wikimemory.refresh import run_refresh
+from sessionmemory.classification import ClassificationResult, ClassificationRunReport
+from sessionmemory.refresh import run_refresh
 
 
 def make_source_file(
@@ -45,7 +45,7 @@ def make_source_file(
 
 class RefreshTests(unittest.TestCase):
     def setUp(self) -> None:
-        self.temp_dir = Path(tempfile.mkdtemp(prefix="wikimemory-refresh-"))
+        self.temp_dir = Path(tempfile.mkdtemp(prefix="sessionmemory-refresh-"))
         self.root = self.temp_dir / "sessions"
         self.state_dir = self.temp_dir / "state"
         self.normalized_dir = self.temp_dir / "normalized"
@@ -128,8 +128,8 @@ class RefreshTests(unittest.TestCase):
         return base / f"rollout-2026-04-12T20-59-14-{session_id}.jsonl"
 
     def run_refresh_with_fake_llm(self, source_ids: list[str] | None = None):
-        with patch("wikimemory.wiki.call_openai_structured_json", side_effect=self.make_fake_wiki_synthesizer()), patch(
-            "wikimemory.bootstrap.call_openai_structured_json",
+        with patch("sessionmemory.wiki.call_openai_structured_json", side_effect=self.make_fake_wiki_synthesizer()), patch(
+            "sessionmemory.bootstrap.call_openai_structured_json",
             side_effect=self.make_fake_bootstrap_synthesizer(),
         ):
             return run_refresh(
@@ -251,7 +251,7 @@ class RefreshTests(unittest.TestCase):
         make_source_file(
             self.source_path(open_brain_id, "open-brain"),
             open_brain_id,
-            cwd="C:\\repos\\wikimemory",
+            cwd="C:\\repos\\sessionmemory",
             extra_lines=[
                 {
                     "timestamp": "2026-04-12T21:02:00.000Z",
@@ -318,7 +318,7 @@ class RefreshTests(unittest.TestCase):
         make_source_file(
             self.source_path(open_brain_id, "open-brain"),
             open_brain_id,
-            cwd="C:\\repos\\wikimemory",
+            cwd="C:\\repos\\sessionmemory",
             extra_lines=[
                 {
                     "timestamp": "2026-04-12T21:04:30.000Z",
@@ -355,7 +355,7 @@ class RefreshTests(unittest.TestCase):
                     "hostname": "test-host",
                     "started_at": datetime.now(timezone.utc).isoformat(),
                     "heartbeat_at": datetime.now(timezone.utc).isoformat(),
-                    "command": "python -m wikimemory refresh",
+                    "command": "python -m sessionmemory refresh",
                 },
                 indent=2,
             ),
@@ -412,11 +412,11 @@ class RefreshTests(unittest.TestCase):
                 notice_log_path=self.audits_dir / "classification_notices.jsonl",
             )
 
-        with patch("wikimemory.refresh.run_classification", side_effect=failed_classification), patch(
-            "wikimemory.wiki.call_openai_structured_json",
+        with patch("sessionmemory.refresh.run_classification", side_effect=failed_classification), patch(
+            "sessionmemory.wiki.call_openai_structured_json",
             side_effect=self.make_fake_wiki_synthesizer(),
         ), patch(
-            "wikimemory.bootstrap.call_openai_structured_json",
+            "sessionmemory.bootstrap.call_openai_structured_json",
             side_effect=self.make_fake_bootstrap_synthesizer(),
         ):
             failed = run_refresh(

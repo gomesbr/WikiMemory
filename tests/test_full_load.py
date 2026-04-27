@@ -8,7 +8,7 @@ from pathlib import Path
 from unittest.mock import patch
 from uuid import uuid4
 
-from wikimemory.full_load import run_full_load
+from sessionmemory.full_load import run_full_load
 
 
 def make_source_file(
@@ -43,7 +43,7 @@ def make_source_file(
 
 class FullLoadTests(unittest.TestCase):
     def setUp(self) -> None:
-        self.temp_dir = Path(tempfile.mkdtemp(prefix="wikimemory-full-load-"))
+        self.temp_dir = Path(tempfile.mkdtemp(prefix="sessionmemory-full-load-"))
         self.root = self.temp_dir / "sessions"
         self.state_dir = self.temp_dir / "state"
         self.normalized_dir = self.temp_dir / "normalized"
@@ -151,8 +151,8 @@ class FullLoadTests(unittest.TestCase):
         return base / f"rollout-2026-04-12T20-59-14-{session_id}.jsonl"
 
     def run_full_load_with_fake_llm(self):
-        with patch("wikimemory.wiki.call_openai_structured_json", side_effect=self.make_fake_wiki_synthesizer()), patch(
-            "wikimemory.bootstrap.call_openai_structured_json",
+        with patch("sessionmemory.wiki.call_openai_structured_json", side_effect=self.make_fake_wiki_synthesizer()), patch(
+            "sessionmemory.bootstrap.call_openai_structured_json",
             side_effect=self.make_fake_bootstrap_synthesizer(),
         ):
             return run_full_load(

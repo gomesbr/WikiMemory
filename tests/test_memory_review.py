@@ -6,12 +6,12 @@ import tempfile
 import unittest
 from pathlib import Path
 
-from wikimemory.memory_review import run_memory_review
+from sessionmemory.memory_review import run_memory_review
 
 
 class MemoryReviewTests(unittest.TestCase):
     def setUp(self) -> None:
-        self.temp_dir = Path(tempfile.mkdtemp(prefix="wikimemory-review-"))
+        self.temp_dir = Path(tempfile.mkdtemp(prefix="sessionmemory-review-"))
         self.memory_dir = self.temp_dir / "memory"
         self.state_dir = self.temp_dir / "state"
         self.audits_dir = self.temp_dir / "audits"

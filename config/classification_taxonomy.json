@@ -187,7 +187,7 @@
           "id": "open-brain.path.project",
           "terms": [
             "open-brain",
-            "wikimemory"
+            "sessionmemory"
           ],
           "weight": 5
         }
@@ -197,7 +197,7 @@
           "id": "open-brain.repo.project",
           "terms": [
             "open-brain",
-            "wikimemory"
+            "sessionmemory"
           ],
           "weight": 5
         }

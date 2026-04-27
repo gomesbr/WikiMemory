@@ -8,13 +8,13 @@ from pathlib import Path
 from unittest.mock import patch
 from uuid import uuid4
 
-from wikimemory.bootstrap import run_bootstrap
-from wikimemory.classification import run_classification
-from wikimemory.discovery import run_discovery
-from wikimemory.extraction import run_extraction
-from wikimemory.normalization import run_normalization
-from wikimemory.segmentation import run_segmentation
-from wikimemory.wiki import run_wiki
+from sessionmemory.bootstrap import run_bootstrap
+from sessionmemory.classification import run_classification
+from sessionmemory.discovery import run_discovery
+from sessionmemory.extraction import run_extraction
+from sessionmemory.normalization import run_normalization
+from sessionmemory.segmentation import run_segmentation
+from sessionmemory.wiki import run_wiki
 
 
 def make_source_file(
@@ -48,7 +48,7 @@ def make_source_file(
 
 class BootstrapTests(unittest.TestCase):
     def setUp(self) -> None:
-        self.temp_dir = Path(tempfile.mkdtemp(prefix="wikimemory-bootstrap-"))
+        self.temp_dir = Path(tempfile.mkdtemp(prefix="sessionmemory-bootstrap-"))
         self.root = self.temp_dir / "sessions"
         self.state_dir = self.temp_dir / "state"
         self.normalized_dir = self.temp_dir / "normalized"
@@ -153,7 +153,7 @@ class BootstrapTests(unittest.TestCase):
         )
 
     def run_wiki_with_fake_llm(self, *, config_path: Path, source_ids: list[str] | None = None):
-        with patch("wikimemory.wiki.call_openai_structured_json", side_effect=self.make_fake_wiki_synthesizer()):
+        with patch("sessionmemory.wiki.call_openai_structured_json", side_effect=self.make_fake_wiki_synthesizer()):
             return run_wiki(
                 config_path=config_path,
                 state_dir=self.state_dir,
@@ -173,7 +173,7 @@ class BootstrapTests(unittest.TestCase):
         verbose: bool = False,
     ):
         side_effect = self.make_invalid_bootstrap_synthesizer() if invalid else self.make_fake_bootstrap_synthesizer(prefix, verbose=verbose)
-        with patch("wikimemory.bootstrap.call_openai_structured_json", side_effect=side_effect):
+        with patch("sessionmemory.bootstrap.call_openai_structured_json", side_effect=side_effect):
             return run_bootstrap(
                 config_path=config_path,
                 state_dir=self.state_dir,
@@ -450,7 +450,7 @@ class BootstrapTests(unittest.TestCase):
         make_source_file(
             self.source_path(open_brain_id, "open-brain"),
             open_brain_id,
-            cwd="C:\\repos\\wikimemory",
+            cwd="C:\\repos\\sessionmemory",
             extra_lines=[
                 {
                     "timestamp": "2026-04-12T21:05:30.000Z",
@@ -557,7 +557,7 @@ class BootstrapTests(unittest.TestCase):
         self.run_until_extracted()
         self.assertTrue(self.run_wiki_with_fake_llm(config_path=self.write_wiki_config()).report.success)
 
-        with patch("wikimemory.bootstrap.call_openai_structured_json", side_effect=self.make_mixed_invalid_bootstrap_synthesizer()):
+        with patch("sessionmemory.bootstrap.call_openai_structured_json", side_effect=self.make_mixed_invalid_bootstrap_synthesizer()):
             result = run_bootstrap(
                 config_path=self.write_bootstrap_config(),
                 state_dir=self.state_dir,
@@ -593,7 +593,7 @@ class BootstrapTests(unittest.TestCase):
         self.run_until_extracted()
         self.run_wiki_with_fake_llm(config_path=self.write_wiki_config())
 
-        with patch("wikimemory.bootstrap.call_openai_structured_json", side_effect=self.make_duplicate_bootstrap_synthesizer()):
+        with patch("sessionmemory.bootstrap.call_openai_structured_json", side_effect=self.make_duplicate_bootstrap_synthesizer()):
             result = run_bootstrap(
                 config_path=self.write_bootstrap_config(),
                 state_dir=self.state_dir,

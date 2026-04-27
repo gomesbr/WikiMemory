@@ -6,12 +6,12 @@ import tempfile
 import unittest
 from pathlib import Path
 
-from wikimemory.memory_inspection import run_memory_inspection
+from sessionmemory.memory_inspection import run_memory_inspection
 
 
 class MemoryInspectionTests(unittest.TestCase):
     def setUp(self) -> None:
-        self.temp_dir = Path(tempfile.mkdtemp(prefix="wikimemory-memory-inspection-"))
+        self.temp_dir = Path(tempfile.mkdtemp(prefix="sessionmemory-memory-inspection-"))
         self.memory_dir = self.temp_dir / "memory"
         self.state_dir = self.temp_dir / "state"
         meta_dir = self.memory_dir / "_meta"

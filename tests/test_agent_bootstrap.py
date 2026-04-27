@@ -6,13 +6,13 @@ import tempfile
 import unittest
 from pathlib import Path
 
-from wikimemory.agent_bootstrap import run_agent_bootstrap
-from wikimemory.product_config import default_product_config
+from sessionmemory.agent_bootstrap import run_agent_bootstrap
+from sessionmemory.product_config import default_product_config
 
 
 class AgentBootstrapTests(unittest.TestCase):
     def setUp(self) -> None:
-        self.temp_dir = Path(tempfile.mkdtemp(prefix="wikimemory-agent-bootstrap-"))
+        self.temp_dir = Path(tempfile.mkdtemp(prefix="sessionmemory-agent-bootstrap-"))
         self.memory_dir = self.temp_dir / "memory"
         self.state_dir = self.temp_dir / "state"
         self.audits_dir = self.temp_dir / "audits"
@@ -81,8 +81,8 @@ class AgentBootstrapTests(unittest.TestCase):
         self.assertTrue(target.exists())
         content = target.read_text(encoding="utf-8")
         self.assertIn("Do not delete this.", content)
-        self.assertIn("<!-- WIKIMEMORY:START -->", content)
-        self.assertIn("<!-- WIKIMEMORY:END -->", content)
+        self.assertIn("<!-- SESSIONMEMORY:START -->", content)
+        self.assertIn("<!-- SESSIONMEMORY:END -->", content)
         self.assertIn("first line of the first real reply", content)
         self.assertIn("Your workspace memory is already loaded here.", content)
         self.assertIn("latest durable workspace memory is using both relative time and absolute time", content)
@@ -123,7 +123,7 @@ class AgentBootstrapTests(unittest.TestCase):
         self.write_memory_items()
         target = self.temp_dir / "AGENTS.md"
         target.write_text(
-            "# User Rules\n\nKeep this paragraph.\n\n<!-- WIKIMEMORY:START -->\nold generated text\n<!-- WIKIMEMORY:END -->\n\nKeep this footer.\n",
+            "# User Rules\n\nKeep this paragraph.\n\n<!-- SESSIONMEMORY:START -->\nold generated text\n<!-- SESSIONMEMORY:END -->\n\nKeep this footer.\n",
             encoding="utf-8",
         )
 

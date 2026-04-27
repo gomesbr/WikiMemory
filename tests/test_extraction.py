@@ -7,11 +7,11 @@ import unittest
 from pathlib import Path
 from uuid import uuid4
 
-from wikimemory.classification import run_classification
-from wikimemory.discovery import run_discovery
-from wikimemory.extraction import run_extraction
-from wikimemory.normalization import run_normalization
-from wikimemory.segmentation import run_segmentation
+from sessionmemory.classification import run_classification
+from sessionmemory.discovery import run_discovery
+from sessionmemory.extraction import run_extraction
+from sessionmemory.normalization import run_normalization
+from sessionmemory.segmentation import run_segmentation
 
 
 def make_source_file(
@@ -45,7 +45,7 @@ def make_source_file(
 
 class ExtractionTests(unittest.TestCase):
     def setUp(self) -> None:
-        self.temp_dir = Path(tempfile.mkdtemp(prefix="wikimemory-extract-"))
+        self.temp_dir = Path(tempfile.mkdtemp(prefix="sessionmemory-extract-"))
         self.root = self.temp_dir / "sessions"
         self.state_dir = self.temp_dir / "state"
         self.normalized_dir = self.temp_dir / "normalized"
@@ -300,7 +300,7 @@ class ExtractionTests(unittest.TestCase):
                     "type": "event_msg",
                     "payload": {
                         "type": "user_message",
-                        "message": "Update file wikimemory/cli.py and the wikimemory.segmentation module path.",
+                        "message": "Update file sessionmemory/cli.py and the sessionmemory.segmentation module path.",
                     },
                 }
             ],
@@ -311,8 +311,8 @@ class ExtractionTests(unittest.TestCase):
         self.assertTrue(extraction_result.report.success)
         code_item = next(item for item in self.source_items(session_id) if item["item_type"] == "code_location")
         self.assertEqual(code_item["target_page_key"], "code-map")
-        self.assertIn("wikimemory/cli.py", code_item["code_location"].get("path", ""))
-        self.assertIn("wikimemory.segmentation", code_item["code_location"].get("module", ""))
+        self.assertIn("sessionmemory/cli.py", code_item["code_location"].get("path", ""))
+        self.assertIn("sessionmemory.segmentation", code_item["code_location"].get("module", ""))
 
     def test_truncated_event_uses_lazy_raw_hydration_for_code_location(self) -> None:
         session_id = str(uuid4())
@@ -327,7 +327,7 @@ class ExtractionTests(unittest.TestCase):
                     "type": "event_msg",
                     "payload": {
                         "type": "user_message",
-                        "message": f"{long_prefix} update file wikimemory/cli.py and inspect wikimemory.segmentation.",
+                        "message": f"{long_prefix} update file sessionmemory/cli.py and inspect sessionmemory.segmentation.",
                     },
                 }
             ],
@@ -337,7 +337,7 @@ class ExtractionTests(unittest.TestCase):
         *_, extraction_result = self.run_full_pipeline()
         self.assertTrue(extraction_result.report.success)
         code_item = next(item for item in self.source_items(session_id) if item["item_type"] == "code_location")
-        self.assertIn("wikimemory/cli.py", code_item["code_location"].get("path", ""))
+        self.assertIn("sessionmemory/cli.py", code_item["code_location"].get("path", ""))
         normalized_events = self.read_jsonl(self.normalized_dir / "sources" / session_id / "events.jsonl")
         self.assertTrue(any(event.get("text_surface_truncated") for event in normalized_events))
 
@@ -443,7 +443,7 @@ class ExtractionTests(unittest.TestCase):
         make_source_file(
             self.source_path(session_id, "open-brain"),
             session_id,
-            cwd="C:\\repos\\wikimemory",
+            cwd="C:\\repos\\sessionmemory",
             extra_lines=[
                 {
                     "timestamp": "2026-04-12T21:06:00.000Z",
@@ -470,7 +470,7 @@ class ExtractionTests(unittest.TestCase):
         make_source_file(
             self.source_path(session_id, "open-brain"),
             session_id,
-            cwd="C:\\repos\\wikimemory",
+            cwd="C:\\repos\\sessionmemory",
             extra_lines=[
                 {
                     "timestamp": "2026-04-12T21:07:00.000Z",

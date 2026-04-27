@@ -198,7 +198,7 @@ def default_product_config(project_root: Path | str) -> ProductConfig:
             LogSourceConfig(
                 adapter="codex_jsonl",
                 root_alias="codex_sessions",
-                absolute_path="${WIKIMEMORY_CODEX_SESSIONS_ROOT}",
+                absolute_path="${SESSIONMEMORY_CODEX_SESSIONS_ROOT}",
                 include_glob="**/*.jsonl",
             ),
         ),
@@ -435,8 +435,8 @@ def parse_project_routing_config(payload: dict[str, Any]) -> ProjectRoutingConfi
     provider = RoutingProviderConfig(
         provider_type=str(provider_payload.get("type", "openai")),
         api_key_env=str(provider_payload.get("api_key_env", "OPENAI_API_KEY")),
-        base_url_env=str(provider_payload.get("base_url_env", "WIKIMEMORY_OPENAI_BASE_URL")),
-        model_env=str(provider_payload.get("model_env", "WIKIMEMORY_OPENAI_MODEL")),
+        base_url_env=str(provider_payload.get("base_url_env", "SESSIONMEMORY_OPENAI_BASE_URL")),
+        model_env=str(provider_payload.get("model_env", "SESSIONMEMORY_OPENAI_MODEL")),
         default_model=str(provider_payload.get("default_model", "gpt-5.4-mini")),
         temperature=float(provider_payload.get("temperature", 0)),
     )
@@ -459,8 +459,8 @@ def parse_memory_extraction_config(payload: dict[str, Any]) -> MemoryExtractionC
     provider = RoutingProviderConfig(
         provider_type=str(provider_payload.get("type", "openai")),
         api_key_env=str(provider_payload.get("api_key_env", "OPENAI_API_KEY")),
-        base_url_env=str(provider_payload.get("base_url_env", "WIKIMEMORY_OPENAI_BASE_URL")),
-        model_env=str(provider_payload.get("model_env", "WIKIMEMORY_OPENAI_MODEL")),
+        base_url_env=str(provider_payload.get("base_url_env", "SESSIONMEMORY_OPENAI_BASE_URL")),
+        model_env=str(provider_payload.get("model_env", "SESSIONMEMORY_OPENAI_MODEL")),
         default_model=str(provider_payload.get("default_model", "gpt-5.4-mini")),
         temperature=float(provider_payload.get("temperature", 0)),
     )
@@ -490,8 +490,8 @@ def default_memory_extraction_config(enabled: bool = False) -> MemoryExtractionC
         provider=RoutingProviderConfig(
             provider_type="openai",
             api_key_env="OPENAI_API_KEY",
-            base_url_env="WIKIMEMORY_OPENAI_BASE_URL",
-            model_env="WIKIMEMORY_OPENAI_MODEL",
+            base_url_env="SESSIONMEMORY_OPENAI_BASE_URL",
+            model_env="SESSIONMEMORY_OPENAI_MODEL",
             default_model="gpt-5.4-mini",
             temperature=0,
         ),
@@ -508,8 +508,8 @@ def default_project_routing_config() -> ProjectRoutingConfig:
         provider=RoutingProviderConfig(
             provider_type="openai",
             api_key_env="OPENAI_API_KEY",
-            base_url_env="WIKIMEMORY_OPENAI_BASE_URL",
-            model_env="WIKIMEMORY_OPENAI_MODEL",
+            base_url_env="SESSIONMEMORY_OPENAI_BASE_URL",
+            model_env="SESSIONMEMORY_OPENAI_MODEL",
             default_model="gpt-5.4-mini",
             temperature=0,
         ),

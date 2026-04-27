@@ -7,13 +7,13 @@ import tempfile
 import unittest
 from pathlib import Path
 
-from wikimemory.product_config import default_product_config
-from wikimemory.scheduler import run_scheduler_plan
+from sessionmemory.product_config import default_product_config
+from sessionmemory.scheduler import run_scheduler_plan
 
 
 class SchedulerPlanTests(unittest.TestCase):
     def setUp(self) -> None:
-        self.temp_dir = Path(tempfile.mkdtemp(prefix="wikimemory-scheduler-"))
+        self.temp_dir = Path(tempfile.mkdtemp(prefix="sessionmemory-scheduler-"))
         self.state_dir = self.temp_dir / "state"
         self.scripts_dir = self.temp_dir / "scripts"
         self.product_config = self.temp_dir / "product_config.json"
@@ -147,7 +147,7 @@ class SchedulerPlanTests(unittest.TestCase):
             [
                 "python",
                 "-m",
-                "wikimemory",
+                "sessionmemory",
                 "scheduler-run",
                 "--product-config",
                 str(self.product_config),
@@ -206,7 +206,7 @@ class SchedulerPlanTests(unittest.TestCase):
             [
                 "python",
                 "-m",
-                "wikimemory",
+                "sessionmemory",
                 "scheduler-run",
                 "--product-config",
                 str(self.product_config),

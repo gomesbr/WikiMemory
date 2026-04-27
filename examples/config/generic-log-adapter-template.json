@@ -12,7 +12,7 @@
       "message_text": "message.content"
     },
     "notes": [
-      "Add the adapter id to wikimemory/adapters.py before use.",
+      "Add the adapter id to sessionmemory/adapters.py before use.",
       "Map source rows into canonical evidence records before memory generation.",
       "Keep raw logs external; store provenance pointers and bounded text only."
     ]

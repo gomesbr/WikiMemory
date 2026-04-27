@@ -6,12 +6,12 @@ import tempfile
 import unittest
 from pathlib import Path
 
-from wikimemory.memory_v2 import correct_project_from_statement, parse_daily_chat_markdown, render_memory_v2, rule_bucket, split_rule_statement, run_memory_v2
+from sessionmemory.memory_v2 import correct_project_from_statement, parse_daily_chat_markdown, render_memory_v2, rule_bucket, split_rule_statement, run_memory_v2
 
 
 class MemoryV2Tests(unittest.TestCase):
     def setUp(self) -> None:
-        self.temp_dir = Path(tempfile.mkdtemp(prefix="wikimemory-memory-v2-"))
+        self.temp_dir = Path(tempfile.mkdtemp(prefix="sessionmemory-memory-v2-"))
         self.input_dir = self.temp_dir / "daily"
         self.output_dir = self.temp_dir / "memory_v2_pilot"
         self.state_dir = self.temp_dir / "state"
@@ -499,7 +499,7 @@ For Ai Trader, the project is a deterministic autonomous trading system.
         self.assertNotIn("_No selected items", project_memory)
         self.assertNotIn("## OPEN PROBLEMS", project_memory)
 
-    def test_ai_trader_example_in_memory_page_discussion_routes_to_wikimemory(self) -> None:
+    def test_ai_trader_example_in_memory_page_discussion_routes_to_sessionmemory(self) -> None:
         def attribution_llm(system_prompt: str, payload: dict[str, object], model: str) -> dict[str, object]:
             if "messages" in payload:
                 return {
@@ -543,10 +543,10 @@ For Ai Trader, the project is a deterministic autonomous trading system.
 
         self.assertTrue(result.report.success, result.report.fatal_error_summary)
         self.assertFalse((self.output_dir / "projects" / "ai-trader" / "recent.md").exists())
-        self.assertNotIn("clean-slate", (self.output_dir / "projects" / "ai-trader" / "rules.md").read_text(encoding="utf-8"))
-        self.assertTrue((self.output_dir / "projects" / "wikimemory" / "rules.md").exists())
+        self.assertFalse((self.output_dir / "projects" / "ai-trader" / "rules.md").exists())
+        self.assertTrue((self.output_dir / "projects" / "sessionmemory" / "rules.md").exists())
 
-    def test_ai_trader_mention_in_wikimemory_evidence_routes_merged_item_to_wikimemory(self) -> None:
+    def test_ai_trader_mention_in_sessionmemory_evidence_routes_merged_item_to_sessionmemory(self) -> None:
         self.day_file.write_text(
             """# Codex Chat Export - 2026-04-19
 
@@ -558,7 +558,7 @@ For Ai Trader, the project is a deterministic autonomous trading system.
 # Context from my IDE setup:
 
 ## Open tabs:
-- project.md: WikiMemory/memory/projects/ai-trader/project.md
+- project.md: SessionMemory/memory/projects/ai-trader/project.md
 
 ## My request for Codex:
 The context of that line was, the agent was maintaining compatibility with v1 of the system while building v2. How would you rewrite this rule, which should not be in Purpose?
@@ -610,9 +610,10 @@ The context of that line was, the agent was maintaining compatibility with v1 of
 
         self.assertTrue(result.report.success, result.report.fatal_error_summary)
         merged = json.loads((self.output_dir / "_meta" / "merged_items.json").read_text(encoding="utf-8"))["items"][0]
-        self.assertEqual(merged["project"], "wikimemory")
+        self.assertEqual(merged["project"], "sessionmemory")
         self.assertFalse((self.output_dir / "projects" / "ai-trader" / "recent.md").exists())
-        self.assertNotIn("clean-slate", (self.output_dir / "projects" / "ai-trader" / "rules.md").read_text(encoding="utf-8"))
+        self.assertFalse((self.output_dir / "projects" / "ai-trader" / "rules.md").exists())
+        self.assertTrue((self.output_dir / "projects" / "sessionmemory" / "rules.md").exists())
 
     def test_known_project_with_readme_renders_project_page_even_without_log_items(self) -> None:
         def no_item_llm(system_prompt: str, payload: dict[str, object], model: str) -> dict[str, object]:

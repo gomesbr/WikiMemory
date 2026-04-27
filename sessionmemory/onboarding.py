@@ -80,7 +80,7 @@ class OnboardingReport:
 
 
 PROJECT_GOAL = (
-    "WikiMemory is a memory layer for coding agents. It turns prior session logs into compact agent-facing "
+    "SessionMemory is a memory layer for coding agents. It turns prior session logs into compact agent-facing "
     "memory so new sessions can remember user preferences, project rules, recent work, decisions, and open questions."
 )
 
@@ -155,7 +155,7 @@ def detect_environment(project_root: Path) -> dict[str, object]:
         likely_editor = "unknown"
 
     likely_log_root = (
-        os.environ.get("WIKIMEMORY_CODEX_SESSIONS_ROOT", "").strip()
+        os.environ.get("SESSIONMEMORY_CODEX_SESSIONS_ROOT", "").strip()
         or os.environ.get("CODEX_SESSIONS_ROOT", "").strip()
         or str(Path.home() / ".codex" / "sessions")
     )
@@ -167,8 +167,8 @@ def detect_environment(project_root: Path) -> dict[str, object]:
     sibling_projects = detect_sibling_projects(project_root)
     available_llm_envs = {
         "OPENAI_API_KEY": bool(os.environ.get("OPENAI_API_KEY")),
-        "WIKIMEMORY_OPENAI_BASE_URL": bool(os.environ.get("WIKIMEMORY_OPENAI_BASE_URL")),
-        "WIKIMEMORY_OPENAI_MODEL": bool(os.environ.get("WIKIMEMORY_OPENAI_MODEL")),
+        "SESSIONMEMORY_OPENAI_BASE_URL": bool(os.environ.get("SESSIONMEMORY_OPENAI_BASE_URL")),
+        "SESSIONMEMORY_OPENAI_MODEL": bool(os.environ.get("SESSIONMEMORY_OPENAI_MODEL")),
     }
 
     return {
@@ -306,7 +306,7 @@ def build_onboarding_questions(detected: dict[str, object]) -> tuple[OnboardingQ
     return (
         OnboardingQuestion(
             question_id="agent_platform",
-            prompt="Which agent workflow should WikiMemory optimize for first?",
+            prompt="Which agent workflow should SessionMemory optimize for first?",
             why_it_matters="This chooses the bootstrap renderer, target file, and default startup flow for new agent sessions.",
             detected_value=str(detected["likely_agent_platform"]),
             recommended_option=agent_default,
@@ -354,7 +354,7 @@ def build_onboarding_questions(detected: dict[str, object]) -> tuple[OnboardingQ
         ),
         OnboardingQuestion(
             question_id="log_root",
-            prompt="Which session-log source should WikiMemory ingest?",
+            prompt="Which session-log source should SessionMemory ingest?",
             why_it_matters="The core product goal depends on reading past agent conversation logs from the right place.",
             detected_value=str(detected["likely_log_root"]),
             recommended_option="A",
@@ -447,7 +447,7 @@ def write_agent_onboarding_brief(
 ) -> None:
     ensure_directory(brief_path.parent)
     lines = [
-        "# WikiMemory Agent Configuration Brief",
+        "# SessionMemory Agent Configuration Brief",
         "",
         PROJECT_GOAL,
         "",

@@ -14,7 +14,7 @@ Why this sample was chosen:
 - it includes reasoning records
 - it includes `function_call` and `function_call_output` events
 - it includes policy-blocked tool outputs as well as successful tool outputs
-- it shows the actual top-level JSONL event structure that WikiMemory ingests
+- it shows the actual top-level JSONL event structure that SessionMemory ingests
 
 What GPT should learn from it:
 

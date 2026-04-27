@@ -1,6 +1,6 @@
 # Adapter Extension Guide
 
-WikiMemory keeps machine-specific paths in config and keeps parsing logic behind adapters.
+SessionMemory keeps machine-specific paths in config and keeps parsing logic behind adapters.
 
 ## Current Adapter Types
 
@@ -11,9 +11,9 @@ WikiMemory keeps machine-specific paths in config and keeps parsing logic behind
 
 ## Adding a Log Adapter
 
-1. Add an adapter id to `wikimemory/adapters.py`.
+1. Add an adapter id to `sessionmemory/adapters.py`.
 2. Add config keys to `config/product_config.json`.
-3. Normalize source records into the canonical evidence shape used by `wikimemory/ingest.py`.
+3. Normalize source records into the canonical evidence shape used by `sessionmemory/ingest.py`.
 4. Preserve provenance fields: source id, line/byte location where possible, timestamp, actor type, and content surfaces.
 5. Add a real sample log under `examples/source-logs/` if it can be safely shared.
 6. Add a test that runs through ingest, memory, bootstrap, and lint.

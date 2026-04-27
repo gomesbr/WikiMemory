@@ -6,14 +6,14 @@ import tempfile
 import unittest
 from pathlib import Path
 
-from wikimemory.onboarding import detect_environment, run_onboarding
-from wikimemory.product_config import default_product_config
-from wikimemory.onboarding import replace_bootstrap_renderer, replace_markdown_mode
+from sessionmemory.onboarding import detect_environment, run_onboarding
+from sessionmemory.product_config import default_product_config
+from sessionmemory.onboarding import replace_bootstrap_renderer, replace_markdown_mode
 
 
 class OnboardingTests(unittest.TestCase):
     def setUp(self) -> None:
-        self.temp_dir = Path(tempfile.mkdtemp(prefix="wikimemory-onboard-"))
+        self.temp_dir = Path(tempfile.mkdtemp(prefix="sessionmemory-onboard-"))
         self.project_root = self.temp_dir / "project"
         (self.project_root / "wiki" / ".obsidian").mkdir(parents=True)
         (self.project_root / "config").mkdir(parents=True)

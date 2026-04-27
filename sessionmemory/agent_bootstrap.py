@@ -13,8 +13,8 @@ from .product_config import load_product_config
 
 STATE_SCHEMA_VERSION = 1
 AGENT_BOOTSTRAP_SCHEMA_VERSION = 1
-BOOTSTRAP_BLOCK_START = "<!-- WIKIMEMORY:START -->"
-BOOTSTRAP_BLOCK_END = "<!-- WIKIMEMORY:END -->"
+BOOTSTRAP_BLOCK_START = "<!-- SESSIONMEMORY:START -->"
+BOOTSTRAP_BLOCK_END = "<!-- SESSIONMEMORY:END -->"
 BRAIN = "\U0001f9e0"
 
 
@@ -186,7 +186,7 @@ def render_bootstrap_markdown(items: list[dict[str, object]], agent_label: str, 
     lines = [
         f"# {BRAIN} Agent Memory Index",
         "",
-        f"Generated WikiMemory entry map for {agent_label}. Keep user-written content outside the managed block.",
+        f"Generated SessionMemory entry map for {agent_label}. Keep user-written content outside the managed block.",
         "",
         "## Startup behavior",
         "",

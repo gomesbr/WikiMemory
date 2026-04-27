@@ -1,6 +1,6 @@
 # Consumer Working Profile
 
-WikiMemory can eventually maintain a `consumer working profile` to help future agent sessions collaborate better with the same person.
+SessionMemory can eventually maintain a `consumer working profile` to help future agent sessions collaborate better with the same person.
 
 This is intentionally **not** a psychology profile, diagnosis, or intelligence score.
 
@@ -31,7 +31,7 @@ It should not try to answer:
 
 ## Allowed Inference Categories
 
-These are the categories WikiMemory should allow:
+These are the categories SessionMemory should allow:
 
 - `communication_preferences`
 - `workflow_preferences`
@@ -68,7 +68,7 @@ These should stay out of scope:
 - protected-class inference
 - manipulative targeting
 
-Even if a model thinks it can guess these, WikiMemory should not store them.
+Even if a model thinks it can guess these, SessionMemory should not store them.
 
 ## Quality Rules
 

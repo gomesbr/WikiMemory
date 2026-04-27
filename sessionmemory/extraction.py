@@ -116,10 +116,10 @@ RULEISH_ITEM_TYPES = {"communication_preference", "workflow_rule", "do_rule", "d
 PROGRESS_STATUS_PREFIXES = (
     "i'm ",
     "i am ",
-    "i’ll ",
+    "iâ€™ll ",
     "i'll ",
     "next i'll ",
-    "next i’ll ",
+    "next iâ€™ll ",
     "i am fixing",
     "i'm fixing",
     "i am doing",
@@ -1465,7 +1465,7 @@ def detect_project_mentions(clause: str) -> list[str]:
     mentions: list[str] = []
     mention_map = {
         "ai-trader": ("ai trader", "ai-trader", "aitrader", "openclaw"),
-        "open-brain": ("open brain", "open-brain", "openbrain", "wikimemory"),
+        "open-brain": ("open brain", "open-brain", "openbrain", "sessionmemory"),
         "ai-scientist": ("ai scientist", "ai-scientist", "aiscientist"),
     }
     for label, terms in mention_map.items():

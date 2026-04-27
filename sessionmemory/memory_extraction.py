@@ -63,7 +63,7 @@ PROMPT_SCAFFOLD_PATTERN = re.compile(
     re.IGNORECASE,
 )
 CODE_ARTIFACT_PATTERN = re.compile(
-    r"(?:file:\s*[A-Z]:/|[A-Z]:\\|\.codex/skills|^\s*m\s+(?:config|tests|wikimemory)/|tests/test_|pyproject\.toml|\.env\b)",
+    r"(?:file:\s*[A-Z]:/|[A-Z]:\\|\.codex/skills|^\s*m\s+(?:config|tests|sessionmemory)/|tests/test_|pyproject\.toml|\.env\b)",
     re.IGNORECASE,
 )
 TRANSIENT_REQUEST_PATTERN = re.compile(

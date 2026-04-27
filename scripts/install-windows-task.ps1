@@ -1,5 +1,5 @@
 param(
-    [string]$TaskName = "WikiMemoryRefresh",
+    [string]$TaskName = "SessionMemoryRefresh",
     [string]$ProjectRoot = (Resolve-Path ".").Path,
     [string]$PythonExe = "python",
     [string]$IntervalMinutes = "60",
@@ -8,7 +8,7 @@ param(
 
 $action = New-ScheduledTaskAction `
     -Execute $PythonExe `
-    -Argument "-m wikimemory memory-refresh" `
+    -Argument "-m sessionmemory memory-refresh" `
     -WorkingDirectory $ProjectRoot
 
 $trigger = New-ScheduledTaskTrigger `
@@ -35,4 +35,4 @@ Register-ScheduledTask `
     -Action $action `
     -Trigger $trigger `
     -Settings $settings `
-    -Description "Run WikiMemory incremental memory refresh."
+    -Description "Run SessionMemory incremental memory refresh."

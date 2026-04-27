@@ -1,8 +1,8 @@
 # Start Here For Agent
 
-If you are the consumer's code agent, start the WikiMemory configuration flow from this file.
+If you are the consumer's code agent, start the SessionMemory configuration flow from this file.
 
-WikiMemory is a memory solution for coding agents. Its goal is to turn prior session logs into compact agent-facing memory so new sessions can remember:
+SessionMemory is a memory solution for coding agents. Its goal is to turn prior session logs into compact agent-facing memory so new sessions can remember:
 
 - user preferences
 - consumer working style
@@ -17,7 +17,7 @@ WikiMemory is a memory solution for coding agents. Its goal is to turn prior ses
 2. Run:
 
 ```powershell
-python -m wikimemory onboard --json
+python -m sessionmemory onboard --json
 ```
 
 3. Review the generated:
@@ -49,7 +49,7 @@ Prefer agent-driven setup:
 
 ## Consumer Working Profile
 
-WikiMemory may later maintain a `consumer working profile` so future sessions can collaborate better with the same person.
+SessionMemory may later maintain a `consumer working profile` so future sessions can collaborate better with the same person.
 
 Use it only for work-relevant collaboration traits, such as:
 
@@ -68,4 +68,4 @@ See:
 
 ## Important Constraint
 
-Do not treat WikiMemory as generic note generation. The real product goal is reliable memory bootstrap for future agent sessions, based on previous session conversation logs.
+Do not treat SessionMemory as generic note generation. The real product goal is reliable memory bootstrap for future agent sessions, based on previous session conversation logs.

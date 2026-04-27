@@ -1,8 +1,8 @@
-# WikiMemory
+# SessionMemory
 
 Point your code agent to [START_HERE_FOR_AGENT.md](START_HERE_FOR_AGENT.md) to begin configuration.
 
-WikiMemory is a file-based memory pipeline for agent session logs and related project context.
+SessionMemory is a file-based memory pipeline for agent session logs and related project context.
 
 Its job is to turn raw session traces and project signals into:
 
@@ -26,7 +26,7 @@ Agent session logs contain a large amount of useful information, but they are di
 - they are not organized by project/domain knowledge
 - they are too large and noisy to load directly into future sessions
 
-WikiMemory solves that by building a layered pipeline:
+SessionMemory solves that by building a layered pipeline:
 
 1. discover the raw sessions
 2. normalize them into a stable internal representation
@@ -38,6 +38,11 @@ WikiMemory solves that by building a layered pipeline:
 8. compress the best subset into startup/bootstrap memory
 9. audit the outputs for contradictions, drift, provenance gaps, and quality issues
 10. orchestrate incremental refreshes and controlled full-corpus loading
+
+Note on origin:
+
+- the broader wiki-style external memory idea was popularized by Andrej Karpathy
+- SessionMemory takes inspiration from that direction, but focuses more specifically on agent session logs, conversation continuity, and startup memory for future agent chats
 
 ## Design Principles
 
@@ -53,7 +58,7 @@ WikiMemory solves that by building a layered pipeline:
 
 ## Consumer Working Profile
 
-WikiMemory can support a `consumer working profile` to help future agent sessions collaborate better with the same consumer.
+SessionMemory can support a `consumer working profile` to help future agent sessions collaborate better with the same consumer.
 
 This should be limited to work-relevant traits such as:
 
@@ -80,13 +85,13 @@ Reference files:
 
 ## Source Compatibility
 
-WikiMemory is not limited to one vendor's chat product. It is designed to support multiple conversation-history sources through different adapter styles:
+SessionMemory is not limited to one vendor's chat product. It is designed to support multiple conversation-history sources through different adapter styles:
 
 - `local_session_log_adapter`
 - `chat_export_adapter`
 - `api_event_capture_adapter`
 
-The setup agent is expected to work on this configuration for the consumer. During onboarding it should inspect the local environment, infer the most likely source type, and configure the right ingestion path instead of expecting the consumer to map the storage model manually.
+Your agent at setup time should handle this for you. During onboarding, it should inspect your local environment, infer the most likely source type, and configure the right ingestion path instead of expecting you to understand how each platform stores conversation history.
 
 Compatibility matrix:
 
@@ -107,9 +112,15 @@ Interpretation:
 
 Practical rule:
 
-- if the platform stores full local conversations, WikiMemory can usually run incrementally
-- if the platform only offers account export, WikiMemory can still work, but more like import/snapshot mode
+- if the platform stores full local conversations, SessionMemory can usually run incrementally
+- if the platform only offers account export, SessionMemory can still work, but more like import/snapshot mode
 - if the platform offers neither, the solution is to add API-side event capture at the app layer
+
+What this means for you:
+
+- you do not need to map vendor storage formats by hand before trying the product
+- your agent should detect the most likely setup path and prepare the right configuration for you
+- if your current platform is not ideal, SessionMemory can still tell you the next-best ingestion mode instead of failing silently
 
 ## End-to-End Pipeline
 
@@ -184,7 +195,7 @@ Project association is deterministic first:
 Command:
 
 ```powershell
-python -m wikimemory ingest
+python -m sessionmemory ingest
 ```
 
 Writes:
@@ -198,7 +209,7 @@ Writes:
 The memory-first path can then generate compact operational memory directly from evidence:
 
 ```powershell
-python -m wikimemory memory
+python -m sessionmemory memory
 ```
 
 Writes:
@@ -216,7 +227,7 @@ Writes:
 The configured agent bootstrap file can then be generated from compact memory:
 
 ```powershell
-python -m wikimemory agent-bootstrap
+python -m sessionmemory agent-bootstrap
 ```
 
 In the default configuration this writes a tiny bootstrap entry map, usually `AGENTS.md`, that points to the derived memory files instead of copying the whole memory layer into the bootstrap.
@@ -231,7 +242,7 @@ Bootstrap rendering is configurable:
 Compact memory outputs can be linted independently from the legacy wiki pipeline:
 
 ```powershell
-python -m wikimemory memory-lint
+python -m sessionmemory memory-lint
 ```
 
 This checks rule quality, scope, provenance, stale recent-state items, and whether the agent bootstrap stays an entry map instead of inlining noisy recent context.
@@ -239,7 +250,7 @@ This checks rule quality, scope, provenance, stale recent-state items, and wheth
 The redesigned memory path also has a single end-to-end refresh command:
 
 ```powershell
-python -m wikimemory memory-refresh
+python -m sessionmemory memory-refresh
 ```
 
 This runs discovery, normalization, evidence ingest, compact memory generation, agent bootstrap generation, and memory linting without invoking the legacy wiki/bootstrap synthesis path.
@@ -247,21 +258,21 @@ This runs discovery, normalization, evidence ingest, compact memory generation, 
 Review inferred durable-rule candidates:
 
 ```powershell
-python -m wikimemory memory-review
-python -m wikimemory memory-review --approve <item_id>
-python -m wikimemory memory-review --reject <item_id>
+python -m sessionmemory memory-review
+python -m sessionmemory memory-review --approve <item_id>
+python -m sessionmemory memory-review --reject <item_id>
 ```
 
 Apply canonical item fixes and rerender pages before the final lint pass:
 
 ```powershell
-python -m wikimemory memory-lint --fix --max-fix-rounds 2
+python -m sessionmemory memory-lint --fix --max-fix-rounds 2
 ```
 
 Prepare scheduler artifacts without activating anything:
 
 ```powershell
-python -m wikimemory scheduler-plan
+python -m sessionmemory scheduler-plan
 powershell -ExecutionPolicy Bypass -File scripts/install-windows-task.ps1 -IntervalMinutes 60
 ```
 
@@ -511,7 +522,7 @@ Writes:
 
 Top-level folders you will care about:
 
-- `wikimemory/`
+- `sessionmemory/`
   - Python implementation for all phases
 - `config/`
   - JSON configuration for source roots, taxonomy, extraction, wiki, bootstrap, audit, refresh, and full-load
@@ -584,17 +595,17 @@ This gives the project:
 
 Raw session root:
 
-- `WIKIMEMORY_CODEX_SESSIONS_ROOT`
+- `SESSIONMEMORY_CODEX_SESSIONS_ROOT`
 
 OpenAI-backed phases:
 
 - `OPENAI_API_KEY`
-- optional `WIKIMEMORY_OPENAI_MODEL`
-- optional `WIKIMEMORY_OPENAI_BASE_URL`
+- optional `SESSIONMEMORY_OPENAI_MODEL`
+- optional `SESSIONMEMORY_OPENAI_BASE_URL`
 
 Testing:
 
-- `WIKIMEMORY_RUN_LIVE_TESTS=1`
+- `SESSIONMEMORY_RUN_LIVE_TESTS=1`
 
 ### Local `.env`
 
@@ -609,28 +620,28 @@ That file is ignored by git.
 Main commands:
 
 ```powershell
-python -m wikimemory discover
-python -m wikimemory normalize
-python -m wikimemory ingest
-python -m wikimemory memory
-python -m wikimemory agent-bootstrap
-python -m wikimemory memory-lint
-python -m wikimemory memory-refresh
-python -m wikimemory segment
-python -m wikimemory classify
-python -m wikimemory extract
-python -m wikimemory wiki
-python -m wikimemory bootstrap
-python -m wikimemory audit
-python -m wikimemory refresh
-python -m wikimemory full-load
+python -m sessionmemory discover
+python -m sessionmemory normalize
+python -m sessionmemory ingest
+python -m sessionmemory memory
+python -m sessionmemory agent-bootstrap
+python -m sessionmemory memory-lint
+python -m sessionmemory memory-refresh
+python -m sessionmemory segment
+python -m sessionmemory classify
+python -m sessionmemory extract
+python -m sessionmemory wiki
+python -m sessionmemory bootstrap
+python -m sessionmemory audit
+python -m sessionmemory refresh
+python -m sessionmemory full-load
 ```
 
 Tests:
 
 ```powershell
 python -m unittest discover -s tests -v
-$env:WIKIMEMORY_RUN_LIVE_TESTS=1
+$env:SESSIONMEMORY_RUN_LIVE_TESTS=1
 python -m unittest tests.test_live_corpus -v
 ```
 
@@ -640,19 +651,21 @@ Most phase commands support standard path overrides and optional scoping by `--s
 
 ### First Setup
 
-1. Point your code agent to `START_HERE_FOR_AGENT.md`
+1. Point your agent to `START_HERE_FOR_AGENT.md`
 2. Or run:
 
 ```powershell
-python -m wikimemory onboard
+python -m sessionmemory onboard
 ```
 
-3. Configure `config/source_roots.json` or set `WIKIMEMORY_CODEX_SESSIONS_ROOT`
-4. Set `OPENAI_API_KEY`
-5. Run:
+3. Let your agent inspect your environment and propose the right log or export source
+4. Confirm the recommended source path or adapter mode
+5. If needed, configure `config/source_roots.json` or set `SESSIONMEMORY_CODEX_SESSIONS_ROOT`
+6. Set `OPENAI_API_KEY`
+7. Run:
 
 ```powershell
-python -m wikimemory refresh
+python -m sessionmemory refresh
 ```
 
 ### Daily Usage
@@ -660,7 +673,7 @@ python -m wikimemory refresh
 For normal operation:
 
 ```powershell
-python -m wikimemory refresh
+python -m sessionmemory refresh
 ```
 
 ### Full Corpus Pass
@@ -668,7 +681,7 @@ python -m wikimemory refresh
 For a strict end-to-end gated run:
 
 ```powershell
-python -m wikimemory full-load
+python -m sessionmemory full-load
 ```
 
 ### Focused Repair or Experiment Work
@@ -676,10 +689,10 @@ python -m wikimemory full-load
 When iterating on one problem area, rerun only the later phases you changed. Example:
 
 ```powershell
-python -m wikimemory extract
-python -m wikimemory wiki
-python -m wikimemory bootstrap
-python -m wikimemory audit
+python -m sessionmemory extract
+python -m sessionmemory wiki
+python -m sessionmemory bootstrap
+python -m sessionmemory audit
 ```
 
 ## Wiki Output Model
@@ -748,7 +761,7 @@ That lets the project keep bootstrap markdown compact while preserving exact evi
 
 ## LLM Usage Boundaries
 
-This project is not “LLM everywhere.”
+This project is not â€œLLM everywhere.â€
 
 Deterministic phases:
 
@@ -846,8 +859,8 @@ The system is usable end-to-end, but it should still be treated as an evolving m
 
 A good one-paragraph explanation is:
 
-WikiMemory is a multi-phase memory pipeline for agent session logs. It discovers raw session traces without copying them into the repo, normalizes them into pointer-based canonical events, segments them into work units, classifies those units into domains, extracts structured durable and temporal knowledge with provenance, synthesizes a readable memory layer using bounded LLM-backed summaries over deterministic evidence, compresses the highest-signal subset into bootstrap memory for future agent sessions, audits the outputs for contradictions, drift, and quality issues, and supports both incremental refreshes and strict full-corpus runs with phase gates.
+SessionMemory is a multi-phase memory pipeline for agent session logs. It discovers raw session traces without copying them into the repo, normalizes them into pointer-based canonical events, segments them into work units, classifies those units into domains, extracts structured durable and temporal knowledge with provenance, synthesizes a readable memory layer using bounded LLM-backed summaries over deterministic evidence, compresses the highest-signal subset into bootstrap memory for future agent sessions, audits the outputs for contradictions, drift, and quality issues, and supports both incremental refreshes and strict full-corpus runs with phase gates.
 
 And the shortest explanation is:
 
-WikiMemory turns raw agent logs into a provenance-backed memory and startup layer through deterministic preprocessing plus bounded LLM synthesis.
+SessionMemory turns raw agent logs into a provenance-backed memory and startup layer through deterministic preprocessing plus bounded LLM synthesis.

@@ -611,7 +611,7 @@ def write_lock_payload(lock_path: Path, run_id: str, started_at: str | None = No
         "hostname": socket.gethostname(),
         "started_at": started_at or now,
         "heartbeat_at": now,
-        "command": "python -m wikimemory refresh",
+        "command": "python -m sessionmemory refresh",
     }
     atomic_write_text(lock_path, json.dumps(payload, indent=2, sort_keys=True) + "\n")
 

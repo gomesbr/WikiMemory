@@ -7,16 +7,16 @@ import tempfile
 import unittest
 from pathlib import Path
 
-from wikimemory.discovery import run_discovery
-from wikimemory.ingest import run_ingest
-from wikimemory.memory_generation import run_memory_generation
-from wikimemory.normalization import run_normalization
-from wikimemory.product_config import default_product_config
+from sessionmemory.discovery import run_discovery
+from sessionmemory.ingest import run_ingest
+from sessionmemory.memory_generation import run_memory_generation
+from sessionmemory.normalization import run_normalization
+from sessionmemory.product_config import default_product_config
 
 
 class MemoryGenerationTests(unittest.TestCase):
     def setUp(self) -> None:
-        self.temp_dir = Path(tempfile.mkdtemp(prefix="wikimemory-memory-"))
+        self.temp_dir = Path(tempfile.mkdtemp(prefix="sessionmemory-memory-"))
         self.evidence_dir = self.temp_dir / "evidence"
         self.memory_dir = self.temp_dir / "memory"
         self.state_dir = self.temp_dir / "state"
@@ -309,7 +309,7 @@ class MemoryGenerationTests(unittest.TestCase):
             self.assertEqual(payload["project"], "example-project")
             return {
                 "threads": [
-                    "Finish bootstrap and agent configuration flow for WikiMemory onboarding.",
+                    "Finish bootstrap and agent configuration flow for SessionMemory onboarding.",
                     "Stabilize the refresh-plus-lint workflow and validate it on real data.",
                     "Expand robust real-data test coverage for larger memory corpora.",
                 ]

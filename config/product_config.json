@@ -22,7 +22,7 @@
     {
       "adapter": "codex_jsonl",
       "root_alias": "agent_sessions",
-      "absolute_path": "${WIKIMEMORY_CODEX_SESSIONS_ROOT}",
+      "absolute_path": "${SESSIONMEMORY_CODEX_SESSIONS_ROOT}",
       "include_glob": "**/*.jsonl"
     }
   ],
@@ -35,9 +35,9 @@
   ],
   "project_aliases": [
     {
-      "slug": "wikimemory",
+      "slug": "sessionmemory",
       "aliases": [
-        "WikiMemory"
+        "SessionMemory"
       ]
     }
   ],
@@ -50,8 +50,8 @@
     "provider": {
       "provider_type": "openai",
       "api_key_env": "OPENAI_API_KEY",
-      "base_url_env": "WIKIMEMORY_OPENAI_BASE_URL",
-      "model_env": "WIKIMEMORY_OPENAI_MODEL",
+      "base_url_env": "SESSIONMEMORY_OPENAI_BASE_URL",
+      "model_env": "SESSIONMEMORY_OPENAI_MODEL",
       "default_model": "gpt-5.4-mini",
       "temperature": 0
     }
@@ -67,8 +67,8 @@
     "provider": {
       "provider_type": "openai",
       "api_key_env": "OPENAI_API_KEY",
-      "base_url_env": "WIKIMEMORY_OPENAI_BASE_URL",
-      "model_env": "WIKIMEMORY_OPENAI_MODEL",
+      "base_url_env": "SESSIONMEMORY_OPENAI_BASE_URL",
+      "model_env": "SESSIONMEMORY_OPENAI_MODEL",
       "default_model": "gpt-5.4-mini",
       "temperature": 0
     }

@@ -41,13 +41,13 @@ ALLOWED_CLASSES = {
 ALLOWED_ROLES = {"purpose", "architecture", "constraint", "rule", "recent_state", "decision", "lesson", "discard"}
 ALLOWED_CONFIDENCE = {"explicit", "strong", "medium", "low"}
 ALLOWED_TEMPORAL = {"active", "historical", "resolved", "superseded", "durable"}
-PROJECT_SLUGS = {"global", "ai-trader", "open-brain", "ai-scientist", "codexclaw", "wikimemory", "cross-project", "unknown"}
+PROJECT_SLUGS = {"global", "ai-trader", "open-brain", "ai-scientist", "codexclaw", "sessionmemory", "cross-project", "unknown"}
 PROJECT_DIRECTORY_ALIASES = {
     "ai-trader": ("AITrader", "ai-trader"),
     "open-brain": ("OpenBrain", "open-brain"),
     "ai-scientist": ("AIScientist", "ai-scientist"),
     "codexclaw": ("CodexClaw", "codexclaw"),
-    "wikimemory": ("WikiMemory", "wikimemory"),
+    "sessionmemory": ("SessionMemory", "sessionmemory"),
 }
 PROJECT_SCOPE_MARKERS = {
     "ai-trader": (
@@ -108,8 +108,8 @@ PROJECT_SCOPE_MARKERS = {
         "propose trades",
         "execute trades",
     ),
-    "wikimemory": (
-        "wikimemory",
+    "sessionmemory": (
+        "sessionmemory",
         "wiki memory",
         "memory generation",
         "memory-generation",
@@ -263,7 +263,7 @@ def run_memory_v2(
     state_dir = Path(state_dir)
     started_at = utc_now()
     run_id = f"memory-v2-{started_at.replace(':', '').replace('.', '').replace('-', '')}"
-    model_id = model or os.environ.get("WIKIMEMORY_MEMORY_V2_MODEL", "").strip() or DEFAULT_MODEL
+    model_id = model or os.environ.get("SESSIONMEMORY_MEMORY_V2_MODEL", "").strip() or DEFAULT_MODEL
     run_log_path = state_dir / "memory_v2_runs.jsonl"
     previous_run_log = run_log_path.read_text(encoding="utf-8") if run_log_path.exists() else ""
     ensure_directory(state_dir)
@@ -591,7 +591,7 @@ def collect_project_contexts(
 
 def default_project_search_root() -> Path:
     cwd = Path.cwd().resolve()
-    return cwd.parent if cwd.name.lower() == "wikimemory" else cwd
+    return cwd.parent if cwd.name.lower() == "sessionmemory" else cwd
 
 
 def resolve_project_directory(search_root: Path, project: str) -> Path | None:
@@ -721,7 +721,7 @@ def call_llm_json(system_prompt: str, payload: dict[str, object], model: str, ll
 
 
 def post_openai_chat(payload: dict[str, object], api_key: str) -> dict[str, object]:
-    base_url = os.environ.get("WIKIMEMORY_OPENAI_BASE_URL", "https://api.openai.com").rstrip("/")
+    base_url = os.environ.get("SESSIONMEMORY_OPENAI_BASE_URL", "https://api.openai.com").rstrip("/")
     request = urllib.request.Request(
         url=f"{base_url}/v1/chat/completions",
         data=json.dumps(payload).encode("utf-8"),
@@ -750,7 +750,7 @@ def post_openai_response(
 
 
 def post_openai_responses_payload(payload: dict[str, object], api_key: str) -> dict[str, object]:
-    base_url = os.environ.get("WIKIMEMORY_OPENAI_BASE_URL", "https://api.openai.com").rstrip("/")
+    base_url = os.environ.get("SESSIONMEMORY_OPENAI_BASE_URL", "https://api.openai.com").rstrip("/")
     request = urllib.request.Request(
         url=f"{base_url}/v1/responses",
         data=json.dumps(payload).encode("utf-8"),
@@ -1706,7 +1706,7 @@ def correct_example_project_attribution(statement: str, project: str) -> str:
     if project not in {"ai-trader", "open-brain", "codexclaw"}:
         return project
     lowered = statement.lower()
-    wikimemory_markers = (
+    sessionmemory_markers = (
         "memory page",
         "memory pages",
         "project.md",
@@ -1716,13 +1716,13 @@ def correct_example_project_attribution(statement: str, project: str) -> str:
         "fresh-agent",
         "memory_role",
         "wiki memory",
-        "wikimemory",
+        "sessionmemory",
         "rendering",
         "extracted memory",
         "generated memory",
     )
-    if any(marker in lowered for marker in wikimemory_markers):
-        return "wikimemory"
+    if any(marker in lowered for marker in sessionmemory_markers):
+        return "sessionmemory"
     return project
 
 
@@ -1736,13 +1736,13 @@ def correct_project_from_statement(statement: str, project: str) -> str:
     ai_subject_markers = (
         "aitrader is",
         "aitrader includes",
-        "aitrader’s",
+        "aitraderâ€™s",
         "aitrader's",
         "aitrader workspace",
         "aitrader branch",
         "aitrader approval",
         "aitrader roll",
-        "aitrader’s planned",
+        "aitraderâ€™s planned",
         "opentrader",
         "openclaw:",
         "openclaw is",
@@ -1772,17 +1772,17 @@ def correct_candidate_attribution_from_messages(candidate: dict[str, object], me
         message = message_by_index.get(index)
         if message:
             evidence_text.append(message.text)
-    if evidence_points_to_wikimemory("\n".join(evidence_text)):
+    if evidence_points_to_sessionmemory("\n".join(evidence_text)):
         corrected = dict(candidate)
-        corrected["project"] = "wikimemory"
+        corrected["project"] = "sessionmemory"
         return corrected
     return candidate
 
 
-def evidence_points_to_wikimemory(text: str) -> bool:
+def evidence_points_to_sessionmemory(text: str) -> bool:
     lowered = text.lower()
     markers = (
-        "wikimemory/",
+        "sessionmemory/",
         "memory/projects/",
         "memory pages",
         "memory page",
@@ -1823,8 +1823,8 @@ def normalize_project(value: object, memory_class: str) -> str:
         return "open-brain"
     if text in {"ai-scientist", "ai-scientists"}:
         return "ai-scientist"
-    if text in {"wiki-memory", "wikimemory"}:
-        return "wikimemory"
+    if text in {"wiki-memory", "sessionmemory"}:
+        return "sessionmemory"
     return text if text in PROJECT_SLUGS else "unknown"
 
 

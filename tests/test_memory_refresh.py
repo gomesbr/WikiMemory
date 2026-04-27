@@ -8,15 +8,15 @@ import unittest
 from pathlib import Path
 from unittest.mock import patch
 
-from wikimemory.consumer_profile import ConsumerProfileResult, ConsumerProfileRunReport
-from wikimemory.memory_lint import MemoryLintResult, MemoryLintRunReport
-from wikimemory.memory_refresh import run_memory_refresh
-from wikimemory.product_config import default_product_config
+from sessionmemory.consumer_profile import ConsumerProfileResult, ConsumerProfileRunReport
+from sessionmemory.memory_lint import MemoryLintResult, MemoryLintRunReport
+from sessionmemory.memory_refresh import run_memory_refresh
+from sessionmemory.product_config import default_product_config
 
 
 class MemoryRefreshTests(unittest.TestCase):
     def setUp(self) -> None:
-        self.temp_dir = Path(tempfile.mkdtemp(prefix="wikimemory-memory-refresh-"))
+        self.temp_dir = Path(tempfile.mkdtemp(prefix="sessionmemory-memory-refresh-"))
         self.sessions_root = self.temp_dir / "sessions"
         self.project_root = self.temp_dir / "project"
         self.state_dir = self.temp_dir / "state"
@@ -94,7 +94,7 @@ class MemoryRefreshTests(unittest.TestCase):
     def test_memory_refresh_runs_real_sample_path_end_to_end(self) -> None:
         self.init_real_sample_environment()
 
-        with patch("wikimemory.memory_refresh.run_consumer_profile", return_value=self.fake_consumer_profile_result()):
+        with patch("sessionmemory.memory_refresh.run_consumer_profile", return_value=self.fake_consumer_profile_result()):
             result = run_memory_refresh(
                 source_roots_config_path=self.source_config,
                 product_config_path=self.product_config,
@@ -136,7 +136,7 @@ class MemoryRefreshTests(unittest.TestCase):
             run_log_path=self.state_dir / "memory_lint_runs.jsonl",
         )
 
-        with patch("wikimemory.memory_refresh.run_consumer_profile", return_value=self.fake_consumer_profile_result()), patch("wikimemory.memory_refresh.run_memory_lint", return_value=fake_lint):
+        with patch("sessionmemory.memory_refresh.run_consumer_profile", return_value=self.fake_consumer_profile_result()), patch("sessionmemory.memory_refresh.run_memory_lint", return_value=fake_lint):
             result = run_memory_refresh(
                 source_roots_config_path=self.source_config,
                 product_config_path=self.product_config,
@@ -175,8 +175,8 @@ class MemoryRefreshTests(unittest.TestCase):
             run_log_path=self.state_dir / "memory_lint_runs.jsonl",
         )
 
-        with patch("wikimemory.memory_refresh.run_consumer_profile", return_value=self.fake_consumer_profile_result()), patch(
-            "wikimemory.memory_refresh.run_memory_lint",
+        with patch("sessionmemory.memory_refresh.run_consumer_profile", return_value=self.fake_consumer_profile_result()), patch(
+            "sessionmemory.memory_refresh.run_memory_lint",
             return_value=fake_lint,
         ) as lint_mock:
             result = run_memory_refresh(
@@ -213,8 +213,8 @@ class MemoryRefreshTests(unittest.TestCase):
             run_log_path=self.state_dir / "memory_lint_runs.jsonl",
         )
 
-        with patch("wikimemory.memory_refresh.run_consumer_profile", return_value=self.fake_consumer_profile_result()), patch(
-            "wikimemory.memory_refresh.run_memory_lint",
+        with patch("sessionmemory.memory_refresh.run_consumer_profile", return_value=self.fake_consumer_profile_result()), patch(
+            "sessionmemory.memory_refresh.run_memory_lint",
             return_value=fake_lint,
         ) as lint_mock:
             result = run_memory_refresh(
@@ -262,7 +262,7 @@ class MemoryRefreshTests(unittest.TestCase):
             run_log_path=self.state_dir / "memory_lint_runs.jsonl",
         )
 
-        with patch("wikimemory.memory_refresh.run_consumer_profile", return_value=self.fake_consumer_profile_result()), patch("wikimemory.memory_refresh.run_memory_lint", return_value=fake_lint):
+        with patch("sessionmemory.memory_refresh.run_consumer_profile", return_value=self.fake_consumer_profile_result()), patch("sessionmemory.memory_refresh.run_memory_lint", return_value=fake_lint):
             result = run_memory_refresh(
                 source_roots_config_path=self.source_config,
                 product_config_path=self.product_config,

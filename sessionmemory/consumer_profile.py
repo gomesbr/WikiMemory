@@ -99,15 +99,15 @@ def run_consumer_profile(
     ensure_directory(audits_dir)
     run_id = f"consumer-profile-{utc_now().replace(':', '').replace('.', '').replace('-', '')}"
     started_at = utc_now()
-    model_id = model or os.environ.get("WIKIMEMORY_CONSUMER_PROFILE_MODEL", "").strip() or DEFAULT_CONSUMER_PROFILE_MODEL
+    model_id = model or os.environ.get("SESSIONMEMORY_CONSUMER_PROFILE_MODEL", "").strip() or DEFAULT_CONSUMER_PROFILE_MODEL
     extraction_model_id = (
         extraction_model
-        or os.environ.get("WIKIMEMORY_CONSUMER_PROFILE_EXTRACTION_MODEL", "").strip()
+        or os.environ.get("SESSIONMEMORY_CONSUMER_PROFILE_EXTRACTION_MODEL", "").strip()
         or (model_id if model is not None else DEFAULT_CONSUMER_PROFILE_EXTRACTION_MODEL)
     )
     merge_model_id = (
         merge_model
-        or os.environ.get("WIKIMEMORY_CONSUMER_PROFILE_MERGE_MODEL", "").strip()
+        or os.environ.get("SESSIONMEMORY_CONSUMER_PROFILE_MERGE_MODEL", "").strip()
         or model_id
         or DEFAULT_CONSUMER_PROFILE_MERGE_MODEL
     )
@@ -120,7 +120,7 @@ def run_consumer_profile(
     run_log_path = state_dir / "consumer_profile_runs.jsonl"
     previous_run_log = run_log_path.read_text(encoding="utf-8") if run_log_path.exists() else ""
     resolved_window_max_chars = window_max_chars or int(
-        os.environ.get("WIKIMEMORY_CONSUMER_PROFILE_WINDOW_MAX_CHARS", DEFAULT_CONSUMER_PROFILE_WINDOW_MAX_CHARS)
+        os.environ.get("SESSIONMEMORY_CONSUMER_PROFILE_WINDOW_MAX_CHARS", DEFAULT_CONSUMER_PROFILE_WINDOW_MAX_CHARS)
     )
 
     try:

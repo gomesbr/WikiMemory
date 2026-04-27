@@ -38,7 +38,7 @@ from .wiki import WikiResult, run_wiki
 
 
 def build_parser() -> argparse.ArgumentParser:
-    parser = argparse.ArgumentParser(description="WikiMemory discovery tools")
+    parser = argparse.ArgumentParser(description="SessionMemory discovery tools")
     subparsers = parser.add_subparsers(dest="command", required=True)
 
     discover_parser = subparsers.add_parser(
@@ -649,7 +649,7 @@ def build_parser() -> argparse.ArgumentParser:
         "--project-root-dir",
         type=Path,
         default=None,
-        help="Directory containing project repositories used for README/tree context. Defaults to the parent of WikiMemory.",
+        help="Directory containing project repositories used for README/tree context. Defaults to the parent of SessionMemory.",
     )
     memory_v2_parser.add_argument(
         "--day",
@@ -665,7 +665,7 @@ def build_parser() -> argparse.ArgumentParser:
     memory_v2_parser.add_argument(
         "--model",
         default=None,
-        help="OpenAI model id. Defaults to WIKIMEMORY_MEMORY_V2_MODEL or gpt-5.3-codex.",
+        help="OpenAI model id. Defaults to SESSIONMEMORY_MEMORY_V2_MODEL or gpt-5.3-codex.",
     )
     memory_v2_parser.add_argument(
         "--json",
@@ -767,7 +767,7 @@ def build_parser() -> argparse.ArgumentParser:
     memory_lint_parser.add_argument(
         "--model",
         default=None,
-        help="OpenAI model id. Defaults to WIKIMEMORY_MEMORY_LINT_MODEL or the memory-v2 default.",
+        help="OpenAI model id. Defaults to SESSIONMEMORY_MEMORY_LINT_MODEL or the memory-v2 default.",
     )
     memory_lint_parser.add_argument(
         "--json",

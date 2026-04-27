@@ -6,12 +6,12 @@ import tempfile
 import unittest
 from pathlib import Path
 
-from wikimemory.consumer_profile import run_consumer_profile
+from sessionmemory.consumer_profile import run_consumer_profile
 
 
 class ConsumerProfileTests(unittest.TestCase):
     def setUp(self) -> None:
-        self.temp_dir = Path(tempfile.mkdtemp(prefix="wikimemory-consumer-profile-"))
+        self.temp_dir = Path(tempfile.mkdtemp(prefix="sessionmemory-consumer-profile-"))
         self.models_seen = []
         self.evidence_dir = self.temp_dir / "evidence"
         self.memory_dir = self.temp_dir / "memory"
@@ -35,7 +35,7 @@ class ConsumerProfileTests(unittest.TestCase):
                 "actor_type": "user",
                 "source_id": "source-1",
                 "timestamp": "2026-04-25T10:00:00Z",
-                "project_hint": "wikimemory",
+                "project_hint": "sessionmemory",
                 "provenance": {"source_id": "source-1", "source_line_no": 11},
                 "content_surfaces": [{"text": "Please keep responses concise and go implement instead of over-planning."}],
             },
@@ -44,7 +44,7 @@ class ConsumerProfileTests(unittest.TestCase):
                 "actor_type": "user",
                 "source_id": "source-1",
                 "timestamp": "2026-04-25T10:02:00Z",
-                "project_hint": "wikimemory",
+                "project_hint": "sessionmemory",
                 "provenance": {"source_id": "source-1", "source_line_no": 12},
                 "content_surfaces": [{"text": "I want the setup to infer defaults before asking me questions."}],
             },
@@ -68,7 +68,7 @@ class ConsumerProfileTests(unittest.TestCase):
                         "summary": "Prefers concise progress updates.",
                         "confidence": "high",
                         "evidence_ids": ["e1"],
-                        "project_hint": "wikimemory",
+                        "project_hint": "sessionmemory",
                     },
                     {
                         "section": "workflow_preferences",
@@ -76,7 +76,7 @@ class ConsumerProfileTests(unittest.TestCase):
                         "summary": "Prefers the agent to infer defaults before asking follow-up questions.",
                         "confidence": "high",
                         "evidence_ids": ["e2"],
-                        "project_hint": "wikimemory",
+                        "project_hint": "sessionmemory",
                     },
                 ]
             }

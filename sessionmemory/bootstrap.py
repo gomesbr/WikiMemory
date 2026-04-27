@@ -809,7 +809,7 @@ def build_synthesis_schema(packet: BootstrapPacket) -> dict[str, object]:
         "required": ["text", "supporting_item_keys", "supporting_claim_ids"],
     }
     return {
-        "name": "wikimemory_bootstrap",
+        "name": "sessionmemory_bootstrap",
         "schema": {
             "type": "object",
             "additionalProperties": False,

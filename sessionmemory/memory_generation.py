@@ -993,7 +993,7 @@ def looks_project_specific(statement: str) -> bool:
     lowered = statement.lower()
     return bool(
         re.search(
-            r"\b(?:trade card|lineage|openbrain|wikimemory|codexclaw|ai trader|wash-sale|whatsapp|ibkr|phase \d+|database|ui|screen|button|graph|actor|benchmark)\b",
+            r"\b(?:trade card|lineage|openbrain|sessionmemory|codexclaw|ai trader|wash-sale|whatsapp|ibkr|phase \d+|database|ui|screen|button|graph|actor|benchmark)\b",
             lowered,
         )
     )
@@ -1002,11 +1002,11 @@ def looks_project_specific(statement: str) -> bool:
 def mentions_other_project(statement: str, project: str) -> bool:
     lowered = statement.lower()
     project_terms = {
-        "aitrader": ("openbrain", "open brain", "codexclaw", "wikimemory"),
-        "ai-trader": ("openbrain", "open brain", "codexclaw", "wikimemory"),
-        "open-brain": ("ai trader", "aitrader", "codexclaw", "wikimemory"),
-        "codexclaw": ("ai trader", "aitrader", "openbrain", "open brain", "wikimemory"),
-        "wikimemory": ("ai trader", "aitrader", "openbrain", "open brain", "codexclaw"),
+        "aitrader": ("openbrain", "open brain", "codexclaw", "sessionmemory"),
+        "ai-trader": ("openbrain", "open brain", "codexclaw", "sessionmemory"),
+        "open-brain": ("ai trader", "aitrader", "codexclaw", "sessionmemory"),
+        "codexclaw": ("ai trader", "aitrader", "openbrain", "open brain", "sessionmemory"),
+        "sessionmemory": ("ai trader", "aitrader", "openbrain", "open brain", "codexclaw"),
     }
     return any(term in lowered for term in project_terms.get(project, ()))
 
@@ -1515,7 +1515,7 @@ def render_daily_conversation_index(path: Path, days: list[str], markdown_output
 
 def resolve_continuations_model(config) -> str:
     return (
-        os.environ.get("WIKIMEMORY_CONTINUATIONS_MODEL", "").strip()
+        os.environ.get("SESSIONMEMORY_CONTINUATIONS_MODEL", "").strip()
         or os.environ.get(config.memory_extraction.provider.model_env, "").strip()
         or config.memory_extraction.provider.default_model
         or DEFAULT_CONTINUATIONS_MODEL
@@ -1899,7 +1899,7 @@ def project_overview_clauses(text: str) -> list[str]:
         clause = clean_clause(raw.lstrip("#").removeprefix("- ").strip())
         if not is_meaningful_clause(clause):
             continue
-        if clause.lower() in {"wikimemory", "why this exists", "end-to-end pipeline"}:
+        if clause.lower() in {"sessionmemory", "why this exists", "end-to-end pipeline"}:
             continue
         if pending_prefix and is_bullet:
             pending_items.append(clause.rstrip("."))

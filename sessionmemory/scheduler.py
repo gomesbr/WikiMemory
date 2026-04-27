@@ -103,7 +103,7 @@ def run_scheduler_plan(
 
 def build_refresh_command(config: ProductConfig) -> str:
     command = (
-        "python -m wikimemory memory-refresh"
+        "python -m sessionmemory memory-refresh"
         f" --consumer-profile-extraction-model {config.scheduler.consumer_profile_extraction_model}"
         f" --consumer-profile-merge-model {config.scheduler.consumer_profile_merge_model}"
         f" --consumer-profile-window-max-chars {config.scheduler.consumer_profile_window_max_chars}"
@@ -119,7 +119,7 @@ def write_activation_script(path: Path, config: ProductConfig, refresh_command: 
     content = "\n".join(
         [
             "param(",
-            '    [string]$TaskName = "WikiMemoryRefresh",',
+            '    [string]$TaskName = "SessionMemoryRefresh",',
             '    [string]$ProjectRoot = (Resolve-Path ".").Path,',
             '    [string]$PythonExe = "python"',
             ")",
@@ -131,7 +131,7 @@ def write_activation_script(path: Path, config: ProductConfig, refresh_command: 
             "",
             "$action = New-ScheduledTaskAction `",
             "    -Execute $PythonExe `",
-            f'    -Argument "-m wikimemory memory-refresh --consumer-profile-extraction-model {config.scheduler.consumer_profile_extraction_model} --consumer-profile-merge-model {config.scheduler.consumer_profile_merge_model} --consumer-profile-window-max-chars {config.scheduler.consumer_profile_window_max_chars}{" --lint-fix --lint-fix-rounds " + str(config.scheduler.lint_autofix_max_rounds) if config.scheduler.lint_autofix_enabled else ""}" `',
+            f'    -Argument "-m sessionmemory memory-refresh --consumer-profile-extraction-model {config.scheduler.consumer_profile_extraction_model} --consumer-profile-merge-model {config.scheduler.consumer_profile_merge_model} --consumer-profile-window-max-chars {config.scheduler.consumer_profile_window_max_chars}{" --lint-fix --lint-fix-rounds " + str(config.scheduler.lint_autofix_max_rounds) if config.scheduler.lint_autofix_enabled else ""}" `',
             "    -WorkingDirectory $ProjectRoot",
             "",
             "$trigger = New-ScheduledTaskTrigger `",
@@ -149,7 +149,7 @@ def write_activation_script(path: Path, config: ProductConfig, refresh_command: 
             "#     -Action $action `",
             "#     -Trigger $trigger `",
             "#     -Settings $settings `",
-            '#     -Description "Run WikiMemory memory refresh based on prepared scheduler policy."',
+            '#     -Description "Run SessionMemory memory refresh based on prepared scheduler policy."',
             "",
             '# Write-Host "Prepared scheduler activation script. Uncomment Register-ScheduledTask when you want to activate it."',
             "",

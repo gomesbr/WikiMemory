@@ -7,9 +7,9 @@ import unittest
 from pathlib import Path
 from uuid import uuid4
 
-from wikimemory.discovery import run_discovery
-from wikimemory.normalization import run_normalization
-from wikimemory.segmentation import run_segmentation
+from sessionmemory.discovery import run_discovery
+from sessionmemory.normalization import run_normalization
+from sessionmemory.segmentation import run_segmentation
 
 
 def make_source_file(path: Path, session_id: str, extra_lines: list[dict] | None = None) -> None:
@@ -38,7 +38,7 @@ def make_source_file(path: Path, session_id: str, extra_lines: list[dict] | None
 
 class SegmentationTests(unittest.TestCase):
     def setUp(self) -> None:
-        self.temp_dir = Path(tempfile.mkdtemp(prefix="wikimemory-segment-"))
+        self.temp_dir = Path(tempfile.mkdtemp(prefix="sessionmemory-segment-"))
         self.root = self.temp_dir / "sessions"
         self.state_dir = self.temp_dir / "state"
         self.normalized_dir = self.temp_dir / "normalized"

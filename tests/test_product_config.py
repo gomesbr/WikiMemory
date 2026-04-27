@@ -6,8 +6,8 @@ import tempfile
 import unittest
 from pathlib import Path
 
-from wikimemory.memory_model import MEMORY_CLASS_TO_FILE_KEY, MEMORY_FILE_DEFINITIONS
-from wikimemory.product_config import (
+from sessionmemory.memory_model import MEMORY_CLASS_TO_FILE_KEY, MEMORY_FILE_DEFINITIONS
+from sessionmemory.product_config import (
     PRODUCT_SCHEMA_VERSION,
     ProductConfigError,
     default_product_config,
@@ -18,7 +18,7 @@ from wikimemory.product_config import (
 
 class ProductConfigTests(unittest.TestCase):
     def setUp(self) -> None:
-        self.temp_dir = Path(tempfile.mkdtemp(prefix="wikimemory-product-config-"))
+        self.temp_dir = Path(tempfile.mkdtemp(prefix="sessionmemory-product-config-"))
         self.config_path = self.temp_dir / "product_config.json"
 
     def tearDown(self) -> None:
@@ -60,8 +60,8 @@ class ProductConfigTests(unittest.TestCase):
             "provider": {
                 "type": "openai",
                 "api_key_env": "OPENAI_API_KEY",
-                "base_url_env": "WIKIMEMORY_OPENAI_BASE_URL",
-                "model_env": "WIKIMEMORY_OPENAI_MODEL",
+                "base_url_env": "SESSIONMEMORY_OPENAI_BASE_URL",
+                "model_env": "SESSIONMEMORY_OPENAI_MODEL",
                 "default_model": "gpt-5.4-mini",
                 "temperature": 0,
             },

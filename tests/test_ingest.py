@@ -8,15 +8,15 @@ import unittest
 from pathlib import Path
 from unittest.mock import patch
 
-from wikimemory.discovery import run_discovery
-from wikimemory.ingest import run_ingest
-from wikimemory.normalization import run_normalization
-from wikimemory.product_config import default_product_config
+from sessionmemory.discovery import run_discovery
+from sessionmemory.ingest import run_ingest
+from sessionmemory.normalization import run_normalization
+from sessionmemory.product_config import default_product_config
 
 
 class IngestTests(unittest.TestCase):
     def setUp(self) -> None:
-        self.temp_dir = Path(tempfile.mkdtemp(prefix="wikimemory-ingest-"))
+        self.temp_dir = Path(tempfile.mkdtemp(prefix="sessionmemory-ingest-"))
         self.sessions_root = self.temp_dir / "sessions"
         self.project_root = self.temp_dir / "project"
         self.state_dir = self.temp_dir / "state"
@@ -215,10 +215,10 @@ class IngestTests(unittest.TestCase):
         payload = default_product_config(self.project_root).to_dict()
         payload["project_sources"][0]["project_root"] = str(self.project_root)
         payload["project_aliases"] = [
-            {"slug": "wikimemory", "aliases": ["WikiMemory"]},
+            {"slug": "sessionmemory", "aliases": ["SessionMemory"]},
         ]
         self.product_config.write_text(json.dumps(payload, indent=2), encoding="utf-8")
-        source_id = "source-wikimemory"
+        source_id = "source-sessionmemory"
         (self.normalized_dir / "sources" / source_id).mkdir(parents=True)
         (self.normalized_dir / "sources" / source_id / "session.json").write_text(
             json.dumps({"source_id": source_id, "session_meta_fields": {"cwd": r"C:\Users\Fabio\Projects"}}),
@@ -237,7 +237,7 @@ class IngestTests(unittest.TestCase):
             "role": "user",
             "timestamp": "2026-04-18T00:00:00Z",
             "text_surface_truncated": False,
-            "text_surfaces": [{"path": "payload.message", "text": "Open tabs: WikiMemory/wikimemory/ingest.py"}],
+            "text_surfaces": [{"path": "payload.message", "text": "Open tabs: SessionMemory/sessionmemory/ingest.py"}],
         }
         (self.normalized_dir / "sources" / source_id / "events.jsonl").write_text(
             json.dumps(event_payload) + "\n",
@@ -254,14 +254,14 @@ class IngestTests(unittest.TestCase):
 
         self.assertTrue(result.report.success)
         record = self.read_jsonl(self.evidence_dir / "logs" / f"{source_id}.jsonl")[0]
-        self.assertEqual(record["project_hint"], "wikimemory")
+        self.assertEqual(record["project_hint"], "sessionmemory")
 
     def test_project_aliases_use_prefixed_path_mentions_before_session_hint(self) -> None:
         self.init_git_project()
         payload = default_product_config(self.project_root).to_dict()
         payload["project_sources"][0]["project_root"] = str(self.project_root)
         payload["project_aliases"] = [
-            {"slug": "wikimemory", "aliases": ["WikiMemory"]},
+            {"slug": "sessionmemory", "aliases": ["SessionMemory"]},
             {"slug": "ai-trader", "aliases": ["AITrader", "ai-trader"]},
         ]
         self.product_config.write_text(json.dumps(payload, indent=2), encoding="utf-8")
@@ -287,7 +287,7 @@ class IngestTests(unittest.TestCase):
             "text_surfaces": [
                 {
                     "path": "payload.content[0].text",
-                    "text": "Open tabs:\n- workflow-rules.json: WikiMemory/wiki/_meta/pages/global/workflow-rules.json\n\nFix the wiki memory output.",
+                    "text": "Open tabs:\n- workflow-rules.json: SessionMemory/wiki/_meta/pages/global/workflow-rules.json\n\nFix the wiki memory output.",
                 }
             ],
         }
@@ -306,7 +306,7 @@ class IngestTests(unittest.TestCase):
 
         self.assertTrue(result.report.success)
         record = self.read_jsonl(self.evidence_dir / "logs" / f"{source_id}.jsonl")[0]
-        self.assertEqual(record["project_hint"], "wikimemory")
+        self.assertEqual(record["project_hint"], "sessionmemory")
 
     def test_project_delta_ignores_generated_and_temp_paths(self) -> None:
         self.init_git_project()
@@ -349,8 +349,8 @@ class IngestTests(unittest.TestCase):
         payload["project_aliases"] = [{"slug": "ai-trader", "aliases": ["AITrader", "ai-trader"]}]
         self.product_config.write_text(json.dumps(payload, indent=2), encoding="utf-8")
 
-        with patch("wikimemory.ingest.run_git_optional", return_value="abc123"), patch(
-            "wikimemory.ingest.run_git",
+        with patch("sessionmemory.ingest.run_git_optional", return_value="abc123"), patch(
+            "sessionmemory.ingest.run_git",
             side_effect=lambda root, *args: "main" if args == ("branch", "--show-current") else "",
         ):
             result = run_ingest(
@@ -406,7 +406,7 @@ class IngestTests(unittest.TestCase):
             "supporting_evidence_ids": [],
         }
 
-        with patch("wikimemory.project_routing.call_project_router", return_value=decision):
+        with patch("sessionmemory.project_routing.call_project_router", return_value=decision):
             result = run_ingest(
                 product_config_path=self.product_config,
                 state_dir=self.state_dir,
@@ -462,7 +462,7 @@ class IngestTests(unittest.TestCase):
             "supporting_evidence_ids": [],
         }
 
-        with patch("wikimemory.project_routing.call_project_router", return_value=decision):
+        with patch("sessionmemory.project_routing.call_project_router", return_value=decision):
             result = run_ingest(
                 product_config_path=self.product_config,
                 state_dir=self.state_dir,

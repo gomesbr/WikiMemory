@@ -8,9 +8,9 @@ from pathlib import Path
 from unittest.mock import patch
 from uuid import uuid4
 
-from wikimemory.discovery import run_discovery
-from wikimemory.normalization import run_normalization
-from wikimemory.raw_event_resolver import RawEventResolver, RawEventResolverError, open_shared_binary
+from sessionmemory.discovery import run_discovery
+from sessionmemory.normalization import run_normalization
+from sessionmemory.raw_event_resolver import RawEventResolver, RawEventResolverError, open_shared_binary
 
 
 def make_source_file(path: Path, session_id: str, extra_lines: list[dict] | None = None) -> None:
@@ -39,7 +39,7 @@ def make_source_file(path: Path, session_id: str, extra_lines: list[dict] | None
 
 class RawEventResolverTests(unittest.TestCase):
     def setUp(self) -> None:
-        self.temp_dir = Path(tempfile.mkdtemp(prefix="wikimemory-rawresolver-"))
+        self.temp_dir = Path(tempfile.mkdtemp(prefix="sessionmemory-rawresolver-"))
         self.root = self.temp_dir / "sessions"
         self.state_dir = self.temp_dir / "state"
         self.normalized_dir = self.temp_dir / "normalized"
@@ -145,7 +145,7 @@ class RawEventResolverTests(unittest.TestCase):
             registry_path=self.state_dir / "source_registry.json",
             source_roots_config_path=self.config_path,
         )
-        with patch("wikimemory.raw_event_resolver.open_shared_binary", wraps=open_shared_binary) as mock_open:
+        with patch("sessionmemory.raw_event_resolver.open_shared_binary", wraps=open_shared_binary) as mock_open:
             resolver.hydrate_normalized_event(event)
             resolver.hydrate_normalized_event(event)
         self.assertEqual(mock_open.call_count, 1)

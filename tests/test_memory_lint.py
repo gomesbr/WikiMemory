@@ -6,13 +6,13 @@ import tempfile
 import unittest
 from pathlib import Path
 
-from wikimemory.memory_lint import run_memory_lint
-from wikimemory.product_config import default_product_config
+from sessionmemory.memory_lint import run_memory_lint
+from sessionmemory.product_config import default_product_config
 
 
 class MemoryLintTests(unittest.TestCase):
     def setUp(self) -> None:
-        self.temp_dir = Path(tempfile.mkdtemp(prefix="wikimemory-memory-lint-"))
+        self.temp_dir = Path(tempfile.mkdtemp(prefix="sessionmemory-memory-lint-"))
         self.memory_dir = self.temp_dir / "memory"
         self.state_dir = self.temp_dir / "state"
         self.audits_dir = self.temp_dir / "audits"

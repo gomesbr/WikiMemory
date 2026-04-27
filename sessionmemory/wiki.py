@@ -665,7 +665,7 @@ def build_related_pages(
 
 
 def build_page_tags(domain_config: WikiDomainConfig, bucket: WikiBucketConfig | None) -> tuple[str, ...]:
-    tags = ["wikimemory", domain_config.kind, domain_config.domain]
+    tags = ["sessionmemory", domain_config.kind, domain_config.domain]
     if bucket is None:
         tags.append("index")
     else:
@@ -968,7 +968,7 @@ def build_synthesis_schema(config: WikiConfig, allowed_support_ids: list[str]) -
         "required": ["text", "latent_type", "confidence", "supporting_item_ids"],
     }
     return {
-        "name": "wikimemory_wiki_page",
+        "name": "sessionmemory_wiki_page",
         "schema": {
             "type": "object",
             "additionalProperties": False,

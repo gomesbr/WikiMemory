@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "profile_schema_version": 1,
-  "title": "WikiMemory Consumer Working Profile",
+  "title": "SessionMemory Consumer Working Profile",
   "description": "A behavior-oriented profile describing how an agent should collaborate with a consumer across sessions. This schema is intentionally limited to non-sensitive, work-relevant observations.",
   "rules": {
     "allowed_inference_scope": [
