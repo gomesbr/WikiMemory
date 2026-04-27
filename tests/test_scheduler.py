@@ -2,6 +2,7 @@ from __future__ import annotations
 
 import json
 import shutil
+import subprocess
 import tempfile
 import unittest
 from pathlib import Path
@@ -115,6 +116,122 @@ class SchedulerPlanTests(unittest.TestCase):
         )
 
         self.assertEqual(result.report.last_refresh_at, "2026-04-25T11:30:00Z")
+
+    def test_scheduler_run_skips_when_no_new_logs_exist(self) -> None:
+        (self.state_dir / "source_registry.json").write_text(
+            json.dumps(
+                {
+                    "sources": [
+                        {
+                            "source_id": "source-1",
+                            "status": "stable",
+                            "mtime_utc": "2026-04-25T12:00:00Z",
+                        }
+                    ]
+                },
+                indent=2,
+            ),
+            encoding="utf-8",
+        )
+        (self.state_dir / "memory_refresh_state.json").write_text(
+            json.dumps(
+                {
+                    "last_successful_refresh_finished_at": "2026-04-25T12:00:00Z",
+                },
+                indent=2,
+            ),
+            encoding="utf-8",
+        )
+
+        completed = subprocess.run(
+            [
+                "python",
+                "-m",
+                "wikimemory",
+                "scheduler-run",
+                "--product-config",
+                str(self.product_config),
+                "--state-dir",
+                str(self.state_dir),
+                "--scripts-dir",
+                str(self.scripts_dir),
+                "--normalized-dir",
+                str(self.temp_dir / "normalized"),
+                "--evidence-dir",
+                str(self.temp_dir / "evidence"),
+                "--memory-dir",
+                str(self.temp_dir / "memory"),
+                "--audits-dir",
+                str(self.temp_dir / "audits"),
+                "--json",
+            ],
+            capture_output=True,
+            text=True,
+            check=True,
+        )
+
+        payload = json.loads(completed.stdout)
+        self.assertFalse(payload["executed"])
+        self.assertEqual(payload["reason"], "no_new_logs")
+
+    def test_scheduler_run_skips_when_failed_attempt_already_processed_current_logs(self) -> None:
+        (self.state_dir / "source_registry.json").write_text(
+            json.dumps(
+                {
+                    "sources": [
+                        {
+                            "source_id": "source-1",
+                            "status": "stable",
+                            "mtime_utc": "2026-04-25T12:00:00Z",
+                        }
+                    ]
+                },
+                indent=2,
+            ),
+            encoding="utf-8",
+        )
+        (self.state_dir / "memory_refresh_state.json").write_text(
+            json.dumps(
+                {
+                    "last_attempted_refresh_finished_at": "2026-04-25T12:30:00Z",
+                    "last_successful_refresh_finished_at": None,
+                    "last_result_status": "failed",
+                },
+                indent=2,
+            ),
+            encoding="utf-8",
+        )
+
+        completed = subprocess.run(
+            [
+                "python",
+                "-m",
+                "wikimemory",
+                "scheduler-run",
+                "--product-config",
+                str(self.product_config),
+                "--state-dir",
+                str(self.state_dir),
+                "--scripts-dir",
+                str(self.scripts_dir),
+                "--normalized-dir",
+                str(self.temp_dir / "normalized"),
+                "--evidence-dir",
+                str(self.temp_dir / "evidence"),
+                "--memory-dir",
+                str(self.temp_dir / "memory"),
+                "--audits-dir",
+                str(self.temp_dir / "audits"),
+                "--json",
+            ],
+            capture_output=True,
+            text=True,
+            check=True,
+        )
+
+        payload = json.loads(completed.stdout)
+        self.assertFalse(payload["executed"])
+        self.assertEqual(payload["reason"], "no_new_logs")
 
 
 if __name__ == "__main__":

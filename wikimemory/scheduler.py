@@ -59,7 +59,7 @@ def run_scheduler_plan(
 
     registry = load_json(state_dir / "source_registry.json")
     latest_log_update_at = latest_active_log_update(registry)
-    last_refresh_at = last_successful_refresh_finished_at(
+    last_refresh_at = last_refresh_checkpoint_finished_at(
         state_dir / "memory_refresh_state.json",
         state_dir / "memory_refresh_runs.jsonl",
     )
@@ -223,6 +223,26 @@ def last_successful_refresh_finished_at(state_path: Path, run_log_path: Path) ->
     if state_value:
         return state_value
     return latest_successful_finished_at(run_log_path)
+
+
+def last_refresh_checkpoint_finished_at(state_path: Path, run_log_path: Path) -> str | None:
+    state_payload = load_json(state_path)
+    attempted_value = str(state_payload.get("last_attempted_refresh_finished_at") or "")
+    if attempted_value:
+        return attempted_value
+    successful_value = str(state_payload.get("last_successful_refresh_finished_at") or "")
+    if successful_value:
+        return successful_value
+    latest = ""
+    if run_log_path.exists():
+        for line in run_log_path.read_text(encoding="utf-8").splitlines():
+            if not line.strip():
+                continue
+            payload = json.loads(line)
+            finished_at = str(payload.get("finished_at") or "")
+            if finished_at > latest:
+                latest = finished_at
+    return latest or None
 
 
 def load_json(path: Path) -> dict[str, object]:

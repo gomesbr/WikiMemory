@@ -22,8 +22,17 @@ from .memory_refresh import MemoryRefreshResult, run_memory_refresh
 from .memory_v2 import MemoryV2Result, run_memory_v2
 from .normalization import NormalizationResult, run_normalization
 from .onboarding import OnboardingReport, run_onboarding
+from .product_config import load_product_config
 from .refresh import RefreshResult, run_refresh
-from .scheduler import SchedulerPlanResult, run_scheduler_plan
+from .scheduler import (
+    SchedulerPlanResult,
+    last_refresh_checkpoint_finished_at,
+    last_successful_refresh_finished_at,
+    latest_active_log_update,
+    load_json,
+    parse_iso,
+    run_scheduler_plan,
+)
 from .segmentation import SegmentationResult, run_segmentation
 from .wiki import WikiResult, run_wiki
 
@@ -1008,6 +1017,75 @@ def build_parser() -> argparse.ArgumentParser:
         action="store_true",
         help="Print the scheduler plan report as JSON.",
     )
+    scheduler_run_parser = subparsers.add_parser(
+        "scheduler-run",
+        help="Run memory-refresh only when the scheduler determines new logs make ingest due.",
+    )
+    scheduler_run_parser.add_argument(
+        "--source-config",
+        type=Path,
+        default=Path("config/source_roots.json"),
+        help="Path to source root configuration JSON.",
+    )
+    scheduler_run_parser.add_argument(
+        "--product-config",
+        type=Path,
+        default=Path("config/product_config.json"),
+        help="Path to unified product configuration JSON.",
+    )
+    scheduler_run_parser.add_argument(
+        "--schema",
+        type=Path,
+        default=Path("schema/normalization_catalog.json"),
+        help="Path to the normalization schema catalog JSON.",
+    )
+    scheduler_run_parser.add_argument(
+        "--state-dir",
+        type=Path,
+        default=Path("state"),
+        help="Directory containing discovery and refresh state.",
+    )
+    scheduler_run_parser.add_argument(
+        "--normalized-dir",
+        type=Path,
+        default=Path("normalized"),
+        help="Directory where normalized artifacts are written.",
+    )
+    scheduler_run_parser.add_argument(
+        "--evidence-dir",
+        type=Path,
+        default=Path("evidence"),
+        help="Directory where evidence artifacts are written.",
+    )
+    scheduler_run_parser.add_argument(
+        "--memory-dir",
+        type=Path,
+        default=Path("memory"),
+        help="Directory where compact memory artifacts are written.",
+    )
+    scheduler_run_parser.add_argument(
+        "--audits-dir",
+        type=Path,
+        default=Path("audits"),
+        help="Directory where notices and lint findings are written.",
+    )
+    scheduler_run_parser.add_argument(
+        "--scripts-dir",
+        type=Path,
+        default=Path("scripts"),
+        help="Directory where scheduler helper artifacts are written.",
+    )
+    scheduler_run_parser.add_argument(
+        "--bootstrap-output-path",
+        type=Path,
+        default=None,
+        help="Optional agent bootstrap output path override.",
+    )
+    scheduler_run_parser.add_argument(
+        "--json",
+        action="store_true",
+        help="Print the scheduler run result as JSON.",
+    )
     return parser
 
 
@@ -1592,6 +1670,75 @@ def main(argv: list[str] | None = None) -> int:
         else:
             print(format_scheduler_plan_result(result))
         return 0
+
+    if args.command == "scheduler-run":
+        config = load_product_config(args.product_config)
+        plan = run_scheduler_plan(
+            product_config_path=args.product_config,
+            state_dir=args.state_dir,
+            scripts_dir=args.scripts_dir,
+        )
+        registry = load_json(Path(args.state_dir) / "source_registry.json")
+        latest_log_update_at = latest_active_log_update(registry)
+        last_refresh_at = last_refresh_checkpoint_finished_at(
+            Path(args.state_dir) / "memory_refresh_state.json",
+            Path(args.state_dir) / "memory_refresh_runs.jsonl",
+        )
+        has_new_logs = bool(
+            latest_log_update_at
+            and (not last_refresh_at or parse_iso(latest_log_update_at) > parse_iso(last_refresh_at))
+        )
+        if not has_new_logs:
+            payload = {
+                "success": True,
+                "executed": False,
+                "reason": "no_new_logs",
+                "latest_log_update_at": latest_log_update_at,
+                "last_refresh_at": last_refresh_at,
+                "within_schedule_window": plan.report.within_schedule_window,
+            }
+            if args.json:
+                print(json.dumps(payload, indent=2, sort_keys=True))
+            else:
+                print(
+                    "Scheduler run skipped: no new logs since the last successful refresh."
+                )
+            return 0
+
+        result = run_memory_refresh(
+            source_roots_config_path=args.source_config,
+            product_config_path=args.product_config,
+            normalization_schema_path=args.schema,
+            state_dir=args.state_dir,
+            normalized_dir=args.normalized_dir,
+            evidence_dir=args.evidence_dir,
+            memory_dir=args.memory_dir,
+            audits_dir=args.audits_dir,
+            bootstrap_output_path=args.bootstrap_output_path,
+            lint_fix=config.scheduler.lint_autofix_enabled,
+            lint_fix_rounds=config.scheduler.lint_autofix_max_rounds,
+            consumer_profile_extraction_model=config.scheduler.consumer_profile_extraction_model,
+            consumer_profile_merge_model=config.scheduler.consumer_profile_merge_model,
+            consumer_profile_window_max_chars=config.scheduler.consumer_profile_window_max_chars,
+        )
+        if args.json:
+            print(
+                json.dumps(
+                    {
+                        "success": result.report.success,
+                        "executed": True,
+                        "reason": "ingest_due",
+                        "refresh_report": result.report.to_dict(),
+                    },
+                    indent=2,
+                    sort_keys=True,
+                )
+            )
+        else:
+            print(format_memory_refresh_result(result))
+            if result.report.fatal_error_summary:
+                print(result.report.fatal_error_summary)
+        return 0 if result.report.success else 1
 
     result = run_full_load(
         config_path=args.config,

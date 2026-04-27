@@ -262,9 +262,9 @@ Classification assigns each segment to a domain label.
 Current supported primary labels:
 
 - `global`
-- `ai-trader`
-- `open-brain`
-- `ai-scientist`
+- `project-a`
+- `project-b`
+- `project-c`
 - `cross-project`
 - `unclassified`
 
@@ -654,10 +654,10 @@ python -m wikimemory audit
 The wiki is organized into:
 
 - `global/`
-- `projects/ai-trader/`
-- `projects/open-brain/`
-- `projects/ai-scientist/`
-- `projects/cross-project/`
+- `projects/<project-a>/`
+- `projects/<project-b>/`
+- `projects/<project-c>/`
+- `projects/<shared-or-cross-project>/`
 
 Typical page buckets:
 
