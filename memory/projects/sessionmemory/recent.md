@@ -1,11 +1,11 @@
 ---
 type: recent-context
-project: wikimemory
+project: sessionmemory
 updated: 2026-04-21T05:01:53.152404Z
-tags: [project/wikimemory, recent]
+tags: [project/sessionmemory, recent]
 ---
 
-# Wikimemory - Recent Context - April 19 2026
+# SessionMemory - Recent Context - April 19 2026
 
 ## IN PROGRESS
 

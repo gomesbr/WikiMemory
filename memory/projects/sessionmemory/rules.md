@@ -1,11 +1,11 @@
 ---
 type: project-rules
-project: wikimemory
+project: sessionmemory
 updated: 2026-04-21T05:01:53.154669Z
-tags: [project/wikimemory, rules]
+tags: [project/sessionmemory, rules]
 ---
 
-# Wikimemory - Project Rules
+# SessionMemory - Project Rules
 
 ## ALWAYS DO
 
@@ -18,7 +18,7 @@ tags: [project/wikimemory, rules]
 
 ## NEVER DO
 
-- When generating bootstrap markdown files (e.g., `AGENTS.md`, `CLAUDE.md`), never replace user-authored content; only append/update a managed WikiMemory block so user information is preserved.
+- When generating bootstrap markdown files (e.g., `AGENTS.md`, `CLAUDE.md`), never replace user-authored content; only append/update a managed SessionMemory block so user information is preserved.
 - Do not flatten logs into simple prompt/response form; preserve trace structures like `session_meta`, `response_item`, `event_msg`, and `turn_context`.
 - Apply temporal invalidation rigorously: older open questions/open items must be marked resolved or superseded when newer evidence closes them, and should not remain rendered as open.
 - Do not promote one-off commands, progress narration, runtime-local instructions, or schema scaffolding into durable rule/preference memory.
@@ -30,4 +30,4 @@ tags: [project/wikimemory, rules]
 
 ## SCOPE NOTES
 
-- Applies only to `wikimemory` unless a rule explicitly says otherwise.
+- Applies only to `sessionmemory` unless a rule explicitly says otherwise.

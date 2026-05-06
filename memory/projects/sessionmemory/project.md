@@ -1,22 +1,22 @@
 ---
 type: project-memory
-project: wikimemory
+project: sessionmemory
 updated: 2026-04-21T05:01:53.146875Z
-tags: [project/wikimemory, memory]
+tags: [project/sessionmemory, memory]
 ---
 
-# Wikimemory - Project Memory
+# SessionMemory - Project Memory
 
 ## PURPOSE
 
-- WikiMemory is a standalone, file-based operational memory pipeline that ingests external Codex/agent `.jsonl` logs and project-delta evidence, then produces derived knowledge outputs including compact `memory/` markdown, optional wiki outputs, platform bootstrap files, and audit artifacts with provenance-first, incremental processing.
+- SessionMemory is a standalone, file-based operational memory pipeline that ingests external Codex/agent `.jsonl` logs and project-delta evidence, then produces derived knowledge outputs including compact `memory/` markdown, optional wiki outputs, platform bootstrap files, and audit artifacts with provenance-first, incremental processing.
 
 ## CURRENT ARCHITECTURE
 
 - Memory-first output model centers on `memory/global/user-rules.md` and per-project `project.md`, `recent.md`, `rules.md` (optional `lessons.md`) with compact bootstrap mapping; keep `wiki/` as optional compatibility/reporting output rather than primary product surface.
-- WikiMemory content is stored at `C:\Users\Fabio\Cursor AI projects\Projects\WikiMemory\wiki` and intended for use as an Obsidian vault folder.
+- SessionMemory content is stored at `C:\Users\Fabio\Cursor AI projects\Projects\SessionMemory\wiki` and intended for use as an Obsidian vault folder.
 - Architecture is phased and stateful with independent CLI stages and per-phase artifacts (discover, normalize, ingest, segment, classify, extract, wiki, bootstrap, audit, refresh/full-load), using atomic/incremental promotion patterns and provenance-bearing outputs under `state/`, `audits/`, and phase-specific directories.
-- Normalization is pointer-first: normalized events store byte-range/source-line provenance plus bounded canonical/text fields instead of persisted `raw_event`; downstream phases should use `wikimemory/raw_event_resolver.py` for lazy hydration only when needed.
+- Normalization is pointer-first: normalized events store byte-range/source-line provenance plus bounded canonical/text fields instead of persisted `raw_event`; downstream phases should use `sessionmemory/raw_event_resolver.py` for lazy hydration only when needed.
 
 ## DIRECTORY TREE
 
@@ -1595,10 +1595,10 @@ WikiMemory/
 
 ## BACKLOG
 
-1. Improve project association so records map to real project slugs (for example `wikimemory`, `open-brain`, `ai-trader`, `codexclaw`) instead of collapsing into generic `projects`.
+1. Improve project association so records map to real project slugs (for example `sessionmemory`, `open-brain`, `ai-trader`, `codexclaw`) instead of collapsing into generic `projects`.
 
 ## RELATED
 
-- [[projects/wikimemory/recent|Wikimemory Recent]]
-- [[projects/wikimemory/rules|Wikimemory Rules]]
+- [[projects/sessionmemory/recent|SessionMemory Recent]]
+- [[projects/sessionmemory/rules|SessionMemory Rules]]
 - [[global/user-rules|Global User Rules]]
